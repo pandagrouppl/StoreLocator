@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "886900b5007104203f7932d1d9f01869",
-    "content-hash": "4b67b0e54d507d80347d13d2b81aed0a",
+    "hash": "cc3e168e2658ef1bd2a321112d099643",
+    "content-hash": "1f80d4b96aff623efbcad47c8775e4d6",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -5910,6 +5910,58 @@
             ],
             "description": "An extendable framework for version control hooks.",
             "time": "2014-09-22 08:40:36"
+        },
+        {
+            "name": "snowdog/frontools",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
+                "reference": "3b6f1c1da1aab615897e4320a4dee878d4f6d45a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/3b6f1c1da1aab615897e4320a4dee878d4f6d45a",
+                "reference": "3b6f1c1da1aab615897e4320a4dee878d4f6d45a",
+                "shasum": ""
+            },
+            "type": "magento2-component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+            "time": "2017-02-21 17:53:18"
+        },
+        {
+            "name": "snowdog/theme-blank-sass",
+            "version": "0.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SnowdogApps/magento2-theme-blank-sass.git",
+                "reference": "6237540974247ed101668c1c9cf3447ee274b8f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SnowdogApps/magento2-theme-blank-sass/zipball/6237540974247ed101668c1c9cf3447ee274b8f2",
+                "reference": "6237540974247ed101668c1c9cf3447ee274b8f2",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "100.1.*"
+            },
+            "type": "magento2-theme",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "SASS based version of Magento 2 Blank theme",
+            "time": "2017-02-21 17:39:01"
         },
         {
             "name": "symfony/console",
