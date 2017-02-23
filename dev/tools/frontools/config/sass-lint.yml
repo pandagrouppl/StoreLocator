@@ -43,3 +43,4 @@ rules:
   space-before-brace: 2
   trailing-semicolon: 2
   zero-unit: 2
+  bem-depth: 1
