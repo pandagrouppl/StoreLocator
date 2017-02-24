@@ -10,3 +10,4 @@ export class App {
         m2.sayHelloTo("David Wesst");
     }
 }
+

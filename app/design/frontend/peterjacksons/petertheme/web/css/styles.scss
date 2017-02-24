@@ -1,3 +1,24 @@
 .main {
     display: none;
 }
+
+body {
+    p {
+        color: white;
+    }
+}
+
+.block {
+    &__element {
+        .css {
+
+        }
+        margin : url('aaa');
+
+    }
+    &__element {
+        max-width: 100px;
+    }
+
+}
+
