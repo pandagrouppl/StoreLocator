@@ -1,0 +1,5 @@
+{
+    "module": "amd",
+    "outFile": "app.js",
+    "target": "es5"
+}
