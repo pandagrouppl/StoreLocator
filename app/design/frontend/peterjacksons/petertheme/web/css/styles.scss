@@ -1,3 +1,13 @@
 .main {
-    display: none;
+
+    &__a {
+        color : blue;
+        content: '';
+    }
+
+  display: none;
+}
+
+.main {
+
 }
