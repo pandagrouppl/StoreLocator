@@ -8,13 +8,11 @@ export = class Main {
     }
 
     start() {
-        let test : String = 'elo';
         let m1 = new Module1.ModuleOne();
         let m2 = new Module2.ModuleTwo();
 
         m1.sayHelloTo("David Wesst");
         m2.sayHelloTo("David Wesst");
-
     }
 }
 
