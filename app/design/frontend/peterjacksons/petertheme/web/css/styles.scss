@@ -1,13 +1,3 @@
-.main {
+@import "base/normalize";
+@import "base/reset";
 
-    &__a {
-        color : blue;
-        content: '';
-    }
-
-  display: none;
-}
-
-.main {
-
-}
