@@ -111,19 +111,7 @@
             <container name="page.bottom" label="Before Page Footer" htmlTag="div" htmlClass="content"/>
         </referenceContainer>
         <referenceContainer name="footer-container">
-            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
-                <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="switch/stores.phtml"/>
-                <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">
-                    <arguments>
-                        <argument name="css_class" xsi:type="string">footer links</argument>
-                    </arguments>
-                </block>
-                <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="html/copyright.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="report.bugs" template="Magento_Theme::html/bugreport.phtml" />
-            </container>
-        </referenceContainer>
-        <referenceContainer name="before.body.end">
-            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="html/absolute_footer.phtml" />
+                <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="html/footer-content.phtml"/>
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
