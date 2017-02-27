@@ -2,7 +2,12 @@ import * as Module1 from "./moduleone";
 import * as Module2 from "./moduletwo";
 import $ = require("jquery");
 
-export class App {
+export class Main {
+
+    constructor() {
+        console.log('elo');
+
+    }
 
     start() {
         let aasddssd: String = 'eeee';
@@ -11,5 +16,6 @@ export class App {
 
         m1.sayHelloTo("David Wesst");
         m2.sayHelloTo("David Wesst");
+
     }
 }
