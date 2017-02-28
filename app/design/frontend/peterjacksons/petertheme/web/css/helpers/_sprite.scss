@@ -1,20 +1,26 @@
 //All changes in this file will be overwritten!
 
 $sprite: (
-    width: 510px,
-    height: 39px,
-    image: '../web/img/sprite.png'
+    width: 1170px,
+    height: 790px,
+    image: '../../img/sprite.png'
 );
 
 $retina-sprite: (
-    width: 1020px,
-    height: 78px,
-    image: '../web/img/sprite@2x.png'
+    width: 2340px,
+    height: 1580px,
+    image: '../img/sprite@2x.png'
 );
 
 $sprite-icon: (
-    logo-black: (
+    footer-bg: (
         x: 0px,
+        y: 0px,
+        width: 630px,
+        height: 790px
+    ),
+    logo-black: (
+        x: -660px,
         y: 0px,
         width: 510px,
         height: 39px

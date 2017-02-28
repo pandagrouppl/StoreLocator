@@ -2,10 +2,11 @@ $sm-breakpoint: 768px;
 $xs-breakpoint: 320px;
 
 .page-footer {
-    background-color: #242424;
     flex-direction: column;
     display: flex;
     color: #afafaf;
+    background: no-repeat url('../../img/sprite/footer-bg.png') right top #242424;
+
 
     a {
         color: #afafaf;
