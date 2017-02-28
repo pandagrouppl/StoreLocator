@@ -1,0 +1,48 @@
+//All changes in this file will be overwritten!
+
+$sprite: (
+    width: 510px,
+    height: 39px,
+    image: '../web/img/sprite.png'
+);
+
+$retina-sprite: (
+    width: 1020px,
+    height: 78px,
+    image: '../web/img/sprite@2x.png'
+);
+
+$sprite-icon: (
+    logo-black: (
+        x: 0px,
+        y: 0px,
+        width: 510px,
+        height: 39px
+    ),
+);
+
+@mixin sprite($icon, $size: true, $bg-size: true) {
+    background-color: transparent;
+    background-image: url(map-get($sprite, 'image'));
+    background-repeat: no-repeat;
+    background-position: map-get(map-get($sprite-icon, $icon), 'x') map-get(map-get($sprite-icon, $icon), 'y');
+
+    @if($size == true) {
+        width: map-get(map-get($sprite-icon, $icon), 'width');
+        height: map-get(map-get($sprite-icon, $icon), 'height');
+    }
+
+    @media
+    all and (-webkit-min-device-pixel-ratio: 2),
+    all and (   min--moz-device-pixel-ratio: 2),
+    all and (     -o-min-device-pixel-ratio: 2/1),
+    all and (        min-device-pixel-ratio: 2),
+    all and (                min-resolution: 192dpi),
+    all and (                min-resolution: 2dppx) {
+        background-image: url(map-get($retina-sprite, 'image'));
+        background-repeat: no-repeat;
+        @if($bg-size == true) {
+            background-size: map-get($sprite, 'width') map-get($sprite, 'height');
+        }
+    }
+}

@@ -1,3 +1,20 @@
 .header-middle {
 
+    &__navigation {
+
+        ul {
+            display: flex;
+        }
+
+        li.level0 {
+            //display: inline-block;
+        }
+
+        ul.level0 {
+            position: absolute !important;
+            left: 0 !important;
+            background: $white;
+            width: 100%;
+        }
+    }
 }
