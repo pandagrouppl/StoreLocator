@@ -1,0 +1,7 @@
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+if($customerSession->isLoggedIn()): ?>
+    <li><a href="<?php echo 'wishlist logged url here' ?>">my wishlist</a></li>
+<?php else: ?>
+    <li><a href="<?php echo 'wishlist not logged url here'?>">my wishlist</a></li>
+<?php endif; ?>
