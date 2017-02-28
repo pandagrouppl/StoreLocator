@@ -1,13 +1,26 @@
 .header-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo {
+        @include sprite(logo-black);
+        display: block;
+    }
 
     &__navigation {
 
-        ul {
+        > ul {
             display: flex;
         }
 
         li.level0 {
-            //display: inline-block;
+            padding: 0 11px 15px 11px;
+            text-transform: uppercase;
+
+            > a {
+                color: $black;
+            }
         }
 
         ul.level0 {
@@ -15,6 +28,8 @@
             left: 0 !important;
             background: $white;
             width: 100%;
+            border-bottom: 1px solid $grey;
+
         }
     }
 }

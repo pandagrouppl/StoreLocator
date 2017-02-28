@@ -5,15 +5,19 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
-        <block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
+        <block name="require.js" class="Magento\Framework\View\Element\Template"
+               template="Magento_Theme::page/js/require_js.phtml"/>
         <referenceContainer name="after.body.start">
             <block class="Magento\RequireJs\Block\Html\Head\Config" name="requirejs-config"/>
             <block class="Magento\Translation\Block\Html\Head\Config" name="translate-config"/>
-            <block class="Magento\Translation\Block\Js" name="translate" template="Magento_Translation::translate.phtml"/>
-            <block class="Magento\Framework\View\Element\Js\Cookie" name="js_cookies" template="Magento_Theme::js/cookie.phtml"/>
+            <block class="Magento\Translation\Block\Js" name="translate"
+                   template="Magento_Translation::translate.phtml"/>
+            <block class="Magento\Framework\View\Element\Js\Cookie" name="js_cookies"
+                   template="Magento_Theme::js/cookie.phtml"/>
             <block class="Magento\Theme\Block\Html\Notices" name="global_notices" template="html/notices.phtml"/>
         </referenceContainer>
         <referenceBlock name="top.links">
@@ -24,7 +28,8 @@
             </block>
         </referenceBlock>
         <referenceContainer name="main.content">
-            <block class="Magento\Framework\View\Element\Template" name="skip_to_content.target" before="-" template="Magento_Theme::html/skiptarget.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="skip_to_content.target" before="-"
+                   template="Magento_Theme::html/skiptarget.phtml">
                 <arguments>
                     <argument name="target_id" xsi:type="string">contentarea</argument>
                 </arguments>
@@ -35,33 +40,38 @@
             <container name="header.message" label="Header Message" htmlTag="section" htmlClass="header-message">
 
             </container>
-            <container name="header.main" label="Header Main" htmlTag="section" htmlClass="header">
-                <!--<container name="header.left" label="Header Left" htmlTag="section" htmlClass="header-main">-->
-                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml"/>
-                <!--</container>-->
-                <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-main">
-                    <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
-                        <arguments>
-                            <argument name="logo_img_width" xsi:type="number">189</argument>
-                            <argument name="logo_img_height" xsi:type="number">64</argument>
-                        </arguments>
-                    </block>
-                    <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
-                        <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
-                    </block>
-                </container>
-                <!--<container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-main">-->
-                    <block class="Magento\Framework\View\Element\Template" name="header.right" template="Magento_Theme::html/header/right.phtml"/>
-                <!--</container>-->
+            <container name="header.main" label="Header Top" htmlTag="section" htmlClass="header">
+                    <block class="Magento\Framework\View\Element\Template" name="header.left"
+                           template="Magento_Theme::html/header/left.phtml"/>
+
+                    <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle">
+                        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                            <arguments>
+                                <argument name="logo_img_width" xsi:type="number">189</argument>
+                                <argument name="logo_img_height" xsi:type="number">64</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml"
+                               ttl="3600">
+                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other"
+                                   template="Magento_Theme::html/header/other.phtml"/>
+                        </block>
+                    </container>
+                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-top__right header-right">
+                        <block class="Magento\Framework\View\Element\Template" name="header.right.sth"
+                           template="Magento_Theme::html/header/right.phtml"/>
+                    </container>
             </container>
         </referenceContainer>
         <referenceContainer name="page.top">
-            <block class="Magento\Framework\View\Element\Template" name="navigation.sections" before="-" template="Magento_Theme::html/sections.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="navigation.sections" before="-"
+                   template="Magento_Theme::html/sections.phtml">
                 <arguments>
                     <argument name="group_name" xsi:type="string">navigation-sections</argument>
                     <argument name="group_css" xsi:type="string">nav-sections</argument>
                 </arguments>
-                <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections"
+                       template="Magento_Theme::html/container.phtml">
                     <arguments>
                         <argument name="title" translate="true" xsi:type="string">Menu</argument>
                     </arguments>
@@ -73,30 +83,36 @@
                         <argument name="text" xsi:type="string"><![CDATA[<!-- Account links -->]]></argument>
                     </arguments>
                 </block>
-                <block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections"
+                       template="Magento_Theme::html/container.phtml">
                     <arguments>
                         <argument name="title" translate="true" xsi:type="string">Settings</argument>
                     </arguments>
-                    <block class="Magento\Store\Block\Switcher" name="store.settings.language" template="switch/languages.phtml">
+                    <block class="Magento\Store\Block\Switcher" name="store.settings.language"
+                           template="switch/languages.phtml">
                         <arguments>
                             <argument name="id_modifier" xsi:type="string">nav</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency" template="currency.phtml">
+                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency"
+                           template="currency.phtml">
                         <arguments>
                             <argument name="id_modifier" xsi:type="string">nav</argument>
                         </arguments>
                     </block>
                 </block>
             </block>
-            <container name="top.container" as="topContainer" label="After Page Header Top" htmlTag="div" htmlClass="top-container"/>
+            <container name="top.container" as="topContainer" label="After Page Header Top" htmlTag="div"
+                       htmlClass="top-container"/>
             <block class="Magento\Theme\Block\Html\Breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
         </referenceContainer>
         <referenceContainer name="columns.top">
             <block class="Magento\Theme\Block\Html\Title" name="page.main.title" template="html/title.phtml"/>
             <container name="page.messages" htmlTag="div" htmlClass="page messages">
-                <block class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder" template="Magento_Theme::html/messages.phtml"/>
-                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder"
+                       template="Magento_Theme::html/messages.phtml"/>
+                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages"
+                       template="Magento_Theme::messages.phtml"/>
             </container>
         </referenceContainer>
         <referenceContainer name="main">
@@ -109,7 +125,8 @@
             <container name="page.bottom" label="Before Page Footer" htmlTag="div" htmlClass="content"/>
         </referenceContainer>
         <referenceContainer name="footer-container">
-                <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
+            <block class="Magento\Theme\Block\Html\Footer" name="footer-content"
+                   template="Magento_Theme::html/footer/footer-content.phtml"/>
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
