@@ -1,0 +1,123 @@
+$sm-breakpoint: 768px;
+$xs-breakpoint: 320px;
+
+.page-footer {
+    background-color: #242424;
+    flex-direction: column;
+    display: flex;
+    color: #afafaf;
+
+    a {
+        color: #afafaf;
+        cursor: pointer;
+        text-transform: uppercase;
+
+    }
+
+    a:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-family: 'Merriweather', serif;
+        font-weight: normal;
+        color: white;
+        letter-spacing: 0.6px;
+    }
+
+    &__lower {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    &__upper-wrapper, &__lower-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        max-width: 962px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    &__upper-wrapper {
+
+        .page-footer__linkbox {
+            min-width: 160px;
+
+            li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__lower-wrapper {
+        padding-top: 40px;
+        min-height: 140px;
+
+        > div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__linkbox {
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    &__comodo {
+        justify-content: flex-start;
+    }
+
+    &__comodo, &__social-icons {
+        flex: 1 0 28%;
+    }
+
+    &__copyright {
+        flex: 1 0 44%;
+        justify-content: center;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+
+    &__social-icons {
+        justify-content: flex-end;
+    }
+
+    &__social-icons-ul {
+        display: flex;
+    }
+
+}
+@media screen and (max-width: $sm-breakpoint) {
+    .page-footer {
+
+        h3 {
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        a {
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        &__upper {
+
+            > div > div {
+                flex: 1 0 50%;
+            }
+        }
+
+        &__lower {
+
+            > div > div {
+                flex: 1 0 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
