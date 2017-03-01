@@ -1,18 +1,15 @@
 $sm-breakpoint: 768px;
-$xs-breakpoint: 320px;
 
 .page-footer {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     color: #afafaf;
     background: no-repeat url('../../img/sprite/footer-bg.png') right top #242424;
-
 
     a {
         color: #afafaf;
         cursor: pointer;
         text-transform: uppercase;
-
     }
 
     a:hover {
@@ -35,7 +32,6 @@ $xs-breakpoint: 320px;
     &__upper-wrapper, &__lower-wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: space-between;
         max-width: 962px;
         margin: 0 auto;
