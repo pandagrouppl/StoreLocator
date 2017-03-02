@@ -1,8 +1,11 @@
 <div class="page-footer__upper">
+    <div class="page-footer__upper-wrapper">
     <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-links')->toHtml();?>
+    </div>
 </div>
 <div class="page-footer__lower">
-    <div class="page-footer__comodo">
+<div class="page-footer__lower-wrapper">
+    <div class="page-footer__linkbox page-footer__comodo">
         <script language="JavaScript" type="text/javascript">
             TrustLogo("https://www.peterjacksons.com/skin/frontend/peter_jackson_new/may2015/images/comodo_secure_seal_113x59_transp.png", "CL1", "none");
         </script>
@@ -10,12 +13,11 @@
         <a class="comodoimg" href="https://ssl.comodo.com/ev-ssl-certificates.php" id="comodoTL">EV SSL Certificate</a>
         <img class="confidence" src="<?php echo $this->getSkinUrl('images/shop-confidence.png'); ?>"/>
     </div>
-    <div class="page-footer__copyright">
+    <div class="page-footer__linkbox page-footer__copyright">
         <?php /* @escapeNotVerified */ echo $block->getCopyright() ?>
     </div>
-    <div class="page-footer__social-icons">
-        <h3>Stay connected with us</h3>
-        <ul>
+    <div class="page-footer__linkbox page-footer__social-icons">
+        <ul class="page-footer__social-icons-ul">
             <li><a href="https://www.facebook.com/peterjacksonmenswear" target="_blank" class="page-footer__icon-fb">fb</a> </li>
             <li><a href="https://instagram.com/peterjacksonau/" target="_blank" class="page-footer__icon-instagram">ins</a> </li>
             <li><a href="https://twitter.com/peterjacksonau/" target="_blank" class="page-footer__icon-twitter">twi</a> </li>
@@ -23,4 +25,5 @@
             <li><a href="http://pinterest.com/peterjacksonau/" target="_blank" class="page-footer__icon-pintrest">pin</a> </li>
         </ul>
     </div>
+</div>
 </div>
