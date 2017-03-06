@@ -6,6 +6,7 @@
     &__logo {
         @include sprite(logo-black);
         display: block;
+        margin: 30px 0;
     }
 
     &__navigation {
@@ -16,10 +17,10 @@
 
         li.level0 {
             padding: 0 11px 15px 11px;
-            text-transform: uppercase;
 
             > a {
                 color: $black;
+                text-transform: uppercase;
             }
         }
 
@@ -30,6 +31,42 @@
             width: 100%;
             border-bottom: 1px solid $grey;
 
+            > section {
+                max-width: 1000px;
+                height: 100px;
+                margin: auto;
+                padding: 20px 0;
+            }
         }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__columns {
+        columns: 200px 5;
+        column-gap: 0;
+        column-fill: auto;
+
+        a {
+            color: $black;
+        }
+    }
+
+    &__column-item {
+        margin: 10px 0;
+
+        &--header {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
+    &__block {
+        width: 100%;
+        padding: 6px 23px;
+        break-inside: avoid-column;
+        border-left: 1px solid #d7d7d7;
     }
 }
