@@ -4,6 +4,12 @@ var config = {
     ],
     bundles: {
         "web/js/app": [ "main" ]
+    },
+    "map": {
+        "*": {
+            "menu": "js/extend/menu-custom"
+        }
+
     }
 };
 
