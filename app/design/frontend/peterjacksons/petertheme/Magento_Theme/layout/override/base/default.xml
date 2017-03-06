@@ -51,7 +51,7 @@
                                 <argument name="logo_img_height" xsi:type="number">64</argument>
                             </arguments>
                         </block>
-                        <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml"
+                        <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml"
                                ttl="3600">
                             <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other"
                                    template="Magento_Theme::html/header/other.phtml"/>
