@@ -24,6 +24,9 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         return $html;
     }
 
-
-
+    protected function _toHtml()
+    {
+        $this->setModuleName($this->extractModuleName('Magento\Theme\Block\Html\Topmenu'));
+        return parent::_toHtml();
+    }
 }
