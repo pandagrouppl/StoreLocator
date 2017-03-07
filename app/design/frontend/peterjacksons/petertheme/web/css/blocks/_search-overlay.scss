@@ -1,0 +1,20 @@
+.search-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+    }
+}

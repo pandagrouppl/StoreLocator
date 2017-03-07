@@ -4,7 +4,10 @@
 @import 'base/reset';
 @import 'base/body';
 
-@import "blocks/minicart-widget";
+@import "blocks/minicart";
+@import "blocks/search-overlay";
+@import "blocks/spinner";
+
 
 @import 'helpers/sprite';
 @import 'helpers/variables';
@@ -15,5 +18,4 @@
 @import 'layout/header-right';
 @import 'layout/header-left';
 @import 'layout/page-footer';
-
 
