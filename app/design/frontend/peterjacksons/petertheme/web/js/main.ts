@@ -15,4 +15,3 @@ export = class Main {
         m2.sayHelloTo("David Wesst");
     }
 }
-
