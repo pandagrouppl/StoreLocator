@@ -1,0 +1,73 @@
+.header-left {
+    display: flex;
+
+    &__book {
+        margin: 0 10px;
+        position: relative;
+
+        i {
+            @include sprite(header-book);
+            display: block;
+        }
+
+        &:hover {
+
+            .header-left__catalog {
+                display: block;
+            }
+        }
+    }
+
+    &__catalog {
+        display: none;
+        position: absolute;
+        padding: 16px;
+        border: 1px solid #d2d2d2;
+        z-index: 999;
+        background: $white;
+        top: 40px;
+
+
+        a {
+            color: $black;
+            text-decoration: underline;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 12px 17px;
+            border-color: #afafaf transparent;
+            display: block;
+            width: 0;
+            top: -18px;
+            left: 25px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 12px 17px;
+            border-color: $white transparent;
+            display: block;
+            width: 0;
+            top: -17px;
+            left: 25px;
+        }
+    }
+
+    &__account {
+        margin: 0 10px;
+
+        i {
+            @include sprite(header-account);
+            display: block;
+        }
+    }
+}
+

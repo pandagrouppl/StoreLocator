@@ -3,4 +3,16 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $grey;
+
+    &-message {
+        background: #464646;
+        padding: 10px;
+        text-align: center;
+
+        a {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
 }

@@ -1,8 +1,11 @@
-<section class="header-top__right">
-    <article>
-        <a href="#">Book</a>
+<section class="header-left">
+    <article class="header-left__book">
+        <a href="#"><i></i></a>
+        <div class="header-left__catalog">
+            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-catalogue')->toHtml();?>
+        </div>
     </article>
-    <article>
-        <a href="#">Account</a>
+    <article class="header-left__account">
+        <a href="/customer/account/login"><i></i></a>
     </article>
 </section>

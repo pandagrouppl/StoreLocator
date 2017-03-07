@@ -4,9 +4,12 @@
     align-items: center;
 
     &__logo {
-        @include sprite(logo-black);
         display: block;
-        margin: 30px 0;
+        margin: 20px 0;
+
+        figure {
+            @include sprite(logo-black);
+        }
     }
 
     &__navigation {
@@ -20,6 +23,7 @@
 
             > a {
                 color: $black;
+                font-size: 14px;
                 text-transform: uppercase;
             }
         }
@@ -68,7 +72,7 @@
         width: 100%;
         padding: 6px 23px;
         break-inside: avoid-column;
-        border-left: 1px solid #d7d7d7;
+        border-left: 1px solid $grey;
         display: flex;
         justify-content: space-between;
 
@@ -76,6 +80,13 @@
 
             > figure {
                 width: 31%;
+            }
+        }
+
+        &--2-column {
+
+            > figure {
+                width: 48%;
             }
         }
     }

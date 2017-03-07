@@ -38,7 +38,11 @@
         <referenceContainer name="header.container">
             <referenceBlock name="header.panel.wrapper" remove="true"/>
             <container name="header.message" label="Header Message" htmlTag="section" htmlClass="header-message">
-
+                <block class="Magento\Cms\Block\Block" name="block_identifier">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header-message</argument>
+                    </arguments>
+                </block>
             </container>
             <container name="header.main" label="Header Top" htmlTag="section" htmlClass="header">
                     <block class="Magento\Framework\View\Element\Template" name="header.left"
