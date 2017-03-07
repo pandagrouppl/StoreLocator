@@ -1,4 +1,4 @@
-.minicart-widget {
+.minicart {
     position: absolute;
     width: 268px;
     background: #FFF;
@@ -12,4 +12,14 @@
     dl, dt, dd {
         display: inline;
     }
+
+    &__items-wrapper {
+        overflow: auto;
+        height: 240px;
+        ol {
+            overflow: hidden;
+        }
+
+    }
 }
+
