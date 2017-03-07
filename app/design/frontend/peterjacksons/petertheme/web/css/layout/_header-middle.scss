@@ -33,7 +33,7 @@
 
             > section {
                 max-width: 1000px;
-                height: 100px;
+                height: 180px;
                 margin: auto;
                 padding: 20px 0;
             }
@@ -56,6 +56,7 @@
 
     &__column-item {
         margin: 10px 0;
+        padding: 5px 23px;
 
         &--header {
             font-weight: bold;
@@ -68,5 +69,14 @@
         padding: 6px 23px;
         break-inside: avoid-column;
         border-left: 1px solid #d7d7d7;
+        display: flex;
+        justify-content: space-between;
+
+        &--3-column {
+
+            > figure {
+                width: 31%;
+            }
+        }
     }
 }
