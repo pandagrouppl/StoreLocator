@@ -1,12 +1,15 @@
+.minicart-wrapper {
+    position: relative;
+}
+
 .minicart {
     position: absolute;
-    width: 268px;
-    background: #FFF;
-    border: 1px solid #d7d7d7;
-    z-index: 9999;
-    color: #515151;
-    top: 52px;
+    top: 1em;
     right: 0;
+    width: 268px;
+    border: 1px solid #d7d7d7;
+    z-index: 999;
+    color: #515151;
     display: block;
 
     dl, dt, dd {
@@ -16,6 +19,7 @@
     &__items-wrapper {
         overflow: auto;
         height: 240px;
+
         ol {
             overflow: hidden;
         }
