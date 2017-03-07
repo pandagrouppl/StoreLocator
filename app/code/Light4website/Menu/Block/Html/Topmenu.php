@@ -5,6 +5,64 @@ namespace Light4website\Menu\Block\Html;
 class Topmenu extends \Magento\Theme\Block\Html\Topmenu
 {
 
+    /**
+     * Returns array of menu item's classes
+     *
+     * @param \Magento\Framework\Data\Tree\Node $item
+     * @return array
+     */
+    protected function _getMenuItemClasses(\Magento\Framework\Data\Tree\Node $item)
+    {
+        $classes = [];
+
+        $classes[] = 'level' . $item->getLevel();
+        $classes[] = $item->getPositionClass();
+        $classes[] = $this->_getCustomClasses($item);
+
+        if ($item->getIsFirst()) {
+            $classes[] = 'first';
+        }
+
+        if ($item->getIsActive()) {
+            $classes[] = 'active';
+        } elseif ($item->getHasActive()) {
+            $classes[] = 'has-active';
+        }
+
+        if ($item->getIsLast()) {
+            $classes[] = 'last';
+        }
+
+        if ($item->getClass()) {
+            $classes[] = $item->getClass();
+        }
+
+        if ($item->hasChildren()) {
+            $classes[] = 'parent';
+        }
+
+        return $classes;
+    }
+
+    /**
+     * Returns array of menu item's custom classes
+     *
+     * @param \Magento\Framework\Data\Tree\Node $item
+     * @return array
+     */
+    protected function _getCustomClasses($item)
+    {
+        $classes = '';
+        if ($item->getLevel() !== 0) {
+            $classes = 'header-middle__column-item';
+
+            if ($item->getIsFirst()) {
+                $classes .= ' header-middle__column-item--header';
+            }
+        }
+        return $classes;
+    }
+
     protected function _addSubMenu($child, $childLevel, $childrenWrapClass, $limit)
     {
         $html = '';
@@ -21,18 +79,9 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         $html .= '<section class="header-middle__row"><ol class="header-middle__columns">';
         $html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
         $html .= '</ol>';
-        $html .= $this->_renderCMS($child);
+        $html .= $this->_getMenuCMSBlock($child);
         $html .= '</section></ul>';
         return $html;
-    }
-
-    protected function _renderCMS($child)
-    {
-        $categoryCMS = $this->_getMenuCMSBlock($child);
-        if($categoryCMS !== '') {
-            return '<article class="header-middle__block">'. $this->_getMenuCMSBlock($child) .'</article>';
-        }
-        return '';
     }
 
     protected function _getMenuCMSBlock($child)
