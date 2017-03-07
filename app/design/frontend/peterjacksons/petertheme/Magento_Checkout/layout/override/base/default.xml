@@ -13,7 +13,7 @@
         <referenceBlock name="head.components">
             <block class="Magento\Framework\View\Element\Js\Components" name="checkout_page_head_components" template="Magento_Checkout::js/components.phtml"/>
         </referenceBlock>
-        <referenceContainer name="header-wrapper">
+        <referenceContainer name="minicart-container">
             <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="logo" template="cart/minicart.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">

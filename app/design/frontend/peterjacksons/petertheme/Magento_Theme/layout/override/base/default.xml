@@ -59,9 +59,9 @@
                     </container>
 
                     <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-top__right">
-                        <!--<block class="Magento\Framework\View\Element\Template" name="header.right.sth" template="Magento_Theme::html/header/right.phtml"/>-->
                         <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
-                        <container name="header-wrapper" label="Page Header" as="header-wrapper" />
+                        <container name="search-container" label="Search" />
+                        <container name="minicart-container" label="Minicart" />
                     </container>
 
             </container>
