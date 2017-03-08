@@ -1,6 +1,10 @@
 .header-right {
     display: flex;
 
+    > div {
+        padding: 5px;
+    }
+
     &__url-block {
         display: flex;
         align-items: center;
@@ -14,6 +18,8 @@
 
     &__counter {
         font-size: 18px;
+        display: block;
+        padding: 5px;
     }
 
     &__wishlist {
