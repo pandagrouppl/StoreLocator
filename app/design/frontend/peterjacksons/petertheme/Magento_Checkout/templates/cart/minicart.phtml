@@ -9,12 +9,12 @@
 /** @var $block \Magento\Checkout\Block\Cart\Sidebar */
 ?>
 
-<div data-block="minicart" class="minicart-wrapper">
-    <a class="action showcart" href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
-       data-bind="scope: 'minicart_content'">Cart:
-        <span class="counter qty empty"
+<div class="header-right__minicart" data-block="minicart">
+    <a class="action showcart header-right__url-block" href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
+       data-bind="scope: 'minicart_content'"><div class="header-right__minicart-icon"></div>
+        <span class="header-right__counter"
               data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
-            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
         </span>
     </a>
     <?php if ($block->getIsNeedToDisplaySideBar()): ?>

@@ -1,16 +1,12 @@
-.minicart-wrapper {
-    position: relative;
-}
-
 .minicart {
     position: absolute;
-    top: 1em;
-    right: 0;
+    top: 50px;
+    right: -20px;
+    background: #fff;
     width: 268px;
     border: 1px solid #d7d7d7;
     z-index: 999;
     color: #515151;
-    display: block;
 
     dl, dt, dd {
         display: inline;
@@ -24,6 +20,30 @@
             overflow: hidden;
         }
 
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 12px 17px;
+        border-color: #afafaf transparent;
+        display: block;
+        width: 0;
+        top: -18px;
+        right: 25px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 12px 17px;
+        border-color: $white transparent;
+        display: block;
+        width: 0;
+        top: -17px;
+        right: 25px;
     }
 }
 

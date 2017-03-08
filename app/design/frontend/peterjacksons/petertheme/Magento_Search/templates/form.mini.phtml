@@ -11,35 +11,39 @@
 /** @var $helper \Magento\Search\Helper\Data */
 $helper = $this->helper('Magento\Search\Helper\Data');
 ?>
-<a href="#/" class="show-search-overlay">Search</a>
-<div class="search-overlay">
-    <div class="search-overlay__container">
-    <form class="search-overlay__form" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
-        <div class="search-overlay__input">
-                <input id="search"
-                       data-mage-init='{"quickSearch":{
+<div class="header-right__search">
+    <a href="#search" class="header-right__show-search-overlay"></a>
+
+    <div class="search-overlay">
+        <div class="search-overlay__container">
+            <form class="search-overlay__form" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+                <div class="search-overlay__input">
+                    <input id="search"
+                        data-mage-init='{"quickSearch":{
                             "formSelector":"#search_mini_form",
                             "url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest', ['_secure' => $block->getRequest()->isSecure()]); ?>",
                             "destinationSelector":"#search_autocomplete"}
-                       }'
-                       type="text"
-                       name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
-                       value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
-                       placeholder="<?php /* @escapeNotVerified */ echo __('Search entire store here...'); ?>"
-                       class="input-text"
-                       maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
-                       role="combobox"
-                       aria-haspopup="false"
-                       aria-autocomplete="both"
-                       autocomplete="off"/>
+                            }'
+                        type="text"
+                        name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+                        value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+                        placeholder="<?php /* @escapeNotVerified */ echo __('Search entire store here...'); ?>"
+                        class="input-text"
+                        maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+                        role="combobox"
+                        aria-haspopup="false"
+                        aria-autocomplete="both"
+                        autocomplete="off"/>
+                </div>
+                <div class="search-overlay__submit">
+                    <button type="submit"
+                            title="<?php echo $block->escapeHtml(__('Search')) ?>"
+                            class="action search">
+                        <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                    </button>
+                </div>
+            </form>
         </div>
-        <div class="search-overlay__submit">
-            <button type="submit"
-                    title="<?php echo $block->escapeHtml(__('Search')) ?>"
-                    class="action search">
-                <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
-            </button>
-        </div>
-    </form>
     </div>
+
 </div>

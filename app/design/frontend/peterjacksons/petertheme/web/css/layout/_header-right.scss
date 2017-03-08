@@ -1,3 +1,34 @@
 .header-right {
+    display: flex;
+
+    &__url-block {
+        display: flex;
+        align-items: center;
+        color: #8d8b8b;
+    }
+
+    &__show-search-overlay {
+        @include sprite(header-zoom);
+        display: block;
+    }
+
+    &__counter {
+        font-size: 18px;
+    }
+
+    &__wishlist {
+
+        &-icon {
+            @include sprite(header-star);
+        }
+    }
+
+    &__minicart {
+        position: relative;
+
+        &-icon {
+            @include sprite(header-case);
+        }
+    }
 
 }

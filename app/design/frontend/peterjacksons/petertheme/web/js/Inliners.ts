@@ -8,7 +8,7 @@ export class Inliners {
     }
 
     private _showSearch(): void {
-        $('.show-search-overlay').on('click', () => {
+        $('.header-right__show-search-overlay').on('click', () => {
             $('.search-overlay').show();
         });
         $('.search-overlay').click(() => {
