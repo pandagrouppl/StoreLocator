@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@import 'helpers/sprite';
-@import 'helpers/variables';
-
 @import 'base/normalize';
 @import 'base/reset';
 @import 'base/body';
 
+@import 'helpers/sprite';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
 @import "blocks/minicart";
 @import "blocks/search-overlay";
 @import "blocks/spinner";
+@import "blocks/breadcrumbs";
+@import "blocks/wishlist";
 
 @import 'layout/header';
 @import 'layout/header-top';
@@ -17,4 +20,7 @@
 @import 'layout/header-right';
 @import 'layout/header-left';
 @import 'layout/page-footer';
+
+@import 'modules/product/product-main';
+@import 'modules/product/product-content';
 

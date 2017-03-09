@@ -1,0 +1,35 @@
+.product-content {
+
+    &__title {
+        font-family: league_gothic;
+        text-transform: uppercase;
+        padding: 0 0 10px 0;
+    }
+
+    .attribute.sku {
+        display: flex;
+
+        strong {
+            font-weight: normal;
+            margin-right: 2px;
+        }
+    }
+
+    &__price {
+        display: flex;
+
+        .price-box {
+            margin-right: 20px;
+        }
+
+        .towishlist {
+            color: $gold;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__button {
+        @include blue-button();
+    }
+}

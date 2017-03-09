@@ -1,0 +1,16 @@
+.product-main {
+
+    &__wrapper {
+        display: flex;
+        @include container();
+    }
+
+    &__left {
+        width: 55%;
+        min-width: 55%;
+    }
+
+    &__right {
+        padding: 0 30px;
+    }
+}
