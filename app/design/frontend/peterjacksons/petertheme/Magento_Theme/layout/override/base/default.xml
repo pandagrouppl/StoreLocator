@@ -45,9 +45,7 @@
                 </block>
             </container>
             <container name="header.main" label="Header Top" htmlTag="section" htmlClass="header">
-                    <block class="Magento\Framework\View\Element\Template" name="header.left"
-                           template="Magento_Theme::html/header/left.phtml"/>
-
+                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
                             <arguments>
@@ -55,16 +53,14 @@
                                 <argument name="logo_img_height" xsi:type="number">64</argument>
                             </arguments>
                         </block>
-                        <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml"
-                               ttl="3600">
-                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other"
-                                   template="Magento_Theme::html/header/other.phtml"/>
+                        <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
+                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
                         </block>
                     </container>
 
-                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-top__right">
-                        <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
+                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right">
                         <container name="search-container" label="Search" />
+                        <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
                         <container name="minicart-container" label="Minicart" />
                     </container>
 
