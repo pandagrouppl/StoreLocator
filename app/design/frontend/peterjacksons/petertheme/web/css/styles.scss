@@ -4,12 +4,8 @@
 @import 'base/reset';
 @import 'base/body';
 
-@import "blocks/minicart";
-@import "blocks/search-overlay";
-@import "blocks/spinner";
-
-
 @import 'helpers/sprite';
+@import 'helpers/mixins';
 @import 'helpers/variables';
 
 @import 'layout/header';
@@ -19,3 +15,9 @@
 @import 'layout/header-left';
 @import 'layout/page-footer';
 
+@import "blocks/breadcrumbs";
+@import "blocks/minicart";
+@import "blocks/search-overlay";
+@import "blocks/spinner";
+
+@import "modules/product/catalog-product-view";

@@ -1,0 +1,31 @@
+$breadcrumbs-color: #928383;
+
+.breadcrumbs {
+    @include container();
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        text-transform: uppercase;
+
+        a {
+            color: #222;
+
+            &:hover {
+                color: $breadcrumbs-color;
+            }
+        }
+
+        &--last {
+            color: $breadcrumbs-color;
+            text-transform: none;
+        }
+    }
+
+    &__separator {
+        margin: 0 5px;
+        color: $breadcrumbs-color;
+    }
+}
