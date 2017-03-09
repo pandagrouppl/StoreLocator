@@ -1,12 +1,13 @@
 .minicart {
     position: absolute;
-    top: 50px;
-    right: -20px;
+    top: 55px;
+    right: 10px;
     background: #fff;
     width: 268px;
     border: 1px solid #d7d7d7;
     z-index: 999;
     color: #515151;
+    padding: 20px;
 
     dl, dt, dd {
         display: inline;
