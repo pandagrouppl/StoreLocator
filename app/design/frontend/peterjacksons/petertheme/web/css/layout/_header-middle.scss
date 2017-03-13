@@ -13,6 +13,7 @@
     }
 
     &__navigation {
+        z-index: 100;
 
         > ul {
             display: flex;

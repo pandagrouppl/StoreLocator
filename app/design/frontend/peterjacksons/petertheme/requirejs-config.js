@@ -9,7 +9,6 @@ var config = {
         "*": {
             "menu": "js/extend/menu-custom"
         }
-
     }
 };
 
