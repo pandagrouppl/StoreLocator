@@ -26,6 +26,8 @@
             </action>
         </referenceBlock>
 
+        <referenceContainer name="cart.summary" htmlClass="" htmlTag=""/>
+
         <referenceContainer name="checkout.cart.totals.container">
             <referenceBlock name="checkout.cart.totals" display="false" />
             <block class="Magento\Checkout\Block\Cart\Totals" name="checkout.cart.totals.2" template="cart/totals.phtml">
@@ -54,7 +56,7 @@
 
         <block class="Magento\Checkout\Block\Cart" name="checkout.cart.methods.bottom2" template="cart/methods.phtml">
             <container name="checkout.cart.methods2" as="methods" label="Payment Methods After Checkout Button">
-                <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.methods.onepage.bottom2" template="onepage/link.phtml" />
+                <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.methods.onepage.bottom2" template="onepage/link.phtml"/>
                 <block class="Magento\Checkout\Block\QuoteShortcutButtons" name="checkout.cart.shortcut.buttons2" />
             </container>
         </block>

@@ -1433,7 +1433,7 @@ Message,Message,module,Magento_Checkout
 "Apply Discount","Apply Discount",module,Magento_Checkout
 "Cancel Coupon","Cancel Coupon",module,Magento_Checkout
 "Shopping Cart Items","Shopping Cart Items",module,Magento_Checkout
-Item,Item,module,Magento_Checkout
+Product,Product,module,Magento_Checkout
 Price,Price,module,Magento_Checkout
 Qty,Qty,module,Magento_Checkout
 Subtotal,Subtotal,module,Magento_Checkout
