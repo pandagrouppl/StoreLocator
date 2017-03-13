@@ -14,12 +14,14 @@
 @import "blocks/breadcrumbs";
 @import "blocks/wishlist";
 
+@import "layout/cart-container";
 @import 'layout/header';
 @import 'layout/header-top';
 @import 'layout/header-middle';
 @import 'layout/header-right';
 @import 'layout/header-left';
 @import 'layout/page-footer';
+@import "layout/page-main";
 
 @import 'modules/product/product-main';
 @import 'modules/product/product-content';

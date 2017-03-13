@@ -67,6 +67,37 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
             </div>
         </td>
 
+        <td class="col qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
+            <div class="field qty">
+                <div class="control qty">
+                    <select
+                        id="cart-<?php /* @escapeNotVerified */ echo $_item->getId() ?>-qty"
+                        name="cart[<?php /* @escapeNotVerified */ echo $_item->getId() ?>][qty]"
+                        data-cart-item-id="<?php /* @escapeNotVerified */ echo $_item->getSku() ?>"
+                        title="<?php echo $block->escapeHtml(__('Qty')); ?>"
+                        class="input-text qty"
+                        data-validate="{required:true,'validate-greater-than-zero':true}"
+                        data-role="cart-item-qty"
+                        >
+                        <?php $value = $block->getQty();
+                        for ($i = 1; $i <= 10; $i++) {
+                            if ($i == $value) {
+                                echo "<option value='{$i}' selected>{$i}</option>";
+                            } else {
+                                echo "<option value='{$i}'>{$i}</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+        </td>
+
+
+        <td class="col size">
+            size
+        </td>
+
         <?php if ($canApplyMsrp): ?>
             <td class="col msrp" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
                 <span class="pricing msrp">
@@ -82,42 +113,8 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 <?php echo $block->getUnitPriceHtml($_item); ?>
             </td>
         <?php endif; ?>
-        <td class="col qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
-            <div class="field qty">
-                <label class="label" for="cart-<?php /* @escapeNotVerified */ echo $_item->getId() ?>-qty">
-                    <span><?php /* @escapeNotVerified */ echo __('Qty') ?></span>
-                </label>
-                <div class="control qty">
-                    <select
-                        id="cart-<?php /* @escapeNotVerified */ echo $_item->getId() ?>-qty"
-                        name="cart[<?php /* @escapeNotVerified */ echo $_item->getId() ?>][qty]"
-                        data-cart-item-id="<?php /* @escapeNotVerified */ echo $_item->getSku() ?>"
-                        title="<?php echo $block->escapeHtml(__('Qty')); ?>"
-                        class="input-text qty"
-                        data-validate="{required:true,'validate-greater-than-zero':true}"
-                        data-role="cart-item-qty"
-                        >
-                        <?php $value = $block->getQty();
-                            for ($i = 1; $i <= 10; $i++) {
-                                if ($i == $value) {
-                                    echo "<option value='{$i}' selected>{$i}</option>";
-                                } else {
-                                    echo "<option value='{$i}'>{$i}</option>";
-                                }
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
-        </td>
 
-        <td class="col subtotal" data-th="<?php echo $block->escapeHtml(__('Subtotal'));?>">
-            <?php if ($canApplyMsrp): ?>
-                <span class="cart msrp subtotal">--</span>
-            <?php else: ?>
-                <?php echo $block->getRowTotalHtml($_item); ?>
-            <?php endif; ?>
-        </td>
+
     </tr>
     <tr class="item-actions">
         <td colspan="100">
