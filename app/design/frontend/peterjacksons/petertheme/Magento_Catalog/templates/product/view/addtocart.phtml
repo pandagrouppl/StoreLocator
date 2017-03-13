@@ -17,14 +17,13 @@
         <div class="field qty">
             <label class="label" for="qty"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></label>
             <div class="control">
-                <input type="number"
-                       name="qty"
-                       id="qty"
-                       maxlength="12"
-                       value="<?php /* @escapeNotVerified */ echo $block->getProductDefaultQty() * 1 ?>"
-                       title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
-                       data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
-                       />
+                <select type="number" name="qty" id="qty"
+                title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
+                data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>">
+                <?php for($i = 1; $i < $block->getMaxQty() + 1; $i++): ?>
+                    <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                <?php endfor; ?>
+                </select>
             </div>
         </div>
         <?php endif; ?>
