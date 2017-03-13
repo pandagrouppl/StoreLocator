@@ -7194,7 +7194,7 @@ Details,Details,module,Magento_Catalog
 "Separate by "","".","Separate by "","".",module,Magento_Checkout
 "Send Payment Failed Email Copy Method","Send Payment Failed Email Copy Method",module,Magento_Checkout
 Summary,Summary,module,Magento_Checkout
-"Order Total","Order Total",module,Magento_Checkout
+"Order Total","Total Price",module,Magento_Checkout
 "We'll send your order confirmation here.","We'll send your order confirmation here.",module,Magento_Checkout
 Payment,Payment,module,Magento_Checkout
 "Not yet calculated","Not yet calculated",module,Magento_Checkout

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer" remove="true" />
+            <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="checkout.cart.summary.title" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.bundle.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.virtual.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.default.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.simple.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.configurable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.downloadable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.grouped.actions.edit" remove="true" />
+    </body>
+</page>
