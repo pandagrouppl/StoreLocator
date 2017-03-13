@@ -15,9 +15,12 @@ $isVisibleProduct = $product->isVisibleInSiteVisibility();
 $helper = $this->helper('Magento\Msrp\Helper\Data');
 $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinimalPriceLessMsrp($product);
 ?>
-<tbody class="cart item">
-    <tr class="item-info">
-        <td data-th="<?php echo $block->escapeHtml(__('Item')); ?>" class="col item">
+<tbody>
+    <tr class="items-table__row">
+        <td class="items-table__column--remove">
+            X
+        </td>
+        <td class="items-table__column--item" data-th="<?php echo $block->escapeHtml(__('Item')); ?>" >
             <?php if ($block->hasProductUrl()):?>
                 <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl() ?>"
                    title="<?php echo $block->escapeHtml($block->getProductName()) ?>"
@@ -67,7 +70,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
             </div>
         </td>
 
-        <td class="col qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
+        <td class="items-table__column--qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
             <div class="field qty">
                 <div class="control qty">
                     <select
@@ -93,13 +96,12 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
             </div>
         </td>
 
-
-        <td class="col size">
+        <td class="items-table__column--size">
             size
         </td>
 
         <?php if ($canApplyMsrp): ?>
-            <td class="col msrp" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
+            <td class="items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
                 <span class="pricing msrp">
                     <span class="msrp notice"><?php /* @escapeNotVerified */ echo __('See price before order confirmation.'); ?></span>
                     <?php $helpLinkId = 'cart-msrp-help-' . $_item->getId(); ?>
@@ -109,7 +111,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                 </span>
             </td>
         <?php else: ?>
-            <td class="col price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
+            <td class="items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
                 <?php echo $block->getUnitPriceHtml($_item); ?>
             </td>
         <?php endif; ?>
