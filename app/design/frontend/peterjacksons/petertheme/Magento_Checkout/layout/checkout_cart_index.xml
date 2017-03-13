@@ -8,6 +8,23 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="checkout_cart_item_renderers"/>
     <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">/</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Shopping Cart</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Shopping Cart</item>
+                    <item name="label" xsi:type="string">Shopping Cart</item>
+                </argument>
+            </action>
+        </referenceBlock>
 
         <referenceContainer name="checkout.cart.totals.container">
             <referenceBlock name="checkout.cart.totals" display="false" />
@@ -44,5 +61,6 @@
         <move element="checkout.cart.methods.bottom2" destination="checkout.cart.order.actions" after="checkout.cart.totals.container" />
 
         <move element="checkout.cart.coupon" destination="checkout.cart.order.actions" before="checkout.cart.totals.container" />
+
     </body>
 </page>
