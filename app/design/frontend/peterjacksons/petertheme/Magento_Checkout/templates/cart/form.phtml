@@ -10,24 +10,22 @@
 ?>
 <?php $mergedCells = ($this->helper('Magento\Tax\Helper\Data')->displayCartBothPrices() ? 2 : 1); ?>
 <?php echo $block->getChildHtml('form_before') ?>
-<form class="cart-container__items"
+<form class="cart-container__form"
       action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/updatePost') ?>"
       method="post"
       id="form-validate"
       data-mage-init='{"validation":{}}'
     >
     <?php echo $block->getBlockHtml('formkey'); ?>
-    <div class="cart table-wrapper<?php echo $mergedCells == 2 ? ' detailed' : ''; ?>">
-        <table id="shopping-cart-table"
-               class="cart items data table"
->
+    <div class="cart-container__items-table-wrapper<?php echo $mergedCells == 2 ? ' detailed' : ''; ?>">
+        <table class="items-table" id="shopping-cart-table">
             <thead>
                 <tr>
-                    <th class="col item" scope="col"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></th>
-                    <th class="col qty" scope="col"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></th>
-                    <th class="col size" scope="col"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></th>
-                    <th class="col price" scope="col"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></th>
-
+                    <th class="items-table__column items-table__column--remove"></th>
+                    <th class="items-table__column items-table__column--item" scope="col"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></th>
+                    <th class="items-table__column items-table__column--qty" scope="col"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></th>
+                    <th class="items-table__column items-table__column--size" scope="col"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></th>
+                    <th class="items-table__column items-table__column--price" scope="col"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></th>
                 </tr>
             </thead>
             <?php foreach ($block->getItems() as $_item): ?>
@@ -35,7 +33,8 @@
             <?php endforeach ?>
         </table>
     </div>
-    <div class="cart main actions">
+    <?php echo $block->getChildHtml('checkout.cart.minisummary') ?>
+    <div class="cart-container__actions">
         <?php if ($block->getContinueShoppingUrl()): ?>
             <a class="action continue"
                href="<?php echo $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
@@ -54,6 +53,7 @@
         <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
     </div>
 </form>
+
 <?php echo $block->getChildHtml('checkout.cart.order.actions') ?>
 <?php echo $block->getChildHtml('shopping.cart.table.after'); ?>
 

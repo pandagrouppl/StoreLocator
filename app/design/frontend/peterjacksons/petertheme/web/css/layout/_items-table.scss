@@ -1,0 +1,37 @@
+.items-table {
+    width: 100%;
+
+    th {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    &__column {
+
+        &--remove {
+            width: 5%;
+            text-align: center;
+        }
+
+        &--item {
+            width: 55%;
+            text-align: left;
+        }
+
+        &--qty {
+            width: 15%;
+            text-align: center;
+        }
+
+        &--size {
+            width: 15%;
+            text-align: center;
+        }
+
+        &--price {
+            width: 10%;
+            text-align: right;
+        }
+    }
+
+}
