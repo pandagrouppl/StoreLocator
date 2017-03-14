@@ -15,7 +15,6 @@ $isVisibleProduct = $product->isVisibleInSiteVisibility();
 $helper = $this->helper('Magento\Msrp\Helper\Data');
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
-$canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinimalPriceLessMsrp($product);
 ?>
 <tbody>
     <tr class="items-table__row">
@@ -105,21 +104,13 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
 
         <td class="items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
             <?php $normal_price = $_item->getProduct()->getPrice();
-            $special_price = $_item->getProduct()->getSpecialPrice();
-             if ($canApplyMsrp): ?>
-                    <span class="items-table__price">
-                        <span class="msrp notice"><?php /* @escapeNotVerified */ echo __('See price before order confirmation.'); ?></span>
-                        <?php $helpLinkId = 'cart-msrp-help-' . $_item->getId(); ?>
-                        <a href="#" class="action help map" id="<?php /* @escapeNotVerified */ echo($helpLinkId); ?>" data-mage-init='{"addToCart":{"helpLinkId": "#<?php /* @escapeNotVerified */ echo $helpLinkId;?>","productName": "<?php /* @escapeNotVerified */ echo $product->getName(); ?>","showAddToCart": false}}'>
-                            <span><?php /* @escapeNotVerified */ echo __("What's this?"); ?></span>
-                        </a>
-                    </span>
+            $special_price = $_item->getProduct()->getSpecialPrice();?>
+            <?php if ($special_price):?>
+                <span class="items-table__price items-table__price--strikethrough"><?php echo $priceHelper->currency($normal_price, true, false); ?></span>
+                <span class="items-table__price items-table__price--special"><?php echo $priceHelper->currency($special_price, true, false);?></span>
             <?php else: ?>
-                 <?php echo $priceHelper->currency($normal_price, true, false); ?>
-            <?php endif;
-            if ($special_price):
-                echo $priceHelper->currency($special_price, true, false);
-            endif;?>
+                <span class="items-table__price"><?php echo $priceHelper->currency($normal_price, true, false); ?></span>
+            <?php endif;?>
         </td>
     </tr>
 </tbody>
