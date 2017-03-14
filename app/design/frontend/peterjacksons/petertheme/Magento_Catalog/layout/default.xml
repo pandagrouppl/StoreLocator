@@ -5,18 +5,23 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_product_view"/>
     <body>
         <move element="page.main.title" destination="product.info.main" before="-"/>
         <referenceBlock name="reviews.tab" remove="true"/>
         <referenceBlock name="product.attributes" remove="true"/>
-        <referenceBlock name="product.info.addtocart">
-            <arguments>
-                <argument name="max_qty" xsi:type="string">12</argument>
-            </arguments>
-        </referenceBlock>
         <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description"
+                   template="product/view/attribute.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getDescription</argument>
+                    <argument name="at_code" xsi:type="string">description</argument>
+                    <argument name="css_class" xsi:type="string">description</argument>
+                    <argument name="at_label" xsi:type="string">none</argument>
+                    <argument name="title" translate="true" xsi:type="string">Description</argument>
+                </arguments>
+            </block>
             <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.fabric"
                    template="product/view/attribute.phtml" group="detailed_info">
                 <arguments>
