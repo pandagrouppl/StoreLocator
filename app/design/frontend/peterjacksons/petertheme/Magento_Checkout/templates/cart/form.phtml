@@ -33,6 +33,7 @@
             <?php endforeach ?>
         </table>
     </div>
+    <?php echo $block->getChildHtml('checkout.cart.minisummary') ?>
     <div class="cart-container__actions">
         <?php if ($block->getContinueShoppingUrl()): ?>
             <a class="action continue"
@@ -52,6 +53,7 @@
         <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
     </div>
 </form>
+
 <?php echo $block->getChildHtml('checkout.cart.order.actions') ?>
 <?php echo $block->getChildHtml('shopping.cart.table.after'); ?>
 

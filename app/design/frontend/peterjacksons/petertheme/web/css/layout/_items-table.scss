@@ -3,10 +3,10 @@
 
     th {
         font-size: 20px;
+        font-weight: normal;
     }
 
     &__column {
-
 
         &--remove {
             width: 5%;
@@ -30,7 +30,7 @@
 
         &--price {
             width: 10%;
-            text-align: center;
+            text-align: right;
         }
     }
 

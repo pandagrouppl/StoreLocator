@@ -14,13 +14,5 @@
             <referenceContainer name="footer" remove="true" />
             <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
         </referenceContainer>
-        <referenceBlock name="checkout.cart.summary.title" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.bundle.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.virtual.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.default.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.simple.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.configurable.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.downloadable.actions.edit" remove="true" />
-        <referenceBlock name="checkout.cart.item.renderers.grouped.actions.edit" remove="true" />
     </body>
 </page>

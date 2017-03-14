@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="checkout_cart_item_renderers"/>
     <body>
@@ -28,31 +22,30 @@
 
         <referenceContainer name="cart.summary" htmlClass="" htmlTag=""/>
 
-        <referenceContainer name="checkout.cart.totals.container">
-            <referenceBlock name="checkout.cart.totals" display="false" />
-            <block class="Magento\Checkout\Block\Cart\Totals" name="checkout.cart.totals.2" template="cart/totals.phtml">
-                    <arguments>
-                        <argument name="jsLayout" xsi:type="array">
-                            <item name="components" xsi:type="array">
-                                <item name="block-totals" xsi:type="array">
-                                    <item name="component" xsi:type="string">Magento_Checkout/js/view/cart/totals</item>
-                                    <item name="displayArea" xsi:type="string">totals</item>
-                                    <item name="children" xsi:type="array">
-                                        <item name="grand-total" xsi:type="array">
-                                            <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/grand-total</item>
-                                            <item name="config" xsi:type="array">
-                                                <item name="title" xsi:type="string" translate="true">Order Total</item>
-                                                <item name="template" xsi:type="string">Magento_Checkout/cart/totals/grand-total</item>
-                                            </item>
-                                        </item>
+        <referenceBlock name="checkout.cart.totals" display="false" />
+
+        <block class="Magento\Checkout\Block\Cart\Totals" name="checkout.cart.minisummary" template="cart/totals.phtml">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="block-totals" xsi:type="array">
+                            <item name="component" xsi:type="string">Magento_Checkout/js/view/cart/totals</item>
+                            <item name="displayArea" xsi:type="string">totals</item>
+                            <item name="children" xsi:type="array">
+                                <item name="grand-total" xsi:type="array">
+                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/grand-total</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Order Total</item>
+                                        <item name="template" xsi:type="string">Magento_Checkout/cart/totals/grand-total</item>
                                     </item>
                                 </item>
                             </item>
-                        </argument>
-                    </arguments>
-                </block>
-        </referenceContainer>
-        <move element="checkout.cart.totals.container" destination="checkout.cart.order.actions" before="checkout.cart.order.actions.gift_options"/>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </block>
+        <move element="checkout.cart.minisummary" destination="checkout.cart.form"/>
 
         <block class="Magento\Checkout\Block\Cart" name="checkout.cart.methods.bottom2" template="cart/methods.phtml">
             <container name="checkout.cart.methods2" as="methods" label="Payment Methods After Checkout Button">
@@ -63,6 +56,15 @@
         <move element="checkout.cart.methods.bottom2" destination="checkout.cart.order.actions" after="checkout.cart.totals.container" />
 
         <move element="checkout.cart.coupon" destination="checkout.cart.order.actions" before="checkout.cart.totals.container" />
+
+        <referenceBlock name="checkout.cart.summary.title" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.bundle.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.virtual.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.default.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.simple.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.configurable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.downloadable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.grouped.actions.edit" remove="true" />
 
     </body>
 </page>
