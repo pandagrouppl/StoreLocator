@@ -15,12 +15,12 @@
     <div class="fieldset">
         <?php if ($block->shouldRenderQuantity()): ?>
         <div class="field qty">
-            <label class="label" for="qty"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></label>
-            <div class="control">
-                <select type="number" name="qty" id="qty"
+            <div class="control product-qty__wrapper">
+                <figure class="product-qty__arrow"></figure>
+                <select class="product-qty__select" type="number" name="qty" id="qty"
                 title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
                 data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>">
-                <?php for($i = 1; $i < $block->getMaxQty() + 1; $i++): ?>
+                <?php for($i = 1; $i < 11; $i++): ?>
                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                 <?php endfor; ?>
                 </select>

@@ -3,6 +3,7 @@
 @import 'base/normalize';
 @import 'base/reset';
 @import 'base/body';
+@import 'base/fonts';
 
 @import 'helpers/sprite';
 @import 'helpers/variables';
@@ -27,4 +28,5 @@
 @import 'modules/product/product-main';
 @import 'modules/product/product-content';
 @import 'modules/product/products-related';
+@import 'modules/product/product-qty';
 

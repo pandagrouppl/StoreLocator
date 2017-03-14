@@ -13,6 +13,18 @@ $retina-sprite: (
 );
 
 $sprite-icon: (
+    brownline: (
+        x: -962px,
+        y: -55px,
+        width: 12px,
+        height: 12px
+    ),
+    brownstar: (
+        x: -660px,
+        y: -123px,
+        width: 27px,
+        height: 24px
+    ),
     footer-bg: (
         x: 0px,
         y: 0px,
@@ -20,31 +32,31 @@ $sprite-icon: (
         height: 790px
     ),
     header-account: (
-        x: -902px,
-        y: -55px,
+        x: -717px,
+        y: -123px,
         width: 25px,
         height: 24px
     ),
     header-book: (
-        x: -842px,
+        x: -902px,
         y: -55px,
         width: 30px,
         height: 24px
     ),
     header-case: (
-        x: -720px,
+        x: -780px,
         y: -55px,
         width: 32px,
         height: 26px
     ),
     header-star: (
-        x: -782px,
+        x: -842px,
         y: -55px,
         width: 30px,
         height: 26px
     ),
     header-zoom: (
-        x: -660px,
+        x: -720px,
         y: -55px,
         width: 30px,
         height: 29px
@@ -54,6 +66,12 @@ $sprite-icon: (
         y: 0px,
         width: 325px,
         height: 25px
+    ),
+    select-arrw: (
+        x: -660px,
+        y: -55px,
+        width: 30px,
+        height: 38px
     ),
 );
 

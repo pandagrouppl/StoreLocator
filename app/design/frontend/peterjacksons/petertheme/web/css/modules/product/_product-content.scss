@@ -6,6 +6,7 @@
         padding: 0 0 10px 0;
 
         h1 {
+            font-size: 42px;
             margin: 0;
         }
     }
@@ -32,6 +33,14 @@
             color: $gold;
             font-size: 12px;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                @include sprite(brownstar);
+                content: '';
+                margin-right: 5px;
+            }
         }
     }
 
@@ -47,6 +56,17 @@
             font-weight: 600;
             color: #242424;
             margin-right: 20px;
+
+            &:hover {
+                color: #666;
+            }
+        }
+
+        .active {
+
+            a {
+                border-bottom: 3px solid $grey;
+            }
         }
     }
 }

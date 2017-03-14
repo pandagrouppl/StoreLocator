@@ -1,0 +1,27 @@
+.product-qty {
+
+    &__select {
+        background: $white;
+        height: 38px;
+        padding-left: 5px;
+        border: 1px solid #959494;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+    &__wrapper {
+        position: relative;
+        min-width: 50px;
+        width: 12%;
+    }
+
+    &__arrow {
+        @include sprite(select-arrw);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        z-index: 10;
+    }
+}
