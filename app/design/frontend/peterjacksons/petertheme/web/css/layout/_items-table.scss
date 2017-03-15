@@ -1,18 +1,18 @@
 .items-table {
     width: 100%;
+    letter-spacing: 1px;
 
+    &__row {
+        display: flex;
+        border-bottom: 1px solid #DDD;
 
-    th, td, table {
-        border: 1px solid black;
-        box-sizing: border-box;
-    }
-
-    th {
-        font-size: 20px;
-        font-weight: normal;
+        &--header {
+            font-size: 20px;
+        }
     }
 
     &__column {
+        padding: 20px 5px 20px 5px;
 
         &--remove {
             width: 5%;
@@ -22,6 +22,14 @@
         &--item {
             width: 55%;
             text-align: left;
+            display: flex;
+
+            a {
+                font-family: league_gothic, sans-serif;
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #000;
+            }
         }
 
         &--qty {

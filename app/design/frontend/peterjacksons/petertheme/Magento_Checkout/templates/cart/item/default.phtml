@@ -16,12 +16,12 @@ $helper = $this->helper('Magento\Msrp\Helper\Data');
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
 ?>
-<tbody>
-    <tr class="items-table__row">
-        <td class="items-table__column--remove">
+    <div class="items-table__row">
+        <div class="items-table__column items-table__column--remove">
             <?php /* @escapeNotVerified */ echo $block->getActions($_item) ?>
-        </td>
-        <td class="items-table__column--item" data-th="<?php echo $block->escapeHtml(__('Item')); ?>" >
+        </div>
+
+        <div class="items-table__column items-table__column--item" data-th="<?php echo $block->escapeHtml(__('Item')); ?>" >
             <?php if ($block->hasProductUrl()):?>
                 <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl() ?>"
                    title="<?php echo $block->escapeHtml($block->getProductName()) ?>"
@@ -69,9 +69,9 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
                     <?php echo $addInfoBlock->setItem($_item)->toHtml() ?>
                 <?php endif;?>
             </div>
-        </td>
+        </div>
 
-        <td class="items-table__column--qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
+        <div class="items-table__column items-table__column--qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
             <div class="select__wrapper select__wrapper--cart-qty">
                 <figure class="select__arrow"></figure>
                 <select class="select__select"
@@ -93,9 +93,9 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
                         ?>
                 </select>
             </div>
-        </td>
+        </div>
 
-        <td class="items-table__column--size">
+        <div class="items-table__column items-table__column--size">
             <div class="select__wrapper select__wrapper--cart-size">
                 <figure class="select__arrow"></figure>
                 <select class="select__select">
@@ -105,9 +105,9 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
                 ?>
             </select>
                 </div>
-        </td>
+        </div>
 
-        <td class="items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
+        <div class="items-table__column items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
             <?php $normal_price = $_item->getProduct()->getPrice();
             $special_price = $_item->getProduct()->getSpecialPrice();?>
             <?php if ($special_price):?>
@@ -116,6 +116,6 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
             <?php else: ?>
                 <span class="items-table__price"><?php echo $priceHelper->currency($normal_price, true, false); ?></span>
             <?php endif;?>
-        </td>
-    </tr>
-</tbody>
+        </div>
+    </div>
+

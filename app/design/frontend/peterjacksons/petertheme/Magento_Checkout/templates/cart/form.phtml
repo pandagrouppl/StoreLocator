@@ -18,34 +18,32 @@
     >
     <?php echo $block->getBlockHtml('formkey'); ?>
     <div class="cart-container__items-table-wrapper<?php echo $mergedCells == 2 ? ' detailed' : ''; ?>">
-        <table class="items-table" id="shopping-cart-table">
-            <thead>
-                <tr>
-                    <th class="items-table__column items-table__column--remove"></th>
-                    <th class="items-table__column items-table__column--item" scope="col"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></th>
-                    <th class="items-table__column items-table__column--qty" scope="col"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></th>
-                    <th class="items-table__column items-table__column--size" scope="col"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></th>
-                    <th class="items-table__column items-table__column--price" scope="col"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></th>
-                </tr>
-            </thead>
+        <div class="items-table" id="shopping-cart-table">
+            <div class="items-table__row items-table__row--header">
+                    <div class="items-table__column items-table__column--remove"></div>
+                    <div class="items-table__column items-table__column--item"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></div>
+                    <div class="items-table__column items-table__column--qty"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></div>
+                    <div class="items-table__column items-table__column--size"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></div>
+                    <div class="items-table__column items-table__column--price"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></div>
+                </div>
             <?php foreach ($block->getItems() as $_item): ?>
                 <?php echo $block->getItemHtml($_item) ?>
             <?php endforeach ?>
-        </table>
+        </div>
     </div>
 
 
-<!--    <div class="cart-container__actions">-->
-<!--        <button type="submit"-->
-<!--                name="update_cart_action"-->
-<!--                data-cart-item-update=""-->
-<!--                value="update_qty"-->
-<!--                title="--><?php //echo $block->escapeHtml(__('Update Shopping Cart')); ?><!--"-->
-<!--                class="action update">-->
-<!--            <span>--><?php ///* @escapeNotVerified */ echo __('Update Shopping Cart'); ?><!--</span>-->
-<!--        </button>-->
-<!--        <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>-->
-<!--    </div>-->
+    <div class="cart-container__actions">
+        <button type="submit"
+                name="update_cart_action"
+                data-cart-item-update=""
+                value="update_qty"
+                title="<?php echo $block->escapeHtml(__('Update Shopping Cart')); ?>"
+                class="action update">
+            <span><?php /* @escapeNotVerified */ echo __('Update Shopping Cart'); ?></span>
+        </button>
+        <input type="hidden" value="" id="update_cart_action_container" data-cart-item-update=""/>
+    </div>
 </form>
 
 
