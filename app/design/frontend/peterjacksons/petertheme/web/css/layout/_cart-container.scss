@@ -21,5 +21,14 @@
         @extend .items-table__price;
         display: flex;
         flex-direction: row-reverse;
+
+        .grand.totals {
+            display: flex;
+            align-items: center;
+
+            th.mark {
+                margin-right: 10px;
+            }
+        }
     }
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <update handle="checkout_cart_item_renderers"/>
+    <!--<update handle="checkout_cart_item_renderers"/>-->
     <body>
+
         <referenceBlock name="breadcrumbs">
             <action method="addCrumb">
                 <argument name="crumbName" xsi:type="string">Home</argument>
@@ -19,6 +20,9 @@
                 </argument>
             </action>
         </referenceBlock>
+
+        <block class="Magento\Checkout\Block\Cart" name="after.items-table" as="after" template="Magento_Checkout::cart/cart_end.phtml" />
+        <move element="after.items-table" destination="checkout.cart.items"/>
 
         <referenceContainer name="cart.summary" htmlClass="" htmlTag=""/>
 
@@ -45,7 +49,7 @@
                 </argument>
             </arguments>
         </block>
-        <move element="checkout.cart.minisummary" destination="checkout.cart.form"/>
+        <move element="checkout.cart.minisummary" destination="after.items-table"/>
 
         <block class="Magento\Checkout\Block\Cart" name="checkout.cart.methods.bottom2" template="cart/methods.phtml">
             <container name="checkout.cart.methods2" as="methods" label="Payment Methods After Checkout Button">
@@ -53,9 +57,9 @@
                 <block class="Magento\Checkout\Block\QuoteShortcutButtons" name="checkout.cart.shortcut.buttons2" />
             </container>
         </block>
-        <move element="checkout.cart.methods.bottom2" destination="checkout.cart.order.actions" after="checkout.cart.totals.container" />
+        <move element="checkout.cart.methods.bottom2" destination="after.items-table"/>
 
-        <move element="checkout.cart.coupon" destination="checkout.cart.order.actions" before="checkout.cart.totals.container" />
+        <move element="checkout.cart.coupon" destination="after.items-table" />
 
         <referenceBlock name="checkout.cart.summary.title" remove="true" />
         <referenceBlock name="checkout.cart.item.renderers.bundle.actions.edit" remove="true" />

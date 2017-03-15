@@ -1,6 +1,12 @@
 .items-table {
     width: 100%;
 
+
+    th, td, table {
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
     th {
         font-size: 20px;
         font-weight: normal;

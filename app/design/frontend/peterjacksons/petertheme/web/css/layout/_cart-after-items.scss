@@ -1,0 +1,16 @@
+.after-items {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__top {
+        flex: 1 0 100%
+    }
+
+    &__left {
+        flex: 1 0 50%;
+    }
+
+    &__right {
+        flex: 1 0 50%;
+    }
+}

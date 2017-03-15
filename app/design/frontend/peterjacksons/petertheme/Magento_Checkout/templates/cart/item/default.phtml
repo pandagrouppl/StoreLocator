@@ -72,12 +72,13 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
         </td>
 
         <td class="items-table__column--qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
-                    <select
+            <div class="select__wrapper select__wrapper--cart-qty">
+                <figure class="select__arrow"></figure>
+                <select class="select__select"
                         id="cart-<?php /* @escapeNotVerified */ echo $_item->getId() ?>-qty"
                         name="cart[<?php /* @escapeNotVerified */ echo $_item->getId() ?>][qty]"
                         data-cart-item-id="<?php /* @escapeNotVerified */ echo $_item->getSku() ?>"
                         title="<?php echo $block->escapeHtml(__('Qty')); ?>"
-                        class="items-table__select items-table__select--qty"
                         data-validate="{required:true,'validate-greater-than-zero':true}"
                         data-role="cart-item-qty"
                         >
@@ -90,7 +91,8 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
                             }
                         }
                         ?>
-                    </select>
+                </select>
+            </div>
         </td>
 
         <td class="items-table__column--size">

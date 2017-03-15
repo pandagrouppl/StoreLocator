@@ -1429,7 +1429,7 @@ Error!,Error!,module,Magento_Checkout
 Message,Message,module,Magento_Checkout
 "<a href=""%1"" onclick=""this.target='_blank'"" class=""print"">Print receipt</a>","<a href=""%1"" onclick=""this.target='_blank'"" class=""print"">Print receipt</a>",module,Magento_Checkout
 "Apply Discount Code","Apply Discount Code",module,Magento_Checkout
-"Enter discount code","Enter discount code",module,Magento_Checkout
+"Enter discount code","Apply Gift Card",module,Magento_Checkout
 "Apply Discount","Apply Discount",module,Magento_Checkout
 "Cancel Coupon","Cancel Coupon",module,Magento_Checkout
 "Shopping Cart Items","Shopping Cart Items",module,Magento_Checkout
