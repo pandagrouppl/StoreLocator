@@ -7,12 +7,14 @@
 
         h1 {
             font-size: 42px;
+            font-weight: normal;
             margin: 0;
         }
     }
 
     .attribute.sku {
         display: flex;
+        margin: 0 0 20px 0;
 
         strong {
             font-weight: normal;
@@ -24,10 +26,6 @@
         display: flex;
         font-size: 35px;
         font-weight: 300;
-
-        .price-box {
-            margin-right: 20px;
-        }
 
         .towishlist {
             color: $gold;
@@ -44,6 +42,11 @@
         }
     }
 
+    &__qty {
+        display: flex;
+        align-items: center;
+    }
+
     &__button {
         @include blue-button();
     }
@@ -51,11 +54,19 @@
     &__tabs {
         display: flex;
 
+        @media all and (max-width: $bp-header) {
+            flex-direction: column;
+        }
+
         a {
             font-size: 20px;
             font-weight: 600;
             color: #242424;
             margin-right: 20px;
+
+            @media all and (max-width: $bp-header) {
+                padding: 24px 35px 24px 0;
+            }
 
             &:hover {
                 color: #666;

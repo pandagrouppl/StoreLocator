@@ -3,7 +3,8 @@
     &__title {
         width: 100%;
         font-family: league_gothic;
-        font-size: 26pt;
+        font-size: 34px;
+        text-transform: uppercase;
         text-align: center;
         border-top: 1px solid $grey;
 
@@ -11,6 +12,7 @@
             display: inline-block;
             padding: 25px 0;
             border-top: 3px solid $black;
+            font-weight: 500;
         }
     }
 
