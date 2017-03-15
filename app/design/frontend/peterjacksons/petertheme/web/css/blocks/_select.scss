@@ -26,4 +26,18 @@
         pointer-events: none;
         z-index: 10;
     }
+
+    &__size-chart {
+        display: flex;
+        align-items: center;
+        color: #928383;
+        font-weight: 500;
+
+        &:before {
+            @include sprite(brownline);
+            content: '';
+            display: block;
+            margin: 0 10px;
+        }
+    }
 }

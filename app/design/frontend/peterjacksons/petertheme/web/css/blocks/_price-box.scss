@@ -1,0 +1,14 @@
+.price-box {
+    display: flex;
+    margin-right: 20px;
+
+    .special-price {
+        color: $red;
+    }
+
+    .old-price {
+        order: -1;
+        text-decoration: line-through;
+        margin-right: 15px;
+    }
+}
