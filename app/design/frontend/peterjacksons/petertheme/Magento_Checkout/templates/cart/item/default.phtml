@@ -94,12 +94,15 @@ $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
         </td>
 
         <td class="items-table__column--size">
-            <select class="items-table__select items-table__select--size">
+            <div class="select__wrapper select__wrapper--cart-size">
+                <figure class="select__arrow"></figure>
+                <select class="select__select">
                 <?php for ($i = 1; $i <= 10; $i++) {
                             echo "<option value='{$i}' selected>{$i}</option>";
                     }
                 ?>
             </select>
+                </div>
         </td>
 
         <td class="items-table__column--price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">

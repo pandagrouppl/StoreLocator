@@ -1,4 +1,4 @@
-.product-qty {
+.select {
 
     &__select {
         background: $white;
@@ -6,13 +6,15 @@
         padding-left: 5px;
         border: 1px solid #959494;
         border-radius: 3px;
-        width: 100%;
     }
 
     &__wrapper {
-        position: relative;
         min-width: 50px;
-        width: 12%;
+
+        &--product-page {
+            position: relative;
+            width: 12%;
+        }
     }
 
     &__arrow {
