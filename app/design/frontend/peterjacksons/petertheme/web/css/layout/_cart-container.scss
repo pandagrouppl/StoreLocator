@@ -16,4 +16,10 @@
             cursor: pointer;
         }
     }
+
+    &__total-price {
+        @extend .items-table__price;
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }

@@ -37,7 +37,6 @@
     &__price {
         font-size: 16px;
         letter-spacing: 1px;
-        display: block;
 
         &--strikethrough {
             text-decoration: line-through;
@@ -45,10 +44,7 @@
 
         &--special {
             color: red;
+            display: block;
         }
-    }
-
-    &__total-price {
-
     }
 }
