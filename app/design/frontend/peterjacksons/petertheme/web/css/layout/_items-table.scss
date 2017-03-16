@@ -8,43 +8,92 @@
 
         &--header {
             font-size: 20px;
+
+            > div {
+                padding: 10px 5px;
+            }
+        }
+
+        &--item {
+
+            > div {
+                padding: 20px 5px;
+            }
         }
     }
 
     &__column {
-        padding: 20px 5px 20px 5px;
 
         &--remove {
             width: 5%;
-            text-align: center;
         }
 
         &--item {
             width: 55%;
-            text-align: left;
             display: flex;
-
-            a {
-                font-family: league_gothic, sans-serif;
-                font-size: 30px;
-                text-transform: uppercase;
-                color: #000;
-            }
         }
 
         &--qty {
             width: 15%;
-            text-align: center;
         }
 
         &--size {
             width: 15%;
-            text-align: center;
         }
 
         &--price {
             width: 10%;
-            text-align: right;
+        }
+
+        &--centred {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--centred-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+
+    &__product {
+
+        &-details {
+            padding-left: 5px;
+        }
+
+        &-name {
+            font-family: league_gothic, sans-serif;
+            font-size: 30px;
+            text-transform: uppercase;
+
+            a {
+                color: #000;
+            }
+        }
+
+        &-params {
+            font-size: 14px;
+
+            dt, dd {
+                display: inline-block;
+                margin: 10px 5px 0 0;
+            }
+
+            &-Size {
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            &-delivery {
+                font-size: 12px;
+                font-style: italic;
+                color: #666;
+            }
+
         }
     }
 
@@ -58,7 +107,6 @@
 
         &--special {
             color: red;
-            display: block;
         }
     }
 }
