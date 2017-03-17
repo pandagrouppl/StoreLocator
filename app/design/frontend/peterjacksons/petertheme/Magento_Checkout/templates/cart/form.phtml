@@ -18,30 +18,22 @@
     >
     <?php echo $block->getBlockHtml('formkey'); ?>
     <div class="cart-container__items-table-wrapper<?php echo $mergedCells == 2 ? ' detailed' : ''; ?>">
-        <table class="items-table" id="shopping-cart-table">
-            <thead>
-                <tr>
-                    <th class="items-table__column items-table__column--remove"></th>
-                    <th class="items-table__column items-table__column--item" scope="col"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></th>
-                    <th class="items-table__column items-table__column--qty" scope="col"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></th>
-                    <th class="items-table__column items-table__column--size" scope="col"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></th>
-                    <th class="items-table__column items-table__column--price" scope="col"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></th>
-                </tr>
-            </thead>
+        <div class="items-table" id="shopping-cart-table">
+            <div class="items-table__row items-table__row--header">
+                    <div class="items-table__column items-table__column--remove items-table__column--centred"></div>
+                    <div class="items-table__column items-table__column--item"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></div>
+                    <div class="items-table__column items-table__column--qty items-table__column--centred"><span><?php /* @escapeNotVerified */ echo __('Qty') ?></span></div>
+                    <div class="items-table__column items-table__column--size items-table__column--centred"><span><?php /* @escapeNotVerified */ echo __('Size') ?></span></div>
+                    <div class="items-table__column items-table__column--price items-table__column--centred-right"><span><?php /* @escapeNotVerified */ echo __('Price') ?></span></div>
+                </div>
             <?php foreach ($block->getItems() as $_item): ?>
                 <?php echo $block->getItemHtml($_item) ?>
             <?php endforeach ?>
-        </table>
+        </div>
     </div>
-    <?php echo $block->getChildHtml('checkout.cart.minisummary') ?>
+
+
     <div class="cart-container__actions">
-        <?php if ($block->getContinueShoppingUrl()): ?>
-            <a class="action continue"
-               href="<?php echo $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
-               title="<?php echo $block->escapeHtml(__('Continue Shopping')); ?>">
-                <span><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span>
-            </a>
-        <?php endif; ?>
         <button type="submit"
                 name="update_cart_action"
                 data-cart-item-update=""
@@ -54,6 +46,6 @@
     </div>
 </form>
 
-<?php echo $block->getChildHtml('checkout.cart.order.actions') ?>
+
 <?php echo $block->getChildHtml('shopping.cart.table.after'); ?>
 
