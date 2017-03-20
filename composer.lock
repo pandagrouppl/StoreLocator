@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "84620e9be47e4418f44e3c16c16a33aa",
-    "content-hash": "9be7c91180f98835b5485120e45a0bf5",
+    "hash": "bb9f96e3eda6cdf84fb9435c8665cb48",
+    "content-hash": "40455f5cb36ba96b1db499eecea26316",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -6545,6 +6545,40 @@
             ],
             "description": "SASS based version of Magento 2 Blank theme",
             "time": "2017-02-21 17:39:01"
+        },
+        {
+            "name": "strategery/magento2-infinitescroll",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
+                "reference": "00bc8af13de545d21ae5bcf84198b6350bdbb093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/00bc8af13de545d21ae5bcf84198b6350bdbb093",
+                "reference": "00bc8af13de545d21ae5bcf84198b6350bdbb093",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Strategery\\Infinitescroll\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
+            "time": "2016-07-26 14:09:18"
         },
         {
             "name": "symfony/console",
