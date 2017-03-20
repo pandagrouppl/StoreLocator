@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_category_view"/>
+    <body>
+        <referenceBlock name="breadcrumbs" remove="True"/>
+        <referenceBlock name="category.product.addto.compare" remove="True"/>
+        <referenceContainer name="sidebar.additional" remove="True"/>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="css_class" xsi:type="string">catalog-main__title</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
