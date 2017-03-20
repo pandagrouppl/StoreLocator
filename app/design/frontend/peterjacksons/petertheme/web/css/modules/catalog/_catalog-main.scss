@@ -1,0 +1,25 @@
+.catalog-category-view {
+
+    .toolbar {
+        display: none !important;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+
+    .page-main__columns {
+        display: flex;
+    }
+}
+
+.catalog-main {
+
+    &__title {
+        text-align: center;
+        font-family: league_gothic;
+        font-weight: 400;
+        font-size: 26px;
+        text-transform: uppercase;
+    }
+}
