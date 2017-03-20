@@ -6183,7 +6183,7 @@ Price,Price,theme,frontend/peterjacksons/petertheme
 "Cart Subtotal","Cart Subtotal",theme,frontend/peterjacksons/petertheme
 "Place Order","Place Order",module,Magento_Authorizenet
 "Credit Card Information","Credit Card Information",module,Magento_Braintree
-"What is this?","What is asasas this?",module,Magento_Braintree
+"What is this?","What is this?",module,Magento_Braintree
 "Save for later use.","Save for later use.",module,Magento_Braintree
 "Place Order","Place Order",module,Magento_Braintree
 "Attention: Captcha is case sensitive.","Attention: Captcha is case sensitive.",module,Magento_Captcha
@@ -6200,6 +6200,9 @@ Total:,Total:,module,Magento_Checkout
 "Payment Method:","Payment Method:",module,Magento_Checkout
 "Date & Time:","Date & Time:",module,Magento_Checkout
 "Sign In","Sign In",module,Magento_Checkout
+"ALREADY REGISTERED?","ALREADY REGISTERED?",module,Magento_Checkout
+"CLICK HERE","CLICK HERE",module,Magento_Checkout
+"TO LOGIN.","TO LOGIN.",module,Magento_Checkout
 "Email Address","Email Address",module,Magento_Checkout
 Password,Password,module,Magento_Checkout
 "Forgot Your Password?","Forgot Your Password?",module,Magento_Checkout
