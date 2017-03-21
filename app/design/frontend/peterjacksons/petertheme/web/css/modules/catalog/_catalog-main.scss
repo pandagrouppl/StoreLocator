@@ -12,6 +12,14 @@
     .page-main__columns {
         display: flex;
     }
+
+    .ias-spinner {
+        width: 100%;
+    }
+
+    .ias-noneleft {
+        display: none !important;
+    }
 }
 
 .catalog-main {
