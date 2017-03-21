@@ -5,6 +5,7 @@ export class Inliners {
     constructor() {
         this._showSearch();
         this._preventSpinnerClick();
+        this._toggleFilters();
     }
 
     private _showSearch(): void {
@@ -23,5 +24,11 @@ export class Inliners {
         $('.spinner').click((event) => {
             event.preventDefault();
         })
+    }
+
+    private _toggleFilters(): void {
+        $('.layered-nav__button').click(() => {
+            $('.layered-nav').toggle();
+        });
     }
  }
