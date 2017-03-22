@@ -4,13 +4,12 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="authentication-wrapper auth-wrap" data-block="authentication" data-bind="visible: isActive()">
+<div class="authentication-wrapper auth-wrap chckt-auth-wrap" data-block="authentication" data-bind="visible: isActive()">
     <a
-        href=""
-        class="action action-auth-toggle auth-wrap__link"
+        class="action action-auth-toggle chckt-auth-wrap__link"
         data-trigger="authentication">
-        <span data-bind="i18n: 'Sign In'"></span>
-        <span data-bind="i18n: 'CLICK HERE'"></span>
+        <span data-bind="i18n: 'ALREADY REGISTERED?'"></span>
+        <span class="chckt-auth-wrap__underline" data-bind="i18n: 'CLICK HERE'"></span>
         <span data-bind="i18n: 'TO LOGIN.'"></span>
     </a>
     <div class="block-authentication"

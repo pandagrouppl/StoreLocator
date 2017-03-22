@@ -1,0 +1,59 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!-- ko ifnot: isCustomerLoggedIn() -->
+
+<form class="form form-login" data-role="email-with-possible-login"
+      data-bind="submit:login"
+      method="post">
+    <div id="customer-email-fieldset" class="fieldset" data-bind="blockLoader: isLoading">
+        <div class="field required">
+            <div class="control _with-tooltip">
+                <input class="input-text"
+                       type="email"
+                       data-bind="
+                            textInput: email,
+                            hasFocus: emailFocused,
+                            attr: {placeholder: tooltip.placeholder}"
+                       name="username"
+                       data-validate="{required:true, 'validate-email':true}"
+                       id="customer-email" />
+                <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
+            </div>
+        </div>
+
+        <!--Hidden fields -->
+        <div class="fieldset hidden-fields" data-bind="fadeVisible: isPasswordVisible">
+            <div class="field">
+                <label class="label" for="customer-password">
+                    <span data-bind="i18n: 'Password'"></span>
+                </label>
+                <div class="control">
+                    <input class="input-text"
+                           placeholder="optional"
+                           type="password"
+                           name="password"
+                           id="customer-password"
+                           data-validate="{required:true}" autocomplete="off"/>
+                </div>
+
+            </div>
+            <div class="actions-toolbar">
+                <input name="context" type="hidden" value="checkout" />
+                <div class="primary">
+                    <button type="submit" class="action login primary" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+                </div>
+                <div class="secondary">
+                    <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
+                        <span data-bind="i18n: 'Forgot Your Password?'"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--Hidden fields -->
+    </div>
+</form>
+<!-- /ko -->
