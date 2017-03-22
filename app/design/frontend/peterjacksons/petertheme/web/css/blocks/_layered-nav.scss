@@ -1,0 +1,13 @@
+.layered-nav {
+    min-width: 180px;
+    height: 100%;
+
+    &__button {
+        @include sprite(filter-button);
+        background-color: $white;
+        display: block;
+        position: fixed;
+        margin-left: -15px;
+        cursor: pointer;
+    }
+}

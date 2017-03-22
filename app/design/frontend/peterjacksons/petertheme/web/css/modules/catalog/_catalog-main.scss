@@ -5,11 +5,20 @@
     }
 
     .sidebar {
+        border-right: 1px solid $grey;
         order: -1;
     }
 
     .page-main__columns {
         display: flex;
+    }
+
+    .ias-spinner {
+        width: 100%;
+    }
+
+    .ias-noneleft {
+        display: none !important;
     }
 }
 
