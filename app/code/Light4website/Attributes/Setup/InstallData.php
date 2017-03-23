@@ -37,42 +37,38 @@ class InstallData implements InstallDataInterface
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         $setup->startSetup();
+        /** @var EavSetup $eavSetup */
+        $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
 
-        if ($context->getVersion() && version_compare($context->getVersion(), '1.0.1') < 0) {
+        /**
+         * Add attributes to the eav/attribute
+         */
 
-            /** @var EavSetup $eavSetup */
-            $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
-
-            /**
-             * Add attributes to the eav/attribute
-             */
-
-            $eavSetup->addAttribute(
-                \Magento\Catalog\Model\Product::ENTITY,
-                'hover_image',
-                [
-                    'type' => 'varchar',
-                    'backend' => '',
-                    'frontend' => '\Magento\Catalog\Model\Product\Attribute\Frontend\Image',
-                    'label' => 'Hover Image',
-                    'input' => 'media_image',
-                    'class' => '',
-                    'source' => '',
-                    'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
-                    'visible' => true,
-                    'required' => false,
-                    'user_defined' => false,
-                    'default' => 0,
-                    'searchable' => false,
-                    'filterable' => false,
-                    'comparable' => false,
-                    'visible_on_front' => false,
-                    'used_in_product_listing' => false,
-                    'unique' => false,
-                    'apply_to' => ''
-                ]
-            );
-        }
+        $eavSetup->addAttribute(
+            \Magento\Catalog\Model\Product::ENTITY,
+            'hover_image',
+            [
+                'type' => 'varchar',
+                'backend' => '',
+                'frontend' => '\Magento\Catalog\Model\Product\Attribute\Frontend\Image',
+                'label' => 'Hover Image',
+                'input' => 'media_image',
+                'class' => '',
+                'source' => '',
+                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
+                'visible' => true,
+                'required' => false,
+                'user_defined' => false,
+                'default' => 0,
+                'searchable' => false,
+                'filterable' => false,
+                'comparable' => false,
+                'visible_on_front' => false,
+                'used_in_product_listing' => false,
+                'unique' => false,
+                'apply_to' => ''
+            ]
+        );
 
         $setup->endSetup();
     }
