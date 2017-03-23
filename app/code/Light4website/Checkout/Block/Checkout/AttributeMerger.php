@@ -58,6 +58,7 @@ class AttributeMerger extends \Magento\Checkout\Block\Checkout\AttributeMerger
             ],
             'dataScope' => $dataScopePrefix . '.' . $attributeCode,
             'label' => $attributeConfig['label'],
+//          placeholder is not used now, requires too much investigation why it wont appear in invisible field
             'placeholder' => isset($additionalConfig['placeholder'])
                 ? $additionalConfig['placeholder']
                 : $attributeConfig['label'] . '*',
@@ -108,9 +109,8 @@ class AttributeMerger extends \Magento\Checkout\Block\Checkout\AttributeMerger
                     )
                     : $attributeConfig['validation'],
                 'additionalClasses' => $isFirstLine ? : 'additional',
-                'placeholder' => isset($additionalConfig['placeholder'])
-                    ? $additionalConfig['placeholder']
-                    : $attributeConfig['label'] . '*',
+                'label' => $attributeConfig['label'],
+//                'placeholder' => $attributeConfig['label'] . '*',
             ];
             if ($isFirstLine && isset($attributeConfig['default']) && $attributeConfig['default'] != null) {
                 $line['value'] = $attributeConfig['default'];
