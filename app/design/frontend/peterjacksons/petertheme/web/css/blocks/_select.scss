@@ -9,6 +9,16 @@
         width: 100%;
     }
 
+    &__arrow {
+        @include sprite(select-arrw);
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        z-index: 10;
+    }
+
     &__wrapper {
         min-width: 50px;
         position: relative;
@@ -27,13 +37,5 @@
         }
     }
 
-    &__arrow {
-        @include sprite(select-arrw);
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        pointer-events: none;
-        z-index: 10;
-    }
+
 }

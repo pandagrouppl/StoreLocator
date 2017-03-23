@@ -11,11 +11,12 @@
       method="post">
     <div id="customer-email-fieldset" class="fieldset" data-bind="blockLoader: isLoading">
         <div class="field required">
-            <div class="control _with-tooltip">
+            <div class="control _with-tooltip checkout__input-wrapper">
                 <input class="input-text"
                        type="email"
                        data-bind="
                             textInput: email,
+                            css: ns+'__input ' + ns+'__input--'+index,
                             hasFocus: emailFocused"
                        name="username"
                        data-validate="{required:true, 'validate-email':true}"
@@ -27,23 +28,23 @@
         <!--Hidden fields -->
         <div class="fieldset hidden-fields" data-bind="fadeVisible: isPasswordVisible">
             <div class="field">
-                <label class="label" for="customer-password">
-                    <span data-bind="i18n: 'Password'"></span>
-                </label>
-                <div class="control">
+                <div class="control checkout__input-wrapper">
                     <input class="input-text"
-                           placeholder="optional"
+                           placeholder="Password"
                            type="password"
+                           data-bind="
+                                css: ns+'__input ' + ns+'__input--'+index,"
                            name="password"
                            id="customer-password"
-                           data-validate="{required:true}" autocomplete="off"/>
+                           data-validate="{required:true}"
+                           autocomplete="off"/>
                 </div>
 
             </div>
-            <div class="actions-toolbar">
+            <div class="actions-toolbar checkout__form-login-wrapper">
                 <input name="context" type="hidden" value="checkout" />
                 <div class="primary">
-                    <button type="submit" class="action login primary" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
+                    <button type="submit" class="action login primary checkout__button checkout__button--login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
                 </div>
                 <div class="secondary">
                     <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
