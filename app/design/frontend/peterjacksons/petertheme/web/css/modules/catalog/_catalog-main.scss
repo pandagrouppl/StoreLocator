@@ -7,6 +7,10 @@
     .sidebar {
         border-right: 1px solid $grey;
         order: -1;
+
+        @media all and (max-width: 860px) {
+            display: none;
+        }
     }
 
     .page-main__columns {
@@ -28,8 +32,15 @@
     &__title {
         text-align: center;
         font-family: league_gothic;
-        font-weight: 400;
-        font-size: 26px;
         text-transform: uppercase;
+
+        h1 {
+            font-size: 50px;
+            font-weight: 400;
+        }
+    }
+
+    &__description {
+        margin-bottom: 50px;
     }
 }
