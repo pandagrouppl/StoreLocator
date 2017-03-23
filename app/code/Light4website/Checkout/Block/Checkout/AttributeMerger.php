@@ -26,7 +26,11 @@ class AttributeMerger extends \Magento\Checkout\Block\Checkout\AttributeMerger
         }
 
         if ($attributeConfig['formElement'] == 'multiline') {
-            return $this->getMultilineFieldConfig($attributeCode, $attributeConfig, $providerName, $dataScopePrefix);
+            $returned = $this->getMultilineFieldConfig($attributeCode, $attributeConfig, $providerName, $dataScopePrefix);
+            $returned['sortOrder'] = isset($additionalConfig['sortOrder'])
+            ? $additionalConfig['sortOrder']
+            : $attributeConfig['sortOrder'];
+            return $returned;
         }
 
         $uiComponent = isset($this->formElementMap[$attributeConfig['formElement']])
