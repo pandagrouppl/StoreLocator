@@ -9,7 +9,6 @@
 @import 'helpers/variables';
 @import 'helpers/mixins';
 
-@import "blocks/chckt-auth-wrap";
 @import "blocks/minicart";
 @import "blocks/search-overlay";
 @import "blocks/select";
@@ -19,21 +18,26 @@
 @import "blocks/price-box";
 @import "blocks/layered-nav";
 
-@import "layout/cart-after-items";
-@import "layout/cart-container";
 @import 'layout/header';
 @import 'layout/header-top';
 @import 'layout/header-middle';
 @import 'layout/header-right';
 @import 'layout/header-left';
-@import "layout/items-table";
 @import 'layout/page-footer';
 @import "layout/page-main";
+
+@import "modules/cart/cart-after-items";
+@import "modules/cart/cart-container";
+@import "modules/cart/items-table";
+
+@import "modules/catalog/catalog-main";
+@import "modules/catalog/catalog-grid";
+@import "modules/catalog/catalog-item";
+
+@import "modules/checkout/chckt-auth-wrap";
 
 @import 'modules/product/product-main';
 @import 'modules/product/product-content';
 @import 'modules/product/products-related';
 
-@import "modules/catalog/catalog-main";
-@import "modules/catalog/catalog-grid";
-@import "modules/catalog/catalog-item";
+
