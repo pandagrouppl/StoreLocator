@@ -162,12 +162,6 @@
                                                                 <item name="displayArea" xsi:type="string">additional-fieldsets</item>
                                                                 <item name="children" xsi:type="array">
                                                                     <!-- hidden -->
-                                                                    <item name="region" xsi:type="array">
-                                                                        <item name="visible" xsi:type="boolean">false</item>
-                                                                    </item>
-                                                                    <item name="region_id" xsi:type="array">
-                                                                        <item name="visible" xsi:type="boolean">false</item>
-                                                                    </item>
                                                                     <item name="company" xsi:type="array">
                                                                         <item name="visible" xsi:type="boolean">false</item>
                                                                     </item>
@@ -185,24 +179,47 @@
                                                                         <item name="component" xsi:type="string">Magento_Checkout/js/view/form/element/email</item>
                                                                         <item name="sortOrder" xsi:type="string">3</item>
                                                                     </item>
-                                                                    <item name="street" xsi:type="array">
+                                                                    <item name="telephone" xsi:type="array">
                                                                         <item name="sortOrder" xsi:type="string">4</item>
                                                                     </item>
-                                                                    <item name="country_id" xsi:type="array">
+                                                                    <item name="street" xsi:type="array">
                                                                         <item name="sortOrder" xsi:type="string">5</item>
+                                                                    </item>
+                                                                    <item name="country_id" xsi:type="array">
+                                                                        <item name="sortOrder" xsi:type="string">6</item>
+                                                                    </item>
+                                                                    <item name="city" xsi:type="array">
+                                                                        <item name="sortOrder" xsi:type="string">7</item>
                                                                     </item>
                                                                     <item name="postcode" xsi:type="array">
                                                                         <!-- post-code field has custom UI component -->
+                                                                        <item name="sortOrder" xsi:type="string">8</item>
                                                                         <item name="component" xsi:type="string">Magento_Ui/js/form/element/post-code</item>
                                                                         <item name="validation" xsi:type="array">
                                                                             <item name="required-entry" xsi:type="string">true</item>
                                                                         </item>
                                                                     </item>
+                                                                    <item name="region" xsi:type="array">
+                                                                        <item name="visible" xsi:type="boolean">false</item>
+                                                                    </item>
+                                                                    <item name="region_id" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/region</item>
+                                                                        <item name="config" xsi:type="array">
+                                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/select</item>
+                                                                            <item name="customEntry" xsi:type="string">shippingAddress.region</item>
+                                                                        </item>
+                                                                        <item name="validation" xsi:type="array">
+                                                                            <item name="required-entry" xsi:type="boolean">true</item>
+                                                                        </item>
+                                                                        <!-- Value of region_id field is filtered by the value of county_id attribute -->
+                                                                        <item name="filterBy" xsi:type="array">
+                                                                            <item name="target" xsi:type="string"><![CDATA[${ $.provider }:${ $.parentScope }.country_id]]></item>
+                                                                            <item name="field" xsi:type="string">country_id</item>
+                                                                        </item>
+                                                                    </item>
 
-                                                                    <item name="telephone" xsi:type="array">
-                                                                    </item>
-                                                                    <item name="street" xsi:type="array">
-                                                                    </item>
+
                                                                 </item>
                                                             </item>
                                                         </item>
