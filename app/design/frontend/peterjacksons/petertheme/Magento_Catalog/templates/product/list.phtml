@@ -58,8 +58,15 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                     }
                     ?>
                     <?php // Product Image ?>
-                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-grid__img" tabindex="-1">
                         <?php echo $productImage->toHtml(); ?>
+                        <?php $productImageAttr = $_product->getCustomAttribute('hover_image');?>
+                        <?php if ($productImageAttr):
+                            $productHoverImage = $this->helper('Magento\Catalog\Helper\Image')
+                                ->init($_product, 'hover_image')
+                                ->setImageFile($productImageAttr->getValue());?>
+                            <img class="catalog-grid__img--second" src="<?php echo $productHoverImage->getUrl(); ?>" />
+                        <?php endif; ?>
                     </a>
                     <div class="product details product-item-details catalog-grid__content">
                         <?php
