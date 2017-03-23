@@ -1,0 +1,1210 @@
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+
+.pslogin-addedoverlay {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 2010;
+	background-color: black;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	/*display: none;*/
+}
+
+.pslogin-pop-up-form {
+	left: 0px;
+	top: 0px;
+	position:fixed;
+	width: 100%;
+	z-index: 2020;
+	height:100%;
+	color:#666666;
+	text-align:left;
+	/*display:none;*/
+	overflow-y: auto;
+}
+
+#pslogin-pop-up-bg {
+	max-width: 450px;
+	font-size: 12px;
+	padding: 0 10px 0 10px;
+	margin: 10% auto 5% auto;
+	color: #444;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.pslogin-share {
+	background-color: white;
+	min-height: 210px;
+	padding: 18px 21px;
+	position: relative;
+}
+
+.pslogin-fake-email-message {
+	position: fixed;
+	top: 20px;
+	width: 100%;
+	padding: 0 5%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	z-index: 9999;
+}
+
+	.pslogin-fake-email-message .content {
+		padding: 5px 10px;
+		background: #fff;
+		max-width: 960px;
+		min-width: 250px;
+		margin: 0 auto;
+		box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.42);
+		-webkit-box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.42);
+		-moz-box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.42);
+		font-size: 14px;
+		color: #636363;
+		z-index: 9999;
+	}
+
+	.pslogin-fake-email-message p {
+		margin: 10px auto;
+		text-align: left;
+	}
+
+	.pslogin-fake-email-message .close-message {
+		float: right;
+	}
+
+	.pslogin-fake-email-message .close-message:hover {
+		cursor: pointer;
+		color: #AEAEAE;
+	}
+
+
+/* general classes */
+.pslogin-share .ta-center {
+	text-align: center;
+}
+
+    .pslogin-share h2 {
+		padding: 0px 0px 7px 0px;
+		color: #3399cc;
+		font-weight: 400;
+		font-size: 15px;
+		text-transform: uppercase;
+		border-bottom: 1px solid #DDD;
+		margin-bottom: 10px;
+    }
+
+
+	.pslogin-share .prpop-close-btn {
+		position: absolute;
+		right: 9px;
+		left: auto;
+		margin-right: 10px;
+		top: 14px;
+		text-decoration: none;
+		color: #727272;
+		font-size: 16px;
+		background: none;
+	}
+
+	.pslogin-share .prpop-close-btn:hover {
+		color: #b6aba5;
+	}
+
+	.pslogin-share p {
+		margin-bottom: 7px;
+	}
+
+	.pslogin-share img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.pslogin-share .button-top {
+		height: 7px;
+	}
+
+	.pslogin-share a {
+		display: inline-block;
+		height: 30px;
+		color: white;
+		margin: 0 10px 10px 0;
+	}
+
+	.pslogin-share a:hover {
+		cursor: pointer;
+		opacity: 0.7;
+		filter: apha(filter=70);
+	}
+
+
+/*form*/
+.w25 { width: 25px!important; }
+.w100 { width: 100px; }
+
+.pslogin-block.account-login .content {
+	margin: 0;
+}
+
+.pslogin-form .registered-users .content {
+	margin: 0!important;
+}
+
+.pslogin-block.account-login .form-list label,
+#checkout-step-login .pslogin-block .form-list label {
+	width: auto;
+	float: none;
+}
+
+.pslogin-block.account-login .form-list .input-box,
+#checkout-step-login .pslogin-block .form-list .input-box {
+	float: none;
+}
+
+#checkout-step-login .col2-set {
+	box-sizing: border-box;
+}
+
+.pslogin-block.account-login .buttons-set {
+	min-height: 40px;
+}
+
+.pslogin-block.col2-set {
+	margin: 0;
+}
+
+.pslogin-block.col2-set .buttons-set {
+	padding: 0;
+}
+
+.pslogin-block.col2-set .fieldset {
+	margin: 15px 0;
+}
+
+	.pslogin-block button.button span,
+	.pslogin-block button.button span span {
+		height: auto;
+	}
+
+	.pslogin-share .soc-name {
+		height: 30px;
+		line-height: 30px;
+		padding: 0 7px;
+		display: block;
+		float: left;
+		box-sizing: border-box;
+	}
+
+		.pslogin-share .vkontakte {
+			background-position: -77px -78px;
+		}
+
+		.pslogin-share .facebook {
+			background-position: -5px -5px
+		}
+
+		.pslogin-share .twitter {
+			background-position: -41px -5px;
+		}
+
+		.pslogin-share .googleplus {
+			background-position: -113px -5px;
+		}
+
+/* welcome message */
+.pslogin-welcome-msg {
+	height: 22px;
+	line-height: 22px;
+	float: none;
+	display: inline-block;
+	margin: 0 0 5px 0;
+}
+
+.pslogin-welcome-msg:after {
+	clear: both;
+	content: "";
+}
+
+.pslogin-welcome-msg img {
+	height: 25px;
+	display: inline-block;
+	padding: 0 5px 0 0;
+	float: left;
+}
+
+/* Buttons */
+.pslogin-block {
+	width: 100%;
+	margin: 0 0 20px 0;
+}
+
+.pslogin-block * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.pslogin-block.pslogin-hidden-text .pslogin-button-text {
+	display: none!important;
+}
+
+.pslogin-block .pslogin-xs {
+	display: none!important;
+}
+
+.pslogin-block .pslogin-button-image {
+	display: block;
+}
+
+.pslogin-block .pslogin-clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.pslogin-block .title {
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.pslogin-spacer {
+	display: block;
+	margin: 10px auto;
+	position: relative;
+	text-align: center;
+	line-height: 16px!important;
+	top: auto;
+	left: auto;
+	height: auto;
+	width: auto;
+	line-height: normal;
+	overflow: visible;
+	font-size: 13px;
+}
+
+	.pslogin-spacer table {
+		width: 100%;
+	}
+
+	.pslogin-spacer table tr td:first-child { padding-left: 0; }
+	.pslogin-spacer table tr td:last-child { padding-right: 0; }
+
+	.pslogin-spacer table td {
+		vertical-align: middle;
+		padding: 10px 5px;
+	}
+
+	.pslogin-spacer .pslogin-border {
+		border-top: 1px solid #e5e2e2;
+		width: 100%;
+	}
+
+	.pslogin-spacer .pslogin-bordertext {
+		color: #b2b2b2;
+		text-align: center;
+		font-size: 11px;
+	}
+
+	.pslogin-spacer.pslogin-showmore .pslogin-bordertext {
+		height: 20px;
+		line-height: 17px;
+		padding: 0;
+		border: 1px solid #e5e2e2;
+		border-radius: 9px;
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+	}
+
+	.pslogin-spacer.pslogin-showmore .pslogin-bordertext:hover {
+		color: #989898;
+		cursor: pointer;
+	}
+
+	.pslogin-spacer .circle {
+		width: 90%;
+		height: 25px;
+		line-height: 22px;
+		font-size: 11px;
+		border: 1px solid #b2b2b2;
+		border-radius: 0px 7px;
+		margin: 0 auto;
+		background-color: #eeeeee;
+	}
+
+	.pslogin-spacer .circle:hover {
+		cursor: pointer;
+		background-color: #FAFAFA;
+	}
+
+
+.pslogin-block .pslogin-showmore {
+	margin-top: 20px;
+}
+
+.pslogin-block.pslogin-login .pslogin-buttons {
+	display: block;
+}
+
+.pslogin-block.pslogin-register .pslogin-buttons {
+	display: inline-block;
+}
+
+	.modal-inner-wrap .pslogin-block .pslogin-buttons ul,
+	.form-login .pslogin-block .pslogin-buttons ul {
+		padding-left: 0;
+	}
+
+	.pslogin-block .pslogin-buttons ul {
+		padding: 0;
+	}
+
+	.pslogin-block .pslogin-buttons ul li {
+		display: block;
+		float: left;
+		line-height: normal;
+		list-style: none!important;
+		padding: 0!important;
+		background: none!important;
+		height: 32px;
+		margin: 0 3px 3px 0;
+		position: relative;
+	}
+
+	.pslogin-block .pslogin-buttons ul li a {
+		width: 100%!important;
+		vertical-align: top;
+	}
+
+	.pslogin-block .pslogin-buttons ul li.show-button-image {
+		background: none!important;
+	}
+
+	.pslogin-block .pslogin-buttons ul li:hover {
+		opacity: 0.9;
+		filter: alpha(opacity=90);
+	}
+
+	.pslogin-block .pslogin-buttons ul li span.pslogin-button-auto {
+		background-color: #3399cc;
+		display: inline-block;
+	}
+
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-icon {
+		background: url('../images/social.png');
+		display: block;
+		float: left;
+		width: 32px;
+		height: 32px;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-icon img {
+		width: 100%;
+	}
+
+	.pslogin-block .pslogin-buttons ul li a>img {
+
+	}
+
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-text {
+		display: none;
+		float: left;
+		height: 32px;
+		line-height: 32px;
+		vertical-align: top;
+		padding: 0;
+		text-align: center;
+		min-width: 144px;
+		box-sizing: border-box;
+		font-size: 11px;
+		color: white;
+		background-color: rgba(255,255,255, 0.2);
+	}
+
+	.pslogin-block .pslogin-buttons.pslogin-buttons-showfull .pslogin-button-auto .pslogin-button-text {
+		display: inline-block;
+	}
+
+	.pslogin-block .pslogin-buttons .pslogin-button-image {
+		display: none;
+	}
+
+	.pslogin-block .pslogin-buttons.pslogin-buttons-showfull .pslogin-button-image {
+		display: inline-block;
+	}
+
+	.pslogin-block .pslogin-buttons .pslogin-button-icon-image {
+		display: inline-block;
+	}
+
+	.pslogin-block .pslogin-buttons.pslogin-buttons-showfull .pslogin-button-icon-image {
+		display: none;
+	}
+
+	.pslogin-block .pslogin-buttons.pslogin-buttons-showfull .pslogin-button-auto.pslogin-has-button-image {
+		display: none;
+	}
+
+ 	.pslogin-block .pslogin-buttons.pslogin-buttons-showfull .pslogin-button-auto.pslogin-has-button-icon-image {
+ 		display: inline-block;
+ 	}
+
+	.pslogin-block .pslogin-buttons .pslogin-button-auto.pslogin-has-button-icon-image {
+		display: none;
+	}
+
+	.pslogin-block .pslogin-buttons .pslogin-button-auto .pslogin-button-icon-image {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+	}
+
+	.pslogin-block .pslogin-buttons ul li.facebook span.pslogin-button-auto { background-color: #1e4389; }
+	.pslogin-block .pslogin-buttons ul li.facebook .pslogin-button-icon { background-position: 0px 0px; }
+
+	.pslogin-block .pslogin-buttons ul li.twitter span.pslogin-button-auto { background-color: #28a9e2; }
+	.pslogin-block .pslogin-buttons ul li.twitter .pslogin-button-icon { background-position: -34px 0px; }
+
+	.pslogin-block .pslogin-buttons ul li.linkedin span.pslogin-button-auto { background-color: #11669c; }
+	.pslogin-block .pslogin-buttons ul li.linkedin .pslogin-button-icon { background-position: -168px 0px; }
+
+	.pslogin-block .pslogin-buttons ul li.yahoo span.pslogin-button-auto { background-color: #85228f; }
+	.pslogin-block .pslogin-buttons ul li.yahoo .pslogin-button-icon { background-position: -204px 0px; }
+
+	.pslogin-block .pslogin-buttons ul li.vkontakte span.pslogin-button-auto { background-color: #3f658c; }
+	.pslogin-block .pslogin-buttons ul li.vkontakte .pslogin-button-icon { background-position: -68px 0px; }
+
+	.pslogin-block .pslogin-buttons ul li.googleplus span.pslogin-button-auto { background-color: #df4b38; }
+	.pslogin-block .pslogin-buttons ul li.googleplus .pslogin-button-icon { background-position: -135px 0px; }
+
+
+	.pslogin-block .pslogin-buttons ul li.hotmail span.pslogin-button-auto { background-color: #f67d20; }
+	.pslogin-block .pslogin-buttons ul li.hotmail .pslogin-button-icon { background-position: 0px -34px; }
+
+	.pslogin-block .pslogin-buttons ul li.live span.pslogin-button-auto { background-color: #0cb3ee; }
+	.pslogin-block .pslogin-buttons ul li.live .pslogin-button-icon { background-position: -35px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.pinterest span.pslogin-button-auto { background-color: #cb2028; }
+	.pslogin-block .pslogin-buttons ul li.pinterest .pslogin-button-icon { background-position: -34px -34px; }
+
+	.pslogin-block .pslogin-buttons ul li.amazon span.pslogin-button-auto { background-color: #ff8e2e; }
+	.pslogin-block .pslogin-buttons ul li.amazon .pslogin-button-icon { background-position: -68px -34px; }
+
+	.pslogin-block .pslogin-buttons ul li.aol span.pslogin-button-auto { background-color: #008bd3; }
+	.pslogin-block .pslogin-buttons ul li.aol .pslogin-button-icon { background-position: -102px -34px; }
+	.pslogin-openid.aol input[type=submit] { background-color: #008bd3; -webkit-appearance: none; }
+
+	.pslogin-block .pslogin-buttons ul li.github span.pslogin-button-auto { background-color: black; }
+	.pslogin-block .pslogin-buttons ul li.github .pslogin-button-icon { background-position: -135px -35px; }
+
+	.pslogin-block .pslogin-buttons ul li.instagram span.pslogin-button-auto { background-color: #9a6e51; }
+	.pslogin-block .pslogin-buttons ul li.instagram .pslogin-button-icon { background-position: -168px -34px; }
+
+	.pslogin-block .pslogin-buttons ul li.foursquare span.pslogin-button-auto { background-color: #3472ad; }
+	.pslogin-block .pslogin-buttons ul li.foursquare .pslogin-button-icon { background-position: -203px -34px; }
+
+	.pslogin-block .pslogin-buttons ul li.dropbox span.pslogin-button-auto { background-color: #008bd3; }
+	.pslogin-block .pslogin-buttons ul li.dropbox .pslogin-button-icon { background-position: -0px -68px; }
+
+	.pslogin-block .pslogin-buttons ul li.disqus span.pslogin-button-auto { background-color: #3d7198; }
+	.pslogin-block .pslogin-buttons ul li.disqus .pslogin-button-icon { background-position: -32px -69px; }
+
+	.pslogin-block .pslogin-buttons ul li.livejournal span.pslogin-button-auto { background-color: #104378; }
+	.pslogin-block .pslogin-buttons ul li.livejournal .pslogin-button-icon { background-position: -66px -69px; }
+	.pslogin-openid.livejournal input[type=submit] { background-color: #104378; -webkit-appearance: none; }
+
+	.pslogin-block .pslogin-buttons ul li.tumblr span.pslogin-button-auto { background-color: #304e6c; }
+	.pslogin-block .pslogin-buttons ul li.tumblr .pslogin-button-icon { background-position: -102px -69px; }
+
+	.pslogin-block .pslogin-buttons ul li.openid span.pslogin-button-auto { background-color: #f8931f; }
+	.pslogin-block .pslogin-buttons ul li.openid .pslogin-button-icon { background-position: -135px -69px; }
+
+	.pslogin-block .pslogin-buttons ul li.flickr span.pslogin-button-auto { background-color: #ff0084; }
+	.pslogin-block .pslogin-buttons ul li.flickr .pslogin-button-icon { background-position: -169px -69px; }
+
+	.pslogin-block .pslogin-buttons ul li.wordpress span.pslogin-button-auto { background-color: #1b3f57; }
+	.pslogin-block .pslogin-buttons ul li.wordpress .pslogin-button-icon { background-position: -204px -69px; }
+
+	.pslogin-block .pslogin-buttons ul li.blogger span.pslogin-button-auto { background-color: #ec7825; }
+	.pslogin-block .pslogin-buttons ul li.blogger .pslogin-button-icon { background-position: 0px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.odnoklassniki span.pslogin-button-auto { background-color: #ee6600; }
+	.pslogin-block .pslogin-buttons ul li.odnoklassniki .pslogin-button-icon { background-position: -34px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.mailru span.pslogin-button-auto { background-color: #00468c; }
+	.pslogin-block .pslogin-buttons ul li.mailru .pslogin-button-icon { background-position: -67px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.yandex span.pslogin-button-auto { background-color: #dd0000; }
+	.pslogin-block .pslogin-buttons ul li.yandex .pslogin-button-icon { background-position: -102px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.paypal span.pslogin-button-auto { background-color: #195d82; }
+	.pslogin-block .pslogin-buttons ul li.paypal .pslogin-button-icon { background-position: -134px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.myspace span.pslogin-button-auto { background-color: #0022a0;}
+	.pslogin-block .pslogin-buttons ul li.myspace .pslogin-button-icon { background-position: -169px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.salesforce span.pslogin-button-auto { background-color: #00a0de; }
+	.pslogin-block .pslogin-buttons ul li.salesforce .pslogin-button-icon { background-position: -203px -103px; }
+
+	.pslogin-block .pslogin-buttons ul li.steamcommunity span.pslogin-button-auto { background-color: #282828; }
+	.pslogin-block .pslogin-buttons ul li.steamcommunity .pslogin-button-icon { background-position: -1px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.hyves span.pslogin-button-auto { background-color: #ffca63; }
+	.pslogin-block .pslogin-buttons ul li.hyves .pslogin-button-icon { background-position: -33px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.stackoverflow span.pslogin-button-auto { background-color: #e6eef1; }
+	.pslogin-block .pslogin-buttons ul li.stackoverflow .pslogin-button-icon { background-position: -67px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.evernote span.pslogin-button-auto { background-color: #7ac141; }
+	.pslogin-block .pslogin-buttons ul li.evernote .pslogin-button-icon { background-position: -101px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.mixi span.pslogin-button-auto { background-color: #d1ac5b; }
+	.pslogin-block .pslogin-buttons ul li.mixi .pslogin-button-icon { background-position: -135px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.mydigipass span.pslogin-button-auto { background-color: #49bbeb; }
+	.pslogin-block .pslogin-buttons ul li.mydigipass .pslogin-button-icon { background-position: -169px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.netlog span.pslogin-button-auto { background-color: #bb2026; }
+	.pslogin-block .pslogin-buttons ul li.netlog .pslogin-button-icon { background-position: -203px -137px; }
+
+	.pslogin-block .pslogin-buttons ul li.qq span.pslogin-button-auto { background-color: #c46f1c; }
+	.pslogin-block .pslogin-buttons ul li.qq .pslogin-button-icon { background-position: 0px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.sinaweibo span.pslogin-button-auto { background-color: #bd4342; }
+	.pslogin-block .pslogin-buttons ul li.sinaweibo .pslogin-button-icon { background-position: -34px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.soundcloud span.pslogin-button-auto { background-color: #ff5419; }
+	.pslogin-block .pslogin-buttons ul li.soundcloud .pslogin-button-icon { background-position: -66px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.tencentweibo span.pslogin-button-auto { background-color: #28a4e4; }
+	.pslogin-block .pslogin-buttons ul li.tencentweibo .pslogin-button-icon { background-position: -100px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.verisign span.pslogin-button-auto { background-color: #b22253; }
+	.pslogin-block .pslogin-buttons ul li.verisign .pslogin-button-icon { background-position: -134px -171px; }
+	.pslogin-openid.verisign input[type=submit] { background-color: #b22253; -webkit-appearance: none; }
+
+	.pslogin-block .pslogin-buttons ul li.xing span.pslogin-button-auto { background-color: #005d5e;}
+	.pslogin-block .pslogin-buttons ul li.xing .pslogin-button-icon { background-position: -168px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.kaixin001 span.pslogin-button-auto { background-color: #e2332e; }
+	.pslogin-block .pslogin-buttons ul li.kaixin001 .pslogin-button-icon { background-position: -203px -171px; }
+
+	.pslogin-block .pslogin-buttons ul li.orange span.pslogin-button-auto { background-color: #ff6600; }
+	.pslogin-block .pslogin-buttons ul li.orange .pslogin-button-icon { background-position: -1px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.bitbucket span.pslogin-button-auto { background-color: #013567; }
+	.pslogin-block .pslogin-buttons ul li.bitbucket .pslogin-button-icon { background-position: -67px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.bitly span.pslogin-button-auto { background-color: #ed6022; }
+	.pslogin-block .pslogin-buttons ul li.bitly .pslogin-button-icon { background-position: -101px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.boxcom span.pslogin-button-auto { background-color: #00b9f2; }
+	.pslogin-block .pslogin-buttons ul li.boxcom .pslogin-button-icon { background-position: -135px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.vimeo span.pslogin-button-auto { background-color: #1fb9eb; }
+	.pslogin-block .pslogin-buttons ul li.vimeo .pslogin-button-icon { background-position: -170px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.reddit span.pslogin-button-auto { background-color: #337fb9; }
+	.pslogin-block .pslogin-buttons ul li.reddit .pslogin-button-icon { background-position: -203px -205px; }
+
+	.pslogin-block .pslogin-buttons ul li.odesk span.pslogin-button-auto { background-color: #6fda44; }
+	.pslogin-block .pslogin-buttons ul li.odesk .pslogin-button-icon { background-position: -169px -273px; }
+	.pslogin-block .pslogin-buttons ul li.odesk .pslogin-button-text { color: #4c4c4c; }
+
+	.pslogin-block .pslogin-buttons ul li.teamviewer span.pslogin-button-auto { background-color: #0171b9; }
+	.pslogin-block .pslogin-buttons ul li.teamviewer .pslogin-button-icon { background-position: -34px -239px; }
+
+	.pslogin-block .pslogin-buttons ul li.skyrock span.pslogin-button-auto { background-color: #009afe; }
+	.pslogin-block .pslogin-buttons ul li.skyrock .pslogin-button-icon { background-position: -67px -239px; }
+
+	.pslogin-block .pslogin-buttons ul li.renren span.pslogin-button-auto { background-color: #153765; }
+	.pslogin-block .pslogin-buttons ul li.renren .pslogin-button-icon { background-position: -101px -239px; }
+
+	.pslogin-block .pslogin-buttons ul li.etsy span.pslogin-button-auto { background-color: #ee5931; }
+	.pslogin-block .pslogin-buttons ul li.etsy .pslogin-button-icon { background-position: -134px -239px; }
+
+	.pslogin-block .pslogin-buttons ul li.imgur span.pslogin-button-auto { background-color: #312e2f; }
+	.pslogin-block .pslogin-buttons ul li.imgur .pslogin-button-icon { background-position: -170px -239px; }
+
+	.pslogin-block .pslogin-buttons ul li.intuit span.pslogin-button-auto { background-color: #B8B8B8; }
+	.pslogin-block .pslogin-buttons ul li.intuit .pslogin-button-icon { background-position: -204px -239px; }
+	.pslogin-block .pslogin-buttons ul li.intuit .pslogin-button-text { color: #000000; }
+
+	.pslogin-block .pslogin-buttons ul li.mailchimp span.pslogin-button-auto { background-color: #73cff4; }
+	.pslogin-block .pslogin-buttons ul li.mailchimp .pslogin-button-icon { background-position: 0px -273px; }
+	.pslogin-block .pslogin-buttons ul li.mailchimp .pslogin-button-text { color: #000000; }
+
+	.pslogin-block .pslogin-buttons ul li.persona span.pslogin-button-auto { background-color: #ee5931; }
+	.pslogin-block .pslogin-buttons ul li.persona .pslogin-button-icon { background-position: -34px -273px; }
+
+	.pslogin-block .pslogin-buttons ul li.dribbble span.pslogin-button-auto { background-color: #f26798; }
+	.pslogin-block .pslogin-buttons ul li.dribbble .pslogin-button-icon { background-position: -67px -273px; }
+
+	.pslogin-block .pslogin-buttons ul li.goodreads span.pslogin-button-auto { background-color: #743900; }
+	.pslogin-block .pslogin-buttons ul li.goodreads .pslogin-button-icon { background-position: -100px -273px; }
+
+	.pslogin-block .pslogin-buttons ul li.lastfm span.pslogin-button-auto { background-color: #c02c0c; }
+	.pslogin-block .pslogin-buttons ul li.lastfm .pslogin-button-icon { background-position: -135px -273px; }
+
+	.pslogin-block .pslogin-buttons ul li.alipay span.pslogin-button-auto { background-color: #00a0e9; }
+	.pslogin-block .pslogin-buttons ul li.alipay .pslogin-button-icon { background-position: -202px -274px; }
+
+	.pslogin-block .pslogin-buttons ul li.wechat span.pslogin-button-auto { background-color: #4ec034; }
+	.pslogin-block .pslogin-buttons ul li.wechat .pslogin-button-icon { background-position: -1px -306px; }
+
+	.pslogin-block .pslogin-buttons ul li.naver span.pslogin-button-auto { background-color: #23b300; }
+	.pslogin-block .pslogin-buttons ul li.naver .pslogin-button-icon { background-position: -34px -307px; }
+
+/*======= social buttons =======*/
+#prpop-pop-up-bg .pslogin-block {
+	text-align: center;
+	clear: both;
+	margin-bottom: 5px;
+}
+
+#prpop-pop-up-bg .prpop-account-create .pslogin-block {
+	display: none;
+}
+
+#prpop-pop-up-bg .pslogin-block .pslogin-buttons.pslogin-buttons-showfull {
+	width: 100%;
+}
+
+	#prpop-pop-up-bg .pslogin-block li a span.pslogin-button-auto {
+		width: 100%;
+		position: relative;
+		display: block;
+		height: 32px;
+	}
+
+	#prpop-pop-up-bg .pslogin-block li a span.pslogin-button-icon {
+		position: absolute;
+		background-color: inherit;
+	}
+
+	#prpop-pop-up-bg .pslogin-block li a span.pslogin-button-text {
+		width: 100%;
+		padding-left: 32px;
+		font-size: 12px;
+	}
+
+	/*=== modern blue ===*/
+	#prpop-pop-up-bg.prpop-default .pslogin-spacer {
+		margin: 0 auto 10px;
+		width: 100%;
+	}
+
+	#prpop-pop-up-bg.prpop-default .pslogin-spacer:before {
+		display: block;
+		content: "";
+		clear: both;
+		width: 100%;
+	}
+
+	#prpop-pop-up-bg.prpop-default .pslogin-spacer table {
+		margin-top: 15px;
+	}
+
+	#prpop-pop-up-bg.prpop-default .pslogin-block {
+		margin-top: 10px;
+	}
+
+	#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+		#prpop-pop-up-bg.prpop-default .pslogin-block li a span.pslogin-button-auto {
+			min-width: 32px;
+		}
+
+		#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li {
+			width: 70%;
+			min-height: 32px;
+			margin-bottom: 0px;
+			vertical-align: inherit;
+			display: inline-block;
+			float: none;
+		}
+
+		#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons li {
+			width: auto;
+			min-height: 32px;
+			margin-bottom: 5px;
+			vertical-align: middle;
+		}
+
+		#prpop-pop-up-bg.prpop-default .pslogin-buttons .pslogin-spacer {
+			width: 100%;
+		}
+
+	/*=== glamour gray ===*/
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer {
+		margin: 0 auto 10px;
+		width: 100%;
+		float: left;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer.pslogin-showmore .pslogin-bordertext:hover {
+		color: white;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer:before {
+		display: block;
+		content: "";
+		clear: both;
+		width: 100%;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer table {
+		margin-top: 15px;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-block {
+		margin-top: 10px;
+	}
+
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li {
+		width: 70%;
+		min-height: 32px;
+		margin-bottom: 5px;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons li {
+		width: auto;
+		min-height: 32px;
+		margin: 0 5px 5px 0;
+		vertical-align: middle;
+	}
+
+		#prpop-pop-up-bg.glamour-grey .pslogin-block li a span.pslogin-button-auto {
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			min-width: 32px;
+		}
+
+		#prpop-pop-up-bg.glamour-grey .pslogin-block li a span.pslogin-button-text {
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+		}
+
+		#prpop-pop-up-bg.glamour-grey .pslogin-block li a span.pslogin-button-icon {
+			border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+		}
+
+		#prpop-pop-up-bg.glamour-grey .pslogin-buttons.pslogin-buttons-showfull li a span.pslogin-button-icon {
+			border-radius: 3px 0 0 3px;
+			-webkit-border-radius: 3px 0 0 3px;
+			-moz-border-radius: 3px 0 0 3px;
+		}
+
+		#prpop-pop-up-bg.glamour-grey .pslogin-buttons .pslogin-spacer {
+			width: 100%;
+		}
+
+
+	/*=== light silver ===*/
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-spacer {
+		margin: 10px auto;
+		width: 70%;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-border {
+		border-top: 1px solid #A5A5A5;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-bordertext {
+		color: #444;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-spacer {
+		width: 70%;
+
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons .pslogin-spacer:before {
+		display: none;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-spacer .pslogin-border {
+		border-top: 1px solid #A5A5A5;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-spacer.pslogin-showmore .pslogin-bordertext {
+		border: 1px solid #A5A5A5;
+		color: #444;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-spacer.pslogin-showmore .pslogin-bordertext:hover {
+		color: black;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons {
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li {
+		width: 100%;
+		min-width: 32px;
+		min-height: 34px;
+		margin-bottom: 5px;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons li {
+		width: auto;
+		min-width: 34px;
+		height: 34px;
+		margin: 0 0 5px 0;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons ul li a {
+		display: inline-block;
+		width: 100%;
+	}
+
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block li a span.pslogin-button-auto {
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-box-shadow: 0px 1px 1px 0px rgba(31, 31, 31, 0.47),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.33);
+		-moz-box-shadow: 0px 1px 1px 0px rgba(31, 31, 31, 0.47),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.33);
+		box-shadow: 0px 1px 1px 0px rgba(31, 31, 31, 0.47),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.33);
+
+	}
+
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li a span.pslogin-button-auto {
+		border: 1px solid rgba(0, 0, 0, 0.09);
+		height: 34px;
+	}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-block li a span.pslogin-button-text {
+			height: 34px;
+		}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-block li a span.pslogin-button-icon {
+			box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.33);
+		}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li a span.pslogin-button-icon {
+			border: none;
+			border-radius: 5px 0 0 5px;
+			-webkit-border-radius: 5px 0 0 5px;
+			-moz-border-radius: 5px 0 0 5px;
+		}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li a span.pslogin-button-icon {
+			height: 32px;
+			width: 32px;
+		}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-block li a span.pslogin-button-icon {
+			border: 1px solid rgba(0, 0, 0, 0.09);
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			height: 34px;
+			width: 34px;
+		}
+
+		#prpop-pop-up-bg.simple-form-logo .pslogin-buttons .pslogin-spacer {
+			width: 100%;
+		}
+
+/*=== open-id Page ===*/
+.pslogin-openid {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px;
+}
+
+	.pslogin-openid .network-logo {
+		background: url('../images/social_openid.png');
+		width: 180px;
+		height: 70px;
+		margin: 0 auto 15px auto;
+	}
+
+	.pslogin-openid.livejournal .network-logo { background-position: -180px 0; }
+	.pslogin-openid.verisign .network-logo { background-position: 0 -70px; }
+
+	.pslogin-openid input[type=submit] {
+		height: 32px;
+		line-height: 32px;
+		vertical-align: top;
+		padding: 0;
+		text-align: center;
+		min-width: 144px;
+		box-sizing: border-box;
+		font-size: 12px;
+		color: white;
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border: 0px;
+	}
+
+	.pslogin-openid input[type=submit]:hover {
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+	}
+
+	.pslogin-openid input[type=text] {
+		width: 100%;
+		border: 1px solid #D0D0D0;
+		height: 30px;
+		line-height: 25px;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		padding: 2px;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	.pslogin-openid .form-wrapper {
+		background-color: #f3f3f3;
+		color: #464646;
+		width: 300px;
+		margin: 0 auto;
+		padding: 25px;
+		box-shadow: 0px 2px 7px 0px #c1c1c1;
+		-moz-box-shadow: 0px 2px 7px 0px #c1c1c1;
+		-webkit-box-shadow: 0px 2px 7px 0px #c1c1c1;
+		border-radius: 15px;
+		font-size: 14px;
+	}
+
+	.pslogin-openid .ajax-loader {
+		width: 110px;
+		height: 14px;
+		margin: 0 auto 5px auto;
+	}
+
+		.pslogin-openid .ajax-loader .image-gif {
+			background: url('../images/ajax-loader-h.gif');
+			width: 110px;
+			height: 14px;
+			display: none;
+		}
+
+		.pslogin-openid .ajax-loader .error-text {
+			color: red;
+			font-size: 11px;
+			/*display: none;*/
+		}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-icon {
+		background: url('../images/social_retina.png');
+		background-size: 236px 340px;
+		-webkit-background-size: 236px 340px;
+		-moz-background-size: 236px 340px;
+	}
+
+}
+
+@media screen and ( max-width: 1280px ) {
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-text {
+		min-width: 130px;
+	}
+}
+
+@media screen and ( max-width: 1190px ) {
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-text {
+		min-width: 144px;
+	}
+}
+
+@media screen and ( max-width: 767px ) {
+
+	.pslogin-block .pslogin-buttons {
+		width: 100%;
+	}
+
+	.pslogin-block .pslogin-buttons.show-button-text ul li .pslogin-button-text {
+		display: inline-block;
+	}
+
+	.pslogin-block .pslogin-xs {
+		display: inline-block!important;
+	}
+
+	.pslogin-block .pslogin-spacer .pslogin-bordertext {
+
+	}
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+	/*=== social login ===*/
+	#prpop-pop-up-bg.prpop-default .pslogin-spacer,
+	#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons {
+		width: 60%;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer {
+		float: none;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer,
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons {
+		width: 60%;
+	}
+
+	#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li,
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons.pslogin-buttons-showfull li {
+		width: 100%;
+	}
+
+	.pslogin-block .pslogin-buttons ul li {
+    	margin: 0 0 3px 0;
+    	width: 100%;
+	}
+
+	.pslogin-block .pslogin-buttons ul li span.pslogin-button-auto {
+		width: 100%;
+	}
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-icon {
+	    position: absolute;
+	    z-index: 1000;
+	    background-color: inherit;
+	    top: 0;
+	    left: 0;
+	}
+	.pslogin-block .pslogin-buttons ul li .pslogin-button-text {
+		width: 100%;
+    	position: relative;
+    	z-index: 100;
+	}
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+	/*=== social buttons ===*/
+	#prpop-pop-up-bg.prpop-default .pslogin-spacer,
+	#prpop-pop-up-bg.prpop-default .pslogin-block .pslogin-buttons {
+		width: 100%;
+	}
+
+	#prpop-pop-up-bg.glamour-grey .pslogin-spacer,
+	#prpop-pop-up-bg.glamour-grey .pslogin-block .pslogin-buttons {
+		width: 100%;
+	}
+
+	#prpop-pop-up-bg.simple-form-logo .pslogin-spacer,
+	#prpop-pop-up-bg.simple-form-logo .pslogin-block .pslogin-buttons {
+		width: 100%;
+	}
+
+}
+
+/*=== animate ===*/
+#pslogin-pop-up-bg {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration:1s;
+		animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    -moz-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+            transform: none;
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    -moz-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    -moz-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  -moz-animation-name: fadeInDownBig;
+          animation-name: fadeInDownBig;
+}

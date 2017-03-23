@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="psloginfree" translate="label" type="text" sortOrder="12168231" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label><![CDATA[Twitter & Facebook Login]]></label>
+            <tab>plumrocket</tab>
+            <resource>Plumrocket_SocialLoginFree::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="version" type="text" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Version</frontend_model>
+                </field>
+                <field id="enable" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Extension</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="replace_templates" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Replace Templates</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Set "Yes" to replace your customer login/registration template with this extension template and display the social login buttons automatically. Please see our online documentation if you want to keep your own template and install social buttons manually.</comment>
+                </field>
+                <field id="enable_for_login" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display on Login Form</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display Social Login buttons on magento customer login form</comment>
+                </field>
+                <field id="enable_for_register" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display on Registration Form</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display Social Login buttons on magento customer registration form</comment>
+                </field>
+                <field id="validate_ignore" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ignore Missing Data from Social Networks</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Many (but not all) social networks share only limited user profile/personal information. If this option is enabled, all required fields in magento that are missing will be pre-filled with temporary data to speed-up the registration process. If this option is set to "No" - the user will be sent to the registration form to enter missing info.</comment>
+                </field>
+                <field id="enable_subscription" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Subscribe Customer To Email Newsletter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Automatically sign up customer to the Newsletter Subscribers list during the registration</comment>
+                </field>
+                <field id="enable_photo" translate="label comment" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Customer Photo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display customer photo from social network in your website header. Please see our online documentation for manual installation instructions if the photo is not shown.</comment>
+                </field>
+                <field id="redirect_for_login" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Success Page</label>
+                    <source_model>Plumrocket\SocialLoginFree\Model\Config\Source\Redirectto</source_model>
+                    <comment>User will be redirected to this page after each successful login</comment>
+                </field>
+                <field id="redirect_for_login_link" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Custom Success Page URL</label>
+                    <comment>Please enter the full URL of the page, including the domain name, to which you will be redirecting.</comment>
+                    <depends>
+                        <field id="redirect_for_login">__custom__</field>
+                    </depends>
+                </field>
+                <field id="redirect_for_register" translate="label comment" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Success Page</label>
+                    <source_model>Plumrocket\SocialLoginFree\Model\Config\Source\Redirectto</source_model>
+                    <comment>User will be redirected to this page after successful registration</comment>
+                </field>
+                <field id="redirect_for_register_link" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Custom Success Page URL</label>
+                    <comment>Please enter the full URL of the page, including the domain name, to which you will be redirecting.</comment>
+                    <depends>
+                        <field id="redirect_for_register">__custom__</field>
+                    </depends>
+                </field>
+                <field id="sortable_drag_and_drop" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Social Buttons Sorting</label>
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Sortable</frontend_model>
+                </field>
+                <field id="sortable" translate="label comment" type="hidden" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <comment>Visible buttons will be displayed by default. Hidden buttons will be listed under "show more" section in the front-end.</comment>
+                </field>
+            </group>
+
+            <group id="share" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Social Share</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="enable" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display social share popup after successfull user registration</comment>
+                </field>
+                <field id="title" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Title</label>
+                </field>
+                <field id="description" translate="label comment" type="editor" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Popup Message</label>
+                    <frontend_model>Plumrocket\Base\Block\Adminhtml\System\Config\Form\Editor</frontend_model>
+                </field>
+                <field id="page" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Share Page</label>
+                    <source_model>Plumrocket\SocialLoginFree\Model\Config\Source\Shareurl</source_model>
+                    <comment>Selected page of your store will be shared on social networks.</comment>
+                </field>
+                <field id="page_link" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Share Page URL</label>
+                    <comment>Please enter the full URL of the page, including the domain name.</comment>
+                    <depends>
+                        <field id="page">__custom__</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="facebook" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="enable" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>For configuration instructions, please &lt;a href="http://wiki.plumrocket.com/wiki/Magento_Facebook_Login_Configuration" target="_blank"&gt;click here&lt;/a&gt;.</comment>
+                </field>
+                <field id="application_id" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App ID</label>
+                </field>
+                <field id="secret" translate="label comment" type="obscure" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="enable_birthday" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ask for Birthday</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Request customer's birthday date from Facebook</comment>
+                </field>
+                <field id="icon_btn" translate="label comment" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Small Icon Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="login_btn" translate="label comment" type="image" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="register_btn" translate="label comment" type="image" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="login_btn_text" translate="label comment" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Button Text</label>
+                </field>
+                <field id="register_btn_text" translate="label comment" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Button Text</label>
+                </field>
+            </group>
+
+            <group id="twitter" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Twitter</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="enable" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>For configuration instructions, please &lt;a href="http://wiki.plumrocket.com/wiki/Magento_Twitter_Login_Configuration" target="_blank"&gt;click here&lt;/a&gt;.</comment>
+                </field>
+                <field id="application_id" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Consumer Key (API Key)</label>
+                </field>
+                <field id="secret" translate="label comment" type="obscure" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Consumer Secret (API Secret)</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="callbackurl" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Callback URL</label>
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Callbackurl</frontend_model>
+                    <comment>This URL should be used while creating new social login application.</comment>
+                </field>
+                <field id="icon_btn" translate="label comment" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Small Icon Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="login_btn" translate="label comment" type="image" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="register_btn" translate="label comment" type="image" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Button</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pslogin</upload_dir>
+                    <base_url type="media" scope_info="1">pslogin</base_url>
+                </field>
+                <field id="login_btn_text" translate="label comment" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Login Button Text</label>
+                </field>
+                <field id="register_btn_text" translate="label comment" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Registration Button Text</label>
+                </field>
+            </group>
+
+            <group id="googleplus" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google+ / Blogger</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="linkedin" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>LinkedIn</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="yahoo" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Yahoo!</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="live" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Live / Hotmail / MSN (Microsoft Account)</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="amazon" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Amazon</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="aol" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>AOL.</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="github" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>GitHub</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="instagram" translate="label" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instagram</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="foursquar" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Foursquare</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="dropbox" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Dropbox</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="disqus" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Disqus</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="livejourn" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>LiveJournal</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="tumblr" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Tumblr</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="flickr" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Flickr</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="wordpress" translate="label" type="text" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>WordPress</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="vkontakte" translate="label" type="text" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Vkontakte</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="odnoklass" translate="label" type="text" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Odnoklassniki</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="mailru" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mail.ru</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="yandex" translate="label" type="text" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Yandex</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="paypal" translate="label" type="text" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>PayPal</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="salesforc" translate="label" type="text" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Salesforce</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="stackover" translate="label" type="text" sortOrder="280" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Stackoverflow (StackExchange)</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="evernote" translate="label" type="text" sortOrder="290" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Evernote</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="mixi" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mixi</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="mydigipas" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>MYDIGIPASS.COM</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="qq" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>QQ / QZone</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="sinaweibo" translate="label" type="text" sortOrder="330" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sina Weibo</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="soundclou" translate="label" type="text" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>SoundCloud</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="verisign" translate="label" type="text" sortOrder="360" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Verisign</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="xing" translate="label" type="text" sortOrder="370" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>XING</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="kaixin001" translate="label" type="text" sortOrder="380" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Kaixin001</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="persona" translate="label" type="text" sortOrder="390" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Persona / BrowserID</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="bitbucket" translate="label" type="text" sortOrder="400" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Bitbucket</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="skyrock" translate="label" type="text" sortOrder="410" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Skyrock</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="renren" translate="label" type="text" sortOrder="420" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Renren</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="bitly" translate="label" type="text" sortOrder="430" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Bitly</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="boxcom" translate="label" type="text" sortOrder="440" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Box.com</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="vimeo" translate="label" type="text" sortOrder="450" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Vimeo</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="reddit" translate="label" type="text" sortOrder="460" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Reddit</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="odesk" translate="label" type="text" sortOrder="470" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Upwork (Elance / oDesk)</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="teamviewe" translate="label" type="text" sortOrder="480" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>TeamViewer</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="etsy" translate="label" type="text" sortOrder="490" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Etsy</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="imgur" translate="label" type="text" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Imgur</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="intuit" translate="label" type="text" sortOrder="510" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Intuit</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="mailchimp" translate="label" type="text" sortOrder="520" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>MailChimp</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="dribbble" translate="label" type="text" sortOrder="530" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Dribbble</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="goodreads" translate="label" type="text" sortOrder="540" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Goodreads</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="lastfm" translate="label" type="text" sortOrder="550" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Last.fm</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="alipay" translate="label" type="text" sortOrder="600" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Alipay</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="wechat" translate="label" type="text" sortOrder="650" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>WeChat</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+            <group id="naver" translate="label" type="text" sortOrder="700" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>NAVER</label>
+                <field id="version" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Plumrocket\SocialLoginFree\Block\Adminhtml\System\Config\Form\Notinstalled</frontend_model>
+                </field>
+            </group>
+
+        </section>
+    </system>
+</config>

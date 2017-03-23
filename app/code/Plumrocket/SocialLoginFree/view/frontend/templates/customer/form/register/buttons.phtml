@@ -1,0 +1,64 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<?php if($this->getHelper()->hasButtons()) : ?>
+    <div class="pslogin-block pslogin-register" data-mage-init='{"pslogin":{}}'>
+       
+        <div class="pslogin-buttons <?php echo $this->showRegisterFullButtons()? 'pslogin-buttons-showfull' : ''; ?>">
+            
+            <?php if(!$this->showRegisterFullButtons()) : ?>
+                <div class="pslogin-spacer">
+                    <?php echo __('Register with your social account'); ?>
+                </div>
+                <br />
+            <?php endif; ?>
+
+            <ul>
+            <?php foreach ($this->getPreparedButtons() as $button) : ?>
+                <li class="pslogin-button <?php echo $button['type']; ?>" title="<?php echo $this->escapeHtml($button['register_text']); ?>">
+                    <a class="pslogin-button-link pslogin-button-click" rel="nofollow" href="javascript:void(0);" data-href="<?php echo $button['href']; ?>" data-width="<?php echo $button['popup_width']; ?>" data-height="<?php echo $button['popup_height']; ?>" >
+                        
+                        <?php if($this->showRegisterFullButtons()) : ?>
+                            <?php if(!empty($button['image']['register'])) : ?>
+                                <img class="pslogin-button-image" src="<?php echo $this->escapeHtml($button['image']['register']); ?>" />
+                            <?php else : ?>
+                                <span class="pslogin-button-auto">
+                                    <span class="pslogin-button-icon">
+                                        <?php echo !empty($button['image']['icon'])? '<img class="pslogin-button-icon-image" src="'. $this->escapeHtml($button['image']['icon']) .'" />' : ''; ?>
+                                    </span>
+                                    <span class="pslogin-button-text"><?php echo $this->escapeHtml($button['register_text']); ?></span>
+                                </span>
+                            <?php endif; ?>
+                        <?php else : ?>
+                            <?php if(!empty($button['image']['icon'])) : ?>
+                                <img class="pslogin-button-icon-image" src="<?php echo $this->escapeHtml($button['image']['icon']); ?>" />
+                            <?php else : ?>
+                                <span class="pslogin-button-auto">
+                                    <span class="pslogin-button-icon"></span>
+                                </span>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+        </div>
+
+    </div>
+    <div style="clear: both;"></div>
+<?php endif; ?>

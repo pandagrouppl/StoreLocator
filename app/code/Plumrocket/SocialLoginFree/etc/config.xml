@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <psloginfree>
+            <general>
+                <enable_for_login>1</enable_for_login>
+                <enable_for_register>1</enable_for_register>
+                <validate_ignore>1</validate_ignore>
+                <enable_subscription>1</enable_subscription>
+                <enable_photo>1</enable_photo>
+                <redirect_for_login>__referer__</redirect_for_login>
+                <redirect_for_register>__referer__</redirect_for_register>
+            </general>
+            <share>
+                <enable>1</enable>
+                <title>Please share us with your friends!</title>
+                <description>Spread the word about this great Magento Store! Let everyone know about our great offers and everyday deals!</description>
+                <page>2</page>
+            </share>
+            <facebook>
+                <enable_birthday>1</enable_birthday>
+                <login_btn_text>Login with Facebook</login_btn_text>
+                <register_btn_text>Register with Facebook</register_btn_text>
+            </facebook>
+            <twitter>
+                <login_btn_text>Login with Twitter</login_btn_text>
+                <register_btn_text>Register with Twitter</register_btn_text>
+            </twitter>
+        </psloginfree>
+    </default>
+</config>
