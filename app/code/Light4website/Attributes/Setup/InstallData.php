@@ -36,7 +36,6 @@ class InstallData implements InstallDataInterface
      */
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-        $setup->startSetup();
         /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
 
@@ -70,6 +69,5 @@ class InstallData implements InstallDataInterface
             ]
         );
 
-        $setup->endSetup();
     }
 }
