@@ -14,7 +14,7 @@ $retina-sprite: (
 
 $sprite-icon: (
     brownline: (
-        x: -830px,
+        x: -775px,
         y: -123px,
         width: 25px,
         height: 24px
@@ -38,7 +38,7 @@ $sprite-icon: (
         height: 790px
     ),
     header-account: (
-        x: -775px,
+        x: -830px,
         y: -123px,
         width: 25px,
         height: 24px
@@ -78,6 +78,18 @@ $sprite-icon: (
         y: -55px,
         width: 30px,
         height: 38px
+    ),
+    wishlist-icon-dark: (
+        x: -885px,
+        y: -123px,
+        width: 22px,
+        height: 21px
+    ),
+    wishlist-icon: (
+        x: -937px,
+        y: -123px,
+        width: 22px,
+        height: 21px
     ),
 );
 

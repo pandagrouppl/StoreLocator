@@ -47,8 +47,8 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
         <ol class="products list items product-items catalog-grid">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
             <?php foreach ($_productCollection as $_product): ?>
-                <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item catalog-grid__item">'
-                    : '</li><li class="item product product-item catalog-grid__item">' ?>
+                <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item catalog-grid__item catalog-item">'
+                    : '</li><li class="item product product-item catalog-grid__item catalog-item">' ?>
                 <div class="product-item-info" data-container="product-grid">
                     <?php
                     $productImage = $block->getImage($_product, $image);
@@ -58,26 +58,27 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                     }
                     ?>
                     <?php // Product Image ?>
-                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-grid__img" tabindex="-1">
+                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-item__img" tabindex="-1">
                         <?php echo $productImage->toHtml(); ?>
                         <?php $productImageAttr = $_product->getCustomAttribute('hover_image');?>
                         <?php if ($productImageAttr):
                             $productHoverImage = $this->helper('Magento\Catalog\Helper\Image')
                                 ->init($_product, 'hover_image')
                                 ->setImageFile($productImageAttr->getValue());?>
-                            <img class="catalog-grid__img--second" src="<?php echo $productHoverImage->getUrl(); ?>" />
+                            <img class="catalog-item__img--second" src="<?php echo $productHoverImage->getUrl(); ?>" />
                         <?php endif; ?>
+                        <figure class="catalog-item__star"></figure>
                     </a>
-                    <div class="product details product-item-details catalog-grid__content">
+                    <div class="product details product-item-details catalog-item__content">
                         <?php
                             $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                         ?>
-                        <strong class="product name product-item-name">
-                            <a class="product-item-link"
+                        <h3 class="product name product-item-name">
+                            <a class="product-item-link catalog-item__title"
                                href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>">
                                 <?php /* @escapeNotVerified */ echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
                             </a>
-                        </strong>
+                        </h3>
                         <?php /* @escapeNotVerified */ echo $block->getProductPrice($_product) ?>
 
                         <div class="product-item-inner">

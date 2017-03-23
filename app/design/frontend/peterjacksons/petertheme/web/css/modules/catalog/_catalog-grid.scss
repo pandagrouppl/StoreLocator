@@ -1,47 +1,11 @@
 .catalog-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    &__img {
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-
-        $root: &;
-
-        &--first {
-            position: relative;
-        }
-
-        &--second {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            transition: 0.75s all ease;
-        }
-
-        &:hover {
-
-            #{$root}--second {
-               opacity: 1;
-            }
-        }
-    }
-
-    &__content {
-
-        a  {
-            width: 100%;
-            display: block;
-            text-align: center;
-            margin: 10px 0;
-        }
     }
 }
