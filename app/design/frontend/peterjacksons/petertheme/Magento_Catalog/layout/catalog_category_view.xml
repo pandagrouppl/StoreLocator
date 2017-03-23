@@ -13,11 +13,15 @@
         <referenceBlock name="breadcrumbs" remove="True"/>
         <referenceBlock name="category.product.addto.compare" remove="True"/>
         <referenceContainer name="sidebar.additional" remove="True"/>
+        <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main">
+            <!--<arguments>-->
+                <!--<argument name="css_class" xsi:type="string">catalog-main</argument>-->
+            <!--</arguments>-->
+        </referenceContainer>
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>
             </arguments>
         </referenceBlock>
-
     </body>
 </page>

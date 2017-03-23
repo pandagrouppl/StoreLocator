@@ -1,20 +1,11 @@
 .catalog-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    &__content {
-
-        a  {
-            width: 100%;
-            display: block;
-            text-align: center;
-            margin: 10px 0;
-        }
     }
 }
