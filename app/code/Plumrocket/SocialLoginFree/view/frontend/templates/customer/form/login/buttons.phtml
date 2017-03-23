@@ -1,0 +1,75 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<?php if($this->getHelper()->hasButtons()) : ?>
+    <div class="pslogin-block pslogin-login" data-mage-init='{"pslogin":{}}'>
+
+        <div class="pslogin-spacer pslogin-clearfix">
+            <span class="pslogin-title" style="<?php echo $this->showLoginFullButtons()? 'display: none;' : ''; ?>"><?php echo __('Login with your social account'); ?></span>
+        </div>
+
+        <div class="pslogin-buttons <?php echo $this->showLoginFullButtons()? 'pslogin-buttons-showfull' : ''; ?>">
+            <ul class="pslogin-clearfix">
+            <?php foreach ($this->getPreparedButtons() as $button) : ?>
+                <li class="pslogin-button <?php echo $button['type']; ?> <?php echo empty($button['visible'])? 'pslogin-hidden' : 'pslogin-visible'; ?>" <?php echo empty($button['visible'])? 'style="display: none;"' : ''; ?> title="<?php echo $this->escapeHtml($button['login_text']); ?>">
+                    <a class="pslogin-button-link pslogin-button-click" rel="nofollow" href="javascript:void(0);" data-href="<?php echo $button['href']; ?>" data-width="<?php echo $button['popup_width']; ?>" data-height="<?php echo $button['popup_height']; ?>" >
+
+                        <?php if($this->showLoginFullButtons() && !empty($button['image']['login'])) : ?>
+                            <img class="pslogin-button-image" src="<?php echo $this->escapeHtml($button['image']['login']); ?>" />
+                        <?php endif; ?>
+
+                        <?php if(!$this->showFullButtons() && !empty($button['image']['icon'])) : ?>
+                            <img class="pslogin-button-icon-image" src="<?php echo $this->escapeHtml($button['image']['icon']); ?>" />
+                        <?php endif; ?>
+
+                        <?php if(empty($button['image']['login']) || empty($button['image']['icon'])) : ?>
+                            <span class="pslogin-button-auto <?php echo !empty($button['image']['login'])? 'pslogin-has-button-image' : ''; ?> <?php echo !empty($button['image']['icon'])? 'pslogin-has-button-icon-image' : ''; ?>">
+                                <span class="pslogin-button-icon">
+                                    <?php echo !empty($button['image']['icon'])? '<img class="pslogin-button-icon-image" src="'. $this->escapeHtml($button['image']['icon']) .'" />' : ''; ?>
+                                </span>
+                                <span class="pslogin-button-text"><?php echo $this->escapeHtml($button['login_text']); ?></span>
+                            </span>
+                        <?php endif; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+
+            <?php if($this->getPreparedButtons('hidden')) : ?>
+                <div class="pslogin-spacer pslogin-clearfix pslogin-showmore"> 
+		            <table>
+		            	<tr>
+		            		<td><div class="pslogin-border"></div></td>
+		            		<td class="w100"><div class="pslogin-showmore-button pslogin-bordertext"><?php echo __('show more'); ?></div></td>
+		            		<td><div class="pslogin-border"></div></td>
+		            	</tr>
+		            </table>
+                </div>
+            <?php endif; ?>
+        </div>
+
+    </div>
+    <div style="clear: both;"></div>
+
+    <script type="text/javascript">
+        var showFullButtonsAfterViewMore = <?php echo $this->showFullButtons()? 'true' : 'false'; ?>;
+        if (window.psloginButtons) {
+            requirejs(['pslogin']);
+        }
+    </script>
+<?php endif; ?>

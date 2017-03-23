@@ -1,0 +1,15 @@
+{
+    "name": "plumrocket/module-psloginfree",
+    "description": "N/A",
+    "require": {
+        "plumrocket/module-plumbase": "2.*"
+    },
+    "type": "magento2-module",
+    "version": "2.1.0",
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Plumrocket\\SocialLoginFree\\": ""
+        }
+    }
+}

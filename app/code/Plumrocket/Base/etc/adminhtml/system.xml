@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+
+Plumrocket Inc.
+
+NOTICE OF LICENSE
+
+This source file is subject to the End-user License Agreement
+that is available through the world-wide-web at this URL:
+http://wiki.plumrocket.net/wiki/EULA
+If you are unable to obtain it through the world-wide-web, please
+send an email to support@plumrocket.com so we can send you a copy immediately.
+
+@package    Plumrocket_Base-v2.x.x
+@copyright  Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+@license    http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="plumrocket" translate="label" sortOrder="100">
+            <label><![CDATA[
+                <div style="padding-left:22px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEIxMEIyRkRCOTg1MTFFMkI4Qjg5OEZGNjcwRUQ4MDciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEIxMEIyRkVCOTg1MTFFMkI4Qjg5OEZGNjcwRUQ4MDciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0QjEwQjJGQkI5ODUxMUUyQjhCODk4RkY2NzBFRDgwNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0QjEwQjJGQ0I5ODUxMUUyQjhCODk4RkY2NzBFRDgwNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoBY2kYAAAJCSURBVHjaJFJNaxVBEOzu2cfDZPflkSgkfsSP5CKBoBeDigeRgIgk4MWDePemqJHgBwgiCEFB9C94CkYMEuK/iF4CXgJ6UCOikBCyb6a7rVmX3WVmt6e6qrr49VppHknYXYMFFcfFzUXmRCROxmzsbPguhVpPqYcjLGSm7oRCIzo1fP/XztrG1grhlJMzBSUTKkyBnYFQDCCs8HRbB6aG539s7nz9ewhgaEa5hZuKqFtMFBvw5JyUcHBqdGFnW4Pb8b031HJHM6+N8Fc0Zky8NbFGVyv2FScmBq9CSNnfnmg/6vOhVKOUHVhqYi7RoAfA7oZ1ujD+kkk6AwPGUva3Th95nARlnBENHmhuB4IEk9QmB6+NVuegcmt7izVA2367MrJn0jOzrASQDoopgr0Gqc6PPYNNuNFPgmViZd/02Cs1VvWknm2HdkhXpWPdS2bRLcE2WILGkk3mQTk5NnS5hwYGl2CRwqPwZNo//3z74cu937sb5Fp1ugz7g3vA2d7s0TeSigTFWYOKJX2w2vKYrk8urq7P/6m/gVfV6ZRl2alKzznws4fnUnKpQcms0zf+9GKtKvdWik/flz6uP9ze3QQdwTBJBqouBnpmZL5qH+S7y232XiIOTguzemc5PJ+p5963VCjAGP6fJWlCZXkLeDR6MYPR2c13jO3tpZZmniE2M04IRcKAPCKYiQrKFtGtRc4YjIApkkmBJGqCR9lG48B1s0JR0dMaAc3posaBPIM8daMsVBpmMLiwHPhI/k+AAQDYqY0eXeLHAgAAAABJRU5ErkJggg==) left 50% no-repeat;">Plumrocket</div> ]]></label>
+        </tab>
+    </system>
+</config>

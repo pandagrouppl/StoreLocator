@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Plumrocket_SocialLoginFree::css/pslogin.css" />
+        <css src="Plumrocket_SocialLoginFree::css/pslogin-custom.css" />
+    </head>
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Plumrocket\SocialLoginFree\Block\Share" name="pslogin.customer.form.register.sharepopup" as="pslogin_sharepopup" before="-">
+                <action ifconfig="psloginfree/general/enable" method="setTemplate">
+                    <argument name="template" xsi:type="string">Plumrocket_SocialLoginFree::customer/form/register/sharepopup.phtml</argument>
+                </action>
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="pslogin-sharepopup" xsi:type="array">
+                                <item name="component" xsi:type="string">pslogin-sharepopup</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Plumrocket_SocialLoginFree/sharepopup</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+            <block class="Plumrocket\SocialLoginFree\Block\General" name="pslogin.general">
+                <action ifconfig="psloginfree/general/enable" method="setTemplate">
+                    <argument name="template" xsi:type="string">Plumrocket_SocialLoginFree::general.phtml</argument>
+                </action>
+            </block>
+            </referenceContainer>
+        <referenceContainer name="page.messages">
+            <block class="Plumrocket\SocialLoginFree\Block\Messages" name="pslogin.messages" />
+        </referenceContainer>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Template" name="pslogin.theme.html.header.photo" as="pslogin_photo" before="customer">
+                <action ifconfig="psloginfree/general/enable" method="setTemplate">
+                    <argument name="template" xsi:type="string">Plumrocket_SocialLoginFree::theme/html/header/photo.phtml</argument>
+                </action>
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="pslogin-photo" xsi:type="array">
+                                <item name="component" xsi:type="string">pslogin-photo</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- Customer Authentication-popup -->
+        <referenceContainer name="before.body.end">
+            <block class="Plumrocket\SocialLoginFree\Block\Buttons" name="pslogin.customer.form.login.buttons" as="pslogin_buttons" template="Plumrocket_SocialLoginFree::customer/form/login/buttons.phtml">
+                <action method="checkPosition">
+                    <argument name="position" xsi:type="string">login</argument>
+                </action>
+                <action method="setOutput2js" />
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <referenceBlock name="authentication-popup">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="authenticationPopup" xsi:type="array">
+                                <item name="component" xsi:type="helper" helper="Plumrocket\SocialLoginFree\Helper\Data::getCustomerJsViewAuthenticationPopup"></item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,6 +1,7 @@
 .layered-nav {
     min-width: 180px;
     height: 100%;
+    padding-right: 15px;
 
     &__button {
         @include sprite(filter-button);

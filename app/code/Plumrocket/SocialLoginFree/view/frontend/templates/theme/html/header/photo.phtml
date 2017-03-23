@@ -1,0 +1,26 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<?php $helper = $this->helper('Plumrocket\SocialLoginFree\Helper\Data'); ?>
+<?php if ($helper->photoEnabled()): ?>
+    <li class="pslogin-welcome-msg" data-bind="scope: 'pslogin-photo'" data-mage-init='{"Magento_Ui/js/core/app":<?php echo $block->getJsLayout();?>}'>
+    	<!-- ko if: pslogin().photo -->
+        <img data-bind="attr: {'src' : pslogin().photo, 'alt': customer().fullname }" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" />
+       	<!-- /ko -->
+    </li>
+<?php endif; ?>

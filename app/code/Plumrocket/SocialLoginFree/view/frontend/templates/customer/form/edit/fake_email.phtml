@@ -1,0 +1,47 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<?php
+$helper = $this->helper('Plumrocket\SocialLoginFree\Helper\Data');
+if($helper->isFakeMail()) : ?>
+	<div data-mage-init='{"pslogin":{},"loaderAjax":{},"loader":{}}' style="display: none;"></div>
+	<script type="text/javascript">
+	//<![CDATA[
+		require([
+		    'jquery'
+		], function(pjQuery) {
+		    // 'use strict';
+		    pjQuery(document).ready(function() {
+		    	function customerEditFakeEmail() {
+					pjQuery("#email").removeClass("valid").addClass("mage-error").after('<div class="mage-error pslogin-fake-email" id="email-error" for="email" generated="true">Please enter valid email address.</div>');
+
+				    var reset = true;
+				    pjQuery("#email").on('click focus', function() {
+				    	if(reset) {
+				    		pjQuery(this).removeClass("mage-error").addClass("valid").val('');
+				    		pjQuery('#email-error.pslogin-fake-email').remove();
+				    	}
+				    	reset = false;
+				    });
+				}
+		        customerEditFakeEmail();
+		    });
+		});
+	//]]>
+	</script>
+<?php endif; ?>

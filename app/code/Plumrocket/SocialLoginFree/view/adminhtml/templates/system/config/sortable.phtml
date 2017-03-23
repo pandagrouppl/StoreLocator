@@ -1,0 +1,45 @@
+<?php
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_SocialLoginFree
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+?>
+
+<tr id="psloginfree_general_sortable_drag_and_drop" <?php echo (!$buttons = $this->getButtons()) || count($buttons) <= 1 ? 'style="display: none;"' : ''; ?>>
+    <td class="label"><?php echo $this->element->getLabel(); ?></td>
+    <td colspan="3" class="social-td">        
+        <div class="div-visible"><?php echo __('Visible Buttons'); ?></div>
+        <div class="div-hidden"><?php echo __('Hidden Buttons'); ?></div>
+
+        <div class="psloginfree-form">
+	        <ul id="sortable-visible" data-list="visible" class="soc-networks">
+	        <?php foreach ($this->getPreparedButtons('visible') as $button) { ?>
+	            <li id="visible-<?php echo $button['type']; ?>" class="ui-state-default <?php echo $button['type']; ?>" data-enable="psloginfree_<?php echo $button['type']; ?>_enable">
+                    <span class="soc-li-icon"></span>
+                    <span class="soc-li-text"><?php echo $this->escapeHtml(ucfirst($button['type'])); ?></span>
+	            </li>
+	        <?php } ?>
+	        </ul>
+	
+	        <ul id="sortable-hidden" data-list="hidden" class="soc-networks">
+	        <?php foreach ($this->getPreparedButtons('hidden') as $button) { ?>
+	            <li id="hidden-<?php echo $button['type']; ?>" class="ui-state-highlight <?php echo $button['type']; ?>" data-enable="psloginfree_<?php echo $button['type']; ?>_enable">
+                    <span class="soc-li-icon"></span>
+                    <span class="soc-li-text"><?php echo $this->escapeHtml(ucfirst($button['type'])); ?></span>
+	            </li>
+	        <?php } ?>
+	        </ul>
+		</div>
+    </td>
+</tr>

@@ -1,0 +1,16 @@
+<div class="pslogin-addedoverlay"></div>
+<div class="pslogin-pop-up-form">
+    <div id="pslogin-pop-up-bg" class="pslogin-cf fadeInDownBig">
+        <div class="pslogin-share">
+            <h2 data-bind="html: title"></h2>
+            <a href="#" class="prpop-close-btn" data-bind="click: hidePopup">&#10005;</a>
+            <p data-bind="html: description"></p>
+            <div class="button-top"></div>
+            <p class="ta-center" data-bind="foreach: buttons">
+                <a data-bind="attr: { href: $data.href, title: $data.title }" target="_blank" >
+                    <img data-bind="attr: { src: $data.image, alt: $data.title }" border="0" />
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
