@@ -1,0 +1,30 @@
+.account-dashboard {
+
+    &__title {
+        font-family: league_gothic, 'HlvtcNeueLTCndnsd', serif;
+        font-size: 30px;
+        font-weight: normal;
+        color: #515151;
+        width: 100%;
+        border-bottom: 1px solid #e9e8e8;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: $black-light;
+        font-size: 16px;
+        font-weight: 500;
+
+        &:hover {
+            color: $grey-dark;
+        }
+    }
+
+    &__content {
+        font-size: 16px;
+    }
+
+    &__address {
+        margin: 0 0 20px 0;
+    }
+}

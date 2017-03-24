@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Address $block */
+?>
+<div class="block block-dashboard-addresses">
+    <h2 class="account-dashboard__title block-title">
+        <?php /* @escapeNotVerified */ echo __('Address Book') ?>
+    </h2>
+    <div class="block-content">
+        <a class="account-dashboard__link action edit" href="<?php /* @escapeNotVerified */ echo $block->getAddressBookUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Manage Addresses') ?></span></a>
+    </div>
+    <div class="block-content">
+        <div class="box box-billing-address">
+            <h2 class="account-dashboard__title box-title"><?php /* @escapeNotVerified */ echo __('Default Billing Address') ?></h2>
+            <div class="account-dashboard__content box-content">
+                <address class="account-dashboard__address">
+                    <?php echo $block->getPrimaryBillingAddressHtml() ?>
+                </address>
+            </div>
+            <div class="box-actions">
+                <a class="account-dashboard__link action edit" href="<?php /* @escapeNotVerified */ echo $block->getPrimaryBillingAddressEditUrl() ?>" data-ui-id="default-billing-edit-link"><span><?php /* @escapeNotVerified */ echo __('Edit Address') ?></span></a>
+            </div>
+        </div>
+        <div class="box box-shipping-address">
+            <h2 class="account-dashboard__title box-title"><?php /* @escapeNotVerified */ echo __('Default Shipping Address') ?></h2>
+            <div class="account-dashboard__content box-content">
+                <address class="account-dashboard__address">
+                    <?php echo $block->getPrimaryShippingAddressHtml() ?>
+                </address>
+            </div>
+            <div class="box-actions">
+                <a class="account-dashboard__link action edit" href="<?php /* @escapeNotVerified */ echo $block->getPrimaryShippingAddressEditUrl() ?>" data-ui-id="default-shipping-edit-link"><span><?php /* @escapeNotVerified */ echo __('Edit Address') ?></span></a>
+            </div>
+        </div>
+    </div>
+</div>

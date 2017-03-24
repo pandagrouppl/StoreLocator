@@ -1,0 +1,45 @@
+@mixin wrap-form($width: 220px) {
+    margin: auto;
+    max-width: 220px;
+    width: 100%;
+}
+
+.account-form {
+
+    fieldset {
+        border: 0;
+        padding: 0;
+    }
+
+    &__inputs {
+        @include wrap-form();
+
+        label {
+            margin: 5px 0;
+            display: block;
+            color: #515151;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    &__checkboxes {
+        @include wrap-form();
+        margin: 5px auto;
+    }
+
+    &__legend {
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 1px solid #e9e8e8;
+        color: #515151;
+        text-align: center;
+        font-size: 30px;
+        font-family: league_gothic, 'HlvtcNeueLTCndnsd', serif;
+    }
+}

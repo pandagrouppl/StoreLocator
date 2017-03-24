@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Info $block */
+?>
+<div class="block block-dashboard-info">
+    <h2 class="account-dashboard__title block-title"><?php /* @escapeNotVerified */ echo __('Account Information') ?></h2>
+    <div class="block-content">
+        <div class="box box-information">
+            <h2 class="account-dashboard__title box-title"><?php /* @escapeNotVerified */ echo __('Contact Information') ?></h2>
+            <div class="box-actions">
+                <a class="account-dashboard__link action edit" href="<?php /* @escapeNotVerified */ echo $block->getUrl('customer/account/edit') ?>">
+                    <span><?php /* @escapeNotVerified */ echo __('Edit') ?></span>
+                </a>
+            </div>
+            <div class="account-dashboard__content box-content">
+                <p>
+                    <?php echo $block->escapeHtml($block->getName()) ?><br>
+                    <?php echo $block->escapeHtml($block->getCustomer()->getEmail()) ?><br>
+                </p>
+            </div>
+            <div class="box-actions">
+                <a href="<?php /* @escapeNotVerified */ echo $block->getChangePasswordUrl() ?>" class="account-dashboard__link action change-password">
+                    <?php /* @escapeNotVerified */ echo __('Change Password') ?>
+                </a>
+            </div>
+        </div>
+        <?php if ($block->isNewsletterEnabled()): ?>
+            <div class="box box-newsletter">
+                <h2 class="account-dashboard__title box-title"><?php /* @escapeNotVerified */ echo __('Newsletters') ?></h2>
+                <div class="account-dashboard__content box-content">
+                    <p>
+                        <?php if ($block->getIsSubscribed()): ?>
+                            <?php /* @escapeNotVerified */ echo __('You subscribe to "General Subscription".') ?>
+                        <?php else: ?>
+                            <?php /* @escapeNotVerified */ echo __('You don\'t subscribe to our newsletter.') ?>
+                        <?php endif; ?>
+                    </p>
+                    <?php /* Extensions placeholder */ ?>
+                    <?php echo $block->getChildHtml('customer.account.dashboard.info.extra')?>
+                </div>
+                <div class="box-actions">
+                    <a class="account-dashboard__link action edit" href="<?php /* @escapeNotVerified */ echo $block->getUrl('newsletter/manage') ?>"><span><?php /* @escapeNotVerified */ echo __('Edit') ?></span></a>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
