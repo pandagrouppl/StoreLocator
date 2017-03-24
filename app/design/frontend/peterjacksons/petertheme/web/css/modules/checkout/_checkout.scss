@@ -14,6 +14,34 @@
     a:hover {
         color: #999;
     }
+
+    &__step-wrapper {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 27px 0;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 30px;
+
+    }
+
+    &__step-number {
+        background-color: #000;
+        color: #fff;
+        border-radius: 100%;
+        width: 38px;
+        height: 38px;
+        margin: 0 20px 0 0;
+        font-size: 22px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+    }
+
+    &__step-title {
+        font-size:  25px;
+    }
+
     &__input-wrapper {
         @include form-element-wrapper();
     }
