@@ -47,17 +47,33 @@
     margin: 5px 0;
 }
 
-@mixin blue-button-plus($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
-    color: $white;
-    background: #0b53c9;
+@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
     padding: $pd;
     text-transform: uppercase;
     font-size: $fontsize;
     font-weight: bold;
-    border: 0;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     margin: $mg;
+}
+
+@mixin button-grey($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
+    @include button($pd, $mg, $fontsize);
+    background: $white;
+    border: 2px solid $grey-dark;
+    color: $grey-dark;
+
+    &:hover {
+        background: $grey-dark;
+        color: $white;
+    }
+}
+
+@mixin blue-button-plus($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
+    @include button($pd, $mg, $fontsize);
+    color: $white;
+    background: #0b53c9;
+    border: 0;
 
     &:hover {
         background: #666;

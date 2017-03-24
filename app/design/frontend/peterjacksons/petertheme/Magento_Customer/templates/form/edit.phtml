@@ -80,11 +80,11 @@
         <?php echo $block->getChildHtml('form_additional_info'); ?>
     </fieldset>
     <div class="actions-toolbar">
-        <div class="primary">
-            <button type="submit" class="action save primary" title="<?php /* @escapeNotVerified */ echo __('Save') ?>"><span><?php /* @escapeNotVerified */ echo __('Save') ?></span></button>
-        </div>
         <div class="secondary">
-            <a class="action back" href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>"><span><?php /* @escapeNotVerified */ echo __('Go back') ?></span></a>
+            <a class="account-form__back action back" href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>"><span>« <?php /* @escapeNotVerified */ echo __('Back') ?></span></a>
+        </div>
+        <div class="primary">
+            <button type="submit" class="account-form__button action save primary" title="<?php /* @escapeNotVerified */ echo __('Save') ?>"><span><?php /* @escapeNotVerified */ echo __('Save') ?></span></button>
         </div>
     </div>
 </form>
