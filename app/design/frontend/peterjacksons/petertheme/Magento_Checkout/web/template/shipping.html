@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<li id="shipping" class="checkout-shipping-address checkout__shipping-address" data-bind="fadeVisible: visible()">
+<li id="shipping" class="checkout-shipping-address checkout__shipping-address" qdata-bind="fadeVisible: visible()">
     <div class="checkout__step-wrapper">
         <div class="step-title checkout__step-number">1</div>
         <div class="step-title checkout__step-title" data-bind="i18n: 'Shipping Address'" data-role="title"></div>
@@ -53,7 +53,7 @@
 <!--Shipping method template-->
 <li id="opc-shipping_method"
     class="checkout-shipping-method checkout__shipping-method"
-    data-bind="fadeVisible: visible(), blockLoader: isLoading"
+    qdata-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
         <div class="checkout__step-wrapper">
@@ -113,7 +113,7 @@
                             </div>
                             </div>
                             <!-- ko if:  method.error_message -->
-                            <div class="row row-error checkout__shipping-error">
+                            <div class="row row-error checkout__form-error">
                                 <div class="col col-error" colspan="4">
                                     <div class="message error">
                                         <div data-bind="text: method.error_message"></div>
