@@ -3678,7 +3678,7 @@ here,here,module,Magento_Paypal
 Status:,Status:,module,Magento_Paypal
 Created:,Created:,module,Magento_Paypal
 Updated:,Updated:,module,Magento_Paypal
-"Payment Method:","Payment Method:",module,Magento_Paypal
+"Payment Method:","Payment Method",module,Magento_Paypal
 "Order #","Order #",module,Magento_Paypal
 Date,Date,module,Magento_Paypal
 "Ship To","Ship To",module,Magento_Paypal
@@ -4682,7 +4682,7 @@ Authorization,Authorization,module,Magento_Sales
 "Order Date: ","Order Date: ",module,Magento_Sales
 "Sold to:","Sold to:",module,Magento_Sales
 "Ship to:","Ship to:",module,Magento_Sales
-"Payment Method:","Payment Method:",module,Magento_Sales
+"Payment Method:","Payment Method",module,Magento_Sales
 "Shipping Method:","Shipping Method:",module,Magento_Sales
 "Total Shipping Charges","Total Shipping Charges",module,Magento_Sales
 Title,Title,module,Magento_Sales
@@ -6197,10 +6197,10 @@ Total:,Total:,module,Magento_Checkout
 "Billing Address:","Billing Address:",module,Magento_Checkout
 "Shipping Address:","Shipping Address:",module,Magento_Checkout
 "Shipping Method:","Shipping Method:",module,Magento_Checkout
-"Payment Method:","Payment Method:",module,Magento_Checkout
+"Payment Method:","Payment Method",module,Magento_Checkout
 "Date & Time:","Date & Time:",module,Magento_Checkout
 "Sign In","Sign In",module,Magento_Checkout
-"ALREADY REGISTERED?","ALREADY REGISTERED?",module,Magento_Checkout
+"ALREADY REGISTERED?","ALREADY REGISTERED",module,Magento_Checkout
 "CLICK HERE","CLICK HERE",module,Magento_Checkout
 "TO LOGIN.","TO LOGIN.",module,Magento_Checkout
 "Email Address","Email Address",module,Magento_Checkout

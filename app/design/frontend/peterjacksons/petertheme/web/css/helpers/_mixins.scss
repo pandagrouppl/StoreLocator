@@ -47,7 +47,7 @@
     margin: 5px 0;
 }
 
-@mixin blue-button-plus($pd, $mg, $fontsize) {
+@mixin blue-button-plus($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
     color: $white;
     background: #0b53c9;
     padding: $pd;

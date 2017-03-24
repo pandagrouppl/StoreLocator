@@ -11,9 +11,38 @@
         text-decoration: none;
         text-transform: uppercase;
     }
+
     a:hover {
         color: #999;
     }
+
+    &__step-wrapper {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 27px 0;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 30px;
+
+    }
+
+    &__step-number {
+        background-color: #000;
+        color: #fff;
+        border-radius: 100%;
+        width: 38px;
+        height: 38px;
+        margin: 0 20px 0 0;
+        font-size: 22px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+    }
+
+    &__step-title {
+        font-size:  25px;
+    }
+
     &__input-wrapper {
         @include form-element-wrapper();
     }
@@ -52,4 +81,41 @@
 
         }
     }
+
+    &__shipping {
+
+        &-options-wrapper {
+            color: #555;
+        }
+
+        &-option {
+            margin-bottom: 35px;
+        }
+
+        &-name {
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        &-select {
+            display: flex;
+            align-items: center;
+        }
+
+        &-radio {
+            margin-right: 15px;
+        }
+
+        &-price {
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        &-delivery {
+            font-style: italic;
+        }
+    }
+
 }
