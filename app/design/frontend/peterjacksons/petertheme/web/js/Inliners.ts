@@ -6,6 +6,7 @@ export class Inliners {
         this._showSearch();
         this._preventSpinnerClick();
         this._toggleFilters();
+        this._toggleResponsiveMenu();
     }
 
     private _showSearch(): void {
@@ -29,6 +30,12 @@ export class Inliners {
     private _toggleFilters(): void {
         $('.layered-nav__button').click(() => {
             $('.layered-nav').toggle();
+        });
+    }
+
+    private _toggleResponsiveMenu(): void {
+        $('.header-left__menu').click(() => {
+            $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
         });
     }
  }

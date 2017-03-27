@@ -15,6 +15,10 @@
     &__navigation {
         z-index: 100;
 
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
+
         > ul {
             display: flex;
         }
