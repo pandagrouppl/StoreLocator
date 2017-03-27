@@ -64,7 +64,7 @@
     }
 
     &__button {
-        @include blue-button();
+        @include button-blue(20px 50px, 10px 0, 17px)
     }
 
     &__tabs {

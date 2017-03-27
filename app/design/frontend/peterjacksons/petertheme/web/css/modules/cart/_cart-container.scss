@@ -4,16 +4,7 @@
         text-align: right;
 
         > button {
-            margin: 0;
-            background-color: #0b53c9;
-            color: #fff;
-            border: 1px solid #0b53c9;
-            padding: 10px 25px;
-            width: 250px;
-            font-size: 15px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            cursor: pointer;
+            @include button-blue(10px 25px, 5px, 15px, none)
         }
     }
 

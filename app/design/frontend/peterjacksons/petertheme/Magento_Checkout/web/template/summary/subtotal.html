@@ -1,0 +1,16 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<li class="checkout-table__item">
+    <div class="mark checkout-table__name" data-bind="text: title"></div>
+    <div class="amount checkout-table__price">
+        <span class="price" data-bind ="text: getValue(), attr:{'data-label': title}"></span>
+        <!-- ko foreach: elems() -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+</li>
