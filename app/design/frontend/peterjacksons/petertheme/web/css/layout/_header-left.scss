@@ -1,9 +1,49 @@
 .header-left {
     display: flex;
 
+    &__menu {
+        display: inline-block;
+        position: relative;
+        padding: 20px;
+        margin: -5px 0 0 -5px;
+    }
+
+    &__menu-bar {
+        $root: &;
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: #8d8b8b;
+        top: 14px;
+        left: 5px;
+        transition: all 500ms ease;
+        cursor: pointer;
+
+        &--top {
+
+            &#{$root}--open {
+                top: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &--bottom {
+            top: 24px;
+
+            &#{$root}--open {
+                top: 20px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
     &__book {
         margin: 0 10px;
         position: relative;
+
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
 
         i {
             @include sprite(header-book);
@@ -26,7 +66,6 @@
         z-index: 999;
         background: $white;
         top: 40px;
-
 
         a {
             color: $black;
@@ -63,6 +102,10 @@
 
     &__account {
         margin: 0 10px;
+
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
 
         i {
             @include sprite(header-account);
