@@ -1,0 +1,91 @@
+@mixin wrap-form($width: 280px) {
+    margin: auto;
+    max-width: $width;
+    width: 100%;
+}
+
+.account-form {
+
+    fieldset {
+        border: 0;
+        padding: 0;
+    }
+
+    &__inputs {
+        @include wrap-form();
+
+        label {
+            margin: 5px 0;
+            display: block;
+            color: #515151;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        input {
+            @include form-element();
+        }
+
+        select {
+            @include form-element();
+            display: block;
+        }
+    }
+
+    &__select {
+        position: relative;
+    }
+
+    &__select--arrow {
+        @include form-select-arrow();
+    }
+
+    &__checkboxes {
+        @include wrap-form();
+        margin: 5px auto;
+
+
+        &--bold {
+            color: #515151;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__legend {
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 1px solid #e9e8e8;
+        color: #515151;
+        text-align: center;
+        font-size: 30px;
+        font-family: league_gothic, 'HlvtcNeueLTCndnsd', serif;
+    }
+
+    &__back {
+        @include wrap-form(360px);
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $black-light;
+        display: block;
+        margin: 20px auto;
+    }
+
+    &__button {
+        @include button-grey(20px);
+        @include wrap-form(360px);
+        display: block;
+        cursor: pointer;
+    }
+
+    .password-strength-meter {
+        margin: 5px 0;
+    }
+}

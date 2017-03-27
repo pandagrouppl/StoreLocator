@@ -1,0 +1,33 @@
+.account-nav {
+    width: 100%;
+    background: $grey;
+    padding: 15px 100px;
+    box-sizing: border-box;
+    margin: 20px 0;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav.item {
+        margin: 5px 10px;
+        text-transform: uppercase;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 14px;
+
+        a {
+            color: $black;
+        }
+
+        &.current, &:hover {
+            color: $grey-dark;
+
+            a {
+                color: $grey-dark;
+            }
+        }
+    }
+}
