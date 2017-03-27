@@ -4,24 +4,22 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="block items-in-cart checkout-cart">
+<div class="block items-in-cart checkout-table">
     <div class="content minicart-items" data-role="content">
-            <ol class="minicart-items checkout-cart__items">
-                <li class="checkout-cart__header-row">
-                    <div class="checkout-cart__details-wrapper">
-                        <div class="checkout-cart__name-and-attrs">
+            <ol class="minicart-items checkout-table__items">
+                <li class="product-item checkout-table__item product-item checkout-table__item--header">
+                        <div class="checkout-table__name-and-attrs">
                             <span><!-- ko i18n: 'Product' --><!-- /ko --></span>
                         </div>
-                        <div class="checkout-cart__qty">
+                        <div class="checkout-table__qty">
                             <span><!-- ko i18n: 'Qty' --><!-- /ko --></span>
                         </div>
-                        <div class="checkout-cart__price">
+                        <div class="checkout-table__price">
                             <span><!-- ko i18n: 'Price' --><!-- /ko --></span>
                         </div>
-                    </div>
                 </li>
                 <!-- ko foreach: getItems() -->
-                <li class="product-item checkout-cart__item">
+                <li class="product-item checkout-table__item">
                         <!-- ko foreach: $parent.elems() -->
                         <!-- ko template: getTemplate() --><!-- /ko -->
                         <!-- /ko -->

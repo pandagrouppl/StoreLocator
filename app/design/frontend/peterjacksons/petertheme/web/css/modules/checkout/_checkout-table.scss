@@ -1,0 +1,64 @@
+.checkout-table {
+    font-size: 14px;
+
+    &__item {
+        margin: 10px 0;
+        display: flex;
+
+        &--header {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            text-transform: uppercase;
+        }
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+
+    &__item:last-child {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    &__details-wrapper {
+
+    }
+
+    &__name-and-attrs {
+        flex-grow: 1;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        flex-grow: 1;
+    }
+
+    &__attrs {
+        font-size: 12px;
+
+        dl {
+            display: flex;
+            margin: 5px 0;
+        }
+
+        dd {
+            margin: 0 5px;
+        }
+    }
+
+    &__qty {
+        flex-basis: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__price {
+        flex-basis: 35%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+
+}
