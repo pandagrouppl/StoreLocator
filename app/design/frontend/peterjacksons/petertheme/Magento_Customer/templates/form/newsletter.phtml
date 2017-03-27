@@ -12,7 +12,7 @@
         <fieldset class="fieldset">
             <?php echo $block->getBlockHtml('formkey')?>
             <legend class="account-form__legend legend"><span><?php /* @escapeNotVerified */ echo __('Subscription option') ?></span></legend><br>
-            <div class="account-form__checkboxes field choice">
+            <div class="account-form__checkboxes account-form__checkboxes--bold field choice">
                 <input type="checkbox" name="is_subscribed" id="subscription" value="1" title="<?php /* @escapeNotVerified */ echo __('General Subscription') ?>"<?php if ($block->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox">
                 <label for="subscription" class="label"><span><?php /* @escapeNotVerified */ echo __('General Subscription') ?></span></label>
             </div>

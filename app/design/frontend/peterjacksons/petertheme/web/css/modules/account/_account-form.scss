@@ -44,6 +44,18 @@
     &__checkboxes {
         @include wrap-form();
         margin: 5px auto;
+
+
+        &--bold {
+            color: #515151;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+
+            input {
+                margin-right: 10px;
+            }
+        }
     }
 
     &__legend {
