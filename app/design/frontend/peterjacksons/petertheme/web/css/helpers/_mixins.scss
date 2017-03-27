@@ -3,23 +3,6 @@
     margin: auto;
 }
 
-@mixin blue-button() {
-    min-width: 100%;
-    color: $white;
-    background: #0b53c9;
-    padding: 20px 50px;
-    text-transform: uppercase;
-    font-size: 17px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    margin: 10px 0;
-
-    &:hover {
-        background: #666;
-    }
-}
 
 @mixin form-element() {
     height: 40px;
@@ -47,18 +30,42 @@
     margin: 5px 0;
 }
 
-@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
+@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     padding: $pd;
     text-transform: uppercase;
     font-size: $fontsize;
-    font-weight: bold;
+    font-weight: $font-weight;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     margin: $mg;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: #666;
+    }
 }
 
-@mixin button-grey($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
-    @include button($pd, $mg, $fontsize);
+//@mixin blue-button() {
+//    min-width: 100%;
+//    color: $white;
+//    background: #0b53c9;
+//    padding: 20px 50px;
+//    text-transform: uppercase;
+//    font-size: 17px;
+//    font-weight: bold;
+//    border: 0;
+//    border-radius: 5px;
+//    transition: all 0.3s ease-in-out;
+//    margin: 10px 0;
+//
+//    &:hover {
+//        background: #666;
+//    }
+//}
+
+@mixin button-grey($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
     background: $white;
     border: 2px solid $grey-dark;
     color: $grey-dark;
@@ -69,13 +76,9 @@
     }
 }
 
-@mixin blue-button-plus($pd: 10px 20px, $mg: 5px, $fontsize: 13px) {
-    @include button($pd, $mg, $fontsize);
-    color: $white;
+@mixin button-blue($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
     background: #0b53c9;
+    color: $white;
     border: 0;
-
-    &:hover {
-        background: #666;
-    }
 }

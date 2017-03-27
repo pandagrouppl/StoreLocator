@@ -79,7 +79,7 @@
     &__button {
 
         &--login {
-            @include blue-button-plus(10px 20px, 5px, 13px);
+            @include button(10px 20px, 5px, 13px);
 
         }
     }
@@ -118,6 +118,10 @@
         &-delivery {
             font-style: italic;
         }
+    }
+
+    &__discount-input {
+        @include form-element();
     }
 
 }
