@@ -30,22 +30,6 @@
     margin: 5px 0;
 }
 
-@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
-    padding: $pd;
-    text-transform: uppercase;
-    font-size: $fontsize;
-    font-weight: $font-weight;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    margin: $mg;
-    letter-spacing: 0;
-    cursor: pointer;
-
-    &:hover {
-        background: #666;
-    }
-}
-
 //@mixin blue-button() {
 //    min-width: 100%;
 //    color: $white;
@@ -64,6 +48,22 @@
 //    }
 //}
 
+@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    padding: $pd;
+    text-transform: uppercase;
+    font-size: $fontsize;
+    font-weight: $font-weight;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin: $mg;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: #666;
+    }
+}
+
 @mixin button-grey($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     @include button($pd, $mg, $fontsize, $font-weight);
     background: $white;
@@ -79,6 +79,19 @@
 @mixin button-blue($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     @include button($pd, $mg, $fontsize, $font-weight);
     background: #0b53c9;
-    color: $white;
     border: 0;
+    color: $white;
 }
+
+@mixin button-custom($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold, $bg: #0b53c9, $color: white, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: $bg;
+    color: $color;
+    border: $border;
+
+    &:hover {
+        background: $bghov;
+        color: $colorhov;
+    }
+}
+

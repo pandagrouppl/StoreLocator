@@ -120,8 +120,24 @@
         }
     }
 
+
+    &__discount {
+        display: flex;
+    }
+
     &__discount-input {
         @include form-element();
+    }
+
+    &__discount-button {
+
+        &--apply {
+            @include button-custom(10px 30px, 3px, 16px, bold, white, #666, white, black)
+        }
+
+        &--cancel {
+
+        }
     }
 
 }
