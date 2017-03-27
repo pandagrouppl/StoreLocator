@@ -1,3 +1,5 @@
 {
-  "proxy": "peterjacksons.dev"
+  "socket": {
+    "domain": "localhost:3000"
+  }
 }
