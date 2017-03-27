@@ -14,20 +14,26 @@ $retina-sprite: (
 
 $sprite-icon: (
     brownline: (
-        x: -890px,
-        y: -125px,
+        x: -835px,
+        y: -196px,
         width: 25px,
         height: 24px
     ),
     brownstar: (
         x: -957px,
-        y: -55px,
+        y: -126px,
         width: 27px,
         height: 24px
     ),
-    filter-button: (
+    credit-cards: (
         x: -660px,
         y: -55px,
+        width: 107px,
+        height: 41px
+    ),
+    filter-button: (
+        x: -660px,
+        y: -126px,
         width: 25px,
         height: 110px
     ),
@@ -38,32 +44,32 @@ $sprite-icon: (
         height: 790px
     ),
     header-account: (
-        x: -835px,
-        y: -125px,
+        x: -890px,
+        y: -196px,
         width: 25px,
         height: 24px
     ),
     header-book: (
         x: -775px,
-        y: -125px,
+        y: -196px,
         width: 30px,
         height: 24px
     ),
     header-case: (
         x: -895px,
-        y: -55px,
+        y: -126px,
         width: 32px,
         height: 26px
     ),
     header-star: (
         x: -715px,
-        y: -125px,
+        y: -196px,
         width: 30px,
         height: 26px
     ),
     header-zoom: (
         x: -835px,
-        y: -55px,
+        y: -126px,
         width: 30px,
         height: 29px
     ),
@@ -73,27 +79,33 @@ $sprite-icon: (
         width: 325px,
         height: 25px
     ),
+    paypal-logo: (
+        x: -797px,
+        y: -55px,
+        width: 93px,
+        height: 22px
+    ),
     select-arrw: (
         x: -775px,
-        y: -55px,
+        y: -126px,
         width: 30px,
         height: 38px
     ),
     selectarrcheckout: (
         x: -715px,
-        y: -55px,
+        y: -126px,
         width: 30px,
         height: 40px
     ),
     wishlist-icon-dark: (
-        x: -945px,
-        y: -125px,
+        x: -920px,
+        y: -55px,
         width: 22px,
         height: 21px
     ),
     wishlist-icon: (
-        x: -660px,
-        y: -195px,
+        x: -945px,
+        y: -196px,
         width: 22px,
         height: 21px
     ),
