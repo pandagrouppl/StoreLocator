@@ -16,10 +16,10 @@
 ?>
 <?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
 <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
-
+<?php /* @escapeNotVerified */ echo $block->getChildHtml('respTopSearch'); ?>
 <nav class="header-responsive__navigation">
     <ul>
         <?php /* @escapeNotVerified */ echo $_menu; ?>
-        <?php /* @escapeNotVerified */ echo $block->getChildHtml(); ?>
+        <?php /* @escapeNotVerified */ echo $block->getChildHtml('catalogTopResp'); ?>
     </ul>
 </nav>

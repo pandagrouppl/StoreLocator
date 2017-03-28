@@ -1,8 +1,12 @@
 .header-responsive {
     border-bottom: 1px solid $grey-dark;
+    position: absolute;
+    width: 100%;
+    background: white;
+    display: none;
 
     @media all and (min-width: $bp-header) {
-        display: none;
+        display: none !important;
     }
 
     li.level0 {
@@ -42,6 +46,9 @@
     }
 
     &__toggler {
+        position: relative;
+        width: 30px;
+        height: 30px;
 
         &:after {
             content: '+';
@@ -54,8 +61,24 @@
         &--open {
 
             &:after {
-                content: '-';
+                content: '';
+                position: absolute;
+                top: 15px;
+                width: 50%;
+                height: 2px;
+                left: 1px;
+                background: #8d8b8b;
             }
         }
+    }
+
+    &__search {
+        width: 100%;
+        box-sizing: border-box;
+        background: #f9f9f9;
+        font-weight: 300;
+        font-size: 26px;
+        padding: 10px 10px 10px 40px;
+        border: 0;
     }
 }

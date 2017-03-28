@@ -5,6 +5,10 @@
     border-bottom: 1px solid $grey;
     padding: 0 30px;
 
+    @media all and (max-width: $bp-small) {
+        padding: 5px 10px;
+    }
+
     &-message {
         background: #464646;
         padding: 10px;

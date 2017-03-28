@@ -13,5 +13,7 @@
 <?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt(); ?>
     <a class="header-middle__logo" href="<?php echo $block->getUrl(''); ?>"
         title="<?php /* @escapeNotVerified */ echo $storeName ?>">
-        <figure></figure>
+        <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+             alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+        />
     </a>

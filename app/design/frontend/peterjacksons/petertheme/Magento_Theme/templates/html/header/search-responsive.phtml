@@ -1,0 +1,19 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+?>
+
+<form id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+        <input id="search-responsive"
+               type="text"
+               name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+               value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+               placeholder="<?php /* @escapeNotVerified */ echo __('Search:'); ?>"
+               class="input-text header-responsive__search"
+               maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+               role="combobox"
+               aria-haspopup="false"
+               aria-autocomplete="both"
+               autocomplete="off"/>
+</form>

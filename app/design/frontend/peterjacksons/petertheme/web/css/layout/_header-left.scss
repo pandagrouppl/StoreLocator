@@ -6,6 +6,10 @@
         position: relative;
         padding: 20px;
         margin: -5px 0 0 -5px;
+
+        @media all and (max-width: $bp-small) {
+            transform: scale(0.8, 0.8);
+        }
     }
 
     &__menu-bar {
@@ -18,6 +22,10 @@
         left: 5px;
         transition: all 500ms ease;
         cursor: pointer;
+
+        @media all and (min-width: $bp-header) {
+            display: none;
+        }
 
         &--top {
 

@@ -6,9 +6,16 @@
     &__logo {
         display: block;
         margin: 20px 0;
+        max-width: 325px;
+        width: 100%;
 
-        figure {
-            @include sprite(logo-black);
+        @media all and (max-width: $bp-small) {
+            max-width: 175px;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
         }
     }
 
