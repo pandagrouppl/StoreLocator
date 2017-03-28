@@ -129,10 +129,10 @@ $sprite-icon: (
     all and (        min-device-pixel-ratio: 2),
     all and (                min-resolution: 192dpi),
     all and (                min-resolution: 2dppx) {
-        //background-image: url(map-get($retina-sprite, 'image'));
-        //background-repeat: no-repeat;
-        //@if($bg-size == true) {
-        //    background-size: map-get($sprite, 'width') map-get($sprite, 'height');
-        //}
+        background-image: url(map-get($retina-sprite, 'image'));
+        background-repeat: no-repeat;
+        @if($bg-size == true) {
+            background-size: map-get($sprite, 'width') map-get($sprite, 'height');
+        }
     }
 }

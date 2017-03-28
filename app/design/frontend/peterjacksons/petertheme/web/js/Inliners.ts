@@ -7,6 +7,7 @@ export class Inliners {
         this._preventSpinnerClick();
         this._toggleFilters();
         this._toggleResponsiveMenu();
+        this._toggleSubmenuResponsive()
     }
 
     private _showSearch(): void {
@@ -36,6 +37,14 @@ export class Inliners {
     private _toggleResponsiveMenu(): void {
         $('.header-left__menu').click(() => {
             $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
+            $('.header-responsive__navigation').slideToggle();
+        });
+    }
+
+    private _toggleSubmenuResponsive(): void {
+        $('.header-responsive__toggler').click(function() {
+            $(this).toggleClass('header-responsive__toggler--open');
+            console.log($(this).parent());
         });
     }
  }
