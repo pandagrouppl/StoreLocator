@@ -7,7 +7,8 @@ export class Inliners {
         this._preventSpinnerClick();
         this._toggleFilters();
         this._toggleResponsiveMenu();
-        this._toggleSubmenuResponsive()
+        this._toggleSubmenuResponsive();
+        this._toggleSizeChart();
     }
 
     private _showSearch(): void {
@@ -45,6 +46,12 @@ export class Inliners {
         $('.header-responsive__toggler').click(function() {
             $(this).toggleClass('header-responsive__toggler--open');
             $(this).parent().next().slideToggle();
+        });
+    }
+
+    private _toggleSizeChart(): void {
+        $('.product-content__size-chart').click(() => {
+            $('#size-chart').toggle();
         });
     }
  }

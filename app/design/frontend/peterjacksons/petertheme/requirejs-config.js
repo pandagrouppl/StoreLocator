@@ -3,7 +3,7 @@ var config = {
         "web/js/app"
     ],
     bundles: {
-        "web/js/app": [ "main" ]
+        "web/js/app": [ "main", "sizeChart" ]
     },
     "map": {
         "*": {

@@ -1,0 +1,45 @@
+.size-chart {
+    position: fixed;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 922px;
+    height: 550px;
+    overflow-y: auto;
+    z-index: 11;
+    padding: 20px;
+
+    &__tabs {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 0;
+
+        a {
+            padding: 0 20px;
+            font-size: 20px;
+            border-right: 1px solid black;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    &__section {
+        background: #f3f3f3;
+        border: 1px solid #dadada;
+        padding: 0 35px 20px;
+    }
+
+    &__title {
+        font-family: league_gothic;
+        text-transform: uppercase;
+        font-size: 42px;
+    }
+
+    .size-wrap {
+        width: 60%;
+    }
+}
