@@ -54,6 +54,7 @@
         color: #928383;
         font-weight: 500;
         margin-left: 10px;
+        cursor: pointer;
 
         &:before {
             @include sprite(brownline);
@@ -64,7 +65,8 @@
     }
 
     &__button {
-        @include button-blue(20px 50px, 10px 0, 17px)
+        @include button-blue(20px 50px, 10px 0, 17px);
+        width: 100%;
     }
 
     &__tabs {
