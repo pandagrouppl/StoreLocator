@@ -4,7 +4,6 @@ export class Inliners {
 
     constructor() {
         this._showSearch();
-        this._hideShowPaymentsButton();
         this._preventSpinnerClick();
         this._toggleFilters();
         this._toggleResponsiveMenu();
@@ -21,13 +20,6 @@ export class Inliners {
         $('.search-overlay__form').click((event) => {
             event.stopPropagation();
         });
-    }
-
-    private _hideShowPaymentsButton(): void {
-        if ($('.checkout__payments').is(':visible')) {
-            console.log('positive!');
-            $('.checkout__button--calculate').hide();
-        }
     }
 
     private _preventSpinnerClick(): void {
