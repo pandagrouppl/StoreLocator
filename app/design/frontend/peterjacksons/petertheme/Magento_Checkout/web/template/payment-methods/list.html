@@ -1,0 +1,22 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ -->
+<div class="checkout__step-wrapper">
+    <div class="step-title checkout__step-number">4</div>
+    <div class="step-title checkout__step-title" data-bind="i18n: 'Payment Methods'" data-role="title"></div>
+</div>
+<div class="checkout__payment-button-placeholder"></div>
+<div if="isPaymentMethodsAvailable()"
+     class="items payment-methods checkout__payments">
+    <div repeat="foreach: paymentGroupsList, item: '$group'"
+         class="payment-group">
+        <each args="data: getRegion($group().displayArea), as: 'method'" render=""/>
+    </div>
+</div>
+<div ifnot="isPaymentMethodsAvailable()"
+     class="no-payments-block"
+     translate="'Choose shipping method to see payments'">
+</div>

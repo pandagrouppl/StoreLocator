@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<li id="shipping" class="checkout-shipping-address checkout__shipping-address" data-bind="fadeVisible: visible()">
+<li id="shipping" class="checkout-shipping-address checkout__shipping-address">
     <div class="checkout__step-wrapper">
         <div class="step-title checkout__step-number">1</div>
         <div class="step-title checkout__step-title" data-bind="i18n: 'Shipping Address'" data-role="title"></div>
@@ -53,7 +53,7 @@
 <!--Shipping method template-->
 <li id="opc-shipping_method"
     class="checkout-shipping-method checkout__shipping-method"
-    data-bind="fadeVisible: visible(), blockLoader: isLoading"
+    data-bind="blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
         <div class="checkout__step-wrapper">
@@ -143,8 +143,8 @@
                 <!-- /ko -->
                 <div class="actions-toolbar" id="shipping-method-buttons-container">
                     <div class="primary">
-                        <button data-role="opc-continue" type="submit" class="button action continue primary">
-                            <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                        <button data-role="opc-continue" type="submit" class="button action continue primary checkout__button--calculate">
+                            <span><!-- ko i18n: 'See available payments'--><!-- /ko --></span>
                         </button>
                     </div>
                 </div>

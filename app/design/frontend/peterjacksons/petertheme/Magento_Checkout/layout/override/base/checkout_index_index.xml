@@ -155,6 +155,7 @@
                                                                     </item>
                                                                     <item name="customer-email" xsi:type="array">
                                                                         <item name="component" xsi:type="string">Magento_Checkout/js/view/form/element/email</item>
+                                                                        <item name="tooltip" xsi:type="array"></item>
                                                                         <item name="sortOrder" xsi:type="string">3</item>
                                                                     </item>
                                                                     <item name="telephone" xsi:type="array">
@@ -254,44 +255,9 @@
                                                             <item name="beforeMethods" xsi:type="array">
                                                                 <item name="component" xsi:type="string">uiComponent</item>
                                                                 <item name="displayArea" xsi:type="string">beforeMethods</item>
+                                                                <item name="sortOrder" xsi:type="string">2</item>
                                                                 <item name="children" xsi:type="array">
                                                                     <!-- merge additional data before payment methods here -->
-                                                                </item>
-                                                                <item name="validation" xsi:type="array">
-                                                                    <item name="validate-select" xsi:type="string">true</item>
-                                                                </item>
-                                                                <!-- Value of region_id field is filtered by the value of county_id attribute -->
-                                                                <item name="filterBy" xsi:type="array">
-                                                                    <item name="target" xsi:type="string">${ $.provider }:${ $.parentScope }.country_id</item>
-                                                                    <item name="field" xsi:type="string">country_id</item>
-                                                                </item>
-                                                            </item>
-                                                            <item name="payments-list" xsi:type="array">
-                                                                <item name="component" xsi:type="string">Magento_Checkout/js/view/payment/list</item>
-                                                                <item name="displayArea" xsi:type="string">payment-methods-list</item>
-                                                                <item name="config" xsi:type="array">
-                                                                    <item name="deps" xsi:type="array">
-                                                                        <item name="0" xsi:type="string">checkout.steps.billing-step.payment.renders</item>
-                                                                        <item name="1" xsi:type="string">checkout.steps.billing-step.payment.additional-payment-validators</item>
-                                                                    </item>
-                                                                </item>
-                                                                <item name="children" xsi:type="array">
-                                                                    <item name="before-place-order" xsi:type="array">
-                                                                        <item name="component" xsi:type="string">uiComponent</item>
-                                                                        <item name="displayArea" xsi:type="string">before-place-order</item>
-                                                                        <item name="dataScope" xsi:type="string">before-place-order</item>
-                                                                        <item name="provider" xsi:type="string">checkoutProvider</item>
-                                                                        <item name="config" xsi:type="array">
-                                                                            <item name="template" xsi:type="string">Magento_Checkout/payment/before-place-order</item>
-                                                                        </item>
-                                                                    </item>
-                                                                </item>
-                                                            </item>
-                                                            <!-- merge your payment methods here -->
-                                                            <item name="afterMethods" xsi:type="array">
-                                                                <item name="component" xsi:type="string">uiComponent</item>
-                                                                <item name="displayArea" xsi:type="string">afterMethods</item>
-                                                                <item name="children" xsi:type="array">
                                                                     <item name="summary" xsi:type="array">
                                                                         <item name="component" xsi:type="string">Magento_Checkout/js/view/summary</item>
                                                                         <item name="sortOrder" xsi:type="string">0</item>
@@ -359,20 +325,43 @@
                                                                             </item>
                                                                         </item>
                                                                     </item>
-                                                                    <item name="shipping-information" xsi:type="array">
-                                                                        <item name="sortOrder" xsi:type="string">2</item>
-                                                                        <item name="component" xsi:type="string">Magento_Checkout/js/view/shipping-information</item>
+                                                                </item>
+                                                                <item name="validation" xsi:type="array">
+                                                                    <item name="validate-select" xsi:type="string">true</item>
+                                                                </item>
+                                                                <!-- Value of region_id field is filtered by the value of county_id attribute -->
+                                                                <item name="filterBy" xsi:type="array">
+                                                                    <item name="target" xsi:type="string">${ $.provider }:${ $.parentScope }.country_id</item>
+                                                                    <item name="field" xsi:type="string">country_id</item>
+                                                                </item>
+                                                            </item>
+                                                            <item name="payments-list" xsi:type="array">
+                                                                <item name="component" xsi:type="string">Magento_Checkout/js/view/payment/list</item>
+                                                                <item name="displayArea" xsi:type="string">payment-methods-list</item>
+                                                                <item name="config" xsi:type="array">
+                                                                    <item name="deps" xsi:type="array">
+                                                                        <item name="0" xsi:type="string">checkout.steps.billing-step.payment.renders</item>
+                                                                        <item name="1" xsi:type="string">checkout.steps.billing-step.payment.additional-payment-validators</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="children" xsi:type="array">
+                                                                    <item name="before-place-order" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">uiComponent</item>
+                                                                        <item name="displayArea" xsi:type="string">before-place-order</item>
+                                                                        <item name="dataScope" xsi:type="string">before-place-order</item>
+                                                                        <item name="provider" xsi:type="string">checkoutProvider</item>
                                                                         <item name="config" xsi:type="array">
-                                                                            <item name="deps" xsi:type="string">checkout.steps.shipping-step.shippingAddress</item>
-                                                                        </item>
-                                                                        <item name="displayArea" xsi:type="string">shipping-information</item>
-                                                                        <item name="children" xsi:type="array">
-                                                                            <item name="ship-to" xsi:type="array">
-                                                                                <item name="component" xsi:type="string">Magento_Checkout/js/view/shipping-information/list</item>
-                                                                                <item name="displayArea" xsi:type="string">ship-to</item>
-                                                                            </item>
+                                                                            <item name="template" xsi:type="string">Magento_Checkout/payment/before-place-order</item>
                                                                         </item>
                                                                     </item>
+                                                                </item>
+                                                            </item>
+                                                            <!-- merge your payment methods here -->
+                                                            <item name="afterMethods" xsi:type="array">
+                                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                                <item name="displayArea" xsi:type="string">afterMethods</item>
+                                                                <item name="children" xsi:type="array">
+
                                                                 </item>
                                                             </item>
                                                         </item>
