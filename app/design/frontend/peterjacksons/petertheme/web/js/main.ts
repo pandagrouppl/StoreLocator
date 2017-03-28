@@ -23,5 +23,13 @@ export = class Main {
             let inliners = new Inliners.Inliners();
         });
 
+        $(document).ajaxComplete(() => {
+            const but = $('.checkout__button--calculate');
+            //but.appendTo('.authentication-wrapper');
+            if ($('.checkout__payments').is(':visible')) {
+                but.hide();
+            }
+        });
+
     }
 }

@@ -125,6 +125,13 @@
         }
     }
 
+    &__payments {
+
+        button {
+            @include button-blue()
+        }
+    }
+
     &__discount-title {
         color: #000;
         display: block;
