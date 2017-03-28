@@ -79,7 +79,7 @@
     &__button {
 
         &--login {
-            @include button(10px 20px, 5px, 13px);
+            @include button-blue(10px 20px, 5px, 13px);
 
         }
     }
@@ -138,7 +138,7 @@
     &__discount-button {
 
         &--apply {
-            @include button-custom(10px 30px, 0, 16px, bold, white, #666, white, black)
+            @include button-custom(10px 30px, 0, 16px, bold, white, #666, white, black);
             margin-left: 5px;
         }
 
