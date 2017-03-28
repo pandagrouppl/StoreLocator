@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<li id="payment" role="presentation" class="checkout-payment-method" data-bind="fadeVisible: isVisible">
+<li id="payment" role="presentation" class="checkout-payment-method">
     <div id="checkout-step-payment"
          class="step-content"
          data-role="content"
@@ -21,13 +21,10 @@
                 <!-- ko foreach: getRegion('beforeMethods') -->
                     <!-- ko template: getTemplate() --><!-- /ko -->
                 <!-- /ko -->
-                <div id="checkout-payment-method-load" class="opc-payment" data-bind="visible: isPaymentMethodsAvailable">
+                <div id="checkout-payment-method-load" class="opc-payment">
                     <!-- ko foreach: getRegion('payment-methods-list') -->
                         <!-- ko template: getTemplate() --><!-- /ko -->
                     <!-- /ko -->
-                </div>
-                <div class="no-quotes-block" data-bind="visible: isPaymentMethodsAvailable() == false">
-                    <!-- ko i18n: 'No Payment method available.'--><!-- /ko -->
                 </div>
                 <!-- ko foreach: getRegion('afterMethods') -->
                     <!-- ko template: getTemplate() --><!-- /ko -->
