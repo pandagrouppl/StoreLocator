@@ -180,10 +180,11 @@
 
             > li {
                 flex: 1 0 33%;
+                margin-bottom: 30px;
             }
         }
         &__shipping-method {
-            padding: 0 2vw;
+            padding: 0 1.5vw;
         }
     }
 }
