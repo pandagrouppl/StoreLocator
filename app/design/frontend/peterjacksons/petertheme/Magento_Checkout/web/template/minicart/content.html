@@ -37,16 +37,16 @@
 <!-- /ko -->
 
 <div class="minicart__buttons">
-    <div data-bind="html: getCartParam('extra_actions')"></div>
-    <a type="button" class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-        <span><!-- ko i18n: 'View cart' --><!-- /ko --></span>
+    <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+        <button class="minicart__button--view-cart"><span><!-- ko i18n: 'View cart' --><!-- /ko --></span></button>
     </a>
+
     <button
             id="top-cart-btn-checkout"
             type="button"
-            class="action primary checkout"
+            class="action primary checkout minicart__button--checkout"
             data-bind="attr: {title: $t('Go to Checkout')}">
-        <!-- ko i18n: 'Go to Checkout' --><!-- /ko -->
+        <!-- ko i18n: 'Checkout' --><!-- /ko -->
     </button>
 
 </div>

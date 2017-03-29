@@ -176,6 +176,7 @@
 
 @media screen and (min-width: $lg-breakpoint) {
     .checkout {
+
         &__steps-list {
 
             > li {
@@ -183,6 +184,7 @@
                 margin-bottom: 30px;
             }
         }
+
         &__shipping-method {
             padding: 0 1.5vw;
         }
@@ -191,6 +193,7 @@
 
 @media screen and (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint - 1px) {
     .checkout {
+
         &__steps-list {
 
             > li {

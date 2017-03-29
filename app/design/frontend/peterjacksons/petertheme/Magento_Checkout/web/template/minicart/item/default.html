@@ -5,32 +5,33 @@
  */
 -->
 <li class="minicart__item" data-role="product-item">
-        <!-- ko if: product_has_url -->
-        <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="minicart__image-url">
-            <!-- ko foreach: $parent.getRegion('itemImage') -->
-                <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+        <div class="minicart__image">
+            <!-- ko if: product_has_url -->
+            <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="minicart__image-url">
+                <!-- ko foreach: $parent.getRegion('itemImage') -->
+                    <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+                <!-- /ko -->
+            </a>
             <!-- /ko -->
-        </a>
-        <!-- /ko -->
-        <!-- ko ifnot: product_has_url -->
+            <!-- ko ifnot: product_has_url -->
 
-            <!-- ko foreach: $parent.getRegion('itemImage') -->
-                <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+                <!-- ko foreach: $parent.getRegion('itemImage') -->
+                    <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+                <!-- /ko -->
+
             <!-- /ko -->
-
-        <!-- /ko -->
-
+        </div>
         <div class="minicart__item-details">
             <div class="minicart__item-name">
                 <!-- ko if: product_has_url -->
-                <a data-bind="attr: {href: product_url}, text: product_name"></a>
+                    <a data-bind="attr: {href: product_url}, text: product_name"></a>
                 <!-- /ko -->
                 <!-- ko ifnot: product_has_url -->
                     <!-- ko text: product_name --><!-- /ko -->
                 <!-- /ko -->
             </div>
-
             <!-- ko if: options.length -->
+            <a data-bind="attr: {href: product_url}">
             <dl class="minicart__item-options">
                 <!-- ko foreach: { data: options, as: 'option' } -->
                 <dt><!-- ko text: option.label --><!-- /ko --></dt>
@@ -44,9 +45,10 @@
                 </dd><br>
                 <!-- /ko -->
             </dl>
+            </a>
             <!-- /ko -->
-
             <div class="minicart__qty-and-price">
+                <a data-bind="attr: {href: product_url}">
                 <span class="minicart__qty"><span data-bind="text: qty"></span> x</span>
                 <!-- ko if: canApplyMsrp -->
                 <span data-bind="i18n: 'Price'"></span>
@@ -57,6 +59,7 @@
                     <!-- ko template: {name: getTemplate(), data: item.product_price, as: 'price'} --><!-- /ko -->
                 <!-- /ko -->
                 <!-- /ko -->
+                </a>
             </div>
         </div>
 </li>

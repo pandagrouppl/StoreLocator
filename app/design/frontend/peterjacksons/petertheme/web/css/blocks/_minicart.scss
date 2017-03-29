@@ -7,21 +7,83 @@
     border: 1px solid #d7d7d7;
     z-index: 999;
     color: #515151;
-    padding: 20pxch;
+    box-sizing: border-box;
+
+    a {
+        color: #242424;
+        font-size: 16px;
+        text-decoration: none;
+    }
 
     dl, dt, dd {
         display: inline;
     }
 
+    &__subtotal {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 20px;
+    }
+
     &__items-wrapper {
         overflow: auto;
         height: 240px;
+        padding: 0 20px;
 
         ol {
             overflow: hidden;
         }
 
     }
+
+    &__item {
+        display: flex;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #cbcaca;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        max-width: 90px;
+        max-height: 120px;
+    }
+
+    &__item-details {
+        margin-left: 10px;
+    }
+
+    &__item-name {
+        margin-bottom: 10px;
+    }
+
+    &__qty-and-price {
+        margin-top: 10px;
+    }
+    &__buttons {
+        padding: 20px;
+
+
+        .minicart__button {
+
+        &--view-cart {
+            @include button(0, 5px, 12px, 500);
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background: $grey-dark;
+            border: none;
+            color: $white;
+        }
+
+        &--checkout {
+            @include button-blue(0, 5px, 12px, 500);
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }}
 
     &::before {
         content: '';

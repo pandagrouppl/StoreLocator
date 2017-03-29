@@ -5,11 +5,12 @@
  */
 -->
 <div class="minicart__subtotal">
-    <span class="minicart__subtotal-label">
-        <!-- ko i18n: 'Cart Subtotal' --><!-- /ko -->
-    </span>
-
+    <div class="minicart__subtotal-label">
+        <!-- ko i18n: 'Subtotal' --><!-- /ko -->
+    </div>
+    <div class="minicart__subtotal-amount">
     <!-- ko foreach: elems -->
         <!-- ko template: getTemplate() --><!-- /ko -->
     <!-- /ko -->
+    </div>
 </div>
