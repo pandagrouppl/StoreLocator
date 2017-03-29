@@ -11,6 +11,7 @@
     z-index: 11;
     padding: 20px;
 
+
     &__tabs {
         display: flex;
         justify-content: flex-end;
@@ -39,7 +40,30 @@
         font-size: 42px;
     }
 
-    .size-wrap {
+    &__wrap {
         width: 60%;
+    }
+
+    &__res-name {
+        display: none;
+    }
+
+    .line1 {
+        width: 150px;
+        padding: 0 10px 0 0;
+        text-transform: uppercase;
+    }
+
+
+    table {
+        border-collapse: collapse;
+
+        td {
+            padding: 10px 0;
+            width: 65px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+        }
     }
 }
