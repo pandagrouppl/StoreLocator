@@ -9,12 +9,11 @@
 @import 'base/body';
 @import 'base/fonts';
 
-@import "blocks/minicart";
+@import "blocks/modals-wrapper";
 @import "blocks/search-overlay";
 @import "blocks/select";
 @import "blocks/spinner";
 @import "blocks/breadcrumbs";
-@import "blocks/wishlist";
 @import "blocks/price-box";
 @import "blocks/layered-nav";
 @import "blocks/size-chart";
@@ -31,6 +30,7 @@
 @import "modules/cart/cart-after-items";
 @import "modules/cart/cart-container";
 @import "modules/cart/items-table";
+@import "modules/cart/minicart";
 
 @import "modules/catalog/catalog-main";
 @import "modules/catalog/catalog-grid";
@@ -50,6 +50,8 @@
 @import "modules/account/account-nav";
 @import "modules/account/account-dashboard";
 @import "modules/account/account-form";
+
+@import "modules/wishlist/wishlist";
 
 
 
