@@ -1,29 +1,3 @@
 .cart-container {
 
-    &__checkout-button {
-        text-align: right;
-
-        > button {
-            @include button-blue(10px 25px, 10px 0, 15px, none)
-        }
-    }
-
-    &__total-price {
-        @extend .items-table__price;
-        display: flex;
-        flex-direction: row-reverse;
-
-        .grand.totals {
-            display: flex;
-            align-items: center;
-
-            th.mark {
-                margin-right: 10px;
-            }
-        }
-    }
-
-    .paypal-express-in-context-mini-cart-container {
-//        display: none;
-    }
 }

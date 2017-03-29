@@ -62,4 +62,49 @@
         }
     }
 
+    &__total-price {
+        @extend .items-table__price;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .grand.totals {
+            display: flex;
+            align-items: center;
+
+            th.mark {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__checkout-button {
+        text-align: right;
+
+        > button {
+            @include button-blue(0, 10px 0, 15px, normal);
+            height: 42px;
+            width: 250px;
+        }
+    }
+
+    &__paypal-button {
+        @include button(0, 0);
+        background-color: white;
+        border: 1px solid #b4b2b2;
+        height: 42px;
+        width: 250px;
+
+        &:hover {
+            background-color: white;
+        }
+
+    }
+
+    &__paypal-logo {
+        @include sprite(paypalbutt);
+        display: block;
+        margin: auto;
+    }
+
+
 }
