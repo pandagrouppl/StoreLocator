@@ -14,14 +14,14 @@ $retina-sprite: (
 
 $sprite-icon: (
     brownline: (
-        x: -835px,
+        x: -949px,
         y: -247px,
         width: 25px,
         height: 24px
     ),
     brownstar: (
-        x: -957px,
-        y: -177px,
+        x: -837px,
+        y: -247px,
         width: 27px,
         height: 24px
     ),
@@ -50,31 +50,31 @@ $sprite-icon: (
         height: 790px
     ),
     header-account: (
-        x: -890px,
+        x: -894px,
         y: -247px,
         width: 25px,
         height: 24px
     ),
     header-book: (
-        x: -775px,
+        x: -777px,
         y: -247px,
         width: 30px,
         height: 24px
     ),
     header-case: (
-        x: -895px,
-        y: -177px,
+        x: -715px,
+        y: -247px,
         width: 32px,
         height: 26px
     ),
     header-star: (
-        x: -715px,
-        y: -247px,
+        x: -955px,
+        y: -177px,
         width: 30px,
         height: 26px
     ),
     header-zoom: (
-        x: -835px,
+        x: -895px,
         y: -177px,
         width: 30px,
         height: 29px
@@ -96,6 +96,12 @@ $sprite-icon: (
         y: -55px,
         width: 174px,
         height: 21px
+    ),
+    remove-ico: (
+        x: -835px,
+        y: -177px,
+        width: 30px,
+        height: 30px
     ),
     select-arrw: (
         x: -775px,

@@ -59,6 +59,10 @@
         }
     }
 
+    &__remove {
+        @include sprite(remove-ico);
+    }
+
     &__product {
 
         &-details {
