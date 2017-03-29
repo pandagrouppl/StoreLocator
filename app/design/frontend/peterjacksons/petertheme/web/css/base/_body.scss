@@ -9,6 +9,27 @@ body {
     display: none;
 }
 
+.modal-custom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+
+    button.action-close {
+
+    }
+
+    input {
+        @include form-element();
+    }
+
+    .modal-inner-wrap {
+        display: inline-block;
+    }
+}
+
 .custom-slide {
     position: fixed;
     right: 50%;
