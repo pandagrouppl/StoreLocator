@@ -10,9 +10,9 @@
     <div class="after-items__left">
         <?php echo $block->getChildHtml('coupon') ?>
         <?php if ($block->getContinueShoppingUrl()): ?>
-            <a class="action continue"
+            <a class="action continue after-items__continue-link"
                href="<?php echo $block->escapeUrl($block->getContinueShoppingUrl()) ?>"
-               title="<?php echo $block->escapeHtml(__('Continue Shopping')); ?>">
+               title="<?php echo $block->escapeHtml(__('Continue Shopping')); ?>"><div class="after-items__continue-link-icon"></div>
                 <span><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span>
             </a>
         <?php endif; ?>

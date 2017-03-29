@@ -4,7 +4,7 @@
         text-align: right;
 
         > button {
-            @include button-blue(10px 25px, 5px, 15px, none)
+            @include button-blue(10px 25px, 10px 0, 15px, none)
         }
     }
 

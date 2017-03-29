@@ -7,31 +7,31 @@
 // @codingStandardsIgnoreFile
 
 ?>
-        <form class="cart-container__discount" id="discount-coupon-form"
+        <form class="after-items__discount" id="discount-coupon-form"
               action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/couponPost') ?>"
               method="post"
               data-mage-init='{"discountCode":{"couponCodeSelector": "#coupon_code",
                                                "removeCouponSelector": "#remove-coupon",
                                                "applyButton": "button.action.apply",
                                                "cancelButton": "button.action.cancel"}}'>
-            <div class="fieldset coupon<?php strlen($block->getCouponCode()) ? ' applied' : ''?>">
+            <span class="label after-items__discount-label"><?php /* @escapeNotVerified */ echo __('Enter discount code') ?></span>
+            <div class="fieldset coupon<?php strlen($block->getCouponCode()) ? ' applied' : ''?> after-items__discount-fieldset">
                 <input type="hidden" name="remove" id="remove-coupon" value="0" />
                 <div class="field">
-                    <label for="coupon_code" class="label"><span><?php /* @escapeNotVerified */ echo __('Enter discount code') ?></span></label>
                     <div class="control">
-                        <input type="text" class="input-text" id="coupon_code" name="coupon_code" value="<?php echo $block->escapeHtml($block->getCouponCode()) ?>" placeholder="<?php echo $block->escapeHtml(__('Enter discount code'));?>" />
+                        <input type="text" class="input-text after-items__discount-input" id="coupon_code" name="coupon_code" value="<?php echo $block->escapeHtml($block->getCouponCode()) ?>" placeholder="<?php echo $block->escapeHtml(__('GIFT CARD'));?>" />
                     </div>
                 </div>
                 <div class="actions-toolbar">
                     <?php if (!strlen($block->getCouponCode())): ?>
                     <div class="primary">
-                        <button class="action apply primary" type="button" value="<?php /* @escapeNotVerified */ echo __('Apply Discount') ?>">
-                            <span><?php /* @escapeNotVerified */ echo __('Apply Discount') ?></span>
+                        <button class="action apply primary after-items__discount-button" type="button" value="<?php /* @escapeNotVerified */ echo __('Apply Discount') ?>">
+                            <span><?php /* @escapeNotVerified */ echo __('Apply') ?></span>
                         </button>
                     </div>
                     <?php else: ?>
                         <div class="primary">
-                            <button  type="button" class="action cancel primary" value="<?php /* @escapeNotVerified */ echo __('Cancel Coupon') ?>"><span><?php /* @escapeNotVerified */ echo __('Cancel Coupon') ?></span></button>
+                            <button  type="button" class="action cancel primary after-items__discount-button" value="<?php /* @escapeNotVerified */ echo __('Cancel Coupon') ?>"><span><?php /* @escapeNotVerified */ echo __('Cancel') ?></span></button>
                         </div>
                     <?php endif; ?>
                 </div>
