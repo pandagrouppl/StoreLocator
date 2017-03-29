@@ -14,5 +14,6 @@
             <referenceContainer name="footer" remove="true" />
             <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
         </referenceContainer>
+        <referenceBlock name="navigation.sections" remove="true"/>
     </body>
 </page>
