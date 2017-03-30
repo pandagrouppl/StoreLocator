@@ -1,26 +1,38 @@
 .size-chart {
-    position: fixed;
     background: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 922px;
-    height: 550px;
-    overflow-y: auto;
     z-index: 11;
     padding: 20px;
 
 
+    &--open {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    &__close {
+        color: #838282;
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 600;
+        align-self: flex-end;
+    }
+
     &__tabs {
-        display: flex;
-        justify-content: flex-end;
+        display: block;
         margin: 20px 0;
 
         a {
             padding: 0 20px;
             font-size: 20px;
+            font-weight: 500;
             border-right: 1px solid black;
+            color: $black;
+
+            &:hover {
+                text-decoration: underline;
+            }
 
             &:last-child {
                 border-right: 0;
@@ -34,33 +46,80 @@
         padding: 0 35px 20px;
     }
 
+    &__row {
+        display: flex;
+    }
+
     &__title {
         font-family: league_gothic;
         text-transform: uppercase;
         font-size: 42px;
+        margin: 40px 0 0 0;
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #515151;
+            padding: 0 10px;
+        }
     }
 
     &__wrap {
         width: 60%;
+
+        &--accessories {
+            width: 100%;
+        }
     }
 
     &__res-name {
         display: none;
     }
 
+    &__heading {
+        font-weight: bold;
+    }
+
     &__img {
 
+        &--suit {
+            background: url('../../img/assets/size-chart/size-chart-model-suits.png');
+            height: 550px;
+            width: 40%;
+        }
+
+        &--trousers {
+            background: url('../../img/assets/size-chart/size-chart-trousers.jpg') no-repeat 50% 50% transparent;
+            height: 350px;
+            width: 40%;
+            background-size: contain;
+            margin-top: 40px;
+        }
+
+        &--shirt {
+            background: url('../../img/assets/size-chart/size-chart-model-shirts.png') no-repeat 50% 50% transparent;
+            background-size: 100%;
+            height: 520px;
+            width: 40%;
+        }
+
+        &--foot {
+            background: url('../../img/assets/size-chart/size-chart-foot-model.png') no-repeat 50% 50% transparent;
+            height: 335px;
+            width: 40%;
+        }
     }
 
-    .line1 {
-        width: 150px;
-        padding: 0 10px 0 0;
-        text-transform: uppercase;
-    }
-
-    table {
+    &__table {
         border-collapse: collapse;
         margin-top: 20px;
+        width: 100%;
+
+        thead {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
         td {
             padding: 10px 0;
@@ -69,9 +128,15 @@
             border-bottom: 1px solid #ddd;
             box-sizing: border-box;
         }
+
+        .line1 {
+            width: 150px;
+            padding: 0 10px 0 0;
+            text-transform: uppercase;
+        }
     }
 
-    .size-note {
+    &__size-note {
 
         td {
             width: 350px;

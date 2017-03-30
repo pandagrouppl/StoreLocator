@@ -7,6 +7,16 @@
         @media all and (max-width: $bp-header) {
             flex-direction: column;
         }
+
+        .size-chart {
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: fixed;
+            height: 550px;
+            overflow-y: auto;
+        }
     }
 
     &__left {

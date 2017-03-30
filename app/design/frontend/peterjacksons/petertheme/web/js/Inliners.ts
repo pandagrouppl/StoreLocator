@@ -50,8 +50,8 @@ export class Inliners {
     }
 
     private _toggleSizeChart(): void {
-        $('.product-content__size-chart').click(() => {
-            $('#size-chart').toggle();
+        $(document).on('click', '.product-content__size-chart, .size-chart__close', () => {
+            $('#size-chart').toggleClass('size-chart--open');
         });
     }
  }

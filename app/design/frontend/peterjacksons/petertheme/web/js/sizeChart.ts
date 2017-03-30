@@ -4,6 +4,7 @@ import $ = require("jquery");
 import ko = require("knockout");
 
 return Component.extend({
+
     initialize(): void {
         this._super();
         this.currentTab = $('.size-chart__tabs a').first().attr('href').replace(/^.*?(#|$)/,'');
