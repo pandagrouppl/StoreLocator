@@ -30,6 +30,10 @@
     margin: 5px 0;
 }
 
+@mixin bg($bg-file) {
+    background: url('../../img/assets/#{$bg-file}') no-repeat;
+}
+
 @mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     padding: $pd;
     text-transform: uppercase;
