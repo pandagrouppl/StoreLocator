@@ -103,6 +103,31 @@
         }
     }
 
+    &__address {
+        padding: 20px;
+        margin: 10px 0;
+
+        &--selected {
+            border: 2px solid grey;
+        }
+
+        &--not-selected {
+            border: 2px dashed grey;
+        }
+
+        &-button {
+
+            &--select {
+                @include button-blue(10px 20px, 0);
+            }
+
+            &--edit {
+                @include button-custom(10px 20px, 0, inherit, bold, white, #666, white, black);
+
+            }
+        }
+    }
+
     &__shipping {
 
         &-options-wrapper {
