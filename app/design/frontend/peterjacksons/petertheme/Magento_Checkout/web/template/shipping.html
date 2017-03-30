@@ -10,7 +10,7 @@
         <div class="step-title checkout__step-title" data-bind="i18n: 'Shipping Address'" data-role="title"></div>
     </div>
     <div id="checkout-step-shipping"
-         class="step-content"
+         class="step-content checkout__address-wrapper"
          data-role="content">
 
         <!-- ko if: (!quoteIsVirtual) -->
@@ -31,7 +31,7 @@
         <!-- ko if: (!isFormInline) -->
         <button type="button"
                 data-bind="click: showFormPopUp, visible: !isNewAddressAdded()"
-                class="action action-show-popup">
+                class="action action-show-popup checkout__address-button--add">
             <span data-bind="i18n: 'New Address'"></span></button>
         <div id="opc-new-shipping-address" data-bind="visible: isFormPopUpVisible()">
             <!-- ko template: 'Magento_Checkout/shipping-address/form' --><!-- /ko -->

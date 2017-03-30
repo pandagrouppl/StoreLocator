@@ -21,30 +21,26 @@
         border-bottom: 1px solid #ddd;
     }
 
-    &__details-wrapper {
-
-    }
-
     &__name-and-attrs {
-        flex-grow: 1;
+        flex-basis: 55%;
     }
 
     &__name {
         text-transform: uppercase;
-        flex-grow: 1;
+        flex: 1;
     }
 
     &__attrs {
         font-size: 12px;
 
+        dl, dt, dd {
+            display: inline-block;
+        }
+
         dl {
-            display: flex;
             margin: 5px 0;
         }
 
-        dd {
-            margin: 0 5px;
-        }
     }
 
     &__qty {
