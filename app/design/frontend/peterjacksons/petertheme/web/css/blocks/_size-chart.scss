@@ -48,15 +48,19 @@
         display: none;
     }
 
+    &__img {
+
+    }
+
     .line1 {
         width: 150px;
         padding: 0 10px 0 0;
         text-transform: uppercase;
     }
 
-
     table {
         border-collapse: collapse;
+        margin-top: 20px;
 
         td {
             padding: 10px 0;
@@ -64,6 +68,20 @@
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
             box-sizing: border-box;
+        }
+    }
+
+    .size-note {
+
+        td {
+            width: 350px;
+            border: 0;
+
+            &.bold {
+                width: auto;
+                font-weight: bold;
+                padding-right: 20px;
+            }
         }
     }
 }
