@@ -9,6 +9,9 @@
     <layout id="1column">
         <label translate="true">1 column</label>
     </layout>
+    <layout id="1column-unconstrained-width">
+        <label translate="true">1 column unconstrained width</label>
+    </layout>
     <layout id="2columns-left">
         <label translate="true">2 columns with left bar</label>
     </layout>
