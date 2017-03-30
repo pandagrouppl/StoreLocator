@@ -1,0 +1,21 @@
+.about-block {
+    position: relative;
+
+    &__image {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-family: league_gothic;
+        color: white;
+        text-transform: uppercase;
+    }
+}
