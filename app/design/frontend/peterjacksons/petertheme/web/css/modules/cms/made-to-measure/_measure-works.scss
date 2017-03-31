@@ -1,0 +1,32 @@
+.measure-works {
+
+    &__wrapper {
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 80px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 38px;
+        font-family: "GothamBoldRegular", sans-serif;
+        font-weight: normal;
+        margin-bottom: 40px;
+        letter-spacing: 0.1em;
+    }
+
+    &__paragraph {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        line-height: 150%;
+        box-sizing: border-box;
+
+        &--priced {
+            margin-top: 25px;
+            font-size: 30px;
+        }
+    }
+}

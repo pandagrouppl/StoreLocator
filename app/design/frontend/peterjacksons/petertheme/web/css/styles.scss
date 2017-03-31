@@ -9,6 +9,8 @@
 @import 'base/body';
 @import 'base/fonts';
 
+@import 'vendor/slick';
+
 @import "blocks/modals-wrapper";
 @import "blocks/search-overlay";
 @import "blocks/select";
@@ -57,7 +59,8 @@
 @import "modules/cms/brand/about-block";
 @import "modules/cms/brand/menu-about";
 @import "modules/cms/brand/about_us";
-@import "modules/cms/made-to-measure/made-to-measure";
 @import "modules/cms/made-to-measure/measure-top";
 @import "modules/cms/made-to-measure/measure-suit";
+@import "modules/cms/made-to-measure/measure-works";
+@import "modules/cms/made-to-measure/measure-slider";
 

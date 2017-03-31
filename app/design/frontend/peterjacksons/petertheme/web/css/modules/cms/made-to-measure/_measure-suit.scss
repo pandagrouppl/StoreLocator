@@ -3,4 +3,39 @@
     background-position: center top;
     background-size: cover;
     min-height: 1100px;
+    color: $white;
+    text-transform: uppercase;
+
+    &__title {
+        text-align: center;
+        letter-spacing: 0.1em;
+        padding-top: 100px;
+        font-size: 38px;
+        margin-bottom: 200px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__column {
+
+        &--text {
+            font-family: "GothamBook", sans-serif;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 150%;
+        }
+
+        &--suit {
+            width: 520px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 135px;
+        padding: 0 50px;
+    }
 }
