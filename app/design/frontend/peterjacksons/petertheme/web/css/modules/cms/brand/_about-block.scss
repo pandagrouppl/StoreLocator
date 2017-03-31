@@ -2,9 +2,12 @@
     position: relative;
 
     &__image {
+        width: 100%;
 
         img {
+            min-height: 300px;
             width: 100%;
+            object-fit: cover;
         }
     }
 
@@ -17,5 +20,9 @@
         font-family: league_gothic;
         color: white;
         text-transform: uppercase;
+
+        h1 {
+            font-weight: normal;
+        }
     }
 }
