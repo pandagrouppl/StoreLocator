@@ -5,6 +5,7 @@ import * as Module1 from "./moduleone";
 import * as Module2 from "./moduletwo";
 import * as SizeChart from "./sizeChart";
 import * as Inliners from "./Inliners";
+import * as MadeToMeasure from "./MadeToMeasure";
 
 
 export = class Main {
@@ -22,6 +23,7 @@ export = class Main {
 
         $(() =>  {
             let inliners = new Inliners.Inliners();
+            const madeToMeasure = new MadeToMeasure.MadeToMeasure()
         });
 
         $(document).ajaxComplete(() => {

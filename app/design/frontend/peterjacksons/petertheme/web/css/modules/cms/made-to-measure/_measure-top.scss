@@ -2,6 +2,9 @@
     @include bg('made-to-measure-1.jpg');
     color: $white;
     min-height: 940px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     &__bg {
         background: rgba(17, 17, 17, 0.6);
@@ -22,6 +25,7 @@
         letter-spacing: 5px;
         font-family: 'GothamBook';
         text-transform: uppercase;
+        text-align: center;
 
         i {
             font-weight: 600;

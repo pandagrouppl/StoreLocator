@@ -1,3 +1,6 @@
 .measure-suit {
-
+    @include bg('made-to-measure-suit.jpg');
+    background-position: center top;
+    background-size: cover;
+    min-height: 1100px;
 }
