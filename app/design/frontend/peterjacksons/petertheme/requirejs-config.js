@@ -2,6 +2,9 @@ var config = {
     deps: [
         "web/js/app"
     ],
+    paths: {
+        slick: 'js/vendor/slick.min'
+    },
     bundles: {
         "web/js/app": [ "main", "sizeChart" ]
     },

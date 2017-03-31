@@ -1,9 +1,10 @@
+/// <amd-dependency path="slick" />
 import $ = require("jquery");
 
 export class MadeToMeasure {
 
     constructor() {
-        //this._slider();
+        this._slider();
         this._arrowDown();
         this._scrollingSuit();
     }
@@ -11,12 +12,12 @@ export class MadeToMeasure {
     _scrollingSuit(): void {
         $(window).scroll(() => {
 
-            const $roll = $('.measure-suit');
+            //const $roll = $('.measure-suit');
             const offset: number = 200;
-            var bottom_of_object = $roll.offset().top + $roll.outerHeight() + offset;
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            var object_height: number = $roll.height();
-            let opacity = 1;
+            //var bottom_of_object = $roll.offset().top + $roll.outerHeight() + offset;
+            //var bottom_of_window = $(window).scrollTop() + $(window).height();
+            //var object_height: number = $roll.height();
+            //let opacity = 1;
 
             //if ((bottom_of_window + object_height) > bottom_of_object && bottom_of_window < bottom_of_object) {
 
@@ -58,7 +59,7 @@ export class MadeToMeasure {
     }
 
     _slider(): void {
-        $('.made-to-measure-slider').slick({
+        $('.measure-slider').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,

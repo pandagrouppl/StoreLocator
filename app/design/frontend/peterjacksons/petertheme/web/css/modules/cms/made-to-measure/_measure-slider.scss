@@ -1,0 +1,51 @@
+.measure-slider {
+
+    &__slide {
+        min-height: 750px;
+        margin: 0 0.5%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                @include bg('measure/slide-#{$i}.jpg');
+                background-size: 100%;
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    &__number {
+        display: none;
+    }
+
+    &__title {
+        font-family: "GothamBoldRegular", sans-serif;
+        font-size: 39px;
+        margin-bottom: 45px;
+        letter-spacing: 0.1em;
+    }
+
+    &__paragraph {
+        font-family: "GothamBoldRegular", sans-serif;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 150%;
+
+        &--rwd {
+            display: none;
+        }
+    }
+
+    .slick-dots {
+        @include slick-buttons();
+        margin: 40px 0 60px 0;
+    }
+}

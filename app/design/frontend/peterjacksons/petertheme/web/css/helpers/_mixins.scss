@@ -3,7 +3,6 @@
     margin: auto;
 }
 
-
 @mixin form-element() {
     height: 40px;
     background-color: #efefef;
@@ -32,6 +31,34 @@
 
 @mixin bg($bg-file) {
     background: url('../../img/assets/#{$bg-file}') no-repeat;
+}
+
+@mixin slick-buttons() {
+    display: flex !important;
+    justify-content: center;
+
+    li {
+        margin-left: 5px;
+    }
+
+    button {
+        background-color: #acacac;
+        border: none;
+        color: white;
+        width: 13px;
+        height: 13px;
+        font-size: 16px;
+        text-indent: -9999px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .slick-active {
+
+        button {
+            background-color: #555;
+        }
+    }
 }
 
 @mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
