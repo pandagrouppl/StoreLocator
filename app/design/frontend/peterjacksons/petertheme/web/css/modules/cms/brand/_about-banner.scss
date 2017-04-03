@@ -2,7 +2,7 @@
     padding: 20px;
     min-height: 50px;
     max-height: 215px;
-    height: 15vw;
+    height: 22vw;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -12,8 +12,9 @@
 
 
     &__txt-wrap {
-        font-size: 30px;
+        font-size: 48px;
         line-height: 57px;
+        text-align: center;
 
         span {
             display: inline-block;
@@ -28,5 +29,16 @@
 
     &__custom-txt {
         text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: $cms-sm-brkpt) {
+    .about-banner {
+        height: auto;
+
+        &__txt-wrap {
+            font-size: 30px;
+        }
     }
 }
