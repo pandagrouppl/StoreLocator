@@ -6,6 +6,7 @@ import * as Module2 from "./moduletwo";
 import * as SizeChart from "./sizeChart";
 import * as Inliners from "./Inliners";
 import * as MadeToMeasure from "./MadeToMeasure";
+import * as popups from "./popups";
 
 
 export = class Main {
@@ -22,8 +23,9 @@ export = class Main {
         m2.sayHelloTo("David Wesst");
 
         $(() =>  {
-            let inliners = new Inliners.Inliners();
-            const madeToMeasure = new MadeToMeasure.MadeToMeasure()
+            const inliners = new Inliners.Inliners();
+            const madeToMeasure = new MadeToMeasure.MadeToMeasure();
+            const popup = new popups.Popups();
         });
 
         $(document).ajaxComplete(() => {
