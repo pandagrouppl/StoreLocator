@@ -1,0 +1,36 @@
+.measure-schedule {
+    background: #ebebeb;
+    padding: 110px 0;
+    margin-bottom: 15px;
+
+    &__wrapper {
+        max-width: 825px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 38px;
+        font-family: 'GothamBoldRegular', sans-serif;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 0 40px 0;
+        letter-spacing: 0.1em;
+    }
+
+    &__paragraph {
+        text-align: center;
+        font-size: 18px;
+        line-height: 150%;
+        font-family: 'Roboto', 'Times New Roman', arial, sans-serif;
+        font-weight: normal;
+    }
+
+    &__button {
+        @include button-custom($pd: 17px 30px, $bg: #b68554, $bghov: #b68554);
+        font-weight: 400;
+        font-size: 16px;
+    }
+}

@@ -1,4 +1,5 @@
 .measure-slider {
+    overflow: hidden;
 
     &__slide {
         min-height: 750px;
@@ -42,6 +43,29 @@
         &--rwd {
             display: none;
         }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        height: 102px;
+        width: 30px;
+        z-index: 100;
+        top: 50%;
+        border: 0;
+        text-indent: -9999px;
+        cursor: pointer;
+        margin-top: -90px;
+    }
+
+    .slick-prev {
+        @include bg('arrw-right.png');
+        transform: rotate(180deg);
+        left: 2%;
+    }
+
+    .slick-next {
+        @include bg('arrw-right.png');
+        right: 2%;
     }
 
     .slick-dots {
