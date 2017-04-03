@@ -6,6 +6,10 @@
         text-align: center;
         box-sizing: border-box;
         padding: 0 80px;
+
+        @media all and (max-width: $bp-measure) {
+            padding: 0 20px;
+        }
     }
 
     &__title {
@@ -23,6 +27,11 @@
         font-weight: normal;
         line-height: 150%;
         box-sizing: border-box;
+
+        @media all and (max-width: $bp-measure) {
+            font-size: 16px;
+            line-height: 140%;
+        }
 
         &--priced {
             margin-top: 25px;
