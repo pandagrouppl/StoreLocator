@@ -1,0 +1,6 @@
+<a class="about-banner" href="<?php echo $this->getUrl($this->getData('page_id'));?>"
+    style="background-image: url(<?php echo $block->getUrl("pub/media/wysiwyg/") . $this->getData('img_path'); ?>)">
+    <div class="about-banner__txt-wrap">
+        <span class="about-banner__next-txt">Next</span><span class="about-banner__custom-txt"><?php echo $this->getData('img_text'); ?></span>
+    </div>
+</a>

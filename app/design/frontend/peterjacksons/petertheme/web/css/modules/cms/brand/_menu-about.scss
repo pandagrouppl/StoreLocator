@@ -1,26 +1,61 @@
 .menu-about {
-    text-align: center;
-    border-bottom: 1px solid #e4e0e0;
-    padding: 40px 0;
+    .about-block {
+        position: relative;
 
-    li {
-        display: inline-block;
-        font-size: 20px;
-        padding: 0 33px;
-        border-right: 1px solid #000;
+        &__image {
+            width: 100%;
 
-        a {
-            color: #222;
+            img {
+                min-height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
 
-            &:hover {
-                color: #999;
+        &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-family: league_gothic;
+            color: white;
+            text-transform: uppercase;
+
+            h1 {
+                font-weight: normal;
             }
         }
     }
 
-    li:last-child {
-        border-right: none;
+    ul {
+        text-align: center;
+        border-bottom: 1px solid #e4e0e0;
+        padding: 40px 0;
+
+        li {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0 33px;
+            border-right: 1px solid #000;
+
+
+            a {
+                color: #222;
+
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+
+        li:last-child {
+            border-right: none;
+        }
     }
+
+
 
     $menu-pages: ('.about_us', '.our-design', '.our-labels', '.our-mills', '.sustainability');
     $uls: ();
@@ -37,3 +72,21 @@
         }
     }
 }
+
+@media screen and (max-width: $cms-md-brkpt) {
+    .menu-about ul li {
+        font-size: 18px;
+        padding: 0 15px 0 15px;
+
+    }
+
+}
+
+@media screen and (max-width: $cms-sm-brkpt) {
+    .menu-about ul li {
+        width: 100%;
+        padding: 10px 15px 10px 15px;
+        border: none;
+    }
+}
+
