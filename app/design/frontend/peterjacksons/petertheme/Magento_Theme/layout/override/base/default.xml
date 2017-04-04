@@ -135,6 +135,14 @@
             </container>
         </referenceContainer>
         <referenceContainer name="before.body.end">
+            <container name="faq.popup" label="Faq popup" htmlTag="section" htmlClass="faq__popup">
+                <block class="Magento\Framework\View\Element\Template" name="faq.title" template="Magento_Theme::html/footer/faq-title.phtml" />
+                <block class="Magento\Cms\Block\Block" name="Faq">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">faq</argument>
+                    </arguments>
+                </block>
+            </container>
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="html/absolute_footer.phtml" />
         </referenceContainer>
         <referenceContainer name="content">

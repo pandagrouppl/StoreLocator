@@ -13,18 +13,43 @@
         @for $i from 1 through 5 {
             &--#{$i} {
                 @include bg('measure/slide-#{$i}.jpg');
-                background-size: 100%;
+                background-size: cover;
             }
+        }
+
+        @media all and (max-width: $bp-measure) {
+            background: #ebebeb;
+            color: $black;
+            margin: 0;
         }
     }
 
     &__wrapper {
         max-width: 750px;
         margin: auto;
+
+        @media all and (max-width: $bp-measure) {
+            padding: 0 20px;
+        }
     }
 
     &__number {
         display: none;
+        background: #363636;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        margin: 60px auto 45px auto;
+        color: #fff;
+        font-size: 80px;
+        text-align: center;
+        line-height: 123px;
+        font-family: "GothamBook", sans-serif;
+        font-weight: bold;
+
+        @media all and (max-width: $bp-measure) {
+            display: block;
+        }
     }
 
     &__title {
@@ -32,6 +57,10 @@
         font-size: 39px;
         margin-bottom: 45px;
         letter-spacing: 0.1em;
+
+        @media all and (max-width: $bp-measure) {
+            font-size: 26px;
+        }
     }
 
     &__paragraph {
@@ -42,6 +71,18 @@
 
         &--rwd {
             display: none;
+            font-family: "GothamBoldRegular", sans-serif;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 140%;
+        }
+
+        @media all and (max-width: $bp-measure) {
+            display: none;
+
+            &--rwd {
+                display: block;
+            }
         }
     }
 

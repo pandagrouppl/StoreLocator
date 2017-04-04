@@ -1,7 +1,10 @@
 .measure-schedule {
     background: #ebebeb;
-    padding: 110px 0;
     margin-bottom: 15px;
+
+    @media all and (max-width: $bp-measure) {
+        background: $white;
+    }
 
     &__wrapper {
         max-width: 825px;
@@ -9,6 +12,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 110px 0;
+
+        @media all and (max-width: $bp-measure) {
+            padding: 50px 20px;
+        }
     }
 
     &__title {
