@@ -25,6 +25,7 @@
         font-weight: normal;
         text-transform: uppercase;
         padding: 30px 0;
+        line-height: normal;
 
         &--left {
             text-align: left;
@@ -35,9 +36,14 @@
         display: flex;
         flex-wrap: wrap;
         text-align: justify;
+//        margin: 0 auto;
 
         &--centered {
             text-align: center;
+        }
+
+        &--1col-fixed {
+            max-width: 470px;
         }
     }
 
@@ -187,7 +193,6 @@
 @media screen and (max-width: $cms-lg-brkpt) {
     .about-us-wrapper {
         &__box {
-            flex: 0 0 100%;
             padding: 0 0 15px 0;
         }
 
@@ -196,6 +201,7 @@
         }
 
         &__special-box {
+
             &--left {
                 padding: 0;
 
@@ -237,12 +243,43 @@
                 width: 400px;
                 margin: 0;
             }
-
-            }
-
-
         }
     }
+}
+
+@media screen and (max-width: $cms-sm-brkpt) {
+    .about-us-wrapper {
+
+        &__special-box {
+            width: 100%;
+
+            .about-us-wrapper__special-box-boldandborder {
+                width: 80%;
+                padding: 15px 0;
+            }
+
+            &--left {
+                div[class*='special-box-r2'] {
+                    display: inline-block;
+                }
+            }
+
+            div {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-width: none;
+                max-height: none;
+
+                img {
+                    max-width: none;
+                    max-height: none;
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+}
 
 
 
