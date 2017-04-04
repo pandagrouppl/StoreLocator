@@ -1,0 +1,77 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360\Gallery\Content */
+$elementName = $block->getElement()->getName();
+$formName = $block->getFormName();
+?>
+<div id="<?php echo $block->getHtmlId() ?>"
+     class="gallery"
+     data-mage-init='{"magic360Gallery":{"template":"#<?php echo $block->getHtmlId() ?>-template"}}'
+     data-parent-component="<?php echo $block->escapeHtml($block->getData('config/parentComponent')) ?>"
+     data-images="<?php echo $block->escapeHtml($block->getImagesJson()) ?>"
+    >
+    <?php if (!$block->getElement()->getReadonly()) { ?>
+        <div class="image image-placeholder">
+            <?php echo $block->getUploaderHtml(); ?>
+            <div class="product-image-wrapper">
+                <p class="image-placeholder-text">
+                    <?php /* @escapeNotVerified */ echo __('Browse to find or drag image here'); ?>
+                </p>
+            </div>
+        </div>
+    <?php } ?>
+    <script id="<?php echo $block->getHtmlId() ?>-template" type="text/x-magento-template">
+        <div class="image item" data-role="magic360image">
+            <input type="hidden"
+                   name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][position]"
+                   data-form-part="<?php /* @escapeNotVerified */ echo $formName ?>"
+                   value="<%- data.position %>"
+                   class="position"/>
+            <input type="hidden"
+                   name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][file]"
+                   data-form-part="<?php /* @escapeNotVerified */ echo $formName ?>"
+                   value="<%- data.file %>"/>
+            <input type="hidden"
+                   name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][id]"
+                   data-form-part="<?php /* @escapeNotVerified */ echo $formName ?>"
+                   value="<%- data.id %>"/>
+            <input type="hidden"
+                   name="<?php /* @escapeNotVerified */ echo $elementName ?>[<%- data.file_id %>][removed]"
+                   data-form-part="<?php /* @escapeNotVerified */ echo $formName ?>"
+                   value=""
+                   class="is-removed"/>
+
+            <div class="product-image-wrapper">
+                <img class="product-image"
+                     data-role="image-element"
+                     src="<%- data.url %>"
+                     alt="<%- data.file %>"
+                     title="<%- data.file %>"/>
+
+                <div class="actions">
+                    <button type="button"
+                            class="action-remove"
+                            class-old="action-delete"
+                            data-role="delete-button"
+                            title="<?php /* @escapeNotVerified */ echo __('Delete image') ?>">
+                        <span>
+                            <?php /* @escapeNotVerified */ echo __('Delete image') ?>
+                        </span>
+                    </button>
+                    <div class="draggable-handle"></div>
+                </div>
+            </div>
+
+            <div class="item-description">
+                <div class="item-size">
+                  <span data-role="image-dimens"></span>, <span data-role="image-size"><%- data.sizeLabel %></span>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+<script>
+    jQuery('body').trigger('contentUpdated');
+</script>

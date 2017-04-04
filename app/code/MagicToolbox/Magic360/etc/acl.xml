@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="MagicToolbox_MagicToolbox::magictoolbox" title="Magic Toolbox" sortOrder="85">
+                    <resource id="MagicToolbox_Magic360::magic360_settings_edit" title="Magic 360" sortOrder="10"/>
+                    <resource id="MagicToolbox_Magic360::magic360_import_edit" title="Import Magic 360 images" sortOrder="20"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

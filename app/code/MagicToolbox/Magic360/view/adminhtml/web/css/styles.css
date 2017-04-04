@@ -1,0 +1,66 @@
+form.magictoolbox-config .form-inline .fieldset > .field > .label {
+  width: 33%;
+}
+form.magictoolbox-config .form-inline .fieldset > .field > .control {
+  width: 44%;
+}
+form.magictoolbox-config .form-inline .fieldset > .field > .field-status {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  padding: 7px 0 0 15px;
+  color: #999;
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+
+.magictoolbox-switcher {
+  vertical-align: middle;
+  float: right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
+.magictoolbox-switcher input[type="checkbox"] {
+  position: absolute;
+  left: -999em;
+}
+.magictoolbox-switcher-label {
+  cursor: pointer;
+  width: 34px;
+}
+.magictoolbox-switcher-label:after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34px;
+  height: 17px;
+  background: url(../images/switcher.png) no-repeat;
+  content: '';
+}
+.magictoolbox-switcher input[type="checkbox"]:checked + .magictoolbox-switcher-label:after {
+  background-position: -34px 0;
+}
+
+form.magictoolbox-config input[type="radio"][disabled] {
+  opacity: 0.01;
+}
+.advanced-radios-hidden-note {
+  display: none;
+}
+.mt-import-settings .fieldset > .legend > span {
+  margin-left: calc((100%) * .25);
+}
+.mt-import-settings .fieldset #import-folder {
+  width: auto;
+}
+.mt-import-settings .fieldset .mt-advanced-radios .admin__field-option .admin__field-label {
+  margin-right: 2rem;
+}
+.mt-import-settings .content-footer > .form-buttons {
+  margin-left: calc((100%) * .25);
+}

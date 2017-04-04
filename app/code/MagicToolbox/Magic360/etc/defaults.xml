@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<defaults>
+    <param platform="0" profile="default" name="include-headers-on-all-pages" value="No" status="2" />
+    <param platform="0" profile="default" name="magnify" value="Yes" status="2" />
+    <param platform="0" profile="default" name="magnifier-width" value="80%" status="2" />
+    <param platform="0" profile="default" name="magnifier-shape" value="inner" status="2" />
+    <param platform="0" profile="default" name="fullscreen" value="Yes" status="2" />
+    <param platform="0" profile="default" name="spin" value="drag" status="2" />
+    <param platform="0" profile="default" name="autospin-direction" value="clockwise" status="2" />
+    <param platform="0" profile="default" name="sensitivityX" value="50" status="2" />
+    <param platform="0" profile="default" name="sensitivityY" value="50" status="2" />
+    <param platform="0" profile="default" name="mousewheel-step" value="1" status="2" />
+    <param platform="0" profile="default" name="autospin-speed" value="3600" status="2" />
+    <param platform="0" profile="default" name="smoothing" value="Yes" status="2" />
+    <param platform="0" profile="default" name="autospin" value="once" status="2" />
+    <param platform="0" profile="default" name="autospin-start" value="load,hover" status="2" />
+    <param platform="0" profile="default" name="autospin-stop" value="click" status="2" />
+    <param platform="0" profile="default" name="initialize-on" value="load" status="2" />
+    <param platform="0" profile="default" name="start-column" value="1" status="2" />
+    <param platform="0" profile="default" name="start-row" value="auto" status="2" />
+    <param platform="0" profile="default" name="loop-column" value="Yes" status="2" />
+    <param platform="0" profile="default" name="loop-row" value="No" status="2" />
+    <param platform="0" profile="default" name="reverse-column" value="No" status="2" />
+    <param platform="0" profile="default" name="reverse-row" value="No" status="2" />
+    <param platform="0" profile="default" name="column-increment" value="1" status="2" />
+    <param platform="0" profile="default" name="row-increment" value="1" status="2" />
+    <param platform="0" profile="default" name="thumb-max-width" value="550" status="2" />
+    <param platform="0" profile="default" name="thumb-max-height" value="550" status="2" />
+    <param platform="0" profile="default" name="square-images" value="No" status="2" />
+    <param platform="0" profile="default" name="icon" value="app/code/MagicToolbox/Magic360/view/frontend/web/img/360icon.jpg" status="2" />
+    <param platform="0" profile="default" name="show-message" value="Yes" status="2" />
+    <param platform="0" profile="default" name="message" value="Drag image to spin" status="2" />
+    <param platform="0" profile="default" name="loading-text" value="Loading..." status="2" />
+    <param platform="0" profile="default" name="fullscreen-loading-text" value="Loading large spin..." status="2" />
+    <param platform="0" profile="default" name="hint" value="Yes" status="2" />
+    <param platform="0" profile="default" name="hint-text" value="Drag to spin" status="2" />
+    <param platform="0" profile="default" name="mobile-hint-text" value="Swipe to spin" status="2" />
+    <param platform="0" profile="product" name="enable-effect" value="Yes" status="2" />
+    <param platform="0" profile="product" name="magnify" value="Yes" status="0" />
+    <param platform="0" profile="product" name="magnifier-width" value="80%" status="0" />
+    <param platform="0" profile="product" name="magnifier-shape" value="inner" status="0" />
+    <param platform="0" profile="product" name="fullscreen" value="Yes" status="0" />
+    <param platform="0" profile="product" name="spin" value="drag" status="0" />
+    <param platform="0" profile="product" name="autospin-direction" value="clockwise" status="0" />
+    <param platform="0" profile="product" name="sensitivityX" value="50" status="0" />
+    <param platform="0" profile="product" name="sensitivityY" value="50" status="0" />
+    <param platform="0" profile="product" name="mousewheel-step" value="1" status="0" />
+    <param platform="0" profile="product" name="autospin-speed" value="3600" status="0" />
+    <param platform="0" profile="product" name="smoothing" value="Yes" status="0" />
+    <param platform="0" profile="product" name="autospin" value="once" status="0" />
+    <param platform="0" profile="product" name="autospin-start" value="load,hover" status="0" />
+    <param platform="0" profile="product" name="autospin-stop" value="click" status="0" />
+    <param platform="0" profile="product" name="initialize-on" value="load" status="0" />
+    <param platform="0" profile="product" name="start-column" value="1" status="0" />
+    <param platform="0" profile="product" name="start-row" value="auto" status="0" />
+    <param platform="0" profile="product" name="loop-column" value="Yes" status="0" />
+    <param platform="0" profile="product" name="loop-row" value="No" status="0" />
+    <param platform="0" profile="product" name="reverse-column" value="No" status="0" />
+    <param platform="0" profile="product" name="reverse-row" value="No" status="0" />
+    <param platform="0" profile="product" name="column-increment" value="1" status="0" />
+    <param platform="0" profile="product" name="row-increment" value="1" status="0" />
+    <param platform="0" profile="product" name="thumb-max-width" value="700" status="1" />
+    <param platform="0" profile="product" name="thumb-max-height" value="560" status="1" />
+    <param platform="0" profile="product" name="square-images" value="No" status="0" />
+    <param platform="0" profile="product" name="icon" value="app/code/MagicToolbox/Magic360/view/frontend/web/img/360icon.jpg" status="0" />
+    <param platform="0" profile="product" name="show-message" value="Yes" status="0" />
+    <param platform="0" profile="product" name="message" value="Drag image to spin" status="0" />
+    <param platform="0" profile="product" name="hint" value="Yes" status="0" />
+    <param platform="0" profile="category" name="enable-effect" value="No" status="2" />
+    <param platform="0" profile="category" name="magnify" value="Yes" status="0" />
+    <param platform="0" profile="category" name="magnifier-width" value="80%" status="0" />
+    <param platform="0" profile="category" name="magnifier-shape" value="inner" status="0" />
+    <param platform="0" profile="category" name="fullscreen" value="Yes" status="0" />
+    <param platform="0" profile="category" name="spin" value="drag" status="0" />
+    <param platform="0" profile="category" name="autospin-direction" value="clockwise" status="0" />
+    <param platform="0" profile="category" name="sensitivityX" value="50" status="0" />
+    <param platform="0" profile="category" name="sensitivityY" value="50" status="0" />
+    <param platform="0" profile="category" name="mousewheel-step" value="1" status="0" />
+    <param platform="0" profile="category" name="autospin-speed" value="3600" status="0" />
+    <param platform="0" profile="category" name="smoothing" value="Yes" status="0" />
+    <param platform="0" profile="category" name="autospin" value="once" status="0" />
+    <param platform="0" profile="category" name="autospin-start" value="load,hover" status="0" />
+    <param platform="0" profile="category" name="autospin-stop" value="click" status="0" />
+    <param platform="0" profile="category" name="initialize-on" value="load" status="0" />
+    <param platform="0" profile="category" name="start-column" value="1" status="0" />
+    <param platform="0" profile="category" name="start-row" value="auto" status="0" />
+    <param platform="0" profile="category" name="loop-column" value="Yes" status="0" />
+    <param platform="0" profile="category" name="loop-row" value="No" status="0" />
+    <param platform="0" profile="category" name="reverse-column" value="No" status="0" />
+    <param platform="0" profile="category" name="reverse-row" value="No" status="0" />
+    <param platform="0" profile="category" name="column-increment" value="1" status="0" />
+    <param platform="0" profile="category" name="row-increment" value="1" status="0" />
+    <param platform="0" profile="category" name="thumb-max-width" value="240" status="1" />
+    <param platform="0" profile="category" name="thumb-max-height" value="300" status="1" />
+    <param platform="0" profile="category" name="square-images" value="No" status="0" />
+    <param platform="0" profile="category" name="icon" value="app/code/MagicToolbox/Magic360/view/frontend/web/img/360icon.jpg" status="0" />
+    <param platform="0" profile="category" name="show-message" value="Yes" status="0" />
+    <param platform="0" profile="category" name="message" value="Drag image to spin" status="0" />
+    <param platform="0" profile="category" name="hint" value="Yes" status="0" />
+</defaults>
