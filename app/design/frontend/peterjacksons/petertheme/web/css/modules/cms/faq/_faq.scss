@@ -15,6 +15,12 @@
 
     &__wrapper {
         padding: 0 20px 20px 20px;
+
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $black;
+        }
     }
 
     &__bar {
