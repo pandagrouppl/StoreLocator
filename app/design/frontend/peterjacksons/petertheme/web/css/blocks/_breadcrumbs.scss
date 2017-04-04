@@ -4,8 +4,13 @@ $breadcrumbs-color: #928383;
     @include container();
     padding: 50px 0 20px 0;
 
+    @media all and (max-width: $bp-header) {
+        padding: 20px;
+    }
+
     &__items {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item {
