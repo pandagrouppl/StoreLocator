@@ -79,25 +79,23 @@
 
     &__styling-box {
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
         margin: 100px 0;
+        justify-content: center;
 
         div {
-            border: 1px solid black;
+            box-sizing: border-box;
         }
     }
 
     &__special-box {
-        box-sizing: border-box;
 
         &--left {
-            flex: 0 0 50%;
             padding-right: 33px;
-        }
 
-        &--right {
-            flex: 0 0 50%;
+            div[class*='special-box-r'] {
+                display: none;
+            }
         }
 
         img {
@@ -142,9 +140,17 @@
         }
 
         &-l2 {
-            margin-left: auto;
-            max-width: 564px;
-            max-height: 448px;
+
+            &-top {
+                margin-left: auto;
+                max-width: 564px;
+                max-height: 448px;
+            }
+
+            &-bottom {
+                width: 388px;
+                margin: 21px auto 87px 0;
+            }
         }
 
         &-r2 {
@@ -166,18 +172,9 @@
         &-l3 {
             width: 476px;
             margin-left: auto;
+            max-width: 442px;
+            max-height: 355px;
 
-            &-top {
-                width: 388px;
-                margin: 21px auto 87px 0;
-            }
-
-            &-bottom {
-                margin-left: auto;
-                max-width: 442px;
-                max-height: 355px;
-
-            }
         }
 
         &-r3 {
@@ -187,13 +184,61 @@
     }
 }
 
-@media screen and (max-width: $cms-sm-brkpt) {
+@media screen and (max-width: $cms-lg-brkpt) {
     .about-us-wrapper {
         &__box {
             flex: 0 0 100%;
             padding: 0 0 15px 0;
         }
+
+        &__special-box {
+            &--left {
+                padding: 0;
+
+                div[class*='special-box-r1'], div[class*='special-box-r3'] {
+                    display: inline-block;
+                }
+
+                div[class*='special-box-r2'] {
+                    display: flex;
+                }
+            }
+
+            &--right {
+                display: none;
+                }
+
+            &-l1 {
+                margin: 0 0 20px auto;
+            }
+
+            &-r1 {
+                display: inline-block;
+                padding-bottom: 30px;
+            }
+
+            &-l2-bottom {
+                margin-bottom: 40px;
+            }
+
+            &-r2 {
+                margin-bottom: 30px;
+            }
+
+            &-l3 {
+                max-height: none;
+            }
+
+            &-r3 {
+                width: 400px;
+                margin: 0;
+            }
+
+            }
+
+
+        }
     }
-}
+
 
 
