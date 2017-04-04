@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="layout_generate_blocks_before">
+        <observer name="magictoolbox_magic360_fix_layout_before" instance="MagicToolbox\Magic360\Observer\FixLayoutBefore" />
+    </event>
+    <event name="layout_generate_blocks_after">
+        <observer name="magictoolbox_magic360_fix_layout_after" instance="MagicToolbox\Magic360\Observer\FixLayoutAfter" />
+    </event>
+</config>

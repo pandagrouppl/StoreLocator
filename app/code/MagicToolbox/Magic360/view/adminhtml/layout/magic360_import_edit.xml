@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MagicToolbox_Magic360::css/styles.css"/>
+    </head>
+    <body>
+		<referenceContainer name="main.col" htmlClass="main-col mt-import-settings" />
+        <referenceContainer name="content">
+            <block class="MagicToolbox\Magic360\Block\Adminhtml\Import\Edit" name="magic360.import.edit" />
+        </referenceContainer>
+    </body>
+</page>

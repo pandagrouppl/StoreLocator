@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <update id="MagicToolbox_MagicToolbox::magictoolbox"
+            title="Magic Toolbox"
+            module="MagicToolbox_Magic360"
+            sortOrder="75"
+            resource="MagicToolbox_MagicToolbox::magictoolbox"/>
+        <add id="MagicToolbox_Magic360::magic360_settings_edit"
+            title="Magic 360"
+            module="MagicToolbox_Magic360"
+            sortOrder="10"
+            parent="MagicToolbox_MagicToolbox::magictoolbox"
+            action="magic360/settings/edit"
+            resource="MagicToolbox_Magic360::magic360_settings_edit"/>
+        <add id="MagicToolbox_Magic360::magic360_import_edit"
+            title="Import Magic 360 images"
+            module="MagicToolbox_Magic360"
+            sortOrder="20"
+            parent="MagicToolbox_MagicToolbox::magictoolbox"
+            action="magic360/import/edit"
+            resource="MagicToolbox_Magic360::magic360_import_edit"/>
+    </menu>
+</config>

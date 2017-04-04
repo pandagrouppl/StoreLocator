@@ -1,0 +1,31 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360 */
+
+?>
+<div class="fieldset-wrapper admin__fieldset-section">
+    <div class="fieldset-wrapper-title" tabindex="-1">
+        <strong class="title">
+            <span><?php echo __('Multi-row spin options'); ?></span>
+        </strong>
+    </div>
+    <div class="admin__fieldset-wrapper-content">
+        <fieldset class="admin__fieldset">
+            <?php echo $block->getChildHtml('magic360_spin_options'); ?>
+        </fieldset>
+    </div>
+</div>
+<div class="fieldset-wrapper admin__fieldset-section">
+    <div class="fieldset-wrapper-title" tabindex="-1">
+        <strong class="title">
+            <span><?php echo __('Images'); ?></span>
+        </strong>
+    </div>
+    <div class="admin__fieldset-wrapper-content">
+        <fieldset class="admin__fieldset">
+            <?php echo $block->getChildHtml('magic360_gallery'); ?>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <referenceContainer name="product_form">
+        <block name="magic360" class="MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360">
+            <arguments>
+                <argument name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Magic 360</item>
+                    <item name="collapsible" xsi:type="boolean">true</item>
+                    <item name="opened" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">23</item>
+                    <item name="canShow" xsi:type="boolean">true</item>
+                    <item name="componentType" xsi:type="string">fieldset</item>
+                </argument>
+            </arguments>
+            <block name="magic360_spin_options" class="MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360\SpinOptions" />
+            <block name="magic360_gallery" class="MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360\Gallery">
+                <block class="MagicToolbox\Magic360\Block\Adminhtml\Product\Edit\Magic360\Gallery\Content" as="magic360_gallery_content">
+                    <arguments>
+                        <argument name="config" xsi:type="array">
+                            <item name="parentComponent" xsi:type="string">product_form.product_form.block_magic360.block_magic360</item>
+                        </argument>
+                    </arguments>
+                </block>
+            </block>
+        </block>
+    </referenceContainer>
+</layout>
