@@ -1,3 +1,4 @@
+import "slick";
 import $ = require("jquery");
 
 export class Inliners {
@@ -9,6 +10,7 @@ export class Inliners {
         this._toggleResponsiveMenu();
         this._toggleSubmenuResponsive();
         this._toggleSizeChart();
+        this._shirtFitGuide();
     }
 
     private _showSearch(): void {
@@ -52,6 +54,27 @@ export class Inliners {
     private _toggleSizeChart(): void {
         $(document).on('click', '.product-content__size-chart, .size-chart__close', () => {
             $('#size-chart').toggleClass('size-chart--open');
+        });
+    }
+
+    private _shirtFitGuide(): void {
+        $('.about-us-wrapper__labels-flexbox-img').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            centerMode: true,
+            centerPadding: '10%',
+            responsive: [
+                {
+                    breakpoint: 675,
+                    settings: {
+                        centerPadding: '0',
+                        arrows: false,
+                        autoplay: false
+                    }
+                }
+            ]
         });
     }
  }

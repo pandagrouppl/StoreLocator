@@ -1,4 +1,4 @@
-/// <amd-dependency path="slick" />
+import "slick";
 import $ = require("jquery");
 
 export class MadeToMeasure {
