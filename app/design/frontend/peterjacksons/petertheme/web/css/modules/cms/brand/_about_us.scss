@@ -18,6 +18,10 @@
         max-width: 645px;
     }
 
+    &--no-padding {
+        padding: 0;
+    }
+
     &__title {
         text-align: center;
         font-family: league_gothic;
@@ -214,6 +218,33 @@
         margin: 0 0 21px 0;
     }
 
+    &__suits {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+
+        div {
+            box-sizing: border-box;
+        }
+
+        &-item {
+            flex: 0 1 50%;
+            margin: 38px 0;
+
+            img {
+                max-width: 100%;
+            }
+
+            &:first-child {
+                padding: 0 65px 0 0;
+            }
+
+            &:last-child {
+                border-left: 1px solid #e4e0e0;
+                padding: 0 0 0 65px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: $cms-lg-brkpt) {
@@ -290,6 +321,33 @@
             }
 
 
+        }
+    }
+}
+
+@media screen and (max-width: $cms-md-brkpt) {
+    .about-us-wrapper {
+        &__suits {
+            flex-wrap: wrap;
+
+            &-item {
+                margin: 38px 0;
+                flex: 0 1 100%;
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                }
+
+                &:first-child {
+                    padding: 0;
+                }
+
+                &:last-child {
+                    border-left: none;
+                    padding: 0;
+                }
+            }
         }
     }
 }

@@ -13,15 +13,27 @@ $retina-sprite: (
 );
 
 $sprite-icon: (
+    abt-arrw-left: (
+        x: -715px,
+        y: -177px,
+        width: 16px,
+        height: 88px
+    ),
+    abt-arrw-right: (
+        x: -761px,
+        y: -177px,
+        width: 16px,
+        height: 88px
+    ),
     brownline: (
-        x: -949px,
-        y: -247px,
+        x: -660px,
+        y: -376px,
         width: 25px,
         height: 24px
     ),
     brownstar: (
-        x: -837px,
-        y: -247px,
+        x: -902px,
+        y: -317px,
         width: 27px,
         height: 24px
     ),
@@ -50,32 +62,32 @@ $sprite-icon: (
         height: 790px
     ),
     header-account: (
-        x: -894px,
-        y: -247px,
+        x: -959px,
+        y: -317px,
         width: 25px,
         height: 24px
     ),
     header-book: (
-        x: -777px,
-        y: -247px,
+        x: -842px,
+        y: -317px,
         width: 30px,
         height: 24px
     ),
     header-case: (
-        x: -715px,
-        y: -247px,
+        x: -720px,
+        y: -317px,
         width: 32px,
         height: 26px
     ),
     header-star: (
-        x: -955px,
-        y: -177px,
+        x: -782px,
+        y: -317px,
         width: 30px,
         height: 26px
     ),
     header-zoom: (
-        x: -895px,
-        y: -177px,
+        x: -660px,
+        y: -317px,
         width: 30px,
         height: 29px
     ),
@@ -98,19 +110,19 @@ $sprite-icon: (
         height: 21px
     ),
     remove-ico: (
-        x: -835px,
+        x: -927px,
         y: -177px,
         width: 30px,
         height: 30px
     ),
     select-arrw: (
-        x: -775px,
+        x: -867px,
         y: -177px,
         width: 30px,
         height: 38px
     ),
     selectarrcheckout: (
-        x: -715px,
+        x: -807px,
         y: -177px,
         width: 30px,
         height: 40px

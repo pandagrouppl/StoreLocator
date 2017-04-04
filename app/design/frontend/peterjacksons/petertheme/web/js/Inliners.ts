@@ -58,20 +58,19 @@ export class Inliners {
     }
 
     private _shirtFitGuide(): void {
-        $('.about-us-wrapper__labels-flexbox-img').slick({
+        $('.slider-with-text__slides').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            dots: true,
-            centerMode: true,
-            centerPadding: '10%',
+            fade: true,
+            speed: 1500,
+            prevArrow: '<div class="slick-prev"></div>',
+            nextArrow: '<div class="slick-next"></div>',
             responsive: [
                 {
                     breakpoint: 675,
                     settings: {
-                        centerPadding: '0',
-                        arrows: false,
-                        autoplay: false
+
                     }
                 }
             ]
