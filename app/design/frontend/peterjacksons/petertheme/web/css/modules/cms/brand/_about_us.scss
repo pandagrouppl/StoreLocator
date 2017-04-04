@@ -192,9 +192,6 @@
 
 @media screen and (max-width: $cms-lg-brkpt) {
     .about-us-wrapper {
-        &__box {
-            padding: 0 0 15px 0;
-        }
 
         &__styling-box {
             margin: 50px 0;
@@ -249,6 +246,16 @@
 
 @media screen and (max-width: $cms-sm-brkpt) {
     .about-us-wrapper {
+
+        &__text-box {
+            div {
+                flex: 1 1 100%;
+            }
+        }
+
+        &__box {
+            padding: 0 0 15px 0;
+        }
 
         &__special-box {
             width: 100%;
