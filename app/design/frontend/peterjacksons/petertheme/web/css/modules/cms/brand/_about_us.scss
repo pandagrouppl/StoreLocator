@@ -5,6 +5,7 @@
     padding: 0 15px;
     color: #242424;
     letter-spacing: 1px;
+    position: relative;
 
     &--990 {
         max-width: 990px;
@@ -79,6 +80,18 @@
             width: 100%;
             height: 100%;
         }
+    }
+
+    &__centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__garmet {
+        font-size: 40px;
+        font-family: league_gothic;
     }
 
     &__styling-box {
@@ -187,7 +200,7 @@
         }
     }
 
-    &__labels-flexbox {
+    &__checker-flexbox {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -300,7 +313,7 @@
             }
         }
 
-        &__labels-flexbox {
+        &__checker-flexbox {
 
             div {
                 flex: 1 1 100%;
