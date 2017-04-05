@@ -24,7 +24,8 @@
     &__text {
         position: absolute;
         text-align: center;
-        top: 33%;
+        top: 50%;
+        transform: translate(0%, -100%);
         right: 11%;
         font-weight: bold;
 
