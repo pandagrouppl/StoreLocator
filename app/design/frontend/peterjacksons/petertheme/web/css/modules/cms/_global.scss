@@ -1,0 +1,27 @@
+.cms-terms,
+.cms-contact-us {
+
+
+    .page-main {
+        padding: 0;
+
+        @media all and (max-width: $bp-header) {
+            padding: 20px;
+        }
+
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: league_gothic;
+            font-weight: normal;
+
+            h1 {
+                margin: 20px 0;
+            }
+
+            span {
+                font-size: 60px;
+            }
+        }
+    }
+}

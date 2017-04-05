@@ -1,0 +1,82 @@
+$bp: 680px;
+
+.contact-us {
+    display: flex;
+
+    @media all and (max-width: $bp) {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: league_gothic;
+        font-size: 42px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0 0 25px 0;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 0 25px 0;
+        color: #242424;
+    }
+
+    &__left {
+        padding-right: 50px;
+        width: calc(50% - 50px);
+        color: #242424;
+
+        @media all and (max-width: $bp) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__paragraph {
+        font-style: normal;
+        font-family: Roboto, arial, sans-serif;
+        font-size: 15px;
+    }
+
+    &__address {
+        font-style: normal;
+        font-family: Roboto, arial, sans-serif;
+        font-size: 15px;
+        font-weight: normal;
+        padding: 45px 0 35px 0;
+        border-top: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+        line-height: 20px;
+    }
+
+    &__right {
+        width: 50%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media all and (max-width: $bp) {
+            width: 100%;
+        }
+    }
+
+    &__input, &__textarea {
+        @include form-element();
+        margin-bottom: 10px;
+    }
+
+    &__textarea {
+        resize: none;
+        padding: 10px;
+        height: 80px;
+    }
+
+    &__button {
+        @include button-custom($pd: 20px 0, $bg: $grey-dark, $bghov: black);
+        max-width: 280px;
+        margin: 0 0 10px 0;
+    }
+}

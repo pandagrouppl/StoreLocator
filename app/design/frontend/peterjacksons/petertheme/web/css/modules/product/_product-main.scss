@@ -23,6 +23,11 @@
         width: 55%;
         min-width: 55%;
 
+        button.m360-icon.m360-icon-fullscreen-open {
+            top: 65px !important;
+            right: 65px !important;
+        }
+
         @media all and (max-width: $bp-header) {
             width: 100%;
         }
