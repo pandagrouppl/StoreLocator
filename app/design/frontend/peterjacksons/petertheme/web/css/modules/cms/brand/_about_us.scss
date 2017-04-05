@@ -223,12 +223,26 @@
 
     }
 
-    &__label-title {
+    &__checker-title {
         font-style: italic;
         font-family: Merriweather;
         font-weight: bold;
         font-size: 25px;
         margin: 0 0 21px 0;
+    }
+
+
+    &__checker-title-gothic {
+        margin: 10px 0 30px 0;
+        font-family: league_gothic;
+        font-weight: normal;
+        font-size: 48px;
+        text-transform: uppercase;
+
+        &--centered {
+            text-align: center;
+        }
+
     }
 
     &__suits {
