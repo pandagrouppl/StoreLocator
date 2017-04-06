@@ -7,8 +7,10 @@ module.exports = {
         vendor: ['preact']
     },
     output: {
-        path: path.join(__dirname, './dist'),
-        filename: '[name].bundle.js'
+        path: path.join(__dirname, './../../../../../../../pub/static/frontend/peterjacksons/petertheme/en_US/Light4website_StoreLocator/dist'),
+        filename: '[name].js',
+        libraryTarget: 'amd',
+        library: 'store-locator'
     },
     module: {
         rules: [
