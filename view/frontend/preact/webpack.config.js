@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+    devtool: 'source-map',
     entry: {
         js: './src/index.js',
         vendor: ['preact']
@@ -32,6 +33,10 @@ module.exports = {
         ],
     },
     resolve: {
+        alias: {
+            'react': 'preact-compat',
+            'react-dom': 'preact-compat'
+        },
         extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
         modules: [
             path.resolve(__dirname, 'node_modules')

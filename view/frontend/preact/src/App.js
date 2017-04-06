@@ -1,5 +1,7 @@
 import { h, Component} from 'preact';
 
+import Header from './container/Header';
+
 export default class App extends Component {
 
     constructor() {
@@ -7,8 +9,11 @@ export default class App extends Component {
     }
 
     render() {
+        console.log(Header);
         return(
-            <p>elo</p>
+            <section>
+                <Header/>
+            </section>
         )
     }
 }
