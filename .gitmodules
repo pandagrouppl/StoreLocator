@@ -1,0 +1,3 @@
+[submodule "app/code/Light4website/StoreLocator"]
+	path = app/code/Light4website/StoreLocator
+	url = https://bitbucket.org/l4w/magento2-storelocator
