@@ -1,5 +1,10 @@
-import { h, Component} from 'preact';
-import Header from './container/Header';
+import { h, Component } from 'preact';
+import { Router, Route, Link } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory'
+
+import StoreHeader from './container/StoreHeader';
+
+const history = createBrowserHistory();
 
 class HoursSelectFill extends Component {
     constructor() {
@@ -53,7 +58,7 @@ class AllStores extends Component {
     }
 }
 
-import Header from './container/Header';
+
 
 export default class App extends Component {
 
@@ -62,16 +67,13 @@ export default class App extends Component {
     }
 
     render() {
-        console.log(Header);
         return(
+        <Router history={history}>
             <div>
-            <section>
-                <Header/>
-            </section>
-            <section>
-                <AllStores stores={this.props.json.stores}/>
-            </section>
+                <StoreHeader />
+                <Route path="/" component={() => (<AllStores stores={this.props.json.stores}/>)}/>
             </div>
+        </Router>
         )
     }
 }
