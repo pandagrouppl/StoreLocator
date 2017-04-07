@@ -3,6 +3,14 @@ body {
     font-weight: 400;
     line-height: 1;
     font-size: 12px;
+
+    header.page-header {
+        display: none;
+    }
+
+    footer.page-footer {
+        display: none;
+    }
 }
 
 .no-display {

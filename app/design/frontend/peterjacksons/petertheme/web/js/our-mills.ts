@@ -9,16 +9,16 @@ export class OurMills {
 
     _youtubeOverlay(): void {
 
-        const ovrl = 'youtube-player-overlay';
-
-        $('.youtube-player__play-img').forEach((item, index) => {
-            console.log(item, ' AND ' ,index)
-        });
-
-        $('.youtube-player__play-img')[0].bind('click', () => {
-            $(`.${ovrl}`).addClass(`${ovrl}--active`);
-            $('#frame-movie-2')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-        });
+        //const ovrl = 'youtube-player-overlay';
+        //
+        //$('.youtube-player__play-img').forEach((item, index) => {
+        //    console.log(item, ' AND ' ,index)
+        //});
+        //
+        //$('.youtube-player__play-img')[0].bind('click', () => {
+        //    $(`.${ovrl}`).addClass(`${ovrl}--active`);
+        //    $('#frame-movie-2')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        //});
         //.forEach(() => {
         //
         //    }

@@ -1,0 +1,30 @@
+.stores-li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+    max-width: 1120px;
+
+    &__store {
+        flex: 0 1 25%;
+        box-sizing: border-box;
+        padding: 10px;
+        min-width: 250px;
+    }
+
+    ul, li, div {
+        border: 1px solid black;
+    }
+
+    &__hours-wrapper {
+        position: relative;
+    }
+
+    &__hours {
+        @include form-element()
+    }
+
+    &__hours-arrow {
+        @include form-select-arrow();
+    }
+}
