@@ -1,9 +1,174 @@
-eeee
 <div id="preact-root"></div>
 
 
 <script type="text/javascript">
-    require(['store-locator'], function(App) {
-        console.log(App);
+
+    var data_json= {
+        "regions": ["VIC", "SA", "QLD", "NSW", "ACT"],
+        "constants": {
+            "default_gps": [-37.811895, 144.963013]
+        },
+        "stores": [
+            {
+                "name": "Head office",
+                "addr_strt": "426 Johnston Street, Abbotsford",
+                "addr_cty": "Melbourne Victoria 3000",
+                "region": "VIC",
+                "gps": "",
+                "phone": "666 666 666",
+                "email": "info@peterjacksons.com",
+                "hours": {
+                    "SUN": [
+                        "Closed",
+                        "Closed"
+                    ],
+                    "MON": [
+                        "9:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "9:00 AM",
+                        "5:00 PM"
+                    ],
+                    "WED": [
+                        "9:30 AM",
+                        "5:10 PM"
+                    ],
+                    "THU": [
+                        "9:34 AM",
+                        "5:20 PM"
+                    ],
+                    "FRI": [
+                        "10:34 AM",
+                        "11:20 PM"
+                    ],
+                    "SAT": [
+                        "Closed",
+                        "Closed"
+                    ]
+                }
+            },
+            {
+                "name": "EMPORIUM",
+                "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
+                "addr_cty": "Melbourne 3000",
+                "region": "SA",
+                "gps": "",
+                "phone": "777 777 777",
+                "email": "emporium@peterjacksons.com",
+                "hours": {
+                    "SUN": [
+                        "8:00 AM",
+                        "11:20 PM"
+                    ],
+                    "MON": [
+                        "3:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "3:00 AM",
+                        "5:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "5:10 PM"
+                    ],
+                    "THU": [
+                        "3:34 AM",
+                        "5:20 PM"
+                    ],
+                    "FRI": [
+                        "3:34 AM",
+                        "11:20 PM"
+                    ],
+                    "SAT": [
+                        "Closed",
+                        "Closed"
+                    ]
+                }
+            },
+            {
+                "name": "BOURKE ST",
+                "addr_strt": "420 Bourke St",
+                "addr_cty": "Melbourne 3000",
+                "region": "VIC",
+                "gps": "",
+                "phone": "111 111 111",
+                "email": "bourke@peterjacksons.com",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "BOURKE ST 2",
+                "addr_strt": "420 Bourke St 2",
+                "addr_cty": "Melbourne 3000 2",
+                "region": "NSW",
+                "gps": "",
+                "phone": "111 111 111 2",
+                "email": "bourke@peterjacksons.com 2",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            }
+        ]
+    };
+
+    require(['store-locator'], function(StoreLocator) {
+        StoreLocator.init(data_json);
     });
 </script>
