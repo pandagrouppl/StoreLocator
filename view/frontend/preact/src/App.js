@@ -14,11 +14,12 @@ export default class App extends Component {
     }
 
     render() {
+        const { json } = this.props;
         return(
         <Router history={history}>
             <div>
-                <StoreHeader />
-                <Route path="/" component={() => (<AllStores stores={this.props.json.stores}/>)}/>
+                <StoreHeader regions={json.regions}/>
+                <Route path="/" component={() => (<AllStores stores={json.stores}/>)}/>
             </div>
         </Router>
         )

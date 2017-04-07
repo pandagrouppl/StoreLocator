@@ -12,6 +12,7 @@
   "dependencies": {
     "google-maps-react": "^1.0.19",
     "history": "^4.6.1",
+    "mobx-preact": "^0.3.1",
     "preact": "^7.2.1",
     "preact-compat": "^3.14.3",
     "react-router-dom": "^4.0.0"
