@@ -53,6 +53,8 @@ class AllStores extends Component {
     }
 }
 
+import Header from './container/Header';
+
 export default class App extends Component {
 
     constructor() {
@@ -60,8 +62,16 @@ export default class App extends Component {
     }
 
     render() {
+        console.log(Header);
         return(
-            <AllStores stores={this.props.json.stores}/>
+            <div>
+            <section>
+                <Header/>
+            </section>
+            <section>
+                <AllStores stores={this.props.json.stores}/>
+            </section>
+            </div>
         )
     }
 }
