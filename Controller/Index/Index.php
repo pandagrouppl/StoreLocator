@@ -18,16 +18,6 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        $moduleName = $this->getRequest()->getModuleName();
-        $controller = $this->getRequest()->getControllerName();
-        $action     = $this->getRequest()->getActionName();
-        $route      = $this->getRequest()->getRouteName();
-
-        echo $moduleName."<br/>";
-        echo $controller."<br/>";
-        echo $action."<br/>";
-        echo $route."<br/>";
-
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->prepend(__('Custom Front View'));
         return $resultPage;
