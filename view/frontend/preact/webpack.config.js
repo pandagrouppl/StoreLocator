@@ -8,7 +8,6 @@ module.exports = {
         vendor: ['preact']
     },
     output: {
-        //path: path.join(__dirname, './../web/dist'),
         path: path.join(__dirname, './../../../../../../../pub/static/frontend/peterjacksons/petertheme/en_US/Light4website_StoreLocator/dist'),
         filename: '[name].js',
         libraryTarget: 'amd',
