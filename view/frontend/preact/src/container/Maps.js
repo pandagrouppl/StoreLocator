@@ -9,7 +9,7 @@ export default class Maps extends Component {
 
     render() {
         return(
-            <section style={{width: '100%', height: '400px', position: 'relative'}}>
+            <section style={{width: '100%', height: '400px', position: 'relative', overflow: 'hidden'}}>
             <Map google={this.props.google}
                  zoom={this.props.stateStore.zoom}
                  style={{width: '100%', height: '400px', position: 'relative'}}

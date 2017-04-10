@@ -3,10 +3,9 @@ import HoursSelectFill from './HoursSelectFill'
 
 const SingleStoreView = (props) => {
     function zoomToStore() {
-        debugger;
         props.onStoreClick(props.geo, props.zoom);
     }
-    zoomToStore();
+
     return (
         <li className="stores-li__store">
             <h1 className="stores-li__name" onClick={zoomToStore}>{props.name}</h1>
@@ -17,6 +16,7 @@ const SingleStoreView = (props) => {
             </ul>
             <HoursSelectFill day={props.hours}/>
         </li>
-    )};
+    );
+};
 
 export default SingleStoreView;
