@@ -1,13 +1,13 @@
-import {h, Component} from 'preact';
+import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
 import GoogleApiComponent from './../component/GoogleApiComponent';
 import Maps from './Maps';
 import RegionFilter from './../component/RegionFilter';
 
-import StoresFilters from './../component/StoresFilters';
 
-export class StoreHeader extends Component {
+@connect(['stateStore'])
+class StoreHeader extends Component {
 
     constructor() {
         super();

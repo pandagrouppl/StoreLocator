@@ -2,31 +2,33 @@ import { observable, action, computed } from 'mobx';
 
 class StateStore {
     @observable filters = [];
+    @observable stores = [];
     @observable geo;
     @observable zoom;
-
 
     constructor(json) {
         this.json = json;
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
+        this.stores = json.stores;
     }
 
     @action clearFilters() {
-        this.geo = json.constants.geo;
-        this.zoom = json.constants.zoom;
+        this.geo = this.json.constants.geo;
+        this.zoom = this.json.constants.zoom;
         this.filters = [];
     }
 
     @action addFilters(filter) {
         const newRegion = this.json.regions.filter((region) => region.name == filter)[0];
+        this.stores = this.json.stores.filter((store) => store.region == filter);
         this.geo = newRegion.geo;
         this.zoom = newRegion.zoom;
         this.filters.push(filter);
     }
 
     @computed get geoTotal() {
-        return { "lat": 52.4046, "lng": 16.9252 };
+        return { "lat": this.geo.lat, "lng": this.geo.lng };
     }
 }
 

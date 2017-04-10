@@ -1,14 +1,17 @@
-import { h, Component} from 'preact';
-import SingleStore from './../component/SingleStore'
-import filterArray from './../component/filterArray'
+import { h, Component } from 'preact';
+import { connect } from 'mobx-preact';
 
+import SingleStore from './../component/SingleStore'
+
+
+@connect(['stateStore'])
 export default class AllStores extends Component {
 
     render () {
-        const filtered = filterArray(this.props.stores, 'region', 'VIC');
+        const {stores} = this.props.stateStore;
         return (
             <ul className="stores-li">
-            {filtered.map((store) => <SingleStore {...store}/>)}
+                {stores.map((store) => <SingleStore {...store}/>)}
             </ul>
         );
     }

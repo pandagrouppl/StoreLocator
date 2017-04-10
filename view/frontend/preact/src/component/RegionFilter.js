@@ -7,4 +7,5 @@ const RegionFilter = (props) => {
     return (<p className={props.className} onClick={addFilter}>{props.region}</p>);
 };
 
+
 export default RegionFilter;
