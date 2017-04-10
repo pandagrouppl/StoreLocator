@@ -6205,10 +6205,12 @@ Route.childContextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store___ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__container_StoreHeader__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__container_StoresList__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__container_StoreView__ = __webpack_require__(76);
 
 
 
 //import { observable } from 'mobx'
+
 
 
 
@@ -6233,9 +6235,10 @@ var App = function App(props) {
                 'div',
                 null,
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(__WEBPACK_IMPORTED_MODULE_6__container_StoreHeader__["a" /* default */], { regions: json.regions }),
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Route */], { path: '/', component: function component() {
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Route */], { exact: true, path: '/', component: function component() {
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(__WEBPACK_IMPORTED_MODULE_7__container_StoresList__["a" /* default */], { stores: json.stores });
-                    } })
+                    } }),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Route */], { path: '/about', component: __WEBPACK_IMPORTED_MODULE_8__container_StoreView__["a" /* default */] })
             )
         )
     );
@@ -6474,8 +6477,6 @@ var SingleStore = function SingleStore(props) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_preact__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_maps_react__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_google_maps_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_google_maps_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_maps_react_dist__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_google_maps_react_dist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_google_maps_react_dist__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Maps; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -6490,6 +6491,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+//import  from 'google-maps-react/dist';
 
 
 var Maps = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx_preact__["connect"])(['stateStore']), _dec(_class = function (_Component) {
@@ -6515,7 +6517,7 @@ var Maps = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx_preact
                         initialCenter: this.props.stateStore.geoTotal,
                         center: this.props.stateStore.geoTotal },
                     this.props.stateStore.stores.map(function (store) {
-                        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3_google_maps_react_dist__["Marker"], { key: store.name, position: { lat: store.geo.lat, lng: store.geo.lng } });
+                        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_2_google_maps_react__["Marker"], { key: store.name, position: { lat: store.geo.lat, lng: store.geo.lng } });
                     })
                 )
             );
@@ -6564,6 +6566,7 @@ var StoreHeader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx
         var _this = _possibleConstructorReturn(this, (StoreHeader.__proto__ || Object.getPrototypeOf(StoreHeader)).call(this));
 
         _this.postcodeInput = null;
+        _this.geocode = null;
         _this.applyFilter = _this.applyFilter.bind(_this);
         _this.resetFilters = _this.resetFilters.bind(_this);
         _this.searchPostcode = _this.searchPostcode.bind(_this);
@@ -6578,23 +6581,20 @@ var StoreHeader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx
     }, {
         key: 'searchPostcode',
         value: function searchPostcode() {
-            var geocode = this.props.google.maps.Geocoder();
-            console.log(geocode);
-            geocode.geocode({ 'address': 'Stablewskiego' }, function (results, status) {
-                console.log(results);
+            var _this2 = this;
+
+            if (!this.geocode) {
+                this.geocode = new this.props.google.maps.Geocoder();
+            }
+            this.geocode.geocode({
+                componentRestrictions: {
+                    country: 'AU',
+                    postalCode: this.postcodeInput.value
+                }
+            }, function (results, status) {
+                var newGeo = { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() };
+                _this2.props.stateStore.changeMap(newGeo);
             });
-            console.log(this.postcodeInput.value);
-            //this.props.google.maps.Geocode( { 'address': address}, function(results, status) {
-            //    if (status == 'OK') {
-            //        map.setCenter(results[0].geometry.location);
-            //        var marker = new google.maps.Marker({
-            //            map: map,
-            //            position: results[0].geometry.location
-            //        });
-            //    } else {
-            //        alert('Geocode was not successful for the following reason: ' + status);
-            //    }
-            //});
         }
     }, {
         key: 'isActiveFilter',
@@ -6609,7 +6609,7 @@ var StoreHeader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx
     }, {
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _this3 = this;
 
             var regions = this.props.regions;
 
@@ -6628,8 +6628,8 @@ var StoreHeader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx
                         'article',
                         null,
                         regions.map(function (region) {
-                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_4__component_RegionFilter__["a" /* default */], { className: _this2.isActiveFilter(region.name), region: region.name,
-                                onFilterClick: _this2.applyFilter });
+                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_4__component_RegionFilter__["a" /* default */], { className: _this3.isActiveFilter(region.name), region: region.name,
+                                onFilterClick: _this3.applyFilter });
                         })
                     ),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
@@ -6641,7 +6641,7 @@ var StoreHeader = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx
                             'Reset'
                         ),
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])('input', { ref: function ref(input) {
-                                _this2.postcodeInput = input;
+                                _this3.postcodeInput = input;
                             }, type: 'text', name: 'postcode' }),
                         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                             'button',
@@ -6706,7 +6706,7 @@ var StoresList = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx_
     _createClass(StoresList, [{
         key: 'applyZoom',
         value: function applyZoom(gps, zoom) {
-            this.props.stateStore.addZoom(gps, zoom);
+            this.props.stateStore.changeMap(gps, zoom);
         }
     }, {
         key: 'render',
@@ -6849,8 +6849,10 @@ var StateStore = (_class = function () {
             this.filters.push(filter);
         }
     }, {
-        key: "addZoom",
-        value: function addZoom(gps, zoom) {
+        key: "changeMap",
+        value: function changeMap(gps) {
+            var zoom = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.json.constants.zoom;
+
             this.geo = gps;
             this.zoom = zoom;
         }
@@ -6878,7 +6880,7 @@ var StateStore = (_class = function () {
 }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "zoom", [__WEBPACK_IMPORTED_MODULE_0_mobx__["observable"]], {
     enumerable: true,
     initializer: null
-}), _applyDecoratedDescriptor(_class.prototype, "clearFilters", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "clearFilters"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "addFilters", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "addFilters"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "addZoom", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "addZoom"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "geoTotal", [__WEBPACK_IMPORTED_MODULE_0_mobx__["computed"]], Object.getOwnPropertyDescriptor(_class.prototype, "geoTotal"), _class.prototype)), _class);
+}), _applyDecoratedDescriptor(_class.prototype, "clearFilters", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "clearFilters"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "addFilters", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "addFilters"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "changeMap", [__WEBPACK_IMPORTED_MODULE_0_mobx__["action"]], Object.getOwnPropertyDescriptor(_class.prototype, "changeMap"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "geoTotal", [__WEBPACK_IMPORTED_MODULE_0_mobx__["computed"]], Object.getOwnPropertyDescriptor(_class.prototype, "geoTotal"), _class.prototype)), _class);
 
 
 /* harmony default export */ __webpack_exports__["a"] = (StateStore);
@@ -11328,6 +11330,54 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+
+/***/ }),
+/* 75 */,
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_preact__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mobx_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mobx_preact__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreView; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var StoreView = (_dec = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_mobx_preact__["connect"])(['stateStore']), _dec(_class = function (_Component) {
+    _inherits(StoreView, _Component);
+
+    function StoreView() {
+        _classCallCheck(this, StoreView);
+
+        return _possibleConstructorReturn(this, (StoreView.__proto__ || Object.getPrototypeOf(StoreView)).apply(this, arguments));
+    }
+
+    _createClass(StoreView, [{
+        key: 'render',
+        value: function render() {
+            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                'h1',
+                null,
+                'Single Store View!'
+            );
+        }
+    }]);
+
+    return StoreView;
+}(__WEBPACK_IMPORTED_MODULE_0_preact__["Component"])) || _class);
 
 
 /***/ })

@@ -46,7 +46,6 @@ class Router implements \Magento\Framework\App\RouterInterface
         if(strpos($identifier, 'storelocator') !== false) {
             $request->setModuleName('storelocator')->setControllerName('index')->setActionName('index');
         } else {
-            //There is no match
             return;
         }
 
