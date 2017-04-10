@@ -33,8 +33,8 @@
     "stores": [
         {
             "name": "Head office",
-            "addr-strt": "426 Johnston Street, Abbotsford",
-            "addr-cty": "Melbourne Victoria 3000",
+            "addr_strt": "426 Johnston Street, Abbotsford",
+            "addr_cty": "Melbourne Victoria 3000",
             "geo": { "lat": 58.4046, "lng": 16.9252 },
             "zoom": 9,
             "phone": "666 666 666",
@@ -73,8 +73,8 @@
         },
         {
             "name": "EMPORIUM",
-            "addr-strt": "Emporium Melbourne , 295 Lonsdale Street",
-            "addr-cty": "Melbourne 3000",
+            "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
+            "addr_cty": "Melbourne 3000",
             "geo": { "lat": 46.4046, "lng": 16.9252 },
             "zoom": 9,
             "phone": "777 777 777",
@@ -113,8 +113,8 @@
         },
         {
             "name": "BOURKE ST",
-            "addr-strt": "420 Bourke St",
-            "addr-cty": "Melbourne 3000",
+            "addr_strt": "420 Bourke St",
+            "addr_cty": "Melbourne 3000",
             "geo": { "lat": 34.4046, "lng": 16.9252 },
             "zoom": 9,
             "phone": "111 111 111",
@@ -153,8 +153,8 @@
         },
         {
             "name": "BOURKE ST 2",
-            "addr-strt": "420 Bourke St 2",
-            "addr-cty": "Melbourne 3000 2",
+            "addr_strt": "420 Bourke St 2",
+            "addr_cty": "Melbourne 3000 2",
             "geo": { "lat": 21.4046, "lng": 16.9252 },
             "zoom": 9,
             "phone": "111 111 111 2",

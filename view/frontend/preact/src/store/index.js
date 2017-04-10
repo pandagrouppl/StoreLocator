@@ -32,8 +32,9 @@ class StateStore {
     }
 
     @action
-    zoomShop(shop) {
-        this.geo = this.json;
+    addZoom(gps, zoom) {
+        this.geo = gps;
+        this.zoom = zoom;
     }
 
     @computed
