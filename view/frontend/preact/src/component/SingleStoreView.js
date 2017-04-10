@@ -2,11 +2,9 @@ import { h } from 'preact';
 import HoursSelectFill from './HoursSelectFill'
 
 const SingleStoreView = (props) => {
-    function zoomToStore() {
-        debugger;
+    const zoomToStore = () => {
         props.onStoreClick(props.geo, props.zoom);
-    }
-    zoomToStore();
+    };
     return (
         <li className="stores-li__store">
             <h1 className="stores-li__name" onClick={zoomToStore}>{props.name}</h1>
