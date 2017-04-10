@@ -12,6 +12,7 @@
   "dependencies": {
     "google-maps-react": "^1.0.19",
     "history": "^4.6.1",
+    "mobx": "^3.1.9",
     "mobx-preact": "^0.3.1",
     "preact": "^7.2.1",
     "preact-compat": "^3.14.3",
@@ -21,9 +22,11 @@
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
     "underscore": "^1.8.3",
     "webpack": "^2.3.3"
   }

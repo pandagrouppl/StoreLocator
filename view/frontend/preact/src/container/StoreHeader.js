@@ -1,9 +1,12 @@
 import {h, Component} from 'preact';
+import { connect } from 'mobx-preact';
 
 import GoogleApiComponent from './../component/GoogleApiComponent';
 import Maps from './Maps';
 import RegionFilter from './../component/RegionFilter';
 
+
+@connect(['stateStore'])
 export class StoreHeader extends Component {
 
     constructor() {
@@ -15,15 +18,19 @@ export class StoreHeader extends Component {
     }
 
     resetFilters() {
-
+        this.props.stateStore.clearFilters();
     }
 
     searchPostcode() {
         console.log(this.postcodeInput.value);
     }
 
+    isActiveFilter(region) {
+        return this.props.stateStore.filters.indexOf(region) > -1 ? 'filter-active' : 'filter';
+    }
+
     applyFilter(region) {
-        console.log(region);
+        this.props.stateStore.addFilters(region);
     }
 
     render() {
@@ -34,7 +41,7 @@ export class StoreHeader extends Component {
                 <section className="header-top">
                     <article>
                         {regions.map((region) => (
-                            <RegionFilter region={region}
+                            <RegionFilter className={this.isActiveFilter(region.name)} region={region.name}
                                           onFilterClick={this.applyFilter}/>
                         ))}
                     </article>
