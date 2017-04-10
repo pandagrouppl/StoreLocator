@@ -38,7 +38,9 @@ class StoreHeader extends Component {
     }
 
     isActiveFilter(region) {
-        return this.props.stateStore.filters.indexOf(region) > -1 ? 'filter-active' : 'filter';
+        return this.props.stateStore.filters.indexOf(region) > -1
+            ? 'storelocator-header__filter storelocator-header__filter__active'
+            : 'storelocator-header__filter';
     }
 
     applyFilter(region) {
@@ -48,19 +50,24 @@ class StoreHeader extends Component {
     render() {
         const { regions } = this.props;
         return(
-            <header>
-                <h1>Find nearest shop</h1>
-                <section className="header-top">
-                    <article>
+            <header className="storelocator-header">
+                <h1 className="storelocator-header__title">Find nearest shop</h1>
+                <section className="storelocator-header__row">
+                    <article className="storelocator-header__filters">
                         {regions.map((region) => (
                             <RegionFilter className={this.isActiveFilter(region.name)} region={region.name}
                                           onFilterClick={this.applyFilter}/>
                         ))}
                     </article>
                     <article>
-                        <a onClick={this.resetFilters}>Reset</a>
-                        <input ref={(input) => { this.postcodeInput = input; }}  type="text" name="postcode"/>
-                        <button onClick={this.searchPostcode}>Search</button>
+                        <a className="storelocator-header__reset" onClick={this.resetFilters}>Reset</a>
+                        <input className="storelocator-header__input"
+                               ref={(input) => { this.postcodeInput = input; }}
+                               placeholder="Postcode"
+                               type="text"
+                               name="postcode"
+                        />
+                        <button className="storelocator-header__search" onClick={this.searchPostcode}>Search</button>
                     </article>
                 </section>
                 <Maps google={this.props.google}/>
