@@ -5,7 +5,7 @@ import SingleStore from './../component/SingleStore'
 
 
 @connect(['stateStore'])
-export default class AllStores extends Component {
+export default class StoresView extends Component {
 
     render () {
         const {stores} = this.props.stateStore;
