@@ -1,11 +1,11 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
-import SingleStoreView from './../component/SingleStoreView'
+import SingleStore from './../component/SingleStore'
 
 
 @connect(['stateStore'])
-export default class StoresView extends Component {
+export default class StoresList extends Component {
 
     constructor() {
         super();
@@ -20,7 +20,7 @@ export default class StoresView extends Component {
         const {stores} = this.props.stateStore;
         return (
             <ul className="stores-li">
-                {stores.map((store) => <SingleStoreView onStoreClick={this.applyZoom} {...store}/>)}
+                {stores.map((store) => <SingleStore onStoreClick={this.applyZoom} {...store}/>)}
             </ul>
         );
     }

@@ -7,7 +7,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 import StateStore from './store/';
 import StoreHeader from './container/StoreHeader';
-import StoresView from './container/StoresView';
+import StoresList from './container/StoresList';
 
 const history = createBrowserHistory();
 
@@ -20,7 +20,7 @@ const App = (props) => {
             <Router history={history}>
                 <div>
                     <StoreHeader regions={json.regions}/>
-                    <Route path="/" component={() => (<StoresView stores={json.stores}/>)}/>
+                    <Route path="/" component={() => (<StoresList stores={json.stores}/>)}/>
                 </div>
             </Router>
         </Provider>
