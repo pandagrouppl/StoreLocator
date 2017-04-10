@@ -1,7 +1,7 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import HoursSelectFill from './HoursSelectFill'
 
-const SingleStore = (props) =>
+const SingleStoreView = (props) =>
     (
         <li class="stores-li__store">
             <h1 class="stores-li__name">{props.name}</h1>
@@ -14,4 +14,4 @@ const SingleStore = (props) =>
         </li>
     );
 
-export default SingleStore;
+export default SingleStoreView;
