@@ -3,6 +3,8 @@ import {h, Component} from 'preact';
 import GoogleApiComponent from './../component/GoogleApiComponent';
 import Maps from './Maps';
 
+import StoresFilters from './../component/StoresFilters';
+
 export class StoreHeader extends Component {
 
     constructor() {

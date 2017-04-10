@@ -1,14 +1,11 @@
 import { h, Component} from 'preact';
 import SingleStore from './../component/SingleStore'
+import filterArray from './../component/filterArray'
 
 export default class AllStores extends Component {
 
-    FilterArray (arr, filter_by, filter = '') {
-        return filter ? arr.filter((q) => q[filter_by] == filter) : arr;
-    }
-
     render () {
-        const filtered = this.FilterArray(this.props.stores, 'region', '');
+        const filtered = filterArray(this.props.stores, 'region', 'VIC');
         return (
             <ul className="stores-li">
             {filtered.map((store) => <SingleStore {...store}/>)}
