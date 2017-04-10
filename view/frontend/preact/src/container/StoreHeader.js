@@ -22,7 +22,11 @@ class StoreHeader extends Component {
     }
 
     searchPostcode() {
-        console.log(this.props.google.maps.Geocoder());
+        const geocode = this.props.google.maps.Geocoder();
+        console.log(geocode);
+        geocode.geocode({ 'address': 'Stablewskiego'}, function(results, status) {
+            console.log(results);
+        });
         console.log(this.postcodeInput.value);
         //this.props.google.maps.Geocode( { 'address': address}, function(results, status) {
         //    if (status == 'OK') {
@@ -71,5 +75,5 @@ class StoreHeader extends Component {
 
 
 export default GoogleApiComponent({
-    apiKey: 'AIzaSyA56GAEym7kDnZEbGktGygTzg4txLqkiac'
+    apiKey: 'AIzaSyBu3pjyCmHyMo8h98fCZv32QVbBf8bNqSY'
 })(StoreHeader);

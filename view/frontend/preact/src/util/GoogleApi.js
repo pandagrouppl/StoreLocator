@@ -34,6 +34,7 @@ export const GoogleApi = function(opts) {
             language: language,
             region: region
         };
+        console.log(params);
 
         let paramStr = Object.keys(params)
             .filter(k => !!params[k])

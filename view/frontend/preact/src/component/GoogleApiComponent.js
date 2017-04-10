@@ -8,9 +8,8 @@ const defaultMapConfig = {};
 const defaultCreateCache = (options) => {
     options = options || {};
     const apiKey = options.apiKey;
-    const libraries = options.libraries || ['places'];
+    const libraries = options.libraries || ['places', 'geometry'];
     const version = options.version || '3';
-
     return ScriptCache({
         google: GoogleApi({apiKey: apiKey, libraries: libraries, version: version})
     });
@@ -18,7 +17,7 @@ const defaultCreateCache = (options) => {
 
 export const wrapper = (options) => (WrappedComponent) => {
     const apiKey = options.apiKey;
-    const libraries = options.libraries || ['places', 'geometry', 'drawing'];
+    const libraries = ['places', 'geometry', 'drawing'];
     const version = options.version || '3';
     const createCache = options.createCache || defaultCreateCache;
 
