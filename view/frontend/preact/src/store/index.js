@@ -31,8 +31,9 @@ class StateStore {
         this.filters.push(filter);
     }
 
-    @action zoomShop() {
-        //const region =
+    @action
+    zoomShop(shop) {
+        this.geo = this.json;
     }
 
     @computed
