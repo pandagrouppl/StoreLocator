@@ -31,6 +31,10 @@ class StateStore {
         this.filters.push(filter);
     }
 
+    @action zoomShop() {
+        //const region =
+    }
+
     @computed
     get geoTotal() {
         return { "lat": this.geo.lat, "lng": this.geo.lng };

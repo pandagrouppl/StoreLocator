@@ -1,27 +1,19 @@
-import { h, Component} from 'preact';
+import { h } from 'preact';
 
-export default class HoursSelectFill extends Component {
-    constructor() {
-        super();
-    }
+const HoursSelectFill = (props) => {
+    const closedCheck = (hours_arr) => {
+        return (hours_arr[0].toLowerCase() == 'closed') ? hours_arr[0] : hours_arr.join(' - ');
+    };
 
-    closedCheck(hours_arr) {
-        if (hours_arr[0].toLowerCase() == 'closed') {
-            return hours_arr[0];
-        } else {
-            return hours_arr.join(' - ');
-        }
-    }
+    return (
+        <div class="stores-li__hours-wrapper">
+            <select class="stores-li__hours">
+                <option>STORE HOURS</option>
+                {Object.keys(props.day).map((days) => <option>{days} : {closedCheck(props.day[days])}</option>)}
+            </select>
+            <figure class="stores-li__hours-arrow"></figure>
+        </div>
+    )
+};
 
-    render () {
-        return (
-            <div class="stores-li__hours-wrapper">
-                <select class="stores-li__hours">
-                    <option>STORE HOURS</option>
-            {Object.keys(this.props.day).map((days) => <option>{days} : {this.closedCheck(this.props.day[days])}</option>)}
-                </select>
-                <figure class="stores-li__hours-arrow"></figure>
-            </div>
-        )
-    }
-}
+export default HoursSelectFill;
