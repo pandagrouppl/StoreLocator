@@ -22,23 +22,11 @@ class StoreHeader extends Component {
     }
 
     searchPostcode() {
-        const geocode = this.props.google.maps.Geocoder();
-        console.log(geocode);
-        geocode.geocode({ 'address': 'Stablewskiego'}, function(results, status) {
-            console.log(results);
+        const geocode = new this.props.google.maps.Geocoder();
+        geocode.geocode({ 'address': '61-213'}, function(results, status) {
+            const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
+            console.log(newGeo);
         });
-        console.log(this.postcodeInput.value);
-        //this.props.google.maps.Geocode( { 'address': address}, function(results, status) {
-        //    if (status == 'OK') {
-        //        map.setCenter(results[0].geometry.location);
-        //        var marker = new google.maps.Marker({
-        //            map: map,
-        //            position: results[0].geometry.location
-        //        });
-        //    } else {
-        //        alert('Geocode was not successful for the following reason: ' + status);
-        //    }
-        //});
     }
 
     isActiveFilter(region) {
