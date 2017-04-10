@@ -3,18 +3,45 @@
 
 <script type="text/javascript">
 
-    var data_json= {
-        "regions": ["VIC", "SA", "QLD", "NSW", "ACT"],
+    var data_json =
+    {
         "constants": {
-            "default_gps": [-37.811895, 144.963013]
+            "geo": { "lat": 52.4046, "lng": 16.9252 },
+            "zoom": 7
         },
+        "regions": [
+            {
+                "name": "VIC",
+                "geo": { "lat": 58.4046, "lng": 16.9252 },
+                "zoom": 9
+            },
+            {
+                "name": "SA",
+                "geo": { "lat": 58.4046, "lng": 16.9252 },
+                "zoom": 9
+            },
+            {
+                "name": "QLD",
+                "geo": { "lat": 58.4046, "lng": 16.9252 },
+                "zoom": 9
+            },
+            {
+                "name": "NSW",
+                "geo": { "lat": 58.4046, "lng": 16.9252 },
+                "zoom": 9
+            },
+            {
+                "name": "ACT",
+                "geo": { "lat": 58.4046, "lng": 16.9252 },
+                "zoom": 9
+            }
+        ],
         "stores": [
             {
                 "name": "Head office",
-                "addr_strt": "426 Johnston Street, Abbotsford",
-                "addr_cty": "Melbourne Victoria 3000",
-                "region": "VIC",
-                "gps": "",
+                "addr-strt": "426 Johnston Street, Abbotsford",
+                "addr-cty": "Melbourne Victoria 3000",
+                "geo": [],
                 "phone": "666 666 666",
                 "email": "info@peterjacksons.com",
                 "hours": {
@@ -50,10 +77,9 @@
             },
             {
                 "name": "EMPORIUM",
-                "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
-                "addr_cty": "Melbourne 3000",
-                "region": "SA",
-                "gps": "",
+                "addr-strt": "Emporium Melbourne , 295 Lonsdale Street",
+                "addr-cty": "Melbourne 3000",
+                "geo": [],
                 "phone": "777 777 777",
                 "email": "emporium@peterjacksons.com",
                 "hours": {
@@ -89,10 +115,9 @@
             },
             {
                 "name": "BOURKE ST",
-                "addr_strt": "420 Bourke St",
-                "addr_cty": "Melbourne 3000",
-                "region": "VIC",
-                "gps": "",
+                "addr-strt": "420 Bourke St",
+                "addr-cty": "Melbourne 3000",
+                "geo": [],
                 "phone": "111 111 111",
                 "email": "bourke@peterjacksons.com",
                 "hours": {
@@ -128,10 +153,9 @@
             },
             {
                 "name": "BOURKE ST 2",
-                "addr_strt": "420 Bourke St 2",
-                "addr_cty": "Melbourne 3000 2",
-                "region": "NSW",
-                "gps": "",
+                "addr-strt": "420 Bourke St 2",
+                "addr-cty": "Melbourne 3000 2",
+                "geo": [],
                 "phone": "111 111 111 2",
                 "email": "bourke@peterjacksons.com 2",
                 "hours": {
@@ -167,6 +191,7 @@
             }
         ]
     };
+
 
     require(['store-locator'], function(StoreLocator) {
         StoreLocator.init(data_json);

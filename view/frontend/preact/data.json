@@ -1,11 +1,41 @@
 {
-    "regions": ["VIC", "SA", "QLD", "NSW", "ACT"],
+    "constants": {
+        "geo": { "lat": 62.4046, "lng": 16.9252 },
+        "zoom": 7
+    },
+    "regions": [
+        {
+            "name": "VIC",
+            "geo": [],
+            "zoom": 9
+        },
+        {
+            "name": "SA",
+            "geo": [],
+            "zoom": 9
+        },
+        {
+            "name": "QLD",
+            "geo": [],
+            "zoom": 9
+        },
+        {
+            "name": "NSW",
+            "geo": [],
+            "zoom": 9
+        },
+        {
+            "name": "ACT",
+            "geo": [],
+            "zoom": 9
+        }
+    ],
     "stores": [
         {
             "name": "Head office",
             "addr-strt": "426 Johnston Street, Abbotsford",
             "addr-cty": "Melbourne Victoria 3000",
-            "gps": "",
+            "geo": [],
             "phone": "666 666 666",
             "email": "info@peterjacksons.com",
             "hours": {
@@ -43,7 +73,7 @@
             "name": "EMPORIUM",
             "addr-strt": "Emporium Melbourne , 295 Lonsdale Street",
             "addr-cty": "Melbourne 3000",
-            "gps": "",
+            "geo": [],
             "phone": "777 777 777",
             "email": "emporium@peterjacksons.com",
             "hours": {
@@ -81,7 +111,7 @@
             "name": "BOURKE ST",
             "addr-strt": "420 Bourke St",
             "addr-cty": "Melbourne 3000",
-            "gps": "",
+            "geo": [],
             "phone": "111 111 111",
             "email": "bourke@peterjacksons.com",
             "hours": {
@@ -119,7 +149,7 @@
             "name": "BOURKE ST 2",
             "addr-strt": "420 Bourke St 2",
             "addr-cty": "Melbourne 3000 2",
-            "gps": "",
+            "geo": [],
             "phone": "111 111 111 2",
             "email": "bourke@peterjacksons.com 2",
             "hours": {
