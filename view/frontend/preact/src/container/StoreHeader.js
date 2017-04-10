@@ -12,6 +12,7 @@ class StoreHeader extends Component {
     constructor() {
         super();
         this.postcodeInput = null;
+        this.geocode = null;
         this.applyFilter = this.applyFilter.bind(this);
         this.resetFilters = this.resetFilters.bind(this);
         this.searchPostcode = this.searchPostcode.bind(this);
@@ -22,10 +23,17 @@ class StoreHeader extends Component {
     }
 
     searchPostcode() {
-        const geocode = new this.props.google.maps.Geocoder();
-        geocode.geocode({ 'address': '61-213'}, function(results, status) {
+        if(!this.geocode) {
+            this.geocode = new this.props.google.maps.Geocoder();
+        }
+        this.geocode.geocode({
+            componentRestrictions: {
+                country: 'AU',
+                postalCode: this.postcodeInput.value
+            }
+        }, (results, status) => {
             const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
-            console.log(newGeo);
+            this.props.stateStore.changeMap(newGeo);
         });
     }
 

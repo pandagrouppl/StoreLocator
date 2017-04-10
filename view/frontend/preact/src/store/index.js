@@ -32,7 +32,7 @@ class StateStore {
     }
 
     @action
-    addZoom(gps, zoom) {
+    changeMap(gps, zoom = this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
     }

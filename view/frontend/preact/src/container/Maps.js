@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
-import Map from 'google-maps-react';
-import {Marker} from 'google-maps-react/dist';
+import Map, {Marker} from 'google-maps-react';
+//import  from 'google-maps-react/dist';
 
 
 @connect(['stateStore'])
