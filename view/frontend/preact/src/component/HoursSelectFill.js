@@ -1,12 +1,8 @@
 import { h } from 'preact';
 
 const HoursSelectFill = (props) => {
-    const closedCheck(hours_arr) => {
-        if (hours_arr[0].toLowerCase() == 'closed') {
-            return hours_arr[0];
-        } else {
-            return hours_arr.join(' - ');
-        }
+    const closedCheck = (hours_arr) => {
+        return (hours_arr[0].toLowerCase() == 'closed') ? hours_arr[0] : hours_arr.join(' - ');
     };
 
     return (
