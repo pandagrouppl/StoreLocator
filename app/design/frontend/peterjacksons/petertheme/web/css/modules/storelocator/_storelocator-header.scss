@@ -1,0 +1,47 @@
+.storelocator-header {
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+
+    &__filters {
+        display: flex;
+    }
+
+    &__filter {
+        font-weight: bold;
+        font-size: 19px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    &__reset {
+        color: $grey-dark;
+        text-decoration: underline;
+        cursor: pointer;
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    &__input {
+        background: #efefef;
+        border: 0;
+        border-radius: 5px;
+        color: $grey-dark;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 15px 0;
+    }
+
+    &__search {
+        background: $grey-dark;
+        border: 0;
+        border-radius: 5px;
+        margin: 0 10px;
+        padding: 15px 30px;
+        color: $white;
+        font-weight: bold;
+    }
+}
