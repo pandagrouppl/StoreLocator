@@ -44,7 +44,7 @@ class Router implements \Magento\Framework\App\RouterInterface
         $identifier = trim($request->getPathInfo(), '/');
 
         if(strpos($identifier, 'storelocator') !== false) {
-            $request->setModuleName('storelocator')->setControllerName('index')->setActionName('index')->setParam('page_id', 5);
+            $request->setModuleName('storelocator')->setControllerName('index')->setActionName('index');
         } else {
             //There is no match
             return;
