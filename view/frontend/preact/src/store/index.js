@@ -13,13 +13,17 @@ class StateStore {
         this.stores = json.stores;
     }
 
-    @action clearFilters() {
+    @action
+    clearFilters() {
         this.geo = this.json.constants.geo;
         this.zoom = this.json.constants.zoom;
+        this.stores = this.json.stores;
         this.filters = [];
     }
 
-    @action addFilters(filter) {
+    @action
+    addFilters(filter) {
+        this.filters = [];
         const newRegion = this.json.regions.filter((region) => region.name == filter)[0];
         this.stores = this.json.stores.filter((store) => store.region == filter);
         this.geo = newRegion.geo;
@@ -27,7 +31,8 @@ class StateStore {
         this.filters.push(filter);
     }
 
-    @computed get geoTotal() {
+    @computed
+    get geoTotal() {
         return { "lat": this.geo.lat, "lng": this.geo.lng };
     }
 }

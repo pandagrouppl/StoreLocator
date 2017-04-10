@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
-import Map from 'google-maps-react'
+import Map from 'google-maps-react';
+import {Marker} from 'google-maps-react/dist';
+
 
 @connect(['stateStore'])
 export default class Maps extends Component {
@@ -11,9 +13,11 @@ export default class Maps extends Component {
             <Map google={this.props.google}
                  zoom={this.props.stateStore.zoom}
                  style={{width: '100%', height: '400px', position: 'relative'}}
-                 initialCenter={{ lat: this.props.stateStore.geo.lat, lng: this.props.stateStore.geo.lng }}
-                 center={{ lat: this.props.stateStore.geo.lat, lng: this.props.stateStore.geo.lng }}
-            >
+                 initialCenter={this.props.stateStore.geoTotal}
+                 center={this.props.stateStore.geoTotal}>
+                    {this.props.stateStore.stores.map((store) => (
+                        <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} />
+                    ))}
             </Map>
             </section>
         );

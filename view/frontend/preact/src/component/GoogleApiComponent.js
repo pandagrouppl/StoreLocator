@@ -18,7 +18,7 @@ const defaultCreateCache = (options) => {
 
 export const wrapper = (options) => (WrappedComponent) => {
     const apiKey = options.apiKey;
-    const libraries = options.libraries || ['places'];
+    const libraries = options.libraries || ['places', 'geometry', 'drawing'];
     const version = options.version || '3';
     const createCache = options.createCache || defaultCreateCache;
 
