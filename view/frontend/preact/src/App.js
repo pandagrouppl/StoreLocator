@@ -12,7 +12,7 @@ import StoreView from './container/StoreView'
 
 const history = createBrowserHistory();
 
-const App = (props, { match }) => {
+const App = (props) => {
     const { json } = props;
     const stateStore = new StateStore(json);
 
@@ -23,24 +23,12 @@ const App = (props, { match }) => {
                 history={history}>
                 <div>
                     <StoreHeader regions={json.regions}/>
-                    <Route path="/" component={() => (<StoresList stores={json.stores}/>)} />
+                    <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
                     <Route path="/:id" component={StoreView}/>
-
-                    <ul>
-                        <li><Link to="/a">StoreView</Link></li>
-                        <li><Link to="/b">StoreView2</Link></li>
-                    </ul>
                 </div>
             </BrowserRouter>
         </Provider>
     )
 };
-
-const Child = () => (
-    <div>
-        <h3>ID: {match.params.id}</h3>
-    </div>
-);
-
 
 export default App;
