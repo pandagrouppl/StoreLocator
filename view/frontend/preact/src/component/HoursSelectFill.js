@@ -6,9 +6,9 @@ const HoursSelectFill = (props) => {
         <div class="stores-li__hours-wrapper">
             <select class="stores-li__hours">
                 <option>STORE HOURS</option>
-                {Object.keys(props.day).map((day) => {
-                    return <HoursFormatter day={day} hours={props.day[day]} wrapper="option"/>
-                    })}
+                {Object.keys(props.day).map((day) => (
+                     <HoursFormatter day={day} hours={props.day[day]} wrapper="option"/>
+                ))}
             </select>
             <figure class="stores-li__hours-arrow"></figure>
         </div>

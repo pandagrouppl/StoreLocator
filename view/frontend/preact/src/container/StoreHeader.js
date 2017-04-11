@@ -7,7 +7,7 @@ import RegionFilter from './../component/RegionFilter';
 
 
 @connect(['stateStore'])
-class StoreHeader extends Component {
+export default class StoreHeader extends Component {
 
     constructor() {
         super();
@@ -75,8 +75,3 @@ class StoreHeader extends Component {
         )
     }
 }
-
-
-export default GoogleApiComponent({
-    apiKey: 'AIzaSyBu3pjyCmHyMo8h98fCZv32QVbBf8bNqSY'
-})(StoreHeader);

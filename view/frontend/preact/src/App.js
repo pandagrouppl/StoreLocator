@@ -1,7 +1,7 @@
 import 'preact/devtools';
 import { h, Component } from 'preact';
 import { Provider } from 'mobx-preact'
-//import { observable } from 'mobx'
+
 import { Router, Route, Link, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
@@ -9,6 +9,8 @@ import StateStore from './store/';
 import StoreHeader from './container/StoreHeader';
 import StoresList from './container/StoresList';
 import StoreView from './container/StoreView'
+
+import GoogleApiComponent from './component/GoogleApiComponent';
 
 const history = createBrowserHistory();
 
@@ -22,7 +24,7 @@ const App = (props) => {
                 basename='/storelocator'
                 history={history}>
                 <div>
-                    <StoreHeader regions={json.regions}/>
+                    <StoreHeader google={props.google} regions={json.regions}/>
                     <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
                     <Route path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
                 </div>
@@ -31,4 +33,6 @@ const App = (props) => {
     )
 };
 
-export default App;
+export default GoogleApiComponent({
+    apiKey: 'AIzaSyBu3pjyCmHyMo8h98fCZv32QVbBf8bNqSY'
+})(App);
