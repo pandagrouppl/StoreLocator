@@ -24,7 +24,7 @@ const App = (props) => {
                 <div>
                     <StoreHeader regions={json.regions}/>
                     <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
-                    <Route path="/:id" component={StoreView}/>
+                    <Route path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
                 </div>
             </BrowserRouter>
         </Provider>
