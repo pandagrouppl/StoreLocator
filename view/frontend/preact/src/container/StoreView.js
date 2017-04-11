@@ -10,3 +10,4 @@ export default class StoreView extends Component {
         );
     }
 }
+

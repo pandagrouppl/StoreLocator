@@ -33,6 +33,7 @@
     "stores": [
         {
             "name": "Head office",
+            "id": "head-office",
             "addr_strt": "426 Johnston Street, Abbotsford",
             "addr_cty": "Melbourne Victoria 3000",
             "geo": { "lat": 58.4046, "lng": 16.9252 },
@@ -73,6 +74,7 @@
         },
         {
             "name": "EMPORIUM",
+            "id": "emporium",
             "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
             "addr_cty": "Melbourne 3000",
             "geo": { "lat": 46.4046, "lng": 16.9252 },
@@ -113,6 +115,7 @@
         },
         {
             "name": "BOURKE ST",
+            "id": "bourke-st",
             "addr_strt": "420 Bourke St",
             "addr_cty": "Melbourne 3000",
             "geo": { "lat": 34.4046, "lng": 16.9252 },
@@ -153,6 +156,7 @@
         },
         {
             "name": "BOURKE ST 2",
+            "id": "bourke-st-2",
             "addr_strt": "420 Bourke St 2",
             "addr_cty": "Melbourne 3000 2",
             "geo": { "lat": 21.4046, "lng": 16.9252 },
