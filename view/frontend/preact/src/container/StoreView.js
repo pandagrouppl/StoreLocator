@@ -1,6 +1,9 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
+import GoogleApiComponent from './../component/GoogleApiComponent';
+import Maps from './Maps';
+
 import HoursSpanFill from './../component/HoursSpanFill'
 
 @connect(['stateStore'])
@@ -22,6 +25,7 @@ export default class StoreView extends Component {
             case 'hours':
                 return (
                     <div className="tabs__hours">
+                        <h2 className="tabs__h2">Opening Hours</h2>
                         <HoursSpanFill day={this.store.hours}/>
                     </div>
                 );
@@ -40,25 +44,27 @@ export default class StoreView extends Component {
         this.setState({tab: selected});
     }
 
+    setTabClass(selected) {
+        return (this.state.tab == selected) ? "tabs__tab tabs__tab--active" : "tabs__tab";
+    }
 
     render () {
+        const tab1 = 'hours';
+        const tab2 = 'directions';
         return (
             <div className="store-view">
                 <div className="store-view__store-card">
-                    <h1>{this.store.name}</h1>
-                    <li className="stores-li__store">
-                        <h1 className="stores-li__name">{this.store.name}</h1>
-                        <ul className="stores-li__credentials">
-                            <li><i className="icon-address"></i>{this.store.addr_strt} {this.store.addr_cty}</li>
-                            <li><i className="icon-mobile"></i><a href={'tel:'+this.store.phone}>{this.store.phone}</a></li>
-                            <li><i className="icon-envelope"></i><a href={'mailto:'+this.store.email}>{this.store.email}</a></li>
+                        <h1 className="store-view__name">{this.store.name}</h1>
+                        <ul className="store-view__credentials">
+                            <li><span class="store-view__label">Address:</span>{this.store.addr_strt} {this.store.addr_cty}</li>
+                            <li><span class="store-view__label">Phone:</span><a href={'tel:'+this.store.phone}>{this.store.phone}</a></li>
+                            <li><span class="store-view__label">Email:</span><a href={'mailto:'+this.store.email}>{this.store.email}</a></li>
                         </ul>
-                    </li>
                 </div>
                 <div className="store-view__tabs tabs">
                     <div className="tabs__tab-bar">
-                        <div className="tabs__tab-hours" onClick={() => this.setTab('hours')}>Hours</div>
-                        <div className="tabs__tab-directions" onClick={() => this.setTab('directions')}>Directions</div>
+                        <div className={this.setTabClass(tab1)} onClick={() => this.setTab(tab1)}>Store Information</div>
+                        <div className={this.setTabClass(tab2)} onClick={() => this.setTab(tab2)}>Directions</div>
                     </div>
                     <div className="tabs__tab-body">
                         {this.renderTab(this.state.tab)}

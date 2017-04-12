@@ -9,8 +9,9 @@ export default class Maps extends Component {
 
     render() {
         return(
-            <section style={{width: '100%', height: '400px', position: 'relative', overflow: 'hidden'}}>
-            <Map google={this.props.google}
+            <section  style={{width: '100%', height: '400px', position: 'relative', overflow: 'hidden'}}>
+            <Map className='google-maps-container'
+                 google={this.props.google}
                  zoom={this.props.stateStore.zoom}
                  style={{width: '100%', height: '400px', position: 'relative'}}
                  initialCenter={this.props.stateStore.geoTotal}
