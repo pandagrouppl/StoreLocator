@@ -72,6 +72,10 @@
 @import "modules/cms/contact-us";
 @import "modules/cms/youtube-player";
 
-@import "modules/storelocator/storelocator-main";
+
+@import "modules/storelocator/storelocator";
 @import "modules/storelocator/stores-li";
 @import "modules/storelocator/storelocator-header";
+@import "modules/storelocator/store-view";
+@import "modules/storelocator/tabs";
+@import "modules/storelocator/hours-wrapper";

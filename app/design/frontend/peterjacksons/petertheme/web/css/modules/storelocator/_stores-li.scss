@@ -1,19 +1,36 @@
 .stores-li {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid black;
     max-width: 1120px;
+
+    margin: 0 auto;
 
     &__store {
         flex: 0 1 25%;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 10px 10px 40px 10px;
         min-width: 250px;
+        border-bottom: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    ul, li, div {
-        border: 1px solid black;
+    &__name {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: league_gothic;
+        font-weight: normal;
+        padding: 14px 0px 8px 0px;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    &__credentials {
+        font-size: 13px;
+        li {
+            margin-bottom: 10px;
+        }
     }
 
     &__hours-wrapper {
@@ -26,5 +43,24 @@
 
     &__hours-arrow {
         @include form-select-arrow();
+    }
+}
+
+@media screen and (max-width: $lg-breakpoint) {
+    .stores-li {
+        max-width: 750px;
+
+        &__store {
+            flex: 0 1 33%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .stores-li {
+
+        &__store {
+            flex: 1 1;
+        }
     }
 }

@@ -1,0 +1,44 @@
+.store-view {
+    max-width: 960px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        box-sizing: border-box;
+    }
+
+    &__store-card, &__tabs {
+        flex: 1 1 50%;
+        padding: 10px;
+    }
+
+    &__name {
+        font-size: 40px;
+        font-family: league_gothic;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0 0 20px 0;
+    }
+
+    &__credentials {
+
+        li {
+            display: flex;
+        }
+    }
+
+    &__label {
+        flex: 0 0 25%;
+        display: block;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: $md-breakpoint) {
+    .store-view {
+        &__store-card, &__tabs {
+            flex: 1 1 100%;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.storelocator-index-index {
+
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.storelocator {
+    letter-spacing: 1px;
+
+    a, .storelocator-header__filter, .stores-li__name {
+        color: #222;
+
+        &:hover {
+            color: #999;
+        }
+
+    }
+}
