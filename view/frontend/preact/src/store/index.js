@@ -12,7 +12,7 @@ class StateStore {
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
-        this.waypoints = {start: 'poznań', stop: 'brno'}
+        this.waypoints = {start: '', stop: ''}
     }
 
     @action

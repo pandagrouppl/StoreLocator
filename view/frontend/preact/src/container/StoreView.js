@@ -31,7 +31,7 @@ export default class StoreView extends Component {
                 break;
             case 'directions':
                 return (
-                    <DirectionsTab />
+                    <DirectionsTab address={this.store.addr_strt + ' ' + this.store.addr_cty}/>
                 );
                 break;
         }
