@@ -14,6 +14,7 @@ export default class StoreView extends Component {
             tab: 'hours'
         };
         this.store = props.stores.find(this.findStore, router.route.match.params.id);
+        //this.props.stateStore.filterVisibility(false);
     }
 
     findStore(q) {

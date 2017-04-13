@@ -7,9 +7,10 @@ import SingleStore from './../component/SingleStore'
 @connect(['stateStore'])
 export default class StoresList extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.applyZoom = this.applyZoom.bind(this);
+        //this.props.stateStore.filterVisibility(true);
     }
 
     applyZoom(gps, zoom) {

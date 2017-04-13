@@ -5,12 +5,14 @@ class StateStore {
     @observable stores = [];
     @observable geo;
     @observable zoom;
+    @observable showFilter;
 
     constructor(json) {
         this.json = json;
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
+        this.showFilter = true;
     }
 
     @action
@@ -35,6 +37,11 @@ class StateStore {
     changeMap(gps, zoom = this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
+    }
+
+    @action
+    filterVisibility(filter) {
+        this.showFilter = filter;
     }
 
     @computed
