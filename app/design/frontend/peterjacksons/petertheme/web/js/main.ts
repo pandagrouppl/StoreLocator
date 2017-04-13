@@ -16,13 +16,6 @@ export = class Main {
     }
 
     start() {
-
-        let m1 = new Module1.ModuleOne();
-        let m2 = new Module2.ModuleTwo();
-
-        m1.sayHelloTo("David Wesst");
-        m2.sayHelloTo("David Wesst");
-
         $(() =>  {
             const inliners = new Inliners.Inliners();
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
