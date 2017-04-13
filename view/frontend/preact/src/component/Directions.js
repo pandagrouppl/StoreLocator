@@ -23,6 +23,7 @@ export class Directions extends Component {
         directionsService.route(request, (result, status) => {
             if (status == 'OK') {
                 directionsDisplay.setDirections(result);
+                console.log('result', result);
             }
         });
 

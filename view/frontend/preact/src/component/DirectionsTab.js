@@ -21,17 +21,27 @@ export default class DirectionsTab extends Component {
         event.preventDefault();
     }
 
+    swapAddress() {
+        const w = this.state.start;
+        this.setState({
+            start: this.state.stop,
+            stop: w});
+    }
+
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Start:
-                    <input name="start" type="text" value={this.state.start} onChange={this.handleChange} />
-                    Stop:
-                    <input name="stop" type="text" value={this.state.stop} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Get Directions" />
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit} method="post">
+                    <label>
+                        Start:
+                        <input name="start" type="text" value={this.state.start} onChange={this.handleChange} />
+                        Stop:
+                        <input name="stop" type="text" value={this.state.stop} onChange={this.handleChange} />
+                    </label>
+                    <input type="submit" value="Get Directions" />
+                </form>
+                <button onClick={() => {this.swapAddress()}}>swap</button>
+            </div>
         );
     }
 }
