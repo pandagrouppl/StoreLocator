@@ -5,12 +5,14 @@ class StateStore {
     @observable stores = [];
     @observable geo;
     @observable zoom;
+    @observable waypoints;
 
     constructor(json) {
         this.json = json;
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
+        this.waypoints = {start: 'poznań', stop: 'brno'}
     }
 
     @action
@@ -35,6 +37,11 @@ class StateStore {
     changeMap(gps, zoom = this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
+    }
+
+    @action
+    updateWaypoints(start,stop) {
+        this.waypoints = {start: start, stop: stop}
     }
 
     @computed

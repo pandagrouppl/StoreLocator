@@ -1,17 +1,16 @@
 import { h, Component } from 'preact';
-import { connect } from 'mobx-preact';
 
 import GoogleApiComponent from './../component/GoogleApiComponent';
 import Maps from './Maps';
 
+import DirectionsTab from './../component/DirectionsTab'
 import HoursSpanFill from './../component/HoursSpanFill'
 
-@connect(['stateStore'])
 export default class StoreView extends Component {
     constructor(props, {router}) {
         super(props);
         this.state = {
-            tab: 'hours'
+            tab: 'directions'
         };
         this.store = props.stores.find(this.findStore, router.route.match.params.id);
     }
@@ -32,9 +31,7 @@ export default class StoreView extends Component {
                 break;
             case 'directions':
                 return (
-                    <div className="tabs__directions">
-                        Directions
-                    </div>
+                    <DirectionsTab />
                 );
                 break;
         }

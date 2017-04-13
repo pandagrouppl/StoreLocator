@@ -21,7 +21,7 @@ export default class Maps extends Component {
                     {this.props.stateStore.stores.map((store) => (
                         <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} />
                     ))}
-                <Directions points={{start: 'Warszawa', stop: 'Gorzów Wlkp.'}} />
+                <Directions points={this.props.stateStore.waypoints} />
             </Map>
             </section>
         );
