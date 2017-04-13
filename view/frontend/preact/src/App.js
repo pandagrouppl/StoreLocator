@@ -5,6 +5,7 @@ import { Provider } from 'mobx-preact'
 import { Route, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
+import Directions from './component/Directions'
 import StateStore from './store/';
 import StoreHeader from './container/StoreHeader';
 import StoresList from './container/StoresList';
@@ -24,6 +25,7 @@ const App = (props) => {
                 basename='/storelocator'
                 history={history}>
                 <div>
+                    <Directions google={props.google} />
                     <StoreHeader google={props.google} regions={json.regions}/>
                     <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
                     <Route google={props.google} path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
@@ -34,5 +36,5 @@ const App = (props) => {
 };
 
 export default GoogleApiComponent({
-    apiKey: 'AIzaSyBu3pjyCmHyMo8h98fCZv32QVbBf8bNqSY'
+    apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
 })(App);

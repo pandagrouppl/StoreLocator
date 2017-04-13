@@ -3,6 +3,8 @@ import { connect } from 'mobx-preact';
 import Map, {Marker} from 'google-maps-react';
 //import  from 'google-maps-react/dist';
 
+import Directions from '../component/Directions'
+
 
 @connect(['stateStore'])
 export default class Maps extends Component {
@@ -19,6 +21,7 @@ export default class Maps extends Component {
                     {this.props.stateStore.stores.map((store) => (
                         <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} />
                     ))}
+                <Directions />
             </Map>
             </section>
         );
