@@ -36,5 +36,5 @@ const App = (props) => {
 };
 
 export default GoogleApiComponent({
-    apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo'
+    apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo' //nie nasze API!
 })(App);
