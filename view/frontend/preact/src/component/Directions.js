@@ -13,11 +13,9 @@ export class Directions extends Component {
         const directionsService = new this.props.google.maps.DirectionsService();
         const directionsDisplay = new this.props.google.maps.DirectionsRenderer();
         directionsDisplay.setMap(this.props.map);
-        const start = 'chicago, il';
-        const end = 'st louis, mo';
         const request = {
-            origin: start,
-            destination: end,
+            origin: this.props.points.start,
+            destination: this.props.points.stop,
             travelMode: 'DRIVING'
         };
         directionsService.route(request, function(result, status) {

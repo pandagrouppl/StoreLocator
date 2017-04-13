@@ -25,7 +25,6 @@ const App = (props) => {
                 basename='/storelocator'
                 history={history}>
                 <div>
-                    <Directions google={props.google} />
                     <StoreHeader google={props.google} regions={json.regions}/>
                     <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
                     <Route google={props.google} path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
