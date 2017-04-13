@@ -2,7 +2,7 @@ import 'preact/devtools';
 import { h, Component } from 'preact';
 import { Provider } from 'mobx-preact'
 
-import { Router, Route, Link, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import StateStore from './store/';
