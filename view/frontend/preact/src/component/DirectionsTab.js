@@ -28,18 +28,25 @@ export default class DirectionsTab extends Component {
             stop: w});
     }
 
+    checkActive(label) {
+        return (this.state.mode === label) ? "DirectionsTab__radio-label--active" : "";
+    }
+
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit} method="post" className="DirectionsTab">
-                    <label className="DirectionsTab__radio-label DirectionsTab__radio-label--driving"><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
-                    <label className="DirectionsTab__radio-label DirectionsTab__radio-label--transit"><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
-                    <label className="DirectionsTab__radio-label DirectionsTab__radio-label--walking"><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
-                     <br />
-                    <label className="DirectionsTab__input-label" for="route-start">A</label><input className="DirectionsTab__input-field" id="route-start" name="start" type="text" value={this.state.start} onChange={this.handleChange} required />
-                    <label className="DirectionsTab__input-label" for="route-stop">B</label><input className="DirectionsTab__input-field" id="route-stop" name="stop" type="text" value={this.state.stop} onChange={this.handleChange} required />
-                    <input className="DirectionsTab__input-submit" type="submit" value="Get Directions" />
-                    <button className="DirectionsTab__input-swap" onClick={() => {this.swapAddress()}}>swap</button>
+                    <label className={this.checkActive("DRIVING") +" DirectionsTab__radio-label DirectionsTab__radio-label--driving"}><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
+                    <label className={this.checkActive("TRANSIT") +" DirectionsTab__radio-label DirectionsTab__radio-label--transit"}><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
+                    <label className={this.checkActive("WALKING") +" DirectionsTab__radio-label DirectionsTab__radio-label--walking"}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
+                    <div className="DirectionsTab__directions-flexbox">
+                        <div className="DirectionsTab__directions-wrapper">
+                            <div><label className="DirectionsTab__input-label" for="route-start">A</label><input className="DirectionsTab__input-field" id="route-start" name="start" type="text" value={this.state.start} onChange={this.handleChange} required /></div>
+                            <div><label className="DirectionsTab__input-label" for="route-stop">B</label><input className="DirectionsTab__input-field" id="route-stop" name="stop" type="text" value={this.state.stop} onChange={this.handleChange} required /></div>
+                        </div>
+                        <button className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
+                    </div>
+                    <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
 
             </div>
