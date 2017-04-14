@@ -3,7 +3,7 @@
         &__tab-bar {
 
             display: flex;
-            background-color: #9b9999;
+            background-color: $grey;
             color: white;
             text-transform: uppercase;
             font-weight: bold;
@@ -18,7 +18,7 @@
         &__tab {
 
             &--active {
-                background-color: #242424;
+                background-color: $black;
             }
 
             &:not(:first-child) {
@@ -36,7 +36,7 @@
             font-size: 20px;
             font-weight: normal;
             text-transform: uppercase;
-            color: #242424;
+            color: $black;
             text-align: left;
             margin: 10px 0 15px 0;
         }
