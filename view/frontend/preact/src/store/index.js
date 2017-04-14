@@ -12,7 +12,7 @@ class StateStore {
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
-        this.waypoints = {start: '', stop: ''}
+        this.waypoints = {start: '', stop: '', mode: 'DRIVING'}
     }
 
     @action
@@ -40,8 +40,8 @@ class StateStore {
     }
 
     @action
-    updateWaypoints(start,stop) {
-        this.waypoints = {start: start, stop: stop}
+    updateWaypoints(start, stop, mode) {
+        this.waypoints = {start: start, stop: stop, mode: mode}
     }
 
     @computed

@@ -18,15 +18,17 @@ export class Directions extends Component {
         const request = {
             origin: this.props.points.start,
             destination: this.props.points.stop,
-            travelMode: 'DRIVING'
+            travelMode: this.props.points.mode
         };
-        directionsService.route(request, (result, status) => {
-            if (status == 'OK') {
-                directionsDisplay.setDirections(result);
-                console.log('result', result);
-            }
-        });
 
+        if (request.destination && request.origin) {
+            directionsService.route(request, (result, status) => {
+                if (status == 'OK') {
+                    directionsDisplay.setDirections(result);
+                    console.log('result', result);
+                }
+            });
+        }
     }
 
     render() {
