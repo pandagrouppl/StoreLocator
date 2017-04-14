@@ -7,7 +7,7 @@ export default class DirectionsTab extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {start: props.address, mode: props.stateStore.waypoints.mode}
+        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'a'}
     }
 
     handleChange(event) {
@@ -26,6 +26,7 @@ export default class DirectionsTab extends Component {
         this.setState({
             start: this.state.stop,
             stop: w});
+        (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
     }
 
     checkActive(label) {
@@ -41,8 +42,24 @@ export default class DirectionsTab extends Component {
                     <label className={this.checkActive("WALKING") +" DirectionsTab__radio-label DirectionsTab__radio-label--walking"}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
                     <div className="DirectionsTab__directions-flexbox">
                         <div className="DirectionsTab__directions-wrapper">
-                            <div><label className="DirectionsTab__input-label" for="route-start">A</label><input className="DirectionsTab__input-field" id="route-start" name="start" type="text" value={this.state.start} onChange={this.handleChange} required /></div>
-                            <div><label className="DirectionsTab__input-label" for="route-stop">B</label><input className="DirectionsTab__input-field" id="route-stop" name="stop" type="text" value={this.state.stop} onChange={this.handleChange} required /></div>
+                            <div>
+                                <label className="DirectionsTab__input-label" for="route-start">A</label>
+                                <input className="DirectionsTab__input-field"
+                                    id="route-start" name="start" type="text"
+                                    value={this.state.start}
+                                    onChange={this.handleChange}
+                                    readonly={(this.state.locked == 'a')}
+                                    required />
+                            </div>
+                            <div>
+                                <label className="DirectionsTab__input-label" for="route-stop">B</label>
+                                <input className="DirectionsTab__input-field"
+                                    id="route-stop" name="stop" type="text"
+                                    value={this.state.stop}
+                                    onChange={this.handleChange}
+                                    readonly={(this.state.locked == 'b')}
+                                    required />
+                            </div>
                         </div>
                         <button className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
                     </div>
