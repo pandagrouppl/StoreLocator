@@ -4,5 +4,6 @@
         <referenceContainer name="content">
             <block class="Light4website\StoreLocator\Block\Storelocator" name="light4website_storelocator" template="init.phtml"/>
         </referenceContainer>
+        <referenceBlock name="page.main.title" remove="true" />
     </body>
 </page>

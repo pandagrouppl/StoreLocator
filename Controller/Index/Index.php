@@ -19,7 +19,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend(__('Custom Front View'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Store Locator'));
         return $resultPage;
     }
 }

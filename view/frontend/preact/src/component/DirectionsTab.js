@@ -61,7 +61,7 @@ export default class DirectionsTab extends Component {
                                     required />
                             </div>
                         </div>
-                        <button className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
+                        <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
