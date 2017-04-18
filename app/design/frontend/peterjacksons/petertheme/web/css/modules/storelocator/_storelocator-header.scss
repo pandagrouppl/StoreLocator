@@ -1,9 +1,18 @@
 .storelocator-header {
 
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 60px;
+        font-family: league_gothic;
+        font-weight: normal;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
-        margin: 40px 0;
+        margin: 40px auto;
+        max-width: 960px;
     }
 
     &__filters {
@@ -35,7 +44,7 @@
         padding: 15px 0;
     }
 
-    &__search {
+    &__back, &__search {
         background: $grey-dark;
         border: 0;
         border-radius: 5px;
@@ -43,5 +52,6 @@
         padding: 15px 30px;
         color: $white;
         font-weight: bold;
+        cursor: pointer;
     }
 }
