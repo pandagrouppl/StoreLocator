@@ -48,6 +48,8 @@ atlassian*
 
 /dev/*.*
 
+/wp/wp-config.php
+
 /lib
 
 /pub
