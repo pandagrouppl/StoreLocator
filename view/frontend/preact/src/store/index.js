@@ -6,6 +6,8 @@ class StateStore {
     @observable geo;
     @observable zoom;
     @observable waypoints;
+    @observable view = 'list';
+
 
     constructor(json) {
         this.json = json;
@@ -37,6 +39,11 @@ class StateStore {
     changeMap(gps, zoom = this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
+    }
+
+    @action
+    changeView() {
+        this.view = this.view === 'list' ? 'single' : 'list';
     }
 
     @action

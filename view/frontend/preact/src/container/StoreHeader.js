@@ -1,5 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
+import { Link } from 'react-router-dom';
+
 
 import GoogleApiComponent from './../component/GoogleApiComponent';
 import Maps from './Maps';
@@ -43,6 +45,10 @@ export default class StoreHeader extends Component {
             : 'storelocator-header__filter';
     }
 
+    backButton() {
+        this.props.stateStore.changeView();
+    }
+
     applyFilter(region) {
         this.props.stateStore.addFilters(region);
     }
@@ -53,12 +59,14 @@ export default class StoreHeader extends Component {
             <header className="storelocator-header">
                 <h1 className="storelocator-header__title">Find nearest shop</h1>
                 <section className="storelocator-header__row">
-                    <article className="storelocator-header__filters">
-                        {regions.map((region) => (
-                            <RegionFilter className={this.isActiveFilter(region.name)} region={region.name}
-                                          onFilterClick={this.applyFilter}/>
-                        ))}
-                    </article>
+                    {this.props.stateStore.view === 'list' ?
+                        <article className="storelocator-header__filters">
+                            {regions.map((region) => (
+                                <RegionFilter className={this.isActiveFilter(region.name)} region={region.name}
+                                              onFilterClick={this.applyFilter}/>
+                            ))}
+                        </article> :
+                        <Link to='/' onClick={() => this.backButton()}><button className="storelocator-header__back">Back</button></Link> }
                     <article>
                         <a className="storelocator-header__reset" onClick={this.resetFilters}>Reset</a>
                         <input className="storelocator-header__input"
