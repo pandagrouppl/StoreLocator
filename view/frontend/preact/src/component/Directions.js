@@ -3,6 +3,13 @@ import Map, {Marker} from 'google-maps-react';
 
 
 export class Directions extends Component {
+
+    constructor() {
+        super();
+        this.directionsService = null;
+        this.directionsDisplay = null;
+    }
+
     componentDidUpdate(prevProps) {
         if ((this.props.map !== prevProps.map) ||
             (this.props.position !== prevProps.position) ||
@@ -12,10 +19,12 @@ export class Directions extends Component {
     }
 
     renderDirections() {
-        const directionsService = new this.props.google.maps.DirectionsService();
-        const directionsDisplay = new this.props.google.maps.DirectionsRenderer();
+        if (this.directionsService === null || this.directionsDisplay === null) {
+            this.directionsService = new this.props.google.maps.DirectionsService();
+            this.directionsDisplay = new this.props.google.maps.DirectionsRenderer();
+        }
 
-        directionsDisplay.setMap(this.props.map);
+        this.directionsDisplay.setMap(this.props.map);
         const request = {
             origin: this.props.points.start,
             destination: this.props.points.stop,
@@ -23,9 +32,9 @@ export class Directions extends Component {
         };
 
         if (request.destination && request.origin) {
-            directionsService.route(request, (result, status) => {
+            this.directionsService.route(request, (result, status) => {
                 if (status == 'OK') {
-                    directionsDisplay.setDirections(result);
+                    this.directionsDisplay.setDirections(result);
                     console.log('result', result);
                 }
             });
