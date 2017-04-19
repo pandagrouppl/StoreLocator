@@ -15,12 +15,14 @@ export = class Main {
     constructor() {
     }
 
+
     start() {
+        const ourMills = new mills.OurMills();
         $(() =>  {
             const inliners = new Inliners.Inliners();
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
             const popup = new popups.Popups();
-            const ourMills = new mills.OurMills();
+
         });
 
         $(document).ajaxComplete(() => {

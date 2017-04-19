@@ -6,7 +6,7 @@ var config = {
         slick: 'js/vendor/slick.min'
     },
     bundles: {
-        "web/js/app": [ "main", "sizeChart" ]
+        "web/js/app": [ "main", "sizeChart", 'youtube']
     },
     "map": {
         "*": {
