@@ -206,7 +206,7 @@
         justify-content: center;
         text-align: justify;
 
-        div {
+        > div {
             flex: 1 1 50%;
             box-sizing: border-box;
         }

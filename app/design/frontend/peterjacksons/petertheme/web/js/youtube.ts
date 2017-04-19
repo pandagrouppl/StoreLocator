@@ -1,46 +1,37 @@
-const containers = document.getElementsByClassName('youtube-player-overlay__player');
-if (containers.length) {
-    const containers_arr = Array.from(containers);
+const overlays = Array.from(document.getElementsByClassName('youtube-player-overlay'));
+
+if (overlays.length) {
+    const containers = Array.from(document.getElementsByClassName('youtube-player-overlay__player'));
+    const placeholders = Array.from(document.getElementsByClassName('youtube-player__placeholder'));
+    const closers = Array.from(document.getElementsByClassName('youtube-player-overlay__close'));
+
     function onYouTubeIframeAPIReady() {
+        const player = [];
+        containers.map((item, i) => {
+            player.push(new YT.Player(item));
+            placeholders[i].addEventListener("click", () => {
+                overlays[i].className += ' youtube-player-overlay--active';
+                player[i].playVideo();
+            });
+            overlays[i].addEventListener("click", () => {
+                player[i].pauseVideo();
+                overlays[i].className = 'youtube-player-overlay';
+            });
 
-
-        const players = containers_arr.map((item) => (
-            new YT.Player(item, {
-                events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange
-                }
-            })
-        ));
-
-        const placeholders = Array.from(document.getElementsByClassName('youtube-player__placeholder'));
-
-        placeholders.map((item, index) => {
-            item.addEventListener("click", () => {
-                players[index].playVideo();
-            })
         });
 
-        const closers = Array.from(document.getElementsByClassName('youtube-player-overlay__close'));
-        const overlays = Array.from(document.getElementsByClassName('youtube-player-overlay'));
+        //placeholders.map((item, index) => {
+        //    item.addEventListener("click", () => {
+        //        players[index].playVideo();
+        //    })
+        //});
 
-        overlays.map((item, index) => {
-            item.addEventListener("click", () => {
-                players[index].pauseVideo();
-            })
-        });
-
-        function onPlayerReady(event) {
-
-        }
-
-        function changeBorderColor(playerStatus) {
-
-        }
-
-        function onPlayerStateChange(event) {
-            changeBorderColor(event.data);
-        }
+        //
+        //overlays.map((item, index) => {
+        //    item.addEventListener("click", () => {
+        //        players[index].pauseVideo();
+        //    })
+        //});
 
     }
 }

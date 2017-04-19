@@ -17,10 +17,11 @@ $cmsPage = $objectManagerCms->get('\Magento\Cms\Model\Page');
     </div>
 </div>
 <div class="youtube-player-overlay">
-    <div class="youtube-player-overlay__close">
-        X
-    </div>
     <div class="youtube-player-overlay__video">
-        <iframe id="youtube-player" class="youtube-player-overlay__player" src="<?php echo $this->getData('iframe_url'); ?>"  width="628" height="619" style="border: solid 4px #37474F" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <iframe id="youtube-player" class="youtube-player-overlay__player" src="<?php echo $this->getData('iframe_url'); ?>"  width="100%" height="100%" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <div class="youtube-player-overlay__close">
+            X
+        </div>
     </div>
+
 </div>
