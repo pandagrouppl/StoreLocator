@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="wp.post.list.entry" htmlClass="post-entry post-list__content"/>
+        <referenceContainer name="meta">
+            <block name="post.meta.user" remove="true" />
+            <block name="post.meta.categories" remove="true" />
+            <block name="post.meta.tags" remove="true" />
+        </referenceContainer>
+        <move element="wp.post.list.meta" destination="wp.post.list.entry" before="post.list.image"/>
+    </body>
+</page>

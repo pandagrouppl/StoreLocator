@@ -1,0 +1,43 @@
+$color: #666;
+
+.post-list {
+
+    &__item {
+        padding: 0 0 50px 0;
+        border-bottom: 1px solid $color;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        color: $color;
+        text-transform: uppercase;
+        font-size: 40px;
+        font-family: league_gothic;
+        font-weight: normal;
+    }
+
+    &__image {
+        margin: 20px 0;
+    }
+
+    &__readmore {
+        color: $color;
+        border: 1px solid $color;
+        border-radius: 4px;
+        padding: 15px 50px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 35px 0 0 0;
+
+        &:hover {
+            background: $color;
+            color: white;
+        }
+    }
+}
