@@ -19,19 +19,5 @@ if (overlays.length) {
             });
 
         });
-
-        //placeholders.map((item, index) => {
-        //    item.addEventListener("click", () => {
-        //        players[index].playVideo();
-        //    })
-        //});
-
-        //
-        //overlays.map((item, index) => {
-        //    item.addEventListener("click", () => {
-        //        players[index].pauseVideo();
-        //    })
-        //});
-
     }
 }

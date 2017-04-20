@@ -11,10 +11,12 @@ $cmsPage = $objectManagerCms->get('\Magento\Cms\Model\Page');
         <img src='<?php echo $block->getUrl("pub/media/wysiwyg/") . 'about-us/video-play.png'; ?>' alt="" />
     </div>
 </div>
+    <?php if ($this->getData('description') || $this->getData('description_bold')) : ?>
     <div class="youtube-player__desc">
         <span class="youtube-player__desc-text--bold"><?php echo $this->getData('description_bold'); ?></span>
         <span class="youtube-player__desc-text"><?php echo $this->getData('description'); ?></span>
     </div>
+    <?php endif; ?>
 </div>
 <div class="youtube-player-overlay">
     <div class="youtube-player-overlay__video">

@@ -7,6 +7,10 @@
     letter-spacing: 1px;
     position: relative;
 
+    &--645 {
+        max-width: 645px;
+    }
+
     &--990 {
         max-width: 990px;
     }
@@ -15,12 +19,17 @@
         max-width: 1300px;
     }
 
-    &--645 {
-        max-width: 645px;
+    &--1920 {
+        max-width: 1920px;
     }
 
     &--no-padding {
         padding: 0;
+    }
+
+    &__separator {
+        border-bottom: 1px solid #e4e0e0;
+
     }
 
     &__title {
@@ -217,6 +226,9 @@
             object-fit: cover;
         }
 
+        &-slideshow {
+            overflow: hidden;
+        }
 
         &-text {
             padding: 30px;
@@ -232,9 +244,8 @@
         margin: 0 0 21px 0;
     }
 
-
     &__checker-title-gothic {
-        margin: 10px 0 30px 0;
+        margin: 45px 0;
         font-family: league_gothic;
         font-weight: normal;
         font-size: 48px;
@@ -273,6 +284,69 @@
                 padding: 0 0 0 65px;
             }
         }
+    }
+
+    &__mills-menu {
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 42px 0;
+            font-weight: bold;
+            font-size: 19px;
+            color: #636363;
+            padding: 0 30px 0 30px;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid #000;
+            }
+
+            &.about-us-wrapper__mills-menu--active {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+
+    &__mills-items {
+        background: linear-gradient(#f3f3f3 0, #f3f3f3 50%, #fff 50%);
+        background-size: 100% 760px;
+        margin-bottom: 50px;
+    }
+
+    &__mills-flexbox {
+        display: none;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 1172px;
+
+        li {
+            flex: 0 0 33%;
+            box-sizing: border-box;
+            width: 390px;
+            height: 320px;
+            padding: 20px 40px 0 40px;
+            line-height: 130%;
+            margin: 30px 0 30px 0;
+            text-align: center;
+            border-right: 1px solid #D9D5D5;
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+}
+@media screen and (min-width: $cms-lg-brkpt) {
+    .about-us-wrapper {
+    &__mills-flexbox li:nth-child(3n) {
+        border-right: none;
+    }
     }
 }
 
@@ -328,20 +402,15 @@
             }
         }
 
-        &__checker-flexbox {
+        &__mills-flexbox {
 
-            div {
-                flex: 1 1 100%;
+            li {
+                flex: 0 0 50%;
+
+                &:nth-child(2n) {
+                    border-right: none;
+                }
             }
-
-            div:nth-child(3){
-                order:1;
-            }
-
-            &-text {
-                max-width: 470px;
-            }
-
 
         }
     }
@@ -418,6 +487,73 @@
         }
     }
 }
+
+@media screen and (max-width: 990px) {
+    .about-us-wrapper__checker-flexbox {
+        > div {
+            flex: 1 1 100%;
+        }
+
+        &-text {
+            max-width: 500px;
+            padding: 30px 0;
+        }
+
+        &--cotton {order: 1;}
+        &--cotton-vid {order: 2;}
+        &--silk-slide {order: 4}
+        &--silk {order: 3}
+        &--linen {order: 5}
+        &--linen-slide {order: 6}
+
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .about-us-wrapper__checker-flexbox {
+
+        &-slideshow {
+            max-height: 484px;
+
+            div {
+                height: 100%;
+            }
+        }
+
+        &-vid {
+            max-height: 620px;
+
+            div {
+                height: 100%;
+            }
+        }
+
+        &-text {
+            padding: 30px 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .about-us-wrapper {
+
+        &__mills-items {
+            background: #f3f3f3;
+        }
+
+        &__mills-flexbox {
+
+            li {
+                flex: 0 0 100%;
+                border-right: none;
+                border-bottom: 1px solid #D9D5D5;
+            }
+        }
+    }
+}
+
+
 
 
 
