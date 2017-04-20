@@ -64,10 +64,12 @@
         box-sizing: border-box;
         flex: 0 0 50%;
         padding-bottom: 15px;
+        overflow: hidden;
 
         img {
             max-width: 100%;
         }
+
 
         &--left {
             padding-right: 12px;
