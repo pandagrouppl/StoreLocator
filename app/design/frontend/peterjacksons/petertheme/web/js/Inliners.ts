@@ -11,6 +11,7 @@ export class Inliners {
         this._toggleSubmenuResponsive();
         this._toggleSizeChart();
         this._shirtFitGuide();
+        this._sliders();
     }
 
     private _showSearch(): void {
@@ -59,6 +60,26 @@ export class Inliners {
 
     private _shirtFitGuide(): void {
         $('.slider-with-text__slides').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            speed: 1500,
+            prevArrow: '<div class="slick-prev"></div>',
+            nextArrow: '<div class="slick-next"></div>',
+            responsive: [
+                {
+                    breakpoint: 675,
+                    settings: {
+
+                    }
+                }
+            ]
+        });
+    }
+
+    private _sliders(): void {
+        $('.slider-regular__slides').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,

@@ -1,0 +1,38 @@
+.slider-regular {
+    width: 100%;
+    position: relative;
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__slides {
+        width: 100%;
+    }
+
+    .slick-initialized .slick-slide {
+        display: block;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    .slick-prev {
+        @include sprite(abt-arrw-left);
+        left: 20px;
+        z-index: 2;
+    }
+
+    .slick-next {
+        @include sprite(abt-arrw-right);
+        right: 20px;
+        z-index: 2;
+    }
+
+
+}
