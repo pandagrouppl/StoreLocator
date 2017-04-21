@@ -1,0 +1,32 @@
+.blog-header {
+    background-image: url("../../img/assets/blog-banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 405px;
+    position: relative;
+
+    &__wrapper {
+        max-width: 440px;
+        margin: auto;
+        width: 100%;
+        position: absolute;
+        padding: 0;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 60px;
+        font-family: league_gothic;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-style: italic;
+        font-size: 19px;
+    }
+}
