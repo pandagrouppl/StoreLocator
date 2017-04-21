@@ -1,10 +1,27 @@
 .is-blog {
 
-    .page-main__columns {
-        display: flex;
+    .page-main {
+        padding: 0;
+
+        &__columns {
+            display: flex;
+        }
     }
 
     .column.main {
         width: 100%;
+    }
+}
+
+.wordpress-post-view {
+
+    .page-main__title {
+        font-family: league_gothic;
+        color: #666;
+
+        h1 {
+            font-size: 40px;
+            font-weight: normal;
+        }
     }
 }

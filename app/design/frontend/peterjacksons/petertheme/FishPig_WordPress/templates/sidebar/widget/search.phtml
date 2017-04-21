@@ -9,13 +9,14 @@
 <div class="block block-blog block-blog-search">
 	<div class="block-content">
 		<form method="get" action="<?php echo $this->getFormActionUrl() ?>" id="blog-search-form">
-			<div class="blog-search">
+			<div class="blog-sidebar__search-row blog-search">
+				<i class="blog-sidebar__zoom"></i>
 				<?php if ($this->getPostType()): ?>
 				<div class="no-display">
 					<input type="hidden" name="post_type" value="<?php echo $this->getPostType() ?>" />
 				</div>
 				<?php endif; ?>
-				<input type="text" name="s" class="input-text" placeholder="<?php echo __('Search') ?>" title="<?php echo __('Search Posts') ?>" value="<?php echo $this->escapeHtml($this->getSearchTerm()) ?>"/>
+				<input type="text" name="s" class="blog-sidebar__search-input input-text" placeholder="<?php echo __('SEARCH BLOG') ?>" title="<?php echo __('Search Posts') ?>" value="<?php echo $this->escapeHtml($this->getSearchTerm()) ?>"/>
 			</div>
 		</form>
 	</div>
