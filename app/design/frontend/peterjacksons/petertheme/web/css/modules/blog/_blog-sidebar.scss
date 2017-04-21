@@ -15,6 +15,18 @@
 
     &__zoom {
         @include sprite(header-zoom);
-        transform:scale(0.65);
+        transform: scale(0.65);
+    }
+
+    &__title {
+        font-family: Merriweather;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: #666;
+
+        &--subscribe {
+            text-align: center;
+        }
     }
 }
