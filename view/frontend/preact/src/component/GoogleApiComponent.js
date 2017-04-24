@@ -15,7 +15,7 @@ const defaultCreateCache = (options) => {
     });
 };
 
-export const wrapper = (options) => (WrappedComponent) => {
+export const wrapper = (options = {}) => (WrappedComponent) => {
     const apiKey = options.apiKey;
     const libraries = ['places', 'geometry', 'drawing'];
     const version = options.version || '3';
@@ -24,7 +24,7 @@ export const wrapper = (options) => (WrappedComponent) => {
     class Wrapper extends Component {
         constructor(props, context) {
             super(props, context);
-
+            options.apiKey = props.json.constants.apiKey;
             this.scriptCache = createCache(options);
             this.scriptCache.google.onLoad(this.onLoad.bind(this));
 

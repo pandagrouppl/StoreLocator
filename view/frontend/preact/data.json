@@ -1,5 +1,6 @@
 {
     "constants": {
+        "apiKey": "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
         "geo": { "lat": 52.4046, "lng": 16.9252 },
         "zoom": 7
     },

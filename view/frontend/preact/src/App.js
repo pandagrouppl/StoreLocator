@@ -41,6 +41,4 @@ class App extends Component {
 }
 
 
-export default GoogleApiComponent({
-    apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo' //nie nasze API!
-})(App);
+export default GoogleApiComponent()(App);
