@@ -3,7 +3,6 @@ const overlays = Array.from(document.getElementsByClassName('youtube-player-over
 if (overlays.length) {
     const containers = Array.from(document.getElementsByClassName('youtube-player-overlay__player'));
     const placeholders = Array.from(document.getElementsByClassName('youtube-player__placeholder'));
-    const closers = Array.from(document.getElementsByClassName('youtube-player-overlay__close'));
 
     function onYouTubeIframeAPIReady() {
         const player = [];
