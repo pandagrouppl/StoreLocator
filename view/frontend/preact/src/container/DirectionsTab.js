@@ -7,7 +7,7 @@ export default class DirectionsTab extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'a'}
+        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'b'}
     }
 
     handleChange(event) {
