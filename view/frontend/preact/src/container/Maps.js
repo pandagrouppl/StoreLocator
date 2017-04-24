@@ -1,7 +1,6 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 import Map, {Marker} from 'google-maps-react';
-//import  from 'google-maps-react/dist';
 
 import Directions from '../component/Directions'
 

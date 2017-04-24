@@ -15,25 +15,30 @@ import GoogleApiComponent from './component/GoogleApiComponent';
 
 const history = createBrowserHistory();
 
-const App = (props) => {
-    const { json } = props;
-    const stateStore = new StateStore(json);
+class App extends Component {
 
-    return(
-        <Provider stateStore={stateStore}>
-            <BrowserRouter
-                basename='/storelocator'
-                history={history}>
-                <div>
-                    <StoreHeader google={props.google} regions={json.regions}/>
-                    <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
-                    <Route google={props.google} path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
-                </div>
-            </BrowserRouter>
-        </Provider>
-    )
-};
+    constructor(props) {
+        super();
+        this.stateStore = new StateStore(props.json);
+    }
 
-export default GoogleApiComponent({
-    apiKey: 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo' //nie nasze API!
-})(App);
+    render() {
+        const { json } = this.props;
+        return (
+            <Provider stateStore={this.stateStore}>
+                <BrowserRouter
+                    basename='/storelocator'
+                    history={history}>
+                    <div>
+                        <StoreHeader google={this.props.google} regions={json.regions}/>
+                        <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
+                        <Route google={this.props.google} path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
+                    </div>
+                </BrowserRouter>
+            </Provider>
+        )
+    }
+}
+
+
+export default GoogleApiComponent()(App);

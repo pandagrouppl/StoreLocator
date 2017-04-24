@@ -13,6 +13,7 @@ export default class StoresList extends Component {
     }
 
     applyZoom(gps, zoom) {
+        this.props.stateStore.changeView();
         this.props.stateStore.changeMap(gps, zoom);
     }
 

@@ -6,13 +6,34 @@ class StateStore {
     @observable geo;
     @observable zoom;
     @observable waypoints;
+    @observable view = 'list';
+
 
     constructor(json) {
         this.json = json;
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
-        this.waypoints = {start: '', stop: '', mode: 'DRIVING'}
+        this.waypoints = {start: '', stop: '', mode: 'DRIVING'};
+    }
+
+    @action
+    initializeStore(router) {
+        let {pathname, hash} = router.route.location;
+        if (hash !== '') {
+            hash = hash.replace('#', '').toUpperCase();
+            const newRegion = this.json.regions.filter((region) => region.name == hash)[0];
+            this.filters.push(hash);
+            this.geo = newRegion.geo;
+            this.zoom = newRegion.zoom;
+            this.stores = this.json.stores.filter((store) => store.region == hash);
+        } else if (pathname !== '/') {
+            const id = pathname.replace('/', '');
+            const store = this.json.stores.filter((store) => store.id == id)[0];
+            this.geo = store.geo;
+            this.zoom = store.zoom;
+            this.changeView();
+        }
     }
 
     @action
@@ -37,6 +58,11 @@ class StateStore {
     changeMap(gps, zoom = this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
+    }
+
+    @action
+    changeView() {
+        this.view = this.view === 'list' ? 'single' : 'list';
     }
 
     @action
