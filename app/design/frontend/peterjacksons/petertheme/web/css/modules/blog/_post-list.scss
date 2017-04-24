@@ -20,6 +20,14 @@ $color: #666;
         font-weight: normal;
     }
 
+    &__date {
+        font-family: Merriweather;
+        color: $color;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 16px;
+    }
+
     &__image {
         margin: 20px 0;
     }

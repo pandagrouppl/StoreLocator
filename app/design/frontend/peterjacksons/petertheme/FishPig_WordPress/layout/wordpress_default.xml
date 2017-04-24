@@ -11,5 +11,13 @@
     </head>
     <body>
         <referenceContainer name="sidebar.additional" remove="true"/>
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="facebook.page" template="FishPig_WordPress::social/fb.phtml" before="-"/>
+            <block class="Magento\Cms\Block\Block" name="blog.header" before="breadcrumbs" >
+                <arguments>
+                    <argument name="block_id" xsi:type="string">blog-header</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>

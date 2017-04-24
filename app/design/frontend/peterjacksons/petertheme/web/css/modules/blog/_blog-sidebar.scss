@@ -1,0 +1,32 @@
+.blog-sidebar {
+    min-width: 270px;
+
+    &__search-row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+    }
+
+    &__search-input {
+        width: 100%;
+        border: 0;
+        text-align: center;
+    }
+
+    &__zoom {
+        @include sprite(header-zoom);
+        transform: scale(0.65);
+    }
+
+    &__title {
+        font-family: Merriweather;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 20px;
+        color: #666;
+
+        &--subscribe {
+            text-align: center;
+        }
+    }
+}
