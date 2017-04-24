@@ -45,7 +45,7 @@ export default class StoreHeader extends Component {
 
     isActiveFilter(region) {
         return this.props.stateStore.filters.indexOf(region) > -1
-            ? 'storelocator-header__filter storelocator-header__filter__active'
+            ? 'storelocator-header__filter storelocator-header__filter--active'
             : 'storelocator-header__filter';
     }
 
