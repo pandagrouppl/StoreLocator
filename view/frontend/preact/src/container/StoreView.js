@@ -18,7 +18,7 @@ export default class StoreView extends Component {
     }
 
     findStore(q) {
-        return q.id == this
+        return q.id == this;
     }
 
     renderTab(active) {

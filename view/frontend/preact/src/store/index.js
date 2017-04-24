@@ -14,7 +14,8 @@ class StateStore {
         this.geo = json.constants.geo;
         this.zoom = json.constants.zoom;
         this.stores = json.stores;
-        this.waypoints = {start: '', stop: '', mode: 'DRIVING'}
+        this.waypoints = {start: '', stop: '', mode: 'DRIVING'};
+        console.log(this);
     }
 
     @action
