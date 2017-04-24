@@ -11,13 +11,17 @@ import RegionFilter from './../component/RegionFilter';
 @connect(['stateStore'])
 export default class StoreHeader extends Component {
 
-    constructor() {
+    constructor(props) {
         super();
         this.postcodeInput = null;
         this.geocode = null;
         this.applyFilter = this.applyFilter.bind(this);
         this.resetFilters = this.resetFilters.bind(this);
         this.searchPostcode = this.searchPostcode.bind(this);
+    }
+
+    componentWillMount() {
+        this.props.stateStore.initializeStore(this.context.router);
     }
 
     resetFilters() {
