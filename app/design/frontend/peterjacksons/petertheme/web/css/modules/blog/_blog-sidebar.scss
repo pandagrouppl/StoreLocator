@@ -1,6 +1,10 @@
 .blog-sidebar {
     min-width: 270px;
 
+    @media all and (max-width: $bp-header) {
+        order: -1;
+    }
+
     &__search-row {
         display: flex;
         justify-content: space-between;
@@ -27,6 +31,12 @@
 
         &--subscribe {
             text-align: center;
+        }
+    }
+
+    &__facebook, &__instagram, &__subscribe {
+        @media all and (max-width: $bp-header) {
+            display: none;
         }
     }
 }

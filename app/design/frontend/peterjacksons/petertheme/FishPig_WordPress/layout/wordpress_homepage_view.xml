@@ -14,6 +14,7 @@
             <block name="post.meta.categories" remove="true" />
             <block name="post.meta.tags" remove="true" />
         </referenceContainer>
+        <referenceBlock name="wp.post_list.pager" remove="true" />
         <move element="wp.post.list.meta" destination="wp.post.list.entry" before="post.list.image" />
     </body>
 </page>

@@ -5,11 +5,23 @@
 
         &__columns {
             display: flex;
+
+            @media all and (max-width: $bp-header) {
+                flex-direction: column;
+            }
         }
     }
 
     .column.main {
         width: 100%;
+        box-sizing: border-box;
+        padding-right: 20px;
+        margin-bottom: 120px;
+
+        @media all and (max-width: $bp-header) {
+            order: 2;
+            padding: 0 20px;
+        }
     }
 }
 
