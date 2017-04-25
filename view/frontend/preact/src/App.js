@@ -5,7 +5,7 @@ import { Provider } from 'mobx-preact'
 import { Route, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
-import Directions from './component/Directions'
+import Directions from './container/Directions'
 import StateStore from './store/';
 import StoreHeader from './container/StoreHeader';
 import StoresList from './container/StoresList';
