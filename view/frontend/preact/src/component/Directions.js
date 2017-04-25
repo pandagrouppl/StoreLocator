@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
 
-export class Directions extends Component {
+export default class Directions extends Component {
 
-    constructor() {
+    constructor(props) {
         super();
         this.directionsService = null;
         this.directionsDisplay = null;
@@ -33,7 +33,7 @@ export class Directions extends Component {
             this.directionsService.route(request, (result, status) => {
                 if (status == 'OK') {
                     this.directionsDisplay.setDirections(result);
-                    console.log('result', result);
+                    console.log('directions response', result);
                 }
             });
         }
@@ -44,5 +44,3 @@ export class Directions extends Component {
     }
 
 }
-
-export default Directions;

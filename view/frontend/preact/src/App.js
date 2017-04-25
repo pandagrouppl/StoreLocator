@@ -22,6 +22,14 @@ class App extends Component {
         this.stateStore = new StateStore(props.json);
     }
 
+    getChildContext() {
+        return {
+            sw: this.props.json.constants.autocomplete_bounds.sw,
+            ne: this.props.json.constants.autocomplete_bounds.ne,
+            google: this.props.google
+        };
+    }
+
     render() {
         const { json } = this.props;
         return (
@@ -32,7 +40,7 @@ class App extends Component {
                     <div>
                         <StoreHeader google={this.props.google} regions={json.regions}/>
                         <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
-                        <Route google={this.props.google} path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
+                        <Route path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
                     </div>
                 </BrowserRouter>
             </Provider>
