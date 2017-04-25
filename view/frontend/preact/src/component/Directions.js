@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import Map from 'google-maps-react';
 
 
 export class Directions extends Component {
