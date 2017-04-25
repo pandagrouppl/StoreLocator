@@ -8,7 +8,8 @@ const HoursFormatter = (props) => {
     const Wrapper = props.wrapper;
 
     return (
-        <Wrapper className="hours-wrapper__day"><span className="hours-wrapper__day-name">{props.day}:</span> {closedCheck(props.hours)}</Wrapper>)
+        <Wrapper className="hours-wrapper__day"><span className="hours-wrapper__day-name">{props.day}:</span> {closedCheck(props.hours)}</Wrapper>
+    )
 };
 
 export default HoursFormatter;

@@ -22,15 +22,15 @@ export default class DirectionsTab extends Component {
     }
 
     swapAddress() {
-        const w = this.state.start;
         this.setState({
             start: this.state.stop,
-            stop: w});
-        (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
+            stop:  this.state.start
+        });
+        this.state.locked == 'a' ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
     }
 
     checkActive(label) {
-        return (this.state.mode === label) ? "DirectionsTab__radio-label--active" : "";
+        return this.state.mode === label ? "DirectionsTab__radio-label--active" : "";
     }
 
     render() {
