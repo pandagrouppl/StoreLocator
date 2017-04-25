@@ -18,7 +18,7 @@ const history = createBrowserHistory();
 class App extends Component {
 
     constructor(props) {
-        super();
+        super(props);
         this.stateStore = new StateStore(props.json);
     }
 

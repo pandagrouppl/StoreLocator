@@ -12,9 +12,15 @@ export default class DirectionsTab extends Component {
     }
 
     handleChange(event) {
+        console.log('change');
         this.setState({
             [event.target.name]: event.target.value
         });
+
+    }
+
+    handleAutocompleteClick(value) {
+
     }
 
     handleSubmit(event) {
@@ -23,24 +29,26 @@ export default class DirectionsTab extends Component {
     }
 
     swapAddress() {
-        const w = this.state.start;
         this.setState({
             start: this.state.stop,
-            stop: w});
+            stop: this.state.start});
         (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
     }
 
-    checkActive(label) {
-        return (this.state.mode === label) ? "DirectionsTab__radio-label--active" : "";
+    transitClass(label) {
+        const a = 'DirectionsTab__radio-label';
+        const active = (this.state.mode === label) ? `${a}--active ` : '';
+        const classes = `${a} ${a}--${label}`;
+        return active+classes
     }
 
     render() {
         return (
             <div>
                 <form onSubmit={this.handleSubmit} method="post" className="DirectionsTab">
-                    <label className={this.checkActive("DRIVING") +" DirectionsTab__radio-label DirectionsTab__radio-label--driving"}><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
-                    <label className={this.checkActive("TRANSIT") +" DirectionsTab__radio-label DirectionsTab__radio-label--transit"}><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
-                    <label className={this.checkActive("WALKING") +" DirectionsTab__radio-label DirectionsTab__radio-label--walking"}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
+                    <label className={this.transitClass("DRIVING")}><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
+                    <label className={this.transitClass("TRANSIT")}><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
+                    <label className={this.transitClass("WALKING")}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
                     <div className="DirectionsTab__directions-flexbox">
                         <div className="DirectionsTab__directions-wrapper">
                             <div>
@@ -51,7 +59,7 @@ export default class DirectionsTab extends Component {
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'a')}
                                     required />
-                                <Autocomplete target="route-start" />
+                                <Autocomplete target="route-start"/>
                             </div>
                             <div>
                                 <label className="DirectionsTab__input-label" for="route-stop">B</label>
@@ -61,7 +69,7 @@ export default class DirectionsTab extends Component {
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'b')}
                                     required />
-                                <Autocomplete target="route-stop" />
+                                <Autocomplete target="route-stop"/>
                             </div>
                         </div>
                         <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
