@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
+import Autocomplete from '../component/Autocomplete';
 
 @connect(['stateStore'])
 export default class DirectionsTab extends Component {
@@ -50,6 +51,7 @@ export default class DirectionsTab extends Component {
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'a')}
                                     required />
+                                <Autocomplete target="route-start" />
                             </div>
                             <div>
                                 <label className="DirectionsTab__input-label" for="route-stop">B</label>
@@ -59,6 +61,7 @@ export default class DirectionsTab extends Component {
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'b')}
                                     required />
+                                <Autocomplete target="route-stop" />
                             </div>
                         </div>
                         <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
