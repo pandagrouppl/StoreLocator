@@ -1,11 +1,17 @@
 import { h, Component } from 'preact';
+import { connect } from 'mobx-preact';
 
+@connect(['stateStore'])
 export default class Directions extends Component {
 
-    constructor(props) {
+    constructor() {
         super();
         this.directionsService = null;
         this.directionsDisplay = null;
+    }
+
+    getChildContext() {
+        return {error: this.state.error};
     }
 
     componentDidUpdate(prevProps) {
@@ -31,9 +37,13 @@ export default class Directions extends Component {
 
         if (request.destination && request.origin) {
             this.directionsService.route(request, (result, status) => {
-                if (status == 'OK') {
+                if (status === 'OK') {
+                    this.props.stateStore.setError('');
                     this.directionsDisplay.setDirections(result);
-                    console.log('directions response', result);
+                    console.log('result', result);
+                } else {
+                    console.log('result', result);
+                   this.props.stateStore.setError('Could not find a route between A and B.');
                 }
             });
         }

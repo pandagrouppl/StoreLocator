@@ -4,7 +4,7 @@ import Autocomplete from '../component/Autocomplete';
 
 @connect(['stateStore'])
 export default class DirectionsTab extends Component {
-    constructor(props) {
+    constructor(props, context) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
