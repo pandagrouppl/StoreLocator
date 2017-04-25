@@ -36,8 +36,14 @@ export default class StoreHeader extends Component {
                 postalCode: this.postcodeInput.value
             }
         }, (results, status) => {
-            const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
-            this.props.stateStore.changeMap(newGeo);
+            console.log(status);
+            if (status === 'OK') {
+                const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
+                this.props.stateStore.setError();
+                this.props.stateStore.changeMap(newGeo);
+            } else {
+                this.props.stateStore.setError('Invalid postcode');
+            }
         });
     }
 
@@ -80,7 +86,7 @@ export default class StoreHeader extends Component {
                         <button className="storelocator-header__search" onClick={this.searchPostcode}>Search</button>
                     </article>
                 </section>
-                <p>{this.props.stateStore.error}</p>
+                <p className="storelocator-header__error">{this.props.stateStore.error}</p>
                 <HeaderMap google={this.props.google}/>
             </header>
         )
