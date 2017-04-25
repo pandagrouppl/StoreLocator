@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
 @connect(['stateStore'])
-export class Directions extends Component {
+export default class Directions extends Component {
 
     constructor() {
         super();
@@ -54,5 +54,3 @@ export class Directions extends Component {
     }
 
 }
-
-export default Directions;

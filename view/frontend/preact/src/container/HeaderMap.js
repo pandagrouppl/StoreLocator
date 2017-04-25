@@ -4,6 +4,7 @@ import Map from 'google-maps-react';
 
 import Directions from './Directions';
 import Marker from '../component/Marker';
+import Autocomplete from '../component/Autocomplete';
 
 
 @connect(['stateStore'])
