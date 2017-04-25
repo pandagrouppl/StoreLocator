@@ -1,9 +1,6 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
-import GoogleApiComponent from './../component/GoogleApiComponent';
-import Maps from './Maps';
-
 import DirectionsTab from './../container/DirectionsTab'
 import HoursSpanFill from './../component/HoursSpanFill'
 

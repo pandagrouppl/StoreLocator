@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 
-
 export class Directions extends Component {
 
     constructor() {
