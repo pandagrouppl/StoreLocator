@@ -7,6 +7,7 @@ class StateStore {
     @observable zoom;
     @observable waypoints;
     @observable view = 'list';
+    @observable error = '';
 
     constructor(json) {
         this.json = json;
@@ -36,6 +37,7 @@ class StateStore {
         this.zoom = this.json.constants.zoom;
         this.stores = this.json.stores;
         this.filters = [];
+        this.error = '';
     }
 
     @action
@@ -57,11 +59,17 @@ class StateStore {
     @action
     changeView() {
         this.view = this.view === 'list' ? 'single' : 'list';
+        this.error = '';
     }
 
     @action
     updateWaypoints(start, stop, mode) {
         this.waypoints = {start: start, stop: stop, mode: mode}
+    }
+
+    @action
+    setError(error) {
+        this.error = error;
     }
 
     @computed

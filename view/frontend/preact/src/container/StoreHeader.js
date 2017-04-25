@@ -80,6 +80,7 @@ export default class StoreHeader extends Component {
                         <button className="storelocator-header__search" onClick={this.searchPostcode}>Search</button>
                     </article>
                 </section>
+                <p>{this.props.stateStore.error}</p>
                 <HeaderMap google={this.props.google}/>
             </header>
         )
