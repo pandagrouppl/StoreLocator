@@ -2,11 +2,9 @@ import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 import { Link } from 'react-router-dom';
 
-
 import GoogleApiComponent from './../component/GoogleApiComponent';
-import Maps from './Maps';
+import HeaderMap from './HeaderMap';
 import RegionFilter from './../component/RegionFilter';
-
 
 @connect(['stateStore'])
 export default class StoreHeader extends Component {
@@ -82,7 +80,7 @@ export default class StoreHeader extends Component {
                         <button className="storelocator-header__search" onClick={this.searchPostcode}>Search</button>
                     </article>
                 </section>
-                <Maps google={this.props.google}/>
+                <HeaderMap google={this.props.google}/>
             </header>
         )
     }

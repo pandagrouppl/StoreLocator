@@ -1,12 +1,13 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
-import Map, {Marker} from 'google-maps-react';
+import Map from 'google-maps-react';
 
-import Directions from '../component/Directions'
+import Directions from '../component/Directions';
+import Marker from '../component/Marker';
 
 
 @connect(['stateStore'])
-export default class Maps extends Component {
+export default class HeaderMap extends Component {
 
     render() {
         return(
