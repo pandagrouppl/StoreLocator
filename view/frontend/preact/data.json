@@ -2,7 +2,11 @@
     "constants": {
         "apiKey": "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
         "geo": { "lat": 52.4046, "lng": 16.9252 },
-        "zoom": 7
+        "zoom": 7,
+        "autocomplete_bounds": {
+            "sw": [-47.301271, 111.771263],
+            "ne": [-8.654816, -176.913202]
+        }
     },
     "regions": [
         {

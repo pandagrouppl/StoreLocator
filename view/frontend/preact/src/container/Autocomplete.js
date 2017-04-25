@@ -1,13 +1,16 @@
 import { h, Component } from 'preact';
 import Map from 'google-maps-react';
 
-
-export class Directions extends Component {
+@connect(['stateStore'])
+export class Autocomplete extends Component {
 
     constructor() {
         super();
         this.directionsService = null;
         this.directionsDisplay = null;
+        this.autocompBounds = new this.props.google.maps.LatLngBounds(
+            new this.props.google.maps.LatLng(),
+            new this.props.google.maps.LatLng());
     }
 
     componentDidUpdate(prevProps) {
@@ -19,6 +22,7 @@ export class Directions extends Component {
     }
 
     renderDirections() {
+
         if (this.directionsService === null || this.directionsDisplay === null) {
             this.directionsService = new this.props.google.maps.DirectionsService();
             this.directionsDisplay = new this.props.google.maps.DirectionsRenderer();
@@ -47,4 +51,4 @@ export class Directions extends Component {
 
 }
 
-export default Directions;
+export default Autocomplete;
