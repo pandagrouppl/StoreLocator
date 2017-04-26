@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
-import RouteSteps from './RouteSteps'
 
 @connect(['stateStore'])
 export default class DirectionsTab extends Component {
@@ -107,7 +106,7 @@ export default class DirectionsTab extends Component {
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
-                <RouteSteps />
+                <div id="directionsPanel"></div>
             </div>
         );
     }
