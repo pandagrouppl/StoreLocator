@@ -1,15 +1,15 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
-import Autocomplete from '../component/Autocomplete';
+import RouteSteps from './RouteSteps'
 
 @connect(['stateStore'])
 export default class DirectionsTab extends Component {
-    constructor(props, context) {
+    constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleGoogleAutocomplete =  this.handleGoogleAutocomplete.bind(this);
-        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'b'}
+        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'b'};
         this.textInputs = [];
     }
 
@@ -107,7 +107,7 @@ export default class DirectionsTab extends Component {
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
-
+                <RouteSteps />
             </div>
         );
     }

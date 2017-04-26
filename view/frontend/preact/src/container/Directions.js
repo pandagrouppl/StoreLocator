@@ -37,12 +37,12 @@ export default class Directions extends Component {
 
         if (request.destination && request.origin) {
             this.directionsService.route(request, (result, status) => {
+                console.log('result', result);
                 if (status === 'OK') {
                     this.props.stateStore.setError();
                     this.directionsDisplay.setDirections(result);
-                    console.log('result', result);
+                    this.props.stateStore.setRoute(result.routes[0].legs[0].steps);
                 } else {
-                    console.log('result', result);
                     this.props.stateStore.setError('Could not find a route between A and B.');
                 }
             });
