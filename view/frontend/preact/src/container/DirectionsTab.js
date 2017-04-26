@@ -8,18 +8,22 @@ export default class DirectionsTab extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleGoogleAutocomplete =  this.handleGoogleAutocomplete.bind(this);
         this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'b'}
+        this.textInputs = [];
     }
 
     handleChange(event) {
-        console.log('change');
         this.setState({
             [event.target.name]: event.target.value
         });
 
     }
 
-    handleAutocompleteClick(value) {
+    handleGoogleAutocomplete(target) {
+        this.setState({
+            [target.name]: target.value
+    });
 
     }
 
@@ -42,6 +46,31 @@ export default class DirectionsTab extends Component {
         return active+classes
     }
 
+    componentDidMount() {
+        if (this.context.google) {
+            this.textInputs.map((q) => {
+                this.googleAutocomplete(q);
+            });
+
+        }
+    }
+
+    googleAutocomplete(target) {
+        const autocompBounds = new this.context.google.maps.LatLngBounds(
+            new this.context.google.maps.LatLng(this.context.sw[0], this.context.sw[1]),
+            new this.context.google.maps.LatLng(this.context.ne[0], this.context.ne[1]));
+
+        const options = {
+            bounds: autocompBounds
+        };
+
+        const autocomplete = new this.context.google.maps.places.Autocomplete(target, options);
+
+        autocomplete.addListener('place_changed', () => {
+            this.handleGoogleAutocomplete(target)});
+    }
+
+
     render() {
         return (
             <div>
@@ -58,8 +87,9 @@ export default class DirectionsTab extends Component {
                                     value={this.state.start}
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'a')}
-                                    required />
-                                <Autocomplete target="route-start"/>
+                                    required
+                                    ref={(input) => {this.textInputs.push(input);}}/>
+
                             </div>
                             <div>
                                 <label className="DirectionsTab__input-label" for="route-stop">B</label>
@@ -68,8 +98,9 @@ export default class DirectionsTab extends Component {
                                     value={this.state.stop}
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'b')}
-                                    required />
-                                <Autocomplete target="route-stop"/>
+                                    required
+                                    ref={(input) => {this.textInputs.push(input);}}/>
+
                             </div>
                         </div>
                         <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>

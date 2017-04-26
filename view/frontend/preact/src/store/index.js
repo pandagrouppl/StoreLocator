@@ -58,7 +58,6 @@ class StateStore {
 
     @action
     changeView() {
-        debugger;
         this.view = this.view === 'list' ? 'single' : 'list';
         this.error = '';
     }

@@ -25,8 +25,9 @@ export default class Autocomplete extends Component {
         const autocomplete = new this.context.google.maps.places.Autocomplete(input, options);
 
         autocomplete.addListener('place_changed', function() {
+            console.log('props', this);
             let selected = autocomplete.getPlace();
-            console.log(selected);
+            console.log(selected, 'event');
         });
     }
 
