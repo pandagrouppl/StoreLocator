@@ -4,8 +4,8 @@ import { connect } from 'mobx-preact';
 @connect(['stateStore'])
 export default class Directions extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.directionsService = null;
         this.directionsDisplay = null;
     }

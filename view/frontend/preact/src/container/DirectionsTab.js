@@ -37,7 +37,6 @@ export default class DirectionsTab extends Component {
             stop: this.state.start
         });
         (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
-        this.props.stateStore.updateWaypoints(this.state.start,this.state.stop, this.state.mode);
     }
 
     transitClass(label) {
