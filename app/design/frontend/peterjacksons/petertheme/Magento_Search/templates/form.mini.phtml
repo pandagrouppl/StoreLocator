@@ -16,8 +16,9 @@ $helper = $this->helper('Magento\Search\Helper\Data');
 
     <div class="search-overlay">
         <div class="search-overlay__container">
+            <i class="search-overlay__close">X</i>
             <form class="search-overlay__form" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
-                <div class="search-overlay__input">
+                <div class="search-overlay__row">
                     <input id="search"
                         data-mage-init='{"quickSearch":{
                             "formSelector":"#search_mini_form",
@@ -27,8 +28,7 @@ $helper = $this->helper('Magento\Search\Helper\Data');
                         type="text"
                         name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
                         value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
-                        placeholder="<?php /* @escapeNotVerified */ echo __('Search entire store here...'); ?>"
-                        class="input-text"
+                        class="input-text search-overlay__input"
                         maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
                         role="combobox"
                         aria-haspopup="false"
@@ -38,8 +38,8 @@ $helper = $this->helper('Magento\Search\Helper\Data');
                 <div class="search-overlay__submit">
                     <button type="submit"
                             title="<?php echo $block->escapeHtml(__('Search')) ?>"
-                            class="action search">
-                        <span><?php /* @escapeNotVerified */ echo __('Search'); ?></span>
+                            class="action search search-overlay__zoom">
+                            <i class="search-overlay__zoom-icon"></i>
                     </button>
                 </div>
             </form>
