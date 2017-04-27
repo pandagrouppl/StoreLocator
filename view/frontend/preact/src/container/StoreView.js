@@ -29,9 +29,9 @@ export default class StoreView extends Component {
                 );
                 break;
             case 'directions':
-                this.props.stateStore.waypoints.stop = this.store.addr_strt + ' ' + this.store.addr_cty;
+
                 return (
-                    <DirectionsTab/>
+                    <DirectionsTab initStop={this.store.addr_strt + ' ' + this.store.addr_cty}/>
                 );
                 break;
         }

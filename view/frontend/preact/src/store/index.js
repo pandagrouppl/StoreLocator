@@ -65,7 +65,7 @@ class StateStore {
 
     @action
     updateWaypoints(start, stop, mode) {
-        this.waypoints = {start: start, stop: stop, mode: mode}
+        this.waypoints = {start: start, stop: stop, mode: mode};
     }
 
     @action
@@ -81,6 +81,15 @@ class StateStore {
     @computed
     get geoTotal() {
         return { "lat": this.geo.lat, "lng": this.geo.lng };
+    }
+
+    @computed
+    get getWaypoints() {
+        return {
+            origin: this.waypoints.start,
+            destination: this.waypoints.stop,
+            travelMode: this.waypoints.mode
+        }
     }
 }
 

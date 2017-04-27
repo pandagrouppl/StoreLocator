@@ -15,9 +15,7 @@ export default class Directions extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if ((this.props.map !== prevProps.map) ||
-            (this.props.position !== prevProps.position) ||
-            (this.props.points !== prevProps.points)) {
+        if (this.props.points !== prevProps.points) {
             this.renderDirections();
         }
     }
@@ -29,11 +27,7 @@ export default class Directions extends Component {
         }
 
         this.directionsDisplay.setMap(this.props.map);
-        const request = {
-            origin: this.props.points.start,
-            destination: this.props.points.stop,
-            travelMode: this.props.points.mode
-        };
+        const request = this.props.stateStore.getWaypoints;
 
         if (request.destination && request.origin) {
             this.directionsService.route(request, (result, status) => {
