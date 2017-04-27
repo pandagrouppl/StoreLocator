@@ -20,7 +20,7 @@ export default class HeaderMap extends Component {
                     {this.props.stateStore.stores.map((store) => (
                         <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} />
                     ))}
-                <Directions points={this.props.stateStore.waypoints}/>
+                <Directions updater={this.props.stateStore.waypoints}/>
             </Map>
             </section>
         );

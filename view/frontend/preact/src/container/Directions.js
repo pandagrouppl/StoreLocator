@@ -4,8 +4,8 @@ import { connect } from 'mobx-preact';
 @connect(['stateStore'])
 export default class Directions extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.directionsService = null;
         this.directionsDisplay = null;
     }
@@ -15,9 +15,8 @@ export default class Directions extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if ((this.props.map !== prevProps.map) ||
-            (this.props.position !== prevProps.position) ||
-            (this.props.points !== prevProps.points)) {
+        console.log('prevprop', prevProps);
+        if (this.props.stateStore.waypoints !== prevProps.stateStore.waypoints) {
             this.renderDirections();
         }
     }
@@ -30,10 +29,14 @@ export default class Directions extends Component {
 
         this.directionsDisplay.setMap(this.props.map);
         const request = {
-            origin: this.props.points.start,
-            destination: this.props.points.stop,
-            travelMode: this.props.points.mode
+            origin: this.props.stateStore.waypoints.start,
+            destination: this.props.stateStore.waypoints.stop,
+            travelMode: this.props.stateStore.waypoints.mode
         };
+        console.log('request', request);
+        if (request.origin==request.destination) {
+            console.log('DIRECTIONS WRONG');
+        }
 
         if (request.destination && request.origin) {
             this.directionsService.route(request, (result, status) => {
@@ -41,7 +44,6 @@ export default class Directions extends Component {
                     this.props.stateStore.setError();
                     this.directionsDisplay.setDirections(result);
                     this.directionsDisplay.setPanel(document.getElementById('directionsPanel'));
-                    this.props.stateStore.setRoute(result.routes[0].legs[0].steps);
                 } else {
                     this.props.stateStore.setError('Could not find a route between A and B.');
                 }

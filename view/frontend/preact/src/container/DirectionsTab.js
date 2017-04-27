@@ -27,14 +27,16 @@ export default class DirectionsTab extends Component {
     }
 
     handleSubmit(event) {
-        this.props.stateStore.updateWaypoints(this.state.start,this.state.stop, this.state.mode);
+        console.log('Directions Tab same start&stop?', this.state.star==this.state.stop);
+        this.props.stateStore.updateWaypoints(this.state.start, this.state.stop, this.state.mode);
         event.preventDefault();
     }
 
     swapAddress() {
+        const q = this.state.start;
         this.setState({
             start: this.state.stop,
-            stop: this.state.start});
+            stop: q});
         (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
     }
 
@@ -66,7 +68,8 @@ export default class DirectionsTab extends Component {
         const autocomplete = new this.context.google.maps.places.Autocomplete(target, options);
 
         autocomplete.addListener('place_changed', () => {
-            this.handleGoogleAutocomplete(target)});
+            this.handleGoogleAutocomplete(target)
+        });
     }
 
 
@@ -106,7 +109,7 @@ export default class DirectionsTab extends Component {
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
-                <div id="directionsPanel"></div>
+                <div id="directionsPanel" className="DirectionsTab__directionsPanel"></div>
             </div>
         );
     }

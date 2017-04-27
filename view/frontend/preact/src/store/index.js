@@ -8,7 +8,6 @@ class StateStore {
     @observable waypoints;
     @observable view = 'list';
     @observable error = '';
-    @observable route = [];
 
     constructor(json) {
         this.json = json;
@@ -65,17 +64,13 @@ class StateStore {
 
     @action
     updateWaypoints(start, stop, mode) {
-        this.waypoints = {start: start, stop: stop, mode: mode}
+        console.log('start, stop,',start, 'stop', stop);
+        this.waypoints = {start: start, stop: stop, mode: mode};
     }
 
     @action
     setError(error = '') {
         this.error = error;
-    }
-
-    @action
-    setRoute(route) {
-        this.route = route;
     }
 
     @computed
