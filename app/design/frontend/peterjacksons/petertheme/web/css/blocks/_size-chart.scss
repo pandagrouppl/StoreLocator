@@ -4,6 +4,7 @@
     max-width: 922px;
     z-index: 11;
     padding: 20px;
+    box-sizing: border-box;
 
     &--open {
         display: flex !important;
@@ -47,6 +48,11 @@
 
     &__row {
         display: flex;
+        align-items: center;
+
+        @media all and (max-width: $bp-header) {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -66,6 +72,10 @@
     &__wrap {
         width: 60%;
 
+        @media all and (max-width: $bp-header) {
+            width: 100%;
+        }
+
         &--accessories {
             width: 100%;
         }
@@ -82,9 +92,13 @@
     &__img {
 
         &--suit {
-            background: url('../../img/assets/size-chart/size-chart-model-suits.png');
+            background: url('../../img/assets/size-chart/size-chart-model-suits.png') no-repeat 50% 50% transparent;
             height: 550px;
             width: 40%;
+
+            @media all and (max-width: $bp-header) {
+                width: 100%;
+            }
         }
 
         &--trousers {
@@ -93,6 +107,10 @@
             width: 40%;
             background-size: contain;
             margin-top: 40px;
+
+            @media all and (max-width: $bp-header) {
+                width: 100%;
+            }
         }
 
         &--shirt {
@@ -100,12 +118,20 @@
             background-size: 100%;
             height: 520px;
             width: 40%;
+
+            @media all and (max-width: $bp-header) {
+                width: 100%;
+            }
         }
 
         &--foot {
             background: url('../../img/assets/size-chart/size-chart-foot-model.png') no-repeat 50% 50% transparent;
             height: 335px;
             width: 40%;
+
+            @media all and (max-width: $bp-header) {
+                width: 100%;
+            }
         }
     }
 
