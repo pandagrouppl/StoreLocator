@@ -8,7 +8,7 @@ export default class DirectionsTab extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleGoogleAutocomplete =  this.handleGoogleAutocomplete.bind(this);
-        this.state = {start: props.stateStore.waypoints.start, stop:props.initStop, mode: props.stateStore.waypoints.mode, locked: 'b'};
+        this.state = {start: props.stateStore.waypoints.start, stop:props.stateStore.waypoints.stop, mode: props.stateStore.waypoints.mode, locked: 'b'};
         this.textInputs = [];
     }
 
