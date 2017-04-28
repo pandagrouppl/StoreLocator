@@ -7,9 +7,17 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="css_class" xsi:type="string">account-login__title</argument>
+            </arguments>
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Log in</argument>
+            </action>
+        </referenceBlock>
         <referenceContainer name="content">
             <referenceContainer name="customer.login.container" htmlTag="div" htmlClass="account-login login-container"/>
         </referenceContainer>
-        <move element="customer.new" destination="customer.login.container"/>
+        <move element="customer.new" destination="customer.login.container" before="customer_form_login" />
     </body>
 </page>

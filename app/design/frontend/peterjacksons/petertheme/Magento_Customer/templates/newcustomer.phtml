@@ -15,11 +15,12 @@
  */
 ?>
 <?php if ($block->getRegistration()->isAllowed()): ?>
-<div class="block block-new-customer">
+<div class="block block-new-customer account-login__register">
     <div class="block-content" aria-labelledby="block-new-customer-heading">
         <div class="actions-toolbar">
-            <div class="primary">
-                <a href="<?php /* @escapeNotVerified */ echo $block->getCreateAccountUrl() ?>" class="action create primary"><span><?php /* @escapeNotVerified */ echo __('Create an Account') ?></span></a>
+            <div class="primary account-login__row account-login__row--register">
+                <p class="account-login__noaccount"><?php /* @escapeNotVerified */ echo __('No account') ?>?</p>
+                <a href="<?php /* @escapeNotVerified */ echo $block->getCreateAccountUrl() ?>" class="action create primary account-login__link account-login__noaccount--link"><span><?php /* @escapeNotVerified */ echo __('Sign up now') ?>.</span></a>
             </div>
         </div>
     </div>

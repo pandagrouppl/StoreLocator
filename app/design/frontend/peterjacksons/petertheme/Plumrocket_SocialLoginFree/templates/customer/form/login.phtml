@@ -17,9 +17,6 @@
 ?>
 
 <div class="block block-customer-login account-login__login">
-    <div class="block-title">
-        <strong id="block-customer-login-heading" role="heading" aria-level="2"><?php /* @escapeNotVerified */ echo __('Registered Customers') ?></strong>
-    </div>
     <div class="block-content" aria-labelledby="block-customer-login-heading">
         <form class="form form-login"
               action="<?php /* @escapeNotVerified */ echo $block->getPostActionUrl() ?>"
@@ -32,23 +29,28 @@
                 <?php echo $this->getChildHtml('pslogin_buttons'); ?>
             <?php endif; ?>
             <?php echo $block->getBlockHtml('formkey'); ?>
+            <p class="account-login__or"><?php /* @escapeNotVerified */ echo __('or') ?></p>
             <fieldset class="fieldset login account-login__fieldset" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
                 <div class="field email required">
-                    <div class="control">
-                        <input name="login[username]" placeholder="<?php /* @escapeNotVerified */ echo __('Email') ?>" value="<?php echo $block->escapeHtml($block->getUsername()) ?>" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> id="email" type="email" class="input-text" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
+                    <div class="control account-login__row">
+                        <input name="login[username]" placeholder="<?php /* @escapeNotVerified */ echo __('Email') ?>" value="<?php echo $block->escapeHtml($block->getUsername()) ?>" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> id="email" type="email" class="input-text account-login__input" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
                     </div>
                 </div>
                 <div class="field password required">
-                    <div class="control">
-                        <input name="login[password]" value="Password" type="password" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> class="input-text" id="pass" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true, 'validate-password':true}">
+                    <div class="control account-login__row">
+                        <input name="login[password]" value="Password" type="password" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> class="input-text account-login__input" id="pass" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true, 'validate-password':true}">
                     </div>
                 </div>
                 <?php echo $block->getChildHtml('form_additional_info'); ?>
                 <div class="actions-toolbar">
-                    <div class="primary"><button type="submit" class="action login primary" name="send" id="send2"><span><?php /* @escapeNotVerified */ echo __('Login') ?></span></button></div>
-                    <div class="secondary"><a class="action remind" href="<?php /* @escapeNotVerified */ echo $block->getForgotPasswordUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Forgot Your Password?') ?></span></a></div>
+                    <div class="primary account-login__row"><button type="submit" class="action login primary account-login__button" name="send" id="send2"><span><?php /* @escapeNotVerified */ echo __('Login') ?></span></button></div>
+                    <div class="secondary account-login__row"><a class="action remind account-login__link"" href="<?php /* @escapeNotVerified */ echo $block->getForgotPasswordUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Forgot Your Password?') ?></span></a></div>
                 </div>
             </fieldset>
         </form>
+        <div class="account-login__row">
+            <a class="account-login__link" href="<?php echo $block->getUrl('terms', ['_secure' => true]);?>"><?php /* @escapeNotVerified */ echo __('Terms & Conditions') ?></a>
+            <a class="account-login__link" href="<?php echo $block->getUrl('privacy', ['_secure' => true]);?>"><?php /* @escapeNotVerified */ echo __('Privacy Policy') ?></a>
+        </div>
     </div>
 </div>
