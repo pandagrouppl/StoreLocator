@@ -86,7 +86,7 @@ export default class StoreHeader extends Component {
                     </article>
                 </section>
                 <p className="storelocator-header__error">{this.props.stateStore.error}</p>
-                <HeaderMap google={this.props.google}/>
+                <HeaderMap/>
             </header>
         )
     }
