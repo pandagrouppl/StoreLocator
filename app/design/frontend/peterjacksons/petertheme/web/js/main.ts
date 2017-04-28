@@ -6,6 +6,7 @@ import * as Module2 from "./moduletwo";
 import * as SizeChart from "./sizeChart";
 import * as Inliners from "./Inliners";
 import * as MadeToMeasure from "./MadeToMeasure";
+import * as LookBook from "./LookBook";
 import * as mills from "./our-mills";
 import * as popups from "./popups";
 
@@ -22,7 +23,7 @@ export = class Main {
             const inliners = new Inliners.Inliners();
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
             const popup = new popups.Popups();
-
+            const lookBook = new LookBook.LookBook();
         });
 
         $(document).ajaxComplete(() => {

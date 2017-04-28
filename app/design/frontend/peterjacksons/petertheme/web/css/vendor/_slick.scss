@@ -1,8 +1,14 @@
+/* Slider */
+
 .slick-slider {
     position: relative;
     display: block;
     box-sizing: border-box;
     -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     -ms-touch-action: pan-y;
     touch-action: pan-y;
@@ -26,6 +32,10 @@
 }
 .slick-slider .slick-track,
 .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -69,6 +79,9 @@
         pointer-events: none;
     }
 
+    .slick-initialized & {
+        display: block;
+    }
 
     .slick-loading & {
         visibility: hidden;
