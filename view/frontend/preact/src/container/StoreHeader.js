@@ -10,7 +10,7 @@ import RegionFilter from './../component/RegionFilter';
 export default class StoreHeader extends Component {
 
     constructor(props) {
-        super();
+        super(props);
         this.postcodeInput = null;
         this.geocode = null;
         this.applyFilter = this.applyFilter.bind(this);
