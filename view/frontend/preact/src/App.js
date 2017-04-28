@@ -24,8 +24,7 @@ class App extends Component {
 
     getChildContext() {
         return {
-            sw: this.props.json.constants.autocomplete_bounds.sw,
-            ne: this.props.json.constants.autocomplete_bounds.ne,
+            constants: this.props.json.constants,
             google: this.props.google
         };
     }

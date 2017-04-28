@@ -24,7 +24,7 @@ export default class Marker extends Component {
 
     renderMarker() {
         let {
-            map, google, position, mapCenter
+            map, google, position, mapCenter, icon
             } = this.props;
 
         if (!google) {
@@ -36,7 +36,8 @@ export default class Marker extends Component {
 
         const pref = {
             map: map,
-            position: position
+            position: position,
+            icon: icon
         };
         this.marker = new google.maps.Marker(pref);
     }

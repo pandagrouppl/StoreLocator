@@ -19,7 +19,7 @@ export default class HeaderMap extends Component {
                  scrollwheel={false}
                  center={this.props.stateStore.geoTotal}>
                     {this.props.stateStore.stores.map((store) => (
-                        <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} />
+                        <Marker key={store.name} position={{lat: store.geo.lat, lng: store.geo.lng}} icon=''/>
                     ))}
                 <Directions points={this.props.stateStore.waypoints}/>
             </Map>

@@ -10,7 +10,6 @@
   "author": "Tomasz Jezierski",
   "license": "ISC",
   "dependencies": {
-    "google-maps-react": "^1.0.19",
     "history": "^4.6.1",
     "mobx": "^3.1.9",
     "mobx-preact": "^0.3.1",
