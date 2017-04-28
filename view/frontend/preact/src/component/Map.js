@@ -1,6 +1,5 @@
 import React from 'react';
 import { h, Component } from 'preact';
-import { makeCancelable } from './../util/cancelablePromise';
 import { camelize } from './../util/String';
 
 const mapStyles = {
@@ -54,25 +53,6 @@ export default class Map extends Component {
     }
 
     componentDidMount() {
-        if (this.props.centerAroundCurrentLocation) {
-            if (navigator && navigator.geolocation) {
-                this.geoPromise = makeCancelable(
-                    new Promise((resolve, reject) => {
-                        navigator.geolocation.getCurrentPosition(resolve, reject);
-                    })
-                );
-
-                this.geoPromise.promise.then(pos => {
-                    const coords = pos.coords;
-                    this.setState({
-                        currentLocation: {
-                            lat: coords.latitude,
-                            lng: coords.longitude
-                        }
-                    })
-                }).catch(e => e);
-            }
-        }
         this.loadMap();
     }
 
@@ -142,7 +122,7 @@ export default class Map extends Component {
             });
 
             Object.keys(mapConfig).forEach((key) => {
-                if (mapConfig[key] == null) {
+                if (mapConfig[key] === null) {
                     delete mapConfig[key];
                 }
             });
