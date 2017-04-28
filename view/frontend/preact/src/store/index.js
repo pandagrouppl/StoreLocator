@@ -52,7 +52,7 @@ class StateStore {
     }
 
     @action
-    changeMap(gps, zoom = this.json.constants.zoom) {
+    changeMap(gps=this.json.constants.geo, zoom=this.json.constants.zoom) {
         this.geo = gps;
         this.zoom = zoom;
     }
@@ -69,7 +69,7 @@ class StateStore {
     }
 
     @action
-    setError(error = '') {
+    setError(error='') {
         this.error = error;
     }
 
