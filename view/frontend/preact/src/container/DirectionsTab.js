@@ -55,14 +55,8 @@ export default class DirectionsTab extends Component {
     }
 
     initGoogleAutocomplete(target) {
-        const bounds = this.context.constants.autocomplete_bounds;
-        const autocompBounds = new this.context.google.maps.LatLngBounds(
-            new this.context.google.maps.LatLng(bounds.sw[0], bounds.sw[1]),
-            new this.context.google.maps.LatLng(bounds.ne[0], bounds.ne[1])
-        );
-
         const options = {
-            bounds: autocompBounds
+            componentRestrictions: {country: this.context.constants.country}
         };
 
         const autocomplete = new this.context.google.maps.places.Autocomplete(target, options);

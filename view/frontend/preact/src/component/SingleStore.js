@@ -23,7 +23,7 @@ const SingleStore = (props) => {
                     <li><i className="icon-address"></i>{props.addr_strt} {props.addr_cty}</li>
                     <li><i className="icon-mobile"></i><a href={'tel:'+props.phone}>{props.phone}</a></li>
                     <li><i className="icon-envelope"></i><a href={'mailto:'+props.email}>{props.email}</a></li>
-                    <li onClick={zoomToStoreLink}><Link to={`/${props.id}`}>get directions</Link></li>
+                    <li onClick={zoomToStoreLink}><Link to={`/${props.id}`}>Get directions</Link></li>
                 </ul>
             </div>
             <HoursSelectFill day={props.hours}/>
