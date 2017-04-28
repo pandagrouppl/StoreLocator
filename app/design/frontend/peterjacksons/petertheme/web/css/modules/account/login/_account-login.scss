@@ -1,6 +1,7 @@
 .account-login {
     display: flex;
     flex-direction: column;
+    font-family: HlvtcNeueBdCndnsd;
 
     &__title {
         text-align: center;
@@ -8,13 +9,12 @@
         h1 {
             font-size: 30px;
             font-family: HlvtcNeueBdCndnsd;
-            font-weight: normal;
             margin: 40px 0 10px;
         }
     }
 
     &__noaccount {
-        font-size: 13px;
+        font-size: 12px;
         color: $black-light;
         font-family: HlvtcNeueBdCndnsd;
     }
@@ -23,11 +23,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: HlvtcNeueBdCndnsd;
     }
 
     &__or {
         text-align: center;
-        font-family: HlvtcNeueBdCndnsd;
         font-size: 20px;
     }
 
