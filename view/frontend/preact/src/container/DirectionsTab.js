@@ -82,9 +82,7 @@ export default class DirectionsTab extends Component {
                                     value={this.state.start}
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'a')}
-                                    required
                                     ref={(input) => {this.textInputs.push(input);}}/>
-
                             </div>
                             <div>
                                 <label className="DirectionsTab__input-label" for="route-stop">B</label>
@@ -93,9 +91,7 @@ export default class DirectionsTab extends Component {
                                     value={this.state.stop}
                                     onChange={this.handleChange}
                                     readonly={(this.state.locked == 'b')}
-                                    required
                                     ref={(input) => {this.textInputs.push(input);}}/>
-
                             </div>
                         </div>
                         <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
