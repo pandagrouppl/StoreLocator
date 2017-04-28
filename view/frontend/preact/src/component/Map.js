@@ -1,6 +1,6 @@
 import React from 'react';
 import { h, Component } from 'preact';
-import { camelize } from './../util/String';
+import camelize from './../util/Camelize';
 
 const mapStyles = {
     container: {
