@@ -18,6 +18,9 @@ export default class Directions extends Component {
         if (this.props.points !== prevProps.points) {
             this.renderDirections();
         }
+        if ((this.props.stateStore.view == 'list') && this.directionsDisplay) {
+            this.directionsDisplay.setMap(null);
+        }
     }
 
     renderDirections() {
@@ -41,6 +44,8 @@ export default class Directions extends Component {
                 }
             });
         }
+
+
     }
 
     render() {
