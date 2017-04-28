@@ -7,7 +7,7 @@ export default class DirectionsTab extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleGoogleAutocomplete =  this.handleGoogleAutocomplete.bind(this);
+        this.handleGoogleAutocompletePick =  this.handleGoogleAutocompletePick.bind(this);
         this.state = {start: props.stateStore.waypoints.start, stop:props.initStop, mode: props.stateStore.waypoints.mode, locked: 'b'};
         this.textInputs = [];
     }
@@ -19,11 +19,10 @@ export default class DirectionsTab extends Component {
 
     }
 
-    handleGoogleAutocomplete(target) {
+    handleGoogleAutocompletePick(target) {
         this.setState({
             [target.name]: target.value
     });
-
     }
 
     handleSubmit(event) {
@@ -39,7 +38,7 @@ export default class DirectionsTab extends Component {
         (this.state.locked == 'a') ? this.setState({locked: 'b'}) : this.setState({locked: 'a'});
     }
 
-    transitClass(label) {
+    transitCssClass(label) {
         const a = 'DirectionsTab__radio-label';
         const active = (this.state.mode === label) ? `${a}--active ` : '';
         const classes = `${a} ${a}--${label}`;
@@ -49,16 +48,18 @@ export default class DirectionsTab extends Component {
     componentDidMount() {
         if (this.context.google) {
             this.textInputs.map((q) => {
-                this.googleAutocomplete(q);
+                this.initGoogleAutocomplete(q);
             });
 
         }
     }
 
-    googleAutocomplete(target) {
+    initGoogleAutocomplete(target) {
+        const bounds = this.context.constants.autocomplete_bounds;
         const autocompBounds = new this.context.google.maps.LatLngBounds(
-            new this.context.google.maps.LatLng(this.context.sw[0], this.context.sw[1]),
-            new this.context.google.maps.LatLng(this.context.ne[0], this.context.ne[1]));
+            new this.context.google.maps.LatLng(bounds.sw[0], bounds.sw[1]),
+            new this.context.google.maps.LatLng(bounds.ne[0], bounds.ne[1])
+        );
 
         const options = {
             bounds: autocompBounds
@@ -67,7 +68,7 @@ export default class DirectionsTab extends Component {
         const autocomplete = new this.context.google.maps.places.Autocomplete(target, options);
 
         autocomplete.addListener('place_changed', () => {
-            this.handleGoogleAutocomplete(target)});
+            this.handleGoogleAutocompletePick(target)});
     }
 
 
@@ -75,9 +76,9 @@ export default class DirectionsTab extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit} method="post" className="DirectionsTab">
-                    <label className={this.transitClass("DRIVING")}><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
-                    <label className={this.transitClass("TRANSIT")}><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
-                    <label className={this.transitClass("WALKING")}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
+                    <label className={this.transitCssClass("DRIVING")}><input type="radio" name="mode" value="DRIVING" onChange={this.handleChange} checked={this.state.mode === 'DRIVING'} />car</label>
+                    <label className={this.transitCssClass("TRANSIT")}><input type="radio" name="mode" value="TRANSIT" onChange={this.handleChange} />transit</label>
+                    <label className={this.transitCssClass("WALKING")}><input type="radio" name="mode" value="WALKING" onChange={this.handleChange} />walk</label>
                     <div className="DirectionsTab__directions-flexbox">
                         <div className="DirectionsTab__directions-wrapper">
                             <div>
