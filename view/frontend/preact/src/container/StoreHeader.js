@@ -36,7 +36,6 @@ export default class StoreHeader extends Component {
                 postalCode: this.postcodeInput.value
             }
         }, (results, status) => {
-            console.log(status);
             if (status === 'OK') {
                 const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
                 this.props.stateStore.setError();
