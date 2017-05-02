@@ -1,28 +1,42 @@
 <li class="level0">
-    <a href="#">Brand</a>
+    <a href="<?php echo $this->getUrl('storelocator')?>">Stores</a>
     <ul class="level0">
         <section class="header-middle__row">
             <ol class="header-middle__columns">
-                <li class="header-middle__column-item header-middle__column-item--header"><a href="#">All Stores</a></li>
-                <li class="header-middle__column-item"><a href="#">Queensland</a></li>
-                <li class="header-middle__column-item"><a href="#">New South Wales</a></li>
-                <li class="header-middle__column-item"><a href="#">Victoria</a></li>
-                <li class="header-middle__column-item"><a href="#">South Australia</a></li>
+                <li class="header-middle__column-item header-middle__column-item--header"><a href="<?php echo $this->getUrl('storelocator')?>">All Stores</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#qld')?>">Queensland</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#nsw')?>">New South Wales</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#act')?>">Canberra</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#vic')?>">Victoria</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#sa')?>">South Australia</a></li>
             </ol>
         </section>
     </ul>
 </li>
-<li class="level0"><a href="#">Editorial</a></li>
 <li class="level0">
-    <a href="#">Brand</a>
+    <a href="<?php echo $this->getUrl('blog')?>">Editorial</a>
     <ul class="level0">
         <section class="header-middle__row">
             <ol class="header-middle__columns">
-                <li class="header-middle__column-item header-middle__column-item--header"><a href="#">Design</a></li>
-                <li class="header-middle__column-item"><a href="#">Our labels explained</a></li>
-                <li class="header-middle__column-item"><a href="#">Mills and productions</a></li>
-                <li class="header-middle__column-item"><a href="#">Sustainability</a></li>
-                <li class="header-middle__column-item"><a href="#">Our campaigns</a></li>
+                <li class="header-middle__column-item header-middle__column-item--header"><a href="<?php echo $this->getUrl('blog')?>">Blog</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-design')?>">Blownlow</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-design')?>">Design</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-design')?>">Design</a></li>
+            </ol>
+        </section>
+    </ul>
+</li>
+<li class="level0">
+    <a href="<?php echo $this->getUrl('about_us')?>">Brand</a>
+    <ul class="level0">
+        <section class="header-middle__row">
+            <ol class="header-middle__columns">
+                <li class="header-middle__column-item header-middle__column-item--header"><a href="<?php echo $this->getUrl('about_us')?>">Get to know us</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-design')?>">Design</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-labels')?>">Our labels explained</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('our-mills')?>">Mills and productions</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('sustainability')?>">Sustainability</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('urban-armour-aw17-campaign')?>">Our campaigns</a></li>
             </ol>
         </section>
     </ul>
