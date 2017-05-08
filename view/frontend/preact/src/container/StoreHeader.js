@@ -32,7 +32,7 @@ export default class StoreHeader extends Component {
         }
         this.geocode.geocode({
             componentRestrictions: {
-                country: 'AU',
+                country: this.context.constants.country,
                 postalCode: this.postcodeInput.value
             }
         }, (results, status) => {
@@ -54,6 +54,7 @@ export default class StoreHeader extends Component {
 
     backButton() {
         this.props.stateStore.changeView();
+        this.props.stateStore.changeMap();
     }
 
     applyFilter(region) {
