@@ -108,6 +108,5 @@ export class Inliners {
             () => {
                 img.css({'background-size': 'auto 100%'})
             });
-
     }
  }

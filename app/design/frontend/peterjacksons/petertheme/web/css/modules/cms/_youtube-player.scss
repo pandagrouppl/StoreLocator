@@ -1,93 +1,92 @@
 .cms-page-view {
     .page-wrapper {
-    .youtube-player {
+        .youtube-player {
 
-        &__placeholder {
-            position: relative;
-        }
+            &__placeholder {
+                position: relative;
+            }
 
-        &__img {
-            img {
+            &__img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+
+            &__play-img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            &__desc {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            &__desc-text {
+                font-size: 18px;
+
+
+                &--bold {
+                    font-weight: bold;
+                }
             }
         }
 
-        &__play-img {
-            position: absolute;
+        .youtube-player-overlay {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: flex;
             justify-content: center;
             align-items: center;
+            display: none;
+            background-color: rgba(1, 1, 1, 0.9);
+            z-index: 999;
 
-            &:hover {
-                background-color: rgba(0, 0, 0, 0.3);
+            &--active {
+                display: flex;
+            }
+
+            &__close {
+                position: absolute;
+                right: -30px;
+                top: 0;
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            &__video {
+                width: 80vw;
+                height: 45.2vw;
+                max-height: 100%;
+                position: relative;
+            }
+
+            &__player {
+                border: none;
             }
         }
-
-        &__desc {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        &__desc-text {
-            font-size: 18px;
-
-
-            &--bold {
-                font-weight: bold;
-            }
-        }
-    }
-
-    .youtube-player-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        display: none;
-        background-color: rgba(1,1,1,0.9);
-        z-index: 999;
-
-        &--active {
-            display: flex;
-        }
-
-        &__close {
-            position: absolute;
-            right: -30px;
-            top: 0;
-            color: white;
-            font-size: 30px;
-        }
-
-        &__video {
-            width: 80vw;
-            height: 45.2vw;
-            max-height: 100%;
-            position: relative;
-        }
-
-        &__player {
-            border: none;
-        }
-    }
     }
 }
 
 @media screen and (max-width: 655px) {
     .cms-page-view {
-        .youtube-player {
 
-        }
         .youtube-player-overlay {
             flex: 1 1 100%;
 
