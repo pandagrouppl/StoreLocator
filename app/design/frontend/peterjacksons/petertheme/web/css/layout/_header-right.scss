@@ -13,6 +13,7 @@
 
     &__show-search-overlay {
         @include sprite(header-zoom);
+        transform: scale(0.7);
         display: block;
 
         @media all and (max-width: $bp-header) {
@@ -34,6 +35,7 @@
 
         &-icon {
             @include sprite(header-star);
+            transform: scale(0.7);
         }
 
         @media all and (max-width: $bp-header) {
@@ -46,6 +48,7 @@
 
         &-icon {
             @include sprite(header-case);
+            transform: scale(0.7);
 
             @media all and (max-width: $bp-small) {
                 transform: scale(0.8, 0.8);
