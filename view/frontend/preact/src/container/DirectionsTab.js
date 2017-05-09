@@ -27,6 +27,7 @@ export default class DirectionsTab extends Component {
 
     handleSubmit(event) {
         this.props.stateStore.updateWaypoints(this.state.start,this.state.stop, this.state.mode);
+        this.props.stateStore.updateRef(this.directionsPanel);
         event.preventDefault();
     }
 
@@ -65,7 +66,6 @@ export default class DirectionsTab extends Component {
             this.handleGoogleAutocompletePick(target)});
     }
 
-
     render() {
         return (
             <div>
@@ -98,7 +98,7 @@ export default class DirectionsTab extends Component {
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>
-                <div id="directionsPanel"></div>
+                <div id="dirPanel" ref={(div) => {this.directionsPanel = div;}}></div>
             </div>
         );
     }
