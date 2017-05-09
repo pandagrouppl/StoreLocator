@@ -385,9 +385,9 @@
 }
 @media screen and (min-width: $cms-lg-brkpt) {
     .about-us-wrapper {
-    &__mills-flexbox li:nth-child(3n) {
-        border-right: none;
-    }
+        &__mills-flexbox li:nth-child(3n) {
+            border-right: none;
+        }
     }
 }
 
@@ -593,8 +593,3 @@
         }
     }
 }
-
-
-
-
-

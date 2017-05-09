@@ -85,7 +85,7 @@
             font-weight: 400;
         }
 
-        &:before {
+        &::before {
             content: '';
             position: absolute;
             border-style: solid;
@@ -97,7 +97,7 @@
             left: 25px;
         }
 
-        &:after {
+        &::after {
             content: '';
             position: absolute;
             border-style: solid;
@@ -124,4 +124,3 @@
         }
     }
 }
-
