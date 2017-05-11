@@ -4,8 +4,8 @@ import { connect } from 'mobx-preact';
 @connect(['stateStore'])
 export default class Directions extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
         this.directionsService = null;
         this.directionsDisplay = null;
     }
@@ -37,15 +37,12 @@ export default class Directions extends Component {
                 if (status === 'OK') {
                     this.props.stateStore.setError();
                     this.directionsDisplay.setDirections(result);
-                    this.directionsDisplay.setPanel(document.getElementById('directionsPanel'));
-                    this.props.stateStore.setRoute(result.routes[0].legs[0].steps);
+                    this.directionsDisplay.setPanel(this.props.stateStore.refDiv);
                 } else {
                     this.props.stateStore.setError('Could not find a route between A and B.');
                 }
             });
         }
-
-
     }
 
     render() {

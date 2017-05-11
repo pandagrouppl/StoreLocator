@@ -50,12 +50,12 @@ export default class StoreView extends Component {
         return (
             <div className="store-view">
                 <div className="store-view__store-card">
-                        <h1 className="store-view__name">{this.store.name}</h1>
-                        <ul className="store-view__credentials">
-                            <li><span class="store-view__label">Address:</span>{this.store.addr_strt} {this.store.addr_cty}</li>
-                            <li><span class="store-view__label">Phone:</span><a href={'tel:'+this.store.phone}>{this.store.phone}</a></li>
-                            <li><span class="store-view__label">Email:</span><a href={'mailto:'+this.store.email}>{this.store.email}</a></li>
-                        </ul>
+                    <h1 className="store-view__name">{this.store.name}</h1>
+                    <ul className="store-view__credentials">
+                        <li><span class="store-view__label">Address:</span>{this.store.addr_strt} {this.store.addr_cty}</li>
+                        <li><span class="store-view__label">Phone:</span><a href={'tel:'+this.store.phone}>{this.store.phone}</a></li>
+                        <li><span class="store-view__label">Email:</span><a href={'mailto:'+this.store.email}>{this.store.email}</a></li>
+                    </ul>
                 </div>
                 <div className="store-view__tabs tabs">
                     <div className="tabs__tab-bar">
