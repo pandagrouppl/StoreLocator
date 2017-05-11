@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import HoursFormatter from './HoursFormatter'
+import HoursFormatter from './HoursFormatter';
 
 const HoursSpanFill = (props) => {
     return (
@@ -8,7 +8,7 @@ const HoursSpanFill = (props) => {
                      <HoursFormatter day={day} hours={props.day[day]} wrapper="span"/>
                 ))}
         </div>
-    )
+    );
 };
 
 export default HoursSpanFill;

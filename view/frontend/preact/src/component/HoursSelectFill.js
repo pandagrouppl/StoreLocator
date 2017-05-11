@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import HoursFormatter from './HoursFormatter'
+import HoursFormatter from './HoursFormatter';
 
 const HoursSelectFill = (props) => {
     return (
@@ -12,7 +12,7 @@ const HoursSelectFill = (props) => {
             </select>
             <figure class="stores-li__hours-arrow"></figure>
         </div>
-    )
+    );
 };
 
 export default HoursSelectFill;

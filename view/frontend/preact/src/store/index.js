@@ -89,7 +89,7 @@ class StateStore {
             origin: this.waypoints.start,
             destination: this.waypoints.stop,
             travelMode: this.waypoints.mode
-        }
+        };
     }
 }
 

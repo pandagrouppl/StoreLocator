@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { Link } from 'react-router-dom';
 
-import HoursSelectFill from './HoursSelectFill'
+import HoursSelectFill from './HoursSelectFill';
 
 
 const SingleStore = (props) => {

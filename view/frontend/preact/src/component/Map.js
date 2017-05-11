@@ -49,7 +49,7 @@ export default class Map extends Component {
                 lat: this.props.initialCenter.lat,
                 lng: this.props.initialCenter.lng
             }
-        }
+        };
     }
 
     componentDidMount() {
@@ -151,7 +151,7 @@ export default class Map extends Component {
                     this.props[handlerName](this.props, this.map, e);
                 }
             }, 0);
-        }
+        };
     }
 
     recenterMap() {
@@ -168,7 +168,7 @@ export default class Map extends Component {
                 center = new google.maps.LatLng(center.lat, center.lng);
             }
             map.setCenter(center);
-            maps.event.trigger(map, 'recenter')
+            maps.event.trigger(map, 'recenter');
         }
     }
 
@@ -190,7 +190,7 @@ export default class Map extends Component {
                 google: this.props.google,
                 mapCenter: this.state.currentLocation
             });
-        })
+        });
     }
 
 
@@ -204,12 +204,12 @@ export default class Map extends Component {
 
         return (
         <div style={containerStyles} className={this.props.className}>
-            <div ref={(div) => {this.mapDiv = div}} style={style}>
+            <div ref={(div) => {this.mapDiv = div;}} style={style}>
                 Loading map...
             </div>
             {this.renderChildren()}
         </div>
-        )
+        );
     }
 }
 

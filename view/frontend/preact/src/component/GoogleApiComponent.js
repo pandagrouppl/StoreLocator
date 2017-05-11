@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import {Component} from 'react'
+import { Component } from 'react';
 
 import ScriptCache from './../util/ScriptCache';
 import GoogleApi from './../util/GoogleApi';
@@ -32,13 +32,13 @@ export const wrapper = (options = {}) => (WrappedComponent) => {
                 loaded: false,
                 map: null,
                 google: null
-            }
+            };
         }
 
         onLoad(err, tag) {
             this._gapi = window.google;
 
-            this.setState({loaded: true, google: this._gapi})
+            this.setState({loaded: true, google: this._gapi});
         }
 
         render() {
@@ -51,7 +51,7 @@ export const wrapper = (options = {}) => (WrappedComponent) => {
                 <div>
                     <WrappedComponent {...props}/>
                 </div>
-            )
+            );
         }
     }
 

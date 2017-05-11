@@ -16,13 +16,12 @@ export default class DirectionsTab extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-
     }
 
     handleGoogleAutocompletePick(target) {
         this.setState({
             [target.name]: target.value
-    });
+        });
     }
 
     handleSubmit(event) {
@@ -42,7 +41,7 @@ export default class DirectionsTab extends Component {
         const a = 'DirectionsTab__radio-label';
         const active = (this.state.mode === label) ? `${a}--active ` : '';
         const classes = `${a} ${a}--${label}`;
-        return active+classes
+        return active + classes;
     }
 
     componentDidMount() {
@@ -50,7 +49,6 @@ export default class DirectionsTab extends Component {
             this.textInputs.map((q) => {
                 this.initGoogleAutocomplete(q);
             });
-
         }
     }
 
@@ -62,7 +60,8 @@ export default class DirectionsTab extends Component {
         const autocomplete = new this.context.google.maps.places.Autocomplete(target, options);
 
         autocomplete.addListener('place_changed', () => {
-            this.handleGoogleAutocompletePick(target)});
+            this.handleGoogleAutocompletePick(target);
+        });
     }
 
 
@@ -94,7 +93,7 @@ export default class DirectionsTab extends Component {
                                     ref={(input) => {this.textInputs.push(input);}}/>
                             </div>
                         </div>
-                        <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress()}}>swap</button>
+                        <button type="button" className="DirectionsTab__input-button DirectionsTab__input-button--swap" onClick={() => {this.swapAddress();}}>swap</button>
                     </div>
                     <input className="DirectionsTab__input-button DirectionsTab__input-button--submit" type="submit" value="Get Directions" />
                 </form>

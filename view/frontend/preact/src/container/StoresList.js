@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
-import SingleStore from './../component/SingleStore'
+import SingleStore from './../component/SingleStore';
 
 
 @connect(['stateStore'])

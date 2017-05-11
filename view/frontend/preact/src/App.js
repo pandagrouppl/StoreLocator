@@ -1,15 +1,15 @@
 import 'preact/devtools';
 import { h, Component } from 'preact';
-import { Provider } from 'mobx-preact'
+import { Provider } from 'mobx-preact';
 
 import { Route, BrowserRouter } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
+import createBrowserHistory from 'history/createBrowserHistory';
 
-import Directions from './container/Directions'
+import Directions from './container/Directions';
 import StateStore from './store/';
 import StoreHeader from './container/StoreHeader';
 import StoresList from './container/StoresList';
-import StoreView from './container/StoreView'
+import StoreView from './container/StoreView';
 
 import GoogleApiComponent from './component/GoogleApiComponent';
 
@@ -43,7 +43,7 @@ class App extends Component {
                     </div>
                 </BrowserRouter>
             </Provider>
-        )
+        );
     }
 }
 
