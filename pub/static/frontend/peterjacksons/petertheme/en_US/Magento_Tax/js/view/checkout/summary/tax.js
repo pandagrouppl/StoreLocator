@@ -1,0 +1,1 @@
+/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-tax/view/frontend/web/js/view/checkout/summary/tax.js

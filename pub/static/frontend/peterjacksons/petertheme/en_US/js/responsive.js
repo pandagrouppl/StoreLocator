@@ -1,0 +1,1 @@
+/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/theme-frontend-blank/web/js/responsive.js

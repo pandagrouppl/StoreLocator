@@ -1,0 +1,1 @@
+/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-product-video/view/frontend/web/js/load-player.js

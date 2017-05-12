@@ -1,0 +1,1 @@
+/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-payment/view/frontend/web/js/view/payment/payments.js

@@ -1,0 +1,1 @@
+/home/cloudpanel/htdocs/peterjacksons.dev/app/code/Plumrocket/SocialLoginFree/view/frontend/web/js/view/checkout/form/element/email.js
