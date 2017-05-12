@@ -22,7 +22,8 @@ class StateStore {
     initializeStore(router) {
         let {pathname, hash} = router.route.location;
         if (hash !== '') {
-            hash = hash.replace('#', '').toUpperCase();
+            hash = hash.replace('#', '').replace('/', '').toUpperCase();
+            debugger;
             this.addFilters(hash);
         } else if (pathname !== '/') {
             pathname = pathname.replace('/', '');
