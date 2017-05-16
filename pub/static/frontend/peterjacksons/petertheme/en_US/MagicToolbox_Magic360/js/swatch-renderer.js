@@ -1,1 +1,0 @@
-/home/cloudpanel/htdocs/peterjacksons.dev/app/code/MagicToolbox/Magic360/view/frontend/web/js/swatch-renderer.js

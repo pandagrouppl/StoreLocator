@@ -1,1 +1,0 @@
-/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-search/view/frontend/web/form-mini.js

@@ -1,1 +1,0 @@
-/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-catalog/view/frontend/web/product/view/validation.js

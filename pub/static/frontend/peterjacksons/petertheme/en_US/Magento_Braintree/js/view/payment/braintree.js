@@ -1,1 +1,0 @@
-/home/cloudpanel/htdocs/peterjacksons.dev/vendor/magento/module-braintree/view/frontend/web/js/view/payment/braintree.js
