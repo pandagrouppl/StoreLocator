@@ -2,9 +2,9 @@
     "constants": {
         "apiKey": "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
         "geo": { "lat": 52.4046, "lng": 16.9252 },
-        "zoom": 7,
-        "country": "au",
-        "pin": "http://www.peterjacksons.com/media/storelocator/images/icon/pinpj2.png"
+        "zoom": 11,
+        "country": "pl",
+        "pin": "http://i.imgur.com/cOHpOCp.png"
     },
     "regions": [
         {
@@ -35,12 +35,12 @@
     ],
     "stores": [
         {
-            "name": "Head office",
+            "name": "Panda Group",
             "id": "head-office",
-            "addr_strt": "426 Johnston Street, Abbotsford",
-            "addr_cty": "Melbourne Victoria 3000",
-            "geo": { "lat": 58.4046, "lng": 16.9252 },
-            "zoom": 9,
+            "addr_strt": "Rubież 46 / C4 / 84",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.454782, "lng": 16.956248 },
+            "zoom": 18,
             "phone": "666 666 666",
             "email": "info@peterjacksons.com",
             "region": "QLD",
@@ -76,12 +76,12 @@
             }
         },
         {
-            "name": "EMPORIUM",
+            "name": "Snowdog",
             "id": "emporium",
-            "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
-            "addr_cty": "Melbourne 3000",
-            "geo": { "lat": 46.4046, "lng": 16.9252 },
-            "zoom": 9,
+            "addr_strt": "Mostowa 11",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.404336, "lng": 16.940261 },
+            "zoom": 18,
             "phone": "777 777 777",
             "email": "emporium@peterjacksons.com",
             "region": "SA",
@@ -117,13 +117,13 @@
             }
         },
         {
-            "name": "BOURKE ST",
+            "name": "Doggo",
             "id": "bourke-st",
-            "addr_strt": "420 Bourke St",
-            "addr_cty": "Melbourne 3000",
-            "geo": { "lat": 34.4046, "lng": 16.9252 },
-            "zoom": 9,
-            "phone": "111 111 111",
+            "addr_strt": "Psia 11",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.407001, "lng": 16.928714 },
+            "zoom": 18,
+            "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
             "region": "QLD",
             "hours": {
@@ -158,15 +158,220 @@
             }
         },
         {
-            "name": "BOURKE ST 2",
+            "name": "Angery Doggo",
             "id": "bourke-st-2",
-            "addr_strt": "420 Bourke St 2",
-            "addr_cty": "Melbourne 3000 2",
-            "geo": { "lat": 21.4046, "lng": 16.9252 },
-            "zoom": 9,
+            "addr_strt": "Psia 12",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.422508, "lng": 16.933297 },
+            "zoom": 18,
             "phone": "111 111 111 2",
             "email": "bourke@peterjacksons.com 2",
             "region": "SA",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },
+        {
+            "name": "Weird Doggo",
+            "id": "bourke-st",
+            "addr_strt": "Psia 16",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.427141, "lng": 16.878091 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "QLD",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },
+        {
+            "name": "Shocked Doggo",
+            "id": "bourke-st",
+            "addr_strt": "Psia 19",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.458278, "lng": 16.790747 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "QLD",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },
+        {
+            "name": "Sleepy Doggo",
+            "id": "bourke-st",
+            "addr_strt": "Psia 26",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.418804, "lng": 16.832460 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "QLD",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },
+        {
+            "name": "Pupper",
+            "id": "bourke-st",
+            "addr_strt": "Psia 46",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.363130, "lng": 16.867882 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "QLD",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },
+        {
+            "name": "Snow Doggo",
+            "id": "bourke-st",
+            "addr_strt": "Psia 19",
+            "addr_cty": "Poznań",
+            "geo": { "lat": 52.387070, "lng": 16.927065 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "QLD",
             "hours": {
                 "SUN": [
                     "9:00 AM",
