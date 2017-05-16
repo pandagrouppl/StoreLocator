@@ -8,30 +8,21 @@
     },
     "regions": [
         {
-            "name": "VIC",
-            "geo": { "lat": 37.078873, "lng": -111.253838 },
+            "name": "WLKP",
+            "geo": { "lat": 52.360719, "lng": 17.259426},
             "zoom": 9
         },
         {
-            "name": "SA",
-            "geo": { "lat": 38.953524, "lng": -117.101054 },
-            "zoom": 9
+            "name": "LUB",
+            "geo": { "lat": 52.170800, "lng": 15.254622},
+            "zoom": 8
         },
         {
-            "name": "QLD",
-            "geo": { "lat": 64.251461, "lng": -18.904957 },
-            "zoom": 9
-        },
-        {
-            "name": "NSW",
-            "geo": { "lat": 58.4046, "lng": -46.9252 },
-            "zoom": 9
-        },
-        {
-            "name": "ACT",
-            "geo": { "lat": 48.4046, "lng": -56.9252 },
-            "zoom": 9
+            "name": "SRMRSQ",
+            "geo": { "lat": 64.187401, "lng": -51.701020 },
+            "zoom": 12
         }
+
     ],
     "stores": [
         {
@@ -41,9 +32,9 @@
             "addr_cty": "Poznań",
             "geo": { "lat": 52.454782, "lng": 16.956248 },
             "zoom": 18,
-            "phone": "666 666 666",
+            "phone": "1337",
             "email": "info@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "Closed",
@@ -84,7 +75,7 @@
             "zoom": 18,
             "phone": "777 777 777",
             "email": "emporium@peterjacksons.com",
-            "region": "SA",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "8:00 AM",
@@ -125,7 +116,7 @@
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -166,7 +157,7 @@
             "zoom": 18,
             "phone": "111 111 111 2",
             "email": "bourke@peterjacksons.com 2",
-            "region": "SA",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -207,7 +198,7 @@
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -248,7 +239,7 @@
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -289,7 +280,7 @@
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -330,7 +321,47 @@
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "WLKP",
+            "hours": {
+                "SUN": [
+                    "9:00 AM",
+                    "11:50 AM"
+                ],
+                "MON": [
+                    "4:00 AM",
+                    "5:30 PM"
+                ],
+                "TUE": [
+                    "1:00 AM",
+                    "2:00 PM"
+                ],
+                "WED": [
+                    "3:30 AM",
+                    "4:10 PM"
+                ],
+                "THU": [
+                    "5:34 AM",
+                    "6:20 PM"
+                ],
+                "FRI": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ],
+                "SAT": [
+                    "17:34 AM",
+                    "14:20 PM"
+                ]
+            }
+        },                {
+            "name": "Dangerous Doggo",
+            "id": "bourke-st",
+            "addr_strt": "Grobla 7",
+            "addr_cty": "Gorzów Wielkopolski",
+            "geo": { "lat": 52.728259, "lng": 15.241271 },
+            "zoom": 18,
+            "phone": "111 999 000",
+            "email": "bourke@peterjacksons.com",
+            "region": "LUB",
             "hours": {
                 "SUN": [
                     "9:00 AM",
@@ -365,13 +396,13 @@
         {
             "name": "Snow Doggo",
             "id": "bourke-st",
-            "addr_strt": "Psia 19",
-            "addr_cty": "Poznań",
-            "geo": { "lat": 52.387070, "lng": 16.927065 },
+            "addr_strt": "Manguaraq",
+            "addr_cty": "Nuuk",
+            "geo": { "lat": 64.187401, "lng": -51.701020},
             "zoom": 18,
             "phone": "111 999 000",
             "email": "bourke@peterjacksons.com",
-            "region": "QLD",
+            "region": "SRMRSQ",
             "hours": {
                 "SUN": [
                     "9:00 AM",
