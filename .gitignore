@@ -58,6 +58,12 @@ atlassian*
 
 /vendor
 
+/pub
+
+/update
+
+/phpserver
+
 /*.*
 
 !/composer.json
