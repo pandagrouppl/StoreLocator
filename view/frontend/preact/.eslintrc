@@ -7,6 +7,9 @@
       "jsx": true
     }
   },
+  "plugins": [
+    "jsx-a11y"
+  ],
   "rules": {
     "semi": 2
   }
