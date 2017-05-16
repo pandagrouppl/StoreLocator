@@ -16,6 +16,7 @@
         }
 
         &__tab {
+            cursor: pointer;
 
             &--active {
                 background-color: $black;

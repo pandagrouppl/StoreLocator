@@ -1,1 +1,0 @@
-/home/cloudpanel/htdocs/peterjacksons.dev/app/code/Light4website/StoreLocator/view/frontend/web/dist/js.js
