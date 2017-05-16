@@ -46,6 +46,8 @@ atlassian*
 /dev/tools/grunt
 /dev/tools/*.*
 
+/dev/travis
+
 /dev/*.*
 
 /wp/wp-config.php
