@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
 import { connect } from 'mobx-preact';
 
-import DirectionsTab from './../container/DirectionsTab'
-import HoursSpanFill from './../component/HoursSpanFill'
+import DirectionsTab from './../container/DirectionsTab';
+import HoursSpanFill from './../component/HoursSpanFill';
 
 @connect(['stateStore'])
 export default class StoreView extends Component {
