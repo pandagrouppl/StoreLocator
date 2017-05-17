@@ -11,7 +11,7 @@
         "magento/product-community-edition": "2.1.5",
         "composer/composer": "@alpha",
         "snowdog/theme-blank-sass": "^0.10.1",
-        "snowdog/frontools": "^1.3",
+        "snowdog/frontools": "^1.4",
         "magento/module-bundle-sample-data": "100.1.*",
         "magento/module-theme-sample-data": "100.1.*",
         "magento/module-catalog-sample-data": "100.1.*",
