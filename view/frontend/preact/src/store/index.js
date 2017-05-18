@@ -23,7 +23,6 @@ class StateStore {
         let {pathname, hash} = router.route.location;
         if (hash !== '') {
             hash = hash.replace('#', '').replace('/', '').toUpperCase();
-            debugger;
             this.addFilters(hash);
         } else if (pathname !== '/') {
             pathname = pathname.replace('/', '');
@@ -53,8 +52,8 @@ class StateStore {
     }
 
     @action
-    changeMap(gps=this.json.constants.geo, zoom=this.json.constants.zoom) {
-        this.geo = gps;
+    changeMap(geo=this.json.constants.geo, zoom=this.json.constants.zoom) {
+        this.geo = geo;
         this.zoom = zoom;
     }
 

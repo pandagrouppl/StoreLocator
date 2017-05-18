@@ -15,7 +15,7 @@ export default class HeaderMap extends Component {
                  style={{width: '100%', height: '400px', position: 'relative', color:'pink'}}
                  google={this.context.google}
                  zoom={this.props.stateStore.zoom}
-                 initialCenter={this.context.constants.geo}
+                 initialCenter={this.props.stateStore.geoTotal}
                  scrollwheel={false}
                  clickableIcons={false}
                  center={this.props.stateStore.geoTotal}>
