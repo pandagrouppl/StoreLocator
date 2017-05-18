@@ -4,208 +4,403 @@
 <script type="text/javascript">
 
     var data_json =
-        {
-            "constants": {
-                "apiKey": "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
-                "geo": { "lat": 52.4046, "lng": 16.9252 },
-                "zoom": 7,
-                "country": "au",
-                "pin": "http://www.peterjacksons.com/media/storelocator/images/icon/pinpj2.png"
+    {
+        "constants": {
+            "apiKey": "AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo",
+            "geo": { "lat": 52.4046, "lng": 16.9252 },
+            "zoom": 11,
+            "country": "pl",
+            "pin": "http://i.imgur.com/cOHpOCp.png"
+        },
+        "regions": [
+            {
+                "name": "WLKP",
+                "geo": { "lat": 52.360719, "lng": 17.259426},
+                "zoom": 9
             },
-            "regions": [
-                {
-                    "name": "VIC",
-                    "geo": { "lat": 37.078873, "lng": -111.253838 },
-                    "zoom": 9
-                },
-                {
-                    "name": "SA",
-                    "geo": { "lat": 38.953524, "lng": -117.101054 },
-                    "zoom": 9
-                },
-                {
-                    "name": "QLD",
-                    "geo": { "lat": 64.251461, "lng": -18.904957 },
-                    "zoom": 9
-                },
-                {
-                    "name": "NSW",
-                    "geo": { "lat": 58.4046, "lng": -46.9252 },
-                    "zoom": 9
-                },
-                {
-                    "name": "ACT",
-                    "geo": { "lat": 48.4046, "lng": -56.9252 },
-                    "zoom": 9
+            {
+                "name": "LUB",
+                "geo": { "lat": 52.170800, "lng": 15.254622},
+                "zoom": 8
+            },
+            {
+                "name": "SRMRSQ",
+                "geo": { "lat": 64.187401, "lng": -51.701020 },
+                "zoom": 12
+            }
+
+        ],
+        "stores": [
+            {
+                "name": "Panda Group",
+                "id": "panda",
+                "addr_strt": "Rubież 46 / C4 / 84",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.454782, "lng": 16.956248 },
+                "zoom": 18,
+                "phone": "1337",
+                "email": "info@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "Closed",
+                        "Closed"
+                    ],
+                    "MON": [
+                        "9:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "9:00 AM",
+                        "5:00 PM"
+                    ],
+                    "WED": [
+                        "9:30 AM",
+                        "5:10 PM"
+                    ],
+                    "THU": [
+                        "9:34 AM",
+                        "5:20 PM"
+                    ],
+                    "FRI": [
+                        "10:34 AM",
+                        "11:20 PM"
+                    ],
+                    "SAT": [
+                        "Closed",
+                        "Closed"
+                    ]
                 }
-            ],
-            "stores": [
-                {
-                    "name": "Head office",
-                    "id": "head-office",
-                    "addr_strt": "426 Johnston Street, Abbotsford",
-                    "addr_cty": "Melbourne Victoria 3000",
-                    "geo": { "lat": 58.4046, "lng": 16.9252 },
-                    "zoom": 17,
-                    "phone": "666 666 666",
-                    "email": "info@peterjacksons.com",
-                    "region": "QLD",
-                    "hours": {
-                        "SUN": [
-                            "Closed",
-                            "Closed"
-                        ],
-                        "MON": [
-                            "9:00 AM",
-                            "5:30 PM"
-                        ],
-                        "TUE": [
-                            "9:00 AM",
-                            "5:00 PM"
-                        ],
-                        "WED": [
-                            "9:30 AM",
-                            "5:10 PM"
-                        ],
-                        "THU": [
-                            "9:34 AM",
-                            "5:20 PM"
-                        ],
-                        "FRI": [
-                            "10:34 AM",
-                            "11:20 PM"
-                        ],
-                        "SAT": [
-                            "Closed",
-                            "Closed"
-                        ]
-                    }
-                },
-                {
-                    "name": "EMPORIUM",
-                    "id": "emporium",
-                    "addr_strt": "Emporium Melbourne , 295 Lonsdale Street",
-                    "addr_cty": "Melbourne 3000",
-                    "geo": { "lat": 46.4046, "lng": 16.9252 },
-                    "zoom": 9,
-                    "phone": "777 777 777",
-                    "email": "emporium@peterjacksons.com",
-                    "region": "SA",
-                    "hours": {
-                        "SUN": [
-                            "8:00 AM",
-                            "11:20 PM"
-                        ],
-                        "MON": [
-                            "3:00 AM",
-                            "5:30 PM"
-                        ],
-                        "TUE": [
-                            "3:00 AM",
-                            "5:00 PM"
-                        ],
-                        "WED": [
-                            "3:30 AM",
-                            "5:10 PM"
-                        ],
-                        "THU": [
-                            "3:34 AM",
-                            "5:20 PM"
-                        ],
-                        "FRI": [
-                            "3:34 AM",
-                            "11:20 PM"
-                        ],
-                        "SAT": [
-                            "Closed",
-                            "Closed"
-                        ]
-                    }
-                },
-                {
-                    "name": "BOURKE ST",
-                    "id": "bourke-st",
-                    "addr_strt": "420 Bourke St",
-                    "addr_cty": "Melbourne 3000",
-                    "geo": { "lat": 34.4046, "lng": 16.9252 },
-                    "zoom": 9,
-                    "phone": "111 111 111",
-                    "email": "bourke@peterjacksons.com",
-                    "region": "QLD",
-                    "hours": {
-                        "SUN": [
-                            "9:00 AM",
-                            "11:50 AM"
-                        ],
-                        "MON": [
-                            "4:00 AM",
-                            "5:30 PM"
-                        ],
-                        "TUE": [
-                            "1:00 AM",
-                            "2:00 PM"
-                        ],
-                        "WED": [
-                            "3:30 AM",
-                            "4:10 PM"
-                        ],
-                        "THU": [
-                            "5:34 AM",
-                            "6:20 PM"
-                        ],
-                        "FRI": [
-                            "17:34 AM",
-                            "14:20 PM"
-                        ],
-                        "SAT": [
-                            "17:34 AM",
-                            "14:20 PM"
-                        ]
-                    }
-                },
-                {
-                    "name": "BOURKE ST 2",
-                    "id": "bourke-st-2",
-                    "addr_strt": "420 Bourke St 2",
-                    "addr_cty": "Melbourne 3000 2",
-                    "geo": { "lat": 21.4046, "lng": 16.9252 },
-                    "zoom": 9,
-                    "phone": "111 111 111 2",
-                    "email": "bourke@peterjacksons.com 2",
-                    "region": "SA",
-                    "hours": {
-                        "SUN": [
-                            "9:00 AM",
-                            "11:50 AM"
-                        ],
-                        "MON": [
-                            "4:00 AM",
-                            "5:30 PM"
-                        ],
-                        "TUE": [
-                            "1:00 AM",
-                            "2:00 PM"
-                        ],
-                        "WED": [
-                            "3:30 AM",
-                            "4:10 PM"
-                        ],
-                        "THU": [
-                            "5:34 AM",
-                            "6:20 PM"
-                        ],
-                        "FRI": [
-                            "17:34 AM",
-                            "14:20 PM"
-                        ],
-                        "SAT": [
-                            "17:34 AM",
-                            "14:20 PM"
-                        ]
-                    }
+            },
+            {
+                "name": "Doggo",
+                "id": "doggo",
+                "addr_strt": "Psia 11",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.407001, "lng": 16.928714 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
                 }
-            ]
-        };
+            },
+            {
+                "name": "Angery Doggo",
+                "id": "doggo2",
+                "addr_strt": "Psia 12",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.422508, "lng": 16.933297 },
+                "zoom": 18,
+                "phone": "111 111 111 2",
+                "email": "bourke@meme.org 2",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "Weird Doggo",
+                "id": "doggo3",
+                "addr_strt": "Psia 16",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.427141, "lng": 16.878091 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "Shocked Doggo",
+                "id": "doggo4",
+                "addr_strt": "Psia 19",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.458278, "lng": 16.790747 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "Sleepy Doggo",
+                "id": "doggo5",
+                "addr_strt": "Psia 26",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.418804, "lng": 16.832460 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "Pupper",
+                "id": "doggo6",
+                "addr_strt": "Psia 46",
+                "addr_cty": "Poznań",
+                "geo": { "lat": 52.363130, "lng": 16.867882 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "WLKP",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },                {
+                "name": "Dangerous Doggo",
+                "id": "doggo7",
+                "addr_strt": "Grobla 7",
+                "addr_cty": "Gorzów Wielkopolski",
+                "geo": { "lat": 52.728259, "lng": 15.241271 },
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "LUB",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            },
+            {
+                "name": "Snow Doggo",
+                "id": "doggo8",
+                "addr_strt": "Manguaraq",
+                "addr_cty": "Nuuk",
+                "geo": { "lat": 64.187401, "lng": -51.701020},
+                "zoom": 18,
+                "phone": "111 999 000",
+                "email": "bourke@meme.org",
+                "region": "SRMRSQ",
+                "hours": {
+                    "SUN": [
+                        "9:00 AM",
+                        "11:50 AM"
+                    ],
+                    "MON": [
+                        "4:00 AM",
+                        "5:30 PM"
+                    ],
+                    "TUE": [
+                        "1:00 AM",
+                        "2:00 PM"
+                    ],
+                    "WED": [
+                        "3:30 AM",
+                        "4:10 PM"
+                    ],
+                    "THU": [
+                        "5:34 AM",
+                        "6:20 PM"
+                    ],
+                    "FRI": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ],
+                    "SAT": [
+                        "17:34 AM",
+                        "14:20 PM"
+                    ]
+                }
+            }
+        ]
+    };
 
 
     require(['store-locator'], function(StoreLocator) {
