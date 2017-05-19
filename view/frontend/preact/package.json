@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch"
+    "local": "webpack --watch --config local.config.js",
+    "server": "webpack --config server.config.js"
   },
   "keywords": [],
-  "author": "Tomasz Jezierski",
+  "author": "Tomasz Jezierski, Adrian Kowalczewski",
   "license": "ISC",
   "dependencies": {
     "history": "^4.6.1",
