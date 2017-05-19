@@ -21,7 +21,5 @@ depending on environment, use ` local ` or `server`
 # Authors
 
 Tomasz Jezierski [@Thorleon](https://github.com/Thorleon) [tjezierski@pandagroup.co](mailto:tjezierski@light4website.com)
-
 Adrian Kowalczewski [@adyry](https://github.com/adyry) [akowalczewski@pandagroup.co](mailto:akowalczewski@light4website.com)
-
 Property of Panda Group, @github/pandagrouppl
