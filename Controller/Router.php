@@ -1,5 +1,5 @@
 <?php
-namespace Light4website\StoreLocator\Controller;
+namespace PandaGroup\StoreLocator\Controller;
 
 /**
  * Inchoo Custom router Controller Router

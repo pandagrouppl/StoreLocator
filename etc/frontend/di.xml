@@ -11,7 +11,7 @@
         <arguments>
             <argument name="routerList" xsi:type="array">
                 <item name="storeLocator" xsi:type="array">
-                    <item name="class" xsi:type="string">Light4website\StoreLocator\Controller\Router</item>
+                    <item name="class" xsi:type="string">PandaGroup\StoreLocator\Controller\Router</item>
                     <item name="disable" xsi:type="boolean">false</item>
                     <item name="sortOrder" xsi:type="string">22</item>
                 </item>

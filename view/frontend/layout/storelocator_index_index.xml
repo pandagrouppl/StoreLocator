@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Light4website\StoreLocator\Block\Storelocator" name="light4website_storelocator" template="init.phtml"/>
+            <block class="PandaGroup\StoreLocator\Block\Storelocator" name="PandaGroup_storelocator" template="init.phtml"/>
         </referenceContainer>
         <referenceBlock name="page.main.title" remove="true" />
     </body>

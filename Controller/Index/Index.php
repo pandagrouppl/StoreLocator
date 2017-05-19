@@ -1,5 +1,5 @@
 <?php
-namespace Light4website\StoreLocator\Controller\Index;
+namespace PandaGroup\StoreLocator\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
