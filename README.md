@@ -9,7 +9,8 @@ $ yarn install
 ```
 # Usage
 
-```$ cd app/code/PandaGroup/StoreLocator/view/frontend/preact/
+```
+$ cd app/code/PandaGroup/StoreLocator/view/frontend/preact/
 $ yarn local/server 
 ```
 
