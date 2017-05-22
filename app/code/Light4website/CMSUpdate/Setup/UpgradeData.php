@@ -1346,8 +1346,8 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('contact-us-block')
-                ->setIdentifier('contact-us-block')
+            $block->setTitle('contact-us')
+                ->setIdentifier('contact-us')
                 ->setIsActive(true)
                 ->setStores(array(0))
                 ->setContent($content)
