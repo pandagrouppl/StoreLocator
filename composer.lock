@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a4748d3fa44f688fbcacef557fc7d73",
-    "content-hash": "855cb1b1d85637a5871a704357b406d4",
+    "hash": "ddc5cceeae82660159bd42bb943a3971",
+    "content-hash": "d84d7b8dd521fbc539a7b6daff2acfda",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -5524,28 +5524,6 @@
                 "stylesheet"
             ],
             "time": "2017-03-28 22:19:25"
-        },
-        {
-            "name": "panda-group/store-locator",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "6e605439773b132b3a86a38bada46f77e27c7a9f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/6e605439773b132b3a86a38bada46f77e27c7a9f",
-                "reference": "6e605439773b132b3a86a38bada46f77e27c7a9f",
-                "shasum": ""
-            },
-            "type": "magento2-component",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Store Locator module for Magento 2.x",
-            "time": "2017-05-19 14:13:59"
         },
         {
             "name": "pelago/emogrifier",
