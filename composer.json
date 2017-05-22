@@ -12,7 +12,8 @@
         "composer/composer": "@alpha",
         "snowdog/theme-blank-sass": "^0.10.1",
         "snowdog/frontools": "^1.4",
-        "strategery/magento2-infinitescroll": "^0.2.0"
+        "strategery/magento2-infinitescroll": "^0.2.0",
+        "panda-group/store-locator": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",

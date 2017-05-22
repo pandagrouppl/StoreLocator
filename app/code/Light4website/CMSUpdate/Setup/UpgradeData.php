@@ -46,7 +46,6 @@ class UpgradeData implements UpgradeDataInterface
         if (version_compare($context->getVersion(), '1.1') < 0) {
             $page = $this->_pageFactory->create();
             $content = <<<EOT
-
 <article class="about-us">
     <section class="menu-about">
         {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/about-us.jpg" img_text="Get to know us" template="Light4website_Cms::menu.phtml" block_id="about-us-menu"}}
@@ -90,6 +89,15 @@ EOT;
         if (version_compare($context->getVersion(), '1.1') < 0) {
             $page = $this->_pageFactory->create();
             $content = <<<EOT
+{{block class="Magento\\Cms\\Block\\Block" block_id="contact-us"}}
+EOT;
+
+            $page->setTitle('Contact Us')
+                ->setIdentifier('contact_us')
+                ->setIsActive(true)
+                ->setPageLayout('1column')
+                ->setLayoutUpdateXml(
+                    <<<EOT
 <referenceContainer name="content">
     <referenceBlock name="page.main.title">
         <action method="setPageTitle">
@@ -98,14 +106,8 @@ EOT;
     </referenceBlock>
 </referenceContainer>
 <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
-
-{{block class="Magento\\Cms\\Block\\Block" block_id="contact-us"}}
-EOT;
-
-            $page->setTitle('Contact Us')
-                ->setIdentifier('contact_us')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+EOT
+                )
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -145,7 +147,7 @@ EOT;
             $page->setTitle('Look Book')
                 ->setIdentifier('look-book')
                 ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -337,7 +339,7 @@ EOT;
             $page->setTitle('Made To Measure')
                 ->setIdentifier('made-to-measure')
                 ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -1068,7 +1070,7 @@ EOT;
             $page->setTitle('Shipping returns')
                 ->setIdentifier('shipping-returns')
                 ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -1101,7 +1103,7 @@ EOT;
             $page->setTitle('Size chart')
                 ->setIdentifier('size-chart')
                 ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -1232,7 +1234,7 @@ EOT;
             $page->setTitle('Terms')
                 ->setIdentifier('terms')
                 ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
+                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
@@ -1488,7 +1490,7 @@ EOT;
     <h3>Customer Service</h3>
     <ul>
         <li><a href="{{store url='contact_us'}}">contact us</a></li>
-        <li><a href="{{store url='size'}}">size charts</a></li>
+        <li><a href="{{store url='size-chart'}}">size charts</a></li>
         <li><a class="shipping-returns-click">shipping &amp; returns</a></li>
         <li><a class="faq-click">faq</a></li>
     </ul>
