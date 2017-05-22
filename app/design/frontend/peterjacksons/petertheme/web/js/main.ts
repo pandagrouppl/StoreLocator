@@ -1,8 +1,6 @@
 import $ = require("jquery");
 import ko = require("knockout");
 
-import * as Module1 from "./moduleone";
-import * as Module2 from "./moduletwo";
 import * as SizeChart from "./sizeChart";
 import * as Inliners from "./Inliners";
 import * as MadeToMeasure from "./MadeToMeasure";

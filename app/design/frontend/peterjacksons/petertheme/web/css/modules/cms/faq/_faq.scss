@@ -60,7 +60,7 @@
         position: relative;
 
 
-        &:after {
+        &::after {
             content: '+';
             font-size: 30px;
             font-weight: 300;
@@ -71,7 +71,7 @@
 
         &--open {
 
-            &:after {
+            &::after {
                 content: '';
                 position: relative;
                 top: 10px;
@@ -94,3 +94,4 @@
         display: none;
     }
 }
+

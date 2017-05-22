@@ -46,19 +46,27 @@ atlassian*
 /dev/tools/grunt
 /dev/tools/*.*
 
+/dev/travis
+
 /dev/*.*
 
 /wp/wp-config.php
 
 /lib
 
-/pub
-
 /setup
 
 /var
 
 /vendor
+
+/pub
+
+/tools
+
+/update
+
+/phpserver
 
 /*.*
 

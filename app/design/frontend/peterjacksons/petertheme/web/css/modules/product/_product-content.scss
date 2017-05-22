@@ -35,7 +35,7 @@
             align-items: center;
             margin-left: 20px;
 
-            &:before {
+            &::before {
                 @include sprite(brownstar);
                 content: '';
                 margin-right: 5px;
@@ -56,7 +56,7 @@
         margin-left: 10px;
         cursor: pointer;
 
-        &:before {
+        &::before {
             @include sprite(brownline);
             content: '';
             display: block;
@@ -98,9 +98,10 @@
                 border-bottom: 3px solid $grey;
 
                 @media all and (max-width: $bp-header) {
-                   border-bottom: 0;
+                    border-bottom: 0;
                 }
             }
         }
     }
 }
+

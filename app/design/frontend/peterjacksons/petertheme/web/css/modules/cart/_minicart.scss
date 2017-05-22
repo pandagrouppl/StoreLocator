@@ -61,29 +61,31 @@
     &__qty-and-price {
         margin-top: 10px;
     }
+
     &__buttons {
         padding: 20px;
 
 
         .minicart__button {
 
-        &--view-cart {
-            @include button(0, 5px, 12px, 500);
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
-            background: $grey-dark;
-            border: none;
-            color: $white;
-        }
+            &--view-cart {
+                @include button(0, 5px, 12px, 500);
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                background: $grey-dark;
+                border: none;
+                color: $white;
+            }
 
-        &--checkout {
-            @include button-blue(0, 5px, 12px, 500);
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
+            &--checkout {
+                @include button-blue(0, 5px, 12px, 500);
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+            }
         }
-    }}
+    }
 
     &::before {
         content: '';
@@ -109,4 +111,5 @@
         right: 25px;
     }
 }
+
 

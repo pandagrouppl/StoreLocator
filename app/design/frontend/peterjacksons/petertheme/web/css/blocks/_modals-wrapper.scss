@@ -18,7 +18,7 @@ body._has-modal-custom .modal-custom-overlay {
     overflow-y: auto;
     position: static;
     transform: translateX(100%);
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     transition-property: transform, visibility;
     transition-timing-function: ease-in-out;
     width: auto;
@@ -54,4 +54,5 @@ body._has-modal-custom .modal-custom-overlay {
     z-index: 899;
     background-color: rgba(51, 51, 51, 0.55);
 }
+
 

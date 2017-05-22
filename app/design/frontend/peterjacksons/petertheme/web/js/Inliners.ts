@@ -12,6 +12,7 @@ export class Inliners {
         this._toggleSizeChart();
         this._shirtFitGuide();
         this._sliders();
+        this._cmsBannerZoom();
     }
 
     private _showSearch(): void {
@@ -96,5 +97,16 @@ export class Inliners {
                 }
             ]
         });
+    }
+
+    private _cmsBannerZoom(): void {
+        const img = $('.about-banner');
+        $('.cms-banner').hover(
+            () => {
+                img.css({'background-size': 'auto 110%'})
+            },
+            () => {
+                img.css({'background-size': 'auto 100%'})
+            });
     }
  }
