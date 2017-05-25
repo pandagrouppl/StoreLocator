@@ -1,8 +1,20 @@
 {
     "packages": {
         "panda-group/store-locator": {
-            "dev-master": { @composer.json },
-            "1.0.0": { @composer.json }
+            "dev-master": {
+                "name": "panda-group/store-locator",
+                "description": "Store Locator module for Magento 2.x",
+                "version": "1.0.0",
+                "license": "MIT",
+                "type": "magento2-component"
+        },
+            "1.0.0": {
+                "name": "panda-group/store-locator",
+                "description": "Store Locator module for Magento 2.x",
+                "version": "1.0.0",
+                "license": "MIT",
+                "type": "magento2-component"
+            }
         }
     }
 }
