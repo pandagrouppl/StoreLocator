@@ -71,8 +71,11 @@ class Facebook extends Account
         ];
 
         $token = null;
-        if($response = $this->_call('https://graph.facebook.com/oauth/access_token', $params)) {
-            parse_str($response, $token);
+        if ($response = $this->_call('https://graph.facebook.com/oauth/access_token', $params)) {
+            $token = @json_decode($response, true);
+            if (!$token) {
+                parse_str($response, $token);
+            }
         }
         $this->_setLog($response, true);
         $this->_setLog($token, true);

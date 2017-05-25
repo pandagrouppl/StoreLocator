@@ -1,0 +1,2 @@
+For installation Instructions please read our online documentation:
+http://wiki.plumrocket.com/wiki/Magento_2_Twitter_and_Facebook_Login_v2.x_Extension

@@ -1,0 +1,24 @@
+<div id="prpl-registration" class="prpl-form" data-bind="afterRender: $parent.initForm, visible: $parent.isVisible($element.id)">
+    <form id="prpl-registration-form" class="form form-create-account"  method="post" autocomplete="off" data-bind="submit: $parent.toRegister, attr: {action: $parent.registration.url}">
+
+        <fieldset class="fieldset registration" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+            <!-- ko foreach: getRegion('registration-fieldsets') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </fieldset>
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" data-bind="attr: {'title': $t('Create an Account')}"><span data-bind="i18n: 'Create an Account'"></span></button>
+            </div>
+            <!-- ko if: $parent.login.show == "1" -->
+            <div class="secondary">
+                <a class="action back" href="#" data-bind="click: function(){$parent.gotoForm('prpl-login');}"><span data-bind="i18n: 'Go to Login'"></span></a>
+            </div>
+            <!-- /ko -->
+        </div>
+
+        <div id="socialLoginButtons" data-bind="html: $parent.socialRegisterButtons">
+
+    </form>
+</div>

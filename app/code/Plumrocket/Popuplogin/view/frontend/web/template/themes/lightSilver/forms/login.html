@@ -1,0 +1,48 @@
+<div id="prpl-login" class="prpl-form" data-bind="afterRender: $parent.initForm, visible: $parent.isVisible($element.id)">
+    <form id="prpl-login-form" class="form form-login" method="post" data-bind="submit: $parent.toLogin, attr: {action: $parent.login.url}">
+
+        <div class="fieldset login" data-bind="attr: {'data-hasrequired': $t('* Required Fields')}">
+            <div class="field email required">
+                <label class="label" for="email"><span data-bind="i18n: 'Email Address'"></span></label>
+                <div class="control">
+                    <input name="username" id="email" type="email" class="input-text" data-validate="{required:true, 'validate-email':true}" data-bind="attr: {placeholder: $t('Email Address')}">
+                </div>
+            </div>
+            <div class="field password required">
+                <label for="pass" class="label"><span data-bind="i18n: 'Password'"></span></label>
+                <div class="control">
+                    <input name="password" type="password" class="input-text" id="pass" data-validate="{required:true, 'validate-password':true}" data-bind="attr: {placeholder: $t('Password')}">
+                </div>
+            </div>
+        </div>
+
+        <div class="actions-toolbar">
+            <input name="context" type="hidden" value="checkout" />
+            <div class="primary">
+                <button type="submit" class="action action-login secondary" name="send" id="send2">
+                    <span data-bind="i18n: 'Login'"></span>
+                </button>
+            </div>
+            <!-- ko if: $parent.forgotpassword.show == "1" -->
+            <div class="secondary prpl-f-password">
+                <a class="action" data-bind="click: function(){$parent.gotoForm('prpl-forgotpassword');}">
+                    <span data-bind="i18n: 'forgot your password?'"></span>
+                </a>
+            </div>
+            <!-- /ko -->
+            <div id="socialLoginButtons" data-bind="html: $parent.socialLoginButtons">
+
+            </div>
+
+            <!-- ko if: $parent.registration.show == "1" -->
+            <div class="secondary prpl-cr-account">
+                <span data-bind="i18n: 'Don\'t have an account?'"></span><br />
+                <a class="action" data-bind="click: function(){$parent.gotoForm('prpl-registration');}">
+                    <span data-bind="i18n: 'Sign Up Now'"></span>
+                </a>
+            </div>
+            <!-- /ko -->
+        </div>
+
+    </form>
+</div>

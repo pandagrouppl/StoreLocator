@@ -2,7 +2,7 @@
     "name": "plumrocket/module-plumbase",
     "description": "N/A",
     "type": "magento2-module",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
