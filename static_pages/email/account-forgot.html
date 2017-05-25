@@ -1,0 +1,27 @@
+{{template config_path="design/email/header_template"}}
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+
+    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
+        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7">
+            <h1 style="color: white; font-size: 20px; text-transform: uppercase; margin-bottom: 0;">Dear {{var customer.name}},</h1>
+        </td>
+    </tr>
+</table>
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tr>
+        <td>
+            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; color:#5f5f5f;">There was recently a request to change the password for your account<br /></p>
+            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; color:#5f5f5f;">If you requested this password change, please click on the following link to reset your password:<br /></p>
+            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; color:#5f5f5f;">
+                <a href="{{var this.getUrl($store,'customer/account/createPassword/',[_query:[id:$customer.id,token:$customer.rp_token],_nosid:1])}}" target="_blank" style="color:#1E7EC8; text-decoration: none;">{{var this.getUrl($store,'customer/account/createPassword/',[_query:[id:$customer.id,token:$customer.rp_token],_nosid:1])}}</a>
+                <br /></p>
+            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; color:#5f5f5f;">If clicking the link does not work, please copy and paste the URL into your browser instead.<br /></p>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}

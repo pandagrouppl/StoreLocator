@@ -1,0 +1,102 @@
+{{template config_path="design/email/header_template"}}
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tr style="display: block; height: 5px;">
+        <td></td>
+    </tr>
+    <tr class="background-image-row" style="display: block;" >
+        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6b9dda">
+            <h1 style="color: #fff; font-size: 55px;">YOUR ORDER HAS SHIPPED</h1>
+            <p style="font-size: 19px; color: #fff;">Hi, {{trans "%name," name=$order.getCustomerName()}}, your order is on it's way.
+
+                You can keep track of your package and follows it's
+                journey using the below tracking code:
+
+                {{block class='Magento\\Framework\\View\\Element\\Template' area='frontend' template='Magento_Sales::email/shipment/track.phtml' shipment=$shipment order=$order}}
+            </p>
+        </td>
+
+    </tr>
+    <tr style="display: block; height: 10px;">
+        <td></td>
+    </tr>
+</table>
+
+<table class="table-width-wrap table-order-gray" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
+    <tr style="height: 41px; font-size: 18px;">
+        <td style="text-align: center; width: 50%; background: #3f3e3e; padding: 11px 0px 11px 36px;" valign="top" align="left">
+            <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;"><span style="font-weight: bold;">ORDER NUMBER: #</span>{{trans "%order_id"order_id=$order.increment_id}}</p>
+        </td>
+        <td style="text-align: center; width: 50%; background: #3f3e3e; padding: 11px 35px 11px 0px;" valign="top" align="left">
+            <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;"><span style="font-weight: bold;">DATE SHIPPED:</span>
+                TO BACKEND</p>
+        </td>
+    </tr>
+</table>
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tr style="display: block; height: 10px;">
+        <td></td>
+    </tr>
+    <tr>
+        <td class="table-add-pdd" style="width: 100%;  padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="left">
+            <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">SHIPPING CONFIRMATION</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602">
+                <tbody>
+                <tr>
+                    <td class="table-width-wrap-half" align="left" valign="top" width="301" style="font-size:18px; padding: 36px 0 10px 36px; width: 50%; ">
+                        <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">DELIVERY ADDRESS</div>
+
+                        <div class="wrap-in">
+                            {{var formattedShippingAddress|raw}}
+                        </div>
+                    </td>
+                    <th class="hiditres" width="10"></th>
+                    <td class="table-width-wrap-half" align="left" valign="top" width="301" style="font-size:18px; padding: 36px 36px 10px 0; width: 50%; ">
+
+                        <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">ESTIMATED DELIVERY TIME</div>
+
+                        <div class="wrap-in">
+                            {{var order.getShippingDescription()}} <br />
+                            3-4 business <br />
+                            working days
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+    <tr style="display: block; height: 36px;">
+        <td></td>
+    </tr>
+    <tr>
+        <td class="table-add-pdd" style="width: 100%; padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="left">
+            <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">ITEM(S) DETAILS</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="table-items-nested">
+            {{layout handle="sales_email_order_shipment_items" shipment=$shipment order=$order}}
+            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602">
+                <tr>
+                    <td class="table-add-pdd table-force-left" style="text-align: right; padding: 3px 5px 3px 0">Payment method</td>
+                    <td class="table-add-pdd table-width-wrap-paym table-force-left" style="text-align: right; width: 201px; padding: 3px 20px 3px 9px; font-size: 18px;">{{var order.getPayment().getMethodInstance().getTitle()}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr style="display: block; height: 33px;">
+        <td></td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}
