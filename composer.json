@@ -54,8 +54,15 @@
         {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/pandagrouppl/storelocator"
         }
     ],
+    "require": {
+        "panda-group/store-locator": "dev-master"
+    },
     "extra": {
         "magento-force": "override"
     }
