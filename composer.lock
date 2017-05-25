@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ddc5cceeae82660159bd42bb943a3971",
-    "content-hash": "d84d7b8dd521fbc539a7b6daff2acfda",
+    "hash": "bb1b1053e5aaced6f66eae9a34493162",
+    "content-hash": "b63c42aa008304711bfedf33ac494c63",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -277,6 +277,120 @@
                 "package"
             ],
             "time": "2016-03-03 15:15:10"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "MODX Evo",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2017-04-24 06:37:16"
         },
         {
             "name": "composer/semver",
@@ -5464,6 +5578,48 @@
             "time": "2015-08-09 17:44:44"
         },
         {
+            "name": "oomphinc/composer-installers-extender",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oomphinc/composer-installers-extender.git",
+                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oomphinc/composer-installers-extender/zipball/ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
+                "reference": "ca1c4b16b0905c81d1e77e608f36a2eff1a56f56",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "composer/installers": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OomphInc\\ComposerInstallersExtender\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OomphInc\\ComposerInstallersExtender\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Beemsterboer",
+                    "email": "stephen@oomphinc.com",
+                    "homepage": "https://github.com/balbuf"
+                }
+            ],
+            "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
+            "homepage": "http://www.oomphinc.com/",
+            "time": "2017-03-31 16:57:39"
+        },
+        {
             "name": "oyejorge/less.php",
             "version": "v1.7.0.14",
             "source": {
@@ -5524,6 +5680,52 @@
                 "stylesheet"
             ],
             "time": "2017-03-28 22:19:25"
+        },
+        {
+            "name": "panda-group/frontools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/l4w/magento2-devtools.git",
+                "reference": "12dff34befb2785a4e594b88bcaf9f268f249b1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/l4w/magento2-devtools/get/12dff34befb2785a4e594b88bcaf9f268f249b1f.zip",
+                "reference": "12dff34befb2785a4e594b88bcaf9f268f249b1f",
+                "shasum": ""
+            },
+            "type": "magento2-panda-tool",
+            "license": [
+                "MIT"
+            ],
+            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+            "time": "2017-05-25 12:30:22"
+        },
+        {
+            "name": "panda-group/store-locator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pandagrouppl/StoreLocator.git",
+                "reference": "d1023ca024a7863dfe4bde624da56976e6ac8683"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d1023ca024a7863dfe4bde624da56976e6ac8683",
+                "reference": "d1023ca024a7863dfe4bde624da56976e6ac8683",
+                "shasum": ""
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Store Locator module for Magento 2.x",
+            "support": {
+                "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
+                "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
+            },
+            "time": "2017-05-25 09:32:03"
         },
         {
             "name": "pelago/emogrifier",
@@ -9265,6 +9467,8 @@
     "minimum-stability": "alpha",
     "stability-flags": {
         "composer/composer": 15,
+        "panda-group/store-locator": 20,
+        "panda-group/frontools": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
