@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb1b1053e5aaced6f66eae9a34493162",
-    "content-hash": "b63c42aa008304711bfedf33ac494c63",
+    "hash": "6b87244f6afecafdf4cf7abb3b5570fb",
+    "content-hash": "878848c90a070e88b504e8e24e723fde",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -5687,12 +5687,12 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/l4w/magento2-devtools.git",
-                "reference": "12dff34befb2785a4e594b88bcaf9f268f249b1f"
+                "reference": "b059c7dca6b946a362055711235639c76012c756"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/l4w/magento2-devtools/get/12dff34befb2785a4e594b88bcaf9f268f249b1f.zip",
-                "reference": "12dff34befb2785a4e594b88bcaf9f268f249b1f",
+                "url": "https://bitbucket.org/l4w/magento2-devtools/get/b059c7dca6b946a362055711235639c76012c756.zip",
+                "reference": "b059c7dca6b946a362055711235639c76012c756",
                 "shasum": ""
             },
             "type": "magento2-panda-tool",
@@ -5700,7 +5700,7 @@
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-05-25 12:30:22"
+            "time": "2017-05-25 14:09:36"
         },
         {
             "name": "panda-group/store-locator",
@@ -6115,58 +6115,6 @@
             ],
             "description": "An extendable framework for version control hooks.",
             "time": "2014-09-22 08:40:36"
-        },
-        {
-            "name": "snowdog/frontools",
-            "version": "1.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
-                "reference": "44afa1a60d49393d7dcf60e33281ce9cec197a86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/44afa1a60d49393d7dcf60e33281ce9cec197a86",
-                "reference": "44afa1a60d49393d7dcf60e33281ce9cec197a86",
-                "shasum": ""
-            },
-            "type": "magento2-component",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-05-06 11:46:39"
-        },
-        {
-            "name": "snowdog/theme-blank-sass",
-            "version": "0.10.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SnowdogApps/magento2-theme-blank-sass.git",
-                "reference": "6237540974247ed101668c1c9cf3447ee274b8f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SnowdogApps/magento2-theme-blank-sass/zipball/6237540974247ed101668c1c9cf3447ee274b8f2",
-                "reference": "6237540974247ed101668c1c9cf3447ee274b8f2",
-                "shasum": ""
-            },
-            "require": {
-                "magento/framework": "100.1.*"
-            },
-            "type": "magento2-theme",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "SASS based version of Magento 2 Blank theme",
-            "time": "2017-02-21 17:39:01"
         },
         {
             "name": "strategery/magento2-infinitescroll",

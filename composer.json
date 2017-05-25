@@ -72,5 +72,18 @@
             "tools/": ["panda-group/frontools"],
             "app/code/{$vendor}/{$name}/": ["type:magento2-panda-module"]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cd tools && npm install && gulp compile && cd ..",
+            "cd app/code/panda-group/store-locator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
+
+        ],
+        "post-update-cmd": [
+            "cd tools && npm install && gulp compile && cd ..",
+            "cd app/code/panda-group/store-locator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
+        ]
     }
 }
