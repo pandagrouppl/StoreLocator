@@ -3,11 +3,5 @@
     "description": "Store Locator module for Magento 2.x",
     "version": "1.0.0",
     "license": "MIT",
-    "type": "magento2-component",
-    "config": {
-        "vendor-dir": "~/app/code/Panda Group/"
-    },
-    "require": {
-        "composer/installers": "~1.0"
-    }
+    "type": "magento2-panda-module"
 }
