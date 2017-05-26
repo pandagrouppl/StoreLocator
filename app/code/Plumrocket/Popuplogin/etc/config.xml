@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Popuplogin
+ * @copyright   Copyright (c) 2015 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <prpopuplogin>
+            <general>
+                <enable>0</enable>
+                <mode>1</mode>
+                <close>0</close>
+                <show_on>2</show_on>
+                <disable_on><![CDATA[/customer/account/*
+/customer/account/login/*
+/customer/account/create/*
+/customer/account/createpassword/*
+/customer/account/logoutSuccess/*
+/customer/account/forgotpassword/*]]>
+                </disable_on>
+                <default_form>login</default_form>
+                <serial></serial>
+            </general>
+            <registration>
+                <show>1</show>
+                <success_page>__stay__</success_page>
+                <subscribe>1</subscribe>
+                <form_fields><![CDATA[{"firstname":["First Name",1],"lastname":["Last Name",1],"email":["Email Addrress",1],"password":["Password",1]}]]></form_fields>
+<!--                 <welcome><![CDATA[<p>Sign Up Today and Save Big!</p>
+<p>&nbsp;</p>
+<p>Create a profile now to take advantage of express checkout and other convenient features. It only takes a minute!</p>
+<p>Get the lowest prices on fashion clothes, electronics, furniture, cameras and save up to 50% Off.</p>]]>
+                </welcome> -->
+            </registration>
+            <login>
+                <show>1</show>
+                <success_page>__stay__</success_page>
+            </login>
+            <forgotpassword>
+                <show>1</show>
+            </forgotpassword>
+            <design>
+                <animation>fadeInDownBig</animation>
+                <theme>lightSilver</theme>
+            </design>
+            <tracking>
+                <google>0</google>
+                <registration></registration>
+            </tracking>
+        </prpopuplogin>
+    </default>
+</config>

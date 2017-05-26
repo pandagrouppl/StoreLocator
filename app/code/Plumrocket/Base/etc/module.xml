@@ -17,6 +17,6 @@ send an email to support@plumrocket.com so we can send you a copy immediately.
 
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Plumrocket_Base" setup_version="2.0.7">
+    <module name="Plumrocket_Base" setup_version="2.0.8">
     </module>
 </config>

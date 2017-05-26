@@ -1,0 +1,161 @@
+{{template config_path="design/email/header_template"}}
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tr style="display: block; height: 5px;">
+        <td></td>
+    </tr>
+
+    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
+        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7;">
+            <h1 style="color: white; font-size: 20pt;">Hello, {{trans "%name," name=$order.getCustomerName()}},</h1>
+            <p style="font-size: 19px; color: white;">Thank you for your order from {{trans "%store_name." store_name=$store.getFrontendName()}}. You can check the status of your order by
+                <br> <a href="{{store url="customer/account/"}}" style="color:#fff; text-decoration: underline;">logging into your account</a>.<br>
+            </p>
+        </td>
+    </tr>
+
+    <tr style="display: block; height: 10px;">
+        <td></td>
+    </tr>
+</table>
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
+    <tbody>
+    <!-- <tr style="width: 100%; display: inline-block; height: 41px; font-size: 18px; text-align: center;"> -->
+    <td class="table-width-wrap-half" style="text-align: center; max-width: 602px; background: #3f3e3e; padding: 11px 36px 11px 36px;" valign="top" align="left">
+        <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;"><span style="font-weight: bold;">Your Credit Memo </span>{{trans " #%creditmemo_id for <span style="font-weight: bold;">Order </span> #%order_id" creditmemo_id=$creditmemo.increment_id order_id=$order.increment_id}}</p>
+    </td>
+    <!-- </tr> -->
+    </tbody>
+</table>
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tbody>
+    <tr>
+        <td class="table-width-wrap-half" align="left" valign="top" width="50%" style="font-size:18px; padding: 36px 0 10px 0; width: 50%; ">
+
+            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">BILLING INFORMATION</div>
+
+            <div class="wrap-in">
+                {{var formattedBillingAddress|raw}}
+            </div>
+        </td>
+        <th class="hiditres" width="10"></th>
+        <td class="table-width-wrap-half" align="left" valign="top" width="50%" style="font-size:18px; padding: 36px 0 10px 0;  width: 50%; ">
+
+            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">PAYMENT METHOD</div>
+
+            <div class="wrap-in">
+                {{var payment_html|raw}}
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{{depend order.getIsNotVirtual()}}
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tbody>
+    <tr>
+        <td class="table-width-wrap-half" align="left" valign="top" width="50%" style="font-size:18px; padding: 36px 0 10px 0; width: 50%; ">
+
+            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">Shipping Information:</div>
+
+            <div class="wrap-in">
+                {{var formattedShippingAddress|raw}}
+            </div>
+
+        </td>
+        <th class="hiditres" width="10"></th>
+        <td class="table-width-wrap-half" align="left" valign="top" width="50%" style="font-size:18px; padding: 36px 0 10px 0; width: 50%; ">
+
+            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">Shipping Method:</div>
+
+            <div class="wrap-in">
+                {{var order.getShippingDescription()}}
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+{{/depend}}
+
+<table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+    <tr>
+        <td class="table-add-pdd" style="width: 100%; padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="left">
+            <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">ITEM(S) DETAILS</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="table-items-nested">
+            <!--{{layout handle="sales_email_order_creditmemo_items" creditmemo=$creditmemo order=$order}}-->
+
+            <table width="602" cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                <tr>
+                    <th align="left" style="font-size:13px;padding:3px 9px">Item</th>
+                    <th align="left" style="font-size:13px;padding:3px 9px">Sku</th>
+                    <th align="center" style="font-size:13px;padding:3px 9px">Qty</th>
+                    <th align="right" style="font-size:13px;padding:3px 9px">Subtotal</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td valign="top" align="left" style="padding:3px 9px;border-bottom:1px dotted #cccccc">
+                        <strong style="font-size:11px">Grey Prince of Wales Check Double Breasted Vest</strong>
+                        <dl style="margin:0;padding:0">
+                            <dt><strong><em>SIZE</em></strong></dt>
+                            <dd style="margin:0;padding:0 0 0 9px">96RG</dd>
+                        </dl>
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;padding:3px 9px;border-bottom:1px dotted #cccccc">SU15-RV03V-96RG</td>
+                    <td valign="top" align="center" style="font-size:11px;padding:3px 9px;border-bottom:1px dotted #cccccc">1</td>
+                    <td valign="top" align="right" style="font-size:11px;padding:3px 9px;border-bottom:1px dotted #cccccc">
+                        <span>$120.00</span>
+
+
+
+                    </td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td align="right" style="padding:3px 9px" colspan="2">
+                        Subtotal                    </td>
+                    <td></td>
+                    <td></td>
+                    <td align="right" style="padding:3px 9px">
+                        <span>$120.00</span>                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style="padding:3px 9px" colspan="2">
+                        <strong>Grand Total</strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td align="right" style="padding:3px 9px">
+                        <strong><span>$120.00</span></strong>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </td>
+    </tr>
+    {{depend comment}}
+    <tr>
+        <td>
+            <p style="font-size:16px; text-align: center; margin:15px 0 10px 0">{{var comment|escape|nl2br}}</p>
+        </td>
+    </tr>
+    {{/depend}}
+    <tr style="display: block; height: 33px;">
+        <td></td>
+    </tr>
+</table>
+{{template config_path="design/email/footer_template"}}
