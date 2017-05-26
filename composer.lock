@@ -4,9 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b87244f6afecafdf4cf7abb3b5570fb",
-    "content-hash": "878848c90a070e88b504e8e24e723fde",
+    "hash": "0ffd7c4f0f98b3022eec321e719c33c3",
+    "content-hash": "886e5e9e2edbda51cb6201c3e0fadbae",
     "packages": [
+        {
+            "name": "PandaGroup/Frontools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/l4w/magento2-devtools.git",
+                "reference": "e351de00d80c31eaa9a8a891e6e06a892084f5b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/l4w/magento2-devtools/get/e351de00d80c31eaa9a8a891e6e06a892084f5b9.zip",
+                "reference": "e351de00d80c31eaa9a8a891e6e06a892084f5b9",
+                "shasum": ""
+            },
+            "type": "magento2-panda-tool",
+            "license": [
+                "MIT"
+            ],
+            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+            "time": "2017-05-26 12:02:47"
+        },
+        {
+            "name": "PandaGroup/StoreLocator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pandagrouppl/StoreLocator.git",
+                "reference": "1e0048b8bca4828c12a96930f4ed75ca2f3eb192"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/1e0048b8bca4828c12a96930f4ed75ca2f3eb192",
+                "reference": "1e0048b8bca4828c12a96930f4ed75ca2f3eb192",
+                "shasum": ""
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Store Locator module for Magento 2.x",
+            "support": {
+                "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
+                "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
+            },
+            "time": "2017-05-26 12:10:28"
+        },
         {
             "name": "braintree/braintree_php",
             "version": "3.7.0",
@@ -5682,52 +5728,6 @@
             "time": "2017-03-28 22:19:25"
         },
         {
-            "name": "panda-group/frontools",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://bitbucket.org/l4w/magento2-devtools.git",
-                "reference": "b059c7dca6b946a362055711235639c76012c756"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://bitbucket.org/l4w/magento2-devtools/get/b059c7dca6b946a362055711235639c76012c756.zip",
-                "reference": "b059c7dca6b946a362055711235639c76012c756",
-                "shasum": ""
-            },
-            "type": "magento2-panda-tool",
-            "license": [
-                "MIT"
-            ],
-            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-05-25 14:09:36"
-        },
-        {
-            "name": "panda-group/store-locator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "d1023ca024a7863dfe4bde624da56976e6ac8683"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d1023ca024a7863dfe4bde624da56976e6ac8683",
-                "reference": "d1023ca024a7863dfe4bde624da56976e6ac8683",
-                "shasum": ""
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Store Locator module for Magento 2.x",
-            "support": {
-                "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
-                "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
-            },
-            "time": "2017-05-25 09:32:03"
-        },
-        {
             "name": "pelago/emogrifier",
             "version": "v0.1.1",
             "source": {
@@ -9415,8 +9415,8 @@
     "minimum-stability": "alpha",
     "stability-flags": {
         "composer/composer": 15,
-        "panda-group/store-locator": 20,
-        "panda-group/frontools": 20,
+        "pandagroup/storelocator": 20,
+        "pandagroup/frontools": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,

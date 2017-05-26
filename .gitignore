@@ -10,7 +10,7 @@ atlassian*
 /.gitattributes
 
 /app/code/Magento
-/app/code/panda-group
+/app/code/PandaGroup
 /app/design/*/Magento
 /app/etc
 /app/i18n/magento
