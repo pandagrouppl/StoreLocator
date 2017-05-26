@@ -10,8 +10,6 @@
     "require": {
         "magento/product-community-edition": "2.1.5",
         "composer/composer": "@alpha",
-        "snowdog/theme-blank-sass": "^0.10.1",
-        "snowdog/frontools": "^1.4",
         "strategery/magento2-infinitescroll": "^0.2.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "panda-group/store-locator": "dev-master",
@@ -74,5 +72,21 @@
             "tools/": ["panda-group/frontools"],
             "app/code/{$vendor}/{$name}/": ["type:magento2-panda-module"]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash",
+            "sudo nvm install node",
+            "sudo npm install -g gulp-cli",
+            "cd tools && npm install && gulp compile && cd ..",
+            "cd app/code/panda-group/store-locator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
+
+        ],
+        "post-update-cmd": [
+            "cd tools && npm install && gulp compile && cd ..",
+            "cd app/code/panda-group/store-locator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
+        ]
     }
 }
