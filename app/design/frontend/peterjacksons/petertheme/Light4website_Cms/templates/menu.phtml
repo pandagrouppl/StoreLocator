@@ -16,7 +16,7 @@ $cmsPage = $objectManagerCms->get('\Magento\Cms\Model\Page');
     </div>
 </div>
 
-<ul class="<? echo $cmsPage->getIdentifier(); ?>">
+<ul class="<?php echo $cmsPage->getIdentifier(); ?>">
     <?php /* @escapeNotVerified */ echo $block->getText(); ?>
 </ul>
 
