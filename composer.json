@@ -75,6 +75,9 @@
     },
     "scripts": {
         "post-install-cmd": [
+            "curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -",
+            "sudo apt-get install -y nodejs",
+            "npm install gulp-cli",
             "cd tools && npm install && gulp compile && cd ..",
             "cd app/code/panda-group/store-locator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
             "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
