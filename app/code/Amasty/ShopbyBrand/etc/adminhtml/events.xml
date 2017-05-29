@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="amshopby_option_form_build_after">
+        <observer name="amasty_shopby_brand_option_form_build_after" instance="Amasty\ShopbyBrand\Observer\Admin\OptionFormBuildAfter"/>
+    </event>
+    <event name="amshopby_option_form_featured">
+        <observer name="amshopby_option_form_featured" instance="Amasty\ShopbyBrand\Observer\Admin\OptionFormFeatured"/>
+    </event>
+    <event name="admin_system_config_changed_section_amshopby_brand">
+        <observer name="amasty_shopby_brand_config_changed" instance="Amasty\ShopbyBrand\Observer\Admin\ConfigChanged"/>
+    </event>
+    <event name="catalog_entity_attribute_save_after">
+        <observer name="amasty_catalog_entity_attribute_save_after" instance="Amasty\ShopbyBrand\Observer\Admin\AttributeSaveAfter"/>
+    </event>
+</config>

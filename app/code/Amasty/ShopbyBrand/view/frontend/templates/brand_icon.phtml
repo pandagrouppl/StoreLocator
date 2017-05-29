@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+$setting = $block->getData('setting');
+?>
+
+<?php if ($setting) : ?>
+<div class="amshopbybrand-link">
+    <a href="<?php echo $setting->getUrlPath() ?>"><img
+        title="<?php echo $block->stripTags($setting->getTitle())?>"
+        alt="<?php   echo $block->stripTags($setting->getTitle())?>"
+        src="<?php   echo $setting->getImageUrl() ?>" />
+    </a>
+</div>
+<?php endif ?>

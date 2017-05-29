@@ -1,0 +1,99 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var \Amasty\Shopby\Model\FilterSetting $filterSetting */
+/** @var \Amasty\Shopby\Block\Navigation\FilterRenderer $block */
+
+$filterUniqId = $block->escapeId(uniqid());
+
+if(!\function_exists('renderCategoryFlyOut')) {
+    function renderCategoryFlyOut($filterItems, $startPath, $block, $filterSetting)
+    {
+        static $level = 1;
+        $level++;
+        ?>
+        <?php /** @var \Amasty\Shopby\Model\Layer\Filter\Item $filterItem */?>
+        <?php /** @var \Amasty\Shopby\Model\Layer\Filter\CategoryItems $filterItems */?>
+        <?php foreach ($filterItems->getItems($startPath) as $filterItem): ?>
+        <?php $uniqId = uniqid(); ?>
+        <?php $inputType = !$filterSetting->isMultiselect() ? 'radio' : 'checkbox'?>
+        <li class="item" data-label="<?php echo $block->escapeHtml($filterItem->getLabel())?>">
+            <div>
+                <?php if ($filterItem->getCount() > 0): ?>
+                    <?php $checked =  $block->checkedFilter($filterItem) ? ' checked' : ''; ?>
+                    <a
+                        class="am_shopby_filter_item_<?php echo $block->escapeId($uniqId)?>"
+                        href="<?php echo $block->escapeUrl($filterItem->getUrl()) ?>"
+                    >
+                        <input
+                            name="amshopby[<?php echo $block->getFilter()->getRequestVar();?>][]"
+                            value="<?php echo $filterItem->getValueString();?>"
+                            type="<?php echo $inputType;?>"
+                            <?php echo $checked ?>
+                        />
+                        <span class="label"><?php echo $filterItem->getLabel() ?></span>
+                        <?php if ($filterSetting->isShowProductQuantities()): ?>
+                            <span class="count"><?php echo $filterItem->getCount()?><span class="filter-count-label">
+                                    <?php if ($filterItem->getCount() == 1):?> <?php echo __('item')?><?php else:?> <?php echo __('items') ?><?php endif;?></span></span>
+                        <?php endif; ?>
+                    </a>
+                <?php else:?>
+                    <span class="label"><?php echo $filterItem->getLabel() ?></span>
+                    <?php if ($filterSetting->isShowProductQuantities()): ?>
+                        <span class="count"><?php echo $filterItem->getCount()?><span class="filter-count-label">
+                                <?php if ($filterItem->getCount() == 1):?><?php echo __('item')?><?php else:?><?php echo __('items') ?><?php endif;?></span></span>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <script type="text/x-magento-init">
+                    {
+                        ".am_shopby_filter_item_<?php echo $block->escapeId($uniqId)?>": {
+                            "amShopbyFilterItemDefault": {
+                                "collectFilters": <?php echo $block->collectFilters();?>
+                            }
+                        }
+                    }
+                </script>
+            </div>
+            <?php
+            $currentPath = ($startPath ? : $filterItems->getStartPath()) . '/'.  $filterItem->getValueString();
+            if($filterItems->getItemsCount($currentPath)) {
+                ?>
+                <ul class="items items-children level-<?=$level?>">
+                    <?php
+                    renderCategoryFlyOut($filterItems, $currentPath, $block, $filterSetting);
+                    ?>
+                </ul>
+                <?php
+            }
+            ?>
+
+        </li>
+    <?php endforeach ?>
+
+        <?php
+    }
+}
+?>
+<form data-amshopby-filter="<?php echo $filterSetting->getFilterCode();?>" <?php if ($filterSetting->getEnableOverflowScroll() > 0): ?>
+    style="max-height:<?php echo $filterSetting->getEnableOverflowScroll() ?>px;overflow-y: auto;overflow-x: -moz-hidden-unscrollable;"
+<?php endif; ?>>
+    <ul class="items am_shopby_filter_items_<?php echo $filterSetting->getFilterCode();?> amshopby-fly-out-view">
+        <?php renderCategoryFlyOut($filterItems, null, $block, $filterSetting); ?>
+        <?php /** @var \Amasty\Shopby\Model\Layer\Filter\Item $filterItem */?>
+        <?php /** @var \Amasty\Shopby\Model\Layer\Filter\CategoryItems $filterItems */?>
+    </ul>
+</form>
+
+<script>
+    require(["jquery", "jquery/ui"], function ($) {
+        $(".am_shopby_filter_items_<?php echo $filterSetting->getFilterCode();?>").menu({
+            position: { my: "left top", at: "center top+20" }
+        });
+    });
+</script>
+

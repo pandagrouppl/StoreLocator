@@ -1,0 +1,86 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var Amasty\ShopbyBrand\Block\Widget\BrandSlider $this */
+    $items          = $this->getItems();
+    $itemsPerView   = $this->getData('items_number');
+    $sliderOptions  = $this->getSliderOptions();
+    $showLabel      = $this->getData('show_label');
+    $showPagination = $this->getData('pagination_show');
+    $showButtons    = $this->getData('buttons_show');
+    $imgWidth       = $this->getData('image_width') ? $this->getData('image_width') : Amasty\ShopbyBrand\Block\Widget\BrandSlider::DEFAULT_IMG_WIDTH;
+    $imgHeight      = $this->getData('image_height');
+    $sliderWidth    = $this->getData('slider_width') ? $this->getData('slider_width') : ($imgWidth + 10) * $itemsPerView;
+    $buttonWidth    = 40;
+    $sliderId       = $this->getSliderId();
+?>
+<style>
+    #<?php echo $sliderId ?> {
+        max-width: <?php echo $buttonWidth * 2 + $sliderWidth; ?>px;
+        padding: 0 <?php echo $buttonWidth?>px;
+    }
+    #<?php echo $sliderId ?> .swiper-slide .swiper-brand img {
+    <?php if ($imgWidth): ?>
+        max-width: <?php echo $imgWidth;?>px;
+    <?php endif;?>
+    <?php if ($imgHeight): ?>
+        max-height: <?php echo $imgHeight;?>px;
+    <?php endif;?>
+</style>
+<div class="amslider-container">
+  <div class="amslider-header-container" style="background-color:<?php echo $this->getHeaderColor() ?>;">
+    <div class="amslider-header">
+      <span style="color: <?php echo $this->getTitleColor() ?>;"><?php echo $this->getTitle() ?></span>
+    </div>
+  </div>
+    <div class="amslider" id="<?php echo $sliderId ?>" <?php if(!$showLabel) echo ' show-label'?>">
+      <?php if ($showPagination): ?><div class="swiper-pagination"></div><?php endif;?>
+    <?php if ($showButtons): ?>
+        <div class="swiper-button-prev"></div>
+        <div  class="swiper-button-next"></div>
+    <?php endif; ?>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php foreach ($items as $brand): if (!$brand['img']) continue;?>
+                    <a href="<?php echo $brand['url']?>" class="swiper-slide">
+                        <div class="swiper-brand <?php if ($showLabel) echo ' brand-label' ?>">
+                            <img src="<?php echo $brand['img']; ?>" />
+                            <?php if ($showLabel): ?>
+                                <div class="brand-title"><?php echo $brand['label']?></div>
+                            <?php endif; ?>
+                        </div>
+                    </a>
+                <?php endforeach;?>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'Amasty_ShopbyBrand/js/swiper.min',
+        'domReady!'
+    ], function ($) {
+            new Swiper('#<?php echo $sliderId ?> .swiper-container', {
+              <?php foreach ($sliderOptions as $option => $value) {
+                echo $option . ':' . $value . ",";
+              }
+              ?>
+              breakpoints: {
+              <?php for($i = 1; $i < $itemsPerView; $i++) :?>
+                <?php echo ($i + 1) * ($imgWidth + 20 + 10) + $buttonWidth * 2; ?> : {
+                  slidesPerView: <?php echo $i ?>
+                },
+              <?php endfor; ?>
+              },
+              nextButton: '#<?php echo $sliderId ?> .swiper-button-next',
+              prevButton: '#<?php echo $sliderId ?> .swiper-button-prev',
+              spaceBetween: 10
+           })
+    });
+</script>

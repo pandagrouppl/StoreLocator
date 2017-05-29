@@ -1,0 +1,24 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/**
+ * @var $block \Amasty\Shopby\Block\Product\ProductList\Ajax
+ */
+if(!$block->canShowBlock()) {
+    return;
+}
+?>
+<script type="text/x-magento-init">
+{
+    "body.cms-index-index": {
+        "amShopbyAjax": {
+                "submitByClick": <?php echo ($block->submitByClick() ? '1' : '0');?>
+            }
+        }
+}
+</script>

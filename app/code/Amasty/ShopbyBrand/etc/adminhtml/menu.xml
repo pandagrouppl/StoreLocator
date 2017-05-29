@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Amasty_ShopbyBrand::slider" title="Brand Slider" module="Amasty_ShopbyBrand" sortOrder="10"
+             parent="Amasty_Shopby::layered_navigation" action="amasty_shopbybrand/slider/index" resource="Amasty_ShopbyBrand::slider"/>
+    </menu>
+</config>

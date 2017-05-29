@@ -1,0 +1,65 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/**
+ * @var $block \Amasty\Shopby\Block\Adminhtml\Catalog\Product\Attribute\Edit
+ */
+
+?>
+<div id="loader-spinner-html" style="display: none">
+    <div style="background-color: #FFFFFF;
+            height: 100%;
+            left: 0;
+            opacity: 0.5;
+            filter: alpha(opacity = 50);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 555;
+            display:block;">
+        <img src="<?php echo $block->getViewFileUrl('images/loader-1.gif')?>"
+             alt="<?php echo __('Loading...')?>" style="top: 100px;left: 45%;display: block;position: absolute;">
+    </div>
+</div>
+<style>
+    .admin__scope-old .data-table .amshopby-button-option.action-settings:before {
+        font-family: 'MUI-Icons';
+        font-style: normal;
+        speak: none;
+        font-weight: normal;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        content: '\e07e';
+        color: #b7b3ad;
+    }
+    .admin__scope-old .data-table .amshopby-button-option.action-settings span {
+        display: none;
+    }
+
+    .admin__scope-old .data-table .amshopby-button-option.action-settings {
+        border: none;
+        border-radius: 0;
+        background: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        text-shadow: none;
+        filter: none;
+    }
+</style>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "optionsContent": {
+                "url": "<?php echo $block->getUrl('amshopby_option/option/settings', ['option_id'=>'__option_id__', 'filter_code'=>$block->getFilterCode()]);?>",
+                "buttonText":  "<?php echo __('Settings')?>",
+                "modalHeadText": "<?php echo __('Settings')?>"
+            }
+        }
+    }
+</script>

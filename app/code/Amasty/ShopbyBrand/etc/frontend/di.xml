@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Amasty\Shopby\Model\Layer\Filter\Attribute">
+        <plugin name="amasty_shopby_brand_filter_attribute" type="\Amasty\ShopbyBrand\Plugin\AttributeFilterPlugin" sortOrder="100"/>
+    </type>
+    <type name="Amasty\Shopby\Model\Customizer\Category">
+        <arguments>
+            <argument name="customizers" xsi:type="array">
+                <item name="brand" xsi:type="string">Amasty\ShopbyBrand\Customizer\Category\Brand</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Amasty\ShopbyBrand\Customizer\Category\Brand" type="Amasty\Shopby\Model\Customizer\Category\Filter">
+        <arguments>
+            <argument name="contentHelper" xsi:type="object">Amasty\ShopbyBrand\Helper\Content</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Theme\Block\Html\Topmenu">
+        <plugin name="amasty_shopby_brand_topmenu_first" type="Amasty\ShopbyBrand\Plugin\Block\Html\Topmenu" sortOrder="-1" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Topmenu">
+        <plugin name="amasty_shopby_brand_topmenu_last" type="Amasty\ShopbyBrand\Plugin\Block\Html\TopmenuLast" sortOrder="999" />
+    </type>
+    <type name="Magento\Theme\Block\Html\Title">
+        <plugin name="amasty_shopby_brand_title" type="Amasty\ShopbyBrand\Plugin\Block\Html\Title" />
+    </type>
+</config>

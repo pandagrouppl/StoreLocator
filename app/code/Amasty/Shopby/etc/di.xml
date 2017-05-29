@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\CatalogSearch\Block\SearchResult\ListProduct" type="Magento\Catalog\Block\Product\ListProduct">
+        <arguments>
+            <argument name="catalogLayer" xsi:type="object">Magento\Catalog\Model\Layer\Search</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Cms\Model\Page">
+        <plugin
+                name="amshopby_cms_page_plugin"
+                type="\Amasty\Shopby\Plugin\CmsPagePlugin"
+                sortOrder="1"
+        />
+    </type>
+
+    <virtualType name="Amasty\Shopby\Model\Layer\Cms\Context" type="Magento\Catalog\Model\Layer\Context">
+        <arguments>
+            <argument name="collectionProvider" xsi:type="object">Amasty\Shopby\Model\Layer\Cms\ItemCollectionProvider</argument>
+            <argument name="stateKey" xsi:type="object">Magento\Catalog\Model\Layer\Category\StateKey</argument>
+            <argument name="collectionFilter" xsi:type="object">Magento\Catalog\Model\Layer\Category\CollectionFilter</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Amasty\Shopby\Model\Layer\Cms" type="Magento\Catalog\Model\Layer">
+        <arguments>
+            <argument name="context" xsi:type="object">Amasty\Shopby\Model\Layer\Cms\Context</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Model\Layer\Resolver">
+        <arguments>
+            <argument name="layersPool" xsi:type="array">
+                <item name="amshopby_cms" xsi:type="string">Amasty\Shopby\Model\Layer\Cms</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Amasty\Shopby\Model\Layer\Cms\ItemCollectionProvider">
+        <arguments>
+            <argument name="collectionFactory" xsi:type="object">Magento\CatalogSearch\Model\ResourceModel\Fulltext\CollectionFactory</argument>
+        </arguments>
+    </type>
+</config>

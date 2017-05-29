@@ -1,0 +1,62 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $this
+ */
+?>
+<?php if ($this->getData('side')): ?>
+<div class="block block-layered-nav block-layered-nav--no-filters">
+    <div class="block-content toggle-content">
+        <dl>
+            <dt><?php echo __('Search Brands')?></dt>
+            <dd>
+                <?php endif;?>
+
+                <div class="input-box">
+                    <div class="ambrands-search-wrapper">
+                        <input href='#' type="text" onkeyup="searchBrands(this.value)" class="input-text ambrands-search-input" id="ambrands-search-input"
+                               placeholder="<?php echo __('Search Brand')?>" value=""/>
+                        <div id="livesearch" ></div>
+                    </div>
+                </div>
+                <?php if ($this->getData('side')): ?>
+            </dd>
+        </dl>
+    </div>
+</div>
+<?php endif;?>
+<script type="text/javascript">
+    brands = <?php echo $this->getBrands(); ?>;
+    function searchBrands(str) {
+        var resDropDown = document.getElementById("livesearch");
+        str = str.trim().toLowerCase();
+        if (str.length==0) {
+            resDropDown.style.display = "none";
+            return;
+        }
+        var foundBrands = {};
+
+        for(var url in brands) {
+            if (brands[url].toLowerCase().indexOf(str) != -1){
+                foundBrands[url] = brands[url];
+            }
+        }
+        if (!Object.keys(foundBrands).length) {
+            resDropDown.style.display = "none";
+        } else {
+            var result = '';
+            for(var url in foundBrands) {
+                result += '<a href="' + url +'">'
+                    + foundBrands[url] + '</a>';
+            }
+            resDropDown.style.display = "block";
+            resDropDown.innerHTML = result;
+        }
+    }
+</script>

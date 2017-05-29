@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Amasty_ShopbyPage::page" title="Custom Pages" module="Amasty_ShopbyPage" sortOrder="0" parent="Amasty_Shopby::layered_navigation" action="amasty_shopbypage/page/index" resource="Amasty_ShopbyPage::page"/>
+    </menu>
+</config>

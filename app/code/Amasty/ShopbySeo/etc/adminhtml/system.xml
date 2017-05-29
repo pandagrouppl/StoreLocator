@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc\system_file.xsd">
+    <system>
+        <section id="amasty_shopby_seo" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Improved Layered Navigation: SEO</label>
+            <tab>amasty</tab>
+            <resource>Amasty_ShopbySeo::amasty_shopby_seo</resource>
+            <group id="url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>SEO URLs</label>
+                <field id="mode" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>URL will look "category/autumn.html" instead of "category.html?season=114". See per-attribute settings for fine-tuning.</comment>
+                </field>
+                <field id="add_suffix_shopby" translate="label comment" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Add suffix also to brand pages and filtered all-products pages</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="option_separator" translate="label" type="select" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Option Separator</label>
+                    <source_model>Amasty\ShopbySeo\Model\Source\OptionSeparator</source_model>
+                </field>
+            </group>
+            <group id="robots" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Robots Tag Control</label>
+                <field id="control_robots" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Allow the Module to Modify Robots Meta Tag</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Use "No" for compatibility with other SEO extensions.</comment>
+                </field>
+                <field id="rel_nofollow" translate="label comment" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Automatically add rel="nofollow" to filter links when required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Please refer per-filter settings to make exclusions.</comment>
+                </field>
+            </group>
+            <group id="canonical" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Canonical URL</label>
+                <field id="category" translate="label comment" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Category pages</label>
+                    <source_model>Amasty\ShopbySeo\Model\Source\Canonical\Category</source_model>
+                </field>
+                <field id="root" translate="label comment" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>"all-product" page</label>
+                    <source_model>Amasty\ShopbySeo\Model\Source\Canonical\Root</source_model>
+                    <comment>Canonical URL for "Brand" pages: http://your_store.com/brand_name.html</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

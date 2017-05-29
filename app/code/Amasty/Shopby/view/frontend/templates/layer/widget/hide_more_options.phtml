@@ -1,0 +1,26 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var \Amasty\Shopby\Block\Navigation\Widget\HideMoreOptions $block */
+$filterSetting = $block->getFilterSetting();
+?>
+<button class="amshopby-more-button">
+    <a class="am_shopby_filter_items_<?php echo $filterSetting->getFilterCode()?>_show_more" data-text-more="<?php echo __("More")?>" data-text-less="<?php echo __("Less")?>" href="javascript:void(0)" data-is-hide="false">
+        <?php echo __("Less")?>
+    </a>
+</button>
+<script type="text/x-magento-init">
+    {
+        ".am_shopby_filter_items_<?php echo $filterSetting->getFilterCode()?>": {
+            "amShopbyFilterHideMoreOptions": {
+                "numberUnfoldedOptions": <?php echo $filterSetting->getNumberUnfoldedOptions()?>,
+                "buttonSelector": ".am_shopby_filter_items_<?php echo $filterSetting->getFilterCode()?>_show_more"
+            }
+        }
+    }
+</script>

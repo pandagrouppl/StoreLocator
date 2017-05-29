@@ -1,0 +1,36 @@
+"Do Not Change","Do Not Change"
+"Just Url Key","Just Url Key"
+"Current URL without GET Parameters","Current URL without GET Parameters"
+"First Attribute Value","First Attribute Value"
+"Keep current URL","Keep current URL"
+"URL Without Filters","URL Without Filters"
+"Brand Filter Only","Brand Filter Only"
+"Current URL without Get parameters","Current URL without Get parameters"
+"URL Key Only","URL Key Only"
+Never,Never
+"Single Selection Only","Single Selection Only"
+Always,Always
+No,No
+Auto,Auto
+SEO,SEO
+"Generate SEO URL","Generate SEO URL"
+"Allow Google to INDEX the Category Page with the Filter Applied","Allow Google to INDEX the Category Page with the Filter Applied"
+"Allow Google to FOLLOW Links on the Category Page with the Filter Applied","Allow Google to FOLLOW Links on the Category Page with the Filter Applied"
+"Add rel=""nofollow"" to filter links","Add rel=""nofollow"" to filter links"
+"Enable SEO URL for the attribute in order to use URL Aliases","Enable SEO URL for the attribute in order to use URL Aliases"
+"URL alias","URL alias"
+"Improved Layered Navigation: SEO","Improved Layered Navigation: SEO"
+"SEO URLs","SEO URLs"
+Enable,Enable
+"URL will look ""category/autumn.html"" instead of ""category.html?season=114"". See per-attribute settings for fine-tuning.","URL will look ""category/autumn.html"" instead of ""category.html?season=114"". See per-attribute settings for fine-tuning."
+"Add suffix also to brand pages and filtered all-products pages","Add suffix also to brand pages and filtered all-products pages"
+"Option Separator","Option Separator"
+"Robots Tag Control","Robots Tag Control"
+"Allow the Module to Modify Robots Meta Tag","Allow the Module to Modify Robots Meta Tag"
+"Use ""No"" for compatibility with other SEO extensions.","Use ""No"" for compatibility with other SEO extensions."
+"Automatically add rel=""nofollow"" to filter links when required","Automatically add rel=""nofollow"" to filter links when required"
+"Please refer per-filter settings to make exclusions.","Please refer per-filter settings to make exclusions."
+"Canonical URL","Canonical URL"
+"Category pages","Category pages"
+"""all-product"" page","""all-product"" page"
+"Canonical URL for ""Brand"" pages: http://your_store.com/brand_name.html","Canonical URL for ""Brand"" pages: http://your_store.com/brand_name.html"

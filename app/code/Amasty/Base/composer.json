@@ -1,0 +1,20 @@
+{
+    "name": "amasty/base",
+    "description": "Amasty Base",
+    "require": {
+        "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+    },
+    "type": "magento2-module",
+    "version": "1.0.4",
+    "license": [
+        "Commercial"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Amasty\\Base\\": ""
+        }
+    }
+}

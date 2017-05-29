@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Magento\Catalog\Controller\Category\View">
+        <plugin name="amasty_shopby_page_view" type="\Amasty\ShopbySeo\Plugin\CategoryViewPlugin" sortOrder="1"/>
+    </type>
+    <type name="\Amasty\ShopbyRoot\Controller\Index\Index">
+        <plugin name="amasty_shopby_page_view" type="\Amasty\ShopbySeo\Plugin\CategoryViewPlugin" sortOrder="1"/>
+    </type>
+    <type name="\Magento\Framework\Url">
+        <plugin name="amasty_shopby_seo_url" type="\Amasty\ShopbySeo\Plugin\UrlPlugin" sortOrder="10"/>
+    </type>
+    <type name="\Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="amasty_shopby_seo_toolbar" type="\Amasty\ShopbySeo\Plugin\ToolbarPlugin" sortOrder="1"/>
+    </type>
+    <type name="\Magento\Theme\Block\Html\Pager">
+        <plugin name="amasty_shopby_seo_pager" type="\Amasty\ShopbySeo\Plugin\ToolbarPlugin" sortOrder="1"/>
+    </type>
+
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="amasty_seo_router" xsi:type="array">
+                    <item name="class" xsi:type="string">\Amasty\ShopbySeo\Controller\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">22</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Amasty\Shopby\Model\Customizer\Category">
+        <arguments>
+            <argument name="customizers" xsi:type="array">
+                <item name="seo" xsi:type="string">Amasty\ShopbySeo\Model\Customizer\Category\Seo</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

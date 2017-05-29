@@ -1,0 +1,123 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var $block \Amasty\Shopby\Block\Navigation\SwatchRenderer*/
+?>
+<?php $swatchData = $block->getSwatchData(); ?>
+<?php $filterSetting = $block->getFilterSetting()?>
+<?php $extraClass = $filterSetting ? "am_shopby_filter_items_".$filterSetting->getFilterCode() : ""; ?>
+<form data-amshopby-filter="<?php echo $block->getFilter() ? $block->getFilter()->getRequestVar() : "";?>"
+    <?php if ($filterSetting && $filterSetting->getEnableOverflowScroll() > 0): ?>
+      style="max-height:<?php echo $filterSetting->getEnableOverflowScroll() ?>px;overflow-y: auto;overflow-x: -moz-hidden-unscrollable;"
+    <?php endif; ?>>
+    <div class="<?php echo $extraClass;?> swatch-attribute swatch-layered <?php /* @escapeNotVerified */ echo $swatchData['attribute_code'] ?>"
+         attribute-code="<?php /* @escapeNotVerified */ echo $swatchData['attribute_code'] ?>" attribute-id="<?php /* @escapeNotVerified */ echo $swatchData['attribute_id'] ?>">
+        <div class="swatch-attribute-options clearfix amasty-shopby-swatch-attribute-options amasty-shopby-swatch-attribute-options-images-labels">
+            <?php foreach ($swatchData['options'] as $option => $label): ?>
+                <a href="<?php /* @escapeNotVerified */ echo $label['link'] ?>" class="item swatch-option-link-layered">
+                    <?php
+                        $selected = array_key_exists(\Amasty\Shopby\Block\Navigation\SwatchRenderer::VAR_SELECTED, $label) &&
+                            $label[\Amasty\Shopby\Block\Navigation\SwatchRenderer::VAR_SELECTED];
+
+                        $extraSwatchClass = $selected ? 'selected' : '';
+                    ?>
+                    <?php if (isset($swatchData['swatches'][$option]['type'])) { ?>
+                        <?php switch ($swatchData['swatches'][$option]['type']) {
+                            case '3':
+                                ?>
+                                <div class="<?php echo $extraSwatchClass;?> swatch-option <?php /* @escapeNotVerified */ echo $label['custom_style'] ?>"
+                                     option-type="3"
+                                     option-id="<?php /* @escapeNotVerified */ echo $option ?>"
+                                     option-label="<?php /* @escapeNotVerified */ echo $label['label'] ?>"
+                                     option-tooltip-thumb=""
+                                     option-tooltip-value=""
+                                    ></div>
+                                <?php    break;
+                            case '2':
+                                ?>
+                                <?php $swatchThumbPath = $block->getSwatchPath('swatch_thumb',
+                                $swatchData['swatches'][$option]['value']); ?>
+                                <?php $swatchImagePath = $block->getSwatchPath('swatch_image',
+                                $swatchData['swatches'][$option]['value']); ?>
+                                <div class="<?php echo $extraSwatchClass;?>  swatch-option image <?php /* @escapeNotVerified */ echo $label['custom_style'] ?>"
+                                     option-type="2"
+                                     option-id="<?php /* @escapeNotVerified */ echo $option ?>"
+                                     option-label="<?php /* @escapeNotVerified */ echo $label['label'] ?>"
+                                     option-tooltip-thumb="<?php /* @escapeNotVerified */ echo $swatchThumbPath ?>"
+                                     option-tooltip-value=""
+                                     style="background: url(<?php /* @escapeNotVerified */ echo $swatchImagePath ?>) no-repeat center; background-size: initial;"></div>
+                                <?php    break;
+                            case '1':
+                                ?>
+                                <div class="<?php echo $extraSwatchClass;?> swatch-option color <?php /* @escapeNotVerified */ echo $label['custom_style'] ?>"
+                                     option-type="1"
+                                     option-id="<?php /* @escapeNotVerified */ echo $option ?>"
+                                     option-label="<?php /* @escapeNotVerified */ echo $label['label'] ?>"
+                                     option-tooltip-thumb=""
+                                     option-tooltip-value="<?php /* @escapeNotVerified */ echo $swatchData['swatches'][$option]['value'] ?>"
+                                     style="background: <?php /* @escapeNotVerified */ echo $swatchData['swatches'][$option]['value'] ?> no-repeat center; background-size: initial;"></div>
+                                <?php    break;
+                            case '0':
+                            default:
+                                ?>
+                                <div class="<?php echo $extraSwatchClass;?> swatch-option text <?php /* @escapeNotVerified */ echo $label['custom_style'] ?>"
+                                     option-type="0"
+                                     option-id="<?php /* @escapeNotVerified */ echo $option ?>"
+                                     option-label="<?php /* @escapeNotVerified */ echo $label['label'] ?>"
+                                     option-tooltip-thumb=""
+                                     option-tooltip-value=""
+                                    ><?php /* @escapeNotVerified */ echo $swatchData['swatches'][$option]['value'] ?></div>
+                                <?php    break;
+                        } ?>
+                    <?php } ?>
+                    <div class="am_shopby_swatch_label"><?php /* @escapeNotVerified */ echo $label['label'] ?>
+                    <?php if ($filterSetting && $filterSetting->isShowProductQuantities()): ?>
+                        &nbsp;<span class="count"><?php echo $label[\Amasty\Shopby\Block\Navigation\SwatchRenderer::VAR_COUNT];?><span class="filter-count-label"><?php if ($label[\Amasty\Shopby\Block\Navigation\SwatchRenderer::VAR_COUNT] == 1):?><?php echo __('item')?><?php else:?><?php echo __('items') ?><?php endif;?></span></span>
+                    <?php endif;?>
+                    </div>
+                    <?php if ($filterSetting && $filterSetting->isMultiselect()): ?>
+                        <input
+                            name="amshopby[<?php echo $block->getFilter()->getRequestVar();?>][]"
+                            value="<?php echo $option;?>"
+                            type="checkbox"
+                            style="display: none;"
+                            <?php echo ($selected ? 'checked' : '');?>
+                            />
+                    <?php elseif($filterSetting && !in_array($filterSetting->getFilterCode(), ['rating', 'stock'])):?>
+                        <input
+                            value="<?php echo $option;?>"
+                            type="radio"
+                            name="amshopby[<?php echo $block->getFilter()->getRequestVar();?>][]"
+                            style="display: none;"
+                            <?php echo ($selected ? 'checked' : '');?>
+                            />
+                    <?php endif; ?>
+                </a>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</form>
+
+<script>
+    require(["jquery", "jquery/ui", "Magento_Swatches/js/swatch-renderer"], function ($) {
+        $('.swatch-layered.<?php /* @escapeNotVerified */ echo $swatchData['attribute_code'] ?>')
+            .find('[option-type="1"], [option-type="2"], [option-type="0"], [option-type="3"]')
+            .SwatchRendererTooltip();
+    });
+</script>
+<?php if ($filterSetting) :?>
+    <script type="text/x-magento-init">
+{
+    ".<?php echo $extraClass; ?>": {
+        "amShopbyFilterSwatch": {
+            "collectFilters": <?php echo $block->collectFilters();?>
+        }
+    }
+}
+</script>
+<?php endif; ?>

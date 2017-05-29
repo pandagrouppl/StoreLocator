@@ -1,0 +1,24 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var $block \Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Selection\Option */
+?>
+<?php $_value       = $block->getElement()->getValue()?>
+<?php $_htmlId      = $block->getElement()->getHtmlId() ?>
+<?php $_htmlClass   = $block->getElement()->getClass() ?>
+<?php $_htmlName    = $block->getElement()->getName() ?>
+<?php $_readonly    = $block->getElement()->getReadonly() ?>
+<div class="field" id="<?php echo $_htmlId?>_container">
+    <label class="label"><span><?php echo $block->getElement()->getLabel(); ?></span></label>
+
+    <div class="admin__field-control control">
+        <div id="<?php echo $_htmlId?>_data">
+            <?php echo $block->getValueHtml();?>
+        </div>
+    </div>
+</div>

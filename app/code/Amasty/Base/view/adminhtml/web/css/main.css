@@ -1,0 +1,24 @@
+.config-nav-block.amasty-tab strong:before {
+    background: url(../images/logo.png) no-repeat;
+    width: 16px;
+    height: 19px;
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: bottom;
+}
+
+.admin__menu [data-ui-id^="menu-amasty-"] .submenu-group-title span:before,
+.admin__menu [data-ui-id^="menu-magento-"] [data-ui-id^="menu-magento-"] [data-ui-id^="menu-amasty-"] span:before {
+    background: url(../images/logo-menu.png) no-repeat;
+    width: 16px;
+    height: 19px;
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: top;
+}
+
+#amasty_base_extensions table td.value, #amasty_base_information table td.value{
+    vertical-align: bottom;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<!--
+/**
+* Copyright © 2015 Amasty. All rights reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <amshopby_brand>
+            <general>
+                <product_icon>0</product_icon>
+                <topmenu_enabled>0</topmenu_enabled>
+                <top_links>0</top_links>
+            </general>
+            <brands_landing>
+                <!--<title>Brands</title>-->
+                <!--<display_type>horizontal</display_type>-->
+                <!--<columns_num>2</columns_num>-->
+                <!--<items_per_line>6</items_per_line>-->
+                <show_images>0</show_images>
+                <!--<image_type>icon</image_type>-->
+                <image_width>100</image_width>
+                <image_height></image_height>
+                <!--<show_letters>0</show_letters>-->
+                <show_search>1</show_search>
+                <show_filter>1</show_filter>
+                <filter_display_all>1</filter_display_all>
+                <display_zero>1</display_zero>
+                <show_count>1</show_count>
+            </brands_landing>
+            <slider>
+                <items_number>4</items_number>
+                <sort_by>name</sort_by>
+                <slider_header_color>#f58c12</slider_header_color>
+                <slider_title_color>#ffffff</slider_title_color>
+                <slider_title>Featured Brands</slider_title>
+                <slider_width>800</slider_width>
+                <image_width>130</image_width>
+                <image_height></image_height>
+                <show_label>0</show_label>
+                <buttons_show>1</buttons_show>
+                <infinity_loop>1</infinity_loop>
+                <simulate_touch>1</simulate_touch>
+                <pagination_show>0</pagination_show>
+                <pagination_clickable>1</pagination_clickable>
+                <autoplay>0</autoplay>
+                <autoplay_delay>1500</autoplay_delay>
+            </slider>
+        </amshopby_brand>
+    </default>
+</config>

@@ -1,0 +1,120 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var \Amasty\Shopby\Model\FilterSetting $filterSetting */
+/** @var \Amasty\Shopby\Block\Navigation\FilterRenderer $block */
+?>
+
+<ol class="items am_shopby_filter_items_<?php echo $filterSetting->getFilterCode();?>">
+    <li>
+        <form data-amshopby-filter="<?php echo $filterSetting->getFilterCode();?>">
+        <?php if (count($filterItems) >= 0) :?>
+            <select
+                <?php echo ($filterSetting->isMultiselect() ? 'multiple="on"' : '')?>
+                class="am_shopby_filter_<?php echo $filterSetting->getFilterCode(); ?>"
+                name="amshopby[<?php echo $block->getFilter()->getRequestVar();?>][]"
+            >
+                <?php if (!$filterSetting->isMultiselect()):?>
+                    <option value="-1" href="<?php echo $block->escapeUrl($this->getClearUrl()) ?>">&nbsp;</option>
+                <?php endif;?>
+                <?php /** @var \Amasty\Shopby\Model\Layer\Filter\Item $filterItem */?>
+                <?php foreach ($filterItems as $filterItem):
+                    $disabled = ($filterItem->getCount() == 0) ? ' disabled' : "";
+                    $selected = ($this->checkedFilter($filterItem)) ? ' selected' : "";
+                    $url = $block->escapeUrl($filterItem->getUrl());
+                    $label = $filterItem->getLabel();
+                    if ($filterSetting->isShowProductQuantities()) {
+                        $label .= ' <span class="count">(' . $filterItem->getCount() . ')</span>';
+                    }
+                    ?>
+                    <option
+                        value="<?php echo $filterItem->getValueString();?>"
+                        href="<?php echo $url ?>" <?php echo $disabled . $selected ?>>
+                        <?php echo $label ?>
+                    </option>
+                <?php endforeach ?>
+                <?php if ($filterSetting->isMultiselect()) :?>
+                    <script type="text/x-magento-init">
+                            {
+                                ".am_shopby_filter_<?php echo $filterSetting->getFilterCode(); ?>": {
+                                    "amShopbyFilterMultiselect": {
+                                        "placeholderText": "<?php echo __('Select Options')?>",
+                                        "collectFilters": <?php echo $block->collectFilters();?>
+                                    }
+                                }
+                            }
+                    </script>
+                <?php else: ?>
+                    <script type="text/x-magento-init">
+                    {
+                        ".am_shopby_filter_<?php echo $filterSetting->getFilterCode(); ?>": {
+                            "amShopbyFilterDropdown": {
+                                "currentValue": <?php echo 1 ?>,
+                                "collectFilters": <?php echo $block->collectFilters();?>
+                            }
+                        }
+                    }
+                    </script>
+                <?php endif;?>
+            </select>
+        </form>
+        <?php endif; ?>
+    </li>
+    <?php if ($filterSetting->getAddFromToWidget() && isset($fromToConfig) && is_array($fromToConfig)) :?>
+        <li id="am_shopby_filter_widget_<?php echo $filterSetting->getFilterCode(); ?>">
+            <form data-amshopby-filter="<?php echo $filterSetting->getFilterCode();?>">
+                <input
+                    type=hidden
+                    amshopby-fromto-id="value"
+                    <?php if ($fromToConfig['from'] && $fromToConfig['to']) :?>
+                    value="<?php echo $fromToConfig['from'];?>-<?php echo ($fromToConfig['to']);?>"
+                    <?php endif;?>
+                    type=hidden
+                    name="<?php echo 'amshopby[' . $block->getFilter()->getRequestVar() . '][]'
+                    ?>"/>
+                <div class="range">
+                    <input
+                        class="amshopby-filter-price-from"
+                        data-validate="{'validate-number':true}"
+                        amshopby-fromto-id="from"
+                        validate-digits-range='[<?php echo $fromToConfig['min'];?>-<?php echo $fromToConfig['max'];?>]'
+                        type="text" class="input-text" placeholder="<?php echo __('From')?>"/>
+
+                    <input
+                        class="amshopby-filter-price-to"
+                        data-validate="{'validate-number':true}"
+                        amshopby-fromto-id="to"
+                        validate-digits-range='[<?php echo $fromToConfig['min'];?>-<?php echo $fromToConfig['max'];?>]'
+                        type="text" class="input-text" placeholder="<?php echo __('To')?>"/>
+                    <?php if (!$block->collectFilters()):?>
+                    <button class="amshopby-filter-price-go"
+                            amshopby-fromto-id="go"
+                        ><?php echo __('Go')?></button>
+                    <?php endif;?>
+                </div>
+            </form>
+        </li>
+        <script type="text/x-magento-init">
+        {
+            "#am_shopby_filter_widget_<?php echo $filterSetting->getFilterCode(); ?>": {
+                "amShopbyFilterFromTo": {
+                        "enabled": <?php echo ($filterSetting->getAddFromToWidget() ? '1' : '0')?>,
+                        "collectFilters": <?php echo $block->collectFilters();?>,
+                        "from":"<?php echo $fromToConfig['from'];?>",
+                        "to":"<?php echo $fromToConfig['to'];?>",
+                        "min":"<?php echo $fromToConfig['min'];?>",
+                        "max":"<?php echo $fromToConfig['max'];?>",
+                        "isSlider":0,
+                        "isDropdown": 1,
+                        "url": "<?php echo $block->getSliderUrlTemplate(); ?>"
+                    }
+            }
+        }
+        </script>
+    <?php endif;?>
+</ol>

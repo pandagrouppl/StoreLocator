@@ -1,0 +1,160 @@
+"Category Filter Settings","Category Filter Settings"
+"[STORE VIEW]","[STORE VIEW]"
+"Display Properties","Display Properties"
+"Display Mode","Display Mode"
+"Add From-To Widget","Add From-To Widget"
+"Minimum Slider Value","Minimum Slider Value"
+"Please specify the min value to limit the slider, e.g. <$10","Please specify the min value to limit the slider, e.g. <$10"
+"Maximum Slider Value","Maximum Slider Value"
+"Please specify the max value to limit the slider, e.g. >$999","Please specify the max value to limit the slider, e.g. >$999"
+"Slider Step","Slider Step"
+"Measure Units","Measure Units"
+"Unit Label","Unit Label"
+"Show in the Block","Show in the Block"
+"Sort Options By","Sort Options By"
+"Show Product Quantities","Show Product Quantities"
+"Show Search Box","Show Search Box"
+"Number of unfolded options","Number of unfolded options"
+"Other options will be shown after a customer clicks the ""More"" button.","Other options will be shown after a customer clicks the ""More"" button."
+Expand,Expand
+Tooltip,Tooltip
+Filtering,Filtering
+"When multiselect option is disabled it follows the category page","When multiselect option is disabled it follows the category page"
+"Allow Multiselect","Allow Multiselect"
+"Multiple Values Logic","Multiple Values Logic"
+"Hide filter when only one option available","Hide filter when only one option available"
+"Visible in Categories","Visible in Categories"
+Categories,Categories
+"Show only when any option of attributes below is selected","Show only when any option of attributes below is selected"
+"Show only if the following option is selected","Show only if the following option is selected"
+"Comma separated options ids","Comma separated options ids"
+"Category Tree Depth","Category Tree Depth"
+"Specify the max level number for category tree. Keep 1 to hide the subcategories","Specify the max level number for category tree. Keep 1 to hide the subcategories"
+"Subcategories View","Subcategories View"
+"Expand Subcategories","Expand Subcategories"
+"Render All Categories Tree","Render All Categories Tree"
+"Yes (Render Full Categories Tree) or No (Only For Current Category Path)","Yes (Render Full Categories Tree) or No (Only For Current Category Path)"
+"Render Categories Level","Render Categories Level"
+"Select Options","Select Options"
+"You saved the item.","You saved the item."
+"Something went wrong while saving the item data. Please review the error log.","Something went wrong while saving the item data. Please review the error log."
+Category,Category
+"%1 and above","%1 and above"
+"%1 - %2","%1 - %2"
+Yes,Yes
+New,New
+"On Sale","On Sale"
+"%1 stars & up","%1 stars & up"
+"%1 star & up","%1 star & up"
+"%1 stars","%1 stars"
+"Not Yet Rated","Not Yet Rated"
+"In Stock","In Stock"
+"Out of Stock","Out of Stock"
+"Bucket does not exist","Bucket does not exist"
+"Before %1","Before %1"
+"After %1","After %1"
+"Replace %1","Replace %1"
+"Do Not Add","Do Not Add"
+Sidebar,Sidebar
+Top,Top
+Both,Both
+"All Attributes","All Attributes"
+Labels,Labels
+Dropdown,Dropdown
+Images,Images
+"Images & Labels","Images & Labels"
+"Text Swatches","Text Swatches"
+Slider,Slider
+"From-To Only","From-To Only"
+Ranges,Ranges
+"Please upload images at the Properties tab.","Please upload images at the Properties tab."
+"Please add text values at the Properties tab.","Please add text values at the Properties tab."
+"Category Description","Category Description"
+Meta-Description,Meta-Description
+Meta-Keywords,Meta-Keywords
+Meta-Title,Meta-Title
+"Category Name","Category Name"
+"Store Currency","Store Currency"
+"Custom label","Custom label"
+"Show products with ANY value","Show products with ANY value"
+"Show products with ALL values only","Show products with ALL values only"
+"Root Category","Root Category"
+"Current Category Level","Current Category Level"
+"Current Category Children","Current Category Children"
+Default,Default
+No,No
+Position,Position
+Name,Name
+Always,Always
+"By Click","By Click"
+Folding,Folding
+Fly-out,Fly-out
+Instantly,Instantly
+"By Button Click","By Button Click"
+"Visible Everywhere","Visible Everywhere"
+"Only in Selected Categories","Only in Selected Categories"
+"Hide in Selected Categories","Hide in Selected Categories"
+"Improved Layered Navigation","Improved Layered Navigation"
+Loading...,Loading...
+Settings,Settings
+"Use Default Value","Use Default Value"
+item,item
+items,items
+Search,Search
+More,More
+Less,Less
+From,From
+To,To
+Go,Go
+"Now Shopping by","Now Shopping by"
+Previous,Previous
+Remove,Remove
+"Remove This Item","Remove This Item"
+"Apply Filters","Apply Filters"
+"Please enter a valid price range.","Please enter a valid price range."
+General,General
+"Enable Ajax","Enable Ajax"
+"Scroll to top after AJAX load","Scroll to top after AJAX load"
+"Handle Filters Collapsing","Handle Filters Collapsing"
+"Add vertical scrolling to filter blocks higher than (size in pixels)","Add vertical scrolling to filter blocks higher than (size in pixels)"
+"Sets maximum box height in px, to disable indicate 0","Sets maximum box height in px, to disable indicate 0"
+"Submit Filters","Submit Filters"
+"Apply Button Position","Apply Button Position"
+"Leave the single-choice filter visible after selection","Leave the single-choice filter visible after selection"
+"If 'Yes' it will also display the radio buttons near the options. Choose 'No' to hide the filter once value is selected as well as radio buttons.","If 'Yes' it will also display the radio buttons near the options. Choose 'No' to hide the filter once value is selected as well as radio buttons."
+"Category Title and Description","Category Title and Description"
+"Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Title, Description, Image and CMS block for your filter options.","Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Title, Description, Image and CMS block for your filter options."
+"Add the title & description of the selected filters","Add the title & description of the selected filters"
+"The title & description of the applied filters will be added to the category and brand pages","The title & description of the applied filters will be added to the category and brand pages"
+"Add Filter Title","Add Filter Title"
+"Separate Category Name & Title with","Separate Category Name & Title with"
+"Add Filter Description","Add Filter Description"
+"Replace Category Image","Replace Category Image"
+"Category Image will be replaced if filter option have custom image uploaded.","Category Image will be replaced if filter option have custom image uploaded."
+"Replace Category CMS Block","Replace Category CMS Block"
+"Category CMS Block will be replaced if filter option have custom CMS Block defined","Category CMS Block will be replaced if filter option have custom CMS Block defined"
+"Category Meta Tags","Category Meta Tags"
+"Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Meta-Title, Meta-Description and Meta-Keywords for your filter options.","Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Meta-Title, Meta-Description and Meta-Keywords for your filter options."
+"Add the Meta-data of the selected filters","Add the Meta-data of the selected filters"
+"The Meta-data of the applied filters will be added to the category and brand pages","The Meta-data of the applied filters will be added to the category and brand pages"
+"Add Filter Title to Meta-Title","Add Filter Title to Meta-Title"
+"Title Tag Separator","Title Tag Separator"
+"Description Tag Separator","Description Tag Separator"
+"Add Filter Title to Meta-Keywords","Add Filter Title to Meta-Keywords"
+"Category Filter","Category Filter"
+"Stock Filter","Stock Filter"
+Enabled,Enabled
+"If you want to show out of stock products, please configure it here: Stores->Configuration->Catalog->Inventory->Stock Options->Display Out of Stock Products","If you want to show out of stock products, please configure it here: Stores->Configuration->Catalog->Inventory->Stock Options->Display Out of Stock Products"
+Label,Label
+"Rating Filter","Rating Filter"
+"New Filter","New Filter"
+"On Sale Filter","On Sale Filter"
+Tooltips,Tooltips
+"Tooltip Image","Tooltip Image"
+"Amasty Improved Layered Navigation","Amasty Improved Layered Navigation"
+"Settings for your filters and their options","Settings for your filters and their options"
+"Enable Improved Layered Navigation","Enable Improved Layered Navigation"

@@ -1,0 +1,101 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var \Amasty\ShopbyBrand\Block\Widget\BrandList $this */
+$items = $this->getIndex();
+$brandLetters   = $this->getAllLetters();
+$isShowCount = $this->getData('show_count');
+$isShowImages = $this->getData('show_images');
+$imgWidth = abs($this->getData('image_width'));
+$imgHeight =  abs($this->getData('image_height'));
+$isShowSearch =$this->getData('show_search');
+$isShowFilter = $this->getData('show_filter');
+$filterDisplayAll = $this->getData('filter_display_all');
+$display_zero = $this->getData('display_zero');
+?>
+<style>
+    ul.bare-list img {
+    <?php if ($imgWidth): ?>
+        max-width: <?php echo $imgWidth;?>px;
+    <?php endif;?>
+    <?php if ($imgHeight): ?>
+        max-height: <?php echo $imgHeight;?>px;
+    <?php endif;?>
+    }
+</style>
+
+<div class="content">
+<?php if ($items): ?>
+    <?php if ($isShowSearch || $isShowFilter) :?>
+        <div class="brands-filters">
+            <?php echo $this->getSearchHtml(); ?>
+            <?php if ($isShowFilter) :?>
+                <div class="letters">
+                    <div class="letters-box">
+                        <a href="javascript:void(0)" class="active letter-all" ><?php echo __('All Brands')?></a>
+                    </div>
+                    <div class="letters-box">
+                        <?php if ($filterDisplayAll) :?>
+                            <?php foreach (array_merge(range('A', 'Z'), ['#']) as $letter) :?>
+                                <a href="javascript:void(0)" <?php if (!(in_array($letter, $brandLetters)))
+                                    echo 'class="disabled"'; else echo "class=\"letter-$letter\""; ?>>
+                                    <?php echo $letter?></a>
+                            <?php endforeach;  ?>
+                        <?php else: ?>
+                            <?php foreach ($brandLetters as $letter) :?>
+                                <a href="javascript:void(0)" class="letter-<?php echo $letter?>"><?php echo $letter?></a>
+                            <?php endforeach;  ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+<?php $width = floor(100/count($items)) ?>
+<?php foreach ($items as $letters): ?>
+    <div class="<?php if($isShowImages) echo 'brand-images'?>"style="float:left; width:<?php echo $width ?>%">
+    <?php foreach ($letters as $letter => $options): ?>
+    <dl class="brands-letter letter-<?php echo $letter?>">
+        <dt><?php echo $letter ?></dt>
+        <dd>
+            <ul class="bare-list">
+            <?php foreach ($options as $o): ?>
+                <li class="brand-item">
+                    <a href="<?php echo $o['url'] ?>">
+                        <?php if ($o['img'] && $isShowImages): ?>
+                            <img src="<?php echo $o['img'] ?>" />
+                        <?php endif ?>
+                            <?php echo $this->escapeHtml($o['label']) ?>
+                        <?php if ($isShowCount) { echo '&nbsp;<span class="count">('.$o['cnt'].')</span>'; } ?>
+                    </a>
+                </li>
+            <?php endforeach ?>
+            </ul>
+        </dd>
+    </dl>
+    <?php endforeach ?>
+    </div>
+<?php endforeach ?>
+    <div style="clear:both;"></div>
+<?php else: ?>
+    Please select brand attribute in Stores -> Configuration -> Amasty Extensions -> Improved Layered Navigation: Brands.
+</div>
+<?php endif ?>
+
+<script>
+    require([
+        'jquery',
+        'Amasty_ShopbyBrand/js/brand-filter',
+        'domReady!'
+    ], function ($) {
+        $(".letters-box a").click(function(e) {
+            e.preventDefault();
+            $(this).applyBrandFilter('.brands-letter');
+        });
+    });
+</script>

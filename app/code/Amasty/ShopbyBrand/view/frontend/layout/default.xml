@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_ShopbyBrand::css/amshopbybrand.css"/>
+        <css src="Amasty_ShopbyBrand::css/swiper.min.css"/>
+    </head>
+    <referenceBlock name="top.links">
+        <block class="Amasty\ShopbyBrand\Block\Link" before="authorization-link" name="brands-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Brands</argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+</page>

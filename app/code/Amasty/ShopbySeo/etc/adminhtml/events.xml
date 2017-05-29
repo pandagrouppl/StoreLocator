@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="amshopby_attribute_form_tab_build_after">
+        <observer name="amasty_shopby_seo_attribute_form_tab_build_after" instance="Amasty\ShopbySeo\Observer\Admin\AttributeFormTabBuildAfter"/>
+    </event>
+    <event name="amshopby_option_form_build_after">
+        <observer name="amasty_shopby_seo_option_form_build_after" instance="Amasty\ShopbySeo\Observer\Admin\OptionFormBuildAfter"/>
+    </event>
+</config>

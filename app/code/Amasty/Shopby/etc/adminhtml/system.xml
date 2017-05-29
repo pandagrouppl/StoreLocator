@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<!--
+/**
+ * Copyright © 2015 Amasty. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="amshopby" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Amasty_Shopby::config</resource>
+            <class>separator-top</class>
+            <label>Improved Layered Navigation</label>
+            <tab>amasty</tab>
+            <group id="general" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="ajax_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Ajax</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ajax_scroll_up" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Scroll to top after AJAX load</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="ajax_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="handle_filter_collapsing" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Handle Filters Collapsing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_overflow_scroll" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add vertical scrolling to filter blocks higher than (size in pixels)</label>
+                    <comment>Sets maximum box height in px, to disable indicate 0</comment>
+                    <validate>validate-zero-or-greater</validate>
+                </field>
+                <field id="submit_filters" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Submit Filters</label>
+                    <source_model>Amasty\Shopby\Model\Source\SubmitMode</source_model>
+                </field>
+                <field id="apply_button_position" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Apply Button Position</label>
+                    <source_model>Amasty\Shopby\Model\Source\ApplyButtonPosition</source_model>
+                    <depends>
+                        <field id="submit_filters">by_button_click</field>
+                    </depends>
+                </field>
+                <field id="keep_single_choice_visible" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Leave the single-choice filter visible after selection</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If 'Yes' it will also display the radio buttons near the options. Choose 'No' to hide the filter once value is selected as well as radio buttons.</comment>
+                </field>
+            </group>
+            <group id="heading" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Title and Description</label>
+                <comment><![CDATA[Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Title, Description, Image and CMS block for your filter options.]]></comment>
+                <field id="apply_to" translate="label comment" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Add the title & description of the selected filters]]></label>
+                    <source_model>Amasty\Shopby\Model\Source\Attribute\Extended</source_model>
+                    <frontend_model>Amasty\Shopby\Block\System\Multiselect</frontend_model>
+                    <can_be_empty>1</can_be_empty>
+                    <comment><![CDATA[The title & description of the applied filters will be added to the category and brand pages]]></comment>
+                </field>
+                <field id="add_title" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Filter Title</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterDataPosition\Title</source_model>
+                </field>
+                <field id="title_separator" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Separate Category Name & Title with]]></label>
+                </field>
+                <field id="add_description" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Filter Description</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterDataPosition\Description</source_model>
+                </field>
+                <field id="replace_image" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Replace Category Image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Category Image will be replaced if filter option have custom image uploaded.</comment>
+                </field>
+                <field id="replace_cms_block" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Replace Category CMS Block</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Category CMS Block will be replaced if filter option have custom CMS Block defined</comment>
+                </field>
+            </group>
+            <group id="meta" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Meta Tags</label>
+                <comment><![CDATA[Please open Stores -> Attributes -> Product -> [open attribute] -> Properties ->
+[open attribute option settings] in order to define Meta-Title, Meta-Description and Meta-Keywords for your filter options.]]></comment>
+                <field id="apply_to" translate="label comment" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Add the Meta-data of the selected filters]]></label>
+                    <source_model>Amasty\Shopby\Model\Source\Attribute\Extended</source_model>
+                    <frontend_model>Amasty\Shopby\Block\System\Multiselect</frontend_model>
+                    <can_be_empty>1</can_be_empty>
+                    <comment>The Meta-data of the applied filters will be added to the category and brand pages</comment>
+                </field>
+                <field id="add_title" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Filter Title to Meta-Title</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterDataPosition\MetaTitle</source_model>
+                </field>
+                <field id="title_separator" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title Tag Separator</label>
+                </field>
+                <field id="add_description" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Filter Description</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterDataPosition\MetaDescription</source_model>
+                </field>
+                <field id="description_separator" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Description Tag Separator</label>
+                </field>
+                <field id="add_keywords" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Filter Title to Meta-Keywords</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterDataPosition\MetaKeyWords</source_model>
+                </field>
+            </group>
+            <group id="category_filter" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Filter</label>
+                <field id="button_category_filter" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category Filter</label>
+                    <frontend_model>Amasty\Shopby\Block\Adminhtml\Config\Form\Field\CategoryFilter</frontend_model>
+                </field>
+            </group>
+            <group id="stock_filter" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Stock Filter</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If you want to show out of stock products, please configure it here: Stores->Configuration->Catalog->Inventory->Stock Options->Display Out of Stock Products</comment>
+                </field>
+                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show in the Block</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterPlacedBlock</source_model>
+                </field>
+                <field id="position" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                </field>
+                <field id="label" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label</label>
+                </field>
+                <field id="tooltip" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tooltip</label>
+                </field>
+                <field id="is_expanded" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expand</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_mode" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Mode</label>
+                    <source_model>Amasty\Shopby\Model\Source\DisplayMode\StockFilter</source_model>
+                </field>
+            </group>
+            <group id="rating_filter" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Rating Filter</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show in the Block</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterPlacedBlock</source_model>
+                </field>
+                <field id="position" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                </field>
+                <field id="label" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label</label>
+                </field>
+                <field id="tooltip" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tooltip</label>
+                </field>
+                <field id="is_expanded" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expand</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_mode" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Mode</label>
+                    <source_model>Amasty\Shopby\Model\Source\DisplayMode\RatingFilter</source_model>
+                </field>
+            </group>
+            <group id="is_new_filter" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>New Filter</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show in the Block</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterPlacedBlock</source_model>
+                </field>
+                <field id="position" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                </field>
+                <field id="label" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label</label>
+                </field>
+                <field id="tooltip" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tooltip</label>
+                </field>
+                <field id="is_expanded" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expand</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_mode" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Mode</label>
+                    <source_model>Amasty\Shopby\Model\Source\DisplayMode\NewFilter</source_model>
+                </field>
+            </group>
+            <group id="on_sale_filter" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>On Sale Filter</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="block_position" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show in the Block</label>
+                    <source_model>Amasty\Shopby\Model\Source\FilterPlacedBlock</source_model>
+                </field>
+                <field id="position" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                </field>
+                <field id="label" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label</label>
+                </field>
+                <field id="tooltip" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tooltip</label>
+                </field>
+                <field id="is_expanded" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expand</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_mode" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Mode</label>
+                    <source_model>Amasty\Shopby\Model\Source\DisplayMode\OnSaleFilter</source_model>
+                </field>
+            </group>
+            <group id="tooltips" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Tooltips</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="image" translate="label" type="image" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tooltip Image</label>
+                    <backend_model>Amasty\Shopby\Model\Config\Backend\Image\Tooltip</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,24 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var $block \Amasty\ShopbyPage\Block\Adminhtml\Page\Selection */
+?>
+<script>
+    require([
+        'Amasty_ShopbyPage/js/selection'
+    ], function (selection) {
+        selection.init('<?php
+            echo $block->getSelectionUrl()
+        ?>', '<?php
+            echo $block->getAddSelectionUrl()
+        ?>', '<?php
+            echo $block->getCounter()
+        ?>')
+        window.amastyShopbyPageSelection = selection;
+    })
+</script>

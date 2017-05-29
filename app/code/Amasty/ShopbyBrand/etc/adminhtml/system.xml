@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<!--
+/**
+ * Copyright © 2015 Amasty. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="amshopby_brand" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Amasty_ShopbyBrand::config</resource>
+            <class>separator-top</class>
+            <label>Improved Layered Navigation: Brands</label>
+            <tab>amasty</tab>
+            <group id="general" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="attribute_code" translate="label,comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Brand Attribute</label>
+                    <comment>Creates SEO-friendly brand pages. Every page contains all your products filtered by particular brand and contains unique content that you assigned for the option of brand attribute.</comment>
+                    <source_model>Amasty\ShopbyBrand\Model\Source\BrandAttribute</source_model>
+                </field>
+                <field id="url_key" translate="label,comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>URL Key</label>
+                    <comment>Adds a key before brand name in URL like /[key]/brand-name.html</comment>
+                </field>
+                <field id="product_icon" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Display Brand Icon on Product Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="brands_page" translate="label,comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Choose CMS Page</label>
+                    <comment>Please make sure the CMS page is enabled (Content -> Elements -> Pages)</comment>
+                    <source_model>Amasty\ShopbyBrand\Model\Source\Page</source_model>
+                </field>
+                <field id="topmenu_enabled" translate="label,comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Add Brands Link in Menu Bar</label>
+                    <source_model>Amasty\ShopbyBrand\Model\Source\TopmenuLink</source_model>
+                    <comment>Display Link to All Brands Page in Top Menu</comment>
+                </field>
+                <field id="top_links" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Add Brands to Account Top Links</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="brands_landing" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>All Brands Page</label>
+                <comment><![CDATA[Use {{widget type="Amasty\ShopbyBrand\Block\Widget\BrandList"  columns="3" template="widget/brand_list/index.phtml"}} to add brand listing block to a CMS page or static block.
+                    <br>Or create Brand List widget.]]></comment>
+                <field id="show_images" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Brand Logo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="image_width" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Max Width</label>
+                    <validate>validate-greater-than-zero required-entry</validate>
+                    <depends>
+                        <field id="*/*/show_images">1</field>
+                    </depends>
+                </field>
+                <field id="image_height" translate="label,comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Max Height</label>
+                    <validate>validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="*/*/show_images">1</field>
+                    </depends>
+                    <comment>Optional.</comment>
+                </field>
+                <field id="show_search" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Search</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_filter" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Filter by Character</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="filter_display_all" translate="label,comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Characters without Brands</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>in a Filter by Character.</comment>
+                </field>
+                <field id="show_count" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Products Quantity</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Show the number of products next to Brand name.</comment>
+                </field>
+                <field id="display_zero" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Brands Without Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="slider" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Brand Slider</label>
+                <comment><![CDATA[Use {{widget type="Amasty\ShopbyBrand\Block\Widget\BrandSlider" template="widget/brand_list/slider.phtml"}} to add brand slider to a CMS page or static block.
+                    <br>Or create Brand Slider widget.]]></comment>
+                <field id="items_number" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Visible Items Quantity</label>
+                    <validate>validate-greater-than-zero required-entry</validate>
+                </field>
+                <field id="sort_by" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort By</label>
+                    <source_model>Amasty\ShopbyBrand\Model\Source\SliderSort</source_model>
+                </field>
+                <field id="slider_header_color" translate="label,comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Background Color</label>
+                    <frontend_model>Amasty\ShopbyBrand\Block\System\ColorPicker</frontend_model>
+                    <comment>Default is #F58C12</comment>
+                </field>
+                <field id="slider_title_color" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Text Color</label>
+                    <frontend_model>Amasty\ShopbyBrand\Block\System\ColorPicker</frontend_model>
+                </field>
+                <field id="slider_title" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Title</label>
+                </field>
+                <field id="slider_width" translate="label,comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slider Max Width</label>
+                    <comment>Optional.</comment>
+                    <validate>validate-greater-than-zero</validate>
+                </field>
+                <field id="image_width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Max Width</label>
+                    <validate>validate-greater-than-zero required-entry</validate>
+                </field>
+                <field id="image_height" translate="label,comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Max Height</label>
+                    <validate>validate-greater-than-zero</validate>
+                    <comment>Optional.</comment>
+                </field>
+                <field id="show_label" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Brand Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="buttons_show" translate="label,comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Buttons</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display Prev/Next buttons.</comment>
+                </field>
+                <field id="infinity_loop" translate="label,comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Infinity Loop</label>
+                    <comment>Enable continuous loop mode.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="simulate_touch" translate="label,comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Simulate Touch</label>
+                    <comment>Click and drag to change slides.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pagination_show" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Pagination</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pagination_clickable" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Clickable Pagination</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/pagination_show">1</field>
+                    </depends>
+                </field>
+                <field id="autoplay" translate="label" type="select" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Autoplay</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="autoplay_delay" translate="label,comment" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Autoplay Delay</label>
+                    <validate>validate-greater-than-zero required-entry</validate>
+                    <comment>In milliseconds.</comment>
+                    <depends>
+                        <field id="*/*/autoplay">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

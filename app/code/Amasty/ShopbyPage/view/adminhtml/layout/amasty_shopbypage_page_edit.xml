@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_ShopbyPage::css/edit.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit" name="amasty_shopbypage_page_edit"/>
+            <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Selection" name="amasty_shopbypage_page_selection"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tabs" name="amasty_shopbypage_page_edit_tabs">
+
+                <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Text" name="amasty_shopbypage_page_edit_tab_text"/>
+                <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Meta" name="amasty_shopbypage_page_edit_tab_meta"/>
+                <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Category" name="amasty_shopbypage_page_edit_tab_category"/>
+                <block class="Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Selection" name="amasty_shopbypage_page_edit_tab_selection"/>
+
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_shopbypage_page_edit_tab_text</argument>
+                    <argument name="block" xsi:type="string">amasty_shopbypage_page_edit_tab_text</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_shopbypage_page_edit_tab_meta</argument>
+                    <argument name="block" xsi:type="string">amasty_shopbypage_page_edit_tab_meta</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_shopbypage_page_edit_tab_category</argument>
+                    <argument name="block" xsi:type="string">amasty_shopbypage_page_edit_tab_category</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_shopbypage_page_edit_tab_selection</argument>
+                    <argument name="block" xsi:type="string">amasty_shopbypage_page_edit_tab_selection</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <update handle="formkey"/>
+    <container name="root">
+        <container name="page.main.actions" as="page_main_actions" htmlTag="div" htmlClass="page-main-actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+                <action method="setIsUsingIframe">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </container>
+        <container name="messages.wrapper" as="messages.wrapper" htmlTag="div" htmlId="messages">
+            <container name="page.messages" as="page.messages">
+                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages"/>
+            </container>
+        </container>
+
+        <block class="Amasty\Shopby\Block\Adminhtml\Option\StoreSwitcher" name="adminhtml.amasty.shopby.option.settings.store_switcher"/>
+        <block class="Amasty\Shopby\Block\Adminhtml\Option\Settings" name="adminhtml.amasty.shopby.option.settings.form"/>
+    </container>
+</layout>

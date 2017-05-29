@@ -1,0 +1,110 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var \Amasty\Shopby\Model\FilterSetting $filterSetting */
+/** @var \Amasty\Shopby\Block\Navigation\FilterRenderer $block */
+?>
+
+<?php $_postfix = uniqid();?>
+<?php $_widgetFromName = 'amshopby[' . $filterSetting->getFilterCode() . '_from][]'?>
+<?php $_widgetToName = 'amshopby[' . $filterSetting->getFilterCode() . '_to][]'?>
+<?php $_widgetFrom = 'am_shopby_filter_widget_' . $filterSetting->getFilterCode() . '_from_' . $_postfix?>
+<?php $_widgetTo = 'am_shopby_filter_widget_' . $filterSetting->getFilterCode() . '_to_' . $_postfix?>
+<ol class="items am_shopby_filter_items_<?php echo $filterSetting->getFilterCode();?>">
+    <li>
+        <form
+            data-amshopby-filter="<?php echo $filterSetting->getFilterCode();?>"
+        >
+            <div id="am_shopby_filter_<?php echo $filterSetting->getFilterCode(); ?>_<?php echo $_postfix;?>"
+                 class="am_shopby_slider_container"
+                 data-min="<?php echo $fromToConfig['min'];?>"
+                 data-max="<?php echo $fromToConfig['max'];?>"
+            >
+                <input
+                    amshopby-slider-id="value"
+                    type=hidden
+                    name="<?php echo 'amshopby[' . $block->getFilter()->getRequestVar() . '][]'
+                ?>"/>
+                <div amshopby-slider-id="slider"></div>
+                <div amshopby-slider-id="display" class="am_shopby_slider_display"></div>
+            </div>
+        </form>
+
+
+    </li>
+    <?php if ($filterSetting->getAddFromToWidget()): ?>
+    <li id="am_shopby_filter_widget_<?php echo $filterSetting->getFilterCode(); ?>_<?php echo $_postfix;?>">
+        <form
+            data-amshopby-filter="<?php echo $filterSetting->getFilterCode();?>"
+            >
+            <input
+                type=hidden
+                amshopby-fromto-id="value"
+                name="<?php echo 'amshopby[' . $block->getFilter()->getRequestVar() . '][]'
+            ?>"/>
+            <div class="range">
+                <input class="amshopby-filter-price-from"
+                    id="<?php echo $_widgetFrom?>"
+                    amshopby-fromto-id="from"
+                    validate-number=1
+                    value="<?php echo $fromToConfig['from'];?>"
+                    less-than-equals-to='#<?php echo $_widgetTo ?>'
+                    validate-digits-range='[<?php echo $fromToConfig['min'];?>-<?php echo $fromToConfig['max'];?>]'
+                    name="<?php echo $_widgetFromName;?>"
+                    type="text" class="input-text" placeholder="<?php echo __('From')?>"/>
+
+                <input class="amshopby-filter-price-to right"
+                    id="<?php echo $_widgetTo?>"
+                    amshopby-fromto-id="to"
+                    validate-number=1
+                    value="<?php echo $fromToConfig['to'];?>"
+                    greater-than-equals-to='#<?php echo $_widgetFrom ?>'
+                    validate-digits-range='[<?php echo $fromToConfig['min'];?>-<?php echo $fromToConfig['max'];?>]'
+                    name="<?php echo $_widgetToName;?>" type="text" class="input-text" placeholder="<?php echo __('To')?>"/>
+            </div>
+        </form>
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "#am_shopby_filter_widget_<?php echo $filterSetting->getFilterCode(); ?>_<?php echo $_postfix;?>": {
+            "amShopbyFilterFromTo": {
+                    "enabled": <?php echo ($filterSetting->getAddFromToWidget() ? '1' : '0')?>,
+                    "collectFilters": <?php echo $block->collectFilters();?>,
+                    "from":"<?php echo $fromToConfig['from'];?>",
+                    "step":<?php echo floatval($fromToConfig['step'])?>,
+                    "to":"<?php echo $fromToConfig['to'];?>",
+                    "min":"<?php echo $fromToConfig['min'];?>",
+                    "max":"<?php echo $fromToConfig['max'];?>",
+                    "code":"<?php echo $filterSetting->getAttributeModel()->getAttributeCode(); ?>",
+                    "isSlider":1,
+                    "url": "<?php echo $block->getSliderUrlTemplate(); ?>"
+                }
+        }
+    }
+    </script>
+    <?php endif;?>
+</ol>
+
+<script type="text/x-magento-init">
+    {
+        "#am_shopby_filter_<?php echo $filterSetting->getFilterCode(); ?>_<?php echo $_postfix;?>": {
+            "amShopbyFilterSlider": {
+                    "collectFilters": <?php echo $block->collectFilters();?>,
+                    "template":"<?php echo $fromToConfig['template']?>",
+                    "step":<?php echo floatval($fromToConfig['step'])?>,
+                    "from": "<?php echo $fromToConfig['from'];?>",
+                    "to": "<?php echo $fromToConfig['to'];?>",
+                    "min":<?php echo $fromToConfig['min'];?>,
+                    "max":<?php echo $fromToConfig['max'];?>,
+                    "url": "<?php echo $block->getSliderUrlTemplate(); ?>",
+                    "code":"<?php echo $filterSetting->getAttributeModel()->getAttributeCode(); ?>",
+                    "hideDisplay": <?php echo ($filterSetting->getAddFromToWidget() ? "1" : '0');?>
+                }
+        }
+    }
+</script>

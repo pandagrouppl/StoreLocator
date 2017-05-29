@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Amasty\ShopbyPage\Api\Data\PageInterface"
+                type="Amasty\ShopbyPage\Model\Data\Page" />
+    <preference for="Amasty\ShopbyPage\Api\PageRepositoryInterface"
+                type="Amasty\ShopbyPage\Model\ResourceModel\PageRepository" />
+    <preference for="Amasty\ShopbyPage\Api\Data\PageSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="amasty_shopbypage_page_listing_data_source" xsi:type="string">Amasty\ShopbyPage\Model\ResourceModel\Page\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Amasty\ShopbyPage\Model\ResourceModel\Page\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">amasty_amshopby_page</argument>
+            <argument name="eventPrefix" xsi:type="string">amasty_amshopby_page_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">amasty_amshopby_page_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Amasty\ShopbyPage\Model\ResourceModel\Page</argument>
+        </arguments>
+    </type>
+</config>

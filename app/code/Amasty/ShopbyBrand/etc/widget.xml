@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="amshopby_brand_list" class="Amasty\ShopbyBrand\Block\Widget\BrandList" is_email_compatible="true"
+            placeholder_image="Magento_Cms::images/widget_block.png">
+        <label translate="true">Brand List</label>
+        <description translate="true">List of your brand attribute options. Links lead to Brand Pages.</description>
+        <parameters>
+            <parameter name="columns" xsi:type="text" visible="true">
+                <label translate="true">Number of Columns</label>
+            </parameter>
+            <parameter name="template" xsi:type="select" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/brand_list/index.phtml" selected="true">
+                        <label translate="true">Index</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+    <widget id="amshopby_brand_slider" class="Amasty\ShopbyBrand\Block\Widget\BrandSlider" is_email_compatible="false"
+            placeholder_image="Magento_Cms::images/widget_block.png">
+        <label translate="true">Brand Slider</label>
+        <description translate="true">Brand Slider/</description>
+        <parameters>
+            <parameter name="items_number" xsi:type="text" visible="true">
+                <label translate="true">Visible Items Quantity</label>
+            </parameter>
+            <parameter name="sort_by" xsi:type="select" visible="true" source_model="Amasty\ShopbyBrand\Model\Source\SliderSort">
+                <label translate="true">Sort By</label>
+            </parameter>
+            <parameter name="slider_width" xsi:type="text" visible="true" >
+                <label translate="true">Slider Max Width.</label>
+                <description translate="true">Leave blank to use the value from the configuration.</description>
+            </parameter>
+            <parameter name="image_width" xsi:type="text" visible="true">
+                <label translate="true">Image Width</label>
+                <description translate="true">Leave blank to use the value from the configuration.</description>
+            </parameter>
+            <parameter name="image_height" xsi:type="text" visible="true">
+                <label translate="true">Image Max Height</label>
+                <description translate="true">Leave blank to use the value from the configuration.</description>
+            </parameter>
+            <parameter name="show_label" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Brand Label</label>
+            </parameter>
+            <parameter name="buttons_show" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Buttons</label>
+                <description translate="true">Display Prev/Next buttons.</description>
+            </parameter>
+            <parameter name="infinity_loop" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Infinity Loop</label>
+                <description translate="true">Enable continuous loop mode.</description>
+            </parameter>
+            <parameter name="simulate_touch" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Simulate Touch</label>
+                <description translate="true">Click and drag to change slides.</description>
+            </parameter>
+            <parameter name="pagination_show" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Pagination</label>
+            </parameter>
+            <parameter name="pagintaion_clickable" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Clickable Pagination</label>
+                <depends>
+                    <parameter name="pagination_show" value="1"/>
+                </depends>
+            </parameter>
+            <parameter name="autoplay" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Autoplay</label>
+            </parameter>
+            <parameter name="autoplay_delay" xsi:type="text" visible="true">
+                <label translate="true">Autoplay Delay</label>
+                <description translate="true">Leave blank to use the value from the configuration.</description>
+                <depends>
+                    <parameter name="autoplay" value="1"/>
+                </depends>
+            </parameter>
+
+            <parameter name="template" xsi:type="select" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/brand_list/slider.phtml" selected="true">
+                        <label translate="true">Slider</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

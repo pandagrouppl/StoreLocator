@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+-->
+<!--
+/**
+* Copyright © 2015 Amasty. All rights reserved.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <amasty_shopby_seo>
+            <url>
+                <mode>1</mode>
+                <add_suffix_shopby>0</add_suffix_shopby>
+                <option_separator>-</option_separator>
+            </url>
+            <robots>
+                <control_robots>1</control_robots>
+                <rel_nofollow>1</rel_nofollow>
+            </robots>
+            <canonical>
+                <category>category_brand_filter</category>
+                <root>root_pure</root>
+            </canonical>
+        </amasty_shopby_seo>
+    </default>
+</config>

@@ -1,0 +1,40 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php
+/** @var $block \Amasty\ShopbyPage\Block\Adminhtml\Page\Edit\Tab\Selection\Value */
+?>
+<?php if ($block->getFrontendInput() === 'select') :?>
+    <select name="<?php /* @escapeNotVerified */ echo $block->getInputName()?>" class="select admin__control-select">
+        <?php foreach($block->getAttributeOptions() as $_option): ?>
+            <option
+                value="<?php /* @escapeNotVerified */ echo $_option['value'];?>"
+                <?php echo ($_option['value'] === $block->getEavAttributeValue() ? 'selected' : '')?>
+                >
+                <?php /* @escapeNotVerified */ echo $_option['label'];?>
+            </option>
+        <?php endforeach;?>
+    </select>
+
+<?php elseif ($block->getFrontendInput() === 'multiselect') : ?>
+    <select name="<?php /* @escapeNotVerified */ echo $block->getInputName()?>[]" class="select multiselect admin__control-multiselect amasty-shopbypage-selection-multiselect" multiple="multiple">
+        <?php foreach($block->getAttributeOptions() as $_option): ?>
+            <option
+                value="<?php /* @escapeNotVerified */ echo $_option['value'];?>"
+                <?php echo (is_array($block->getEavAttributeValue()) && in_array($_option['value'], $block->getEavAttributeValue()) ? 'selected' : '')?>
+            >
+                <?php /* @escapeNotVerified */ echo $_option['label'];?>
+            </option>
+        <?php endforeach;?>
+    </select>
+<?php else: ?>
+    <input
+        value="<?php /* @escapeNotVerified */ echo $block->getEavAttributeValue()?>"
+        name="<?php /* @escapeNotVerified */ echo $block->getInputName()?>"
+        class="input-text" type="text"
+    />
+<?php endif;?>

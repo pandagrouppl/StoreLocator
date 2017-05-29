@@ -1,0 +1,17 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<!-- amasty_shopby_not_remove_tags -->
+<div class="rating-summary" style="display: inline-block;margin-top: -5px;">
+    <div class="rating-result" title="<?php echo ($block->getStar()*20);?>%">
+        <span style="width:<?php echo ($block->getStar()*20);?>%"><span><?php echo $block->getStar(); //($block->getStar()*20).'%';?></span></span>
+    </div>
+</div>
+
+<?php if($block->getStar() != 5):?>
+    <span style="font-size: smaller;">&amp; up</span>
+<?php endif; ?>

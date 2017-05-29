@@ -1,0 +1,40 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Shopby
+ */
+?>
+<?php /** @var \Amasty\Shopby\Block\Navigation\ApplyButton $block */?>
+<?php $_postfix = uniqid();?>
+<?php if ($block->blockEnabled()) :?>
+    <?php if (!$block->isAjaxEnabled()):?>
+    <form data-amshopby-filter="">
+        <input type="hidden" name="<?php echo \Amasty\Shopby\Block\Navigation\UrlModifier::VAR_REPLACE_URL?>" value="1"/>
+    </form>
+    <?php endif;?>
+    <div class="am_shopby_apply_filters">
+        <button amshopby-apply-filter="1"
+                id="amasty_shopby_apply_filters_<?php echo $_postfix;?>"
+            ><?php echo __('Apply Filters')?>
+        </button>
+    </div>
+
+    <script>
+
+    require([
+        'jquery',
+        'amShopbyApplyFilters'
+    ], function ($, amShopbyApplyFilters) {
+        //<![CDATA[
+            $('#amasty_shopby_apply_filters_<?php echo $_postfix;?>').amShopbyApplyFilters({
+                "ajaxEnabled": <?php echo ($block->isAjaxEnabled() ? '1' : '0')?>,
+                "navigationSelector": "<?php echo $block->getNavigationSelector();?>",
+                "clearUrl": "<?php echo $block->getClearUrl();?>",
+                "buttonPosition": "<?php echo $block->getButtonPosition();?>",
+            });
+        //]]>
+    });
+
+    </script>
+<?php endif;?>
