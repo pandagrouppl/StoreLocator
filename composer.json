@@ -62,7 +62,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://bitbucket.org/l4w/magento2-devtools.git"
+            "url": "git@bitbucket.org:l4w/magento2-devtools.git"
         }
     ],
     "extra": {
