@@ -13,10 +13,19 @@ export class Inliners {
         this._shirtFitGuide();
         this._sliders();
         this._cmsBannerZoom();
+        this._toggleFilter();
+    }
+
+    private _toggleFilter(): void {
+        $('.filter-options-title').on('click', function() {
+            $(this).find('figure').toggleClass('layered-nav__minus--plus');
+            $(this).next().toggle();
+        });
     }
 
     private _showSearch(): void {
         $('.header-right__show-search-overlay').on('click', () => {
+            console.log('elo');
             $('.search-overlay').show();
         });
         $('.search-overlay').click(() => {

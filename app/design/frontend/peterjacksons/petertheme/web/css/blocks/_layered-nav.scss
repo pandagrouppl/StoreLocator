@@ -1,7 +1,73 @@
 .layered-nav {
     min-width: 180px;
     height: 100%;
-    padding-right: 15px;
+    padding-right: 30px;
+
+    @media all and (max-width: 850px) {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    &__clear {
+        text-decoration: underline;
+        font-weight: bold;
+        color: $black-light;
+    }
+
+    &__title {
+        padding: 10px 0;
+        margin: 10px 0;
+        border-bottom: 1px solid $grey-dark;
+        cursor: pointer;
+        font-size: 18px;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        margin-left: 7px;
+
+        a {
+            font-size: 15px;
+            color: #333;
+        }
+    }
+
+    &__line {
+        background: #333;
+        display: block;
+
+        &--vertical {
+            width: 15px;
+            height: 1px;
+        }
+
+        &--horizontal {
+            display: none;
+            position: absolute;
+            height: 15px;
+            width: 1px;
+        }
+    }
+
+    &__minus {
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &--plus {
+
+            .layered-nav__line--horizontal {
+                display: block;
+            }
+        }
+    }
 
     &__button {
         @include sprite(filter-button);
