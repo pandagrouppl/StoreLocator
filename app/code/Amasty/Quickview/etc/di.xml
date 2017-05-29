@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Quickview
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Magento\Catalog\Block\Category\View">
+        <plugin name="Amasty_Quickview::category-view" type="Amasty\Quickview\Plugin\Product\Category\View" />
+    </type>
+    <type name="\Magento\CatalogSearch\Block\Result">
+        <plugin name="Amasty_Quickview::search-viewt" type="Amasty\Quickview\Plugin\CatalogSearch\Result" />
+    </type>
+    <type name="\Magento\CatalogWidget\Block\Product\ProductsList">
+        <plugin name="Amasty_Quickview::widget-view" type="Amasty\Quickview\Plugin\Product\ProductsList" />
+    </type>
+</config>

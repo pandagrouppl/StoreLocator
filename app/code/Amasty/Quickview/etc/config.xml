@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Quickview
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <amasty_quickview>
+            <general>
+                <enable>1</enable>
+                <custom_css_styles></custom_css_styles>
+                <view_text>QUICK VIEW</view_text>
+            </general>
+        </amasty_quickview>
+    </default>
+</config>

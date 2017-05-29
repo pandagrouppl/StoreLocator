@@ -1,0 +1,41 @@
+.amquickview-hover
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 7000;
+    top: 25%;
+    background-color: #7e8081;
+    opacity: 0.7;
+    max-height: 40px;
+    padding: 8px 0;
+    min-height: 17px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.amquickview-hover a, .amquickview-hover a:hover
+{
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: white;
+}
+
+.amquickview-hover img.am-quickview-icon
+{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline !important;
+    width: auto !important;
+}
+
+.amquickview-hover:hover
+{
+    background-color: #8898a9;
+}

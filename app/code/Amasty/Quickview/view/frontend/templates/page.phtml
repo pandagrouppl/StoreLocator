@@ -1,0 +1,25 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_Quickview
+ */
+?>
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $('body').addClass('catalog-product-view');
+        $( document ).ready(function() {
+            var targetElements = 'a, a.action.mailto.friend, #product_addtocart_form, #review-form';
+            $(targetElements).each(function(i, item) {
+                $(item).attr('target', '_parent');
+                $(item).removeAttr("onclick");
+            });
+            $('#product_addtocart_form').append("<input type='hidden' name='in_cart' value='1'>");
+
+            var wishlist = $('a[data-action="add-to-wishlist"]');
+            wishlist.hide();
+        });
+    });
+</script>
