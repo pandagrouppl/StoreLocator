@@ -103,19 +103,19 @@ class InstallSchema implements InstallSchemaInterface
             )->addColumn(
                 'meta_keywords',
                 Table::TYPE_TEXT,
-                255,
+                null,
                 ['default' => '', 'nullable' => false],
                 'Meta Keywords'
             )->addColumn(
                 'meta_title',
                 Table::TYPE_TEXT,
-                255,
+                null,
                 ['default' => '', 'nullable' => false],
                 'Meta Title'
             )->addColumn(
                 'meta_contents',
                 Table::TYPE_TEXT,
-                255,
+                null,
                 ['default' => '', 'nullable' => false],
                 'Meta Contents'
             )->addColumn(
@@ -396,7 +396,7 @@ class InstallSchema implements InstallSchemaInterface
                 'Image Id'
             )->addColumn(
                 'image_delete',
-                Table::TYPE_TEXT,
+                Table::TYPE_INTEGER,
                 null,
                 [],
                 'Image Delete'
@@ -464,7 +464,7 @@ class InstallSchema implements InstallSchemaInterface
                 'StoreLocator Id'
             )->addColumn(
                 'store_id',
-                Table::TYPE_INTEGER,
+                Table::TYPE_SMALLINT,
                 5,
                 ['unsigned' => true, 'nullable' => false],
                 'Store Id'
@@ -540,7 +540,7 @@ class InstallSchema implements InstallSchemaInterface
             )->addColumn(
                 'value',
                 Table::TYPE_TEXT,
-                2555,
+                255,
                 [],
                 'Value'
             )->addIndex(
@@ -584,7 +584,7 @@ class InstallSchema implements InstallSchemaInterface
             )->addColumn(
                 'specialday_name',
                 Table::TYPE_TEXT,
-                null,
+                255,
                 ['default' => '', 'nullable' => false],
                 'Specialday Name'
             )->addColumn(
@@ -647,7 +647,7 @@ class InstallSchema implements InstallSchemaInterface
             )->addColumn(
                 'holiday_name',
                 Table::TYPE_TEXT,
-                null,
+                255,
                 ['default' => '', 'nullable' => false],
                 'Holiday Name'
             )->addColumn(
