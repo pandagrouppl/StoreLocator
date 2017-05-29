@@ -1,0 +1,19 @@
+#am_giftcard_amount_custom {
+    margin-top: 20px;
+}
+.amgiftcard-image {
+    width: 9rem;
+    padding: 5px;
+}
+.amgiftcard-image:hover {
+    box-shadow: 0 0 10px #ccc;
+    width: 10rem;
+    padding: 2px;
+}
+.amgiftcard-image.selected {
+    width: 11rem;
+    padding: 2px;
+}
+#am_giftcard_image {
+    display: none;
+}

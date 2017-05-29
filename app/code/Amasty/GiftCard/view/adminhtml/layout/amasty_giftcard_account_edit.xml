@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Account\Edit" name="account_edit"/>
+        </referenceContainer>
+
+        <referenceContainer name="left">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Account\Edit\Tabs" name="account_tabs">
+                <block class="Amasty\GiftCard\Block\Adminhtml\Account\Edit\Tab\General" name="amasty_giftcard_account_edit_tab_general" />
+                <block class="Amasty\GiftCard\Block\Adminhtml\Account\Edit\Tab\Resend" name="amasty_giftcard_account_edit_tab_resend" />
+                <block class="Magento\Backend\Block\Widget\Tab" name="amasty_giftcard_account_edit_tab_order">
+                    <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Order History</argument>
+                        <argument name="class" xsi:type="string">ajax</argument>
+                        <argument name="url" xsi:type="url" path="amasty_giftcard/account/order">
+                            <param name="_current">1</param>
+                        </argument>
+                    </arguments>
+                </block>
+
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_giftcard_account_edit_tab_general</argument>
+                    <argument name="block" xsi:type="string">amasty_giftcard_account_edit_tab_general</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_giftcard_account_edit_tab_resend</argument>
+                    <argument name="block" xsi:type="string">amasty_giftcard_account_edit_tab_resend</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_giftcard_account_edit_tab_order</argument>
+                    <argument name="block" xsi:type="string">amasty_giftcard_account_edit_tab_order</argument>
+                </action>
+
+            </block>
+        </referenceContainer>
+    </body>
+</page>

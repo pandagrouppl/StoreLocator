@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="order_items">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Sales\Items\Column\GiftCard\Name" name="column_name_amgiftcard" template="Magento_Sales::items/column/name.phtml" group="column"/>
+        </referenceBlock>
+        <referenceBlock name="order_totals">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Sales\Order\Totals" name="amgiftcard_totals">
+                <action method="setBeforeCondition">
+                    <argument name="condition" xsi:type="string">amgiftcard</argument>
+                </action>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

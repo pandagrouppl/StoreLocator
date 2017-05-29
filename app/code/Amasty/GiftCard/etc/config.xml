@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <amgiftcard>
+            <general>
+                <active>1</active>
+                <allowed_product_types>simple,grouped,configurable,virtual,bundle,downloadable</allowed_product_types>
+                <allow_to_paid_for_shipping>1</allow_to_paid_for_shipping>
+            </general>
+            <card>
+                <lifetime>0</lifetime>
+                <allow_message>1</allow_message>
+                <allow_use_themselves>1</allow_use_themselves>
+                <choose_delivery_date>1</choose_delivery_date>
+                <notify_expires_date>0</notify_expires_date>
+                <notify_expires_date_days>0</notify_expires_date_days>
+            </card>
+            <email>
+                <email_identity>general</email_identity>
+                <email_template>amgiftcard_email_email_template</email_template>
+                <email_template_notify>amgiftcard_email_email_template_notify</email_template_notify>
+                <email_recepient_cc></email_recepient_cc>
+                <send_confirmation_to_sender>1</send_confirmation_to_sender>
+                <email_template_confirmation_to_sender>amgiftcard_email_email_template_confirmation_to_sender</email_template_confirmation_to_sender>
+            </email>
+        </amgiftcard>
+    </default>
+</config>

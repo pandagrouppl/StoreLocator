@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="amgiftcard" translate="label" type="text" sortOrder="70903" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Gift Card</label>
+            <tab>amasty</tab>
+            <resource>Amasty_GiftCard::amasty_giftcard</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allowed_product_types" translate="label" type="multiselect" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Types, Which Can Be Bought With Gift Card</label>
+                    <source_model>Amasty\GiftCard\Model\Config\Source\ProductType</source_model>
+                </field>
+                <field id="allow_to_paid_for_shipping" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow giftcard to paid for shipping</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="card" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Gift Card options</label>
+                <field id="lifetime" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lifetime (Days)</label>
+                </field>
+                <field id="allow_message" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow Message</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allow_use_themselves" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow customers to use gift cards they bought for themselves</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="choose_delivery_date" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow customers to choose delivery date for certificates</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="notify_expires_date" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Notify Customers before Certificate Expires</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="notify_expires_date_days" translate="label comment" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Number of Days before Expiry</label>
+                    <comment><![CDATA[When set to 0 (zero), the notification is sent once the certificate expires.]]></comment>
+                </field>
+            </group>
+
+            <group id="email" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Email Options</label>
+                <field id="email_identity" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Sender</label>
+                    <source_model>\Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                <field id="email_template" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Template</label>
+                    <source_model>\Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="email_recepient_cc" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send copy to</label>
+                    <comment><![CDATA[Separated by comma]]></comment>
+                </field>
+                <field id="email_template_notify" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Expiry Notification Email Template</label>
+                    <source_model>\Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <comment><![CDATA[Notice of the expiry of the Gift Card]]></comment>
+                </field>
+                <field id="send_confirmation_to_sender" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send confirmation to sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="email_template_confirmation_to_sender" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sender Confirmation Email Template</label>
+                    <source_model>\Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <depends>
+                        <field id="send_confirmation_to_sender">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
+
+
+

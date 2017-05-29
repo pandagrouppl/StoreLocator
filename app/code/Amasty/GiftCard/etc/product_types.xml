@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Catalog/etc/product_types.xsd">
+    <type name="amgiftcard" label="Gift Card" modelInstance="Amasty\GiftCard\Model\Product\Type\GiftCard"
+          indexPriority="50"
+          sortOrder="100"
+          isQty="true">
+        <priceModel instance="Amasty\GiftCard\Model\Product\Price" />
+        <customAttributes>
+            <attribute name="refundable" value="false"/>
+        </customAttributes>
+    </type>
+</config>

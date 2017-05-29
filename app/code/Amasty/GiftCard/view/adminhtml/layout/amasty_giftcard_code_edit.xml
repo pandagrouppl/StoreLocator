@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="left">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Code\Edit\Tabs" name="code_tabs">
+                <block class="Amasty\GiftCard\Block\Adminhtml\Code\Edit\Tab\General" name="amasty_giftcard_code_edit_tab_general" />
+                <block class="Amasty\GiftCard\Block\Adminhtml\Code\Edit\Tab\ListCodes" name="amasty_giftcard_code_edit_tab_list" />
+
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_giftcard_code_edit_tab_general</argument>
+                    <argument name="block" xsi:type="string">amasty_giftcard_code_edit_tab_general</argument>
+                </action>
+
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">amasty_giftcard_code_edit_tab_list</argument>
+                    <argument name="block" xsi:type="string">amasty_giftcard_code_edit_tab_list</argument>
+                </action>
+
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Amasty\GiftCard\Block\Adminhtml\Code\Edit" name="code_edit"/>
+        </referenceContainer>
+    </body>
+</page>

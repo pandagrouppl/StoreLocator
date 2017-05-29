@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Amasty_GiftCard::giftcard" title="Gift Cards" module="Amasty_GiftCard" parent="Magento_Backend::marketing" sortOrder="100" resource="Amasty_GiftCard::giftcard"/>
+
+        <add id="Amasty_GiftCard::giftcard_code" title="Code pools" sortOrder="10" module="Amasty_GiftCard" parent="Amasty_GiftCard::giftcard" action="amasty_giftcard/code/" resource="Amasty_GiftCard::giftcard_code"/>
+        <add id="Amasty_GiftCard::giftcard_account" title="Accounts" sortOrder="20" module="Amasty_GiftCard" parent="Amasty_GiftCard::giftcard" action="amasty_giftcard/account/" resource="Amasty_GiftCard::giftcard_account"/>
+        <add id="Amasty_GiftCard::giftcard_image" title="Images" sortOrder="30" module="Amasty_GiftCard" parent="Amasty_GiftCard::giftcard" action="amasty_giftcard/image/" resource="Amasty_GiftCard::giftcard_image"/>
+
+    </menu>
+</config>

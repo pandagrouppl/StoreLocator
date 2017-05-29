@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Amasty_GiftCard::css/main.css"/>
+    </head>
+    <body>
+        <attribute name="class" value="page-product-amgiftcard"/>
+        <referenceContainer name="product.info.form.content">
+            <block class="Amasty\GiftCard\Block\Product\View\Type\GiftCard"
+                   name="product.info.amgiftcard"
+                   before="-"
+                   template="Amasty_GiftCard::product/view/type/giftcard.phtml"/>
+
+        </referenceContainer>
+        <referenceBlock name="product.info.form.options">
+            <block class="Amasty\GiftCard\Block\Product\View\Type\GiftCard"
+                   name="product.info.amgiftcard.options"
+                   before="-"
+                   template="Amasty_GiftCard::product/view/type/giftcard.phtml"/>
+
+        </referenceBlock>
+    </body>
+</page>
