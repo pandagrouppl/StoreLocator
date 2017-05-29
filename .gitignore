@@ -74,3 +74,5 @@ atlassian*
 !/composer.json
 !/composer.lock
 !/README.md
+!/install-script.sh
+!/update-script.sh
