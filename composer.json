@@ -78,15 +78,14 @@
             "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash",
             "sudo nvm install node",
             "sudo npm install -g gulp-cli",
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && ./magento setup:static-content:deploy && cd ..",
             "cd tools && npm install && gulp compile && cd ..",
-            "cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
-            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
-
+            "cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server && cd ../../../../../../.."
         ],
         "post-update-cmd": [
+            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && ./magento setup:static-content:deploy && cd ..",
             "cd tools && npm install && gulp compile && cd ..",
-            "cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..",
-            "cd bin && ./magento setup:upgrade && ./magento setup:di:compile && cd .."
+            "cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server && cd ../../../../../../.."
         ]
     }
 }
