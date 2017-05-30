@@ -1,0 +1,1814 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-04-15 16:16+0400\n"
+"PO-Revision-Date: 2017-04-15 16:16+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin-functions.php:37
+msgid "Succesfully Uninstalled!"
+msgstr ""
+
+#: admin-functions.php:43
+msgid "Already Unistalled"
+msgstr ""
+
+#: admin-functions.php:486
+msgid ""
+"You need Access Token for using Instagram API. Click sign in with Instagram "
+"button above to get yours. This will not show your Instagram media. After "
+"that you may create feed with desired user or hashtag media."
+msgstr ""
+
+#: admin-functions.php:566
+msgid "Access Token"
+msgstr ""
+
+#: admin-functions.php:567
+msgid "Username"
+msgstr ""
+
+#: admin-functions.php:568
+msgid "Minimal role to add and manage Feeds or Themes"
+msgstr ""
+
+#: admin-functions.php:568
+msgid "Administrator"
+msgstr ""
+
+#: admin-functions.php:568
+msgid "Author"
+msgstr ""
+
+#: admin-functions.php:571
+msgid "Custom CSS"
+msgstr ""
+
+#: admin-functions.php:576
+msgid "Custom JavaScript"
+msgstr ""
+
+#: admin-functions.php:627
+msgid "Database error, please uninstall the plugin and install again"
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:181
+#: admin/controllers/WDIControllerFeeds_wdi.php:211
+#: admin/controllers/WDIControllerFeeds_wdi.php:246
+#: admin/controllers/WDIControllerThemes_wdi.php:348
+msgid "Cannot Write on database. Check database permissions."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:186
+#: admin/controllers/WDIControllerFeeds_wdi.php:219
+#: admin/controllers/WDIControllerFeeds_wdi.php:254
+msgid "You have not made new changes"
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:188
+msgid "Successfully saved"
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:222
+msgid "Changes have been successfully applied"
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:257
+msgid "Feed successfully reseted"
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:272
+msgid "Item Succesfully Duplicated."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:295
+#: admin/controllers/WDIControllerThemes_wdi.php:382
+msgid "Item Succesfully Deleted."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:298
+#: admin/controllers/WDIControllerFeeds_wdi.php:330
+#: admin/controllers/WDIControllerFeeds_wdi.php:367
+#: admin/controllers/WDIControllerThemes_wdi.php:385
+msgid "Error. Please install plugin again."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:315
+#: admin/controllers/WDIControllerThemes_wdi.php:414
+msgid "Items Succesfully Deleted."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:318
+#: admin/controllers/WDIControllerFeeds_wdi.php:355
+#: admin/controllers/WDIControllerFeeds_wdi.php:392
+#: admin/controllers/WDIControllerThemes_wdi.php:418
+msgid "You must select at least one item."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:327
+msgid "Item Succesfully Published."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:352
+msgid "Items Succesfully Published."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:364
+msgid "Item Succesfully Unpublished."
+msgstr ""
+
+#: admin/controllers/WDIControllerFeeds_wdi.php:389
+msgid "Items Succesfully Unpublished."
+msgstr ""
+
+#: admin/controllers/WDIControllerThemes_wdi.php:345
+msgid "Please select at least one item"
+msgstr ""
+
+#: admin/controllers/WDIControllerThemes_wdi.php:350
+msgid "Items Succesfully Duplicated."
+msgstr ""
+
+#: admin/controllers/WDIControllerThemes_wdi.php:388
+#: admin/controllers/WDIControllerThemes_wdi.php:409
+msgid "You cannot delete default theme."
+msgstr ""
+
+#: admin/controllers/WDIControllerWidget.php:22
+msgid "Show your instagram feeds in your widget area"
+msgstr ""
+
+#: admin/controllers/WDIControllerWidget.php:27
+msgid "Instagram WD Widget"
+msgstr ""
+
+#: admin/views/WDIViewEditorShortcode.php:100
+msgid "Select Feed:"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:37
+msgid "This section allows you to create, edit and delete Feeds"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:38 admin/views/WDIViewFeeds_wdi.php:323
+#: admin/views/WDIViewSettings_wdi.php:48 admin/views/WDIViewThemes_wdi.php:29
+msgid "Read More in User Guide"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:39 admin/views/WDIViewFeeds_wdi.php:324
+#: admin/views/WDIViewLicensing_wdi.php:28
+#: admin/views/WDIViewSettings_wdi.php:49 admin/views/WDIViewThemes_wdi.php:30
+msgid "Upgrade to Pro Version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:40 admin/views/WDIViewFeeds_wdi.php:325
+#: admin/views/WDIViewSettings_wdi.php:50 admin/views/WDIViewThemes_wdi.php:31
+#: wd/templates/display_overview_user_guide.php:33
+msgid "Support Forum"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:47 wd-instagram-feed.php:180
+msgid "Feeds"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:51
+msgid "Add new"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:56
+msgid "Select All"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:70 admin/views/WDIViewFeeds_wdi.php:91
+#: frontend/views/WDIViewGalleryBox.php:1355
+#: frontend/views/WDIViewGalleryBox.php:1383
+#: frontend/views/WDIViewGalleryBox.php:1390
+msgid "Name"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:85 admin/views/WDIViewWidget.php:82
+msgid "Feed"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:94
+msgid "Shortcode"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:95
+msgid "PHP function"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:101
+msgid "Published"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:104
+msgid "Edit"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:105
+msgid "Delete"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:202
+msgid "Feed Name"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:202
+msgid "The name of your feed which can be displayed in feed's header section"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:203
+msgid "Changing Theme is Available Only in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:203
+msgid "Theme"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:203
+msgid "The theme of your feed, you can create themes in themes menu"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:204
+msgid "Feed of liked media is Available in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:204
+msgid "User/Hashtag feed or liked media"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:204
+msgid "Username/Hashtag"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:204
+msgid "Media I liked"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:204
+msgid "Show the media I liked instead of showing user or hashtag feed"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:205
+msgid "Feed Usernames and Hashtags"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:205
+msgid ""
+"Enter usernames or hashtags to your feed, hashtags must start with #, "
+"username's shouldn't start with @"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:206
+msgid "Featured Image"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:206
+msgid "Select Featured Image For Header Section"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "Feed Display Type"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "Pagination"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "Load More Button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "Infinite Scroll"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "This Feature is Available in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:207
+msgid "How to load and display new images"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208
+msgid "Sort Images By"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208
+msgid "Date"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208
+msgid "Likes"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208
+msgid "Comments"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208 framework/WDILibrary.php:767
+msgid "Random"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:208
+msgid "How to sort images"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:209
+msgid "Order By"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:209
+msgid "Sorting order either Ascending or Descending"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:210
+msgid "Follow on Instagram Button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:211
+msgid "Display Header"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:211
+msgid "Displays feed's header, header includes feed name and feed users"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:212
+msgid "Number of Photos to Display"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:212
+msgid "Number of images to load when page loads first time"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:213
+msgid "Number of Photos to Load"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:213
+msgid ""
+"Number of images to load when clicking load more button or triggering "
+"infinite scroll"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:214
+msgid "Number of Images Per Page"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:214
+msgid "Number Of Images To Show On Each Pagination Page"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:215
+msgid "Number of Pages To Preload"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:215 admin/views/WDIViewFeeds_wdi.php:216
+msgid "This Will Preload Images For Pagination"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:216
+msgid "Number of Images To Preload"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:217
+msgid "Number of Images To Load Each Time"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:217
+msgid "Number Of Photos To Load on Each Load"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:218
+msgid "Number of Columns"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:218
+msgid "Feed item's column count"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:219
+msgid "Sort Again Whole Feed After Loading New Images"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:219
+msgid "Sort both newly loaded and existing images alltogether"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:220
+msgid "Show Likes"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:220 admin/views/WDIViewFeeds_wdi.php:221
+#: admin/views/WDIViewFeeds_wdi.php:222 admin/views/WDIViewFeeds_wdi.php:223
+#: admin/views/WDIViewFeeds_wdi.php:238 admin/views/WDIViewFeeds_wdi.php:239
+#: admin/views/WDIViewFeeds_wdi.php:241 admin/views/WDIViewFeeds_wdi.php:242
+#: admin/views/WDIViewFeeds_wdi.php:246 admin/views/WDIViewFeeds_wdi.php:248
+#: admin/views/WDIViewFeeds_wdi.php:251
+msgid "This Feature is Available Only in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:221
+msgid "Show Description"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:222
+#: frontend/views/WDIViewGalleryBox.php:2333
+msgid "Show Comments"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:223
+msgid "Show Username On Image Thumb"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:224
+msgid "Show User Data"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:225
+msgid "Display User Bio"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:225
+msgid "User bio will be displayed if feed has only one user"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:226
+msgid "Display User Posts and Followers count"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:227
+msgid "Show Full Description"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:227
+msgid "Discription will be shown no matter how long it is"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:228
+msgid "Disable Mobile Layout"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:228
+msgid "Column number stays the same in all screens"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:229
+msgid "Window width breakpoint for small size media"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:229
+msgid ""
+"Load media of smaller size from Instagram if browser width is smaller than "
+"this value. Faster loading in mobile devices. Set the value about 320px to "
+"always load large-size media."
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:230
+msgid "Image Onclick"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:230
+msgid "Open Lightbox"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:230
+msgid "Redirect To Instagram"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:230
+msgid "Do Nothing"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:232
+msgid "Full width lightbox"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:232 admin/views/WDIViewFeeds_wdi.php:236
+#: admin/views/WDIViewFeeds_wdi.php:238 admin/views/WDIViewFeeds_wdi.php:241
+#: admin/views/WDIViewFeeds_wdi.php:242 admin/views/WDIViewFeeds_wdi.php:243
+#: admin/views/WDIViewFeeds_wdi.php:244 admin/views/WDIViewFeeds_wdi.php:245
+#: admin/views/WDIViewFeeds_wdi.php:247 admin/views/WDIViewFeeds_wdi.php:248
+#: admin/views/WDIViewFeeds_wdi.php:249 admin/views/WDIViewFeeds_wdi.php:250
+#: admin/views/WDIViewFeeds_wdi.php:251 admin/views/WDIViewFeeds_wdi.php:252
+#: admin/views/WDIViewFeeds_wdi.php:253 admin/views/WDIViewFeeds_wdi.php:254
+#: admin/views/WDIViewFeeds_wdi.php:255 admin/views/WDIViewFeeds_wdi.php:256
+#: admin/views/WDIViewFeeds_wdi.php:257 admin/views/WDIViewFeeds_wdi.php:260
+#: wd/includes/overview.php:233 wd/includes/overview.php:240
+#: wd/includes/overview.php:247 wd/includes/overview.php:257
+msgid "Yes"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:232 admin/views/WDIViewFeeds_wdi.php:236
+#: admin/views/WDIViewFeeds_wdi.php:238 admin/views/WDIViewFeeds_wdi.php:241
+#: admin/views/WDIViewFeeds_wdi.php:242 admin/views/WDIViewFeeds_wdi.php:243
+#: admin/views/WDIViewFeeds_wdi.php:244 admin/views/WDIViewFeeds_wdi.php:245
+#: admin/views/WDIViewFeeds_wdi.php:247 admin/views/WDIViewFeeds_wdi.php:248
+#: admin/views/WDIViewFeeds_wdi.php:249 admin/views/WDIViewFeeds_wdi.php:250
+#: admin/views/WDIViewFeeds_wdi.php:251 admin/views/WDIViewFeeds_wdi.php:252
+#: admin/views/WDIViewFeeds_wdi.php:253 admin/views/WDIViewFeeds_wdi.php:254
+#: admin/views/WDIViewFeeds_wdi.php:255 admin/views/WDIViewFeeds_wdi.php:256
+#: admin/views/WDIViewFeeds_wdi.php:257 admin/views/WDIViewFeeds_wdi.php:260
+#: wd/includes/overview.php:235 wd/includes/overview.php:242
+#: wd/includes/overview.php:249 wd/includes/overview.php:252
+#: wd/includes/overview.php:257
+msgid "No"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:233
+msgid "Lightbox Width"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:234
+msgid "Lightbox Height"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:235
+msgid "Lightbox Effect"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:236
+msgid "Lightbox autoplay"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:237
+msgid "Time Interval"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:238
+msgid "Enable filmstrip in lightbox"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:239
+msgid "Filmstrip size"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:240
+msgid "Show Next / Previous Buttons"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:240
+msgid "On Hover"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:240
+msgid "Always"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:241
+msgid "Display info by default"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:242
+msgid "Full width info"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:243
+msgid "Enable Loop"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:244
+msgid "Enable Right Click Protection"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:245
+msgid "Enable control buttons"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:246
+msgid "Enable info"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:247
+msgid "Enable fullscreen"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:248
+msgid "Enable comments"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:249
+msgid "Link To Instagram Button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:250
+msgid "Enable Download Button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:251
+msgid "Enable Share Buttons"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:252
+msgid "Enable Facebook button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:253
+msgid "Enable Twitter button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:254
+msgid "Enable Google+ button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:255
+msgid "Enable Pinterest button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:256
+msgid "Enable Tumblr button"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:257
+msgid "Show Images Count"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:260
+msgid "Enable Conditional Filters"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:261
+msgid "Filter Logic"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:278 admin/views/WDIViewFeeds_wdi.php:283
+msgid "Available In Pro Version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:299
+msgid "Feed Settings"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:300 wd-instagram-feed.php:521
+msgid "Lightbox Settings"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:301 admin/views/WDIViewLicensing_wdi.php:45
+#: wd-instagram-feed.php:525
+msgid "Conditional Filters"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:322
+msgid "Here You Can Change Feed Parameters"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:330
+msgid "Edit feed"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:333
+msgid "Add new Feed"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:363
+msgid ""
+"This is FREE version, Conditional filters are available only in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:387
+msgid "Add"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:403
+msgid "Save"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:405
+msgid "Apply"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:406 framework/WDILibrary.php:189
+#: framework/WDILibrary.php:717
+msgid "Reset"
+msgstr ""
+
+#: admin/views/WDIViewFeeds_wdi.php:407
+#: wd/templates/display_deactivation_popup.php:23
+msgid "Cancel"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:32
+msgid "ready"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:34
+msgid "Responsive Design and Layout"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:35 wd-instagram-feed.php:476
+msgid "SEO Friendly"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:36
+msgid "Thumbnails layout"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:37
+msgid "Image Browser layout"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:38
+msgid "Lightbox"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:39
+msgid "Load More Button / Classic Pagination"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:40
+msgid "Image Sorting"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:41
+msgid "Widget"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:42
+msgid "Slideshow/Lightbox Effects"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:46
+msgid "Feed based on liked media"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:47
+msgid "Image On Hover Effects"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:48
+msgid "Infinite Scroll Load More"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:49
+msgid "Full Style Customization With Themes"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:50
+msgid "Filmstrip"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:51
+msgid "Instagram Comments in Lightbox"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:52
+msgid "Blog Style layout"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:53
+msgid "Masonry layout"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:54
+msgid "Videos in BlogStyle, ImageBrowser and Lightbox"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:55
+msgid "Social Share Buttons"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:56
+msgid "Multiple User/Hashtag Feeds"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:57
+msgid "Filtering Images Based on Users/Hashtags"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:58
+msgid "Support / Updates"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:61
+msgid "Free"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:86
+msgid "Only Bug Fixes"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:89
+msgid "Pro Version"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:114
+msgid "Full Support"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:123
+msgid "After purchasing the commercial version follow these steps:"
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:125
+msgid "Deactivate Instagram Feed WD plugin."
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:126
+msgid "Delete Instagram Feed WD plugin."
+msgstr ""
+
+#: admin/views/WDIViewLicensing_wdi.php:127
+msgid "Install the downloaded commercial version of the plugin."
+msgstr ""
+
+#: admin/views/WDIViewSettings_wdi.php:47
+msgid "This section allows you to set API parameters"
+msgstr ""
+
+#: admin/views/WDIViewSettings_wdi.php:53
+msgid "Instagram WD Settings"
+msgstr ""
+
+#: admin/views/WDIViewSettings_wdi.php:58
+msgid "Reset Access Token and Username"
+msgstr ""
+
+#: admin/views/WDIViewSettings_wdi.php:73
+msgid ""
+"Are you sure that you want to reset access token and username, after "
+"resetting it you will need to log in with Instagram again for using plugin"
+msgstr ""
+
+#: admin/views/WDIViewThemes_wdi.php:28
+msgid "This section allows you to create, edit and delete Themes"
+msgstr ""
+
+#: admin/views/WDIViewThemes_wdi.php:33
+msgid ""
+"This is FREE version, Customizing themes is available only in PRO version"
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:26
+#: admin/views/WDIViewUninstall_wdi.php:88
+#: admin/views/WDIViewUninstall_wdi.php:109
+msgid "Uninstalling Instagram Feed WD"
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:29
+msgid ""
+"Deactivating Instagram Feed WD plugin does not remove any data that may have "
+"been created. To completely remove this plugin, you can uninstall it here."
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:31
+msgid ""
+"WARNING: Once uninstalled, this can't be undone. You should use a Database "
+"Backup plugin of WordPress to back up all the data first."
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:34
+msgid "The following Database Tables will be deleted:"
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:58
+#: admin/views/WDIViewUninstall_wdi.php:73
+msgid "Are you sure you want to uninstall plugin?"
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:96
+#: admin/views/WDIViewUninstall_wdi.php:134
+msgid "Click Here"
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:96
+#: admin/views/WDIViewUninstall_wdi.php:134
+msgid ""
+" To Finish the Uninstallation and Instagram Feed WD  will be Deactivated "
+"Automatically."
+msgstr ""
+
+#: admin/views/WDIViewUninstall_wdi.php:112
+msgid "The following Database Tables has been successfully deleted:"
+msgstr ""
+
+#: admin/views/WDIViewWidget.php:78
+msgid "Title"
+msgstr ""
+
+#: admin/views/WDIViewWidget.php:93
+msgid "Number of columns"
+msgstr ""
+
+#: admin/views/WDIViewWidget.php:105
+msgid "Number of images to show"
+msgstr ""
+
+#: admin/views/WDIViewWidget.php:110
+msgid "Show likes and comments"
+msgstr ""
+
+#: admin/views/WDIViewWidget.php:114
+msgid "Enable loading new images"
+msgstr ""
+
+#: framework/WDILibrary.php:188 framework/WDILibrary.php:720
+msgid "Search"
+msgstr ""
+
+#: framework/WDILibrary.php:511
+msgid " item(s)"
+msgstr ""
+
+#: framework/WDILibrary.php:516
+msgid "First"
+msgstr ""
+
+#: framework/WDILibrary.php:517
+msgid "Previous"
+msgstr ""
+
+#: framework/WDILibrary.php:518
+msgid "Next"
+msgstr ""
+
+#: framework/WDILibrary.php:519
+msgid "Last"
+msgstr ""
+
+#: framework/WDILibrary.php:537
+msgid "Go to the first page"
+msgstr ""
+
+#: framework/WDILibrary.php:538
+msgid "Go to the previous page"
+msgstr ""
+
+#: framework/WDILibrary.php:540
+msgid "of"
+msgstr ""
+
+#: framework/WDILibrary.php:544
+msgid "Go to the next page"
+msgstr ""
+
+#: framework/WDILibrary.php:545
+msgid "Go to the last page"
+msgstr ""
+
+#: framework/WDILibrary.php:557
+msgid "Load More..."
+msgstr ""
+
+#: framework/WDILibrary.php:762
+msgid "Order by: "
+msgstr ""
+
+#: framework/WDILibrary.php:764
+msgid "Default"
+msgstr ""
+
+#: framework/WDILibrary.php:765
+msgid "Filename"
+msgstr ""
+
+#: framework/WDILibrary.php:766
+msgid "Size"
+msgstr ""
+
+#: framework/WDI_admin_view.php:717
+msgid "Preview"
+msgstr ""
+
+#: frontend/shortcode.php:47
+msgid "Invalid shortcode"
+msgstr ""
+
+#: frontend/shortcode.php:62
+msgid "Access Token is invalid, please get it again "
+msgstr ""
+
+#: frontend/shortcode.php:67
+msgid "Feed with such ID does not exist"
+msgstr ""
+
+#: frontend/shortcode.php:89
+msgid "Unable to display unpublished feed "
+msgstr ""
+
+#: frontend/shortcode.php:112
+msgid "Invalid feed type"
+msgstr ""
+
+#: frontend/shortcode.php:155 frontend/shortcode.php:233
+msgid "Connection Error, try again later :("
+msgstr ""
+
+#: frontend/shortcode.php:156 frontend/shortcode.php:234
+msgid "Username not found"
+msgstr ""
+
+#: frontend/shortcode.php:157 frontend/shortcode.php:235
+msgid "Network error, please try again later :("
+msgstr ""
+
+#: frontend/shortcode.php:158 frontend/shortcode.php:236
+msgid "There is no data for that hashtag"
+msgstr ""
+
+#: frontend/shortcode.php:159 frontend/shortcode.php:237
+msgid "Click to filter images by this user"
+msgstr ""
+
+#: frontend/shortcode.php:160 frontend/shortcode.php:238
+msgid "Provided feed users are invalid or obsolete for this version of plugin"
+msgstr ""
+
+#: frontend/shortcode.php:161 frontend/shortcode.php:239
+msgid "There is no media in this feed"
+msgstr ""
+
+#: frontend/shortcode.php:162 frontend/shortcode.php:240
+msgid "Follow"
+msgstr ""
+
+#: frontend/shortcode.php:201 frontend/shortcode.php:252
+msgid "Field is required."
+msgstr ""
+
+#: frontend/shortcode.php:202 frontend/shortcode.php:253
+#: frontend/views/WDIViewGalleryBox.php:1342
+msgid "This is not a valid email address."
+msgstr ""
+
+#: frontend/shortcode.php:203 frontend/shortcode.php:254
+msgid "There are no images matching your search."
+msgstr ""
+
+#: frontend/shortcode.php:266
+msgid ""
+"Something is wrong. Response takes too long or there is JS error. Press Ctrl"
+"+Shift+J or Cmd+Shift+J on a Mac."
+msgstr ""
+
+#: frontend/shortcode.php:267
+msgid ""
+"Warning: Instagram Feed is loaded using AJAX request. It might not display "
+"properly."
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1013
+msgid "The image has been deleted."
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1034
+#: frontend/views/WDIViewGalleryBox.php:2890
+msgid "Play"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1038
+#: frontend/views/WDIViewGalleryBox.php:2161
+#: frontend/views/WDIViewGalleryBox.php:2717
+#: frontend/views/WDIViewGalleryBox.php:2814
+msgid "Maximize"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1042
+#: frontend/views/WDIViewGalleryBox.php:2163
+#: frontend/views/WDIViewGalleryBox.php:2816
+msgid "Fullscreen"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1044
+#: frontend/views/WDIViewGalleryBox.php:2581
+msgid "Show info"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1046
+msgid "Show comments"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1048
+#: frontend/views/WDIViewGalleryBox.php:2594
+msgid "Show rating"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1054
+#: frontend/views/WDIViewGalleryBox.php:1055
+msgid "Share on Facebook"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1061
+#: frontend/views/WDIViewGalleryBox.php:1062
+msgid "Share on Twitter"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1068
+#: frontend/views/WDIViewGalleryBox.php:1069
+msgid "Share on Google+"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1075
+#: frontend/views/WDIViewGalleryBox.php:1076
+msgid "Share on Pinterest"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1082
+#: frontend/views/WDIViewGalleryBox.php:1083
+msgid "Share on Tumblr"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1091
+msgid "Share"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1110
+msgid "Open image in Instagram."
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1138
+msgid "Download original image"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1335
+msgid "Error. Incorrect Verification Code."
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1350
+#: frontend/views/WDIViewGalleryBox.php:2381
+msgid "Hide Comments"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1361
+#: frontend/views/WDIViewGalleryBox.php:1383
+#: frontend/views/WDIViewGalleryBox.php:1390
+msgid "Email"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1368
+#: frontend/views/WDIViewGalleryBox.php:1383
+#: frontend/views/WDIViewGalleryBox.php:1390
+msgid "Comment"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1373
+msgid "Verification Code"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1396
+msgid "Submit"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1397
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:1404
+#: frontend/views/WDIViewGalleryBox.php:2066
+#: frontend/views/WDIViewGalleryBox.php:2391
+msgid "There are no comments to show"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:2567
+msgid "Hide info"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:2590
+msgid "Hide rating"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:2754
+#: frontend/views/WDIViewGalleryBox.php:2974
+msgid "Restore"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:2869
+msgid "Exit Fullscreen"
+msgstr ""
+
+#: frontend/views/WDIViewGalleryBox.php:2884
+#: frontend/views/WDIViewGalleryBox.php:2901
+msgid "Pause"
+msgstr ""
+
+#: frontend/views/WDIViewImageBrowser_view.php:42
+#: frontend/views/WDIViewImageBrowser_view.php:54
+#: frontend/views/WDIViewThumbnails_view.php:44
+#: frontend/views/WDIViewThumbnails_view.php:60
+msgid "First Page"
+msgstr ""
+
+#: frontend/views/WDIViewImageBrowser_view.php:42
+#: frontend/views/WDIViewImageBrowser_view.php:54
+#: frontend/views/WDIViewThumbnails_view.php:44
+#: frontend/views/WDIViewThumbnails_view.php:60
+msgid "Previous Page"
+msgstr ""
+
+#: frontend/views/WDIViewImageBrowser_view.php:42
+#: frontend/views/WDIViewImageBrowser_view.php:54
+#: frontend/views/WDIViewThumbnails_view.php:44
+#: frontend/views/WDIViewThumbnails_view.php:60
+msgid "Next Page"
+msgstr ""
+
+#: frontend/views/WDIViewImageBrowser_view.php:42
+#: frontend/views/WDIViewImageBrowser_view.php:54
+#: frontend/views/WDIViewThumbnails_view.php:44
+#: frontend/views/WDIViewThumbnails_view.php:60
+msgid "Last Page"
+msgstr ""
+
+#: frontend/views/WDIViewImageBrowser_view.php:49
+#: frontend/views/WDIViewThumbnails_view.php:53
+msgid "Load More"
+msgstr ""
+
+#: templates/plugin-uninstalled.php:28
+msgid "you have uninstalled"
+msgstr ""
+
+#: templates/plugin-uninstalled.php:28
+msgid ""
+"plugin,if you want to use it again simply deactivate and activate it again"
+msgstr ""
+
+#: wd-instagram-feed.php:140
+msgid "Configure"
+msgstr ""
+
+#: wd-instagram-feed.php:143
+msgid "Customize"
+msgstr ""
+
+#: wd-instagram-feed.php:178
+msgid "Instagram Feed WD"
+msgstr ""
+
+#: wd-instagram-feed.php:181
+msgid "Themes"
+msgstr ""
+
+#: wd-instagram-feed.php:182
+msgid "Settings"
+msgstr ""
+
+#: wd-instagram-feed.php:185
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: wd-instagram-feed.php:186
+msgid "Uninstall"
+msgstr ""
+
+#: wd-instagram-feed.php:275
+msgid "All the data will be removed from the database. Continue?"
+msgstr ""
+
+#: wd-instagram-feed.php:276
+msgid "Some error with instagram servers, try agian later :("
+msgstr ""
+
+#: wd-instagram-feed.php:277
+msgid "Invalid user:"
+msgstr ""
+
+#: wd-instagram-feed.php:278
+msgid "already added!"
+msgstr ""
+
+#: wd-instagram-feed.php:279
+#, php-format
+msgid "User %s does not exist."
+msgstr ""
+
+#: wd-instagram-feed.php:280
+msgid "Network Error, please try again later. :("
+msgstr ""
+
+#: wd-instagram-feed.php:281
+msgid "Invalid hashtag"
+msgstr ""
+
+#: wd-instagram-feed.php:282
+msgid "This hashtag currently has no posts. Are you sure you want to add it?"
+msgstr ""
+
+#: wd-instagram-feed.php:283
+msgid "You can add only one username or hashtag in FREE Version"
+msgstr ""
+
+#: wd-instagram-feed.php:284
+msgid "Available in PRO"
+msgstr ""
+
+#: wd-instagram-feed.php:285
+msgid "Combined Usernames/Hashtags are available only in PRO version"
+msgstr ""
+
+#: wd-instagram-feed.php:286
+msgid "Customizing Themes is available only in PRO version"
+msgstr ""
+
+#: wd-instagram-feed.php:287
+msgid "URL is not valid"
+msgstr ""
+
+#: wd-instagram-feed.php:288
+msgid "Please Select Condition Type"
+msgstr ""
+
+#: wd-instagram-feed.php:289
+msgid "Show Posts Which Have All Of The Conditions"
+msgstr ""
+
+#: wd-instagram-feed.php:290
+msgid "Show Posts Which Have At Least One Of The Conditions"
+msgstr ""
+
+#: wd-instagram-feed.php:291
+msgid "Hide Posts Which Have At Least One Of The Conditions"
+msgstr ""
+
+#: wd-instagram-feed.php:292
+msgid "EITHER"
+msgstr ""
+
+#: wd-instagram-feed.php:293
+msgid "NEITHER"
+msgstr ""
+
+#: wd-instagram-feed.php:294
+msgid "EXCEPT"
+msgstr ""
+
+#: wd-instagram-feed.php:295
+msgid "AND"
+msgstr ""
+
+#: wd-instagram-feed.php:296
+msgid "OR"
+msgstr ""
+
+#: wd-instagram-feed.php:297
+msgid "NOR"
+msgstr ""
+
+#: wd-instagram-feed.php:468
+msgid ""
+"The most advanced and user-friendly Instagram plugin. Instagram Feed WD "
+"plugin allows you to display image feeds from single or multiple Instagram "
+"accounts on a WordPress site."
+msgstr ""
+
+#: wd-instagram-feed.php:472
+msgid "Responsive"
+msgstr ""
+
+#: wd-instagram-feed.php:473
+msgid ""
+"Instagram feeds are not only elegantly designed to be displayed on your "
+"website, but also come fully responsive for better user experience when "
+"using mobile devices and tables."
+msgstr ""
+
+#: wd-instagram-feed.php:477
+msgid ""
+"Instagram Feed WD uses clean coding and latest SEO techniques necessary to "
+"keep your pages and posts SEO-optimized."
+msgstr ""
+
+#: wd-instagram-feed.php:480
+msgid "4 Fully Customizable Layouts"
+msgstr ""
+
+#: wd-instagram-feed.php:481
+msgid ""
+"There are four layout options for Instagram feeds: Thumbnails, Image "
+"Browser, Blog Style and Masonry. Display a feed as a simply arranged "
+"thumbnails with captions. Use Masonry layout to create a beautiful "
+"combination of images and captions. Create a blog feed by simply sharing "
+"Instagram posts with captions using blog style layout. Image browser layout "
+"saves space, yet allows to display larger images. In addition users can "
+"choose the number of the displayed images, layout columns, image order and "
+"etc."
+msgstr ""
+
+#: wd-instagram-feed.php:484
+msgid "Individual and Mixed Feeds"
+msgstr ""
+
+#: wd-instagram-feed.php:485
+msgid ""
+"Create mixed and single feeds of Instagram posts. Single feeds can be based "
+"on public Instagram accounts and single Instagram hashtag. Mixed feeds can "
+"contain multiple public Instagram accounts and multiple Instagram hashtags. "
+"A front end filter is available for mixed feeds. Click to filter only one "
+"feed based on a single hashtag or account."
+msgstr ""
+
+#: wd-instagram-feed.php:488
+msgid "Advanced Lightbox"
+msgstr ""
+
+#: wd-instagram-feed.php:489
+msgid ""
+"Upon clicking on image thumbnails an elegant lightbox will be opened, where "
+"you will find control buttons for displaying images in larger view, read "
+"image comments, captions, view image metadata and easily navigate between "
+"images. Lightbox can serve as a slider with various stunning slide "
+"transition effects. If the feed contains video, the video will be played "
+"within the lightbox as an HTML5 video."
+msgstr ""
+
+#: wd-instagram-feed.php:495
+msgid "Installation and configuration"
+msgstr ""
+
+#: wd-instagram-feed.php:499
+msgid "Getting Instagram Access Token"
+msgstr ""
+
+#: wd-instagram-feed.php:505
+msgid "Creating an Instagram Feed"
+msgstr ""
+
+#: wd-instagram-feed.php:509
+msgid "Thumbnails and Masonry Layouts"
+msgstr ""
+
+#: wd-instagram-feed.php:513
+msgid "Blog Style Layout"
+msgstr ""
+
+#: wd-instagram-feed.php:517
+msgid "Image Browser"
+msgstr ""
+
+#: wd-instagram-feed.php:531
+msgid "Publishing Instagram Feed"
+msgstr ""
+
+#: wd-instagram-feed.php:535
+msgid "Publishing in a Page/Post"
+msgstr ""
+
+#: wd-instagram-feed.php:539
+msgid "Publishing as a Widget"
+msgstr ""
+
+#: wd-instagram-feed.php:543
+msgid "Publishing by PHP function"
+msgstr ""
+
+#: wd-instagram-feed.php:549
+msgid "Styling with Themes"
+msgstr ""
+
+#: wd-instagram-feed.php:554
+msgid "Advanced customizing options"
+msgstr ""
+
+#: wd/includes/deactivate.php:35
+msgid "Technical problems / hard to use"
+msgstr ""
+
+#: wd/includes/deactivate.php:39
+msgid "Free version is limited"
+msgstr ""
+
+#: wd/includes/deactivate.php:43
+msgid "Premium is expensive"
+msgstr ""
+
+#: wd/includes/deactivate.php:47
+msgid "Upgrading to paid version"
+msgstr ""
+
+#: wd/includes/deactivate.php:51
+msgid "Temporary deactivation"
+msgstr ""
+
+#: wd/includes/notices.php:211
+msgid "Leave A Review?"
+msgstr ""
+
+#: wd/includes/notices.php:212
+#, php-format
+msgid ""
+"We hope you've enjoyed using WordPress %s! Would you consider leaving us a "
+"review on WordPress.org?"
+msgstr ""
+
+#: wd/includes/notices.php:213
+msgid "Sure! I'd love to!"
+msgstr ""
+
+#: wd/includes/notices.php:214
+msgid "I've already left a review"
+msgstr ""
+
+#: wd/includes/notices.php:215
+msgid "Maybe Later"
+msgstr ""
+
+#: wd/includes/notices.php:216
+msgid "Never show again"
+msgstr ""
+
+#: wd/includes/overview.php:27
+msgid "Welcome"
+msgstr ""
+
+#: wd/includes/overview.php:31
+msgid "User Guide"
+msgstr ""
+
+#: wd/includes/overview.php:35
+msgid "Deals"
+msgstr ""
+
+#: wd/includes/overview.php:39
+msgid "Support"
+msgstr ""
+
+#: wd/includes/overview.php:43
+msgid "Submit Your  Idea"
+msgstr ""
+
+#: wd/includes/overview.php:47
+msgid "Forum"
+msgstr ""
+
+#: wd/includes/overview.php:79
+msgid "Wordpress form builder plugin"
+msgstr ""
+
+#: wd/includes/overview.php:80
+msgid ""
+"Form Maker is a modern and advanced tool for creating WordPress forms easily "
+"and fast."
+msgstr ""
+
+#: wd/includes/overview.php:85
+msgid "WordPress Photo Gallery plugin"
+msgstr ""
+
+#: wd/includes/overview.php:86
+msgid ""
+"Photo Gallery is a fully responsive WordPress Gallery plugin with advanced "
+"functionality."
+msgstr ""
+
+#: wd/includes/overview.php:91
+msgid "WordPress calendar plugin"
+msgstr ""
+
+#: wd/includes/overview.php:92
+msgid ""
+"Organize and publish your events in an easy and elegant way using Event "
+"Calendar WD."
+msgstr ""
+
+#: wd/includes/overview.php:97
+msgid "WD Google Maps plugin"
+msgstr ""
+
+#: wd/includes/overview.php:98
+msgid ""
+"Google Maps WD is an intuitive tool for creating Google maps with advanced "
+"markers, custom layers and overlays for   your website."
+msgstr ""
+
+#: wd/includes/overview.php:103
+msgid "WordPress slider plugin"
+msgstr ""
+
+#: wd/includes/overview.php:104
+msgid ""
+"Create responsive, highly configurable sliders with various effects for your "
+"WordPress site."
+msgstr ""
+
+#: wd/includes/overview.php:109
+msgid "WordPress event calendar plugin"
+msgstr ""
+
+#: wd/includes/overview.php:110
+msgid ""
+"Spider Event Calendar is a highly configurable product which allows you to "
+"have multiple organized events."
+msgstr ""
+
+#: wd/includes/overview.php:115
+msgid "WordPress Instagram Feed plugin"
+msgstr ""
+
+#: wd/includes/overview.php:116
+msgid ""
+"WD Instagram Feed is a user-friendly tool for displaying user or hashtag-"
+"based feeds on your website."
+msgstr ""
+
+#: wd/includes/overview.php:168
+msgid "Not set"
+msgstr ""
+
+#: wd/includes/overview.php:173 wd/includes/overview.php:180
+msgid "On"
+msgstr ""
+
+#: wd/includes/overview.php:175 wd/includes/overview.php:182
+msgid "Off"
+msgstr ""
+
+#: wd/includes/overview.php:191 wd/includes/overview.php:199
+#: wd/includes/overview.php:206 wd/includes/overview.php:213
+#: wd/includes/overview.php:221 wd/includes/overview.php:228
+msgid "N/A"
+msgstr ""
+
+#: wd/includes/overview.php:226
+msgid " MByte"
+msgstr ""
+
+#: wd/includes/subscribe.php:43
+msgid "Your name &"
+msgstr ""
+
+#: wd/includes/subscribe.php:44
+msgid "Email address"
+msgstr ""
+
+#: wd/includes/subscribe.php:48
+msgid "Site URL"
+msgstr ""
+
+#: wd/includes/subscribe.php:49
+msgid "Wordpress version"
+msgstr ""
+
+#: wd/includes/subscribe.php:53
+msgid "List of plugins"
+msgstr ""
+
+#: wd/templates/display_deactivation_popup.php:8
+msgid ""
+"Please let us know why you are deactivating. Your answer will help us to "
+"serve you better"
+msgstr ""
+
+#: wd/templates/display_deactivation_popup.php:21
+msgid "Deactivate"
+msgstr ""
+
+#: wd/templates/display_deactivation_popup.php:22
+msgid "Submit and deactivate"
+msgstr ""
+
+#: wd/templates/display_overview.php:6
+#, php-format
+msgid "Welcome to %s"
+msgstr ""
+
+#: wd/templates/display_overview.php:8
+#, php-format
+msgid "CONGRATS! You've successfully installed %s WordPress plugin."
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:12
+#, php-format
+msgid "Get %s"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:13
+msgid "plugins"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:14
+#: wd/templates/display_overview_deals.php:65
+msgid "for"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:14
+#: wd/templates/display_overview_deals.php:65
+msgid "only"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:16
+msgid "Save 80%"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:37
+msgid "Downloads"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:42
+msgid "Download"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:52
+msgid "Get all plugins"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:64
+msgid "Get all 11 themes"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:67
+msgid "Save 70%"
+msgstr ""
+
+#: wd/templates/display_overview_deals.php:84
+msgid "Find out more"
+msgstr ""
+
+#: wd/templates/display_overview_support.php:3
+#, php-format
+msgid ""
+"You may contact us by filling in this form or by email %s any time you need "
+"professional support or have any questions. You can also fill in the form to "
+"leave your comments or feedback."
+msgstr ""
+
+#: wd/templates/display_overview_support.php:6
+msgid "Site Details"
+msgstr ""
+
+#: wd/templates/display_overview_support.php:8
+msgid ""
+"When contacting support, consider copying and pasting this information in "
+"your support request."
+msgstr ""
+
+#: wd/templates/display_overview_support.php:10
+msgid "It helps us troubleshoot more quickly."
+msgstr ""
+
+#: wd/templates/display_overview_support.php:17
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: wd/templates/display_overview_support.php:20
+msgid "Server Settings"
+msgstr ""
+
+#: wd/templates/display_overview_support.php:26
+msgid "Graphic Library"
+msgstr ""
+
+#: wd/templates/display_overview_support.php:41
+msgid "Contact us"
+msgstr ""
+
+#: wd/templates/display_overview_user_guide.php:26
+msgid "Demo"
+msgstr ""
+
+#: wd/templates/display_overview_user_guide.php:36
+msgid "FAQ"
+msgstr ""
+
+#: wd/templates/display_overview_user_guide.php:40
+msgid "Addons"
+msgstr ""
+
+#: wd/templates/display_overview_welcome.php:18
+msgid "Run Install Wizard "
+msgstr ""
+
+#: wd/templates/display_overview_welcome.php:26
+msgid "More features"
+msgstr ""
+
+#: wd/templates/display_subscribe.php:9
+msgid "Hi there"
+msgstr ""
+
+#: wd/templates/display_subscribe.php:11
+#, php-format
+msgid ""
+"Allow %s to collect some usage data. This will allow  you to get more out of "
+"your plugin experience – get awesome customer support, receive exclusive "
+"deals and discounts on  premium products and more. You can choose to skip "
+"this step, %s will still work just fine."
+msgstr ""
+
+#: wd/templates/display_subscribe.php:19
+msgid "What data is being collected?"
+msgstr ""
+
+#: wd/templates/display_subscribe.php:36
+msgid "Privacy Policy"
+msgstr ""
+
+#: wd/templates/display_subscribe.php:42
+msgid "Terms of Use"
+msgstr ""
+
+#: wd/wd.php:74
+msgid "Overview"
+msgstr ""
