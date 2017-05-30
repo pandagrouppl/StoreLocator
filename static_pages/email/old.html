@@ -1,0 +1,63 @@
+<body style="background:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+
+        <tr>
+            <td align="center" valign="top" style="padding:20px 0 20px 0">
+                <!-- [ header starts here] -->
+                <table cellspacing="0" cellpadding="0" border="0" width="650" style="background-color: #000000; border:0px; margin-bottom: 20px; padding-top: 5px;">
+
+                    <tr>
+                        <td align="center" valign="top">
+                            <img src="{{skin url="images/email-templates/logoblack.gif"}}" />
+                        </td>
+                    </tr>
+                </table>
+                <table background="{{skin url="images/email-templates/pj-bg-1-test.png"}}" cellspacing="0" cellpadding="10" border="0" width="650" height="375" style="border:0px;">
+                <!-- [ middle starts here] -->
+        <tr>
+            <td valign="top">
+                <div style="background-image: url('{{skin url="images/email-templates/bg-inner-white.png"}}'); margin: 90px 120px 0 154px; padding: 22px 10px 22px 10px; " >
+                <h1 style="font-size:23px; font-weight:bold; font-style:italic; text-align:center; line-height:22px; margin:0 0 20px 0; font-family: Times New Roman, serif; color: #21201d;">Hello!</h1>
+
+                <p style="font-size:12px; padding:0 5px 0 0; line-height:16px; text-align:center; margin:0; color:#5f5f5f;">
+                    You have received a {{var data.amount}} Gift Card{{depend data.email-from}} from {{var data.email-from}}{{/depend}} to <a href="{{store url=""}}">{{var store.getFrontendName()}}</a>
+                </p>
+                <p style="font-size:12px; padding:0 5px 0 0; line-height:16px; text-align:center; margin:0; color:#5f5f5f;">
+                    <a href="{{store url=""}}">Start shopping now</a>, and apply your gift card code in shopping cart or during checkout.
+                </p>
+</div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="10" border="0" width="650" style="border:0px; margin: 0 0 0 0;">
+    <tr>
+        <td align="center" style="margin:0; padding: 20px 0 0 0;">
+            <p style="margin: 0; text-align:center; font-size:13px; padding:0; line-height:16px; font-family: Arial, sans-serif; color: #21201d;">
+                {{depend data.email-to}}<strong>To:</strong> {{var data.email-to}}<br />{{/depend}}
+                {{depend data.email-from}}<strong>From:</strong> {{var data.email-from}}<br />{{/depend}}
+                {{depend data.email-message}}<strong>Message:</strong> {{var data.email-message}}<br />{{/depend}}
+                <strong>Gift card value:</strong> {{var data.amount}}<br />
+                <strong>Gift card claim code:</strong> {{var data.code}}<br />
+            </p>
+            <div style="background-image: url('{{skin url="images/email-templates/line-gold.png"}}'); width: 100px; height: 1px; margin: 15px 0 15px 0;"></div>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#FFFFFF" align="center" style="background:#FFFFFF; text-align:center;">
+            <center>
+                <p style="font-size:13px; line-height:16px; margin: 20px 0 0 0; font-family: Times New Roman, serif; font-style:italic; ">
+                    If you have any questions about your account or any other matter, please feel free to contact us at
+                    <a href="mailto:{{config path='trans_email/ident_support/email'}}" style="color:#d6a544; text-decoration: none;">{{config path='trans_email/ident_support/email'}}</a>.</p>
+                <p style="font-size:14px; line-height:16px; margin: 20px 0 0 0; font-family: Times New Roman, serif; font-style:italic; ">Thank you again,</p>
+                <p style="font-size:14px; line-height:16px; margin: 20px 0 0 0; font-family: Times New Roman, serif; font-style:italic;">Peter Jackson</p>
+            </center>
+        </td>
+    </tr>
+
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
