@@ -4,5 +4,9 @@ import { useStrict } from 'mobx';
 
 export function init(json) {
     useStrict(true);
-    render(<App json={json}/>, document.getElementById('preact-root'));
+    fetch('/storelocator/index/json')
+        .then(data => data.json())
+        .then(json => {
+            render(<App json={json}/>, document.getElementById('preact-root'));
+        });
 }
