@@ -63,6 +63,14 @@
         {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-devtools.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-checkout.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org/l4w/magento2-anz-payment.git"
         }
     ],
     "extra": {
