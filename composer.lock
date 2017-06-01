@@ -4,9 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "806f3a7c31aa28e435d95c663446ba8d",
-    "content-hash": "6ff3e98a971507f48bc1a3845cec7659",
+    "hash": "74a70c68688503ebe9eff92ede790ad7",
+    "content-hash": "6b7354825fc005eb7832e5f8848e5367",
     "packages": [
+        {
+            "name": "PL/Migs",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-anz-payment.git",
+                "reference": "e5043e6ce93c383ea03b56c951eff482af611f7c"
+            },
+            "require": {
+                "php": "~5.5.22|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Linh",
+                    "email": "sales@polacin.com",
+                    "homepage": "http://www.polacin.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ANZ eGate Payment. The payment method is for Migs support",
+            "time": "2017-05-31 11:25:06"
+        },
+        {
+            "name": "PandaGroup/Checkout",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-checkout.git",
+                "reference": "0c981f012789c988c63e968fb89e2530c7d8e851"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Checkout update module for Magento 2.x",
+            "time": "2017-05-31 12:31:00"
+        },
         {
             "name": "PandaGroup/Frontools",
             "version": "dev-master",
@@ -9411,6 +9453,8 @@
         "composer/composer": 15,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
+        "pandagroup/checkout": 20,
+        "pl/migs": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
