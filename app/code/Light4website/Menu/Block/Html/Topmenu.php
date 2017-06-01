@@ -76,7 +76,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         }
 
         $html .= '<ul class="level' . $childLevel . ' submenu header-middle__item--'. strtolower($child->_getData('name')) .'">';
-        $html .= '<section class="header-middle__row"><ol class="header-middle__columns">';
+        $html .= '<section class="header-middle__row" menu-block="' . strtolower($child->_getData('name')) . '"><ol class="header-middle__columns">';
         $html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
         $html .= '</ol>';
         $html .= $this->_getMenuCMSBlock($child);
