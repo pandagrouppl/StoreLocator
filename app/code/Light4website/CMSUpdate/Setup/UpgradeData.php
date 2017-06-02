@@ -2093,7 +2093,69 @@ EOT
 
         $setup->endSetup();
 
+        $setup->startSetup();
 
+        if (version_compare($context->getVersion(), '1.3') < 0) {
+            $block = $this->_blockFactory->create();
+            $content = <<<EOT
+<section class="header-middle__block header-middle__block--2-column">
+    <figure><a href="/accessories/bags.html"> <img src="{{media url="wysiwyg/menublock-images/bags.jpg"}}" alt="" /> </a></figure>
+    <figure><a href="/accessories/ties-1.html"> <img src="{{media url="wysiwyg/menublock-images/Ties_6.jpg"}}" alt="" /> </a></figure>
+</section>
+EOT;
 
+            $block->setTitle('menublock-accessories')
+                ->setIdentifier('menublock-accessories')
+                ->setIsActive(true)
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
+
+        $setup->endSetup();
+
+        $setup->startSetup();
+
+        if (version_compare($context->getVersion(), '1.3') < 0) {
+            $block = $this->_blockFactory->create();
+            $content = <<<EOT
+<section class="header-middle__block header-middle__block--3-column">
+    <figure><a href="/clothing/shirts-1.html"> <img src="{{media url="wysiwyg/menublock-images/Shirts_4.jpg"}}" alt="" /> </a></figure>
+    <figure><a href="/clothing/sports-jackets-1.html"> <img src="{{media url="wysiwyg/menublock-images/sports_jacket_1.jpg"}}" alt="" /> </a></figure>
+    <figure><a href="/clothing/coats.html"> <img src="{{media url="wysiwyg//menublock-images/coats.jpg"}}" alt="" /> </a></figure>
+</section>
+EOT;
+
+            $block->setTitle('menublock-clothing')
+                ->setIdentifier('menublock-clothing')
+                ->setIsActive(true)
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
+
+        $setup->endSetup();
+
+        $setup->startSetup();
+
+        if (version_compare($context->getVersion(), '1.3') < 0) {
+            $block = $this->_blockFactory->create();
+            $content = <<<EOT
+<section class="header-middle__block header-middle__block--3-column">
+    <figure><a href="/mens-suits-1.html"> <img src="{{media url="wysiwyg/menublock-images/two_suits_895_2.jpg"}}" alt="" /> </a></figure>
+    <figure><a href="/mens-suits-1.html"> <img src="{{media url="wysiwyg/menublock-images/Formal.jpg"}}" alt="" /> </a></figure>
+    <figure><a href="/mens-suits-1/vests.html"> <img src="{{media url="wysiwyg//menublock-images/two_suits_895_copy_1.jpg"}}" alt="" /> </a></figure>
+</section>
+EOT;
+
+            $block->setTitle('menublock-suits')
+                ->setIdentifier('menublock-suits')
+                ->setIsActive(true)
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
+
+        $setup->endSetup();
     }
 }
