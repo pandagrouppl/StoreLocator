@@ -13,6 +13,3 @@ else
     sudo nvm install node
     sudo npm install -g gulp-cli
 fi
-cd bin && ./magento setup:upgrade && ./magento setup:di:compile && ./magento setup:static-content:deploy && cd ..
-cd tools && npm install && gulp compile && cd ..
-cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server && cd ../../../../../../..
