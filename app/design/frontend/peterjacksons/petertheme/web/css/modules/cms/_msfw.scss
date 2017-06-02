@@ -1,0 +1,146 @@
+.msfw {
+    @include bg('msfw/bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    min-height: 1300px;
+    color: white;
+
+    &__wrapper {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media all and (max-width: $bp-header) {
+            padding: 0 20px;
+        }
+    }
+
+    &__palm {
+        padding: 80px 0;
+    }
+
+    &__title {
+        font-size: 100px;
+        font-weight: normal;
+        margin: 20px 0 40px;
+        text-align: center;
+        font-family: Basilia-Regular;
+
+        @media all and (max-width: $bp-header) {
+            font-size: 45px;
+        }
+    }
+
+    &__paragraph {
+        max-width: 70%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__video {
+        display: block;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        width: 100%;
+        height: 0;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+
+        &--top {
+            justify-content: space-between;
+            margin: 25px 0;
+        }
+
+        &--bottom {
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        @media all and (max-width: $bp-header) {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        width: 49%;
+        display: block;
+
+        @media all and (max-width: $bp-header) {
+            width: 100%;
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        height: 400px;
+
+        &:hover {
+
+            .msfw__overlay {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        &--bts {
+            @include bg('msfw/bts.jpg');
+            background-size: cover;
+        }
+
+        &--runway {
+            @include bg('msfw/runway.jpg');
+            background-size: cover;
+        }
+    }
+
+    &__img-title {
+        text-align: center;
+        color: white;
+        font-size: 36px;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 20px 0 0 0;
+    }
+
+    &__powered {
+        margin: 0 70px;
+
+        @media all and (max-width: $bp-header) {
+            margin: 20px 0;
+        }
+    }
+}
