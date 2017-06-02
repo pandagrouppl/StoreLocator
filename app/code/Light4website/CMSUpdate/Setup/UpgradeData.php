@@ -2157,5 +2157,56 @@ EOT;
         }
 
         $setup->endSetup();
+
+        if (version_compare($context->getVersion(), '1.4') < 0) {
+            $page = $this->_pageFactory->create();
+            $content = <<<EOT
+<section class="msfw">
+    <div class="msfw__wrapper">
+        <img class="msfw__palm" src="{{view url="img/assets/msfw/palm.png"}}">
+        <h1 class="msfw__title">Tailored Escape</h1>
+        <p class="msfw__paragraph">Peter Jackson's inaugural MSFW runway, 'The Tailored Escape', explores elements of travel, adventure and exotic locales through an abundant sun-soaked palette, indicative of Australian high summer. Watch the full feature below and take a sneak peek behind the scenes of our multisensory runway experience.</p>
+        <div class="msfw__video">
+            <iframe src="https://www.youtube.com/embed/KsZ2x9E944Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <section class="msfw__row msfw__row--top">
+            <a class="msfw__link" href="{{store url='shop-the-runway.html'}}">
+                <div class="msfw__img-wrapper">
+                    <figure class="msfw__img msfw__img--bts"></figure>
+                    <span class="msfw__overlay"></span>
+                </div>
+                <h3 class="msfw__img-title">Shop the runway</h3>
+            </a>
+            <a class="msfw__link" href="{{store url='msfw-bts'}}">
+                <div class="msfw__img-wrapper">
+                    <figure class="msfw__img msfw__img--runway"></figure>
+                    <span class="msfw__overlay"></span>
+                </div>
+                <h3 class="msfw__img-title">Go behind the scenes</h3>
+            </a>
+        </section>
+        <h5 class="msfw__subtitle">Proudly supported by</h5>
+        <div class="msfw__row msfw__row--bottom">
+            <img class="msfw__powered" src="{{view url="img/assets/msfw/woolmark.png"}}">
+            <img class="msfw__powered" src="{{view url="img/assets/msfw/msfw.png"}}">
+        </div>
+    </div>
+</section>
+EOT;
+            $page->setTitle('Msfw Runway')
+                ->setIdentifier('msfw-runway')
+                ->setIsActive(true)
+                ->setPageLayout('1column-unconstrained-width')
+                ->setLayoutUpdateXml(
+                    <<<EOT
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs" remove="true" />
+</referenceContainer>
+EOT
+                )
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
     }
 }
