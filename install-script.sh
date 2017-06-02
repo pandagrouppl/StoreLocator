@@ -13,3 +13,5 @@ else
     sudo nvm install node
     sudo npm install -g gulp-cli
 fi
+
+find var vendor pub/static pub/media app/etc -type f -exec chmod u+w {} \; && sudo find var vendor pub/static pub/media app/etc -type d -exec chmod u+w {} \; && sudo chmod u+x bin/magento
