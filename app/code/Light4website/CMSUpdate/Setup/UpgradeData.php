@@ -2148,8 +2148,8 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('menublock-presentation')
-                ->setIdentifier('menublock-presentation')
+            $block->setTitle('menublock-suits')
+                ->setIdentifier('menublock-suits')
                 ->setIsActive(true)
                 ->setStores(array(0))
                 ->setContent($content)
