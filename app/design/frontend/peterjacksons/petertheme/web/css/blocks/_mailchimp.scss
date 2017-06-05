@@ -1,0 +1,15 @@
+.mailchimp {
+
+    &__input-wrap {
+        @include form-element-wrapper();
+    }
+
+    &__input {
+        @include form-element();
+    }
+
+    &__submit {
+        @include button-custom(15px 20px, 0, 11px, bold, #0b53c9, white, white, black, none);
+        width: 100%;
+    }
+}

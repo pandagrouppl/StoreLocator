@@ -39,7 +39,8 @@
     &__upper-wrapper {
 
         .page-footer__linkbox {
-            min-width: 200px;
+            min-width: 147px;
+            max-width: 400px;
 
             li {
                 margin-bottom: 15px;
@@ -59,7 +60,7 @@
 
     &__linkbox {
         box-sizing: border-box;
-        padding: 15px;
+        padding: 15px 10px;
     }
 
     &__comodo {
@@ -112,7 +113,7 @@
     }
 
 }
-@media screen and (max-width: $sm-breakpoint) {
+@media screen and (max-width: $sm-breakpoint + 55px) {
     .page-footer {
 
         h3 {
