@@ -2158,6 +2158,8 @@ EOT;
 
         $setup->endSetup();
 
+        $setup->startSetup();
+
         if (version_compare($context->getVersion(), '1.4') < 0) {
             $page = $this->_pageFactory->create();
             $content = <<<EOT
@@ -2208,5 +2210,33 @@ EOT
                 ->setContent($content)
                 ->save();
         }
+
+        $setup->endSetup();
+
+        $setup->startSetup();
+
+        if (version_compare($context->getVersion(), '1.5') < 0) {
+            $block = $this->_blockFactory->create();
+            $content = <<<EOT
+<section class="header-middle__block header-middle__block--3-column">
+    <figure><a href="/blog/the-pea-coat-a-seafaring-staple/"> <img src="{{media url='wysiwyg/blog_1_1.jpg'}}" alt="The Pora Coat Uncovered" /> </a></figure>
+    <figure><a href="/blog/suit-fit-guide/"> <img src="{{media url='wysiwyg/blog_2_1.jpg'}}" alt="Our Suit Fit Guide" /> </a></figure>
+    <figure><a href="/blog/3-key-pieces-power-winter-tailoring/"> <img src="{{media url='wysiwyg/blog_3_4.jpg'}}" alt="3 Key Winter Pieces" /> </a></figure>
+</section>
+EOT;
+
+            $block->setTitle('menublock-editorial')
+                ->setIdentifier('menublock-editorial')
+                ->setIsActive(true)
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
+
+        $setup->endSetup();
+
+
+
+
     }
 }
