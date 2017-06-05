@@ -277,8 +277,27 @@ class UpgradeSchema implements UpgradeSchemaInterface
     {
         $table = $setup->getTable('amasty_amshopby_filter_setting');
 
-        $sql = "ALTER TABLE `$table` CHANGE `is_collapsed` `is_expanded` INT(11) NOT NULL DEFAULT '0' COMMENT 'Is filter expanded'";
-        $setup->getConnection()->query($sql);
+        # ---------------------- BUG PROBLEM ---------------------- #
+
+//        $sql = "ALTER TABLE `$table` CHANGE `is_collapsed` `is_expanded` INT(11) NOT NULL DEFAULT '0' COMMENT 'Is filter expanded'";
+//        $setup->getConnection()->query($sql);
+
+        # ---------------------- BUG SOLUTION --------------------- #
+        $connection = $setup->getConnection();
+
+        $connection->dropColumn('amasty_amshopby_filter_setting', 'is_collapsed');
+
+        $connection->addColumn(
+            $table,
+            'is_expanded',
+            [
+                'type' => \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                'nullable' => false,
+                'default' =>0,
+                'comment' => 'Is filter expanded'
+            ]
+        );
+        # ------------------------ END BUG ------------------------ #
 
         $sql = "UPDATE `$table` SET `is_expanded` = 1 - `is_expanded`;";
         $setup->getConnection()->query($sql);
