@@ -5,15 +5,12 @@
  */
 -->
 
-<div class="checkout-table">
+<!-- ko foreach: getRegion('summary') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+<!--/ko-->
 
-    <!-- ko foreach: getRegion('summary') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
+<div class="opc-block-shipping-information">
+    <!-- ko foreach: getRegion('shipping-information') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
     <!--/ko-->
-
-    <div class="opc-block-shipping-information">
-        <!-- ko foreach: getRegion('shipping-information') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!--/ko-->
-    </div>
 </div>

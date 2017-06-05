@@ -4,8 +4,12 @@
  * See COPYING.txt for license details.
  */
 -->
-<li id="shipping" class="checkout-shipping-address" data-bind="fadeVisible: visible()">
-    <div class="step-title" data-bind="i18n: 'Shipping Address'" data-role="title"></div>
+<li id="shipping" class="checkout-shipping-address checkout__shipping-address" data-bind="fadeVisible: visible()">
+    <div class="checkout__step-wrapper">
+        <div class="step-title checkout__step-number">1</div>
+        <div class="checkout__step-title" data-bind="i18n: 'Shipping Address'"></div>
+    </div>
+
     <div id="checkout-step-shipping"
          class="step-content"
          data-role="content">
@@ -49,11 +53,14 @@
 
 <!--Shipping method template-->
 <li id="opc-shipping_method"
-    class="checkout-shipping-method"
+    class="checkout-shipping-method checkout__shipping-method"
     data-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
-        <div class="step-title" data-bind="i18n: 'Shipping Methods'" data-role="title"></div>
+        <div class="checkout__step-wrapper">
+            <div class="step-title checkout__step-number">2</div>
+            <div class="checkout__step-title" data-bind="i18n: 'Shipping Methods'"></div>
+        </div>
         <!-- ko foreach: getRegion('before-shipping-method-form') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
         <!-- /ko -->
