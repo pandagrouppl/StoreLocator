@@ -17,11 +17,13 @@
                        data-bind="
                             textInput: email,
                             css: ns+'__input ' + ns+'__input--'+index,
-                            hasFocus: emailFocused"
+                            hasFocus: emailFocused,
+                            attr: {
+                                    placeholder: 'Email Address*'
+                                }"
                        name="username"
                        data-validate="{required:true, 'validate-email':true}"
                        id="customer-email" />
-                <!-- ko template: 'ui/form/element/helper/tooltip' --><!-- /ko -->
             </div>
         </div>
 

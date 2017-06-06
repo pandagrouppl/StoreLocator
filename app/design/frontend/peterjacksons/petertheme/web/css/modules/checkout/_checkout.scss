@@ -17,6 +17,31 @@
         color: #999;
     }
 
+    &__steps-and-sidebar {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__steps {
+        flex: 1;
+    }
+
+    &__sidebar {
+        flex: 0 0 350px;
+        background-color: #efefef;
+        padding: 15px 15px 40px 15px;
+    }
+
+    &__sidebar-title {
+        font-weight: bold;
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 30px;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
     &__steps-list {
         display: flex;
         flex-wrap: wrap;
@@ -168,6 +193,10 @@
         }
     }
 
+    &__payment-method {
+        padding-right: 10px;
+    }
+
     &__payments {
 
         button {
@@ -211,7 +240,7 @@
         }
 
         &__shipping-method {
-            padding: 0 1.5vw;
+            padding: 0 10px;
         }
     }
 }

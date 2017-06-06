@@ -8,25 +8,22 @@
 <!-- ko template: getTemplate() --><!-- /ko -->
 <!--/ko-->
 
-<!-- ko foreach: getRegion('progressBar') -->
-<!-- ko template: getTemplate() --><!-- /ko -->
-<!--/ko-->
-
-<!-- ko foreach: getRegion('estimation') -->
-    <!-- ko template: getTemplate() --><!-- /ko -->
-<!--/ko-->
-
 <!-- ko foreach: getRegion('messages') -->
     <!-- ko template: getTemplate() --><!-- /ko -->
 <!--/ko-->
-<div class="opc-wrapper checkout-content">
-    <ol class="opc checkout__steps-list" id="checkoutSteps">
-    <!-- ko foreach: getRegion('steps') -->
+<div class="checkout__steps-and-sidebar">
+    <div class="opc-wrapper checkout__steps">
+        <ol class="opc checkout__steps-list" id="checkoutSteps">
+        <!-- ko foreach: getRegion('steps') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+
+        </ol>
+    </div>
+    <div class="checkout__sidebar">
+        <!-- ko foreach: getRegion('sidebar') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
-    <!--/ko-->
-    </ol>
+        <!--/ko-->
+    </div>
 </div>
 
-<!-- ko foreach: getRegion('sidebar') -->
-    <!-- ko template: getTemplate() --><!-- /ko -->
-<!--/ko-->

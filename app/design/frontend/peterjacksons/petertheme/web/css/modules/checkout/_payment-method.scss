@@ -1,0 +1,12 @@
+.payment-method {
+    .payment-method-content {
+        display: none;
+    }
+
+    &._active {
+        .payment-method-content {
+            display: block;
+        }
+    }
+
+}
