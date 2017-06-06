@@ -2069,14 +2069,15 @@ EOT;
     </div>
 </section>
 EOT;
-
-            $page->setTitle('Career')
-                ->setIdentifier('career')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setLayoutUpdateXml(
-                    <<<EOT
-<referenceContainer name="content">
+            $existingPage = $page->load('career', 'identifier');
+            if (!$existingPage->getId()) {
+                $page->setTitle('Career')
+                    ->setIdentifier('career')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setLayoutUpdateXml(
+                        <<<EOT
+    <referenceContainer name="content">
     <referenceBlock name="page.main.title">
         <action method="setPageTitle">
             <argument translate="true" name="title" xsi:type="string">CARRERS</argument>
@@ -2085,10 +2086,12 @@ EOT;
 </referenceContainer>
 <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
 EOT
-                )
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                    )
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
+
         }
 
         $setup->endSetup();
@@ -2103,13 +2106,15 @@ EOT
     <figure><a href="/accessories/ties-1.html"> <img src="{{media url="wysiwyg/menublock-images/Ties_6.jpg"}}" alt="" /> </a></figure>
 </section>
 EOT;
-
-            $block->setTitle('menublock-accessories')
-                ->setIdentifier('menublock-accessories')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $existingBlock = $block->load('menublock-accessories', 'identifier');
+            if (!$existingBlock->getId()) {
+                $block->setTitle('menublock-accessories')
+                    ->setIdentifier('menublock-accessories')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -2125,13 +2130,15 @@ EOT;
     <figure><a href="/clothing/coats.html"> <img src="{{media url="wysiwyg//menublock-images/coats.jpg"}}" alt="" /> </a></figure>
 </section>
 EOT;
-
-            $block->setTitle('menublock-clothing')
-                ->setIdentifier('menublock-clothing')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $existingBlock = $block->load('menublock-clothing', 'identifier');
+            if (!$existingBlock->getId()) {
+                $block->setTitle('menublock-clothing')
+                    ->setIdentifier('menublock-clothing')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -2147,13 +2154,15 @@ EOT;
     <figure><a href="/mens-suits-1/vests.html"> <img src="{{media url="wysiwyg//menublock-images/two_suits_895_copy_1.jpg"}}" alt="" /> </a></figure>
 </section>
 EOT;
-
-            $block->setTitle('menublock-suits')
-                ->setIdentifier('menublock-suits')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $existingBlock = $block->load('menublock-accessories', 'identifier');
+            if (!$existingBlock->getId()) {
+                $block->setTitle('menublock-accessories')
+                    ->setIdentifier('menublock-suits')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
