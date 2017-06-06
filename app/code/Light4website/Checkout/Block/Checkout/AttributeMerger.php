@@ -110,7 +110,7 @@ class AttributeMerger extends \Magento\Checkout\Block\Checkout\AttributeMerger
                     : $attributeConfig['validation'],
                 'additionalClasses' => $isFirstLine ? : 'additional',
                 'label' => $attributeConfig['label'],
-//                'placeholder' => $attributeConfig['label'] . '*',
+                'placeholder' => $attributeConfig['label'] . '*',
             ];
             if ($isFirstLine && isset($attributeConfig['default']) && $attributeConfig['default'] != null) {
                 $line['value'] = $attributeConfig['default'];
