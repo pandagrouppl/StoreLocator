@@ -1,4 +1,5 @@
 .payment-method {
+
     .payment-method-content {
         display: none;
     }
@@ -7,6 +8,22 @@
         .payment-method-content {
             display: block;
         }
+    }
+
+    &-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    fieldset {
+        border: none;
+    }
+
+    .billing-address-details._active {
+        padding: 20px;
+        margin: 10px 0;
+        border: 2px solid grey;
     }
 
 }
