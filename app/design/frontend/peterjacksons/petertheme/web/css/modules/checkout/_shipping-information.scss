@@ -1,5 +1,4 @@
 .shipping-information {
-
     font-size: 14px;
 
     &-title {
@@ -14,6 +13,11 @@
         position: absolute;
         right: 0;
         @include button-custom(4px 10px, 0, inherit, bold, white, #666, white, black);
+    }
+
+    &-content {
+        margin-top: 10px;
+
     }
 
 }
