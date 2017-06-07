@@ -59,8 +59,17 @@
         margin-right: 5px;
     }
 
+    th.mark, td.amount {
+        font-size: 12px;
+
+        strong {
+            font-size: 14px;
+        }
+    }
+
     th.mark {
         text-align: left;
+        font-weight: 400;
     }
 
     td.amount {
