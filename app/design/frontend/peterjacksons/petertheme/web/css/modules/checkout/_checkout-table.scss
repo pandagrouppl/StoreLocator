@@ -54,5 +54,17 @@
         display: flex;
         justify-content: flex-end;
     }
+
+    .product-image-container {
+        margin-right: 5px;
+    }
+
+    th.mark {
+        text-align: left;
+    }
+
+    td.amount {
+        text-align: right;
+    }
 }
 
