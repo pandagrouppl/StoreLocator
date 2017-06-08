@@ -1,5 +1,5 @@
 .cart-container {
-    button {
+    button.update {
         @include button-grey(10px, 10px 0, 15px, normal);
     }
 }
