@@ -22,7 +22,7 @@
     }
 
     &__name-and-attrs {
-        flex-basis: 55%;
+        flex: 1;
     }
 
     &__name {
@@ -50,9 +50,29 @@
     }
 
     &__price {
-        flex-basis: 35%;
+        flex-basis: 18%;
         display: flex;
         justify-content: flex-end;
     }
-}
 
+    .product-image-container {
+        margin-right: 5px;
+    }
+
+    th.mark, td.amount {
+        font-size: 12px;
+
+        strong {
+            font-size: 14px;
+        }
+    }
+
+    th.mark {
+        text-align: left;
+        font-weight: 400;
+    }
+
+    td.amount {
+        text-align: right;
+    }
+}
