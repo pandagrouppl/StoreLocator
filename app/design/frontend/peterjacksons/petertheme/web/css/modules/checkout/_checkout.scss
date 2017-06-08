@@ -2,6 +2,10 @@
     letter-spacing: 1px;
     color: #515151;
 
+    .authentication-wrapper {
+        margin: 40px 0 20px;
+    }
+
     a {
         margin: 0;
         padding: 0;
@@ -199,6 +203,10 @@
         button {
             @include button-blue()
         }
+    }
+
+    &__payment-method {
+        padding-right: 10px;
     }
 
     &__cc-img {
