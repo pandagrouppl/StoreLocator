@@ -23,14 +23,5 @@ export = class Main {
             const popup = new popups.Popups();
             const lookBook = new LookBook.LookBook();
         });
-
-        $(document).ajaxComplete(() => {
-            const but = $('.checkout__button--calculate');
-            //but.appendTo('.authentication-wrapper');
-            if ($('.checkout__payments').is(':visible')) {
-                but.hide();
-            }
-        });
-
     }
 }

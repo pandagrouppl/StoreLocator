@@ -1,4 +1,14 @@
 .payment-method {
+    padding-right: 10px;
+
+    .payment-method-title {
+        display: flex;
+        align-items: center;
+
+        input, label, div {
+            margin: 0 4px;
+        }
+    }
 
     .payment-method-content {
         display: none;
@@ -24,6 +34,10 @@
         padding: 20px;
         margin: 10px 0;
         border: 2px solid grey;
+    }
+
+    &-content {
+        padding: 10px 10px 10px 19px;
     }
 
 }
