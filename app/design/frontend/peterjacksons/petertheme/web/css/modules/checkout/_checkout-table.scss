@@ -22,7 +22,7 @@
     }
 
     &__name-and-attrs {
-        flex-basis: 55%;
+        flex: 1;
     }
 
     &__name {
@@ -50,7 +50,7 @@
     }
 
     &__price {
-        flex-basis: 35%;
+        flex-basis: 18%;
         display: flex;
         justify-content: flex-end;
     }
@@ -76,4 +76,3 @@
         text-align: right;
     }
 }
-

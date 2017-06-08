@@ -30,6 +30,7 @@
         flex: 0 0 350px;
         background-color: #efefef;
         padding: 15px 15px 40px 15px;
+        line-height: 1.3em;
     }
 
     &__sidebar-title {
@@ -193,15 +194,21 @@
         }
     }
 
-    &__payment-method {
-        padding-right: 10px;
-    }
-
     &__payments {
 
         button {
             @include button-blue()
         }
+    }
+
+    &__cc-img {
+        @include sprite(credit-cards);
+        display: inline-block;
+    }
+
+    &__pp-img {
+        @include sprite(paypal-logo);
+        display: inline-block;
     }
 
     &__discount-title {

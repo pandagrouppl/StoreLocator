@@ -13,19 +13,17 @@
     &-edit {
         position: absolute;
         right: 0;
+        top: 5px;
         @include button-custom(4px 10px, 0, inherit, bold, white, #666, white, black);
     }
 
     &-content {
-        margin-top: 13px;
-        font-style: italic;
+        margin-top: 17px;
         font-size: 12px;
     }
 
     &__address {
         display: block;
-        padding: 2px 0;
-
     }
 
 }
