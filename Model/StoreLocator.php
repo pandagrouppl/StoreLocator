@@ -22,7 +22,7 @@ class StoreLocator extends AbstractModel
             'apiKey'    => 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
             'geo'       => ['lat' => 52.4046, 'lng' => 16.9252],
             'zoom'      => 11,
-            'country'   => 'pl',
+            'country'   => 'au',
             'pin'       => 'http://i.imgur.com/cOHpOCp.png'
         ];
 
