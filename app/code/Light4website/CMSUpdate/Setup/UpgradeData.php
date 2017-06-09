@@ -6,6 +6,7 @@ use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
+
 /**
  * @codeCoverageIgnore
  */
@@ -22,6 +23,11 @@ class UpgradeData implements UpgradeDataInterface
     protected $_blockFactory;
 
     /**
+     * @var \Magento\Store\Model\StoreManagerInterface
+     */
+    protected $_storeManager;
+
+    /**
      * Construct
      *
      * @param \Magento\Cms\Model\PageFactory $pageFactory
@@ -29,10 +35,12 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function __construct(
         \Magento\Cms\Model\PageFactory $pageFactory,
-        \Magento\Cms\Model\BlockFactory $blockFactory
+        \Magento\Cms\Model\BlockFactory $blockFactory,
+        \Magento\Store\Model\StoreManagerInterface $storeManager
     ) {
         $this->_pageFactory = $pageFactory;
         $this->_blockFactory = $blockFactory;
+        $this->_storeManager = $storeManager;
     }
 
     /**
@@ -42,6 +50,8 @@ class UpgradeData implements UpgradeDataInterface
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         $setup->startSetup();
+        # $storeId = 1;
+        $storeId = (int) $this->_storeManager->getStore()->getId();
 
         if (version_compare($context->getVersion(), '1.1') < 0) {
             $page = $this->_pageFactory->create();
@@ -73,13 +83,17 @@ class UpgradeData implements UpgradeDataInterface
 
 EOT;
 
-            $page->setTitle('About Us')
-                ->setIdentifier('about_us')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('about_us', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('About Us')
+                    ->setIdentifier('about_us')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -92,12 +106,15 @@ EOT;
 {{block class="Magento\\Cms\\Block\\Block" block_id="contact-us"}}
 EOT;
 
-            $page->setTitle('Contact Us')
-                ->setIdentifier('contact_us')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setLayoutUpdateXml(
-                    <<<EOT
+            $blockExists = $page->checkIdentifier('contact_us', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Contact Us')
+                    ->setIdentifier('contact_us')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setLayoutUpdateXml(
+                        <<<EOT
 <referenceContainer name="content">
     <referenceBlock name="page.main.title">
         <action method="setPageTitle">
@@ -107,10 +124,11 @@ EOT;
 </referenceContainer>
 <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
 EOT
-                )
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                    )
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -144,13 +162,17 @@ EOT
 </section>
 EOT;
 
-            $page->setTitle('Look Book')
-                ->setIdentifier('look-book')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('look-book', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Look Book')
+                    ->setIdentifier('look-book')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -336,13 +358,17 @@ EOT;
 </section>
 EOT;
 
-            $page->setTitle('Made To Measure')
-                ->setIdentifier('made-to-measure')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('made-to-measure', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Made To Measure')
+                    ->setIdentifier('made-to-measure')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -469,13 +495,17 @@ EOT;
 </article>
 EOT;
 
-            $page->setTitle('Our Design')
-                ->setIdentifier('our-design')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('our-design', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Our Design')
+                    ->setIdentifier('our-design')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -575,13 +605,17 @@ EOT;
 </article>
 EOT;
 
-            $page->setTitle('Our Labels')
-                ->setIdentifier('our-labels')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('our-labels', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Our Labels')
+                    ->setIdentifier('our-labels')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -832,13 +866,17 @@ EOT;
 </article>
 EOT;
 
-            $page->setTitle('Our Mills')
-                ->setIdentifier('our-mills')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('our-mills', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Our Mills')
+                    ->setIdentifier('our-mills')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1067,13 +1105,17 @@ EOT;
     </p></div>
 EOT;
 
-            $page->setTitle('Shipping returns')
-                ->setIdentifier('shipping-returns')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('shipping-returns', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Shipping returns')
+                    ->setIdentifier('shipping-returns')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1099,14 +1141,17 @@ EOT;
         }
 // ]]></script>
 EOT;
+            $blockExists = $page->checkIdentifier('size-chart', $storeId);
+            if (false === $blockExists) {
 
-            $page->setTitle('Size chart')
-                ->setIdentifier('size-chart')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                $page->setTitle('Size chart')
+                    ->setIdentifier('size-chart')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1160,13 +1205,17 @@ EOT;
 </article>
 EOT;
 
-            $page->setTitle('Sustainability')
-                ->setIdentifier('sustainability')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $page->checkIdentifier('sustainability', $storeId);
+            if (false === $blockExists) {
+
+                $page->setTitle('Sustainability')
+                    ->setIdentifier('sustainability')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1230,14 +1279,17 @@ EOT;
     <p>Peter Jackson Australia Pty. reserves the right to amend these Terms and Conditions at any time and without informing you. All changes will be posted online and continued use of the site will be deemed acceptance of the new Terms and Conditions.</p>
 </div>
 EOT;
+            $blockExists = $page->checkIdentifier('terms', $storeId);
+            if (false === $blockExists) {
 
-            $page->setTitle('Terms')
-                ->setIdentifier('terms')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                $page->setTitle('Terms')
+                    ->setIdentifier('terms')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1254,12 +1306,16 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('menublock')
-                ->setIdentifier('menublock')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $block->getCollection()->addFilter('identifier', 'menublock')->getData();
+            if (false === $blockExists) {
+
+                $block->setTitle('menublock')
+                    ->setIdentifier('menublock')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1276,12 +1332,15 @@ EOT;
 <li class="sustainability"><a href="{{store url='sustainability'}}">Sustainability</a></li>
 EOT;
 
-            $block->setTitle('about-us-menu')
-                ->setIdentifier('about-us-menu')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $block->getCollection()->addFilter('identifier', 'about-us-menu')->getData();
+            if (false === $blockExists) {
+                $block->setTitle('about-us-menu')
+                    ->setIdentifier('about-us-menu')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1299,12 +1358,16 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('blog-header')
-                ->setIdentifier('blog-header')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $block->getCollection()->addFilter('identifier', 'blog-header')->getData();
+            if (false === $blockExists) {
+
+                $block->setTitle('blog-header')
+                    ->setIdentifier('blog-header')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1346,12 +1409,16 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('contact-us')
-                ->setIdentifier('contact-us')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $block->getCollection()->addFilter('identifier', 'contact-us')->getData();
+            if (false === $blockExists) {
+
+                $block->setTitle('contact-us')
+                    ->setIdentifier('contact-us')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1471,12 +1538,16 @@ EOT;
 </section>
 EOT;
 
-            $block->setTitle('faq')
-                ->setIdentifier('faq')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+            $blockExists = $block->getCollection()->addFilter('identifier', 'faq')->getData();
+            if (false === $blockExists) {
+
+                $block->setTitle('faq')
+                    ->setIdentifier('faq')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -1523,13 +1594,16 @@ EOT;
     </ul>
 </div>
 EOT;
+            $blockExists = $block->getCollection()->addFilter('identifier', 'footer-links')->getData();
+            if (false === $blockExists) {
 
-            $block->setTitle('footer-links')
-                ->setIdentifier('footer-links')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                $block->setTitle('footer-links')
+                    ->setIdentifier('footer-links')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -2031,13 +2105,16 @@ EOT;
     </section>
 </section>
 EOT;
+            $blockExists = $block->getCollection()->addFilter('identifier', 'size-chart')->getData();
+            if (false === $blockExists) {
 
-            $block->setTitle('size-chart')
-                ->setIdentifier('size-chart')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                $block->setTitle('size-chart')
+                    ->setIdentifier('size-chart')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -2204,20 +2281,23 @@ EOT;
     </div>
 </section>
 EOT;
-            $page->setTitle('Msfw Runway')
-                ->setIdentifier('msfw-runway')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setLayoutUpdateXml(
-                    <<<EOT
+            $blockExists = $page->checkIdentifier('msfw-runway', $storeId);
+            if (false === $blockExists) {
+                $page->setTitle('Msfw Runway')
+                    ->setIdentifier('msfw-runway')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column-unconstrained-width')
+                    ->setLayoutUpdateXml(
+                        <<<EOT
 <referenceContainer name="page.top">
     <referenceBlock name="breadcrumbs" remove="true" />
 </referenceContainer>
 EOT
-                )
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                    )
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
@@ -2233,13 +2313,16 @@ EOT
     <figure><a href="/blog/3-key-pieces-power-winter-tailoring/"> <img src="{{media url='wysiwyg/menublock-images/blog_3_4.jpg'}}" alt="3 Key Winter Pieces" /> </a></figure>
 </section>
 EOT;
+            $blockExists = $block->getCollection()->addFilter('identifier', 'menublock-editorial')->getData();
+            if (false === $blockExists) {
 
-            $block->setTitle('menublock-editorial')
-                ->setIdentifier('menublock-editorial')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
+                $block->setTitle('menublock-editorial')
+                    ->setIdentifier('menublock-editorial')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
         }
 
         $setup->endSetup();
