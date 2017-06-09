@@ -13,6 +13,8 @@
     padding: 0 10px;
     color: #515151;
     font-size: 110%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 @mixin form-select-arrow() {
