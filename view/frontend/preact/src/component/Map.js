@@ -57,6 +57,7 @@ export default class Map extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        debugger;
         if (prevProps.google !== this.props.google) {
             this.loadMap();
         }
@@ -64,6 +65,7 @@ export default class Map extends Component {
             this.restyleMap();
         }
         if (this.props.zoom !== prevProps.zoom) {
+            console.log(this.props.zoom, prevProps.zoom);
             this.map.setZoom(this.props.zoom);
         }
         if (this.props.center !== prevProps.center) {
@@ -101,9 +103,9 @@ export default class Map extends Component {
             const mapConfig = Object.assign({}, {
                 mapTypeId: mapTypeIds[mapTypeFromProps],
                 center: center,
-                zoom: this.props.zoom,
-                maxZoom: this.props.maxZoom,
-                minZoom: this.props.maxZoom,
+                zoom: parseInt(this.props.zoom),
+                maxZoom: parseInt(this.props.maxZoom),
+                minZoom: parseInt(this.props.maxZoom),
                 clickableIcons: this.props.clickableIcons,
                 disableDefaultUI: this.props.disableDefaultUI,
                 zoomControl: this.props.zoomControl,
