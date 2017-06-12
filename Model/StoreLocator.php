@@ -21,7 +21,7 @@ class StoreLocator extends AbstractModel
         $constants = [
             'apiKey'    => 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
             'geo'       => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
-            'zoom'      => 9,
+            'zoom'      => 5,
             'country'   => 'au',
             'pin'       => 'http://www.peterjacksons.com/media/storelocator/images/icon/pinpj2.png'
         ];
