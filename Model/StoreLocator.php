@@ -65,7 +65,7 @@ class StoreLocator extends AbstractModel
                 'zoom'      => $item->getData('zoom_level'),
                 'phone'     => $item->getData('phone'),
                 'email'     => $item->getData('email'),
-                'region'    => "WLKP",
+                'region'    => $item->getData('state'),
                 'hours'     => [
                     'SUN' => [
                         $item->getData('sunday_open'),
