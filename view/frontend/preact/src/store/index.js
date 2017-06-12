@@ -58,8 +58,12 @@ class StateStore {
     }
 
     @action
-    changeView() {
-        this.view = this.view === 'list' ? 'single' : 'list';
+    changeView(view = null) {
+        if (!view) {
+            this.view = this.view === 'list' ? 'single' : 'list';
+        } else {
+            this.view = view;
+        }
         this.error = '';
     }
 

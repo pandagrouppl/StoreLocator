@@ -11,7 +11,17 @@ export default class StoreView extends Component {
         this.state = {
             tab: 'directions'
         };
-        this.store = props.stores.find(this.findStore, router.route.match.params.id);
+        this.routeId = router.route.match.params.id;
+        this.store = props.stores.find(this.findStore, this.routeId);
+    }
+
+    componentDidUpdate() {
+        const currentRoute = this.context.router.route.match.params.id;
+        if (this.routeId !== currentRoute) {
+            this.routeId = currentRoute;
+            this.store = this.props.stores.find(this.findStore, this.routeId);
+            this.props.stateStore.changeMap(this.store.geo, this.store.zoom);
+        }
     }
 
     findStore(q) {
