@@ -10,7 +10,8 @@
                name="payment[method]"
                class="radio"
                data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()" />
-        <div class="checkout__pp-img" aria-label="Pay with PayPal"></div>
+        <label for="paypal_express" class="checkout__pp-img"></label>
+
     </div>
     <div class="payment-method-content">
         <!-- ko foreach: getRegion('messages') -->
