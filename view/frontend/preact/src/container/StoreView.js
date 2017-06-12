@@ -28,23 +28,10 @@ export default class StoreView extends Component {
         return q.id == this;
     }
 
-    renderTab(active) {
-        switch(active) {
-            case 'hours':
-                return (
-                    <div className="tabs__hours">
-                        <h2 className="tabs__h2">Opening Hours</h2>
-                        <HoursSpanFill day={this.store.hours}/>
-                    </div>
-                );
-                break;
-            case 'directions':
-                return (
-                    <DirectionsTab initStop={this.store.addr_strt + ' ' + this.store.addr_cty}/>
-                );
-                break;
-        }
+    showTab(active, set) {
+        return (active == set) ? 'display: block' : 'display: none';
     }
+
 
     setTab(selected) {
         this.setState({tab: selected});
@@ -73,7 +60,14 @@ export default class StoreView extends Component {
                         <div className={this.setTabClass(tab2)} onClick={() => this.setTab(tab2)}>Directions</div>
                     </div>
                     <div className="tabs__tab-body">
-                        {this.renderTab(this.state.tab)}
+                        <div className="tabs__hours" style={this.showTab(this.state.tab, tab1)}>
+                            <h2 className="tabs__h2">Opening Hours</h2>
+                            <HoursSpanFill day={this.store.hours}/>
+                        </div>
+                        <div className="tabs__directions" style={this.showTab(this.state.tab, tab2)}>
+                            <DirectionsTab initStop={this.store.addr_strt + ' ' + this.store.addr_cty} />
+                        </div>
+
                     </div>
                 </div>
             </div>

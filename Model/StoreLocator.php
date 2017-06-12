@@ -20,22 +20,37 @@ class StoreLocator extends AbstractModel
 
         $constants = [
             'apiKey'    => 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
-            'geo'       => ['lat' => 52.4046, 'lng' => 16.9252],
-            'zoom'      => 11,
+            'geo'       => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
+            'zoom'      => 5,
             'country'   => 'au',
-            'pin'       => 'http://i.imgur.com/cOHpOCp.png'
+            'pin'       => 'http://www.peterjacksons.com/media/storelocator/images/icon/pinpj2.png'
         ];
 
         $regions = [
             [
-                'name'  => 'WLKP',
-                'geo'   => ['lat' => 52.360719, 'lng' => 17.259426],
-                'zoom'  => 9
+                'name'  => 'VIC',
+                'geo'   => ['lat' => -37.4713077, 'lng' => 144.7851531],
+                'zoom'  => 5
             ],
             [
-                'name'  => 'LUB',
-                'geo'   => ['lat' => 52.170800, 'lng' => 15.254622],
-                'zoom'  => 8
+                'name' => 'SA',
+                'geo' => [ 'lat' => -30.0002315, 'lng' => 136.2091547 ],
+                'zoom' => 5
+            ],
+            [
+                'name' => 'QLD',
+                'geo' => [ 'lat' => -20.9175738, 'lng' => 142.7027956 ],
+                'zoom' => 5
+            ],
+            [
+                'name' => 'NSW',
+                'geo' => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
+                'zoom' => 5
+            ],
+            [
+                'name' => 'ACT',
+                'geo' => [ 'lat' => -35.4734679, 'lng' => 149.0123679 ],
+                'zoom' => 9
             ]
         ];
 
