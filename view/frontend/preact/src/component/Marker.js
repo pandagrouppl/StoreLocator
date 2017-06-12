@@ -1,5 +1,9 @@
 import { h, Component } from 'preact';
 
+import camelize from '../util/Camelize';
+
+const evtNames = ['click', 'mouseover', 'recenter', 'dragend'];
+
 export default class Marker extends Component {
 
     componentDidMount() {
@@ -40,6 +44,13 @@ export default class Marker extends Component {
             icon: icon
         };
         this.marker = new google.maps.Marker(pref);
+
+        this.marker.addListener('click', function() {
+            const evtName = `onClick`;
+            if (this.props[evtName]) {
+                this.props[evtName](this.props);
+            }
+        }.bind(this));
     }
 
     render() {
