@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    require(["Magento_Customer/js/customer-data", "Magento_Customer/js/section-config"], function(customerData, sectionConfig) {
+        document.addEventListener('quickView', function (e) {
+            var sections;
+
+            if (e.detail.method.match(/post|put/i)) {
+                sections = sectionConfig.getAffectedSections(e.detail.action);
+
+                if (sections) {
+                    customerData.reload(sections, true);
+                }
+            }
+        }, false);
+    });
+</script>
