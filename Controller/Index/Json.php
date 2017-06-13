@@ -36,7 +36,7 @@ class Json extends \Magento\Framework\App\Action\Action
 //            return $result;
 //        }
 
-        $response = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->getStoriesData();
+        $response = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->getStoresData();
 
         $result->setData($response);
         return $result;

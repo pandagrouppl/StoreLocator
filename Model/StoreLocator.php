@@ -14,7 +14,7 @@ class StoreLocator extends AbstractModel
         $this->_init('PandaGroup\StoreLocator\Model\Resource\StoreLocator');
     }
 
-    public function getStoriesData()
+    public function getStoresData()
     {
         $collection = $this->getCollection();
 
@@ -68,32 +68,32 @@ class StoreLocator extends AbstractModel
                 'region'    => $item->getData('state'),
                 'hours'     => [
                     'SUN' => [
-                        $item->getData('sunday_open'),
-                        $item->getData('sunday_close')
+                        date('h:i A', strtotime($item->getData('sunday_open'))),
+                        date('h:i A', strtotime($item->getData('sunday_close')))
                     ],
                     "MON"=> [
-                        $item->getData('monday_open'),
-                        $item->getData('monday_close')
+                        date('h:i A', strtotime($item->getData('monday_open'))),
+                        date('h:i A', strtotime($item->getData('monday_close')))
                     ],
                     "TUE"=> [
-                        $item->getData('tuesday_open'),
-                        $item->getData('tuesday_close')
+                        date('h:i A', strtotime($item->getData('tuesday_open'))),
+                        date('h:i A', strtotime($item->getData('tuesday_close')))
                     ],
                     "WED"=> [
-                        $item->getData('wednesday_open'),
-                        $item->getData('wednesday_close')
+                        date('h:i A', strtotime($item->getData('wednesday_open'))),
+                        date('h:i A', strtotime($item->getData('wednesday_close')))
                     ],
                     "THU"=> [
-                        $item->getData('thursday_open'),
-                        $item->getData('thursday_close')
+                        date('h:i A', strtotime($item->getData('thursday_open'))),
+                        date('h:i A', strtotime($item->getData('thursday_close')))
                     ],
                     "FRI"=> [
-                        $item->getData('friday_open'),
-                        $item->getData('friday_close')
+                        date('h:i A', strtotime($item->getData('friday_open'))),
+                        date('h:i A', strtotime($item->getData('friday_close')))
                     ],
                     "SAT"=> [
-                        $item->getData('saturday_open'),
-                        $item->getData('saturday_close')
+                        date('h:i A', strtotime($item->getData('saturday_open'))),
+                        date('h:i A', strtotime($item->getData('saturday_close')))
                     ]
                 ]
             ];
