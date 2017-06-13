@@ -21,7 +21,7 @@ body._has-modal-custom .modal-custom-overlay {
     transition-duration: 0.3s;
     transition-property: transform, visibility;
     transition-timing-function: ease-in-out;
-    width: auto;
+//    width: auto;
 }
 
 .modal-slide,
@@ -32,6 +32,8 @@ body._has-modal-custom .modal-custom-overlay {
     right: 0;
     top: 0;
     position: fixed;
+    justify-content: center;
+    display: flex;
 
     &._show {
         visibility: visible;
@@ -48,11 +50,45 @@ body._has-modal-custom .modal-custom-overlay {
 .modal-slide._show .modal-inner-wrap,
 .modal-popup._show .modal-inner-wrap {
     transform: translate(0, 0);
-}
 
+}
+.modal-inner-wrap {
+    min-width: 350px;
+    width: 35vw;
+
+    .modal-header {
+        position: relative;
+
+        h1 {
+            color: $grey;
+        }
+
+        button.action-close {
+            @include button-grey-no-bd(10px 20px, 0);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    label {
+        color: white;
+    }
+
+
+    .modal-footer {
+        .action-save-address {
+            @include button-blue(10px 20px, 10px 0);
+        }
+        .action-hide-popup {
+            @include button-grey-no-bd(10px 20px, 10px);
+        }
+    }
+
+}
 .modals-overlay {
     z-index: 899;
-    background-color: rgba(51, 51, 51, 0.55);
+    background-color: rgba(51, 51, 51, 0.8);
 }
 
 

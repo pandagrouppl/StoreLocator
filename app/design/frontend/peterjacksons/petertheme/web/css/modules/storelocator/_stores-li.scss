@@ -39,7 +39,8 @@
     }
 
     &__hours {
-        @include form-element()
+        @include form-element();
+        font-family: monospace;
     }
 
     &__hours-arrow {
