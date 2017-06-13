@@ -1,0 +1,44 @@
+<?php
+/**
+ *
+**/
+?>
+
+<?php if ($post = $this->getPost()): ?>
+	<?php if (($content = trim($post->getContent())) !== ''): ?>
+		<div class="post-content"><?php echo $content ?></div>
+
+        <div class="post-footer">
+            <ul class="post-footer__list">
+                <li class="post-footer__large-letters">
+                    <span>Share with your mates</span>
+                </li>
+                <li>
+                    <a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo $post->getUrl() ?>">
+                        <span class="post-footer__icon post-footer__icon--fb"></span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://twitter.com/peterjacksonau/">
+                        <span class="post-footer__icon post-footer__icon--twt"></span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://pinterest.com/peterjacksonau/">
+                        <span class="post-footer__icon post-footer__icon--ptrst"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="post-footer__posts-nav-wrap post-footer__large-letters">
+                <?php if ($post->getPreviousPost()): ?>
+                    <a href="<?php echo $post->getPreviousPost()->getUrl(); ?>" class="post-footer__posts-nav post-footer__posts-nav--prev">&lt; Previous post</a>
+                <?php endif; ?>
+                <?php if ($post->getNextPost()): ?>
+                    <a href="<?php echo $post->getNextPost()->getUrl(); ?>" class="post-footer__posts-nav post-footer__posts-nav--next">Next post &gt;</a>
+                <?php endif; ?>
+            </div>
+        </div>
+
+
+    <?php endif; ?>
+<?php endif; ?>

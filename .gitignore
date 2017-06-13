@@ -11,6 +11,7 @@ atlassian*
 
 /app/code/Magento
 /app/code/PandaGroup
+/app/code/PL
 /app/design/*/Magento
 /app/etc
 /app/i18n/magento

@@ -1,7 +1,7 @@
 .is-blog {
 
     .page-main {
-        padding: 0;
+        padding: 0 10px;
 
         &__columns {
             display: flex;
@@ -34,6 +34,63 @@
         h1 {
             font-size: 40px;
             font-weight: normal;
+        }
+    }
+
+    .post-footer {
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #bcbbbb;
+            border-bottom: 1px solid #bcbbbb;
+            padding: 18px 0 18px 0;
+            margin: 41px 0 41px 0;
+
+            li {
+                margin: 5px;
+            }
+        }
+
+        &__large-letters {
+            font-family: Merriweather;
+            font-size: 20px;
+            color: #666;
+            font-weight: bold;
+            font-style: italic;
+
+            a {
+                color: #666;
+
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+            &--fb {
+                @include sprite(blog-share-fb);
+            }
+
+            &--twt {
+                @include sprite(blog-share-twt);
+            }
+
+            &--ptrst {
+                @include sprite(blog-share-ptrst);
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &__posts-nav-wrap {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
