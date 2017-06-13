@@ -2,7 +2,8 @@ import { h } from 'preact';
 
 const HoursFormatter = (props) => {
     const closedCheck = (hours_arr) => {
-        return (hours_arr[0].toLowerCase() == '0:00') ? 'closed' : hours_arr.join(' - ');
+
+        return ((hours_arr[0] == '12:00 AM') && (hours_arr[1] == '12:00 AM') ) ? 'Closed' : hours_arr.join(' - ');
     };
 
     const Wrapper = props.wrapper;
