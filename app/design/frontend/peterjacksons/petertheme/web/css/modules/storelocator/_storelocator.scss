@@ -2,7 +2,18 @@
 
     .page-main {
         max-width: 100%;
+        min-height: 50vh;
         padding: 0;
+        position: relative;
+
+    }
+
+    #preact-loader {
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%
     }
 }
 

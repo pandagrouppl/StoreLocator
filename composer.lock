@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74a70c68688503ebe9eff92ede790ad7",
+    "hash": "af0dacb85729cb0a038b7c42eda10d3e",
     "content-hash": "6b7354825fc005eb7832e5f8848e5367",
     "packages": [
         {
@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-payment.git",
-                "reference": "e5043e6ce93c383ea03b56c951eff482af611f7c"
+                "reference": "923b3b34f6b61f0f5721a09d454e8a96335483ed"
             },
             "require": {
                 "php": "~5.5.22|~5.6.0|~7.0.0"
@@ -32,7 +32,7 @@
                 }
             ],
             "description": "ANZ eGate Payment. The payment method is for Migs support",
-            "time": "2017-05-31 11:25:06"
+            "time": "2017-06-13 09:36:22"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -40,14 +40,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "060825cebb1a1e5617c01311c3e3c6136f51eaf5"
+                "reference": "69e75d19d2abb3157bcb07663fce1226c03f5a3e"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-06-08 08:27:40"
+            "time": "2017-06-13 09:51:41"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -70,12 +70,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "fdd898c0441172cdaca88b463cc619d73f7e392e"
+                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/fdd898c0441172cdaca88b463cc619d73f7e392e",
-                "reference": "fdd898c0441172cdaca88b463cc619d73f7e392e",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/c7788b16ec833eaceae8543acdf1e1362f9c1690",
+                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -87,7 +87,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-05-30 10:29:17"
+            "time": "2017-06-13 10:02:22"
         },
         {
             "name": "braintree/braintree_php",

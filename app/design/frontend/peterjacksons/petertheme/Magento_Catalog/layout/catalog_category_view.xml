@@ -15,7 +15,11 @@
         <referenceBlock name="category.image" remove="True"/>
         <referenceBlock name="category.product.addto.compare" remove="True"/>
         <referenceContainer name="sidebar.additional" remove="True"/>
-        <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main"/>
+        <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main">
+            <block class="Magento\Framework\View\Element\Template" name="quickview.minicart" template="Magento_Catalog::category/quickview-minicart.phtml">
+
+            </block>
+        </referenceContainer>
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>

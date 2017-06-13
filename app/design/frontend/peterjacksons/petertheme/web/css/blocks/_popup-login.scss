@@ -6,7 +6,7 @@
 }
 
 #prpl-modal-popup #prpl-modal-inner-wrap .actions-toolbar button.action {
-    @include button-custom($bg: #c22020);
+    @include button-custom($bg: #c22020, $mg: 0);
 
     span {
         line-height: normal;
@@ -14,12 +14,17 @@
     }
 }
 
-#prpl-modal-inner-wrap .action-close {
-    background: white;
-    border: 0;
-    cursor: pointer;
 
-    span {
+#prpl-modal-popup {
 
+    #prpl-modal-inner-wrap {
+        width: 100%;
+        max-height: 475px;
+
+        .action-close {
+            background: white;
+            border: 0;
+            cursor: pointer;
+        }
     }
 }
