@@ -69,7 +69,7 @@
              role="tabpanel"
              aria-hidden="false">
             <!-- ko if: rates().length  -->
-            <form class="form methods-shipping checkout__shipping-options-wrapper" id="co-shipping-method-form" data-bind="submit: setShippingInformation" novalidate="novalidate">
+            <form class="form methods-shipping checkout__shipping-options-wrapper" id="co-shipping-method-form" data-bind="submit: setShippingInformation" data-mage-init='{"validation":{}}'>
                 <div id="checkout-shipping-method-load">
                     <!--ko foreach: { data: rates(), as: 'method'}-->
                     <div class="checkout__shipping-option" data-bind="click: $parent.selectShippingMethod">

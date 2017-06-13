@@ -91,6 +91,18 @@
     }
 }
 
+@mixin button-grey-no-bd($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: $white;
+    border: none;
+    color: $grey-dark;
+
+    &:hover {
+        background: $grey-dark;
+        color: $white;
+    }
+}
+
 @mixin button-blue($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     @include button($pd, $mg, $fontsize, $font-weight);
     background: #0b53c9;
