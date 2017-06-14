@@ -26,7 +26,7 @@ class StoreLocator extends AbstractModel
         $collection = $this->getCollection();
 
         $constants = [
-            'apiKey'    => 'AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo',
+            'apiKey'    => 'AIzaSyD06oeZOxRpKwKCg3G0pEilZmgunVdgTUA',
             'geo'       => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
             'zoom'      => 5,
             'country'   => 'au',
