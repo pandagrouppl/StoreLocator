@@ -17,6 +17,9 @@ atlassian*
 /app/i18n/magento
 /app/*.*
 
+/app/code/Amasty/Rules
+/app/code/Amasty/RulesPro
+
 /bin
 
 /dev/shell
