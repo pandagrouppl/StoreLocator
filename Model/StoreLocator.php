@@ -6,6 +6,8 @@ use Magento\Framework\Model\AbstractModel;
 
 class StoreLocator extends AbstractModel
 {
+    const GOOGLE_API_ADDRESS_URL = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
+
     /**
      * Define resource model
      */
@@ -14,6 +16,11 @@ class StoreLocator extends AbstractModel
         $this->_init('PandaGroup\StoreLocator\Model\Resource\StoreLocator');
     }
 
+    /**
+     * Returns array to controller action with all stores data
+     *
+     * @return array
+     */
     public function getStoresData()
     {
         $collection = $this->getCollection();
@@ -108,5 +115,133 @@ class StoreLocator extends AbstractModel
         ];
 
         return $response;
+    }
+
+    /**
+     * Send front message
+     *
+     * @param $message
+     * @param string $type
+     */
+    protected function sendMessage($message, $type = 'notice') {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        /** @var  $messageManager \Magento\Framework\Message\ManagerInterface */
+        $messageManager = $objectManager->create('\Magento\Framework\Message\ManagerInterface');
+
+        if (false === empty($message)) {
+            switch ($type) {
+                case 'success': {
+                    $messageManager->addSuccessMessage(__($message));
+                    break;
+                }
+                case 'error': {
+                    $messageManager->addErrorMessage(__($message));
+                    break;
+                }
+                default: {
+                    $messageManager->addNoticeMessage(__($message));
+                }
+            }
+        }
+    }
+
+    /**
+     * Update region for StoreLocator Model
+     *
+     * @param $store
+     * @param $region
+     *
+     * @return bool
+     *
+     * @internal param $storeId
+     */
+    public function setNewRegion($store, $region) {
+
+        /** @var  $storeLocatorModel \PandaGroup\StoreLocator\Model\StoreLocator */
+        $storeLocatorModel = $store;
+
+        try {
+            $storeLocatorModel->setData('state', $region);
+            $storeLocatorModel->save();
+        } catch (\Exception $e) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Update all stores regions in the database, which have incorrect region
+     */
+    public function updateRegions()
+    {
+        /** @var  $storesCollection \PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection */
+        $storesCollection = $this->getCollection();
+
+        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+        $jsonHelper     = $objectManager->create('\Magento\Framework\Json\Helper\Data');
+
+        $path = self::GOOGLE_API_ADDRESS_URL;
+
+        $qtyOfFoundedRegions = 0;
+        $qtyOfRegions = 0;
+
+        foreach($storesCollection as $item) {
+
+            $countryName = $item->getData('country');
+            $state       = $item->getData('state');
+
+            if (null  === $state or
+                'VIC' !== $state or
+                'SA'  !== $state or
+                'QLD' !== $state or
+                'NSW' !== $state or
+                'ACT' !== $state)
+            {
+                $qtyOfRegions++;
+
+                $address = $item->getData('address') .' '. $countryName;
+                $addressLink = urlencode($address);
+
+                $url = $path . $addressLink;
+
+                $result = file_get_contents($url);
+                $json = $jsonHelper->jsonDecode($result);
+
+                if (isset($json['results'][0]['address_components'])) {
+                    $names = $json['results'][0]['address_components'];
+                }
+                else {
+                    $message = 'Cannot found correctly address for: ' . $address;
+                    $this->sendMessage($message, 'error');
+                    continue;
+                }
+
+                $isFounded = false;
+                foreach ($names as $regionName) {
+
+                    if ($regionName['short_name'] == 'VIC' or
+                        $regionName['short_name'] == 'SA'  or
+                        $regionName['short_name'] == 'QLD' or
+                        $regionName['short_name'] == 'NSW' or
+                        $regionName['short_name'] == 'ACT')
+                    {
+                        $isFounded = true;
+
+                        $saveStatus = $this->setNewRegion($item, $regionName['short_name']);
+                        if (false == $saveStatus) {
+                            $this->sendMessage('Cannot save region for: ' . $address, 'error');
+                        } else {
+                            $qtyOfFoundedRegions++;
+                        }
+                    }
+                }
+                if ($isFounded === false) {
+                    $this->sendMessage('Cannot found region for: ' . $address, 'error');
+                }
+            }
+        }
+
+        $message = 'Updates ' . $qtyOfFoundedRegions . ' new regions of '.$qtyOfRegions.'.';
+        $this->sendMessage($message, 'success');
     }
 }

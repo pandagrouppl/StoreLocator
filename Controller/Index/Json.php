@@ -7,13 +7,20 @@ class Json extends \Magento\Framework\App\Action\Action
     /** @var  \Magento\Framework\Controller\Result\JsonFactory */
     protected $resultJsonFactory;
 
-    /**      * @param \Magento\Framework\App\Action\Context $context      */
+    /** @var  \PandaGroup\StoreLocator\Model\StoreLocator */
+    protected $storeLocatorModel;
+
+    /**
+     * Constructor
+     */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-        \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+        \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory,
+        \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel
     )
     {
         $this->resultJsonFactory = $resultJsonFactory;
+        $this->storeLocatorModel = $storeLocatorModel;
         parent::__construct($context);
     }
     /**
@@ -36,7 +43,7 @@ class Json extends \Magento\Framework\App\Action\Action
 //            return $result;
 //        }
 
-        $response = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->getStoresData();
+        $response = $this->storeLocatorModel->getStoresData();
 
         $result->setData($response);
         return $result;
