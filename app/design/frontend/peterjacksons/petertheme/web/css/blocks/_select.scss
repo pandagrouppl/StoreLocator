@@ -7,6 +7,7 @@
         border: 1px solid #959494;
         border-radius: 3px;
         width: 100%;
+        text-transform: uppercase;
     }
 
     &__arrow {
@@ -26,6 +27,10 @@
         &--product-page {
             position: relative;
             width: 12%;
+        }
+
+        &--Size {
+            width: 40%;
         }
 
         &--cart-qty {

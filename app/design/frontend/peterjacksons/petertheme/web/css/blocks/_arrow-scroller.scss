@@ -1,0 +1,17 @@
+.arrow-scroller {
+    position: fixed;
+    bottom: 145px;
+    right: 40px;
+    display: none;
+    cursor: pointer;
+    background: #CCC;
+    padding: 25px 0 0 0;
+    @include bg('arr-up.png');
+    background-position: top center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: HelveticaNeueLTStd35Thin;
+    font-family: Roboto;
+    font-weight: 400;
+    z-index: 9999999;
+}

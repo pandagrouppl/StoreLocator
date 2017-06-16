@@ -49,7 +49,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
             <?php foreach ($_productCollection as $_product): ?>
                 <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item catalog-grid__item catalog-item">'
                     : '</li><li class="item product product-item catalog-grid__item catalog-item">' ?>
-                <div class="product-item-info" data-container="product-grid">
+                <div class="product-item-info catalog-item__info" data-container="product-grid">
                     <?php
                     $productImage = $block->getImage($_product, $image);
                     if ($pos != null) {
@@ -60,7 +60,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                     <?php // Product Image ?>
                     <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-item__img" tabindex="-1">
                         <?php echo $productImage->toHtml(); ?>
-                        <?php $productImageAttr = $_product->getCustomAttribute('hover_image');?>
+                        <?php $productImageAttr = $_product->getCustomAttribute('hover_image'); ?>
                         <?php if ($productImageAttr):
                             $productHoverImage = $this->helper('Magento\Catalog\Helper\Image')
                                 ->init($_product, 'hover_image')
@@ -96,6 +96,13 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                        class="action more"><?php /* @escapeNotVerified */ echo __('Learn More') ?></a>
                                 </div>
                             <?php endif; ?>
+                        </div>
+                        <div class="catalog-item__promo">
+                            <?php $_promoWysig = $_product->getCustomAttribute('promo_wysig'); ?>
+                            <?php if ($_promoWysig): ?>
+                                <?php echo $_promoWysig->getValue() ?>
+                            <?php endif; ?>
+<!--                            --><?php //var_dump($_product); die();?>
                         </div>
                     </div>
                 </div>

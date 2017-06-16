@@ -14,6 +14,7 @@ export class Inliners {
         this._sliders();
         this._cmsBannerZoom();
         this._toggleFilter();
+        this._scrollTopArrow();
     }
 
     private _toggleFilter(): void {
@@ -117,5 +118,22 @@ export class Inliners {
             () => {
                 img.css({'background-size': 'auto 100%'})
             });
+    }
+
+    private _scrollTopArrow(): void {
+        const arrow = $('.arrow-scroller');
+
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 900) {
+                arrow.fadeIn();
+            } else {
+                arrow.fadeOut();
+            }
+        });
+
+        arrow.on('click', () => {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
     }
  }

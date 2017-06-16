@@ -71,6 +71,7 @@
 
     &__tabs {
         display: flex;
+        margin: 20px 0 10px;
 
         @media all and (max-width: $bp-header) {
             flex-direction: column;

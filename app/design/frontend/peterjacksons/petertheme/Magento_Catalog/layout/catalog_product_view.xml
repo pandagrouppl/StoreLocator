@@ -33,5 +33,8 @@
                 </arguments>
             </block>
         </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="arrow.scroller" template="Magento_Theme::html/footer/arrow-scroller.phtml"/>
+        </referenceContainer>
     </body>
 </page>
