@@ -41,9 +41,12 @@
     }
 
     &__section {
-        background: #f3f3f3;
-        border: 1px solid #dadada;
-        padding: 0 35px 20px;
+
+        .label-chart {
+            background: #f3f3f3;
+            border: 1px solid #dadada;
+            padding: 0 35px 20px;
+        }
     }
 
     &__row {

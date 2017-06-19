@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-payment.git",
-                "reference": "923b3b34f6b61f0f5721a09d454e8a96335483ed"
+                "reference": "7ac1f076995d2fffab59dcb06e1fa486b0c0a30e"
             },
             "require": {
                 "php": "~5.5.22|~5.6.0|~7.0.0"
@@ -32,7 +32,7 @@
                 }
             ],
             "description": "ANZ eGate Payment. The payment method is for Migs support",
-            "time": "2017-06-13 09:36:22"
+            "time": "2017-06-13 14:57:49"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -70,12 +70,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690"
+                "reference": "892d1d67846b2504e0ff7369a915983899988257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/c7788b16ec833eaceae8543acdf1e1362f9c1690",
-                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/892d1d67846b2504e0ff7369a915983899988257",
+                "reference": "892d1d67846b2504e0ff7369a915983899988257",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -87,7 +87,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-13 10:02:22"
+            "time": "2017-06-14 08:49:58"
         },
         {
             "name": "braintree/braintree_php",
