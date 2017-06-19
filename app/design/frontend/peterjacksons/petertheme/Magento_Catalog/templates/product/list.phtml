@@ -97,13 +97,12 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <div class="catalog-item__promo">
-                            <?php $_promoWysig = $_product->getCustomAttribute('promo_wysig'); ?>
-                            <?php if ($_promoWysig): ?>
-                                <?php echo $_promoWysig->getValue() ?>
-                            <?php endif; ?>
-<!--                            --><?php //var_dump($_product); die();?>
-                        </div>
+                        <?php $_promoWysig = $_product->getCustomAttribute('promo_wysig'); ?>
+                        <?php if ($_promoWysig): ?>
+                            <div class="catalog-item__promo">
+                                    <?php echo $_promoWysig->getValue() ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php echo($iterator == count($_productCollection)+1) ? '</li>' : '' ?>
