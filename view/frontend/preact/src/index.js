@@ -1,6 +1,7 @@
 import { h, render } from 'preact';
 import App from './App';
 import { useStrict } from 'mobx';
+import 'whatwg-fetch';
 
 
 const dots = (loader) => {
