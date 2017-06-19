@@ -23,9 +23,6 @@
             padding: 0 20px;
         }
     }
-}
-
-.wordpress-post-view {
 
     .page-main__title {
         font-family: league_gothic;
@@ -35,6 +32,25 @@
             font-size: 40px;
             font-weight: normal;
         }
+    }
+
+    .post-content, .post-entry {
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5em;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            color: #222;
+
+            &:hover {
+                color: #999;
+            }
+        }
+
     }
 
     .post-footer {
@@ -71,6 +87,7 @@
 
         &__icon {
             display: inline-block;
+
             &--fb {
                 @include sprite(blog-share-fb);
             }
