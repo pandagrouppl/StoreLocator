@@ -31,7 +31,34 @@
 
         li {
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
         }
+
+
+    }
+
+    &__icon {
+        flex: 0 0 30px;
+        padding: 2px 0;
+
+        &--address {
+            @include sprite(storelocator-pin);
+        }
+
+        &--mobile {
+            @include sprite(storelocator-phone);
+        }
+
+        &--envelope {
+            @include sprite(storelocator-email);
+        }
+
+        &--directions {
+            @include sprite(storelocator-directions);
+        }
+
+
     }
 
     &__hours-wrapper {
