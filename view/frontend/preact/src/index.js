@@ -1,6 +1,5 @@
 import { h, render } from 'preact';
 import App from './App';
-import { useStrict } from 'mobx';
 require('es6-promise').polyfill();
 
 
@@ -19,7 +18,7 @@ const dots = (loader) => {
 };
 
 export function init() {
-    useStrict(true);
+
     const loader = document.getElementById('preact-loader');
     dots(loader);
     fetch('/storelocator/index/json')

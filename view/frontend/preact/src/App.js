@@ -1,6 +1,7 @@
 //import 'preact/devtools';
 import { h, Component } from 'preact';
 import { Provider } from 'mobx-preact';
+import { useStrict } from 'mobx';
 
 import { Route, BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
@@ -19,6 +20,7 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+        useStrict(true);
         this.stateStore = new StateStore(props.json);
     }
 
