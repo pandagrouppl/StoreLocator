@@ -79,11 +79,11 @@
         },
         {
             "type": "vcs",
-            "url": "git@bitbucket.org/l4w/magento2-amasty-rules.git"
+            "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git"
         },
         {
             "type": "vcs",
-            "url": "git@bitbucket.org/l4w/magento2-amasty-rules-pro.git"
+            "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git"
         }
     ],
     "extra": {
