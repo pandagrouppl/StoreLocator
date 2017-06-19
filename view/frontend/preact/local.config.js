@@ -5,7 +5,7 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         js: './src/index.js',
-        vendor: ['whatwg-fetch', 'preact']
+        vendor: ['preact']
     },
     output: {
         path: path.join(__dirname, './../../../../../../../pub/static/frontend/peterjacksons/petertheme/en_US/PandaGroup_StoreLocator/dist'),
@@ -42,11 +42,6 @@ module.exports = {
         modules: [
             path.resolve(__dirname, 'node_modules')
         ]
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-            Promise: 'es6-promise-promise'
-        })
-    ]
+    }
 };
 
