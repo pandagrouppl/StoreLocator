@@ -55,7 +55,7 @@ export default class StoreHeader extends Component {
     backButton() {
         this.props.stateStore.changeView();
         this.props.stateStore.changeMap();
-        this.props.stateStore.refDiv.remove();
+        this.props.stateStore.removeRef();
     }
 
     applyFilter(region) {

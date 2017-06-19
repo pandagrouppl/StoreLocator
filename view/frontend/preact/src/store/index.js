@@ -82,6 +82,11 @@ class StateStore {
         this.refDiv = ref;
     }
 
+    @action
+    removeRef() {
+        this.refDiv.remove();
+    }
+
     @computed
     get geoTotal() {
         return { "lat": this.geo.lat, "lng": this.geo.lng };
