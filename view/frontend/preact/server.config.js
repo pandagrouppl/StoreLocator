@@ -5,7 +5,7 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         js: './src/index.js',
-        vendor: ['preact']
+        vendor: ['whatwg-fetch', 'preact']
     },
     output: {
         path: path.join(__dirname, './../web/dist'),
@@ -13,7 +13,7 @@ module.exports = {
         libraryTarget: 'amd',
         library: 'store-locator'
     },
-    module: {
+        module: {
         rules: [
             {
                 test: /\.css$/,
