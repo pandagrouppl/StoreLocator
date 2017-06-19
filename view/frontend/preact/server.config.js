@@ -42,6 +42,11 @@ module.exports = {
         modules: [
             path.resolve(__dirname, 'node_modules')
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            Promise: 'es6-promise-promise'
+        })
+    ]
 };
 
