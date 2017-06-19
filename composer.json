@@ -16,9 +16,9 @@
         "PandaGroup/Frontools": "dev-master",
         "PandaGroup/Checkout": "dev-master",
         "PL/Migs": "dev-master",
-        "amasty/base": "dev-master",
-        "amasty/module-special-promo": "dev-master",
-        "amasty/module-special-promo-pro": "dev-master"
+        "Amasty/Base": "dev-master",
+        "Amasty/Rules": "dev-master",
+        "Amasty/RulesPro": "dev-master"
 
     },
     "require-dev": {
