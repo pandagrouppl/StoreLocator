@@ -4,16 +4,73 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af0dacb85729cb0a038b7c42eda10d3e",
-    "content-hash": "6b7354825fc005eb7832e5f8848e5367",
+    "hash": "16ad5d1de828b87b448da11cedadd335",
+    "content-hash": "ebe400a2de81e58d56ca932faf1733af",
     "packages": [
+        {
+            "name": "Amasty/Base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-base.git",
+                "reference": "066e975af2bb0d4673a7c247f4199be76f0b0178"
+            },
+            "require": {
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "Commercial"
+            ],
+            "description": "Amasty Base",
+            "time": "2017-06-19 09:14:21"
+        },
+        {
+            "name": "Amasty/Rules",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git",
+                "reference": "6de061532c06b8139b808d5e54fcef052dcbd04e"
+            },
+            "require": {
+                "amasty/base": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "Commercial"
+            ],
+            "description": "Special Promotions by Amasty",
+            "time": "2017-06-19 09:08:02"
+        },
+        {
+            "name": "Amasty/RulesPro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git",
+                "reference": "aa6a3540eb4b807d537b11783660b1c4a5ad8eb8"
+            },
+            "require": {
+                "amasty/base": "*",
+                "amasty/rules": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "Commercial"
+            ],
+            "description": "Special Promotions Pro by Amasty",
+            "time": "2017-06-19 09:14:54"
+        },
         {
             "name": "PL/Migs",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-payment.git",
-                "reference": "923b3b34f6b61f0f5721a09d454e8a96335483ed"
+                "reference": "7ac1f076995d2fffab59dcb06e1fa486b0c0a30e"
             },
             "require": {
                 "php": "~5.5.22|~5.6.0|~7.0.0"
@@ -32,7 +89,7 @@
                 }
             ],
             "description": "ANZ eGate Payment. The payment method is for Migs support",
-            "time": "2017-06-13 09:36:22"
+            "time": "2017-06-13 14:57:49"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -55,14 +112,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "60ad9250f6555dad29c4bfc2a7b53afb0fe136ff"
+                "reference": "5d93e865728e70e8c6a090e4452678e019f980ba"
             },
             "type": "magento2-panda-tool",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-05-30 13:38:39"
+            "time": "2017-06-16 12:26:10"
         },
         {
             "name": "PandaGroup/StoreLocator",
@@ -70,12 +127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690"
+                "reference": "13c2b7f45a5fbc8317fd4cd6ec2a6a1f7a63cdc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/c7788b16ec833eaceae8543acdf1e1362f9c1690",
-                "reference": "c7788b16ec833eaceae8543acdf1e1362f9c1690",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/13c2b7f45a5fbc8317fd4cd6ec2a6a1f7a63cdc9",
+                "reference": "13c2b7f45a5fbc8317fd4cd6ec2a6a1f7a63cdc9",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -87,7 +144,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-13 10:02:22"
+            "time": "2017-06-19 08:20:19"
         },
         {
             "name": "braintree/braintree_php",
@@ -6008,16 +6065,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "791f8c594f300d246cdf01c6b3e1e19611e301d8"
+                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/791f8c594f300d246cdf01c6b3e1e19611e301d8",
-                "reference": "791f8c594f300d246cdf01c6b3e1e19611e301d8",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
+                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
                 "shasum": ""
             },
             "require": {
@@ -6053,7 +6110,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2017-03-06 16:42:24"
+            "time": "2017-06-18 15:11:04"
         },
         {
             "name": "seld/phar-utils",
@@ -9455,6 +9512,9 @@
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
         "pl/migs": 20,
+        "amasty/base": 20,
+        "amasty/rules": 20,
+        "amasty/rulespro": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,

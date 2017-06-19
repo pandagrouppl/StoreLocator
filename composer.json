@@ -16,8 +16,9 @@
         "PandaGroup/Frontools": "dev-master",
         "PandaGroup/Checkout": "dev-master",
         "PL/Migs": "dev-master",
-        "amasty/module-special-promo": "dev-master",
-        "amasty/module-special-promo-pro": "dev-master"
+        "Amasty/Base": "dev-master",
+        "Amasty/Rules": "dev-master",
+        "Amasty/RulesPro": "dev-master"
 
     },
     "require-dev": {
@@ -77,6 +78,10 @@
         {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-anz-payment.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-base.git"
         },
         {
             "type": "vcs",

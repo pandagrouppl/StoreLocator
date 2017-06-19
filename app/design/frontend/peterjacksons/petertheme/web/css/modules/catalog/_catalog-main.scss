@@ -18,6 +18,21 @@
         display: flex;
     }
 
+    .amquickview {
+
+        &-hover {
+            height: 40px;
+            padding: 0;
+        }
+
+        &-link {
+            height: 100%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
     .ias-spinner {
         width: 100%;
     }
