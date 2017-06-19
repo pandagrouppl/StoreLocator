@@ -68,6 +68,7 @@ class StoreLocator extends AbstractModel
                 'id'        => $item->getData('storelocator_id'),
                 'addr_strt' => $item->getData('address'),
                 'addr_cty'  => $item->getData('city'),
+                'zipcode'  => $item->getData('zipcode'),
                 'geo'       => [ 'lat' => $item->getData('latitude'), 'lng' => $item->getData('longtitude')],
                 'zoom'      => $item->getData('zoom_level'),
                 'phone'     => $item->getData('phone'),
