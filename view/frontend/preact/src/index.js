@@ -1,7 +1,7 @@
 import { h, render } from 'preact';
 import App from './App';
 import { useStrict } from 'mobx';
-import 'whatwg-fetch';
+require('es6-promise').polyfill();
 
 
 const dots = (loader) => {
