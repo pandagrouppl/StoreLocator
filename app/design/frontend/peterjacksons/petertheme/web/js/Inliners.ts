@@ -44,8 +44,17 @@ export class Inliners {
     }
 
     private _toggleFilters(): void {
-        $('.layered-nav__button').click(() => {
-            $('.layered-nav').toggle();
+        $('.layered-nav__button').click(function() {
+            const $sidebar = $('.sidebar.sidebar-main');
+
+            if($(this).hasClass('layered-nav__button--closed')) {
+                $sidebar.css('minWidth', '180px');
+            } else {
+                $sidebar.css('minWidth', '0px');
+            }
+
+            $sidebar.find('.layered-nav').toggle();
+            $(this).toggleClass('layered-nav__button--closed');
         });
     }
 
