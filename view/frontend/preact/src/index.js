@@ -1,6 +1,6 @@
 import { h, render } from 'preact';
 import App from './App';
-
+require('es6-promise').polyfill();
 
 
 const dots = (loader) => {
