@@ -7,7 +7,6 @@
 
     .sidebar {
         min-width: 180px;
-        border-right: 1px solid $grey;
         order: -1;
 
         @media all and (max-width: 860px) {
@@ -15,8 +14,11 @@
         }
     }
 
-    .page-main__columns {
-        display: flex;
+    .page-main {
+
+        &__columns {
+            display: flex;
+        }
     }
 
     .amquickview {
@@ -47,20 +49,10 @@
     padding: 0 60px;
     margin: 0 0 50px 0;
 
-    &__title {
-        text-align: center;
-        font-family: league_gothic;
-        text-transform: uppercase;
-
-        h1 {
-            font-size: 50px;
-            font-weight: 400;
-        }
-    }
-
     &__description {
-        margin-bottom: 50px;
+        padding: 40px 20px;
         text-align: center;
+        background: #f1f0f0;
     }
 }
 
