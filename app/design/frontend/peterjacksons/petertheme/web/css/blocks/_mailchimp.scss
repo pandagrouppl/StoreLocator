@@ -1,4 +1,5 @@
 $padding: 2%;
+$border: 4px;
 
 .page-footer__signup {
     .mailchimp {
@@ -19,16 +20,17 @@ $padding: 2%;
             border: none;
             border-bottom: 2px solid #afafaf;
             font-size: 12px;
-            height: 39px;
+            height: 49px;
             line-height: 39px;
             padding: 0;
             transition: all .2s ease;
             width: 100%;
+            margin-bottom: 2px;
 
             &:focus {
                 outline: none;
-                border-bottom-width: 4px;
-                bottom: -2px;
+                border-bottom-width: $border;
+                margin-bottom: 2px - $border/2;
             }
         }
 
@@ -40,12 +42,9 @@ $padding: 2%;
             color: #242424;
             background: none;
             padding: 0;
-//            padding: 0 50px 0 50px;
-//            width: 100%;
             max-width: 240px;
             cursor: pointer;
             text-transform: uppercase;
-//            transition: all 0.3s ease-in-out;
         }
     }
 }
