@@ -10,13 +10,13 @@
     "require": {
         "magento/product-community-edition": "2.1.5",
         "PandaGroup/MigrationTool": "dev-master",
-
         "composer/composer": "@alpha",
         "strategery/magento2-infinitescroll": "^0.2.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "PandaGroup/StoreLocator": "dev-master",
         "PandaGroup/Frontools": "dev-master",
         "PandaGroup/Checkout": "dev-master",
+        "PandaGroup/Careers": "dev-master",
         "PL/Migs": "dev-master",
         "Amasty/Base": "dev-master",
         "Amasty/Rules": "dev-master",
@@ -96,6 +96,10 @@
         {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-careers.git"
         }
     ],
     "extra": {
