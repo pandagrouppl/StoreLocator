@@ -1,23 +1,29 @@
+$padding: 2%;
+
 .page-footer__signup {
     .mailchimp {
         display: flex;
+        position: relative;
 
         &__input-wrap {
+            flex: 1;
+            padding: 0 $padding;
+        }
 
+        &__button-wrap {
+            position: absolute;
+            right: $padding;
         }
 
         &__input {
-            position: relative;
-            bottom: 0;
             border: none;
             border-bottom: 2px solid #afafaf;
             font-size: 12px;
             height: 39px;
             line-height: 39px;
-            background: #FFF;
-            width: 100%;
             padding: 0;
             transition: all .2s ease;
+            width: 100%;
 
             &:focus {
                 outline: none;
@@ -27,20 +33,19 @@
         }
 
         &__submit {
-            background: none;
-            display: inline-block;
-            height: 39px;
-            line-height: 32px;
+            line-height: 39px;
+            border: none;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 14px;
             color: #242424;
-            padding: 0 50px 0 50px;
-            width: 100%;
+            background: none;
+            padding: 0;
+//            padding: 0 50px 0 50px;
+//            width: 100%;
             max-width: 240px;
             cursor: pointer;
             text-transform: uppercase;
-            border: none;
-            transition: all 0.3s ease-in-out;
+//            transition: all 0.3s ease-in-out;
         }
     }
 }

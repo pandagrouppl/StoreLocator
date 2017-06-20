@@ -26,23 +26,33 @@
         background: rgba(255, 255, 255, 0.05);
     }
 
-    &__signup-wrapper, &__upper-lower, &__lower-wrapper {
+    &__upper-lower, &__lower-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    &__signup-wrapper, &__upper-lower, &__lower-wrapper {
         max-width: 962px;
         margin: 0 auto;
         box-sizing: border-box;
     }
 
+
     &__upper-upper {
         background-color: white;
+        padding: 44px 0 35px 0;
     }
 
     &__signup {
 
         h3 {
+            margin: 0 0 27px 0;
+            text-align: center;
+            font-size: 17px;
             text-transform: uppercase;
+            font-weight: bold;
+            color: #666;
         }
     }
 
