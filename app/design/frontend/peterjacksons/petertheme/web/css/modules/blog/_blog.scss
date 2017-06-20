@@ -1,12 +1,25 @@
 .is-blog {
 
+    .breadcrumbs {
+        margin-top: 48px;
+        padding: 0 0 0 10px;
+        max-width: 965px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            padding: 0 0 10px 30px;
+        }
+    }
+
     .page-main {
-        padding: 0 10px;
+        padding: 0;
 
         &__columns {
             display: flex;
+            justify-content: space-between;
+            max-width: 965px;
+            margin: auto;
 
-            @media all and (max-width: $bp-header) {
+            @media all and (max-width: $sm-breakpoint) {
                 flex-direction: column;
             }
         }
@@ -14,13 +27,24 @@
 
     .column.main {
         width: 100%;
+        max-width: 614px;
         box-sizing: border-box;
-        padding-right: 20px;
-        margin-bottom: 120px;
+        margin: 30px 40px 0 0;
 
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: $sm-breakpoint) {
             order: 2;
             padding: 0 20px;
+            max-width: none;
+        }
+    }
+
+    .sidebar.sidebar-main {
+        width: 270px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
     }
 
@@ -49,6 +73,11 @@
             &:hover {
                 color: #999;
             }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
     }

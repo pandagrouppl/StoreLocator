@@ -8,16 +8,22 @@
 <?php /** @var \Amasty\Shopby\Block\Navigation\State $block */?>
 <?php $_filters = $block->getActiveFilters() ?>
 <?php if (!empty($_filters)): ?>
+    <div class="layered-nav__row">
+        <h6 class="layered-nav__filter-header">Refine</h6>
+        <a href="<?php /* @escapeNotVerified */ echo $block->getClearUrl() ?>" class="action clear filter-clear layered-nav__clear"><span><?php /* @escapeNotVerified */ echo __('Clear All') ?></span></a>
+    </div>
     <div class="filter-current" id="am_shopby_container" data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false }}'>
         <ol class="items">
             <?php foreach ($_filters as $_filter): ?>
                 <?php $filterSetting = $this->getFilterSetting($_filter->getFilter());?>
-                <li class="item am_shopby_state_container"
+                <li class="item am_shopby_state_container layered-nav__active-filter"
                     data-container="<?php echo /* @escapeNotVerified */ $_filter->getFilter()->getRequestVar() ?>"
                     data-value="<?php /* @escapeNotVerified */ echo $_filter->getValueString();?>"
                 >
-                    <span class="filter-label"><?php /* @escapeNotVerified */ echo $block->escapeHtml(__($_filter->getName())); ?></span>
-                    <span class="filter-value"><?php /* @escapeNotVerified */ echo $block->viewLabel($_filter);?></span>
+                    <div>
+                        <span class="filter-label"><?php /* @escapeNotVerified */ echo $block->escapeHtml(__($_filter->getName())); ?></span>
+                        <span class="filter-value"><?php /* @escapeNotVerified */ echo $block->viewLabel($_filter);?></span>
+                    </div>
                     <?php
                     $clearLinkUrl = $_filter->getClearLinkUrl();
                     $currentFilterName = $block->escapeHtml(__($_filter->getName())) . " " . $block->stripTags($_filter->getLabel());
@@ -35,7 +41,7 @@
                     <?php else: ?>
                         <a class="action remove" href="<?php /* @escapeNotVerified */ echo $_filter->getRemoveUrl() ?>"
                            title="<?php /* @escapeNotVerified */ echo $block->escapeHtml(__('Remove')) . " " . $currentFilterName;?>">
-                            <span><?php /* @escapeNotVerified */ echo __('Remove This Item') ?></span>
+                            <span>X</span>
                         </a>
                     <?php endif; ?>
 
