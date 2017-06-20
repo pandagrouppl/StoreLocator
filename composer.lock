@@ -127,12 +127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "657e2c88b17ea6b799ebfe5a4aa2225df9b2859a"
+                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/657e2c88b17ea6b799ebfe5a4aa2225df9b2859a",
-                "reference": "657e2c88b17ea6b799ebfe5a4aa2225df9b2859a",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d612a304f4745ba36259f2e62b1e6adac367d03d",
+                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -144,7 +144,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-19 11:05:04"
+            "time": "2017-06-19 13:26:31"
         },
         {
             "name": "braintree/braintree_php",
@@ -6600,7 +6600,7 @@
         },
         {
             "name": "zendframework/zend-code",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
@@ -6653,7 +6653,7 @@
         },
         {
             "name": "zendframework/zend-config",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-config.git",
@@ -6710,7 +6710,7 @@
         },
         {
             "name": "zendframework/zend-console",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-console.git",
@@ -6760,7 +6760,7 @@
         },
         {
             "name": "zendframework/zend-crypt",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-crypt.git",
@@ -6812,7 +6812,7 @@
         },
         {
             "name": "zendframework/zend-di",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-di.git",
@@ -6863,7 +6863,7 @@
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-escaper.git",
@@ -6908,7 +6908,7 @@
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-eventmanager.git",
@@ -6954,7 +6954,7 @@
         },
         {
             "name": "zendframework/zend-filter",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-filter.git",
@@ -7010,7 +7010,7 @@
         },
         {
             "name": "zendframework/zend-form",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-form.git",
@@ -7081,7 +7081,7 @@
         },
         {
             "name": "zendframework/zend-http",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-http.git",
@@ -7132,7 +7132,7 @@
         },
         {
             "name": "zendframework/zend-i18n",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-i18n.git",
@@ -7196,7 +7196,7 @@
         },
         {
             "name": "zendframework/zend-inputfilter",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-inputfilter.git",
@@ -7247,7 +7247,7 @@
         },
         {
             "name": "zendframework/zend-json",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-json.git",
@@ -7301,7 +7301,7 @@
         },
         {
             "name": "zendframework/zend-loader",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-loader.git",
@@ -7346,7 +7346,7 @@
         },
         {
             "name": "zendframework/zend-log",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-log.git",
@@ -7408,7 +7408,7 @@
         },
         {
             "name": "zendframework/zend-math",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-math.git",
@@ -7459,7 +7459,7 @@
         },
         {
             "name": "zendframework/zend-modulemanager",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-modulemanager.git",
@@ -7517,7 +7517,7 @@
         },
         {
             "name": "zendframework/zend-mvc",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-mvc.git",
@@ -7605,7 +7605,7 @@
         },
         {
             "name": "zendframework/zend-serializer",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-serializer.git",
@@ -7658,7 +7658,7 @@
         },
         {
             "name": "zendframework/zend-server",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-server.git",
@@ -7705,7 +7705,7 @@
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-servicemanager.git",
@@ -7755,7 +7755,7 @@
         },
         {
             "name": "zendframework/zend-soap",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-soap.git",
@@ -7807,7 +7807,7 @@
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
@@ -7862,7 +7862,7 @@
         },
         {
             "name": "zendframework/zend-text",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-text.git",
@@ -7909,7 +7909,7 @@
         },
         {
             "name": "zendframework/zend-uri",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-uri.git",
@@ -7957,7 +7957,7 @@
         },
         {
             "name": "zendframework/zend-validator",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-validator.git",
@@ -8022,7 +8022,7 @@
         },
         {
             "name": "zendframework/zend-view",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-view.git",
