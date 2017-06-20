@@ -1,7 +1,7 @@
 .blog-sidebar {
     min-width: 270px;
 
-    @media all and (max-width: $bp-header) {
+    @media all and (max-width: $sm-breakpoint) {
         order: -1;
     }
 
@@ -35,7 +35,7 @@
     }
 
     &__facebook, &__instagram, &__subscribe {
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: $sm-breakpoint) {
             display: none;
         }
     }
