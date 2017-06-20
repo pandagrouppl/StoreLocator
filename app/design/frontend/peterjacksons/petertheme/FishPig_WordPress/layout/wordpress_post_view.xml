@@ -16,5 +16,6 @@
             </referenceContainer>
         </referenceContainer>
         <move element="wp.post.view.meta" destination="wp.post.view.entry" before="post.view.image"/>
+        <move element="page.main.title" destination="content" before="-" />
     </body>
 </page>

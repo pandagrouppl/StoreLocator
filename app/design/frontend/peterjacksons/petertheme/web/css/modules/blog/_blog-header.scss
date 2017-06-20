@@ -2,18 +2,14 @@
     background-image: url("../../img/assets/blog-banner.jpg");
     background-size: cover;
     background-position: center center;
-    min-height: 405px;
+    height: 30vw;
+    max-height: 405px;
     position: relative;
 
     &__wrapper {
         max-width: 440px;
-        margin: auto;
         width: 100%;
-        position: absolute;
         padding: 0;
-        top: 50%;
-        left: 65%;
-        transform: translate(-50%, -50%);
         text-align: center;
     }
 
@@ -29,5 +25,35 @@
         font-style: italic;
         font-size: 19px;
     }
+
+    @media all and (min-width: $sm-breakpoint) {
+        &__wrapper {
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 0 0 auto;
+        }
+
+        &__title {
+            font-size: 9vw;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            margin: 0.5em;
+        }
+    }
 }
+
 
