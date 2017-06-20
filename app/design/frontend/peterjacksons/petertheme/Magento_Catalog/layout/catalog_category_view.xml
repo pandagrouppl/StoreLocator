@@ -16,6 +16,7 @@
         <referenceBlock name="category.product.addto.compare" remove="True"/>
         <referenceContainer name="sidebar.additional" remove="True"/>
         <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main">
+            <block class="Magento\Framework\View\Element\Template" name="wishlist.javascript" template="Magento_Wishlist::catalog/product/list/addto/javascript.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="quickview.minicart" template="Magento_Catalog::category/quickview-minicart.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="arrow.scroller" template="Magento_Theme::html/footer/arrow-scroller.phtml"/>
         </referenceContainer>
