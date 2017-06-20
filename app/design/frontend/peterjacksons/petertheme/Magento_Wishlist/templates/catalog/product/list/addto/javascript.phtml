@@ -1,0 +1,11 @@
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $('.action.towishlist').on('click', function(e) {
+            var url = $(this).data('post').action;
+            var data = $(this).data('post').data;
+            $.post(url, data).done(function(res) {
+                console.log(res);
+            });
+        });
+    });
+</script>
