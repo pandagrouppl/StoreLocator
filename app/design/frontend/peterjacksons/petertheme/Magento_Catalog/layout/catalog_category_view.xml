@@ -9,12 +9,12 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="catalog_category_view"/>
     <body>
-        <move element="page.main.title" destination="content" before="-"/>
-        <move element="category.description" destination="content" after="page.main.title"/>
-        <referenceBlock name="breadcrumbs" remove="True"/>
-        <referenceBlock name="category.image" remove="True"/>
-        <referenceBlock name="category.product.addto.compare" remove="True"/>
-        <referenceContainer name="sidebar.additional" remove="True"/>
+        <!--<move element="page.main.title" destination="page.top" before="-"/>-->
+        <move element="category.description" destination="page.top" before="-"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceBlock name="category.image" remove="true"/>
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
+        <referenceContainer name="sidebar.additional" remove="true"/>
         <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main">
             <block class="Magento\Framework\View\Element\Template" name="wishlist.javascript" template="Magento_Wishlist::catalog/product/list/addto/javascript.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="quickview.minicart" template="Magento_Catalog::category/quickview-minicart.phtml"/>

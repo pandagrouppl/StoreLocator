@@ -10,6 +10,17 @@
         display: none;
     }
 
+    &__filter-header {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+
+    &__row, &__active-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
     &__clear {
         text-decoration: underline;
         font-weight: bold;
@@ -66,15 +77,6 @@
                 display: block;
             }
         }
-    }
-
-    &__button {
-        @include sprite(filter-button);
-        background-color: $white;
-        display: block;
-        position: fixed;
-        margin-left: -75px;
-        cursor: pointer;
     }
 }
 
