@@ -2,12 +2,16 @@
 
     .breadcrumbs {
         margin-top: 48px;
-        padding: 0;
+        padding: 0 0 0 10px;
         max-width: 965px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            padding: 0 0 10px 30px;
+        }
     }
 
     .page-main {
-        padding: 0 10px;
+        padding: 0;
 
         &__columns {
             display: flex;
@@ -73,6 +77,7 @@
 
         img {
             max-width: 100%;
+            height: auto;
         }
 
     }
