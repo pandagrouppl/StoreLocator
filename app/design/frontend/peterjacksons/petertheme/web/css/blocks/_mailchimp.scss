@@ -8,7 +8,6 @@
     &__input {
         position: relative;
         bottom: 0;
-        text-transform: none;
         border: none;
         border-bottom: 2px solid #afafaf;
         font-size: 12px;
@@ -22,14 +21,13 @@
         &:focus {
             outline: none;
             border-bottom-width: 4px;
-            bottom: -2px
+            bottom: -2px;
         }
     }
 
     &__submit {
         background: none;
         display: inline-block;
-        border-radius: 4px;
         height: 39px;
         line-height: 32px;
         font-weight: bold;
