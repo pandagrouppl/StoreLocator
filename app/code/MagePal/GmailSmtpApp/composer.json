@@ -1,0 +1,31 @@
+{
+    "name": "magepal/magento2-gmailsmtpapp",
+    "description":"Configure Magento 2 to send email using Google App, Gmail, Amazon Simple Email Service (SES), Microsoft Office365 and many other SMTP servers",
+    "keywords": [
+        "magento 2",
+        "gmail smtp",
+        "google app",
+        "magetno2 email",
+        "Amazon Simple Email Service",
+        "Amazon SES"
+    ],
+    "require": {
+        "php": "~5.6.0|7.0.2|~7.0.6",
+        "magento/module-backend": "100.0.*|100.1.*",
+        "magento/framework": "100.0.*|100.1.*"
+    },
+    "type": "magento2-module",
+    "version": "1.4.5",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagePal\\GmailSmtpApp\\": ""
+        }
+    }
+}
