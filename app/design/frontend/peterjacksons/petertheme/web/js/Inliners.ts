@@ -16,6 +16,7 @@ export class Inliners {
         this._toggleFilter();
         this._scrollTopArrow();
         this._footerNav();
+        this._footerLinksAlteration();
     }
 
     private _toggleFilter(): void {
@@ -158,6 +159,13 @@ export class Inliners {
                     $(this).next("ul").stop().slideDown(400);
                 }
             }
+        });
+    }
+
+    private _footerLinksAlteration(): void {
+        $(".page-footer__linkbox a").map((i , v) => {
+            const e = $(v);
+            e.attr('title', e.text());
         });
     }
  }
