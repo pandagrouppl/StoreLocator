@@ -1579,18 +1579,18 @@ EOT;
 <div class="page-footer__linkbox">
     <h3>My Account</h3>
     <ul>
-        <li><a class="myacc-trig" href="{{store url='customer/account/login/'}}">sign in</a></li>
-        <li><a href="{{store url='checkout/cart/'}}">view cart</a></li>
+        <li><a class="myacc-trig" href="{{store url='customer/account/login/'}}">Sign in</a></li>
+        <li><a href="{{store url='checkout/cart/'}}">View cart</a></li>
         {{block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/wishlistlink.phtml"}}
     </ul>
 </div>
 <div class="page-footer__linkbox">
     <h3>Information</h3>
     <ul>
-        <li><a href="{{store url='career'}}">careers</a></li>
-        <li><a href="{{store url='storelocator'}}">store locator</a></li>
-        <li><a href="{{store url='terms'}}">terms and conditions</a></li>
-        <li><a href="{{store url='terms'}}">privacy policy</a></li>
+        <li><a href="{{store url='career'}}">Careers</a></li>
+        <li><a href="{{store url='storelocator'}}">Store locator</a></li>
+        <li><a href="{{store url='terms'}}">Terms and conditions</a></li>
+        <li><a href="{{store url='terms'}}">Privacy policy</a></li>
     </ul>
 </div>
 EOT;
