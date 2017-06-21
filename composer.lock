@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16ad5d1de828b87b448da11cedadd335",
-    "content-hash": "ebe400a2de81e58d56ca932faf1733af",
+    "hash": "c45a53fe59349855e61ff58512c14ba3",
+    "content-hash": "9c8e38556ebe3f1f20e14ded74b01a38",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -120,6 +120,35 @@
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
             "time": "2017-06-16 12:26:10"
+        },
+        {
+            "name": "PandaGroup/MigrationTool",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-migration-tool",
+                "reference": "8152de5387dcfaaa82b129440a4d196c15277c1b"
+            },
+            "require": {
+                "magento/framework": "~100.1",
+                "monolog/monolog": "~1.16.0",
+                "symfony/console": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Migration\\": [
+                        "src/Migration",
+                        "tests/unit/testsuite/Migration"
+                    ]
+                },
+                "files": [
+                    "src/Migration/cli_commands.php",
+                    "registration.php"
+                ]
+            },
+            "description": "Migration Tool",
+            "time": "2017-06-19 13:18:30"
         },
         {
             "name": "PandaGroup/StoreLocator",
@@ -9507,6 +9536,7 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
+        "pandagroup/migrationtool": 20,
         "composer/composer": 15,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,

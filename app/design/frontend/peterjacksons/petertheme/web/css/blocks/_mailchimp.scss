@@ -1,15 +1,68 @@
-.mailchimp {
+$padding: 2%;
+$border: 4px;
 
-    &__input-wrap {
-        @include form-element-wrapper();
+.page-footer__signup {
+    .mailchimp {
+        display: flex;
+        position: relative;
+
+        &__input-wrap {
+            flex: 1;
+            padding: 0 $padding;
+        }
+
+        &__button-wrap {
+            position: absolute;
+            right: $padding;
+        }
+
+        &__input {
+            border: none;
+            border-bottom: 2px solid #afafaf;
+            font-size: 12px;
+            height: 49px;
+            line-height: 39px;
+            padding: 0;
+            transition: all .2s ease;
+            width: 100%;
+            margin-bottom: 2px;
+
+            &:focus {
+                outline: none;
+                border-bottom-width: $border;
+                margin-bottom: 2px - $border/2;
+            }
+        }
+
+        &__submit {
+            line-height: 39px;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+            color: #242424;
+            background: none;
+            padding: 0;
+            max-width: 240px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
     }
+}
 
-    &__input {
-        @include form-element();
-    }
+.blog-sidebar__subscribe {
+    .mailchimp {
 
-    &__submit {
-        @include button-custom(15px 20px, 0, 11px, bold, #0b53c9, white, white, black, none);
-        width: 100%;
+        &__input-wrap {
+            @include form-element-wrapper();
+        }
+
+        &__input {
+            @include form-element();
+        }
+
+        &__submit {
+            @include button-custom(15px 20px, 0, 11px, bold, #0b53c9, white, white, black, none);
+            width: 100%;
+        }
     }
 }

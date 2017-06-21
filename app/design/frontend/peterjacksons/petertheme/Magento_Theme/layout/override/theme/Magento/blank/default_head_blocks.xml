@@ -17,7 +17,7 @@
                 </argument>
             </arguments>
         </block>
-        <!--<block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/browsersync.phtml" name="browserSync" />-->
+        <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/browsersync.phtml" name="browserSync" />
     </referenceContainer>
     </body>
 </page>

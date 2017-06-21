@@ -1,25 +1,24 @@
 .page-footer {
     display: flex;
     flex-direction: column;
-    color: #afafaf;
-    background: no-repeat url('../../img/sprite/footer-bg.png') right top #242424;
+    color: #242424;
+    background-color: #f1f0f0;
+    padding-top: 5px;
 
     a {
-        color: #afafaf;
+        font-size: 13px;
+        color: #242424;
         cursor: pointer;
-        text-transform: uppercase;
     }
 
     a:hover {
-        color: white;
         font-weight: bold;
     }
 
     h3 {
-        font-size: 16px;
-        font-family: 'Merriweather', serif;
-        font-weight: normal;
-        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        color: #242424;
         letter-spacing: 0.6px;
     }
 
@@ -27,16 +26,37 @@
         background: rgba(255, 255, 255, 0.05);
     }
 
-    &__upper-wrapper, &__lower-wrapper {
+    &__upper-lower, &__lower-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    &__signup-wrapper, &__upper-lower, &__lower-wrapper {
         max-width: 962px;
         margin: 0 auto;
         box-sizing: border-box;
     }
 
-    &__upper-wrapper {
+
+    &__upper-upper {
+        background-color: white;
+        padding: 44px 0 35px 0;
+    }
+
+    &__signup {
+
+        h3 {
+            margin: 0 0 27px 0;
+            text-align: center;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #666;
+        }
+    }
+
+    &__upper-lower {
 
         .page-footer__linkbox {
             min-width: 147px;
