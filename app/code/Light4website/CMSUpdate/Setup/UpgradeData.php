@@ -1560,10 +1560,10 @@ EOT;
 <div class="page-footer__linkbox">
     <h3>Customer Service</h3>
     <ul>
-        <li><a href="{{store url='contact_us'}}">contact us</a></li>
-        <li><a href="{{store url='size-chart'}}">size charts</a></li>
-        <li><a class="shipping-returns-click">shipping &amp; returns</a></li>
-        <li><a class="faq-click">faq</a></li>
+        <li><a href="{{store url='contact_us'}}">Contact us</a></li>
+        <li><a href="{{store url='size-chart'}}">Size charts</a></li>
+        <li><a class="shipping-returns-click">Shipping &amp; returns</a></li>
+        <li><a class="faq-click">FAQ</a></li>
     </ul>
 </div>
 <div class="page-footer__linkbox">

@@ -38,16 +38,20 @@
 </div>
 <div class="page-footer__lower">
     <div class="page-footer__lower-wrapper">
-    <div class="page-footer__linkbox page-footer__comodo">
-        <script language="JavaScript" type="text/javascript">
-//            TrustLogo("https://www.peterjacksons.com/skin/frontend/peter_jackson_new/may2015/images/comodo_secure_seal_113x59_transp.png", "CL1", "none");
-        </script>
-        <a href="https://ssl.comodo.com" id="comodoTL">Comodo SSL</a>
-        <a class="comodoimg" href="https://ssl.comodo.com/ev-ssl-certificates.php" id="comodoTL">EV SSL Certificate</a>
-        <img class="confidence" src="<?php echo $this->getSkinUrl('images/shop-confidence.png'); ?>"/>
+        <div class="page-footer__lower-linkbox page-footer__lower-linkbox--comodo">
+            <script language="JavaScript" type="text/javascript">
+    //            TrustLogo("https://www.peterjacksons.com/skin/frontend/peter_jackson_new/may2015/images/comodo_secure_seal_113x59_transp.png", "CL1", "none");
+            </script>
+            <a href="https://ssl.comodo.com" id="comodoTL">Comodo SSL</a>
+            <a class="comodoimg" href="https://ssl.comodo.com/ev-ssl-certificates.php" id="comodoTL">EV SSL Certificate</a>
+            <img class="confidence" src="<?php echo $this->getSkinUrl('images/shop-confidence.png'); ?>"/>
+        </div>
+        <div class="page-footer__lower-linkbox page-footer__lower-linkbox--cards">
+            <figure class="page-footer__cards page-footer__cards--visa"></figure>
+            <figure class="page-footer__cards page-footer__cards--mastercard"></figure>
+        </div>
+        <div class="page-footer__lower-linkbox page-footer__lower-linkbox--copyright">
+            <?php /* @escapeNotVerified */ echo $block->getCopyright() ?>
+        </div>
     </div>
-    <div class="page-footer__linkbox page-footer__copyright">
-        <?php /* @escapeNotVerified */ echo $block->getCopyright() ?>
-    </div>
-</div>
 </div>

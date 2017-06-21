@@ -18,7 +18,7 @@
     h3 {
         font-size: 15px;
         font-weight: bold;
-        color: #242424;
+        color: #666;
         letter-spacing: 0.6px;
     }
 
@@ -56,31 +56,44 @@
         }
     }
 
-    &__upper-lower {
-
-        .page-footer__linkbox {
-            min-width: 147px;
-            max-width: 400px;
-
-            li {
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    &__lower-wrapper {
-        padding-top: 40px;
-        min-height: 140px;
-
-        > div {
-            display: flex;
-            align-items: center;
-        }
-    }
-
     &__linkbox {
+        min-width: 145px;
+        max-width: 400px;
         box-sizing: border-box;
         padding: 15px 10px;
+
+        li {
+            margin-bottom: 15px;
+        }
+    }
+
+
+    &__lower-wrapper {
+        padding: 40px 2% 30px 2%;
+        min-height: 140px;
+    }
+
+    &__lower-linkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--copyright {
+            text-transform: uppercase;
+        }
+    }
+
+    &__cards {
+        display: block;
+        margin: 0 0 0 15px;
+
+        &--visa {
+            @include sprite(footer-visa);
+        }
+
+        &--mastercard {
+            @include sprite(footer-mastercard);
+        }
     }
 
     &__comodo {
@@ -133,34 +146,124 @@
     }
 
 }
-@media screen and (max-width: $sm-breakpoint + 55px) {
+
+@media screen and (max-width: $sm-breakpoint) {
     .page-footer {
 
-        h3 {
-            font-size: 20px;
-            line-height: 25px;
+        &__upper-lower {
+            padding: 30px 2% 0 2%;
         }
 
-        a {
-            font-size: 17px;
-            line-height: 25px;
-        }
+        &__linkbox {
+            width: 100%;
+            padding: 12px 0;
+            border-bottom: 2px solid #dcd9d9;
 
-        &__upper {
+            &#{&} {
+                max-width: none;
+            }
 
-            > div > div {
-                flex: 1 0 50%;
+            > ul {
+                display: none;
+                margin-top: 15px;
+
+                li {
+                    margin: 30px 0;
+                }
+            }
+
+            h3 {
+                margin: 0;
+                position: relative;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 32px;
+                cursor: pointer;
+
+                &::before,
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: 36px;
+                    font-weight: 300;
+                }
+
+                &::before {
+                    content: '—';
+                    opacity: 0;
+                    font-size: 28px;
+                }
+
+                &.active {
+
+                    &::before {
+                        animation: changeSign2 0.2s linear 0.2s forwards alternate;
+                    }
+
+                    &::after {
+                        animation: changeSign 0.4s linear forwards alternate;
+                    }
+                }
+
+                &.inactive {
+
+                    &::before {
+                        animation: changeSign 0.2s linear 0.2s forwards alternate;
+                    }
+
+                    &::after {
+                        animation: changeSign2 0.4s linear forwards alternate;
+                    }
+                }
+
+                @at-root {
+                    @keyframes changeSign {
+
+                        0% {
+                            opacity: 1;
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            opacity: 0;
+                            transform: rotate(-360deg);
+                        }
+                    }
+
+                    @keyframes changeSign2 {
+
+                        0% {
+                            opacity: 0;
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
             }
         }
 
-        &__lower {
+        &__social-icons {
+            display: none;
+        }
 
-            > div > div {
-                flex: 1 0 100%;
-                display: flex;
-                justify-content: center;
+        &__lower-wrapper {
+            justify-content: center;
+        }
+
+        &__lower-linkbox {
+            padding: 10px 0;
+
+            &--copyright {
+                flex-basis: 100%;
             }
         }
     }
 }
+
 

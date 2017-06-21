@@ -15,6 +15,7 @@ export class Inliners {
         this._cmsBannerZoom();
         this._toggleFilter();
         this._scrollTopArrow();
+        this._footerNav();
     }
 
     private _toggleFilter(): void {
@@ -143,6 +144,20 @@ export class Inliners {
         arrow.on('click', () => {
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
+        });
+    }
+    
+    private _footerNav(): void {
+        $(".page-footer__linkbox h3").on("click", function () {
+            if ($(window).width() <= 800) {
+                if (true === $(this).hasClass("active")) {
+                    $(this).removeClass("active").addClass("inactive");
+                    $(this).next("ul").stop().slideUp(400);
+                } else {
+                    $(this).removeClass("inactive").addClass("active");
+                    $(this).next("ul").stop().slideDown(400);
+                }
+            }
         });
     }
  }
