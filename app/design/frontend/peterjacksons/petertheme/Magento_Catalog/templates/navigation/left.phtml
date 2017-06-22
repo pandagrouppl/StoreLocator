@@ -1,0 +1,45 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Category left navigation
+ *
+ * @var $block \Magento\Catalog\Block\Navigation
+ */
+?>
+<?php if (!$block->getCategory()) {
+    return;
+} ?>
+<?php $_categories = $block->getCurrentChildCategories(); ?>
+<?php $_count = is_array($_categories) ? count($_categories) : $_categories->count(); ?>
+<?php if ($_count): ?>
+    <div class="block filter">
+        <div class="content">
+            <dl class="options" id="narrow-by-list2">
+                <dt class="layered-nav__title">
+                    <?php /* @escapeNotVerified */ echo __('Category') ?>
+                    <figure class="layered-nav__minus">
+                        <span class="layered-nav__line layered-nav__line--horizontal"></span>
+                        <span class="layered-nav__line layered-nav__line--vertical"></span>
+                    </figure>
+                </dt>
+                <dd class="layered-nav__content">
+                    <ol class="items">
+                        <?php foreach ($_categories as $_category): ?>
+                            <?php if ($_category->getIsActive()): ?>
+                                <li class="item">
+                                    <a href="<?php /* @escapeNotVerified */ echo $block->getCategoryUrl($_category) ?>"<?php if ($block->isCategoryActive($_category)): ?> class="current"<?php endif; ?>><?php echo $block->escapeHtml($_category->getName()) ?></a>
+                                </li>
+                            <?php endif; ?>
+                        <?php endforeach ?>
+                    </ol>
+                </dd>
+            </dl>
+        </div>
+    </div>
+<?php endif; ?>

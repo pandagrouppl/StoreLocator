@@ -22,7 +22,7 @@ export class Inliners {
     }
 
     private _toggleFilter(): void {
-        $('.filter-options-title').on('click', function() {
+        $('.layered-nav__title').on('click', function() {
             $(this).find('figure').toggleClass('layered-nav__minus--plus');
             $(this).next().toggle();
         });

@@ -1,8 +1,10 @@
 .catalog-category-view,
 .catalogsearch-result-index {
 
-    .toolbar {
-        display: none !important;
+    .breadcrumbs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .sidebar {

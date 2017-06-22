@@ -1,0 +1,33 @@
+.catalog-view {
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__label {
+        margin-right: 5px;
+    }
+
+    &__row {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    &__column {
+        width: 10px;
+        height: 17px;
+        display: block;
+        margin-right: 2px;
+        border: 1px solid black;
+
+        &--active {
+            background: black;
+        }
+
+        &--inactive {
+            background: white;
+        }
+    }
+}

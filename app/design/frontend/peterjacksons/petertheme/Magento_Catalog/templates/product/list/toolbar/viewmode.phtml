@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
+ */
+use Magento\Catalog\Model\Product\ProductList\Toolbar;
+
+?>
+<?php if ($block->isEnabledViewSwitcher()): ?>
+    <div class="catalog-view modes">
+        <?php $_modes = $block->getModes(); ?>
+        <?php if ($_modes && count($_modes) > 1): ?>
+        <span class="catalog-view__label modes-label" id="modes-label"><?php /* @escapeNotVerified */ echo __('View') ?></span>
+        <section class="catalog-view__wrapper">
+            <?php foreach ($block->getModes() as $_code => $_label): ?>
+                <?php if ($block->isModeActive($_code)): ?>
+                    <div class="catalog-view__row">
+                        <?php if ($_code == "list"): ?>
+                            <figure class="catalog-view__column catalog-view__column--active"></figure>
+                            <figure class="catalog-view__column catalog-view__column--active"></figure>
+                        <?php else: ?>
+                            <figure class="catalog-view__column catalog-view__column--active"></figure>
+                            <figure class="catalog-view__column catalog-view__column--active"></figure>
+                            <figure class="catalog-view__column catalog-view__column--active"></figure>
+                        <?php endif; ?>
+                    </div>
+                <?php else: ?>
+                    <a class="modes-mode mode-<?php /* @escapeNotVerified */
+                    echo strtolower($_code); ?>"
+                       title="<?php /* @escapeNotVerified */ echo $_label ?>"
+                       href="#"
+                       data-role="mode-switcher"
+                       data-value="<?php /* @escapeNotVerified */ echo strtolower($_code); ?>"
+                       id="mode-<?php /* @escapeNotVerified */ echo strtolower($_code); ?>"
+                       aria-labelledby="modes-label mode-<?php /* @escapeNotVerified */ echo strtolower($_code); ?>">
+                        <div class="catalog-view__row">
+                            <?php if ($_code == "list"): ?>
+                                <figure class="catalog-view__column catalog-view__column--inactive"></figure>
+                                <figure class="catalog-view__column catalog-view__column--inactive"></figure>
+                            <?php else: ?>
+                                <figure class="catalog-view__column catalog-view__column--inactive"></figure>
+                                <figure class="catalog-view__column catalog-view__column--inactive"></figure>
+                                <figure class="catalog-view__column catalog-view__column--inactive"></figure>
+                            <?php endif; ?>
+                        </div>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <?php endif; ?>
+        </section>
+    </div>
+<?php endif; ?>

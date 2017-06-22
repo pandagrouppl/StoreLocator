@@ -20,6 +20,9 @@
             <block class="Magento\Framework\View\Element\Template" name="quickview.minicart" template="Magento_Catalog::category/quickview-minicart.phtml"/>
             <block class="Magento\Framework\View\Element\Template" name="arrow.scroller" template="Magento_Theme::html/footer/arrow-scroller.phtml"/>
         </referenceContainer>
+        <referenceBlock name="breadcrumbs">
+            <block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="breadcrumbs.sorter" template="Magento_Catalog::navigation/sorter.phtml"/>
+        </referenceBlock>
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>

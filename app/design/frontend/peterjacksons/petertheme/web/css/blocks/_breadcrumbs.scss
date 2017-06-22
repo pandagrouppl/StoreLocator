@@ -34,4 +34,9 @@ $breadcrumbs-color: #928383;
         margin: 0 5px;
         color: $breadcrumbs-color;
     }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
 }
