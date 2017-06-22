@@ -17,6 +17,8 @@ export class Inliners {
         this._scrollTopArrow();
         this._footerNav();
         this._footerLinksAlteration();
+        this._careersFormDispFileName();
+        this._careersFormSubmit();
     }
 
     private _toggleFilter(): void {
@@ -168,4 +170,41 @@ export class Inliners {
             e.attr('title', e.text());
         });
     }
+
+    private _careersFormDispFileName(): void {
+        $('#add-file').change((e) => {
+            $('#career-form-file-name').text(e.target.files["0"].name);
+        });
+    }
+
+    private _careersFormSubmit(): void {
+        const button = document.getElementById('careers-form-submit');
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const form = new FormData(document.getElementById('careers-form'));
+            fetch('careers/careers/add', {
+                method: 'post',
+                body: form
+            }).then((resp) => {
+                if (resp.ok) {
+                    return resp.json();
+                } else {
+                    return '<p>Something went wrong! 1</p>'
+                }
+            }).then((json) => {
+                console.log(json);
+                if (json.done) {
+                    const message = '<p>sent</p>';
+                } else {
+                    if (json.message) {
+                        const message = '<p>' + json.message + '</p>';
+                    } else {
+                        const message = '<p>External error</p>'
+                    }
+                }
+                document.getElementById('careers-form-response').innerHTML = message;
+            });
+        });
+    }
+
  }

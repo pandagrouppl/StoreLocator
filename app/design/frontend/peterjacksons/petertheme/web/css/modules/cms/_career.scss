@@ -96,6 +96,10 @@ $between: 40px;
         color: $grey-dark;
         margin: 0;
         text-transform: uppercase;
+
+        &--file {
+            margin: 10px 0;
+        }
     }
 
     &__submit {
