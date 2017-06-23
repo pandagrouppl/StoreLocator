@@ -173,9 +173,10 @@ export class Inliners {
 
     private _careersFormDispFileName(): void {
         const addFile = $('#add-file');
+        $('#career-form-file-name').hide();
         if ($(addFile).length) {
             $(addFile).change((e) => {
-                $('#career-form-file-name').text(e.target.files["0"].name);
+                $('#career-form-file-name').show().text(e.target.files["0"].name);
             });
         }
     }
@@ -196,17 +197,7 @@ export class Inliners {
                         return '<p>Something went wrong!</p>'
                     }
                 }).then((json) => {
-                    console.log(json);
-                    if (json.done) {
-                        const message = '<p>sent</p>';
-                    } else {
-                        if (json.message) {
-                            const message = '<p>' + json.message + '</p>';
-                        } else {
-                            const message = '<p>External error</p>'
-                        }
-                    }
-                    document.getElementById('careers-form-response').innerHTML = message;
+                    document.getElementById('careers-form-response').innerHTML = '<p class="career__message' + ((!json.done) ? ' career__message--failure' : '') + '">' + json.message + '</p>';
                 });
             });
         }

@@ -102,6 +102,13 @@ $between: 40px;
         }
     }
 
+    &__message {
+
+        &--failure {
+            color: red;
+        }
+    }
+
     &__submit {
         @include button-custom($mg: 30px 0, $pd: 15px 0, $bg: $grey-dark, $fontsize: 12px);
         max-width: 300px;
