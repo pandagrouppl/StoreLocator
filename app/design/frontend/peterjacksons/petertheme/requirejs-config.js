@@ -1,12 +1,11 @@
 var config = {
     deps: [
-        "web/js/app"
+        "js/main",
+        "js/sizeChart",
+        'js/youtube'
     ],
     paths: {
         slick: 'js/vendor/slick.min'
-    },
-    bundles: {
-        "web/js/app": [ "main", "sizeChart", 'youtube']
     },
     "map": {
         "*": {

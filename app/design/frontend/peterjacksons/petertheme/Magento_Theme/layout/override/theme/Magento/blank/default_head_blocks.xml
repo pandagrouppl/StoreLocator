@@ -10,7 +10,7 @@
             <arguments>
                 <argument name="text" xsi:type="string">
                     <![CDATA[<script type="text/javascript">
-                        require(['main'], function(App) {
+                        require(['js/main'], function(App) {
                             var app = new App();
                             app.start();
                         });</script>]]>
