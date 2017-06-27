@@ -17,8 +17,6 @@ export class Inliners {
         this._scrollTopArrow();
         this._footerNav();
         this._footerLinksAlteration();
-        this._careersFormDispFileName();
-        this._careersFormSubmit();
     }
 
     private _toggleFilter(): void {
@@ -170,37 +168,4 @@ export class Inliners {
             e.attr('title', e.text());
         });
     }
-
-    private _careersFormDispFileName(): void {
-        const addFile = $('#add-file');
-        $('#career-form-file-name').hide();
-        if ($(addFile).length) {
-            $(addFile).change((e) => {
-                $('#career-form-file-name').show().text(e.target.files["0"].name);
-            });
-        }
-    }
-
-    private _careersFormSubmit(): void {
-        const button = document.getElementById('careers-form-submit');
-        if (button) {
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-                const form = new FormData(document.getElementById('careers-form'));
-                fetch('careers/careers/add', {
-                    method: 'post',
-                    body: form
-                }).then((resp) => {
-                    if (resp.ok) {
-                        return resp.json();
-                    } else {
-                        return '<p>Something went wrong!</p>'
-                    }
-                }).then((json) => {
-                    document.getElementById('careers-form-response').innerHTML = '<p class="career__message' + ((!json.done) ? ' career__message--failure' : '') + '">' + json.message + '</p>';
-                });
-            });
-        }
-    }
-
- }
+}
