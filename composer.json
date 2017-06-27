@@ -111,7 +111,6 @@
         "magento-force": "override",
         "installer-types": ["magento2-panda-module", "magento2-panda-tool"],
         "installer-paths": {
-            "tools/": ["PandaGroup/Frontools"],
             "app/code/{$vendor}/{$name}/": ["type:magento2-panda-module"]
         }
     },

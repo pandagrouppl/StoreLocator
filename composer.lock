@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "552f45a2d43b2b9b5ecf74d67fbd3782",
-    "content-hash": "5c7defd393a2fa2a491d16af02936794",
+    "hash": "777ad7029607fc6078835070c6b75d26",
+    "content-hash": "0941949615ec75c2a86c25096c5cc563",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -92,6 +92,22 @@
             "time": "2017-06-13 14:57:49"
         },
         {
+            "name": "PandaGroup/Base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-base-module.git",
+                "reference": "c0c1409359898478848efe2f1ba454a4ea57e146"
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*",
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Base Module",
+            "time": "2017-06-23 10:57:43"
+        },
+        {
             "name": "PandaGroup/Careers",
             "version": "dev-master",
             "source": {
@@ -127,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "5d93e865728e70e8c6a090e4452678e019f980ba"
+                "reference": "e9a36c09662d30111b9d780e43af6fbf4c62369f"
             },
-            "type": "magento2-panda-tool",
+            "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-06-16 12:26:10"
+            "time": "2017-06-27 12:28:09"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -9553,6 +9569,7 @@
     "stability-flags": {
         "pandagroup/migrationtool": 20,
         "composer/composer": 15,
+        "pandagroup/base": 20,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
