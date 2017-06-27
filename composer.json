@@ -115,12 +115,5 @@
             "app/code/{$vendor}/{$name}/": ["type:magento2-panda-module"]
         }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "./install-script.sh"
-        ],
-        "post-update-cmd": [
-            "./update-script.sh"
-        ]
-    }
+    "scripts": {}
 }
