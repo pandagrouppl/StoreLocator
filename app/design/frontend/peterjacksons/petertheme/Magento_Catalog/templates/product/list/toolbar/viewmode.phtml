@@ -17,7 +17,7 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
 
 ?>
 <?php if ($block->isEnabledViewSwitcher()): ?>
-    <div class="catalog-view modes">
+    <div class="catalog-view modes pages">
         <?php $_modes = $block->getModes(); ?>
         <?php if ($_modes && count($_modes) > 1): ?>
         <span class="catalog-view__label modes-label" id="modes-label"><?php /* @escapeNotVerified */ echo __('View') ?></span>

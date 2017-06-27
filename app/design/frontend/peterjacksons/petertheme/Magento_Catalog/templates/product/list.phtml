@@ -46,8 +46,9 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
         <ol class="products list items product-items catalog-grid">
             <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
             <?php foreach ($_productCollection as $_product): ?>
-                <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="item product product-item catalog-grid__item catalog-item">'
-                    : '</li><li class="item product product-item catalog-grid__item catalog-item">' ?>
+                <?php /* @escapeNotVerified */ echo($iterator++ == 1) ?
+                    '<li class="item product product-item catalog-grid__item catalog-item catalog-item--' .  $viewMode . '">'
+                    : '</li><li class="item product product-item catalog-grid__item catalog-item catalog-item--' .  $viewMode . '">' ?>
                 <div class="product-item-info catalog-item__info" data-container="product-grid">
                     <?php
                     $productImage = $block->getImage($_product, $image);
@@ -88,13 +89,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <?php if ($showDescription):?>
-                                <div class="product description product-item-description">
-                                    <?php /* @escapeNotVerified */ echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
-                                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" title="<?php /* @escapeNotVerified */ echo $_productNameStripped ?>"
-                                       class="action more"><?php /* @escapeNotVerified */ echo __('Learn More') ?></a>
-                                </div>
-                            <?php endif; ?>
                         </div>
                         <?php $_promoWysig = $_product->getCustomAttribute('promo_wysig'); ?>
                         <?php if ($_promoWysig): ?>

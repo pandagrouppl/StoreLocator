@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "9dacbece227499faa5eb33c400c3dd26de916f74"
+                "reference": "10bda4dc6da79715d94c2b058c82f0efdf806e6f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-06-22 10:02:29"
+            "time": "2017-06-23 10:58:10"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "69e75d19d2abb3157bcb07663fce1226c03f5a3e"
+                "reference": "0d5a199fb0e39d37581b9b0c99a090d4dd304e18"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-06-13 09:51:41"
+            "time": "2017-06-27 11:37:55"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "e9a36c09662d30111b9d780e43af6fbf4c62369f"
+                "reference": "26c367c0d9efda58c824bf2b6e042a4831490794"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-06-27 12:28:09"
+            "time": "2017-06-27 12:35:28"
         },
         {
             "name": "PandaGroup/MigrationTool",
