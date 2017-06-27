@@ -1,5 +1,15 @@
 .catalog-item {
 
+    &--list {
+        width: 48%;
+        margin: 0 1% 20px 1%;
+    }
+
+    &--grid {
+        width: 31%;
+        margin: 0 1% 20px 1%;
+    }
+
     &__img {
         position: relative;
         overflow: hidden;

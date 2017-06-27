@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "552f45a2d43b2b9b5ecf74d67fbd3782",
-    "content-hash": "5c7defd393a2fa2a491d16af02936794",
+    "hash": "ddb53e0586cad777c826d2d0bb1a6bdc",
+    "content-hash": "8e1e1257e2199fbfe16ad885149b2736",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -92,19 +92,35 @@
             "time": "2017-06-13 14:57:49"
         },
         {
+            "name": "PandaGroup/Base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-base-module.git",
+                "reference": "c0c1409359898478848efe2f1ba454a4ea57e146"
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*",
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Base Module",
+            "time": "2017-06-23 10:57:43"
+        },
+        {
             "name": "PandaGroup/Careers",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "9dacbece227499faa5eb33c400c3dd26de916f74"
+                "reference": "10bda4dc6da79715d94c2b058c82f0efdf806e6f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-06-22 10:02:29"
+            "time": "2017-06-23 10:58:10"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -9553,6 +9569,7 @@
     "stability-flags": {
         "pandagroup/migrationtool": 20,
         "composer/composer": 15,
+        "pandagroup/base": 20,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
