@@ -1,0 +1,124 @@
+@mixin container() {
+    max-width: $container-width;
+    margin: auto;
+}
+
+@mixin form-element() {
+    height: 40px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+    color: #515151;
+    font-size: 110%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@mixin form-select-arrow() {
+    @include sprite(selectarrcheckout);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    pointer-events: none;
+}
+
+@mixin form-element-wrapper() {
+    position: relative;
+    margin: 5px 0;
+}
+
+@mixin bg($bg-file) {
+    background: url('../../img/assets/#{$bg-file}') no-repeat;
+}
+
+@mixin slick-buttons() {
+    display: flex !important;
+    justify-content: center;
+
+    li {
+        margin-left: 5px;
+    }
+
+    button {
+        background-color: #acacac;
+        border: none;
+        color: white;
+        width: 13px;
+        height: 13px;
+        font-size: 16px;
+        text-indent: -9999px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .slick-active {
+
+        button {
+            background-color: #555;
+        }
+    }
+}
+
+@mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    padding: $pd;
+    text-transform: uppercase;
+    font-size: $fontsize;
+    font-weight: $font-weight;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin: $mg;
+    letter-spacing: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: #666;
+    }
+}
+
+@mixin button-grey($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: $white;
+    border: 2px solid $grey-dark;
+    color: $grey-dark;
+
+    &:hover {
+        background: $grey-dark;
+        color: $white;
+    }
+}
+
+@mixin button-grey-no-bd($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: $white;
+    border: none;
+    color: $grey-dark;
+
+    &:hover {
+        background: $grey-dark;
+        color: $white;
+    }
+}
+
+@mixin button-blue($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: #0b53c9;
+    border: 0;
+    color: $white;
+}
+
+@mixin button-custom($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold, $bg: #0b53c9, $color: white, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark) {
+    @include button($pd, $mg, $fontsize, $font-weight);
+    background: $bg;
+    color: $color;
+    border: $border;
+
+    &:hover {
+        background: $bghov;
+        color: $colorhov;
+    }
+}
+
