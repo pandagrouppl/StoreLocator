@@ -10,7 +10,6 @@ php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy
 php bin/magento cache:flush
 (cd tools && npm install && gulp compile)
-(cd app/code/PandaGroup/StoreLocator/view/frontend/preact && npm install && npm run server)
 (cd wp/wp-content/themes/fishpig/ && chmod -R 775 .)
 chown -R $OWNER:$GROUP .
 php bin/magento maintenance:disable
