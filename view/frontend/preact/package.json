@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "local": "webpack --watch --config local.config.js",
-    "server": "webpack --config server.config.js"
+    "dev": "webpack --watch --config webpack/dev.config.js",
+    "production": "webpack -p --config webpack/production.config.js"
   },
   "keywords": [],
   "author": "Tomasz Jezierski, Adrian Kowalczewski",
