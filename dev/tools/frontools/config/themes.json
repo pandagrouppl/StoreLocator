@@ -1,11 +1,12 @@
 {
     "peterjacksons": {
-    "src": "app/design/frontend/peterjacksons/petertheme",
-    "dest": "pub/static/frontend/peterjacksons/petertheme",
-    "locale": ["en_US"],
-    "postcss": ["plugins.autoprefixer()"],
-    "modules": {
-        "PandaGroup_Careers": "app/code/PandaGroup/Careers/view/frontend/web"
+        "src": "app/design/frontend/peterjacksons/petertheme",
+        "dest": "pub/static/frontend/peterjacksons/petertheme",
+        "locale": ["en_US"],
+        "postcss": ["plugins.autoprefixer()"],
+        "modules": {
+            "PandaGroup_Careers": "app/code/PandaGroup/Careers/view/frontend/web",
+            "PandaGroup_StoreLocator": "app/code/PandaGroup/StoreLocator/view/frontend/web"
+        }
     }
-  }
 }
