@@ -2,18 +2,33 @@
 
 namespace PandaGroup\StoreLocator\Model;
 
-use Magento\Framework\Model\AbstractModel;
 
-class StoreLocator extends AbstractModel
+class StoreLocator extends \Magento\Framework\Model\AbstractModel
 {
     const GOOGLE_API_ADDRESS_URL = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
 
+    /** @var \PandaGroup\StoreLocator\Helper\ConfigProvider  */
+    protected $configProvider;
+
     /**
      * Define resource model
+     * @param \Magento\Framework\Model\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider
+     * @param array $data
      */
-    protected function _construct()
+    public function __construct(
+        \Magento\Framework\Model\Context $context,
+        \Magento\Framework\Registry $registry,
+//        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
+//        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
+        \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider,
+        array $data = []
+    )
     {
+        parent::__construct($context, $registry);
         $this->_init('PandaGroup\StoreLocator\Model\Resource\StoreLocator');
+        $this->configProvider = $configProvider;
     }
 
     /**
