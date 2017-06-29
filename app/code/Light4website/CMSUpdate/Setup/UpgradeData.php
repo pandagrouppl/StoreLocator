@@ -423,7 +423,7 @@ EOT;
     <section class="about-us-wrapper">
         <h1 class="about-us-wrapper__title">Watch our SS16 Runway</h1>
         <div class="about-us-wrapper__youtube">
-            <iframe width="1120" height="698" src="http://www.youtube.com/embed/KsZ2x9E944Y?hd=1" frameborder="0" allowfullscreen=""></iframe>
+            <iframe width="1120" height="698" src="https://www.youtube.com/embed/KsZ2x9E944Y?hd=1" frameborder="0" allowfullscreen=""></iframe>
         </div>
     </section>
 
@@ -649,10 +649,10 @@ EOT;
 <section class="about-us-wrapper about-us-wrapper--1300">
     <div class="about-us-wrapper__text-box">
         <div class="about-us-wrapper__box about-us-wrapper__box--left">
-            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-01.jpg" description_bold="Sheep Shape: " description="From Raw Material" iframe_url="http://www.youtube.com/embed/ipI1jXlv6Wk?version=3&amp;playlist=ipI1jXlv6Wk&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
+            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-01.jpg" description_bold="Sheep Shape: " description="From Raw Material" iframe_url="https://www.youtube.com/embed/ipI1jXlv6Wk?version=3&amp;playlist=ipI1jXlv6Wk&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
         </div>
         <div class="about-us-wrapper__box about-us-wrapper__box--right">
-            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-02.jpg" description_bold="Shear Brilliance: " description="A Day In The Life of a Woolmark Sheep" iframe_url="http://www.youtube.com/embed/X1y-CyR5YIQ?version=3&amp;playlist=X1y-CyR5YIQ&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
+            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-02.jpg" description_bold="Shear Brilliance: " description="A Day In The Life of a Woolmark Sheep" iframe_url="https://www.youtube.com/embed/X1y-CyR5YIQ?version=3&amp;playlist=X1y-CyR5YIQ&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
         </div>
     </div>
 </section>
@@ -666,7 +666,7 @@ EOT;
             All Peter Jackson shirts are fashioned from 2-ply Egyptian cotton formed from the rich soil and moist atmosphere facilitated by the Nile River. We use Egyptian cotton because it's substantially                     longer than regular cotton. This results in more uninterrupted fibres to use for composing yarn                     and threads; making the threads and eventual fabrics stronger overall as a result of fewer splices.                     Allowing our textile weavers, <span style="text-decoration: underline;" _mce_style="text-decoration: underline;">Tessitura Monti</span> in Italy and <span style="text-decoration: underline;" _mce_style="text-decoration: underline;">SÖKTAS</span> in Turkey, to turn these extra-long                     fibres into fine yarn. This gives our shirts a softer and more lustrous finish unparalleled by any                     other shirting cotton.<br><br> We are proudly associated with <span style="text-decoration: underline;" _mce_style="text-decoration: underline;">Tessitura Monti</span> and <span style="text-decoration: underline;" _mce_style="text-decoration: underline;">SÖKTAS</span> because of their fine designing and                     craftsmanship. Effortlessly weaving Egyptian cotton into intricate yarn-dyed fabrics renowned                     for their quality. We also support both companies' philosophies of combining exceptional fabrics with environmental sensitivity and responsible stewardship of the biodiversity of the Earth.
         </div>
         <div class="about-us-wrapper__checker-flexbox-vid about-us-wrapper__checker-flexbox--cotton-vid">
-            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-03.jpg" iframe_url="http://www.youtube.com/embed/fEfKwogmxZI?version=3&amp;playlist=fEfKwogmxZI&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
+            {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-03.jpg" iframe_url="https://www.youtube.com/embed/fEfKwogmxZI?version=3&amp;playlist=fEfKwogmxZI&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
         </div>
         <div class="about-us-wrapper__checker-flexbox-slideshow about-us-wrapper__checker-flexbox--silk-slide">
 
