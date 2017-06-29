@@ -24,4 +24,6 @@ Tomasz Jezierski [@Thorleon](https://github.com/Thorleon) [tjezierski@pandagroup
 
 Adrian Kowalczewski [@adyry](https://github.com/adyry) [akowalczewski@pandagroup.co](mailto:akowalczewski@light4website.com)
 
+Karol Brzozowski [@brzozowski96](https://github.com/brzozowski96) [kbrzozowski@pandagroup.co](mailto:kbrzozowski@light4website.com)
+
 Property of Panda Group, [@pandagrouppl](https://github.com/pandagrouppl)
