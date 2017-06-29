@@ -24,7 +24,7 @@
                     <source_model>PandaGroup\StoreLocator\Model\Config\Source\ListCountry</source_model>
                 </field>
             </group>
-            <group id="store_locator_advanced_settings" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+            <group id="store_locator_map_settings" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Default Map Settings</label>
                 <field id="lat_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Latitude</label>
