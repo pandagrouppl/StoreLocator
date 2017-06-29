@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "777ad7029607fc6078835070c6b75d26",
-    "content-hash": "0941949615ec75c2a86c25096c5cc563",
+    "hash": "69a5dc1860e54166d3a8233af6bd9462",
+    "content-hash": "57478cd71d1887da07999ef0303c2c5e",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "eff8466acde4d3bd52f1e0a47b9b5acb0ad59eed"
+                "reference": "5e1b0ef858feb354baafbc823c7eddcf3fc04875"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-06-28 15:05:44"
+            "time": "2017-06-29 10:59:01"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "0d5a199fb0e39d37581b9b0c99a090d4dd304e18"
+                "reference": "b7296da146db921b0a78a331d63c67e2f8732fae"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-06-27 11:37:55"
+            "time": "2017-06-29 11:46:07"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -182,17 +182,32 @@
             "time": "2017-06-20 09:30:55"
         },
         {
+            "name": "PandaGroup/Spinner",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-spinner.git",
+                "reference": "f6b017815eef3231b219597bb7f9ad4ade2e54f0"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Spinner for Magento 2.x",
+            "time": "2017-06-29 11:37:38"
+        },
+        {
             "name": "PandaGroup/StoreLocator",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d"
+                "reference": "3079dcffb0e153245810b37a2e943258af823700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d612a304f4745ba36259f2e62b1e6adac367d03d",
-                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/3079dcffb0e153245810b37a2e943258af823700",
+                "reference": "3079dcffb0e153245810b37a2e943258af823700",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -204,7 +219,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-19 13:26:31"
+            "time": "2017-06-29 09:00:27"
         },
         {
             "name": "braintree/braintree_php",
