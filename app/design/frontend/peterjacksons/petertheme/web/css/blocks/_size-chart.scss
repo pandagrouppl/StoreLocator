@@ -22,21 +22,25 @@
     &__tabs {
         display: block;
         margin: 20px 0;
+    }
 
-        a {
-            padding: 0 20px;
-            font-size: 20px;
-            font-weight: 500;
-            border-right: 1px solid black;
-            color: $black;
+    &__tab {
+        padding: 0 20px;
+        font-size: 20px;
+        font-weight: 500;
+        border-right: 1px solid black;
+        color: $black;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
+        }
 
-            &:last-child {
-                border-right: 0;
-            }
+        &:last-child {
+            border-right: 0;
+        }
+
+        &--active {
+            text-decoration: underline;
         }
     }
 
