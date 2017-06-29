@@ -125,7 +125,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getMapZoomLevel($store = null)
     {
-        return (string) $this->scopeConfig->getValue(
+        return (int) $this->scopeConfig->getValue(
             self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_MAP_SETTINGS_GROUP . self::ZOOM_LEVEL_FIELD,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
