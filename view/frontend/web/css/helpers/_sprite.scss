@@ -1,0 +1,240 @@
+//All changes in this file will be overwritten!
+
+$sprite: (
+    width: 431px,
+    height: 364px,
+    image: '../../img/sprite.png'
+);
+
+$retina-sprite: (
+    width: 862px,
+    height: 728px,
+    image: '../img/sprite@2x.png'
+);
+
+$sprite-icon: (
+    abt-arrw-left: (
+        x: -355px,
+        y: 0px,
+        width: 16px,
+        height: 88px
+    ),
+    abt-arrw-right: (
+        x: -355px,
+        y: -118px,
+        width: 16px,
+        height: 88px
+    ),
+    blog-share-fb: (
+        x: -66px,
+        y: -263px,
+        width: 35px,
+        height: 36px
+    ),
+    blog-share-ptrst: (
+        x: 0px,
+        y: -263px,
+        width: 36px,
+        height: 36px
+    ),
+    blog-share-twt: (
+        x: -65px,
+        y: -329px,
+        width: 35px,
+        height: 35px
+    ),
+    brownline: (
+        x: -242px,
+        y: -329px,
+        width: 25px,
+        height: 24px
+    ),
+    brownstar: (
+        x: -130px,
+        y: -329px,
+        width: 27px,
+        height: 24px
+    ),
+    buttonarrowleft: (
+        x: -309px,
+        y: -106px,
+        width: 7px,
+        height: 9px
+    ),
+    credit-cards: (
+        x: 0px,
+        y: -106px,
+        width: 107px,
+        height: 41px
+    ),
+    footer-facebook: (
+        x: 0px,
+        y: -329px,
+        width: 35px,
+        height: 35px
+    ),
+    footer-instagram: (
+        x: -131px,
+        y: -263px,
+        width: 35px,
+        height: 35px
+    ),
+    footer-mastercard: (
+        x: -137px,
+        y: -106px,
+        width: 80px,
+        height: 29px
+    ),
+    footer-pintrest: (
+        x: -196px,
+        y: -263px,
+        width: 35px,
+        height: 35px
+    ),
+    footer-twitter: (
+        x: -261px,
+        y: -263px,
+        width: 35px,
+        height: 35px
+    ),
+    footer-visa: (
+        x: 0px,
+        y: -177px,
+        width: 80px,
+        height: 56px
+    ),
+    footer-youtube: (
+        x: -326px,
+        y: -263px,
+        width: 35px,
+        height: 35px
+    ),
+    header-account: (
+        x: -187px,
+        y: -329px,
+        width: 25px,
+        height: 24px
+    ),
+    header-book: (
+        x: -401px,
+        y: -313px,
+        width: 30px,
+        height: 24px
+    ),
+    header-case: (
+        x: -247px,
+        y: -106px,
+        width: 32px,
+        height: 26px
+    ),
+    header-star: (
+        x: -401px,
+        y: -257px,
+        width: 30px,
+        height: 26px
+    ),
+    header-zoom: (
+        x: -401px,
+        y: -198px,
+        width: 30px,
+        height: 29px
+    ),
+    logo-black: (
+        x: 0px,
+        y: 0px,
+        width: 325px,
+        height: 25px
+    ),
+    paypal-logo: (
+        x: -110px,
+        y: -177px,
+        width: 93px,
+        height: 22px
+    ),
+    paypalbutt: (
+        x: 0px,
+        y: -55px,
+        width: 174px,
+        height: 21px
+    ),
+    remove-ico: (
+        x: -401px,
+        y: -138px,
+        width: 30px,
+        height: 30px
+    ),
+    select-arrw: (
+        x: -401px,
+        y: -70px,
+        width: 30px,
+        height: 38px
+    ),
+    selectarrcheckout: (
+        x: -401px,
+        y: 0px,
+        width: 30px,
+        height: 40px
+    ),
+    storelocator-directions: (
+        x: -233px,
+        y: -177px,
+        width: 20px,
+        height: 20px
+    ),
+    storelocator-email: (
+        x: -283px,
+        y: -177px,
+        width: 20px,
+        height: 20px
+    ),
+    storelocator-phone: (
+        x: -308px,
+        y: -55px,
+        width: 17px,
+        height: 17px
+    ),
+    storelocator-pin: (
+        x: -297px,
+        y: -329px,
+        width: 17px,
+        height: 17px
+    ),
+    wishlist-icon-dark: (
+        x: -204px,
+        y: -55px,
+        width: 22px,
+        height: 21px
+    ),
+    wishlist-icon: (
+        x: -256px,
+        y: -55px,
+        width: 22px,
+        height: 21px
+    ),
+);
+
+@mixin sprite($icon, $size: true, $bg-size: true) {
+    background-color: transparent;
+    background-image: url(map-get($sprite, 'image'));
+    background-repeat: no-repeat;
+    background-position: map-get(map-get($sprite-icon, $icon), 'x') map-get(map-get($sprite-icon, $icon), 'y');
+
+    @if($size == true) {
+        width: map-get(map-get($sprite-icon, $icon), 'width');
+        height: map-get(map-get($sprite-icon, $icon), 'height');
+    }
+
+    @media
+    all and (-webkit-min-device-pixel-ratio: 2),
+    all and (   min--moz-device-pixel-ratio: 2),
+    all and (     -o-min-device-pixel-ratio: 2/1),
+    all and (        min-device-pixel-ratio: 2),
+    all and (                min-resolution: 192dpi),
+    all and (                min-resolution: 2dppx) {
+        background-image: url(map-get($retina-sprite, 'image'));
+        background-repeat: no-repeat;
+        @if($bg-size == true) {
+            background-size: map-get($sprite, 'width') map-get($sprite, 'height');
+        }
+    }
+}

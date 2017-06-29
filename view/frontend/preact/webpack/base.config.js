@@ -8,12 +8,12 @@ module.exports = {
         vendor: ['preact']
     },
     output: {
-        path: path.join(__dirname, './../web/dist'),
+        path: '',
         filename: '[name].js',
         libraryTarget: 'amd',
         library: 'store-locator'
     },
-        module: {
+    module: {
         rules: [
             {
                 test: /\.css$/,
@@ -40,7 +40,7 @@ module.exports = {
         },
         extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
         modules: [
-            path.resolve(__dirname, 'node_modules')
+            path.resolve(__dirname, '../node_modules')
         ]
     }
 };
