@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_store_locator" translate="label" type="text" sortOrder="109" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-store_locator</class>
+            <label><![CDATA[StoreLocator]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_StoreLocator::config</resource>
+            <group id="store_locator_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>StoreLocator Base Settings</label>
+                <field id="api_key_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Google API Key</label>
+                    <validate>required-entry</validate>
+                    <comment>To this Email it will be send all resumes.</comment>
+                </field>
+                <!--<field id="country_text" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">-->
+                    <!--<label>Country Symbol</label>-->
+                    <!--<validate>required-entry</validate>-->
+                    <!--<comment>Country symbol  (eg: "PL" , "AU" , "DE" ).</comment>-->
+                <!--</field>-->
+                <field id="country_select" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Country</label>
+                    <source_model>PandaGroup\StoreLocator\Model\Config\Source\ListCountry</source_model>
+                </field>
+            </group>
+            <group id="store_locator_advanced_settings" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Default Map Settings</label>
+                <field id="lat_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Latitude</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="lng_text" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Longitude</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="button" translate="label" type="button" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Get coordinates by country</label>
+                    <frontend_model>PandaGroup\StoreLocator\Block\Adminhtml\System\Config\ButtonCoordinates</frontend_model>
+                </field>
+                <!--<field id="zoom_text" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">-->
+                    <!--<label>Zoom</label>-->
+                    <!--<validate>required-entry</validate>-->
+                <!--</field>-->
+                <field id="zoom_select" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Zoom Level</label>
+                    <validate>required-entry</validate>
+                    <source_model>PandaGroup\StoreLocator\Model\Config\Source\ListZoom</source_model>
+                </field>
+                <field id="pin_text" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Pin image link</label>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
