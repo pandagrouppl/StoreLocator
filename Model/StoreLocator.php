@@ -20,8 +20,6 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
     public function __construct(
         \Magento\Framework\Model\Context $context,
         \Magento\Framework\Registry $registry,
-//        \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
-//        \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider,
         array $data = []
     )
@@ -41,11 +39,11 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         $collection = $this->getCollection();
 
         $constants = [
-            'apiKey'    => 'AIzaSyD06oeZOxRpKwKCg3G0pEilZmgunVdgTUA',
-            'geo'       => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
-            'zoom'      => 5,
-            'country'   => 'au',
-            'pin'       => 'http://www.peterjacksons.com/media/storelocator/images/icon/pinpj2.png'
+            'apiKey'    => $this->configProvider->getGoogleApiKey(),
+            'geo'       => [ 'lat' => $this->configProvider->getMapLatitude(), 'lng' => $this->configProvider->getMapLongitude() ],
+            'zoom'      => $this->configProvider->getMapZoomLevel(),
+            'country'   => strtolower($this->configProvider->getStoresLocationCountryCode()),
+            'pin'       => $this->configProvider->getPinImageLink()
         ];
 
         $regions = [

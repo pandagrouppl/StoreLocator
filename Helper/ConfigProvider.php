@@ -78,7 +78,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
      * @param null $store
      * @return string
      */
-    public function getStoresLocationCountry($store = null)
+    public function getStoresLocationCountryCode($store = null)
     {
         return (string) $this->scopeConfig->getValue(
             self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_BASE_SETTINGS_GROUP . self::COUNTRY_FIELD,
