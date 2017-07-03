@@ -72,13 +72,17 @@
             <form class="form methods-shipping checkout__shipping-options-wrapper" id="co-shipping-method-form" data-bind="submit: setShippingInformation" data-mage-init='{"validation":{}}'>
                 <div id="checkout-shipping-method-load">
                     <!--ko foreach: { data: rates(), as: 'method'}-->
-                    <div class="checkout__shipping-option" data-bind="click: $parent.selectShippingMethod">
+                    <div class="checkout__shipping-option"
+                         data-bind="
+                            css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__pick-shipping--active' : '',
+                            click: $parent.selectShippingMethod"
+                            >
                         <div class="col col-carrier checkout__shipping-name"
                              data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></div>
                         <div class="col col-method checkout__shipping-select">
                             <!-- ko ifnot: method.error_message -->
                             <!-- ko if: $parent.rates().length == 1 -->
-                            <input class="checkout__button--calculate"
+                            <input class="checkout__pick-shipping"
                                    type="submit"
                                    data-role="opc-continue"
                                    data-bind="attr: {
@@ -92,14 +96,14 @@
                             <input type="submit"
                                    data-role="opc-continue"
                                    data-bind="
-                                                value: 'choose',
-                                                checked: $parent.isSelected,
+                                                value: 'pick',
                                                 attr: {
                                                     'id': 's_method_' + method.carrier_code + '_' + method.method_code,
                                                     'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
                                                 },
+                                                css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__pick-shipping--active' : '',
                                                 click: $parent.selectShippingMethod"
-                                   class="checkout__button--calculate"/>
+                                   class="checkout__pick-shipping"/>
                             <!--/ko-->
                             <!-- /ko -->
 

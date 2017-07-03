@@ -123,10 +123,13 @@
             @include button-blue(10px 20px, 5px, 13px);
 
         }
+    }
 
-        &--calculate {
-            @include button-blue(10px 20px, 5px 0, 13px);
+    &__pick-shipping {
+        color: blue;
 
+        &--active {
+            color: red;
         }
     }
 
