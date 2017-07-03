@@ -202,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "3079dcffb0e153245810b37a2e943258af823700"
+                "reference": "66035acd23d64d411f2acf2c3737dd9b0bb21509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/3079dcffb0e153245810b37a2e943258af823700",
-                "reference": "3079dcffb0e153245810b37a2e943258af823700",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/66035acd23d64d411f2acf2c3737dd9b0bb21509",
+                "reference": "66035acd23d64d411f2acf2c3737dd9b0bb21509",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -219,7 +219,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-29 09:00:27"
+            "time": "2017-07-03 08:41:42"
         },
         {
             "name": "braintree/braintree_php",
@@ -9540,16 +9540,16 @@
         },
         {
             "name": "theseer/fdomdocument",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/fDOMDocument.git",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d"
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/8dcfd392135a5bd938c3c83ea71419501ad9855d",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d",
+                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/6e8203e40a32a9c770bcb62fe37e68b948da6dca",
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca",
                 "shasum": ""
             },
             "require": {
@@ -9576,7 +9576,7 @@
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
             "homepage": "https://github.com/theseer/fDOMDocument",
-            "time": "2017-04-21 14:50:31"
+            "time": "2017-06-30 11:53:12"
         }
     ],
     "aliases": [],

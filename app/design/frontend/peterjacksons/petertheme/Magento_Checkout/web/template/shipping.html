@@ -78,8 +78,9 @@
                         <div class="col col-method checkout__shipping-select">
                             <!-- ko ifnot: method.error_message -->
                             <!-- ko if: $parent.rates().length == 1 -->
-                            <input class="radio checkout__shipping-radio"
-                                   type="radio"
+                            <input class="checkout__button--calculate"
+                                   type="submit"
+                                   data-role="opc-continue"
                                    data-bind="attr: {
                                                     checked: $parent.rates().length == 1,
                                                     'value' : method.carrier_code + '_' + method.method_code,
@@ -88,16 +89,17 @@
                                                  }" />
                             <!-- /ko -->
                             <!--ko ifnot: ($parent.rates().length == 1)-->
-                            <input type="radio"
+                            <input type="submit"
+                                   data-role="opc-continue"
                                    data-bind="
-                                                value: method.carrier_code + '_' + method.method_code,
+                                                value: 'choose',
                                                 checked: $parent.isSelected,
                                                 attr: {
                                                     'id': 's_method_' + method.carrier_code + '_' + method.method_code,
                                                     'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
                                                 },
                                                 click: $parent.selectShippingMethod"
-                                   class="radio checkout__shipping-radio"/>
+                                   class="checkout__button--calculate"/>
                             <!--/ko-->
                             <!-- /ko -->
 
