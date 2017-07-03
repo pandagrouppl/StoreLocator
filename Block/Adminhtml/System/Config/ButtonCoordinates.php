@@ -48,7 +48,7 @@ class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
         )->setData(
             [
                 'id' => 'pandagroup_set_coordinates_by_country_button',
-                'label' => __('Set Coordinates By Country'),
+                'label' => __('Get Coordinates By Country'),
                 'onclick' => 'javascript:location.reload();',
             ]
         );
