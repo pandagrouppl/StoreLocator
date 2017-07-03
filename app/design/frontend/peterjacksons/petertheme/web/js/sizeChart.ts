@@ -12,15 +12,18 @@ return Component.extend({
     },
 
     changeCurrentTab(data, event): void {
-        this.currentTab($(event.target).attr('href').replace(/^.*?(#|$)/,''));
+        const activeTab = $(event.target).attr('href').replace(/^.*?(#|$)/,'');
+        this.currentTab(activeTab);
+        this.activeClass(activeTab);
     },
 
-    isVisibleChart(name): boolean {
+    isActive(name): boolean {
         if(name === this.currentTab()) {
             return true;
         }
         return false;
-    }
+
+    },
 });
 
 
