@@ -153,7 +153,11 @@ export class Inliners {
             if ($(window).width() <= 800) {
                 if (true === $(this).hasClass("active")) {
                     $(this).removeClass("active").addClass("inactive");
-                    $(this).next("ul").stop().slideUp(400);
+                    let $ul = $(this).next("ul");
+                    $ul.stop().slideUp(400, () => {
+                        $ul.css("display","");
+                    });
+
                 } else {
                     $(this).removeClass("inactive").addClass("active");
                     $(this).next("ul").stop().slideDown(400);
