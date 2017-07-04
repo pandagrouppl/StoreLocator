@@ -161,13 +161,13 @@
         }
 
         &-option {
-            margin-bottom: 35px;
+            margin-bottom: 15px;
             border: 2px dashed #ddd;
             padding: 15px;
             border-radius: 5px;
 
             &--active {
-                border: 2px solid #ddd;
+
             }
         }
 
@@ -193,10 +193,10 @@
         }
 
         &-button {
-            @include button-blue();
+            @include button-blue(6px 10px, 3px 3px 3px 0, 12px);
 
             &--active {
-                color: red;
+
             }
         }
 
