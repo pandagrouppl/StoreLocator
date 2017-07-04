@@ -74,8 +74,7 @@
                     <!--ko foreach: { data: rates(), as: 'method'}-->
                     <div class="checkout__shipping-option"
                          data-bind="
-                            css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__pick-shipping--active' : '',
-                            click: $parent.selectShippingMethod"
+                            css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-option--active' : ''"
                             >
                         <div class="col col-carrier checkout__shipping-name"
                              data-bind="text: method.carrier_title, attr: {'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code}"></div>
@@ -96,14 +95,14 @@
                             <input type="submit"
                                    data-role="opc-continue"
                                    data-bind="
-                                                value: 'pick',
+                                                value: 'select',
                                                 attr: {
                                                     'id': 's_method_' + method.carrier_code + '_' + method.method_code,
                                                     'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
                                                 },
-                                                css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__pick-shipping--active' : '',
+                                                css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-button--active' : '',
                                                 click: $parent.selectShippingMethod"
-                                   class="checkout__pick-shipping"/>
+                                   class="checkout__shipping-button"/>
                             <!--/ko-->
                             <!-- /ko -->
 
@@ -145,13 +144,6 @@
                     <span><!-- ko text: errorValidationMessage()--><!-- /ko --></span>
                 </div>
                 <!-- /ko -->
-                <div class="actions-toolbar" id="shipping-method-buttons-container">
-                    <div class="primary">
-                        <button data-role="opc-continue" type="submit" class="button action continue primary checkout__button--calculate">
-                            <span><!-- ko i18n: 'See available payments'--><!-- /ko --></span>
-                        </button>
-                    </div>
-                </div>
             </form>
             <!-- /ko -->
             <!-- ko ifnot: rates().length > 0 --><div class="no-quotes-block"><!-- ko i18n: 'Sorry, no quotes are available for this order at this time'--><!-- /ko --></div><!-- /ko -->

@@ -125,14 +125,6 @@
         }
     }
 
-    &__pick-shipping {
-        color: blue;
-
-        &--active {
-            color: red;
-        }
-    }
-
     &__address {
         padding: 20px;
         margin: 10px 0;
@@ -170,6 +162,13 @@
 
         &-option {
             margin-bottom: 35px;
+            border: 2px dashed #ddd;
+            padding: 15px;
+            border-radius: 5px;
+
+            &--active {
+                border: 2px solid #ddd;
+            }
         }
 
         &-name {
@@ -183,11 +182,6 @@
             align-items: center;
         }
 
-        &-radio {
-            margin-right: 15px;
-            min-width: 13px;
-        }
-
         &-price {
             font-size: 14px;
             font-weight: bold;
@@ -197,6 +191,15 @@
         &-delivery {
             font-style: italic;
         }
+
+        &-button {
+            @include button-blue();
+
+            &--active {
+                color: red;
+            }
+        }
+
     }
 
     &__payments {
