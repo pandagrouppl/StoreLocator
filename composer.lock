@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "2f840704feed0b4029432e54f66fef9dd7549f27"
+                "reference": "ac1d877008523eb573f4a6e5a4ad6f4e34fb9b56"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-06-28 09:05:33"
+            "time": "2017-07-04 13:31:45"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -202,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "3079dcffb0e153245810b37a2e943258af823700"
+                "reference": "66035acd23d64d411f2acf2c3737dd9b0bb21509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/3079dcffb0e153245810b37a2e943258af823700",
-                "reference": "3079dcffb0e153245810b37a2e943258af823700",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/66035acd23d64d411f2acf2c3737dd9b0bb21509",
+                "reference": "66035acd23d64d411f2acf2c3737dd9b0bb21509",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -219,7 +219,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-29 09:00:27"
+            "time": "2017-07-03 08:41:42"
         },
         {
             "name": "braintree/braintree_php",
