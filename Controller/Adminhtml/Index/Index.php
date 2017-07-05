@@ -16,6 +16,7 @@ class Index extends \Magento\Backend\App\Action
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\Registry $registry,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory
     ) {
         parent::__construct($context);
@@ -31,9 +32,10 @@ class Index extends \Magento\Backend\App\Action
 
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Magento_Backend::system_store')
-            ->addBreadcrumb(__('System'), __('System'))
-            ->addBreadcrumb(__('Manage Stores'), __('Manage Stores'));
+//        $resultPage->setActiveMenu('Magento_Backend::system_store');
+        $resultPage->addBreadcrumb(__('System'), __('System'));
+        $resultPage->addBreadcrumb(__('Manage Stores'), __('Manage Stores'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Manage Stores'));
         return $resultPage;
     }
 
