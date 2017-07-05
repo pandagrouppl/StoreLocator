@@ -12,6 +12,7 @@ class Index extends \Magento\Backend\App\Action
      * Index constructor.
      *
      * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry $registry
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      */
     public function __construct(
@@ -32,7 +33,7 @@ class Index extends \Magento\Backend\App\Action
 
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-//        $resultPage->setActiveMenu('Magento_Backend::system_store');
+        $resultPage->setActiveMenu('Magento_Backend::system_store');
         $resultPage->addBreadcrumb(__('System'), __('System'));
         $resultPage->addBreadcrumb(__('Manage Stores'), __('Manage Stores'));
         $resultPage->getConfig()->getTitle()->prepend(__('Manage Stores'));

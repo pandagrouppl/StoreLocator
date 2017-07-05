@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <!--<virtualType name="PandaGroupStoreLocatorGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">-->
+    <!--<virtualType name="PandaGroupStoreLocatorIdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">-->
         <!--<arguments>-->
             <!--<argument name="appliers" xsi:type="array">-->
                 <!--<item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>-->
@@ -9,59 +9,52 @@
             <!--</argument>-->
         <!--</arguments>-->
     <!--</virtualType>-->
-    <!--<virtualType name="PandaGroupStoreLocatorIndexGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">-->
-        <!--<arguments>-->
-            <!--<argument name="collection" xsi:type="object" shared="false">PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection</argument>-->
-            <!--<argument name="filterPool" xsi:type="object" shared="false">PandaGroupStoreLocatorGirdFilterPool</argument>-->
-        <!--</arguments>-->
+    <!--<virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">-->
+        <!--<argument name="collection" xsi:type="object" shared="false">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Collection</argument>-->
+        <!--<argument name="filterPool" xsi:type="object" shared="false">PandaGroupStoreLocatorIdFilterPool</argument>-->
     <!--</virtualType>-->
-    <!--<type name="PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection">-->
-        <!--<arguments>-->
-            <!--<argument name="mainTable" xsi:type="string">storelocator</argument>-->
-            <!--<argument name="eventPrefix" xsi:type="string">storelocator_index_grid_collection</argument>-->
-            <!--<argument name="eventObject" xsi:type="string">index_grid_collection</argument>-->
-            <!--<argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\Resource\StoreLocator</argument>-->
-        <!--</arguments>-->
-    <!--</type>-->
-    <!--<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
-        <!--<arguments>-->
-            <!--<argument name="collections" xsi:type="array">-->
-                <!--<item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection</item>-->
-            <!--</argument>-->
-        <!--</arguments>-->
-    <!--</type>-->
 
 
+    <virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
+    <virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Cms\Model\Block\DataProvider"/>
 
+    <!--<virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>-->
 
-    <virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
-        <arguments>
-            <argument name="collection" xsi:type="object" shared="false">PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection</argument>
-            <argument name="filterPool" xsi:type="object" shared="false">PandaGroupStoreLocatorIdFilterPool</argument>
-        </arguments>
-    </virtualType>
-    <virtualType name="PandaGroupStoreLocatorIdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
-        <arguments>
-            <argument name="appliers" xsi:type="array">
-                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
-                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
-            </argument>
-        </arguments>
-    </virtualType>
-
-    <virtualType name="PandaGroup\StoreLocator\Model\Resource\StoreLocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">storelocator</argument>
             <argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator</argument>
         </arguments>
     </virtualType>
-
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="pandagroup_storelocator_grid_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>
+                <item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>
+
+                <!--<item name="storelocator_index_index_form_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Form\Collection</item>-->
+
             </argument>
         </arguments>
     </type>
+
+
+
+
+
+
+
+
+<!-- FRONT -->
+    <!--<type name="Magento\Framework\App\RouterList">-->
+        <!--<arguments>-->
+            <!--<argument name="routerList" xsi:type="array">-->
+                <!--<item name="storeLocator" xsi:type="array">-->
+                    <!--<item name="class" xsi:type="string">PandaGroup\StoreLocator\Controller\Router</item>-->
+                    <!--<item name="disable" xsi:type="boolean">false</item>-->
+                    <!--<item name="sortOrder" xsi:type="string">22</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</arguments>-->
+    <!--</type>-->
 
 </config>
