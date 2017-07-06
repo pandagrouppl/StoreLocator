@@ -142,21 +142,40 @@
                 </item>
             </argument>
         </field>
+        <!--<field name="country">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="dataType" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Country</item>-->
+                    <!--<item name="formElement" xsi:type="string">input</item>-->
+                    <!--<item name="source" xsi:type="string">storelocator</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">3</item>-->
+                    <!--<item name="dataScope" xsi:type="string">country</item>-->
+                    <!--<item name="validation" xsi:type="array">-->
+                        <!--<item name="required-entry" xsi:type="boolean">true</item>-->
+                    <!--</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</field>-->
+
         <field name="country">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCountry</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Country</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">3</item>
                     <item name="dataScope" xsi:type="string">country</item>
+                    <!--<item name="component" xsi:type="string">Pathto/js/form/element/options</item>-->
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
         </field>
+
         <field name="address">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -189,10 +208,11 @@
         </field>
         <field name="state">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListState</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">State</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">6</item>
                     <item name="dataScope" xsi:type="string">state</item>
