@@ -59,17 +59,25 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
         return $this->_catalogConfig;
     }
 
-    private function getRegionsAsArray()
+    public function getRegionsAsArray($countryCode = '')
     {
-        $countryCode = 'pl';
-        $countries = $this->countriesData->getCollection()->addFilter('code', $countryCode)->getData();
-        $countryId = $countries[0]['id'];
+        if (true === empty($countryCode)) {  // Load all regions - Ajax request will organize theirs
+            $regions = $this->regionsData->getCollection()->getData();
+        } else {                                                  // There is Ajax request condition
+            $countries = $this->countriesData->getCollection()->addFilter('code', $countryCode)->getData();
 
-        $regions = $this->regionsData->getCollection()->addFilter('country_id', $countryId);
+            $regions = [];
+            if (isset($countries[0]['id'])) {
+                $countryId = $countries[0]['id'];
+                $regions = $this->regionsData->getCollection()->addFilter('country_id', $countryId)->getData();
+            }
+        }
 
         $regionsByCountry = [];
         foreach ($regions as $region) {
-            $regionsByCountry[$region['id']] = strtoupper($region['name']);
+            if (false === empty($region['name'])) {           // Some rows in the database are empty
+                $regionsByCountry[$region['id']] = strtoupper($region['name']);
+            }
         }
 
         return $regionsByCountry;
