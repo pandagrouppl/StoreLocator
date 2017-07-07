@@ -29,6 +29,12 @@ class InstallSchema implements InstallSchemaInterface
                 ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
                 'StoreLocator State Id'
             )->addColumn(
+                'state_source_id',
+                Table::TYPE_INTEGER,
+                null,
+                ['unsigned' => true, 'nullable' => false],
+                'StoreLocator State Id'
+            )->addColumn(
                 'state_name',
                 Table::TYPE_TEXT,
                 255,

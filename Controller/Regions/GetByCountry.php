@@ -47,9 +47,6 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
         if ($countryCode) {
             $response = $this->listState->getRegionsAsArray($countryCode);
 
-//            var_dump($response); exit;
-
-
         } else {
             $response = [
                 'status' => '0',

@@ -25,7 +25,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
     )
     {
         parent::__construct($context, $registry);
-        $this->_init('PandaGroup\StoreLocator\Model\Resource\StoreLocator');
+        $this->_init('PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator');
         $this->configProvider = $configProvider;
     }
 
@@ -188,7 +188,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
      */
     public function updateRegions()
     {
-        /** @var  $storesCollection \PandaGroup\StoreLocator\Model\Resource\StoreLocator\Collection */
+        /** @var  $storesCollection \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Collection */
         $storesCollection = $this->getCollection();
 
         $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
