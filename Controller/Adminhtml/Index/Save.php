@@ -50,7 +50,7 @@ class Save extends \Magento\Backend\App\Action
             }
             */
 
-            $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_id');
+            $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
             $newStateIdFromStoreLocatorStates = $this->addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data);
             $data['state_id'] = $newStateIdFromStoreLocatorStates;
 
@@ -102,7 +102,7 @@ class Save extends \Magento\Backend\App\Action
             $params = [
                 'state_source_id'   => $stateIdFromStatesDataSource,
                 'state_name'        => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-                'state_short_name'  => '',
+                'state_short_name'  => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
                 'country'           => $data['country'],
             ];
 
