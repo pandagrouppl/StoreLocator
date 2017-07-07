@@ -15,6 +15,45 @@ class InstallSchema implements InstallSchemaInterface
         $setup->startSetup();
 
         /**
+         * Create table 'storelocator_states'
+         */
+        $tableExistChecker = $setup->getTable('storelocator_states');
+        if ($setup->tableExists($tableExistChecker) !== true) {
+
+            $storeLocatorRegionsTable = $setup->getConnection()->newTable(
+                $setup->getTable('storelocator_states')
+            )->addColumn(
+                'state_id',
+                Table::TYPE_INTEGER,
+                null,
+                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+                'StoreLocator State Id'
+            )->addColumn(
+                'state_name',
+                Table::TYPE_TEXT,
+                255,
+                ['default' => '', 'nullable' => false],
+                'State Name'
+            )->addColumn(
+                'state_short_name',
+                Table::TYPE_TEXT,
+                null,
+                ['default' => '', 'nullable' => false],
+                'State Short Name'
+            )->addColumn(
+                'country',
+                Table::TYPE_TEXT,
+                null,
+                ['default' => '', 'nullable' => false],
+                'Country'
+            )->setComment(
+                'StoreLocator States'
+            );
+
+            $setup->getConnection()->createTable($storeLocatorRegionsTable);
+        }
+
+        /**
          * Create table 'storelocator'
          */
         $tableExistChecker = $setup->getTable('storelocator');
@@ -74,7 +113,7 @@ class InstallSchema implements InstallSchemaInterface
                 'state_id',
                 Table::TYPE_INTEGER,
                 null,
-                ['nullable' => true],
+                ['nullable' => true, 'unsigned' => true],
                 'State Id'
             )->addColumn(
                 'email',
@@ -374,7 +413,21 @@ class InstallSchema implements InstallSchemaInterface
                     255,
                     ['default' => '', 'nullable' => true],
                     'Image Icon'
-                )->setComment(
+                )
+
+                ->addForeignKey(
+                    $setup->getFkName(
+                        'storelocator',
+                        'state_id',
+                        'storelocator_states',
+                        'state_id'
+                    ),
+                    'state_id',
+                    $setup->getTable('storelocator_states'),
+                    'state_id'
+                )
+
+                ->setComment(
                     'StoreLocator'
                 );
             $setup->getConnection()->createTable($storeLocatorTable);
