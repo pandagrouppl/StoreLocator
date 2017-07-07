@@ -15,6 +15,31 @@ class InstallSchema implements InstallSchemaInterface
         $setup->startSetup();
 
         /**
+         * Create tables 'storelocator_data_countries' and 'storelocator_data_regions'
+         */
+        $countriesTableExistChecker = $setup->getTable('storelocator_data_countries');
+        $regionsTableExistChecker = $setup->getTable('storelocator_data_regions');
+        if (($setup->tableExists($countriesTableExistChecker) !== true) || ($setup->tableExists($regionsTableExistChecker) !== true)) {
+            $filename = __DIR__ . '/world_informations.sql';
+
+            $contents = file_get_contents($filename);
+            echo "\nStart importing SQL file...\n";
+
+            $sql = explode(";", $contents);
+            foreach($sql as $query){
+                if (true === empty($query)) continue;
+                try {
+                    $setup->run($query);
+                    echo "DONE: Querry imported\n";
+                } catch (\Exception $e) {
+                    $message = substr($e->getMessage(), 0, strpos($e->getMessage(), ','));
+
+                    echo "ERROR: " . $message ."\n";
+                }
+            }
+        }
+
+        /**
          * Create table 'storelocator_states'
          */
         $tableExistChecker = $setup->getTable('storelocator_states');
