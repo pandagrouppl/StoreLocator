@@ -52,7 +52,7 @@ define([
             var $lng = $('.admin__control-text[name="longtitude"]');
             $lat.css({transition: "border 1s"});
             $lng.css({transition: "border 1s"});
-            var $cntry = $('.admin__control-text[name="country"]');
+            var $cntry = $('.admin__control-select[name="country"]');
             var $addr = $('.admin__control-text[name="address"]');
             var err_g = 'Google Api Error! Cannot find such place! Check your Address!';
             var err_ajax = 'Internal Error! Check your internet connection!';
