@@ -85,4 +85,49 @@ class States extends \Magento\Framework\Model\AbstractModel
 //        }
 //
 //    }
+
+
+    /**
+     * Delete regions which no store is assigned
+     *
+     * @return int
+     */
+    public function deleteUnused()
+    {
+        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+
+        /** @var \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel */
+        $storeLocatorModel = $objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator');
+
+        $storeLocatorCollection = $storeLocatorModel->getCollection();
+
+        $statesCollection = $this->getCollection();
+
+        $qtyOfDeleted = 0;
+
+        foreach ($statesCollection as $state) {
+            $stateId = $state->getId();
+            $toDelete = true;
+
+            foreach ($storeLocatorCollection as $store) {
+                if ($stateId === $store->getData('state_id')) {
+                    $toDelete = false;
+                }
+            }
+
+            if (true === $toDelete) {
+                try {
+                    $this->getResource()->load($this, $state->getId());
+                    $this->getResource()->delete($this);
+
+                    $qtyOfDeleted++;
+                } catch (\Exception $e) {
+                    return null;
+                }
+
+            }
+        }
+
+        return $qtyOfDeleted;
+    }
 }

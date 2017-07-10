@@ -37,7 +37,7 @@ class ListCountry implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $options = [];
-        $options[] = ['label' => __(''), 'value' => ''];
+        $options[] = ['label' => __(' '), 'value' => ' '];
         foreach ($this->getCountryCodesAsArray() as $countryName => $countryCode) {
             $options[] = ['label' => __($countryName), 'value' => $countryCode];
         }

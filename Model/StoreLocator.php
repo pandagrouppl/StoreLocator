@@ -309,12 +309,12 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
 
         $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
         /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
-        $statesModel        = $objectManager->create('\PandaGroup\StoreLocator\Model\States');
+        $statesModel = $objectManager->create('\PandaGroup\StoreLocator\Model\States');
 
         /** @var \PandaGroup\StoreLocator\Model\RegionsData $regionsDataModel */
-        $regionsDataModel   = $objectManager->create('\PandaGroup\StoreLocator\Model\RegionsData');
+        $regionsDataModel = $objectManager->create('\PandaGroup\StoreLocator\Model\RegionsData');
 
-        $jsonHelper         = $objectManager->create('\Magento\Framework\Json\Helper\Data');
+        $jsonHelper = $objectManager->create('\Magento\Framework\Json\Helper\Data');
 
         $path = self::GOOGLE_API_ADDRESS_URL;
 

@@ -42,7 +42,7 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $options = [];
-        $options[] = ['label' => __(''), 'value' => ''];
+        $options[] = ['label' => __(' '), 'value' => ' '];
         foreach ($this->getRegionsAsArray() as $regionId => $regionName) {
             $options[] = ['label' => __($regionName), 'value' => $regionId];
         }
