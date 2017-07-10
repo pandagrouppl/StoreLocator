@@ -14,4 +14,15 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
             'PandaGroup\StoreLocator\Model\ResourceModel\RegionsData'
         );
     }
+
+    protected function _initSelect()
+    {
+        parent::_initSelect();
+
+        $this->getSelect()->joinLeft(
+            ['secondTable' => $this->getTable('storelocator_data_countries')],
+            'main_table.country_id = secondTable.id',
+            ['country_name' => 'name', 'country_code' => 'code']
+        );
+    }
 }

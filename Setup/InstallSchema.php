@@ -77,6 +77,24 @@ class InstallSchema implements InstallSchemaInterface
                 null,
                 ['default' => '', 'nullable' => false],
                 'Country'
+            )->addColumn(
+                'latitude',
+                Table::TYPE_TEXT,
+                30,
+                ['default' => 0, 'nullable' => true],
+                'Latitude'
+            )->addColumn(
+                'longtitude',
+                Table::TYPE_TEXT,
+                30,
+                ['default' => 0, 'nullable' => true],
+                'Longtitude'
+            )->addColumn(
+                'zoom_level',
+                Table::TYPE_INTEGER,
+                11,
+                ['nullable' => true],
+                'Zoom Level'
             )->setComment(
                 'StoreLocator States'
             );
@@ -455,7 +473,8 @@ class InstallSchema implements InstallSchemaInterface
                     ),
                     'state_id',
                     $setup->getTable('storelocator_states'),
-                    'state_id'
+                    'state_id',
+                    \Magento\Framework\DB\Ddl\Table::ACTION_SET_NULL
                 )
 
                 ->setComment(

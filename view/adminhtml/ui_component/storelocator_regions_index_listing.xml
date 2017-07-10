@@ -230,7 +230,7 @@
                 </item>
             </argument>
         </column>
-        <column name="short_state_name">
+        <column name="state_short_name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="editor" xsi:type="array">

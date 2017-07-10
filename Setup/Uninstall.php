@@ -48,12 +48,12 @@ class Uninstall implements UninstallInterface
         $setup->getConnection()->dropTable('storelocator_states');
 
         /**
-         * Delete table 'storelocator_states'
+         * Delete table 'storelocator_data_countries'
          */
         $setup->getConnection()->dropTable('storelocator_data_countries');
 
         /**
-         * Delete table 'storelocator_states'
+         * Delete table 'storelocator_data_regions'
          */
         $setup->getConnection()->dropTable('storelocator_data_regions');
 

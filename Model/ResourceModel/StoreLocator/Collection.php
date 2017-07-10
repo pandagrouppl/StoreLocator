@@ -39,6 +39,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         );
         $this->storeManager = $storeManager;
     }
+
     protected function _initSelect()
     {
         parent::_initSelect();
@@ -46,7 +47,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->getSelect()->joinLeft(
             ['secondTable' => $this->getTable('storelocator_states')],
             'main_table.state_id = secondTable.state_id',
-            ['state_source_id', 'state_name']
+            ['state_source_id', 'state_name', 'state_short_name', 'latitude', 'longtitude', 'zoom_level']
         );
     }
 }

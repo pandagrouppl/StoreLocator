@@ -22,7 +22,7 @@
                 <item name="name" xsi:type="string">update_regions</item>
                 <item name="label" xsi:type="string" translate="true">Update regions</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/regions/update</item>
+                <item name="url" xsi:type="string">storelocator/regions/update</item>
             </item>
         </item>
     </argument>

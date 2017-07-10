@@ -11,4 +11,5 @@ class States extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     {
         $this->_init('storelocator_states', 'state_id');
     }
+
 }
