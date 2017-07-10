@@ -24,13 +24,13 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $name,
         $primaryFieldName,
         $requestFieldName,
-        \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $faqCollectionFactory,
+        \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $storeLocatorCollectionFactory,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor,
         array $meta = [],
         array $data = []
     ) {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
-        $this->collection    = $faqCollectionFactory->create();
+        $this->collection    = $storeLocatorCollectionFactory->create();
         $this->dataPersistor = $dataPersistor;
     }
 

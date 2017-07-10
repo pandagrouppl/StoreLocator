@@ -22,7 +22,7 @@
                 <item name="name" xsi:type="string">update_regions</item>
                 <item name="label" xsi:type="string" translate="true">Update regions</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/regions/update</item>
+                <item name="url" xsi:type="string">storelocator/regions/update</item>
             </item>
         </item>
     </argument>
@@ -192,8 +192,8 @@
                         <item name="label" xsi:type="string" translate="true">Delete</item>
                         <item name="url" xsi:type="url" path="storelocator/index/massDelete"/>
                         <item name="confirm" xsi:type="array">
-                            <item name="title" xsi:type="string" translate="true">Delete Posts</item>
-                            <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected Posts?</item>
+                            <item name="title" xsi:type="string" translate="true">Delete Stores</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected Stores?</item>
                         </item>
                     </item>
                 </argument>
@@ -243,7 +243,7 @@
                     <item name="enabled" xsi:type="boolean">true</item>
                     <item name="indexField" xsi:type="string">storelocator_id</item>
                     <item name="clientConfig" xsi:type="array">
-                        <item name="saveUrl" xsi:type="url" path="polcode/faq/inlineEdit"/>
+                        <item name="saveUrl" xsi:type="url" path="storelocator/index/inlineEdit"/>
                         <item name="validateBeforeSave" xsi:type="boolean">false</item>
                     </item>
                 </item>
@@ -351,15 +351,41 @@
                 </item>
             </argument>
         </column>
-        <column name="state">
+        <!--<column name="state">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="editor" xsi:type="array">-->
+                        <!--<item name="editorType" xsi:type="string">text</item>-->
+                        <!--<item name="validation" xsi:type="array">-->
+                            <!--<item name="required-entry" xsi:type="boolean">true</item>-->
+                        <!--</item>-->
+                    <!--</item>-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="visible" xsi:type="boolean">true</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">State</item>-->
+                    <!--<item name="dataType" xsi:type="string">text</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
+        <!--<column name="state_id">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="editor" xsi:type="array">-->
+                        <!--<item name="editorType" xsi:type="string">text</item>-->
+                        <!--<item name="validation" xsi:type="array">-->
+                            <!--<item name="required-entry" xsi:type="boolean">false</item>-->
+                        <!--</item>-->
+                    <!--</item>-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="visible" xsi:type="boolean">true</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">State Id</item>-->
+                    <!--<item name="dataType" xsi:type="string">text</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
+        <column name="state_name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="editor" xsi:type="array">
-                        <item name="editorType" xsi:type="string">text</item>
-                        <item name="validation" xsi:type="array">
-                            <item name="required-entry" xsi:type="boolean">true</item>
-                        </item>
-                    </item>
                     <item name="filter" xsi:type="string">text</item>
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="label" xsi:type="string" translate="true">State</item>
@@ -403,7 +429,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">id</item>
-                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="sortOrder" xsi:type="number">9999</item>
                 </item>
             </argument>
         </actionsColumn>

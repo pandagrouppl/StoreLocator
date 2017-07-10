@@ -14,24 +14,60 @@
         <!--<argument name="filterPool" xsi:type="object" shared="false">PandaGroupStoreLocatorIdFilterPool</argument>-->
     <!--</virtualType>-->
 
-
     <virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
     <virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Cms\Model\Block\DataProvider"/>
 
+<!-- STORES GRID (without join)-->
+
     <!--<virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>-->
 
-    <virtualType name="PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <!--<virtualType name="PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">-->
+        <!--<arguments>-->
+            <!--<argument name="mainTable" xsi:type="string">storelocator</argument>-->
+            <!--<argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator</argument>-->
+        <!--</arguments>-->
+    <!--</virtualType>-->
+    <!--<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
+        <!--<arguments>-->
+            <!--<argument name="collections" xsi:type="array">-->
+                <!--<item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>-->
+
+            <!--</argument>-->
+        <!--</arguments>-->
+    <!--</type>-->
+
+<!-- STORES GRID -->
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">storelocator</argument>
+            <argument name="eventPrefix" xsi:type="string">pandagroup_storelocator_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">pandagroup_grid_collection</argument>
             <argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator</argument>
+        </arguments>
+    </type>
+
+
+<!-- REGIONS GRID -->
+
+    <virtualType name="PandaGroupStoreLocatorRegionsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
+    <virtualType name="PandaGroup\StoreLocator\Model\ResourceModel\States\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">storelocator_states</argument>
+            <argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\States</argument>
         </arguments>
     </virtualType>
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>
-
-                <!--<item name="storelocator_index_index_form_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Form\Collection</item>-->
+                <item name="storelocator_regions_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\States\Grid\Collection</item>
 
             </argument>
         </arguments>
@@ -44,17 +80,17 @@
 
 
 
-<!-- FRONT -->
-    <!--<type name="Magento\Framework\App\RouterList">-->
-        <!--<arguments>-->
-            <!--<argument name="routerList" xsi:type="array">-->
-                <!--<item name="storeLocator" xsi:type="array">-->
-                    <!--<item name="class" xsi:type="string">PandaGroup\StoreLocator\Controller\Router</item>-->
-                    <!--<item name="disable" xsi:type="boolean">false</item>-->
-                    <!--<item name="sortOrder" xsi:type="string">22</item>-->
-                <!--</item>-->
-            <!--</argument>-->
-        <!--</arguments>-->
-    <!--</type>-->
+ <!--FRONT -->
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="storeLocator" xsi:type="array">
+                    <item name="class" xsi:type="string">PandaGroup\StoreLocator\Controller\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">22</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
 
 </config>

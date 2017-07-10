@@ -1,18 +1,35 @@
 <?php
 namespace PandaGroup\StoreLocator\Controller\Adminhtml\Index;
 
+use Magento\Framework\Exception\LocalizedException;
+
 class Save extends \Magento\Backend\App\Action
 {
     /** @var \Magento\Framework\App\Request\DataPersistorInterface  */
     protected $dataPersistor;
 
+    /** @var \PandaGroup\StoreLocator\Model\RegionsData  */
+    protected $regionsData;
+
+    /** @var \PandaGroup\StoreLocator\Model\States  */
+    protected $states;
+
+    /** @var \PandaGroup\StoreLocator\Model\StatesFactory  */
+    protected $statesFactory;
+
 
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $registry,
-        \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
+        \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor,
+        \PandaGroup\StoreLocator\Model\RegionsData $regionsData,
+        \PandaGroup\StoreLocator\Model\States $states,
+        \PandaGroup\StoreLocator\Model\StatesFactory $statesFactory
     ) {
         $this->dataPersistor = $dataPersistor;
+        $this->regionsData = $regionsData;
+        $this->states = $states;
+        $this->statesFactory = $statesFactory;
         parent::__construct($context);
     }
 
@@ -33,7 +50,9 @@ class Save extends \Magento\Backend\App\Action
             }
             */
 
-
+            $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
+            $newStateIdFromStoreLocatorStates = $this->addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data);
+            $data['state_id'] = $newStateIdFromStoreLocatorStates;
 
             $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->load($id);
             if (!$model->getId() && $id) {
@@ -66,6 +85,42 @@ class Save extends \Magento\Backend\App\Action
         }
 
         return $resultRedirect->setPath('*/*/');
+    }
+
+    /**
+     * @param $stateIdFromStatesDataSource
+     * @param $data
+     * @return int
+     */
+    protected function addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data)
+    {
+        $stateExists = $this->states->getCollection()->addFilter('state_source_id', $stateIdFromStatesDataSource)->getData();
+        if (true === empty($stateExists)) {
+
+            $state = $this->statesFactory->create();
+
+            $params = [
+                'state_source_id'   => $stateIdFromStatesDataSource,
+                'state_name'        => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
+                'state_short_name'  => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
+                'country'           => $data['country'],
+            ];
+
+            $state->addData($params);
+
+            try {
+                $state->save();
+                $this->messageManager->addSuccessMessage(__('You created the new region.'));
+            } catch (\Exception $e) {
+                $this->messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
+            }
+            return (int) $state->getId();
+
+        } else {
+            $state = $this->states->load($stateExists[0]['state_id']);
+            return (int) $state->getId();
+        }
+
     }
 
 }
