@@ -336,6 +336,22 @@
                 </item>
             </argument>
         </field>
+        <field name="zoom_level">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListZoom</item>
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Zoom Level</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">3</item>
+                    <item name="dataScope" xsi:type="string">zoom_level</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
         <field name="longtitude2">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -344,7 +360,7 @@
                     <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchGoogleApi</item>
                     <item name="formElement" xsi:type="string">button</item>
                     <item name="source" xsi:type="string">storelocator</item>
-                    <item name="sortOrder" xsi:type="number">3</item>
+                    <item name="sortOrder" xsi:type="number">4</item>
                     <item name="dataScope" xsi:type="string">longtitude</item>
                 </item>
             </argument>
@@ -361,10 +377,11 @@
         </argument>
         <field name="monday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Monday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">1</item>
                     <item name="dataScope" xsi:type="string">monday_open</item>
@@ -376,10 +393,11 @@
         </field>
         <field name="monday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Monday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">2</item>
                     <item name="dataScope" xsi:type="string">monday_close</item>
@@ -392,10 +410,11 @@
 
         <field name="tuesday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Tuesday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">11</item>
                     <item name="dataScope" xsi:type="string">tuesday_open</item>
@@ -407,10 +426,11 @@
         </field>
         <field name="tuesday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Tuesday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">12</item>
                     <item name="dataScope" xsi:type="string">tuesday_close</item>
@@ -423,10 +443,11 @@
 
         <field name="wednesday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Wednesday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">21</item>
                     <item name="dataScope" xsi:type="string">wednesday_open</item>
@@ -438,10 +459,11 @@
         </field>
         <field name="wednesday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Wednesday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">22</item>
                     <item name="dataScope" xsi:type="string">wednesday_close</item>
@@ -454,10 +476,11 @@
 
         <field name="thursday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Thursday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">31</item>
                     <item name="dataScope" xsi:type="string">thursday_open</item>
@@ -469,10 +492,11 @@
         </field>
         <field name="thursday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Thursday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">32</item>
                     <item name="dataScope" xsi:type="string">thursday_close</item>
@@ -485,10 +509,11 @@
 
         <field name="friday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Friday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">41</item>
                     <item name="dataScope" xsi:type="string">friday_open</item>
@@ -500,10 +525,11 @@
         </field>
         <field name="friday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Friday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">42</item>
                     <item name="dataScope" xsi:type="string">friday_close</item>
@@ -516,10 +542,11 @@
 
         <field name="saturday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Saturday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">51</item>
                     <item name="dataScope" xsi:type="string">saturday_open</item>
@@ -531,10 +558,11 @@
         </field>
         <field name="saturday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Saturday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">52</item>
                     <item name="dataScope" xsi:type="string">saturday_close</item>
@@ -547,10 +575,11 @@
 
         <field name="sunday_open">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Sunday Open</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">61</item>
                     <item name="dataScope" xsi:type="string">sunday_open</item>
@@ -562,10 +591,11 @@
         </field>
         <field name="sunday_close">
             <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListCloseHours</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Sunday Close</item>
-                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="formElement" xsi:type="string">select</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">62</item>
                     <item name="dataScope" xsi:type="string">sunday_close</item>

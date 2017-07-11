@@ -23,6 +23,11 @@
                     <label>Country</label>
                     <source_model>PandaGroup\StoreLocator\Model\Config\Source\ListCountry</source_model>
                 </field>
+                <field id="time_format_select" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Time Format</label>
+                    <validate>required-entry</validate>
+                    <source_model>PandaGroup\StoreLocator\Model\Config\Source\ListTimeFormat</source_model>
+                </field>
             </group>
             <group id="store_locator_map_settings" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Default Map Settings</label>
