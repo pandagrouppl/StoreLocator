@@ -58,7 +58,7 @@ class States extends \Magento\Framework\Model\AbstractModel
             'state_short_name'  => $shortStateName,
             'country'           => $country,
             'latitude'          => $coordinates['lat'],
-            'longtitude'        => $coordinates['lat'],
+            'longtitude'        => $coordinates['lng'],
             'zoom_level'        => 5,
         ];
 
