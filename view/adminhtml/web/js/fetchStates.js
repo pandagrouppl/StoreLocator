@@ -7,9 +7,11 @@ define([
     'mageUtils',
     'uiRegistry',
     'Magento_Ui/js/form/element/abstract',
-    'uiLayout'
-], function (_, utils, registry, Abstract, layout) {
+    'uiLayout',
+    'jquery'
+], function (_, utils, registry, Abstract, layout, $) {
     'use strict';
+
 
     var inputNode = {
         parent: '${ $.$data.parentName }',
@@ -123,7 +125,6 @@ define([
             if (this.filterBy) {
                 this.initFilter();
             }
-
             return this;
         },
 
@@ -189,7 +190,6 @@ define([
          */
         initInput: function () {
             layout([utils.template(inputNode, this)]);
-
             return this;
         },
 

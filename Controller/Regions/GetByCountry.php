@@ -45,11 +45,12 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
         $countryCode = $this->getRequest()->getParam('country');
 
         if ($countryCode) {
-            $response = $this->listState->getRegionsAsArray($countryCode);
-
+            $states = $this->listState->getRegionsAsArray($countryCode);
+            $response['status'] = 1;
+            $response['states'] = $states;
         } else {
             $response = [
-                'status' => '0',
+                'status' => 0,
                 'error' => __('Bad country code.')
             ];
         }

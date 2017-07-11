@@ -30,7 +30,7 @@ class InstallSchema implements InstallSchemaInterface
                 if (true === empty($query)) continue;
                 try {
                     $setup->run($query);
-                    echo "DONE: Querry imported\n";
+                    echo "DONE: Query imported\n";
                 } catch (\Exception $e) {
                     $message = substr($e->getMessage(), 0, strpos($e->getMessage(), ','));
 
