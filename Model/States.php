@@ -39,6 +39,9 @@ class States extends \Magento\Framework\Model\AbstractModel
         /** @var \Magento\Framework\Message\Manager $messageManager */
         $messageManager = $objectManager->create('Magento\Framework\Message\Manager');
 
+        /** @var \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider */
+        $configProvider = $objectManager->create('PandaGroup\StoreLocator\Helper\ConfigProvider');
+
 //        /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
 //        $statesModel = $this->create();
 
@@ -50,7 +53,13 @@ class States extends \Magento\Framework\Model\AbstractModel
             }
         }
 
+        $isCoordinateDownloadError = false;
         $coordinates = $googleApiModel->getCoordinatesByAddress($stateName . ', ' . $country);
+        if (null === $coordinates) {
+            $coordinates['lat'] = $configProvider->getMapLatitude();
+            $coordinates['lng'] = $configProvider->getMapLongitude();
+            $isCoordinateDownloadError = true;
+        }
 
         $params = [
             'state_source_id'   => $sourceStateId,
@@ -66,7 +75,13 @@ class States extends \Magento\Framework\Model\AbstractModel
 
         try {
             $this->getResource()->save($statesModel);
-            $messageManager->addSuccessMessage(__('You created the new region.'));
+
+            if (false === $isCoordinateDownloadError) {
+                $messageManager->addSuccessMessage(__('You created the new region.'));
+            } else {
+                $messageManager->addNoticeMessage(__('You created the new region but "Region short name" was set to full name and coordinates was set to default because of Google API error. You can change it manually in Regions table.'));
+            }
+
         } catch (\Exception $e) {
             $messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
             return null;
