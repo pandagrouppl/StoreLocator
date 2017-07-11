@@ -70,8 +70,7 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
             $coordinates['lat'] = $countryInformation['results'][0]['geometry']['location']['lat'];
             $coordinates['lng'] = $countryInformation['results'][0]['geometry']['location']['lng'];
         } else {
-            $coordinates['lat'] = null;
-            $coordinates['lng'] = null;
+            $coordinates = null;
         }
 
         return $coordinates;

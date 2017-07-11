@@ -27,7 +27,7 @@ class NewAction extends \Magento\Backend\App\Action
     }
 
     /**
-     * Create new FAQ question
+     * Create new store
      *
      * @return \Magento\Framework\Controller\ResultInterface
      */

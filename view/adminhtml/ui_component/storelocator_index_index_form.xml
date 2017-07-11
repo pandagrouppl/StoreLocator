@@ -268,6 +268,31 @@
                 </item>
             </argument>
         </field>
+        <field name="fax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Fax</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">9</item>
+                    <item name="dataScope" xsi:type="string">fax</item>
+                </item>
+            </argument>
+        </field>
+        <field name="rewrite_request_path">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Rewrite Request Path</item>
+                    <item name="disabled" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">9</item>
+                    <item name="dataScope" xsi:type="string">rewrite_request_path</item>
+                </item>
+            </argument>
+        </field>
         <field name="description">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -275,7 +300,7 @@
                     <item name="label" xsi:type="string" translate="true">Description</item>
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">storelocator</item>
-                    <item name="sortOrder" xsi:type="number">9</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
                     <item name="dataScope" xsi:type="string">description</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">false</item>

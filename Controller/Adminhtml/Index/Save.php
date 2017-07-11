@@ -41,15 +41,6 @@ class Save extends \Magento\Backend\App\Action
         if ($data) {
             $id = $this->getRequest()->getParam('id');
 
-            /*
-            if (isset($data['is_active']) && $data['is_active'] === 'true') {
-                $data['is_active'] = Faq::STATUS_ENABLED;
-            }
-            if (empty($data['entity_id'])) {
-                $data['entity_id'] = null;
-            }
-            */
-
             $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
 
             $newStateIdFromStoreLocatorStates = $this->states->addNewRegion(
@@ -61,6 +52,7 @@ class Save extends \Magento\Backend\App\Action
 
             $data['state_id'] = $newStateIdFromStoreLocatorStates;
 
+            /** @var \PandaGroup\StoreLocator\Model\StoreLocator $model */
             $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->load($id);
             if (!$model->getId() && $id) {
                 $this->messageManager->addErrorMessage(__('This store no longer exists.'));
@@ -68,11 +60,30 @@ class Save extends \Magento\Backend\App\Action
                 return $resultRedirect->setPath('*/*/');
             }
 
+            if ($data['storelocator_id'] === '') {
+                $data['storelocator_id'] = null;            // Bug with saving new store
+            }
+            /*
+
+            if (true === empty($data['rewrite_request_path'])
+             || null === empty($data['rewrite_request_path'])
+             || false === isset($data['rewrite_request_path'])
+            ) {     // Generate rewrite request path
+                $data['rewrite_request_path'] = $this->toSafeUrl($data['rewrite_request_path']);
+            }
+
+            $data['rewrite_request_path'] = $this->toSafeUrl($data['rewrite_request_path']);
+
+            */
+
+
             $model->setData($data);
 
             try {
-                $model->save();
+//                $model->save();
+                $model->getResource()->save($model);
                 $this->messageManager->addSuccessMessage(__('You saved the store.'));
+
                 $this->dataPersistor->clear('storelocator');
 
                 if ($this->getRequest()->getParam('back')) {
@@ -85,13 +96,31 @@ class Save extends \Magento\Backend\App\Action
             } catch (\Exception $e) {
                 $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the store.'));
             }
-
             $this->dataPersistor->set('storelocator', $data);
 
             return $resultRedirect->setPath('*/*/edit', ['storelocator_id' => $this->getRequest()->getParam('storelocator_id')]);
         }
 
         return $resultRedirect->setPath('*/*/');
+    }
+
+    /**
+     * @param $str
+     * @param array $replace
+     * @param string $delimiter
+     * @return mixed|string
+     */
+    protected function toSafeUrl($str, $replace=array(), $delimiter='-') {
+        if( !empty($replace) ) {
+            $str = str_replace((array)$replace, ' ', $str);
+        }
+
+        $clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+        $clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+        $clean = strtolower(trim($clean, '-'));
+        $clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+
+        return $clean;
     }
 
 }
