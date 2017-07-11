@@ -47,7 +47,14 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->getSelect()->joinLeft(
             ['secondTable' => $this->getTable('storelocator_states')],
             'main_table.state_id = secondTable.state_id',
-            ['state_source_id', 'state_name', 'state_short_name', 'latitude', 'longtitude', 'zoom_level']
+            [
+                'state_source_id',
+                'state_name',
+                'state_short_name',
+                'state_latitude'    => 'latitude',
+                'state_longtitude'  => 'longtitude',
+                'state_zoom_level'  => 'zoom_level'
+            ]
         );
     }
 }
