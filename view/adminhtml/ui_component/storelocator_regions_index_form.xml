@@ -214,13 +214,13 @@
                 </item>
             </argument>
         </field>
-        <field name="state_zoom_level">
+        <field name="google_fetch">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">button</item>
                     <item name="displayArea" xsi:type="string">insideGroup</item>
                     <item name="title" xsi:type="string" translate="true">Fetch Coordinates from Google Api</item>
-                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchGoogleApi</item>
+                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchRegionCoords</item>
                     <item name="formElement" xsi:type="string">button</item>
                     <item name="source" xsi:type="string">states_data</item>
                     <item name="sortOrder" xsi:type="number">3</item>
