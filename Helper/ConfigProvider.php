@@ -2,10 +2,6 @@
 
 namespace PandaGroup\StoreLocator\Helper;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\App\Helper\Context;
-use Magento\Store\Model\StoreManagerInterface;
-
 class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /** Section */
@@ -18,6 +14,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     /** Fields */
     const GOOGLE_API_KEY_FIELD  = 'api_key_text';
     const COUNTRY_FIELD         = 'country_select';
+    const TIME_FORMAT_FIELD     = 'time_format_select';
     const LATITUDE_FIELD        = 'lat_text';
     const LONGITUDE_FIELD       = 'lng_text';
     const ZOOM_LEVEL_FIELD      = 'zoom_select';
@@ -45,8 +42,8 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Construct
      *
-     * @param Context $context
-     * @param StoreManagerInterface $storeManager
+     * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
@@ -82,6 +79,21 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return (string) $this->scopeConfig->getValue(
             self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_BASE_SETTINGS_GROUP . self::COUNTRY_FIELD,
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
+            $store
+        );
+    }
+
+    /**
+     * Retrieve Hours Time Format
+     *
+     * @param null $store
+     * @return string
+     */
+    public function getHoursTimeFormat($store = null)
+    {
+        return (int) $this->scopeConfig->getValue(
+            self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_BASE_SETTINGS_GROUP . self::TIME_FORMAT_FIELD,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );

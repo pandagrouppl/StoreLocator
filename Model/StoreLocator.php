@@ -109,32 +109,32 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                 'region'    => $item->getData('state_short_name'),
                 'hours'     => [
                     'SUN' => [
-                        date('h:i A', strtotime($item->getData('sunday_open'))),
-                        date('h:i A', strtotime($item->getData('sunday_close')))
+                        $this->stringToDate($item->getData('sunday_open')),
+                        $this->stringToDate($item->getData('sunday_close'))
                     ],
                     "MON"=> [
-                        date('h:i A', strtotime($item->getData('monday_open'))),
-                        date('h:i A', strtotime($item->getData('monday_close')))
+                        $this->stringToDate($item->getData('monday_open')),
+                        $this->stringToDate($item->getData('monday_close'))
                     ],
                     "TUE"=> [
-                        date('h:i A', strtotime($item->getData('tuesday_open'))),
-                        date('h:i A', strtotime($item->getData('tuesday_close')))
+                        $this->stringToDate($item->getData('tuesday_open')),
+                        $this->stringToDate($item->getData('tuesday_close'))
                     ],
                     "WED"=> [
-                        date('h:i A', strtotime($item->getData('wednesday_open'))),
-                        date('h:i A', strtotime($item->getData('wednesday_close')))
+                        $this->stringToDate($item->getData('wednesday_open')),
+                        $this->stringToDate($item->getData('wednesday_close'))
                     ],
                     "THU"=> [
-                        date('h:i A', strtotime($item->getData('thursday_open'))),
-                        date('h:i A', strtotime($item->getData('thursday_close')))
+                        $this->stringToDate($item->getData('thursday_open')),
+                        $this->stringToDate($item->getData('thursday_close'))
                     ],
                     "FRI"=> [
-                        date('h:i A', strtotime($item->getData('friday_open'))),
-                        date('h:i A', strtotime($item->getData('friday_close')))
+                        $this->stringToDate($item->getData('friday_open')),
+                        $this->stringToDate($item->getData('friday_close'))
                     ],
                     "SAT"=> [
-                        date('h:i A', strtotime($item->getData('saturday_open'))),
-                        date('h:i A', strtotime($item->getData('saturday_close')))
+                        $this->stringToDate($item->getData('saturday_open')),
+                        $this->stringToDate($item->getData('saturday_close'))
                     ]
                 ]
             ];
@@ -149,6 +149,19 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         ];
 
         return $response;
+    }
+
+    /**
+     * @param $stringValue
+     * @return false|string
+     */
+    protected function stringToDate($stringValue) {
+        $timeFormat = $this->configProvider->getHoursTimeFormat();
+
+        if ($timeFormat === 12) {
+            return date('h:i A', strtotime($stringValue));
+        }
+        return date('h:i', strtotime($stringValue));
     }
 
     /**
