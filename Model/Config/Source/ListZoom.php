@@ -29,7 +29,7 @@ class ListZoom implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $options = [];
-        $options[] = ['label' => __(''), 'value' => ''];
+        $options[] = ['label' => __(' '), 'value' => ' '];
         foreach ($this->getZoomLevelsAsArray() as $zoomLevel => $zoomLevelLabel) {
             $options[] = ['label' => __($zoomLevelLabel), 'value' => $zoomLevel];
         }

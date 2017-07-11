@@ -42,7 +42,7 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $options = [];
-        $options[] = ['label' => __(''), 'value' => ''];
+        $options[] = ['label' => __(' '), 'value' => ' '];
         foreach ($this->getRegionsAsArray() as $regionId => $regionName) {
             $options[] = ['label' => __($regionName), 'value' => $regionId];
         }
@@ -61,22 +61,23 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
 
     public function getRegionsAsArray($countryCode = '')
     {
-        if (true === empty($countryCode)) {  // Load all regions - Ajax request will organize theirs
-            $regions = $this->regionsData->getCollection()->getData();
-        } else {                                                  // There is Ajax request condition
-            $countries = $this->countriesData->getCollection()->addFilter('code', $countryCode)->getData();
+        /** @var \PandaGroup\StoreLocator\Model\ResourceModel\RegionsData\Collection $regionsDataCollection */
+        $regionsDataCollection = $this->regionsData->getCollection();
 
-            $regions = [];
-            if (isset($countries[0]['id'])) {
-                $countryId = $countries[0]['id'];
-                $regions = $this->regionsData->getCollection()->addFilter('country_id', $countryId)->getData();
-            }
+        /** @var \PandaGroup\StoreLocator\Model\ResourceModel\CountriesData\Collection $countriesDataCollection */
+        $countriesDataCollection = $this->countriesData->getCollection();
+
+        if (false === empty($countryCode)) {
+            $countriesDataCollection->addFilter('code', $countryCode);
+            $countryId = $countriesDataCollection->getFirstItem()->getId();
+            $regionsDataCollection->addFilter('country_id', $countryId);
         }
 
         $regionsByCountry = [];
-        foreach ($regions as $region) {
-            if (false === empty($region['name'])) {           // Some rows in the database are empty
-                $regionsByCountry[$region['id']] = strtoupper($region['name']);
+
+        foreach ($regionsDataCollection as $region) {
+            if (false === empty($region->getName())) {           // Some rows in the database are empty
+                $regionsByCountry[$region->getId()] = $region->getName();
             }
         }
 

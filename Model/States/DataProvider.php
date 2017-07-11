@@ -1,6 +1,6 @@
 <?php
 
-namespace PandaGroup\StoreLocator\Model\StoreLocator;
+namespace PandaGroup\StoreLocator\Model\States;
 
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
@@ -15,7 +15,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @param string $name
      * @param string $primaryFieldName
      * @param string $requestFieldName
-     * @param \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $storeLocatorCollectionFactory
+     * @param \PandaGroup\StoreLocator\Model\ResourceModel\States\CollectionFactory $statesCollectionFactory
      * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
      * @param array $meta
      * @param array $data
@@ -24,13 +24,13 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $name,
         $primaryFieldName,
         $requestFieldName,
-        \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $storeLocatorCollectionFactory,
+        \PandaGroup\StoreLocator\Model\ResourceModel\States\CollectionFactory $statesCollectionFactory,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor,
         array $meta = [],
         array $data = []
     ) {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
-        $this->collection    = $storeLocatorCollectionFactory->create();
+        $this->collection    = $statesCollectionFactory->create();
         $this->dataPersistor = $dataPersistor;
     }
 
@@ -46,17 +46,17 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         }
 
         $items = $this->collection->getItems();
-        /** @var \PandaGroup\StoreLocator\Model\StoreLocator $store */
-        foreach ($items as $store) {
-            $this->loadedData[$store->getId()] = $store->getData();
+        /** @var \PandaGroup\StoreLocator\Model\States $state */
+        foreach ($items as $state) {
+            $this->loadedData[$state->getId()] = $state->getData();
         }
 
-        $data = $this->dataPersistor->get('storelocator');
+        $data = $this->dataPersistor->get('states_data');
         if (!empty($data)) {
-            $store = $this->collection->getNewEmptyItem();
-            $store->setData($data);
-            $this->loadedData[$store->getId()] = $store->getData();
-            $this->dataPersistor->clear('storelocator');
+            $state = $this->collection->getNewEmptyItem();
+            $state->setData($data);
+            $this->loadedData[$state->getId()] = $state->getData();
+            $this->dataPersistor->clear('states_data');
         }
 
         return $this->loadedData;
