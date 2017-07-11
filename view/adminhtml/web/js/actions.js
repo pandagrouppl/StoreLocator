@@ -10,7 +10,10 @@ define([
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
                 data: {country: $cntry.val()},
-                method: 'get'
+                method: 'get',
+                beforeSend: function() {
+                    //$('.admin__form-loading-mask[data-role="spinner"]').show();
+                }
             })
             .done(function(json) {
                if (json.status) {
@@ -29,8 +32,21 @@ define([
             })
             .fail(function() {
                 window.alert('External error!');
+            })
+            .always(function() {
+                //$('.admin__form-loading-mask[data-role="spinner"]').hide();
             });
 
         })
     }, 4000);
+
+    $(document).ajaxStart(function(){
+        $('.admin__form-loading-mask[data-role="spinner"]').show();
+    });
+
+    $(document).ajaxComplete(function(){
+        $('.admin__form-loading-mask[data-role="spinner"]').hide();
+    });
+
 });
+
