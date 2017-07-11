@@ -300,12 +300,8 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
      */
     public function updateRegions()
     {
-
-
         /** @var  $storesCollection \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Collection */
         $storesCollection = $this->getCollection();
-
-//        var_dump($storesCollection->getData()); exit;
 
         $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
         /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
@@ -326,7 +322,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
             $countryName = $item->getData('country');
             $state       = $item->getData('state_id');
 
-            if (null  === $state) {
+            if (null === $state) {
                 $qtyOfRegions++;
 
                 $address = $item->getData('address') .' '. $countryName;
@@ -350,7 +346,6 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                 foreach ($names as $regionName) {
 
                     if ($regionName['types'][0] === 'administrative_area_level_1') {
-//                        var_dump($regionName);
 
                         $stateName = $regionName['long_name'];
                         $shortStateName = $regionName['short_name'];
@@ -382,9 +377,6 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                         } else {
                             $qtyOfFoundedRegions++;
                         }
-
-//                        var_dump($foundedRegion);
-//                        exit;
                     }
 
                 }

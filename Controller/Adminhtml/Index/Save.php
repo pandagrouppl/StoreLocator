@@ -51,7 +51,14 @@ class Save extends \Magento\Backend\App\Action
             */
 
             $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
-            $newStateIdFromStoreLocatorStates = $this->addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data);
+
+            $newStateIdFromStoreLocatorStates = $this->states->addNewRegion(
+                $stateIdFromStatesDataSource,
+                $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
+                '',
+                $data['country']
+            );
+
             $data['state_id'] = $newStateIdFromStoreLocatorStates;
 
             $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator')->load($id);
@@ -85,42 +92,6 @@ class Save extends \Magento\Backend\App\Action
         }
 
         return $resultRedirect->setPath('*/*/');
-    }
-
-    /**
-     * @param $stateIdFromStatesDataSource
-     * @param $data
-     * @return int
-     */
-    protected function addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data)
-    {
-        $stateExists = $this->states->getCollection()->addFilter('state_source_id', $stateIdFromStatesDataSource)->getData();
-        if (true === empty($stateExists)) {
-
-            $state = $this->statesFactory->create();
-
-            $params = [
-                'state_source_id'   => $stateIdFromStatesDataSource,
-                'state_name'        => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-                'state_short_name'  => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-                'country'           => $data['country'],
-            ];
-
-            $state->addData($params);
-
-            try {
-                $state->save();
-                $this->messageManager->addSuccessMessage(__('You created the new region.'));
-            } catch (\Exception $e) {
-                $this->messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
-            }
-            return (int) $state->getId();
-
-        } else {
-            $state = $this->states->load($stateExists[0]['state_id']);
-            return (int) $state->getId();
-        }
-
     }
 
 }
