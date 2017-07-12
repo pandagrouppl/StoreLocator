@@ -6,6 +6,9 @@
             <store_locator_settings>
                 <time_format_select>24</time_format_select>
             </store_locator_settings>
+            <store_locator_advanced>
+                <debug_enable>1</debug_enable>
+            </store_locator_advanced>
         </pandagroup_store_locator>
     </default>
 </config>

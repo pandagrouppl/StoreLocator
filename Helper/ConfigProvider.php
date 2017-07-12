@@ -10,6 +10,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     /** Groups */
     const STORE_LOCATOR_BASE_SETTINGS_GROUP = 'store_locator_settings/';
     const STORE_LOCATOR_MAP_SETTINGS_GROUP  = 'store_locator_map_settings/';
+    const STORE_LOCATOR_ADVANCED_GROUP      = 'store_locator_advanced/';
 
     /** Fields */
     const GOOGLE_API_KEY_FIELD  = 'api_key_text';
@@ -18,7 +19,8 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     const LATITUDE_FIELD        = 'lat_text';
     const LONGITUDE_FIELD       = 'lng_text';
     const ZOOM_LEVEL_FIELD      = 'zoom_select';
-    const PIN_IMAGE_LINK_FIELD  = 'pin_text';
+    const PIN_IMAGE_LINK_FIELD  = 'pin_image';
+    const DEBUG_STATUS_FIELD    = 'debug_enable';
 
     /**
      * Note messages
@@ -30,7 +32,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Core store config
      *
-     * @var ScopeConfigInterface
+     * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
     protected $scopeConfig;
 
@@ -152,10 +154,37 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getPinImageLink($store = null)
     {
-        return (string) $this->scopeConfig->getValue(
+        $filePath = (string) $this->scopeConfig->getValue(
             self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_MAP_SETTINGS_GROUP . self::PIN_IMAGE_LINK_FIELD,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );
+
+        return $this->getMediaUrl() . $filePath;
+    }
+
+    /**
+     * Retrieve Debug Status
+     *
+     * @param null $store
+     * @return bool
+     */
+    public function getDebugStatus($store = null)
+    {
+        return (bool) $this->scopeConfig->getValue(
+            self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_ADVANCED_GROUP . self::DEBUG_STATUS_FIELD,
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
+            $store
+        );
+    }
+
+    /**
+     * Retrieve MEDIA path
+     *
+     * @return string
+     */
+    public function getMediaUrl()
+    {
+        return $this->_urlBuilder->getBaseUrl(['_type' => \Magento\Framework\UrlInterface::URL_TYPE_MEDIA]);
     }
 }

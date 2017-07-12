@@ -14,7 +14,14 @@ class States extends \Magento\Framework\Model\AbstractModel
 
     public function addNewRegion($sourceStateId, $stateName, $shortStateName = '', $country) {
 
-        // Check if already exist corrected region
+        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+
+        /** @var \PandaGroup\StoreLocator\Logger\Logger $logger */
+        $logger = $objectManager->create('PandaGroup\StoreLocator\Logger\Logger');
+
+        $logger->info('Start adding new region.');
+
+    // Check if already exist corrected region
         $statesCollection = $this->getCollection();
 
         $statesCollection
@@ -23,12 +30,15 @@ class States extends \Magento\Framework\Model\AbstractModel
 
         $stateId = $statesCollection->getFirstItem()->getId();
         if (isset($stateId)) {
+            $logger->info('    Adding new state was finish by founding exist state under id='.$stateId);
+            $logger->info('Finish adding new region.');
             return $stateId;
+        } else {
+            $logger->info('    Cannot found state for country='.strtoupper($country).' and state_source_id='.$sourceStateId);
         }
 
-        // If there aren't created earlier -> create new
 
-        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+    // If there aren't created earlier -> create new
 
         /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
         $statesModel = $objectManager->create('PandaGroup\StoreLocator\Model\States');
@@ -47,18 +57,22 @@ class States extends \Magento\Framework\Model\AbstractModel
 
         if (true === empty($shortStateName)) {
             $shortStateName = $googleApiModel->getRegionShortName($stateName);
+            $logger->info('    Download short state name from Google Api: '.$shortStateName);
 
             if (null === $shortStateName) {
                 $shortStateName = $stateName;
+                $logger->warning('    Replace short state name by long: '.$stateName.'->'.$shortStateName);
             }
         }
 
         $isCoordinateDownloadError = false;
         $coordinates = $googleApiModel->getCoordinatesByAddress($stateName . ', ' . $country);
+        $logger->info('    Download coordinates to new state from Google Api: lat->'.$coordinates['lat'].', lng->'.$coordinates['lng'].' for region: '.$stateName . ', ' . $country);
         if (null === $coordinates) {
             $coordinates['lat'] = $configProvider->getMapLatitude();
             $coordinates['lng'] = $configProvider->getMapLongitude();
             $isCoordinateDownloadError = true;
+            $logger->warning('    Coordinates was not downloaded correctly. In was set to default (country coordinates).');
         }
 
         $params = [
@@ -78,47 +92,21 @@ class States extends \Magento\Framework\Model\AbstractModel
 
             if (false === $isCoordinateDownloadError) {
                 $messageManager->addSuccessMessage(__('You created the new region.'));
+                $logger->info('    State was correctly saved.');
             } else {
                 $messageManager->addNoticeMessage(__('You created the new region but "Region short name" was set to full name and coordinates was set to default because of Google API error. You can change it manually in Regions table.'));
+                $logger->warning('    State was saved with warnings. "Region short name" was set to full name and coordinates was set to default because of Google API error.');
             }
 
         } catch (\Exception $e) {
             $messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
+            $logger->error('    Error while adding new region: ' . $e->getMessage());
+            $logger->info('Finish adding new region.');
             return null;
         }
+        $logger->info('Finish adding new region.');
         return (int) $statesModel->getId();
     }
-
-//    protected function addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data)
-//    {
-//        $stateExists = $this->getCollection()->addFilter('state_source_id', $stateIdFromStatesDataSource)->getData();
-//        if (true === empty($stateExists)) {
-//
-//            $state = $this->create();
-//
-//            $params = [
-//                'state_source_id'   => $stateIdFromStatesDataSource,
-//                'state_name'        => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-//                'state_short_name'  => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-//                'country'           => $data['country'],
-//            ];
-//
-//            $state->addData($params);
-//
-//            try {
-//                $state->save();
-//                $this->messageManager->addSuccessMessage(__('You created the new region.'));
-//            } catch (\Exception $e) {
-//                $this->messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
-//            }
-//            return (int) $state->getId();
-//
-//        } else {
-//            $state = $this->states->load($stateExists[0]['state_id']);
-//            return (int) $state->getId();
-//        }
-//
-//    }
 
 
     /**
@@ -162,5 +150,15 @@ class States extends \Magento\Framework\Model\AbstractModel
         }
 
         return $qtyOfDeleted;
+    }
+
+    /**
+     * @return \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
+     */
+    public function getStatesCollection()
+    {
+        $statesCollection = $this->getCollection();
+
+        return $statesCollection;
     }
 }

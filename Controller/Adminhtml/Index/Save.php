@@ -63,24 +63,35 @@ class Save extends \Magento\Backend\App\Action
             if ($data['storelocator_id'] === '') {
                 $data['storelocator_id'] = null;            // Bug with saving new store
             }
-            /*
 
-            if (true === empty($data['rewrite_request_path'])
-             || null === empty($data['rewrite_request_path'])
-             || false === isset($data['rewrite_request_path'])
-            ) {     // Generate rewrite request path
-                $data['rewrite_request_path'] = $this->toSafeUrl($data['rewrite_request_path']);
+            $data['rewrite_request_path'] = $this->toSafeUrl($data['name']);
+
+            $data['state'] = null;
+            $data['link'] = null;
+            if (true === empty($data['fax'])) {
+                $data['fax'] = null;
             }
-
-            $data['rewrite_request_path'] = $this->toSafeUrl($data['rewrite_request_path']);
-
-            */
-
+            if (true === empty($data['image_icon'])) {
+                $data['image_icon'] = null;
+            }
+            $data['monday_open_break'] = $data['monday_open'];
+            $data['monday_close_break'] = $data['monday_open'];
+            $data['tuesday_open_break'] = $data['tuesday_open'];
+            $data['tuesday_close_break'] = $data['tuesday_open'];
+            $data['wednesday_open_break'] = $data['wednesday_open'];
+            $data['wednesday_close_break'] = $data['wednesday_open'];
+            $data['thursday_open_break'] = $data['thursday_open'];
+            $data['thursday_close_break'] = $data['thursday_open'];
+            $data['friday_open_break'] = $data['friday_open'];
+            $data['friday_close_break'] = $data['friday_open'];
+            $data['saturday_open_break'] = $data['saturday_open'];
+            $data['saturday_close_break'] = $data['saturday_open'];
+            $data['sunday_open_break'] = $data['sunday_open'];
+            $data['sunday_close_break'] = $data['sunday_open'];
 
             $model->setData($data);
 
             try {
-//                $model->save();
                 $model->getResource()->save($model);
                 $this->messageManager->addSuccessMessage(__('You saved the store.'));
 

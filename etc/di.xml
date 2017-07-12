@@ -1,6 +1,21 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+<!-- LOGGER -->
+    <type name="PandaGroup\StoreLocator\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="PandaGroup\StoreLocator\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">PandaGroup/StoreLocator</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">PandaGroup\StoreLocator\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
     <!--<virtualType name="PandaGroupStoreLocatorIdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">-->
         <!--<arguments>-->
             <!--<argument name="appliers" xsi:type="array">-->

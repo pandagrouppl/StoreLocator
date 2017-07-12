@@ -12,6 +12,9 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
     /** @var \Magento\Framework\Json\Helper\Data */
     protected $jsonHelper;
 
+    /** @var \PandaGroup\StoreLocator\Logger\Logger  */
+    protected $logger;
+
 
     /**
      * GoogleApi constructor.
@@ -27,12 +30,14 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Registry $registry,
         \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider,
         \Magento\Framework\Json\Helper\Data $jsonHelper,
+        \PandaGroup\StoreLocator\Logger\Logger $logger,
         array $data = []
     )
     {
         parent::__construct($context, $registry);
         $this->configProvider = $configProvider;
         $this->jsonHelper = $jsonHelper;
+        $this->logger = $logger;
     }
 
     /**
@@ -41,6 +46,7 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
      */
     public function getCoordinatesByAddress($addressName)
     {
+        $this->logger->info('Start getting coordinates from Google Api.');
         $apiKey = $this->configProvider->getGoogleApiKey();
 
         $addressName = urlencode($addressName);
@@ -61,7 +67,13 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
         }
 
         if (isset($countryInformation['error_message'])) {
-            $requesterrorMessage = $countryInformation['status'];
+            $requesterrorMessage = $countryInformation['error_message'];
+        } else $requesterrorMessage = 'Undefined Google Api error';
+
+        if ($requestStatus == 'OK') {
+            $this->logger->info('    Success getting response from Google Api.');
+        } else {
+            $this->logger->error('    Error while getting response from Google Api: '.$requesterrorMessage);
         }
 
         if (isset($countryInformation['results'][0]['geometry']['location']['lat'])
@@ -69,10 +81,13 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
         ) {
             $coordinates['lat'] = $countryInformation['results'][0]['geometry']['location']['lat'];
             $coordinates['lng'] = $countryInformation['results'][0]['geometry']['location']['lng'];
+            $this->logger->info('    Success getting coordinates from Google Api response.');
         } else {
             $coordinates = null;
+            $this->logger->error('    Error getting coordinates from Google Api response.');
         }
 
+        $this->logger->info('Finish getting coordinates from Google Api.');
         return $coordinates;
     }
 
