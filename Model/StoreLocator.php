@@ -49,7 +49,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
      */
     public function getStoresData()
     {
-        $collection = $this->getCollection();
+        $collection = $this->getCollection()->addFilter('status', 1);
 
         $constants = [
             'apiKey'    => $this->configProvider->getGoogleApiKey(),
