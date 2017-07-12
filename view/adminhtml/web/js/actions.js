@@ -6,21 +6,47 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             this._super();
             this.timeout();
         },
+        timeout: function() {
+            var that = this;
+            this.checkExist = setInterval(function() {
+                if ($('.admin__control-select[name="country"]').length) {
+
+                    that.domReadyInits();
+                    clearInterval(that.checkExist);
+                }
+            }, 200);
+        },
+        domReadyInits: function() {
+            this.$cntry = $('.admin__control-select[name="country"]');
+            this.$state = $('.admin__control-select[name="state_source_id"]');
+            this.initLoaders();
+            this.bindClick();
+            this.updtSelect();
+        },
+        initLoaders: function() {
+            $(document).ajaxStart(function(){
+                $('.admin__form-loading-mask[data-role="spinner"]').show();
+            });
+            $(document).ajaxComplete(function(){
+                $('.admin__form-loading-mask[data-role="spinner"]').hide();
+            });
+        },
+        bindClick: function() {
+            this.$cntry.click(this.updtSelect.bind(this))
+        },
         updtSelect: function() {
-            var $cntry = $('.admin__control-select[name="country"]');
-            var $state = $('.admin__control-select[name="state_source_id"]');
-            console.log($cntry);
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
-                data: {country: $cntry.val()},
+                context: this,
+                data: {country: this.$cntry.val()},
                 method: 'get'
             })
                 .done(function(json) {
                     if (json.status) {
-                        $state.empty();
+                        this.$state.empty();
                         for (var state in json.states) {
                             if (json.states.hasOwnProperty(state)) {
-                                $state
+                                this.$state
                                     .append($("<option></option>")
                                         .attr("value",state)
                                         .text(json.states[state]));
@@ -33,22 +59,6 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                 .fail(function() {
                     window.alert('External error!');
                 });
-        },
-        timeout: function() {
-            $.proxy(function() {
-                window.setTimeout(this.bindClick(), 3000)
-            }, this);
-        },
-        bindClick: function() {
-            $(document).ajaxStart(function(){
-                $('.admin__form-loading-mask[data-role="spinner"]').show();
-            });
-            $(document).ajaxComplete(function(){
-                $('.admin__form-loading-mask[data-role="spinner"]').hide();
-            });
-            var $cntry = $('.admin__control-select[name="country"]');
-            console.log($cntry);
-            $cntry.click(this.updtSelect())
         }
     });
 
