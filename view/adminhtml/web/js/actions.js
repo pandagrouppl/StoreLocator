@@ -34,6 +34,7 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             this.$cntry.click(this.updtSelect.bind(this))
         },
         updtSelect: function() {
+            var activeState = this.$state.val();
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
                 context: this,
@@ -50,6 +51,9 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                                         .attr("value",state)
                                         .text(json.states[state]));
                             }
+                        }
+                        if ($('.admin__control-select[name="state_source_id"] option[value=' + activeState + ']').length > 0) {
+                            this.$state.val(activeState);
                         }
                     } else {
                         window.alert(json.error);
