@@ -19,7 +19,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     const LATITUDE_FIELD        = 'lat_text';
     const LONGITUDE_FIELD       = 'lng_text';
     const ZOOM_LEVEL_FIELD      = 'zoom_select';
-    const PIN_IMAGE_LINK_FIELD  = 'pin_text';
+    const PIN_IMAGE_LINK_FIELD  = 'pin_image';
     const DEBUG_STATUS_FIELD    = 'debug_enable';
 
     /**
@@ -154,11 +154,13 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getPinImageLink($store = null)
     {
-        return (string) $this->scopeConfig->getValue(
+        $filePath = (string) $this->scopeConfig->getValue(
             self::STORE_LOCATOR_SECTION . self::STORE_LOCATOR_MAP_SETTINGS_GROUP . self::PIN_IMAGE_LINK_FIELD,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );
+
+        return $this->getMediaUrl() . $filePath;
     }
 
     /**
@@ -174,5 +176,15 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );
+    }
+
+    /**
+     * Retrieve MEDIA path
+     *
+     * @return string
+     */
+    public function getMediaUrl()
+    {
+        return $this->_urlBuilder->getBaseUrl(['_type' => \Magento\Framework\UrlInterface::URL_TYPE_MEDIA]);
     }
 }

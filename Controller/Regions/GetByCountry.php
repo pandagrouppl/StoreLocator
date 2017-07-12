@@ -41,6 +41,14 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
 //            return $result;
 //        }
 
+        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+
+        /** @var \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider */
+        $configProvider = $objectManager->create('PandaGroup\StoreLocator\Helper\ConfigProvider');
+//        return $configProvider->getDebugStatus();
+
+        var_dump($configProvider->getPinImageLink()); exit;
+
         $result = $this->resultJsonFactory->create();
         $countryCode = $this->getRequest()->getParam('country');
 
