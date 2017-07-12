@@ -263,20 +263,20 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="indexField" xsi:type="string">storelocator_id</item>
-                    <item name="sortOrder" xsi:type="number">0</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
                 </item>
             </argument>
         </selectionsColumn>
-        <!--<column name="storelocator_id">-->
-            <!--<argument name="data" xsi:type="array">-->
-                <!--<item name="config" xsi:type="array">-->
-                    <!--<item name="filter" xsi:type="string">textRange</item>-->
-                    <!--<item name="sorting" xsi:type="string">asc</item>-->
-                    <!--<item name="label" xsi:type="string" translate="true">ID</item>-->
-                    <!--<item name="sortOrder" xsi:type="number">10</item>-->
-                <!--</item>-->
-            <!--</argument>-->
-        <!--</column>-->
+        <column name="storelocator_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">ID</item>
+                    <item name="sortOrder" xsi:type="number">0</item>
+                </item>
+            </argument>
+        </column>
         <column name="name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -287,7 +287,6 @@
                         </item>
                     </item>
                     <item name="filter" xsi:type="string">text</item>
-                    <item name="sorting" xsi:type="string">asc</item>
                     <item name="label" xsi:type="string" translate="true">Name</item>
                     <item name="sortOrder" xsi:type="number">20</item>
                 </item>
@@ -422,6 +421,19 @@
                     <item name="visible" xsi:type="boolean">true</item>
                     <item name="label" xsi:type="string" translate="true">Phone</item>
                     <item name="dataType" xsi:type="string">text</item>
+                </item>
+            </argument>
+        </column>
+        <column name="status">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListStoreStatus</item>
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="editor" xsi:type="string">select</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Status</item>
+                    <item name="sortOrder" xsi:type="number">30</item>
                 </item>
             </argument>
         </column>
