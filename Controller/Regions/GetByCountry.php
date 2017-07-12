@@ -30,6 +30,8 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
+        $result = $this->resultJsonFactory->create();
+
 //        if (isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] !== $_SERVER['SERVER_ADDR'])) {
 //
 //            $response = [
@@ -40,8 +42,7 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
 //            $result->setData($response);
 //            return $result;
 //        }
-
-        $result = $this->resultJsonFactory->create();
+        
         $countryCode = $this->getRequest()->getParam('country');
 
         if ($countryCode) {
