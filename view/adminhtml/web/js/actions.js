@@ -4,20 +4,12 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
     return Select.extend({
         initialize: function() {
             this._super();
-            console.log('hello!');
-            console.log('start!');
-            var $cntry = $('.admin__control-select[name="country"]');
-            var $state = $('.admin__control-select[name="state_source_id"]');
-            $(document).ajaxStart(function(){
-                $('.admin__form-loading-mask[data-role="spinner"]').show();
-            });
-            $(document).ajaxComplete(function(){
-                $('.admin__form-loading-mask[data-role="spinner"]').hide();
-            });
-            console.log($cntry);
-            this.updtSelect();
+            this.timeout();
         },
         updtSelect: function() {
+            var $cntry = $('.admin__control-select[name="country"]');
+            var $state = $('.admin__control-select[name="state_source_id"]');
+            console.log($cntry);
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
                 data: {country: $cntry.val()},
@@ -43,10 +35,20 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                 });
         },
         timeout: function() {
-            window.setTimeout( function () {
-                console.log(this);
-                $cntry.click(this.updtSelect)
-            }, 4000);
+            $.proxy(function() {
+                window.setTimeout(this.bindClick(), 3000)
+            }, this);
+        },
+        bindClick: function() {
+            $(document).ajaxStart(function(){
+                $('.admin__form-loading-mask[data-role="spinner"]').show();
+            });
+            $(document).ajaxComplete(function(){
+                $('.admin__form-loading-mask[data-role="spinner"]').hide();
+            });
+            var $cntry = $('.admin__control-select[name="country"]');
+            console.log($cntry);
+            $cntry.click(this.updtSelect())
         }
     });
 
