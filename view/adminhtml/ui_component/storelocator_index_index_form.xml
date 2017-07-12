@@ -386,7 +386,7 @@
                 </item>
             </argument>
         </field>
-        <field name="longtitude2">
+        <field name="google-coords-fetch">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">button</item>
