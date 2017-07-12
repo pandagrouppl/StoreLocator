@@ -1,12 +1,11 @@
-define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
-    'use strict';
+define(['jquery','domReady'], function ($, domReady) {
+    domReady(function () {
 
-    return Select.extend({
-        initialize: function() {
-            this._super();
+
             console.log('hello!');
             console.log('start!');
             var $cntry = $('.admin__control-select[name="country"]');
+            console.log($('.admin__control-select[name="country"]'));
             var $state = $('.admin__control-select[name="state_source_id"]');
             $(document).ajaxStart(function(){
                 $('.admin__form-loading-mask[data-role="spinner"]').show();
@@ -14,13 +13,13 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             $(document).ajaxComplete(function(){
                 $('.admin__form-loading-mask[data-role="spinner"]').hide();
             });
-            console.log($cntry);
-            this.updtSelect();
-        },
-        updtSelect: function() {
+
+
+            var $state = $('.admin__control-select[name="state_source_id"]');
+            console.log($state);
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
-                data: {country: $cntry.val()},
+                data: {country: $state.val()},
                 method: 'get'
             })
                 .done(function(json) {
@@ -35,21 +34,20 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                             }
                         }
                     } else {
-                        window.alert(json.error);
+                        window.alert('ello');
                     }
                 })
                 .fail(function() {
                     window.alert('External error!');
                 });
-        },
-        timeout: function() {
+
             window.setTimeout( function () {
                 console.log(this);
                 $cntry.click(this.updtSelect)
             }, 4000);
-        }
-    });
 
+
+    });
 });
 
 
