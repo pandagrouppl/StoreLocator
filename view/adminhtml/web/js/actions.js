@@ -10,7 +10,6 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             var that = this;
             this.checkExist = setInterval(function() {
                 if ($('.admin__control-select[name="country"]').length) {
-
                     that.domReadyInits();
                     clearInterval(that.checkExist);
                 }
