@@ -168,7 +168,7 @@
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">3</item>
                     <item name="dataScope" xsi:type="string">country</item>
-                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/actions</item>
+                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchRegionsForCountry</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
                     </item>

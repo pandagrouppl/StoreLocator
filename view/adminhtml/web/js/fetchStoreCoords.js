@@ -1,52 +1,7 @@
-/**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-define([
-    'uiElement',
-    'uiRegistry',
-    'uiLayout',
-    'mageUtils',
-    'jquery'
-], function (Element, registry, layout, utils, $) {
+define(['jquery','Magento_Ui/js/form/components/button'], function ($, Button) {
     'use strict';
 
-    return Element.extend({
-        defaults: {
-            additionalClasses: {},
-            displayArea: 'outsideGroup',
-            displayAsLink: false,
-            elementTmpl: 'ui/form/element/button',
-            template: 'ui/form/components/button/simple',
-            visible: true,
-            disabled: false,
-            title: ''
-        },
-
-        /**
-         * Initializes component.
-         *
-         * @returns {Object} Chainable.
-         */
-        initialize: function () {
-            return this._super()
-                ._setClasses();
-        },
-
-        /** @inheritdoc */
-        initObservable: function () {
-            return this._super()
-                .observe([
-                    'visible',
-                    'disabled',
-                    'title'
-                ]);
-        },
-
-        /**
-         * Performs configured actions
-         */
+    return Button.extend({
         action: function () {
             var $lat = $('.admin__control-text[name="latitude"]');
             var $lng = $('.admin__control-text[name="longtitude"]');
@@ -77,48 +32,6 @@ define([
                 $lat.val(err_ajax).css({border: "1px solid #ff0050"});
                 $lng.val(err_ajax).css({border: "1px solid #ff0050"})
             });
-        },
-
-
-        /**
-         * Create target component from template
-         *
-         * @param {Object} targetName - name of component,
-         * that supposed to be a template and need to be initialized
-         */
-        getFromTemplate: function (targetName) {
-            var parentName = targetName.split('.'),
-                index = parentName.pop(),
-                child;
-
-            parentName = parentName.join('.');
-            child = utils.template({
-                parent: parentName,
-                name: index,
-                nodeTemplate: targetName
-            });
-            layout([child]);
-        },
-
-        /**
-         * Extends 'additionalClasses' object.
-         *
-         * @returns {Object} Chainable.
-         */
-        _setClasses: function () {
-            if (typeof this.additionalClasses === 'string') {
-                this.additionalClasses = this.additionalClasses
-                    .trim()
-                    .split(' ')
-                    .reduce(function (classes, name) {
-                        classes[name] = true;
-
-                        return classes;
-                    }, {}
-                );
-            }
-
-            return this;
         }
     });
 });
