@@ -89,37 +89,6 @@ class States extends \Magento\Framework\Model\AbstractModel
         return (int) $statesModel->getId();
     }
 
-//    protected function addOrSaveStateFromRegionsData($stateIdFromStatesDataSource, $data)
-//    {
-//        $stateExists = $this->getCollection()->addFilter('state_source_id', $stateIdFromStatesDataSource)->getData();
-//        if (true === empty($stateExists)) {
-//
-//            $state = $this->create();
-//
-//            $params = [
-//                'state_source_id'   => $stateIdFromStatesDataSource,
-//                'state_name'        => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-//                'state_short_name'  => $this->regionsData->load($stateIdFromStatesDataSource)->getData('name'),
-//                'country'           => $data['country'],
-//            ];
-//
-//            $state->addData($params);
-//
-//            try {
-//                $state->save();
-//                $this->messageManager->addSuccessMessage(__('You created the new region.'));
-//            } catch (\Exception $e) {
-//                $this->messageManager->addSuccessMessage(__('Something went wrong while creating the new region.'));
-//            }
-//            return (int) $state->getId();
-//
-//        } else {
-//            $state = $this->states->load($stateExists[0]['state_id']);
-//            return (int) $state->getId();
-//        }
-//
-//    }
-
 
     /**
      * Delete regions which no store is assigned
@@ -162,5 +131,15 @@ class States extends \Magento\Framework\Model\AbstractModel
         }
 
         return $qtyOfDeleted;
+    }
+
+    /**
+     * @return \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
+     */
+    public function getStatesCollection()
+    {
+        $statesCollection = $this->getCollection();
+
+        return $statesCollection;
     }
 }

@@ -30,7 +30,7 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * Core store config
      *
-     * @var ScopeConfigInterface
+     * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
     protected $scopeConfig;
 

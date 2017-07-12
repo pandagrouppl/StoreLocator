@@ -83,7 +83,7 @@ class ListCloseHours implements \Magento\Framework\Option\ArrayInterface
                 '10:30 PM' => '22:30',
                 '11:00 PM' => '23:00',
                 '11:30 PM' => '23:30',
-                '12:00 PM' => '00:00'
+                '12:00 PM' => '0:00'
             ];
         } else {
             $hours = [                  //24h format closing

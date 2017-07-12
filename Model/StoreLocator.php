@@ -109,32 +109,32 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                 'region'    => $item->getData('state_short_name'),
                 'hours'     => [
                     'SUN' => [
-                        $this->stringToDate($item->getData('sunday_open')),
-                        $this->stringToDate($item->getData('sunday_close'))
+                        $this->stringToDate($item->getData('sunday_status'), $item->getData('sunday_open')),
+                        $this->stringToDate($item->getData('sunday_status'), $item->getData('sunday_close'))
                     ],
                     "MON"=> [
-                        $this->stringToDate($item->getData('monday_open')),
-                        $this->stringToDate($item->getData('monday_close'))
+                        $this->stringToDate($item->getData('monday_status'), $item->getData('monday_open')),
+                        $this->stringToDate($item->getData('monday_status'), $item->getData('monday_close'))
                     ],
                     "TUE"=> [
-                        $this->stringToDate($item->getData('tuesday_open')),
-                        $this->stringToDate($item->getData('tuesday_close'))
+                        $this->stringToDate($item->getData('tuesday_status'), $item->getData('tuesday_open')),
+                        $this->stringToDate($item->getData('tuesday_status'), $item->getData('tuesday_close'))
                     ],
                     "WED"=> [
-                        $this->stringToDate($item->getData('wednesday_open')),
-                        $this->stringToDate($item->getData('wednesday_close'))
+                        $this->stringToDate($item->getData('wednesday_status'), $item->getData('wednesday_open')),
+                        $this->stringToDate($item->getData('wednesday_status'), $item->getData('wednesday_close'))
                     ],
                     "THU"=> [
-                        $this->stringToDate($item->getData('thursday_open')),
-                        $this->stringToDate($item->getData('thursday_close'))
+                        $this->stringToDate($item->getData('thursday_status'), $item->getData('thursday_open')),
+                        $this->stringToDate($item->getData('thursday_status'), $item->getData('thursday_close'))
                     ],
                     "FRI"=> [
-                        $this->stringToDate($item->getData('friday_open')),
-                        $this->stringToDate($item->getData('friday_close'))
+                        $this->stringToDate($item->getData('friday_status'), $item->getData('friday_open')),
+                        $this->stringToDate($item->getData('friday_status'), $item->getData('friday_close'))
                     ],
                     "SAT"=> [
-                        $this->stringToDate($item->getData('saturday_open')),
-                        $this->stringToDate($item->getData('saturday_close'))
+                        $this->stringToDate($item->getData('saturday_status'), $item->getData('saturday_open')),
+                        $this->stringToDate($item->getData('saturday_status'), $item->getData('saturday_close'))
                     ]
                 ]
             ];
@@ -152,10 +152,16 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
     }
 
     /**
+     * @param $status
      * @param $stringValue
      * @return false|string
      */
-    protected function stringToDate($stringValue) {
+    protected function stringToDate($status, $stringValue) {
+
+        if ((int) $status === 0) {
+            return date('h:i A', strtotime('0:00'));    // This format for open and close time sets 'Closed' on frontend
+        }
+
         $timeFormat = $this->configProvider->getHoursTimeFormat();
 
         if ($timeFormat === 12) {

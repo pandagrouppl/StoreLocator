@@ -202,6 +202,7 @@
                     <item name="dataScope" xsi:type="string">zipcode</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-zip-international" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -249,6 +250,7 @@
                     <item name="dataScope" xsi:type="string">email</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-email" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -264,6 +266,7 @@
                     <item name="dataScope" xsi:type="string">phone</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <!--<item name="validate-phoneLax" xsi:type="boolean">true</item>-->
                     </item>
                 </item>
             </argument>
@@ -277,6 +280,9 @@
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">9</item>
                     <item name="dataScope" xsi:type="string">fax</item>
+                    <item name="validation" xsi:type="array">
+                        <!--<item name="validate-fax" xsi:type="boolean">true</item>-->
+                    </item>
                 </item>
             </argument>
         </field>
@@ -293,36 +299,37 @@
                 </item>
             </argument>
         </field>
-        <field name="description">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Description</item>
-                    <item name="formElement" xsi:type="string">input</item>
-                    <item name="source" xsi:type="string">storelocator</item>
-                    <item name="sortOrder" xsi:type="number">10</item>
-                    <item name="dataScope" xsi:type="string">description</item>
-                    <item name="validation" xsi:type="array">
-                        <item name="required-entry" xsi:type="boolean">false</item>
-                    </item>
-                </item>
-            </argument>
-        </field>
         <!--<field name="description">-->
             <!--<argument name="data" xsi:type="array">-->
                 <!--<item name="config" xsi:type="array">-->
-                    <!--<item name="label" xsi:type="string">Description</item>-->
-                    <!--<item name="formElement" xsi:type="string">wysiwyg</item>-->
+                    <!--<item name="dataType" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Description</item>-->
+                    <!--<item name="formElement" xsi:type="string">input</item>-->
                     <!--<item name="source" xsi:type="string">storelocator</item>-->
-                    <!--<item name="wysiwyg" xsi:type="boolean">true</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">10</item>-->
                     <!--<item name="dataScope" xsi:type="string">description</item>-->
-                    <!--<item name="additionalClasses" xsi:type="string">admin__field-wide</item>-->
                     <!--<item name="validation" xsi:type="array">-->
                         <!--<item name="required-entry" xsi:type="boolean">false</item>-->
                     <!--</item>-->
                 <!--</item>-->
             <!--</argument>-->
         <!--</field>-->
+        <field name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Description</item>
+                    <item name="formElement" xsi:type="string">textarea</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="wysiwyg" xsi:type="boolean">true</item>
+                    <item name="dataScope" xsi:type="string">description</item>
+                    <!--<item name="additionalClasses" xsi:type="string">admin__field-wide</item>-->
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
     </fieldset>
 
     <fieldset name="geolocalization">
@@ -342,6 +349,7 @@
                     <item name="dataScope" xsi:type="string">latitude</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-number" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -357,6 +365,7 @@
                     <item name="dataScope" xsi:type="string">longtitude</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                        <item name="validate-number" xsi:type="boolean">true</item>
                     </item>
                 </item>
             </argument>
@@ -400,6 +409,24 @@
                 <item name="label" xsi:type="string" translate="true">Time Schedule</item>
             </item>
         </argument>
+        <field name="monday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Monday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">0</item>
+                    <item name="dataScope" xsi:type="string">monday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="monday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -433,6 +460,24 @@
             </argument>
         </field>
 
+        <field name="tuesday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Tuesday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="dataScope" xsi:type="string">tuesday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="tuesday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -466,6 +511,24 @@
             </argument>
         </field>
 
+        <field name="wednesday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Wednesday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="dataScope" xsi:type="string">wednesday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="wednesday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -499,6 +562,24 @@
             </argument>
         </field>
 
+        <field name="thursday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Thursday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">30</item>
+                    <item name="dataScope" xsi:type="string">thursday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="thursday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -532,6 +613,24 @@
             </argument>
         </field>
 
+        <field name="friday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Friday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="dataScope" xsi:type="string">friday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="friday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -565,6 +664,24 @@
             </argument>
         </field>
 
+        <field name="saturday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Saturday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">50</item>
+                    <item name="dataScope" xsi:type="string">saturday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="saturday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
@@ -598,6 +715,24 @@
             </argument>
         </field>
 
+        <field name="sunday_status">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">boolean</item>
+                    <item name="label" xsi:type="string" translate="true">Sunday Status</item>
+                    <item name="formElement" xsi:type="string">checkbox</item>
+                    <item name="source" xsi:type="string">storelocator</item>
+                    <item name="sortOrder" xsi:type="number">60</item>
+                    <item name="dataScope" xsi:type="string">sunday_status</item>
+                    <item name="prefer" xsi:type="string">toggle</item>
+                    <item name="valueMap" xsi:type="array">
+                        <item name="true" xsi:type="number">1</item>
+                        <item name="false" xsi:type="number">0</item>
+                    </item>
+                    <item name="default" xsi:type="number">1</item>
+                </item>
+            </argument>
+        </field>
         <field name="sunday_open">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">PandaGroup\StoreLocator\Model\Config\Source\ListOpenHours</item>
