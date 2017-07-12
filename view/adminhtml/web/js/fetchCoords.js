@@ -1,8 +1,7 @@
-define(['jquery','Magento_Ui/js/form/components/button'], function ($, Button) {
+define(['jquery'], function ($) {
     'use strict';
 
-    return Button.extend({
-        action: function () {
+    return function () {
             var $lat = $('.admin__control-text[name="latitude"]');
             var $lng = $('.admin__control-text[name="longtitude"]');
             $lat.css({transition: "border 1s"});
@@ -38,6 +37,6 @@ define(['jquery','Magento_Ui/js/form/components/button'], function ($, Button) {
                 $message.text(' Internal Error! Check your internet connection!');
             });
         }
-    });
 });
+
 

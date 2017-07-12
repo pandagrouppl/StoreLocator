@@ -427,7 +427,7 @@
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">button</item>
                     <item name="title" xsi:type="string" translate="true">Fetch Coordinates from Google Api</item>
-                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchStoreCoords</item>
+                    <item name="component" xsi:type="string">PandaGroup_StoreLocator/js/fetchCoordsButton</item>
                     <item name="formElement" xsi:type="string">button</item>
                     <item name="source" xsi:type="string">storelocator</item>
                     <item name="sortOrder" xsi:type="number">4</item>
