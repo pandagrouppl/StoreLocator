@@ -57,6 +57,14 @@
                     <validate>required-entry</validate>
                 </field>
             </group>
+            <group id="store_locator_advanced" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Advanced Settings</label>
+                <field id="debug_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Debug Mode</label>
+                    <comment>Turns on logging to custom file.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>

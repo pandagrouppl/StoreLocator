@@ -13,6 +13,9 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
     /** @var \PandaGroup\StoreLocator\Model\States  */
     protected $states;
 
+    /** @var \PandaGroup\StoreLocator\Logger\Logger  */
+    protected $logger;
+
 
     /**
      * Define resource model
@@ -28,6 +31,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Registry $registry,
         \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider,
         \PandaGroup\StoreLocator\Model\States $states,
+        \PandaGroup\StoreLocator\Logger\Logger $logger,
         array $data = []
     )
     {
@@ -35,6 +39,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         $this->_init('PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator');
         $this->configProvider = $configProvider;
         $this->states = $states;
+        $this->logger = $logger;
     }
 
     /**
@@ -305,12 +310,18 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         /** @var  $storeLocatorModel \PandaGroup\StoreLocator\Model\StoreLocator */
         $storeLocatorModel = $store;
 
+        $this->logger->info('Start setting new region id on stores table.');
+
         try {
             $storeLocatorModel->setData('state_id', $stateId);
             $storeLocatorModel->save();
+            $this->logger->info('    Store region id was correctly updated.');
         } catch (\Exception $e) {
+            $this->logger->error('    Error while update record: ', $e->getMessage());
+            $this->logger->info('Finish setting new region id on stores table.');
             return false;
         }
+        $this->logger->info('Finish setting new region id on stores table.');
         return true;
     }
 
@@ -336,6 +347,8 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         $qtyOfFoundedRegions = 0;
         $qtyOfRegions = 0;
 
+        $this->logger->info('Start updating regions on stores table.');
+
         foreach($storesCollection as $item) {
 
             $countryName = $item->getData('country');
@@ -358,6 +371,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                 else {
                     $message = 'Cannot found correctly address for: ' . $address;
                     $this->sendMessage($message, 'error');
+                    $this->logger->warning('    Cannot found correctly address for: ' . $address);
                     continue;
                 }
 
@@ -395,6 +409,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
                             $this->sendMessage('Cannot add region for: ' . $address, 'error');
                         } else {
                             $qtyOfFoundedRegions++;
+                            $this->logger->info('    Region was correctly founded and updated.');
                         }
                     }
 
@@ -406,6 +421,8 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         }
 
         $message = 'Updates ' . $qtyOfFoundedRegions . ' new regions of '.$qtyOfRegions.'.';
+        $this->logger->info('    '.$message);
         $this->sendMessage($message, 'success');
+        $this->logger->info('Finish updating regions on stores table.');
     }
 }
