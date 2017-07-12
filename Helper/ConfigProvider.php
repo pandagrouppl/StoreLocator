@@ -160,7 +160,8 @@ class ConfigProvider extends \Magento\Framework\App\Helper\AbstractHelper
             $store
         );
 
-        return $this->getMediaUrl() . $filePath;
+        $dir = \PandaGroup\StoreLocator\Model\Config\Backend\Image::UPLOAD_DIR . DIRECTORY_SEPARATOR;
+        return $this->getMediaUrl() . $dir . $filePath;
     }
 
     /**
