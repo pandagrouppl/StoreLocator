@@ -214,7 +214,7 @@
                 </item>
             </argument>
         </field>
-        <field name="google_fetch">
+        <field name="google-coords-fetch">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">button</item>

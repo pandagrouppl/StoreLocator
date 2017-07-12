@@ -9,6 +9,7 @@ define(['jquery','Magento_Ui/js/form/components/button'], function ($, Button) {
             $lng.css({transition: "border 1s"});
             var $zoom = $('.admin__control-select[name="zoom_level"]');
             var $cntry = $('.admin__control-select[name="country"]');
+            var $state = $('.admin__control-text[name="state_name"]');
             var $cty = $('.admin__control-text[name="city"]');
             var $addr = $('.admin__control-text[name="address"]');
             var $message = $('#google-api-message');
@@ -19,10 +20,11 @@ define(['jquery','Magento_Ui/js/form/components/button'], function ($, Button) {
             if ($zoom.val() === " ") {
                 $zoom.val("15").trigger("change");
             }
+            var address = [$cntry.val(), $state.val(), $cty.val(), $addr.val()];
             $.ajax({
                 url: 'http://maps.google.com/maps/api/geocode/json',
                 context: this,
-                data: {address: $cntry.val() + ' ' + $cty.val() + ' ' + $addr.val()},
+                data: {address: address.join(', ')},
                 method: 'get'
             }).done(function(json) {
                 if (json.status == 'OK') {
