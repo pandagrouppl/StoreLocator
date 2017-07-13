@@ -202,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "bbe9ba6ab68f12cc54a2e3bb0f76f929933de24e"
+                "reference": "d8506f5dd26a35d873ecc9d4e96728b2f5355f3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/bbe9ba6ab68f12cc54a2e3bb0f76f929933de24e",
-                "reference": "bbe9ba6ab68f12cc54a2e3bb0f76f929933de24e",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d8506f5dd26a35d873ecc9d4e96728b2f5355f3b",
+                "reference": "d8506f5dd26a35d873ecc9d4e96728b2f5355f3b",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -219,7 +219,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-07-06 13:08:11"
+            "time": "2017-07-13 13:58:54"
         },
         {
             "name": "braintree/braintree_php",
