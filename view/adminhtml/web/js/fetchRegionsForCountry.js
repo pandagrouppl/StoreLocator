@@ -53,7 +53,7 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                             }
                         }
                         if ($('.admin__control-select[name="state_source_id"] option[value=' + activeState + ']').length > 0) {
-                            this.$state.val(activeState).trigger("change");;
+                            this.$state.val(activeState).trigger("change");
                         }
                     } else {
                         window.alert(json.error);
