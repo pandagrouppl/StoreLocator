@@ -70,14 +70,22 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
         if (false === empty($countryCode)) {
             $countriesDataCollection->addFilter('code', $countryCode);
             $countryId = $countriesDataCollection->getFirstItem()->getId();
+            if (false === isset($countryId)) return null;
             $regionsDataCollection->addFilter('country_id', $countryId);
         }
 
         $regionsByCountry = [];
 
         foreach ($regionsDataCollection as $region) {
+//            if (false === empty($region->getName())) {           // Some rows in the database are empty
+//                $regionsByCountry[$region->getId()] = $region->getName();
+//            }
+
             if (false === empty($region->getName())) {           // Some rows in the database are empty
                 $regionsByCountry[$region->getId()] = $region->getName();
+            } else {
+//                $regionsByCountry[$region->getId()] = $countriesDataCollection->load($countryId)->getFirstItem()->getData('name');
+                $regionsByCountry[$region->getId()] = '-';
             }
         }
 

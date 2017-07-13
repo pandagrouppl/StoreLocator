@@ -55,6 +55,10 @@ class States extends \Magento\Framework\Model\AbstractModel
 //        /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
 //        $statesModel = $this->create();
 
+//        if ($stateName == '-') {
+//            $stateName = $country;
+//            $logger->info('    Replace state name by country name: '.$country);
+//        }
         if (true === empty($shortStateName)) {
             $shortStateName = $googleApiModel->getRegionShortName($stateName);
             $logger->info('    Download short state name from Google Api: '.$shortStateName);

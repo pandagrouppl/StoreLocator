@@ -45,24 +45,41 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
         
         $countryCode = $this->getRequest()->getParam('country');
 
-        if ($countryCode) {
-            $states = $this->listState->getRegionsAsArray($countryCode);
-
-            if (false === empty($states)) {
-                $response = [
-                    'status' => 1,
-                    'states' => $states
-                ];
-
-                $result->setData($response);
-                return $result;
-            }
-        }
-
         $response = [
             'status' => 0,
             'error' => __('Bad country code.')
         ];
+
+        if ($countryCode) {
+            $states = $this->listState->getRegionsAsArray($countryCode);
+
+            if (null !== $states) {
+                if (false === empty($states)) {
+                    $response = [
+                        'status' => 1,
+                        'states' => $states
+                    ];
+
+                    $result->setData($response);
+                    return $result;
+                } else {
+                    $regionsByCountry[1] = '';
+
+//                $response = [
+//                    'status' => 0,
+//                    'states' => ['1' => 'Grrr']
+//                ];
+
+                    $response = [
+                        'status' => 0,
+                        'error' => __('Luck of states.')
+                    ];
+                }
+            }
+
+        }
+
+
 
         $result->setData($response);
         return $result;
