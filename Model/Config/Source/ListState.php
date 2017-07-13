@@ -75,7 +75,8 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
         }
 
         $regionsByCountry = [];
-
+        $emptyRegionId = null;
+        /*
         foreach ($regionsDataCollection as $region) {
 //            if (false === empty($region->getName())) {           // Some rows in the database are empty
 //                $regionsByCountry[$region->getId()] = $region->getName();
@@ -84,9 +85,49 @@ class ListState implements \Magento\Framework\Option\ArrayInterface
             if (false === empty($region->getName())) {           // Some rows in the database are empty
                 $regionsByCountry[$region->getId()] = $region->getName();
             } else {
-//                $regionsByCountry[$region->getId()] = $countriesDataCollection->load($countryId)->getFirstItem()->getData('name');
-                $regionsByCountry[$region->getId()] = '-';
+//                $regionsByCountry[$region->getId()] = '-';
+                $emptyRegionId = $region->getId();
             }
+        }
+
+        if (true === empty($regionsByCountry)) {
+            $regionsByCountry[$emptyRegionId] = $countriesDataCollection->addFilter('code', $countryCode)->getFirstItem()->getData('name');
+            $regionsByCountry[''] = ' ';
+        }
+        */
+
+        foreach ($regionsDataCollection as $region) {
+
+            if (false === empty($region->getName())) {           // Some rows in the database are empty
+                $regionsByCountry[$region->getId()] = $region->getName();
+            } else {
+                $regionsByCountry[$region->getId()] = '-';
+                $emptyRegionId = $region->getId();
+            }
+        }
+
+        $isArrayOnlyOfEmptyRegions = true;
+        foreach ($regionsByCountry as $simpleRegion) {
+            if ($simpleRegion != '-') {
+                $isArrayOnlyOfEmptyRegions = false;
+                break;
+            }
+        }
+
+        // Clear empty regions only if there are some correct regions (nax to empty regions)
+        if ($countryCode != '') {
+            foreach ($regionsByCountry as $key => $value) {
+                if ($value == '-') {
+                    unset($regionsByCountry[$key]);
+                }
+            }
+        }
+
+        // If country has any region show country name on region list witch id form database
+        // Countries without regions have one empty region
+        if (true === empty($regionsByCountry) || $isArrayOnlyOfEmptyRegions) {
+            $regionsByCountry[$emptyRegionId] = $countriesDataCollection->addFilter('code', $countryCode)->getFirstItem()->getData('name');
+            $regionsByCountry[''] = ' ';
         }
 
         return $regionsByCountry;

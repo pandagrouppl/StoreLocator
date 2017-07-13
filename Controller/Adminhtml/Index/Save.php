@@ -50,10 +50,6 @@ class Save extends \Magento\Backend\App\Action
             $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
             $nameFromStatesDataSource = $this->regionsData->load($stateIdFromStatesDataSource)->getData('name');
 
-            var_dump($data);
-            var_dump($nameFromStatesDataSource);
-            exit;
-
             if (true === empty($nameFromStatesDataSource)) {    // Empty names of countries states which aren't any states
                 $nameFromStatesDataSource = $data['country'];
             }
