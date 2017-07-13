@@ -462,6 +462,9 @@
                         <item name="false" xsi:type="number">0</item>
                     </item>
                     <item name="default" xsi:type="number">1</item>
+                    <item name="links" xsi:type="array">
+                        <item name="disabled" xsi:type="string">value</item>
+                    </item>
                 </item>
             </argument>
         </field>
@@ -477,6 +480,9 @@
                     <item name="dataScope" xsi:type="string">monday_open</item>
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="links" xsi:type="array">
+                        <item name="disabled" xsi:type="string">disabled</item>
                     </item>
                 </item>
             </argument>

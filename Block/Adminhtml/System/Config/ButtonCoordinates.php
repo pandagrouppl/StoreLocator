@@ -48,8 +48,8 @@ class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
         )->setData(
             [
                 'id' => 'pandagroup_set_coordinates_by_country_button',
-                'label' => __('Get Coordinates By Country'),
-                'onclick' => 'javascript:location.reload();',
+                'label' => __('Get Coordinates for Country'),
+                'onclick' => 'javascript:fetchCountryCoords()',
             ]
         );
 
@@ -59,31 +59,6 @@ class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
 //    public function getAdminUrl(){
 //        return $this->_urlBuilder->getUrl('magepalGmailsmtpapp/test', ['store' => $this->_request->getParam('store')]);
 //    }
-
-    public function getCoordinatesByCountry($country = 'PL')
-    {
-        $apiKey = 'AIzaSyD06oeZOxRpKwKCg3G0pEilZmgunVdgTUA';
-        $url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $country . '&key=' . $apiKey;
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $output = curl_exec($ch);
-        curl_close($ch);
-
-//        $countryInformation = json_encode($output);
-//        $countryInformation = $this->helper(\Magento\Framework\Json\Helper\Data::class)->jsonEncode($output);
-
-        $countryInformation = $this->jsonHelper->jsonEncode($output);
-
-
-        var_dump($countryInformation['results']['geometry']['location']['lat']); exit;
-
-        $coordinates['lat'] = $countryInformation['results']['geometry']['location']['lat'];
-        $coordinates['lng'] = $countryInformation['results']['geometry']['location']['lng'];
-
-        return $coordinates;
-    }
 
     /**
      * Render button
