@@ -15,12 +15,12 @@ $ yarn local/server
 ```
 
 depending on environment, use ` local ` or `server`
-- `local` will push files to `/pub/static/../dist`,
-- `server` will push them to `app/../StoreLocator/../dist` directory, static content deploy required after running.
+- `dev` will push files to `/pub/static/../dist`,
+- `production` will push them to `app/../StoreLocator/../dist` directory, static content deploy required after running.
 
 # Authors
 
-Tomasz Jezierski [@Thorleon](https://github.com/Thorleon) [tjezierski@pandagroup.co](mailto:tjezierski@light4website.com)
+Tomasz Jezierski [@Thorleon](https://github.com/Thorleon) tjezierski@pandagroup.co
 
 Adrian Kowalczewski [@adyry](https://github.com/adyry) [akowalczewski@pandagroup.co](mailto:akowalczewski@light4website.com)
 
