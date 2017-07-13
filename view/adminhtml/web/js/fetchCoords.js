@@ -8,6 +8,7 @@ define(['jquery'], function ($) {
             $lng.css({transition: "border 1s"});
             var $zoom = $('.admin__control-select[name="zoom_level"]');
             var $cntry = $('.admin__control-select[name="country"]');
+            var $cntrytext = $('option[value=' + $cntry.val() + ']').text();
             var $state = $('.admin__control-text[name="state_name"]');
             var $cty = $('.admin__control-text[name="city"]');
             var $addr = $('.admin__control-text[name="address"]');
@@ -19,7 +20,7 @@ define(['jquery'], function ($) {
             if ($zoom.val() === " ") {
                 $zoom.val("15").trigger("change");
             }
-            var address = [$cntry.val(), $state.val(), $cty.val(), $addr.val()];
+            var address = [$cntrytext, $state.val(), $cty.val(), $addr.val()];
             $.ajax({
                 url: 'http://maps.google.com/maps/api/geocode/json',
                 context: this,
