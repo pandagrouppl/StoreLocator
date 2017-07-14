@@ -28,7 +28,7 @@
     h3 {
         font-size: 15px;
         font-weight: bold;
-        color: #666;
+        color: $black-text;
         letter-spacing: 0.6px;
     }
 
@@ -90,6 +90,7 @@
 
         &--copyright {
             text-transform: uppercase;
+            font-size: 11px;
         }
     }
 
@@ -161,7 +162,7 @@
     .page-footer {
 
         &__upper-lower {
-            padding: 30px 2% 0 2%;
+            padding: 30px 5% 0 5%;
         }
 
         &__linkbox {
@@ -175,7 +176,6 @@
 
             > ul {
                 display: none;
-                margin-top: 15px;
 
                 li {
                     margin: 30px 0;

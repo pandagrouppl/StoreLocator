@@ -1,27 +1,22 @@
 $padding: 2%;
 $border: 4px;
+$input-height: 49px;
 
 .page-footer__signup {
     .mailchimp {
         display: flex;
+        flex-wrap: wrap;
         position: relative;
 
-        &__input-wrap {
-            flex: 1;
-            padding: 0 $padding;
-        }
-
-        &__button-wrap {
-            position: absolute;
-            right: $padding;
+        div {
+            box-sizing: border-box;
         }
 
         &__input {
             border: none;
             border-bottom: 2px solid #afafaf;
             font-size: 12px;
-            height: 49px;
-            line-height: 39px;
+            height: $input-height;
             padding: 0;
             transition: all .2s ease;
             width: 100%;
@@ -34,18 +29,70 @@ $border: 4px;
             }
         }
 
+        &__messages {
+            flex: 1 0 100%;
+            text-align: center;
+        }
+
         &__submit {
-            line-height: 39px;
+            height: $input-height;
             border: none;
             font-weight: bold;
             font-size: 14px;
-            color: #242424;
+            color: #666;
             background: none;
             padding: 0;
             max-width: 240px;
             cursor: pointer;
             text-transform: uppercase;
         }
+
+        @media all and (min-width: $sm-breakpoint) {
+
+            &__input-wrap {
+                flex: 1 0 50%;
+                padding: 0 $padding;
+            }
+
+            &__messages {
+                margin: 20px 0;
+            }
+
+            &__button-wrap {
+                position: absolute;
+                right: $padding;
+            }
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+
+
+            &__input-wrap {
+                flex: 1 0 100%;
+                padding: 0 5%;
+            }
+
+            &__messages {
+                margin: 10px 0;
+            }
+
+            &__button-wrap {
+                flex: 1 0 100%;
+                position: relative;
+                padding: 0 $padding;
+                text-align: center;
+            }
+
+            &__input{
+                font-size: 14px;
+            }
+
+            &__submit {
+                margin-top: 10px;
+            }
+
+        }
+
     }
 }
 

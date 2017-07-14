@@ -1590,7 +1590,6 @@ EOT;
         <li><a href="{{store url='career'}}">Careers</a></li>
         <li><a href="{{store url='storelocator'}}">Store locator</a></li>
         <li><a href="{{store url='terms'}}">Terms and conditions</a></li>
-        <li><a href="{{store url='terms'}}">Privacy policy</a></li>
     </ul>
 </div>
 EOT;
@@ -2870,5 +2869,35 @@ EOT;
         }
 
         $setup->endSetup();
+
+        $setup->startSetup();
+
+        if (version_compare($context->getVersion(), '1.11') < 0) {
+            $block = $this->_blockFactory->create();
+            $content = <<<EOT
+<h2>THANK YOU FOR SUBSCRIBING</h2>
+    Your inbox just got a whole lot better: You will now be the first to
+know about new arrivals, exclusive sales and private events.<br /><br />
+
+Now you have signed up to looking good… Take a look at some<br />
+<a href="{{store direct_url='suits'}}">suits</a>, <a href="{{store direct_url='shirts'}}">shirts</a> or <a href="{{store direct_url='accessories'}}">ties</a>.
+<br />
+<input type="button" class="continue-button" value="continue shopping"><br />
+<span class="small">Remember to add <strong>info@peterjacksons.com</strong> to your address book so our emails don’t get blocked.</span>
+EOT;
+            $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getData();
+            if (false === $blockExists) {
+
+                $block->setTitle('Popup Success')
+                    ->setIdentifier('popup-success')
+                    ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
+        }
+
+        $setup->endSetup();
+
     }
 }
