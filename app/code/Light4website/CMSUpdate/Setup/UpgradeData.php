@@ -2327,6 +2327,8 @@ EOT;
 
         $setup->endSetup();
 
+        $setup->startSetup();
+
         if (version_compare($context->getVersion(), '1.6') < 0) {
             $block = $this->_blockFactory->create();
             $content = <<<EOT
@@ -2828,6 +2830,39 @@ EOT;
                 $block->setTitle('size-chart')
                     ->setIdentifier('size-chart')
                     ->setIsActive(true)
+                    ->setStores(array(0))
+                    ->setContent($content)
+                    ->save();
+            }
+        }
+
+        $setup->endSetup();
+
+        $setup->startSetup();
+
+        if (version_compare($context->getVersion(), '1.8') < 0) {
+            $page = $this->_pageFactory->create();
+            $content = <<<EOT
+<article class="page404">
+    <h1>Whoops, our bad...</h1>
+    <br>
+    The page you requested was not found, and we have a fine guess why.<br>
+    If you typed the URL directly, please make sure the spelling is correct.<br>
+    If you clicked on a link to get here, the link is outdated.<br>
+    What can you do?<br>
+    Have no fear, help is near! There are many ways you can get back on track with Magento Store.<br>
+    <a onclick="history.go(-1); return false;" href="#">Go back</a> to the previous page.<br>
+    Use the search bar at the top of the page to search for your products.<br>
+    Follow these links to get you back on track!<br>
+    <a href="/">STORE HOME</a> | <a href="/customer/account/">MY ACCOUNT</a>
+</article>
+EOT;
+            $blockExists = $page->checkIdentifier('404-error', $storeId);
+            if (false === $blockExists) {
+                $page->setTitle('404')
+                    ->setIdentifier('404-error')
+                    ->setIsActive(true)
+                    ->setPageLayout('1column')
                     ->setStores(array(0))
                     ->setContent($content)
                     ->save();
