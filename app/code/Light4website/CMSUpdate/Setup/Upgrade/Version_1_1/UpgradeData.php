@@ -83,7 +83,7 @@ class UpgradeData implements UpgradeDataInterface
 EOT;
 
         $blockExists = $page->checkIdentifier('about_us', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('About Us')
                 ->setIdentifier('about_us')
@@ -105,7 +105,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('contact_us', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Contact Us')
                 ->setIdentifier('contact_us')
@@ -159,7 +159,7 @@ EOT
 EOT;
 
         $blockExists = $page->checkIdentifier('look-book', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Look Book')
                 ->setIdentifier('look-book')
@@ -353,7 +353,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('made-to-measure', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Made To Measure')
                 ->setIdentifier('made-to-measure')
@@ -488,7 +488,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('our-design', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Our Design')
                 ->setIdentifier('our-design')
@@ -596,7 +596,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('our-labels', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Our Labels')
                 ->setIdentifier('our-labels')
@@ -855,7 +855,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('our-mills', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Our Mills')
                 ->setIdentifier('our-mills')
@@ -1092,7 +1092,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('shipping-returns', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Shipping returns')
                 ->setIdentifier('shipping-returns')
@@ -1127,7 +1127,7 @@ EOT;
 // ]]></script>
 EOT;
         $blockExists = $page->checkIdentifier('size-chart', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Size chart')
                 ->setIdentifier('size-chart')
@@ -1189,7 +1189,7 @@ EOT;
 EOT;
 
         $blockExists = $page->checkIdentifier('sustainability', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Sustainability')
                 ->setIdentifier('sustainability')
@@ -1261,7 +1261,7 @@ EOT;
 </div>
 EOT;
         $blockExists = $page->checkIdentifier('terms', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $page->setTitle('Terms')
                 ->setIdentifier('terms')
@@ -1286,7 +1286,7 @@ EOT;
 EOT;
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'menublock')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('menublock')
                 ->setIdentifier('menublock')
@@ -1311,7 +1311,7 @@ EOT;
 EOT;
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'about-us-menu')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
             $block->setTitle('about-us-menu')
                 ->setIdentifier('about-us-menu')
                 ->setIsActive(true)
@@ -1335,7 +1335,7 @@ EOT;
 EOT;
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'blog-header')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('blog-header')
                 ->setIdentifier('blog-header')
@@ -1384,7 +1384,7 @@ EOT;
 EOT;
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'contact-us')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('contact-us')
                 ->setIdentifier('contact-us')
@@ -1511,7 +1511,7 @@ EOT;
 EOT;
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'faq')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('faq')
                 ->setIdentifier('faq')
@@ -1564,7 +1564,7 @@ EOT;
 </div>
 EOT;
         $blockExists = $block->getCollection()->addFilter('identifier', 'footer-links')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('footer-links')
                 ->setIdentifier('footer-links')
@@ -2073,7 +2073,7 @@ EOT;
 </section>
 EOT;
         $blockExists = $block->getCollection()->addFilter('identifier', 'size-chart')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('size-chart')
                 ->setIdentifier('size-chart')

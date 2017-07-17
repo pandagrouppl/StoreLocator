@@ -49,6 +49,8 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
+
+        $storeId = (int) $this->_storeManager->getStore()->getId();
         $setup->startSetup();
 
         $page = $this->_pageFactory->create();
@@ -86,7 +88,7 @@ class UpgradeData implements UpgradeDataInterface
 </section>
 EOT;
         $blockExists = $page->checkIdentifier('msfw-runway', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
             $page->setTitle('Msfw Runway')
                 ->setIdentifier('msfw-runway')
                 ->setIsActive(true)
@@ -116,7 +118,7 @@ EOT
 </section>
 EOT;
         $blockExists = $block->getCollection()->addFilter('identifier', 'menublock-editorial')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('menublock-editorial')
                 ->setIdentifier('menublock-editorial')
@@ -625,7 +627,7 @@ EOT;
 </section>
 EOT;
         $blockExists = $block->getCollection()->addFilter('identifier', 'size-chart')->getData();
-        if (false === $blockExists) {
+        if (false == $blockExists) {
 
             $block->setTitle('size-chart')
                 ->setIdentifier('size-chart')
@@ -656,7 +658,7 @@ Follow these links to get you back on track!<br>
 </article>
 EOT;
         $blockExists = $page->checkIdentifier('404-error', $storeId);
-        if (false === $blockExists) {
+        if (false == $blockExists) {
             $page->setTitle('404')
                 ->setIdentifier('404-error')
                 ->setIsActive(true)
@@ -674,8 +676,8 @@ EOT;
         $content = file_get_contents('blocks/popup-success.phtml', FILE_USE_INCLUDE_PATH);
 
         $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getData();
-        var_dump($blockExists);
-        if (false === $blockExists) {
+
+        if (false == $blockExists) {
 
             $block->setTitle('Popup Success')
                 ->setIdentifier('popup-success')
