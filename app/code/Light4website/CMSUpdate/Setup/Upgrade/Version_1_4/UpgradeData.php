@@ -657,7 +657,8 @@ Follow these links to get you back on track!<br>
 <a href="/">STORE HOME</a> | <a href="/customer/account/">MY ACCOUNT</a>
 </article>
 EOT;
-        $blockExists = $page->checkIdentifier('404-error', $storeId);
+//        $blockExists = $page->checkIdentifier('404-error', $storeId);
+        $blockExists = $page->getCollection()->addFilter('identifier', '404-error')->getFirstItem();
         if (false == $blockExists) {
             $page->setTitle('404')
                 ->setIdentifier('404-error')
@@ -666,6 +667,8 @@ EOT;
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
+        } else {
+            $blockExists->setContent($content)->save();
         }
 
         $setup->endSetup();
@@ -675,8 +678,8 @@ EOT;
         $block = $this->_blockFactory->create();
         $content = file_get_contents('blocks/popup-success.phtml', FILE_USE_INCLUDE_PATH);
 
-        $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getData();
-
+//        $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getData();
+        $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getFirstItem();
         if (false == $blockExists) {
 
             $block->setTitle('Popup Success')
@@ -685,6 +688,8 @@ EOT;
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
+        } else {
+            $blockExists->setContent($content)->save();
         }
 
         $setup->endSetup();
