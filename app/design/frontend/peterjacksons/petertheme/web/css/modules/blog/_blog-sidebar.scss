@@ -1,5 +1,7 @@
 .blog-sidebar {
     min-width: 270px;
+    box-sizing: border-box;
+    padding-right: 10px;
 
     @media all and (max-width: $sm-breakpoint) {
         order: -1;

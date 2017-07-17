@@ -1,6 +1,7 @@
 $color: #666;
 
-.post-list {
+.is-blog .post-list-wrapper .post-list {
+    padding-left: 10px;
 
     &__item {
         padding: 0 0 50px 0;
@@ -33,20 +34,9 @@ $color: #666;
     }
 
     &__readmore {
-        color: $color;
-        border: 1px solid $color;
+        @include button-custom(13px 50px, 35px 0 0 0, 13px, bold, white, #666, #666, white, 2px solid #666);
         border-radius: 4px;
-        padding: 15px 50px;
         display: inline-block;
-        transition: all 0.3s ease-in-out;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin: 35px 0 0 0;
-
-        &:hover {
-            background: $color;
-            color: white;
-        }
     }
 }
 
