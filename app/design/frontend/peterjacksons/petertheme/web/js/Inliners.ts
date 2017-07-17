@@ -18,6 +18,7 @@ export class Inliners {
         this._footerNav();
         this._footerLinksAlteration();
         this._successCloseOverlay();
+        this._pinHeader();
     }
 
     private _toggleFilter(): void {
@@ -187,4 +188,20 @@ export class Inliners {
         });
 
     }
+
+    private _pinHeader(): void {
+            const cssClassName = 'headers';
+            const docked = cssClassName+'--fixed';
+            const $nav = $('.'+cssClassName);
+            const offset = $('.headers').offset()['top'];
+            $(window).scroll(() => {
+                if ($(window).scrollTop() > offset) {
+                    $nav.addClass(docked);
+                } else {
+                    $nav.removeClass(docked);
+                }
+            });
+    }
+
+
 }

@@ -39,7 +39,11 @@
                     </arguments>
                 </block>
             </container>
-            <container name="header.main" label="Header Top" htmlTag="section" htmlClass="header">
+            <container name="header.shippingbar" label="FREE EXPRESS SHIPPING AUSTRALIA WIDE" htmlTag="section" htmlClass="header-shippingbar">
+                <block class="Magento\Framework\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar.phtml"/>
+            </container>
+            <container name="header.headers" htmlTag="div" htmlClass="headers">
+                <container name="headers" htmlClass="header" htmlTag="section">
                     <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
@@ -52,18 +56,18 @@
                             <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
                         </block>
                     </container>
-
                     <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right">
                         <container name="search-container" label="Search" />
                         <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
                         <container name="header-wrapper" as="minicart-container" label="Minicart" />
                     </container>
-            </container>
-            <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">
-                <block class="Light4website\Menu\Block\Html\Responsivemenu" name="responsive.topnav" template="html/topmenu-responsive.phtml" ttl="3600">
-                    <block class="Magento\Framework\View\Element\Template" name="responsive.search" as="respTopSearch" template="Magento_Theme::html/header/search-responsive.phtml" />
-                    <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.responsive.other" as="catalogTopResp" template="Magento_Theme::html/header/other-responsive.phtml"/>
-                </block>
+                </container>
+                <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">
+                        <block class="Light4website\Menu\Block\Html\Responsivemenu" name="responsive.topnav" template="html/topmenu-responsive.phtml" ttl="3600">
+                            <block class="Magento\Framework\View\Element\Template" name="responsive.search" as="respTopSearch" template="Magento_Theme::html/header/search-responsive.phtml" />
+                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.responsive.other" as="catalogTopResp" template="Magento_Theme::html/header/other-responsive.phtml"/>
+                        </block>
+                </container>
             </container>
         </referenceContainer>
 

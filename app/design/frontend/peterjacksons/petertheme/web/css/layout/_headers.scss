@@ -1,0 +1,27 @@
+.headers {
+    width: 100%;
+    z-index: 999;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+        background-color: white;
+    }
+
+}
+
+.cms-index-defaultindex, .cms-home {
+    .headers {
+        position: fixed;
+
+        .header {
+            border-bottom: none;
+        }
+
+        &--fixed {
+            .header {
+                border-bottom: 1px solid #d7d7d7;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
     width: 100%;
     background: white;
     display: none;
+    z-index: 1;
 
     @media all and (min-width: $bp-header) {
         display: none !important;
