@@ -16,11 +16,17 @@
 
         .header {
             border-bottom: none;
+            span, a {
+                color: white;
+            }
         }
 
         &--fixed {
             .header {
                 border-bottom: 1px solid #d7d7d7;
+                span, a {
+                    color: inherit;
+                }
             }
         }
     }
