@@ -2871,8 +2871,8 @@ EOT;
         $setup->endSetup();
 
         $setup->startSetup();
-
-        if (version_compare($context->getVersion(), '1.11') < 0) {
+        var_dump(version_compare($context->getVersion(), '1.12'));
+        if (version_compare($context->getVersion(), '1.12') < 0) {
             $block = $this->_blockFactory->create();
             $content = <<<EOT
 <h2>THANK YOU FOR SUBSCRIBING</h2>
@@ -2886,6 +2886,7 @@ Now you have signed up to looking good… Take a look at some<br />
 <span class="small">Remember to add <strong>info@peterjacksons.com</strong> to your address book so our emails don’t get blocked.</span>
 EOT;
             $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getData();
+            var_dump($blockExists);
             if (false === $blockExists) {
 
                 $block->setTitle('Popup Success')
