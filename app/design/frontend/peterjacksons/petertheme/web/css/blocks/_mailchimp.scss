@@ -108,8 +108,14 @@ $input-height: 49px;
         }
 
         &__submit {
-            @include button-custom(15px 20px, 0, 11px, bold, #0b53c9, white, white, black, none);
+            @include button-blue(15px 20px, 20px 0 0, 11px, bold);
             width: 100%;
         }
+
+        &__messages {
+            margin: 10px 0;
+            text-align: center;
+        }
+
     }
 }
