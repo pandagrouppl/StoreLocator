@@ -83,3 +83,4 @@ atlassian*
 !/install-script.sh
 !/update-script.sh
 !/update-frontools.sh
+!/update-dev.sh

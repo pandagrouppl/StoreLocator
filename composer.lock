@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "777ad7029607fc6078835070c6b75d26",
-    "content-hash": "0941949615ec75c2a86c25096c5cc563",
+    "hash": "69a5dc1860e54166d3a8233af6bd9462",
+    "content-hash": "57478cd71d1887da07999ef0303c2c5e",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -97,7 +97,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "c0c1409359898478848efe2f1ba454a4ea57e146"
+                "reference": "1123bed5ca9cfc93bc3544587f590d9d3054f970"
             },
             "require": {
                 "magento/framework": "100.0.*|100.1.*",
@@ -105,7 +105,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2017-06-23 10:57:43"
+            "time": "2017-06-30 10:48:47"
         },
         {
             "name": "PandaGroup/Careers",
@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "eff8466acde4d3bd52f1e0a47b9b5acb0ad59eed"
+                "reference": "487be62b6aa17dfc84e36846e8a46fad3b4cfbcf"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-06-28 15:05:44"
+            "time": "2017-06-30 07:51:06"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "0d5a199fb0e39d37581b9b0c99a090d4dd304e18"
+                "reference": "b7296da146db921b0a78a331d63c67e2f8732fae"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-06-27 11:37:55"
+            "time": "2017-06-29 11:46:07"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "2f840704feed0b4029432e54f66fef9dd7549f27"
+                "reference": "ac1d877008523eb573f4a6e5a4ad6f4e34fb9b56"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-06-28 09:05:33"
+            "time": "2017-07-04 13:31:45"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -182,17 +182,32 @@
             "time": "2017-06-20 09:30:55"
         },
         {
+            "name": "PandaGroup/Spinner",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-spinner.git",
+                "reference": "f6b017815eef3231b219597bb7f9ad4ade2e54f0"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Spinner for Magento 2.x",
+            "time": "2017-06-29 11:37:38"
+        },
+        {
             "name": "PandaGroup/StoreLocator",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d"
+                "reference": "d8506f5dd26a35d873ecc9d4e96728b2f5355f3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d612a304f4745ba36259f2e62b1e6adac367d03d",
-                "reference": "d612a304f4745ba36259f2e62b1e6adac367d03d",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d8506f5dd26a35d873ecc9d4e96728b2f5355f3b",
+                "reference": "d8506f5dd26a35d873ecc9d4e96728b2f5355f3b",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -204,7 +219,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-06-19 13:26:31"
+            "time": "2017-07-13 13:58:54"
         },
         {
             "name": "braintree/braintree_php",
@@ -9525,16 +9540,16 @@
         },
         {
             "name": "theseer/fdomdocument",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/fDOMDocument.git",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d"
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/8dcfd392135a5bd938c3c83ea71419501ad9855d",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d",
+                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/6e8203e40a32a9c770bcb62fe37e68b948da6dca",
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca",
                 "shasum": ""
             },
             "require": {
@@ -9561,7 +9576,7 @@
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
             "homepage": "https://github.com/theseer/fDOMDocument",
-            "time": "2017-04-21 14:50:31"
+            "time": "2017-06-30 11:53:12"
         }
     ],
     "aliases": [],

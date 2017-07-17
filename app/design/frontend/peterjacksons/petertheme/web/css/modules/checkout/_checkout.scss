@@ -47,15 +47,6 @@
     &__steps-list {
         display: flex;
         flex-wrap: wrap;
-
-        > li {
-            flex: 1 0 100%;
-            box-sizing: border-box;
-        }
-
-        > li:last-child {
-            margin-bottom: 30px;
-        }
     }
 
     &__step-wrapper {
@@ -123,11 +114,6 @@
             @include button-blue(10px 20px, 5px, 13px);
 
         }
-
-        &--calculate {
-            @include button-blue(10px 20px, 5px 0, 13px);
-
-        }
     }
 
     &__address {
@@ -166,7 +152,14 @@
         }
 
         &-option {
-            margin-bottom: 35px;
+            margin-bottom: 15px;
+            border: 2px dashed #ddd;
+            padding: 15px;
+            border-radius: 5px;
+
+            &--active {
+
+            }
         }
 
         &-name {
@@ -180,11 +173,6 @@
             align-items: center;
         }
 
-        &-radio {
-            margin-right: 15px;
-            min-width: 13px;
-        }
-
         &-price {
             font-size: 14px;
             font-weight: bold;
@@ -194,6 +182,15 @@
         &-delivery {
             font-style: italic;
         }
+
+        &-button {
+            @include button-blue(9px 18px, 3px 7px 3px 0, 12px);
+
+            &--active {
+
+            }
+        }
+
     }
 
     &__payments {

@@ -1,0 +1,21 @@
+.page404 {
+    font-size: 13px;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+    color: $black-text;
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    a {
+        font-size: 13px;
+        line-height: 1.2em;
+        letter-spacing: 1px;
+        color: $black-text;
+
+        &:hover {
+            color: $grey-dark;
+        }
+    }
+}

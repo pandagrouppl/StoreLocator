@@ -17,6 +17,7 @@ export class Inliners {
         this._scrollTopArrow();
         this._footerNav();
         this._footerLinksAlteration();
+        this._successCloseOverlay();
     }
 
     private _toggleFilter(): void {
@@ -153,7 +154,11 @@ export class Inliners {
             if ($(window).width() <= 800) {
                 if (true === $(this).hasClass("active")) {
                     $(this).removeClass("active").addClass("inactive");
-                    $(this).next("ul").stop().slideUp(400);
+                    let $ul = $(this).next("ul");
+                    $ul.stop().slideUp(400, () => {
+                        $ul.css("display","");
+                    });
+
                 } else {
                     $(this).removeClass("inactive").addClass("active");
                     $(this).next("ul").stop().slideDown(400);
@@ -167,5 +172,19 @@ export class Inliners {
             const e = $(v);
             e.attr('title', e.text());
         });
+    }
+
+    private _successCloseOverlay(): void {
+        const $overlay = $('.popup-success');
+        $('.popup-success__content').click((e) => {
+            e.stopPropagation();
+        });
+        [$overlay,
+        $('.popup-success__close'),
+        $('.popup-success__content .continue-button')
+        ].map(($i) => {
+                $i.click(() => {$overlay.hide()});
+        });
+
     }
 }
