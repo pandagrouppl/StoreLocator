@@ -8,13 +8,18 @@
     &__search-row {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid #bcbbbb;
     }
 
     &__search-input {
         width: 100%;
         border: 0;
         text-align: center;
+
+
+        &::placeholder {
+            color: black;
+        }
     }
 
     &__zoom {
