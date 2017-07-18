@@ -193,7 +193,7 @@ export class Inliners {
             const cssClassName = 'headers';
             const docked = cssClassName+'--fixed';
             const $nav = $('.'+cssClassName);
-            const offset = $('.headers').offset()['top'];
+            const offset = $('.header-shippingbar').outerHeight();
             $(window).scroll(() => {
                 if ($(window).scrollTop() > offset) {
                     $nav.addClass(docked);

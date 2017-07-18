@@ -16,16 +16,32 @@
 
         .header {
             border-bottom: none;
-            span, a {
-                color: white;
+
+            &-middle__logo img {
+                filter: invert(100%);
+            }
+
+            .ui-corner-all, .ui-menu-item {
+                span, a {
+                    color: #dce0df;
+                }
             }
         }
 
-        &--fixed {
+        &--fixed, &:hover {
+            background-color: white;
+
             .header {
                 border-bottom: 1px solid #d7d7d7;
-                span, a {
-                    color: inherit;
+
+                &-middle__logo img {
+                    filter: none;
+                }
+
+                .ui-corner-all, .ui-menu-item {
+                    span, a {
+                        color: inherit;
+                    }
                 }
             }
         }
