@@ -23,11 +23,6 @@ class UpgradeData implements UpgradeDataInterface
     protected $_blockFactory;
 
     /**
-     * @var \Magento\Store\Model\StoreManagerInterface
-     */
-    protected $_storeManager;
-
-    /**
      * Construct
      *
      * @param \Magento\Cms\Model\PageFactory $pageFactory
@@ -35,12 +30,10 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function __construct(
         \Magento\Cms\Model\PageFactory $pageFactory,
-        \Magento\Cms\Model\BlockFactory $blockFactory,
-        \Magento\Store\Model\StoreManagerInterface $storeManager
+        \Magento\Cms\Model\BlockFactory $blockFactory
     ) {
         $this->_pageFactory = $pageFactory;
         $this->_blockFactory = $blockFactory;
-        $this->_storeManager = $storeManager;
     }
 
     /**
