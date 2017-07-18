@@ -6,7 +6,6 @@ use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-
 /**
  * @codeCoverageIgnore
  */
@@ -37,6 +36,11 @@ class UpgradeData implements UpgradeDataInterface
      *
      * @param \Magento\Cms\Model\PageFactory $pageFactory
      * @param \Magento\Cms\Model\BlockFactory $blockFactory
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param Upgrade\Version_1_1\UpgradeData $upgradeData_1_1
+     * @param Upgrade\Version_1_2\UpgradeData $upgradeData_1_2
+     * @param Upgrade\Version_1_3\UpgradeData $upgradeData_1_3
+     * @param Upgrade\Version_1_4\UpgradeData $upgradeData_1_4
      */
     public function __construct(
         \Magento\Cms\Model\PageFactory $pageFactory,
@@ -62,9 +66,6 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-//        $setup->startSetup();
-
-
         if (version_compare($context->getVersion(), '1.1') < 0)
         {
             $this->upgradeData_1_1->upgrade($setup, $context);
@@ -84,8 +85,5 @@ class UpgradeData implements UpgradeDataInterface
         {
             $this->upgradeData_1_4->upgrade($setup, $context);
         }
-
-//        $setup->endSetup();
-
     }
 }
