@@ -66,6 +66,8 @@
     }
 
     @media all and (max-width: $xs-breakpoint) {
+        padding: 2%;
+
         h2 {
             margin: 10px 0;
         }
