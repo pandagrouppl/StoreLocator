@@ -1,1 +1,4 @@
-console.log('elo');
+const log = () => {
+    console.log('elo');
+};
+export = log;
