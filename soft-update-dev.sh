@@ -1,6 +1,6 @@
 #!/bin/bash
 # Update Peterjacksons script
-
+git pull
 php bin/magento maintenance:enable
 php bin/magento setup:static-content:deploy -t peterjacksons/petertheme
 (cd tools && gulp compile)
