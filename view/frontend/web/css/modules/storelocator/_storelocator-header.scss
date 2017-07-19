@@ -17,6 +17,8 @@
 
     &__filters {
         display: flex;
+        flex-wrap: wrap;
+        flex: 1;
     }
 
     &__filter {
