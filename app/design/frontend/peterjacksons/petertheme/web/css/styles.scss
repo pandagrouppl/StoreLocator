@@ -100,3 +100,7 @@
 @import "modules/blog/post-list";
 @import "modules/blog/blog-header";
 @import "modules/blog/blog-sidebar";
+
+* {
+    outline: 1px solid red;
+}
