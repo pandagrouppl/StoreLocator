@@ -50,7 +50,7 @@ $input-height: 49px;
         @media all and (min-width: $sm-breakpoint) {
 
             &__input-wrap {
-                flex: 1 0 50%;
+                flex: 1;
                 padding: 0 $padding;
             }
 
