@@ -50,7 +50,7 @@
             @include sprite(header-case);
             transform: scale(0.7);
 
-            @media all and (max-width: $bp-small) {
+            @media all and (max-width: $xs-breakpoint) {
                 transform: scale(0.8, 0.8);
             }
         }

@@ -10,7 +10,7 @@
         width: 100%;
         height: 100%;
 
-        @media all and (max-width: $bp-small) {
+        @media all and (max-width: $xs-breakpoint) {
             max-width: 175px;
             margin: 0;
         }

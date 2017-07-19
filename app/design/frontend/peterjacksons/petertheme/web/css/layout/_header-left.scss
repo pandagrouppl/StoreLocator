@@ -7,7 +7,7 @@
         padding: 20px;
         margin: -5px 0 0 -5px;
 
-        @media all and (max-width: $bp-small) {
+        @media all and (max-width: $xs-breakpoint) {
             transform: scale(0.8, 0.8);
         }
     }
