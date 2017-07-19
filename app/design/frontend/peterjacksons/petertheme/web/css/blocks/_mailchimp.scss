@@ -18,17 +18,17 @@ $input-height: 49px;
             font-size: 12px;
             height: $input-height;
             padding: 0;
-            transition: all .2s ease;
+            transition: all 0.2s ease;
             width: 100%;
             margin-bottom: 2px;
 
             &:focus {
                 outline: none;
                 border-bottom-width: $border;
-                margin-bottom: 2px - $border/2;
+                margin-bottom: 2px - $border / 2;
             }
 
-            &::-ms-clear {
+            &::clear {
                 display: none;
             }
         }
@@ -81,13 +81,13 @@ $input-height: 49px;
             }
 
             &__button-wrap {
-                flex: 1 0 100%;
+                flex: 1 0 100% - 2 * $padding;
                 position: relative;
                 padding: 0 $padding;
                 text-align: center;
             }
 
-            &__input{
+            &__input {
                 font-size: 14px;
             }
 
