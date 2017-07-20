@@ -20,6 +20,7 @@ export = class Main {
             const inliners = new Inliners.Inliners();
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
             const mailChimpAjax = MailChimpAjax('mc-embedded-subscribe-form');
+            const mailChimpAjax2 = MailChimpAjax('mc-embedded-subscribe-form-blog');
             const popup = new popups.Popups();
             const lookBook = new LookBook.LookBook();
 

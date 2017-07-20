@@ -4,6 +4,8 @@ const MailChimpAjax = (id) => {
     'use strict';
     const $form = $('#' + id);
     const $message = $form.children('.mailchimp__messages');
+    console.log('form', $form);
+    console.log('msg', $message);
     if ( $form.length > 0 ) {
         $('#' + id +' input[type="submit"]').bind('click', function ( event ) {
             if ( event ) event.preventDefault();
