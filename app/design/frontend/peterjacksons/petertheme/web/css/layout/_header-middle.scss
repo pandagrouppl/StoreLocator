@@ -74,10 +74,9 @@
     }
 
     &__columns {
-        display: inline-flex;
-        writing-mode: vertical-lr;
-        flex-wrap: wrap;
-        align-content: flex-start;
+        columns: 200px 5;
+        column-gap: 0;
+        column-fill: auto;
 
         a {
             color: $black;
@@ -85,11 +84,9 @@
     }
 
     &__column-item {
-        margin: 5px 10px 5px 0;
+        margin: 5px 0;
         padding: 5px 23px;
         font-size: 15px;
-        writing-mode: horizontal-tb;
-        height: 15px;
     }
 
     &__block {
@@ -98,9 +95,20 @@
         break-inside: avoid-column;
         border-left: 1px solid $grey;
         display: flex;
+        justify-content: space-between;
 
-        > figure {
-            margin: 0 20px 0 0;
+        &--3-column {
+
+            > figure {
+                width: 31%;
+            }
+        }
+
+        &--2-column {
+
+            > figure {
+                width: 48%;
+            }
         }
     }
 }
