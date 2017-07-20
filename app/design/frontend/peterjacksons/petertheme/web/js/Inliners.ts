@@ -19,6 +19,7 @@ export class Inliners {
         this._footerLinksAlteration();
         this._successCloseOverlay();
         this._pinHeader();
+        this._headerWidth();
     }
 
     private _toggleFilter(): void {
@@ -201,6 +202,16 @@ export class Inliners {
                     $nav.removeClass(docked);
                 }
             });
+    }
+
+    private _headerWidth(): void {
+        $('.header-middle__columns').each(function() {
+            const $this = $(this);
+            const len = $this.children().length;
+            const cols = Math.ceil(len/6);
+            console.log(len, cols);
+            $this.css('flex-basis', 200 * cols);
+        })
     }
 
 
