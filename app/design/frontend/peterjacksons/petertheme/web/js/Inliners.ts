@@ -209,7 +209,9 @@ export class Inliners {
             const $this = $(this);
             const len = $this.children().length;
             const cols = Math.ceil(len/6);
-            $this.css('flex-basis', 200 * cols);
+            $this.css({
+                'flex-basis': 200 * cols,
+                'max-width': 200 * cols});
         })
     }
 
