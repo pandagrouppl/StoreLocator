@@ -40,6 +40,16 @@
                 font-weight: 300;
                 text-transform: uppercase;
             }
+
+            &.active > a, &.has-active > a {
+                padding: 0 0 6px 0;
+                border-bottom: 2px solid;
+            }
+
+            &.active .first span, &.has-active .active span {
+                font-weight: bold;
+                text-decoration: underline;
+            }
         }
 
         ul.level0 {
@@ -64,9 +74,10 @@
     }
 
     &__columns {
-        columns: 200px 5;
-        column-gap: 0;
-        column-fill: auto;
+        display: inline-flex;
+        writing-mode: vertical-lr;
+        flex-wrap: wrap;
+        align-content: flex-start;
 
         a {
             color: $black;
@@ -74,14 +85,11 @@
     }
 
     &__column-item {
-        margin: 5px 0;
+        margin: 5px 10px 5px 0;
         padding: 5px 23px;
         font-size: 15px;
-
-        &--header {
-            font-weight: bold;
-            text-decoration: underline;
-        }
+        writing-mode: horizontal-tb;
+        height: 15px;
     }
 
     &__block {
@@ -90,20 +98,9 @@
         break-inside: avoid-column;
         border-left: 1px solid $grey;
         display: flex;
-        justify-content: space-between;
 
-        &--3-column {
-
-            > figure {
-                width: 31%;
-            }
-        }
-
-        &--2-column {
-
-            > figure {
-                width: 48%;
-            }
+        > figure {
+            margin: 0 20px 0 0;
         }
     }
 }
