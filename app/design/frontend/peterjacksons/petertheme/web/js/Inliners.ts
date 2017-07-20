@@ -211,6 +211,7 @@ export class Inliners {
             const cols = Math.ceil(len/6);
             $this.css({
                 'flex-basis': 200 * cols,
+                '-webkit-flex-basis': 200 * cols,
                 'max-width': 200 * cols});
         })
     }
