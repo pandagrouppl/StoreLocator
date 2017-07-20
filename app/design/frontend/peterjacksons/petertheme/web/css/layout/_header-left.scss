@@ -62,6 +62,7 @@
             @include sprite(header-book);
             transform: scale(0.7);
             display: block;
+            height: 25px;
         }
 
         &:hover {
@@ -126,6 +127,7 @@
             @include sprite(header-account);
             transform: scale(0.7);
             display: block;
+            height: 26px;
         }
     }
 }
