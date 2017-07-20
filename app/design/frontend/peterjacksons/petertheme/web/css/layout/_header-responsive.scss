@@ -6,6 +6,11 @@
     display: none;
     z-index: 1;
 
+    &__navigation ul {
+        max-height: 69vh;
+        overflow-y: auto;
+    }
+
     @media all and (min-width: $bp-header) {
         display: none !important;
     }

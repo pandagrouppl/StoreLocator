@@ -203,13 +203,12 @@ export class Inliners {
                 }
             });
     }
-
+    // this silly fix is required for Safari bugged column rendering
     private _headerWidth(): void {
         $('.header-middle__columns').each(function() {
             const $this = $(this);
             const len = $this.children().length;
             const cols = Math.ceil(len/6);
-            console.log(len, cols);
             $this.css('flex-basis', 200 * cols);
         })
     }
