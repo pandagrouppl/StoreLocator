@@ -106,10 +106,10 @@
         align-items: center;
     }
 
-    &__form-error {
+    &__form-error, div.mage-error {
         color: #c22020;
         font-size: 12px;
-        padding-top: 3px;
+        padding: 2px 0 4px 0;
     }
 
     &__button {
