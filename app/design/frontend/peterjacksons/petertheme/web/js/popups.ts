@@ -7,8 +7,11 @@ export class Popups {
     }
 
     _faqPopup() {
-        $('.faq-click, .faq__close').on('click', () => {
-            $('.faq__popup').toggle();
+        $('.faq-click, .faq__close, .faq__overlay').on('click', () => {
+            $('.faq__overlay').toggle();
+        });
+        $('.faq__popup').click((e) => {
+            e.stopPropagation();
         });
         $('.faq__title').on('click', function() {
             $(this).toggleClass('faq__title--open').next().slideToggle();

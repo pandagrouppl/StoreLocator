@@ -1112,19 +1112,6 @@ EOT;
         $content = <<<EOT
 <h1>Size Charts</h1>
 {{block class="Magento\\Cms\\Block\\Block" block_id="size-chart"}}
-<script type="text/x-magento-init" xml="space">// <![CDATA[
-    {
-        "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                    "sizeChart": {
-                        "component": "sizeChart"
-                    }
-                }
-            }
-        }
-    }
-// ]]></script>
 EOT;
         $blockExists = $page->checkIdentifier('size-chart', $storeId);
         if (false == $blockExists) {
