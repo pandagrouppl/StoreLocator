@@ -1,7 +1,6 @@
 var config = {
     deps: [
         "js/main",
-        "js/sizeChart",
         'js/youtube'
     ],
     paths: {

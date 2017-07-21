@@ -1,7 +1,7 @@
 import $ = require("jquery");
 import ko = require("knockout");
 
-import * as SizeChart from "./sizeChart";
+import * as SizeChart from "./SizeChart";
 import * as Inliners from "./Inliners";
 import * as MadeToMeasure from "./MadeToMeasure";
 import * as MailChimpAjax from "./mailChimpAjax";
@@ -23,7 +23,7 @@ export = class Main {
             const mailChimpAjax2 = MailChimpAjax('mc-embedded-subscribe-form-blog');
             const popup = new popups.Popups();
             const lookBook = new LookBook.LookBook();
-
+            const sizeChart = new SizeChart.SizeChart();
         });
     }
 }

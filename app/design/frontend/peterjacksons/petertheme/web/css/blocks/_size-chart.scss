@@ -9,6 +9,8 @@
     &--open {
         display: flex !important;
         flex-direction: column;
+        z-index: 999;
+        border: 1px solid;
     }
 
     &__close {
@@ -45,6 +47,11 @@
     }
 
     &__section {
+        display: none;
+
+        &--active {
+            display: block;
+        }
 
         .label-chart {
             background: #f3f3f3;

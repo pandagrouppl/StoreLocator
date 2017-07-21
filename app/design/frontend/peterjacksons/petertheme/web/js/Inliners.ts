@@ -9,7 +9,6 @@ export class Inliners {
         this._toggleFilters();
         this._toggleResponsiveMenu();
         this._toggleSubmenuResponsive();
-        this._toggleSizeChart();
         this._shirtFitGuide();
         this._sliders();
         this._cmsBannerZoom();
@@ -77,11 +76,6 @@ export class Inliners {
         });
     }
 
-    private _toggleSizeChart(): void {
-        $(document).on('click', '.product-content__size-chart, .size-chart__close', () => {
-            $('#size-chart').toggleClass('size-chart--open');
-        });
-    }
 
     private _shirtFitGuide(): void {
         $('.slider-with-text__slides').slick({
@@ -150,6 +144,8 @@ export class Inliners {
             return false;
         });
     }
+
+// FOOTER
     
     private _footerNav(): void {
         $(".page-footer__linkbox h3").on("click", function () {
@@ -189,6 +185,8 @@ export class Inliners {
         });
 
     }
+
+// HEADER
 
     private _pinHeader(): void {
             const cssClassName = 'headers';

@@ -61,18 +61,3 @@
 <?php endif; ?>
 
 <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('size-chart')->toHtml();?>
-
-<script type="text/x-magento-init">
-        {
-            "*": {
-                "Magento_Ui/js/core/app": {
-                    "components": {
-                        "sizeChart": {
-                            "component": "js/sizeChart"
-                        }
-                    }
-                }
-            }
-        }
-
-</script>
