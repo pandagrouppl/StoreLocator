@@ -1,7 +1,10 @@
 $breadcrumbs-color: #928383;
-
+.cms-page-view .breadcrumbs {
+    max-width: 990px;
+}
 .breadcrumbs {
     @include container();
+    box-sizing: border-box;
     padding: 50px 0 20px 20px;
 
     @media all and (max-width: $bp-header) {
@@ -22,6 +25,14 @@ $breadcrumbs-color: #928383;
             &:hover {
                 color: $breadcrumbs-color;
             }
+        }
+
+        &--bold * {
+            font-weight: bold;
+        }
+
+        &--right {
+            margin-left: auto;
         }
 
         &--last {

@@ -1,9 +1,6 @@
 .cms-terms,
 .cms-contact-us {
-
-
     .page-main {
-        padding: 0;
 
         @media all and (max-width: $bp-header) {
             padding: 20px;
@@ -21,6 +18,7 @@
 
             span {
                 font-size: 60px;
+                font-weight: normal;
             }
         }
     }

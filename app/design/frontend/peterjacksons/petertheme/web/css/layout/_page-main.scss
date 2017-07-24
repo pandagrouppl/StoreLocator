@@ -1,9 +1,17 @@
 .page-main {
     max-width: 1080px;
-    margin: auto;
+    margin: auto auto 100px auto;
     padding: 0 20px;
     box-sizing: border-box;
-    margin-bottom: 50px;
+
+    &--unconstrained {
+        max-width: none;
+        padding: 0 0;
+    }
+}
+
+.cms-page-view .page-main {
+    max-width: 990px;
 
     &--unconstrained {
         max-width: none;
