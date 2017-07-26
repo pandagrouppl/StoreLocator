@@ -42,54 +42,55 @@ class UpgradeData implements UpgradeDataInterface
      */
     public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-        $setup->startSetup();
-
-        $page = $this->_pageFactory->create();
-        $content = file_get_contents('pages/msfw-runway.phtml', FILE_USE_INCLUDE_PATH);
-
-        $pageExists = $page->getCollection()->addFilter('identifier', 'msfw-runway')->getFirstItem();
-        if (false == $pageExists) {
-            $page->setTitle('Msfw Runway')
-                ->setIdentifier('msfw-runway')
-                ->setIsActive(true)
-                ->setPageLayout('1column-unconstrained-width')
-                ->setLayoutUpdateXml(
-                    <<<EOT
-<referenceContainer name="page.top">
-<referenceBlock name="breadcrumbs" remove="true" />
-</referenceContainer>
-EOT
-                )
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
-        } else {
-            $pageExists->setContent($content)->save();
-        }
-
-        $setup->endSetup();
-
-
-
-        $setup->startSetup();
-
-        $block = $this->_blockFactory->create();
-        $content = file_get_contents('blocks/menublock-editorial.phtml', FILE_USE_INCLUDE_PATH);
-
-        $blockExists = $block->getCollection()->addFilter('identifier', 'menublock-editorial')->getFirstItem();
-        if (false == $blockExists) {
-
-            $block->setTitle('menublock-editorial')
-                ->setIdentifier('menublock-editorial')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
-        } else {
-            $blockExists->setContent($content)->save();
-        }
-
-        $setup->endSetup();
+//        $setup->startSetup();
+//
+//        $page = $this->_pageFactory->create();
+//        $content = file_get_contents('pages/msfw-runway.phtml', FILE_USE_INCLUDE_PATH);
+//
+//        $pageExists = $page->getCollection()->addFilter('identifier', 'msfw-runway')->getFirstItem();
+//        if (false == $pageExists) {
+//
+//            $page->setTitle('Msfw Runway')
+//                ->setIdentifier('msfw-runway')
+//                ->setIsActive(true)
+//                ->setPageLayout('1column-unconstrained-width')
+//                ->setLayoutUpdateXml(
+//                    '
+//<referenceContainer name="page.top">
+//<referenceBlock name="breadcrumbs" remove="true" />
+//</referenceContainer>
+//'
+//                )
+//                ->setStores(array(0))
+//                ->setContent($content)
+//                ->save();
+//        } else {
+//            $pageExists->setContent($content)->save();
+//        }
+//
+//        $setup->endSetup();
+//
+//
+//
+//        $setup->startSetup();
+//
+//        $block = $this->_blockFactory->create();
+//        $content = file_get_contents('blocks/menublock-editorial.phtml', FILE_USE_INCLUDE_PATH);
+//
+//        $blockExists = $block->getCollection()->addFilter('identifier', 'menublock-editorial')->getFirstItem();
+//        if (false == $blockExists) {
+//
+//            $block->setTitle('menublock-editorial')
+//                ->setIdentifier('menublock-editorial')
+//                ->setIsActive(true)
+//                ->setStores(array(0))
+//                ->setContent($content)
+//                ->save();
+//        } else {
+//            $blockExists->setContent($content)->save();
+//        }
+//
+//        $setup->endSetup();
 
 
 
@@ -113,49 +114,49 @@ EOT
         }
 
         $setup->endSetup();
-
-
-
-        $setup->startSetup();
-
-        $page = $this->_pageFactory->create();
-        $content = file_get_contents('pages/404-error.phtml', FILE_USE_INCLUDE_PATH);
-
-        $pageExists = $page->getCollection()->addFilter('identifier', '404-error')->getFirstItem();
-        if (false == $pageExists) {
-            $page->setTitle('404')
-                ->setIdentifier('404-error')
-                ->setIsActive(true)
-                ->setPageLayout('1column')
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
-        } else {
-            $pageExists->setContent($content)->save();
-        }
-
-        $setup->endSetup();
-
-
-
-        $setup->startSetup();
-
-        $block = $this->_blockFactory->create();
-        $content = file_get_contents('blocks/popup-success.phtml', FILE_USE_INCLUDE_PATH);
-
-        $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getFirstItem();
-        if (false == $blockExists) {
-
-            $block->setTitle('Popup Success')
-                ->setIdentifier('popup-success')
-                ->setIsActive(true)
-                ->setStores(array(0))
-                ->setContent($content)
-                ->save();
-        } else {
-            $blockExists->setContent($content)->save();
-        }
-
-        $setup->endSetup();
+//
+//
+//
+//        $setup->startSetup();
+//
+//        $page = $this->_pageFactory->create();
+//        $content = file_get_contents('pages/404-error.phtml', FILE_USE_INCLUDE_PATH);
+//
+//        $pageExists = $page->getCollection()->addFilter('identifier', '404-error')->getFirstItem();
+//        if (false == $pageExists) {
+//            $page->setTitle('404')
+//                ->setIdentifier('404-error')
+//                ->setIsActive(true)
+//                ->setPageLayout('1column')
+//                ->setStores(array(0))
+//                ->setContent($content)
+//                ->save();
+//        } else {
+//            $pageExists->setContent($content)->save();
+//        }
+//
+//        $setup->endSetup();
+//
+//
+//
+//        $setup->startSetup();
+//
+//        $block = $this->_blockFactory->create();
+//        $content = file_get_contents('blocks/popup-success.phtml', FILE_USE_INCLUDE_PATH);
+//
+//        $blockExists = $block->getCollection()->addFilter('identifier', 'popup-success')->getFirstItem();
+//        if (false == $blockExists) {
+//
+//            $block->setTitle('Popup Success')
+//                ->setIdentifier('popup-success')
+//                ->setIsActive(true)
+//                ->setStores(array(0))
+//                ->setContent($content)
+//                ->save();
+//        } else {
+//            $blockExists->setContent($content)->save();
+//        }
+//
+//        $setup->endSetup();
     }
 }

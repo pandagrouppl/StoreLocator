@@ -634,6 +634,7 @@ define([
 			},
 
 			getViewport: function () {
+
 				var locked = (F.current && F.current.locked) || false,
 						rez = {
 							x: W.scrollLeft(),
