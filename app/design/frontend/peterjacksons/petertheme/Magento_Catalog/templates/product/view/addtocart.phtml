@@ -13,23 +13,7 @@
 <?php if ($_product->isSaleable()): ?>
 <div class="box-tocart">
     <div class="fieldset">
-        <?php if ($block->shouldRenderQuantity()): ?>
-        <div class="field qty product-content__qty">
-                <div class="control select__wrapper select__wrapper--product-page">
-                    <figure class="select__arrow"></figure>
-                    <select class="select__select" type="number" name="qty" id="qty"
-                    title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
-                    data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>">
-                    <?php for($i = 1; $i < 11; $i++): ?>
-                        <option value="<?php echo $i ?>"><?php echo $i ?></option>
-                    <?php endfor; ?>
-                    </select>
-                </div>
-            <article class="product-content__size-chart">
-                <p><?php /* @escapeNotVerified */ echo __('View'); ?></br><?php /* @escapeNotVerified */ echo __('Size Chart') ?></p>
-            </article>
-        </div>
-        <?php endif; ?>
+
         <div class="actions">
             <button type="submit"
                     title="<?php /* @escapeNotVerified */ echo $buttonTitle ?>"
