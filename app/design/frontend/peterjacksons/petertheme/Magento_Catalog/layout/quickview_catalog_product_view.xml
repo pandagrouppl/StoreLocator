@@ -90,12 +90,12 @@
                                template="product/view/form.phtml" after="alert.urls">
                             <container name="product.info.form.content" as="product_info_form_content">
                                 <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart"
-                                       as="addtocart" template="product/view/addtocart.phtml"/>
+                                       as="addtocart" template="product/view/quickview-addtocart.phtml"/>
                             </container>
                             <block class="Magento\Framework\View\Element\Template" name="product.info.form.options"
                                    as="options_container">
                                 <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper"
-                                       as="product_options_wrapper" template="product/view/options/wrapper.phtml">
+                                       as="product_options_wrapper" template="product/view/options/quickview-wrapper.phtml">
                                     <block class="Magento\Catalog\Block\Product\View\Options"
                                            name="product.info.options"
                                            as="product_options" template="product/view/options.phtml">
@@ -120,7 +120,7 @@
                                        template="product/view/options/wrapper/bottom.phtml">
                                     <block class="Magento\Catalog\Block\Product\View"
                                            name="product.info.addtocart.additional" as="product.info.addtocart"
-                                           template="product/view/addtocart.phtml"/>
+                                           template="product/view/quickview-addtocart.phtml"/>
                                 </block>
                             </block>
                         </block>
