@@ -177,11 +177,10 @@
             <!--</filterSelect>-->
         </filters>
 
-
         <massaction name="listing_massaction">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">storelocator_index_index_listing.storelocator_index_index_listing.storelocator_index_index_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">storelocator_index_index_listing.storelocator_index_index_listing.storelocator_index_columns.ids</item>
                     <item name="indexField" xsi:type="string">storelocator_id</item>
                 </item>
             </argument>
@@ -193,7 +192,7 @@
                         <item name="url" xsi:type="url" path="storelocator/index/massDelete"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Delete Stores</item>
-                            <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected Stores?</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected Stores?</item>
                         </item>
                     </item>
                 </argument>
