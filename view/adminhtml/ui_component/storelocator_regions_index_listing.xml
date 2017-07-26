@@ -10,7 +10,7 @@
             <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing_data_source</item>
             <item name="deps" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing_data_source</item>
         </item>
-        <item name="spinner" xsi:type="string">storelocator_regions_columns</item>
+        <item name="spinner" xsi:type="string">storelocator_regions_index_columns</item>
         <item name="buttons" xsi:type="array">
             <item name="delete_unused" xsi:type="array">
                 <item name="name" xsi:type="string">delete_unused</item>
@@ -37,7 +37,7 @@
             </argument>
         </argument>
     </dataSource>
-    <listingToolbar name="storelocator_regions_index_listing_top">
+    <listingToolbar name="listing_top">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="template" xsi:type="string">ui/grid/toolbar</item>
@@ -62,7 +62,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
-                        <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_columns</item>
+                        <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_index_columns</item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
                     <item name="displayArea" xsi:type="string">dataGridActions</item>
@@ -156,7 +156,7 @@
                         <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_index_listing_top.bookmarks</item>
                         <item name="namespace" xsi:type="string">current.paging</item>
                     </item>
-                    <item name="selectProvider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_index_columns.ids</item>
                     <item name="displayArea" xsi:type="string">bottom</item>
                     <item name="options" xsi:type="array">
                         <item name="20" xsi:type="array">
@@ -172,11 +172,12 @@
             </argument>
         </paging>
     </listingToolbar>
-    <columns name="storelocator_regions_columns">
+
+    <columns name="storelocator_regions_index_columns">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="editorConfig" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_columns.ids</item>
+                    <item name="selectProvider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_index_columns.ids</item>
                     <item name="enabled" xsi:type="boolean">true</item>
                     <item name="indexField" xsi:type="string">state_id</item>
                     <item name="clientConfig" xsi:type="array">
@@ -186,7 +187,7 @@
                 </item>
                 <item name="childDefaults" xsi:type="array">
                     <item name="fieldAction" xsi:type="array">
-                        <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_columns_editor</item>
+                        <item name="provider" xsi:type="string">storelocator_regions_index_listing.storelocator_regions_index_listing.storelocator_regions_index_columns_editor</item>
                         <item name="target" xsi:type="string">startEdit</item>
                         <item name="params" xsi:type="array">
                             <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
