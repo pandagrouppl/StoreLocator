@@ -2,7 +2,9 @@
 
 namespace PandaGroup\StoreLocator\Model;
 
-class States extends \Magento\Framework\Model\AbstractModel
+use PandaGroup\StoreLocator\Api\Data\StatesInterface;
+
+class States extends \Magento\Framework\Model\AbstractModel implements \PandaGroup\StoreLocator\Api\Data\StatesInterface
 {
     /**
      * Define main table
@@ -164,5 +166,77 @@ class States extends \Magento\Framework\Model\AbstractModel
         $statesCollection = $this->getCollection();
 
         return $statesCollection;
+    }
+
+    /**
+     * Get entityId value.
+     *
+     * @return int
+     */
+    public function getEntityId()
+    {
+        return $this->_getData(self::ENTITY_ID);
+    }
+
+    /**
+     * Set entityId value.
+     *
+     * @param int $entityId
+     *
+     * @return $this
+     */
+    public function setEntityId($entityId)
+    {
+        $this->setData(self::ENTITY_ID, $entityId);
+
+        return $this;
+    }
+
+    /**
+     * Get state name value.
+     *
+     * @return string
+     */
+    public function getStateName()
+    {
+        return $this->_getData(self::STATE_NAME);
+    }
+
+    /**
+     * Set state name value.
+     *
+     * @param string $stateName
+     *
+     * @return $this
+     */
+    public function setStateName($stateName)
+    {
+        $this->setData(self::STATE_NAME, $stateName);
+
+        return $this;
+    }
+
+    /**
+     * Get short state name value.
+     *
+     * @return string
+     */
+    public function getShortStateName()
+    {
+        return $this->_getData(self::SHORT_STATE_NAME);
+    }
+
+    /**
+     * Set short state name value.
+     *
+     * @param string $shortName
+     *
+     * @return $this
+     */
+    public function setShortStateName($shortName)
+    {
+        $this->setData(self::SHORT_STATE_NAME, $shortName);
+
+        return $this;
     }
 }

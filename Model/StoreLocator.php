@@ -2,8 +2,9 @@
 
 namespace PandaGroup\StoreLocator\Model;
 
+use PandaGroup\StoreLocator\Api\Data\StoreLocatorInterface;
 
-class StoreLocator extends \Magento\Framework\Model\AbstractModel
+class StoreLocator extends \Magento\Framework\Model\AbstractModel implements \PandaGroup\StoreLocator\Api\Data\StoreLocatorInterface
 {
     const GOOGLE_API_ADDRESS_URL = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
 
@@ -70,35 +71,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
             ];
             array_push($regions, $region);
         }
-/*
-        $regions = [
-            [
-                'name'  => 'VIC',
-                'geo'   => ['lat' => -37.4713077, 'lng' => 144.7851531],
-                'zoom'  => 5
-            ],
-            [
-                'name' => 'SA',
-                'geo' => [ 'lat' => -30.0002315, 'lng' => 136.2091547 ],
-                'zoom' => 5
-            ],
-            [
-                'name' => 'QLD',
-                'geo' => [ 'lat' => -20.9175738, 'lng' => 142.7027956 ],
-                'zoom' => 5
-            ],
-            [
-                'name' => 'NSW',
-                'geo' => [ 'lat' => -31.2532183, 'lng' => 146.921099 ],
-                'zoom' => 5
-            ],
-            [
-                'name' => 'ACT',
-                'geo' => [ 'lat' => -35.4734679, 'lng' => 149.0123679 ],
-                'zoom' => 9
-            ]
-        ];
-*/
+
         $stores = [];
         foreach($collection as $item) {
             $store = [
@@ -202,108 +175,6 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
             }
         }
     }
-
-//    /**
-//     * Update region for StoreLocator Model
-//     *
-//     * @param $store
-//     * @param $region
-//     *
-//     * @return bool
-//     *
-//     * @internal param $storeId
-//     */
-//    public function setNewRegion($store, $region) {
-//
-//        /** @var  $storeLocatorModel \PandaGroup\StoreLocator\Model\StoreLocator */
-//        $storeLocatorModel = $store;
-//
-//        try {
-//            $storeLocatorModel->setData('state', $region);
-//            $storeLocatorModel->save();
-//        } catch (\Exception $e) {
-//            return false;
-//        }
-//        return true;
-//    }
-
-
-
-//    /**
-//     * Update all stores regions in the database, which have incorrect region
-//     */
-//    public function updateRegions()
-//    {
-//        /** @var  $storesCollection \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Collection */
-//        $storesCollection = $this->getCollection();
-//
-//        $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
-//        $jsonHelper     = $objectManager->create('\Magento\Framework\Json\Helper\Data');
-//
-//        $path = self::GOOGLE_API_ADDRESS_URL;
-//
-//        $qtyOfFoundedRegions = 0;
-//        $qtyOfRegions = 0;
-//
-//        foreach($storesCollection as $item) {
-//
-//            $countryName = $item->getData('country');
-//            $state       = $item->getData('state');
-//
-//            if (null  === $state or
-//                'VIC' !== $state or
-//                'SA'  !== $state or
-//                'QLD' !== $state or
-//                'NSW' !== $state or
-//                'ACT' !== $state)
-//            {
-//                $qtyOfRegions++;
-//
-//                $address = $item->getData('address') .' '. $countryName;
-//                $addressLink = urlencode($address);
-//
-//                $url = $path . $addressLink;
-//
-//                $result = file_get_contents($url);
-//                $json = $jsonHelper->jsonDecode($result);
-//
-//                if (isset($json['results'][0]['address_components'])) {
-//                    $names = $json['results'][0]['address_components'];
-//                }
-//                else {
-//                    $message = 'Cannot found correctly address for: ' . $address;
-//                    $this->sendMessage($message, 'error');
-//                    continue;
-//                }
-//
-//                $isFounded = false;
-//                foreach ($names as $regionName) {
-//
-//                    if ($regionName['short_name'] == 'VIC' or
-//                        $regionName['short_name'] == 'SA'  or
-//                        $regionName['short_name'] == 'QLD' or
-//                        $regionName['short_name'] == 'NSW' or
-//                        $regionName['short_name'] == 'ACT')
-//                    {
-//                        $isFounded = true;
-//
-//                        $saveStatus = $this->setNewRegion($item, $regionName['short_name']);
-//                        if (false == $saveStatus) {
-//                            $this->sendMessage('Cannot save region for: ' . $address, 'error');
-//                        } else {
-//                            $qtyOfFoundedRegions++;
-//                        }
-//                    }
-//                }
-//                if ($isFounded === false) {
-//                    $this->sendMessage('Cannot found region for: ' . $address, 'error');
-//                }
-//            }
-//        }
-//
-//        $message = 'Updates ' . $qtyOfFoundedRegions . ' new regions of '.$qtyOfRegions.'.';
-//        $this->sendMessage($message, 'success');
-//    }
 
     public function setNewRegionId($store, $stateId) {
 
@@ -424,5 +295,197 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel
         $this->logger->info('    '.$message);
         $this->sendMessage($message, 'success');
         $this->logger->info('Finish updating regions on stores table.');
+    }
+
+    /**
+     * Get entityId value.
+     *
+     * @return int
+     */
+    public function getEntityId()
+    {
+        return $this->_getData(self::ENTITY_ID);
+    }
+
+    /**
+     * Set entityId value.
+     *
+     * @param int $entityId
+     *
+     * @return $this
+     */
+    public function setEntityId($entityId)
+    {
+        $this->setData(self::ENTITY_ID, $entityId);
+
+        return $this;
+    }
+
+    /**
+     * Get store name value.
+     *
+     * @return string
+     */
+    public function getStoreName()
+    {
+        return $this->_getData(self::STORE_NAME);
+    }
+
+    /**
+     * Set store name value.
+     *
+     * @param string $storeName
+     *
+     * @return $this
+     */
+    public function setStoreName($storeName)
+    {
+        $this->setData(self::STORE_NAME, $storeName);
+
+        return $this;
+    }
+
+    /**
+     * Get store address value.
+     *
+     * @return string
+     */
+    public function getStoreAddress()
+    {
+        return $this->_getData(self::STORE_ADDRESS);
+    }
+
+    /**
+     * Set store address value.
+     *
+     * @param string $storeAddress
+     *
+     * @return $this
+     */
+    public function setStoreAddress($storeAddress)
+    {
+        $this->setData(self::STORE_ADDRESS, $storeAddress);
+
+        return $this;
+    }
+
+    /**
+     * Get store city value.
+     *
+     * @return string
+     */
+    public function getStoreCity()
+    {
+        return $this->_getData(self::STORE_CITY);
+    }
+
+    /**
+     * Set store city value.
+     *
+     * @param string $storeCity
+     *
+     * @return $this
+     */
+    public function setStoreCity($storeCity)
+    {
+        $this->setData(self::STORE_CITY, $storeCity);
+
+        return $this;
+    }
+
+    /**
+     * Get store zip code value.
+     *
+     * @return string
+     */
+    public function getStoreZipCode()
+    {
+        return $this->_getData(self::STORE_ZIPCODE);
+    }
+
+    /**
+     * Set store zip code value.
+     *
+     * @param string $storeZipCode
+     *
+     * @return $this
+     */
+    public function setStoreZipCode($storeZipCode)
+    {
+        $this->setData(self::STORE_ZIPCODE, $storeZipCode);
+
+        return $this;
+    }
+
+    /**
+     * Get store email value.
+     *
+     * @return string
+     */
+    public function getStoreEmail()
+    {
+        return $this->_getData(self::STORE_EMAIL);
+    }
+
+    /**
+     * Set store email value.
+     *
+     * @param string $storeEmail
+     *
+     * @return $this
+     */
+    public function setStoreEmail($storeEmail)
+    {
+        $this->setData(self::STORE_EMAIL, $storeEmail);
+
+        return $this;
+    }
+
+    /**
+     * Get store phone value.
+     *
+     * @return string
+     */
+    public function getStorePhone()
+    {
+        return $this->_getData(self::STORE_PHONE);
+    }
+
+    /**
+     * Set store phone value.
+     *
+     * @param string $storePhone
+     *
+     * @return $this
+     */
+    public function setStorePhone($storePhone)
+    {
+        $this->setData(self::STORE_PHONE, $storePhone);
+
+        return $this;
+    }
+
+    /**
+     * Get store status value.
+     *
+     * @return string
+     */
+    public function getStoreStatus()
+    {
+        return $this->_getData(self::STORE_STATUS);
+    }
+
+    /**
+     * Set store status value.
+     *
+     * @param string $storeStatus
+     *
+     * @return $this
+     */
+    public function setStoreStatus($storeStatus)
+    {
+        $this->setData(self::STORE_STATUS, $storeStatus);
+
+        return $this;
     }
 }
