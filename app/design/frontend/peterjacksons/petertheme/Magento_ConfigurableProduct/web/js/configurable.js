@@ -258,7 +258,7 @@ define([
                 this._resetChildren(element);
             }
             this._reloadPrice();
-
+            this._displayRegularPriceBlock(this.simpleProduct);
             this._changeProductImage();
         },
 
@@ -494,8 +494,7 @@ define([
          * @private
          */
         _displayRegularPriceBlock: function (optionId) {
-            if (typeof optionId != 'undefined'
-                && this.options.spConfig.optionPrices[optionId].oldPrice.amount
+            if (this.options.spConfig.optionPrices[optionId].oldPrice.amount
                 != this.options.spConfig.optionPrices[optionId].finalPrice.amount
             ) {
                 $(this.options.slyOldPriceSelector).show();
