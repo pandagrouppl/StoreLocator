@@ -27,6 +27,7 @@
 }
 
 .product-main__right {
+    padding: 0;
 
     .product-content__title {
         padding: 0 0 4px 0;
@@ -48,16 +49,15 @@
 
     .data.item.content {
         color: #333;
-        font-size: 14px;
+        font-size: 13px;
         text-align: justify;
     }
 
     .product.attribute.description {
-        font-weight: 400;
         color: #333;
         line-height: 15px;
         text-align: justify;
+        max-height: 178px;
+        overflow-y: auto;
     }
 }
-
-
