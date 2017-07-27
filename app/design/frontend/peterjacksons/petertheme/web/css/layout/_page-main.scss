@@ -8,6 +8,13 @@
         max-width: none;
         padding: 0 0;
     }
+
+    &__messages {
+        font-size: 14px;
+        .success {
+            color: green;
+        }
+    }
 }
 
 .cms-page-view .page-main {

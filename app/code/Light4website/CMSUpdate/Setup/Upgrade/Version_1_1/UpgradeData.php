@@ -1193,67 +1193,73 @@ EOT;
 
         $page = $this->_pageFactory->create();
         $content = <<<EOT
-<!--<referenceContainer name="content">-->
-<!--<referenceBlock name="page.main.title">-->
-    <!--<action method="setPageTitle">-->
-        <!--<argument translate="true" name="title" xsi:type="string">TERMS & CONDITIONS</argument>-->
-    <!--</action>-->
-<!--</referenceBlock>-->
-<!--</referenceContainer>-->
-<!--<move element="page.main.title" destination="page.top" before="breadcrumbs"/>-->
-
 <div class="std"><h3>PRIVACY POLICY</h3>
-<p>Peter Jackson Australia Pty. takes the security of your personal information very seriously. Our privacy policy, which states how we will use your personal information, can be found on our Privacy page. By using our website, you consent to the collection, use and disclosure of your personal information as set out in our privacy policy agree that all the data provided is correct.</p>
-<h3>DISCLAIMER AND LIABILITY</h3>
-<p>We have taken every step to make sure that the information provided on this website is correct and accurate. The use of the Peter Jackson Online Store if at your own risk. To the full extent permissible by applicable law, Peter Jackson Australia Pty., nor its affiliates, nor any of their officers, directors, or employees, agents, third-party content providers, merchants, sponsors, licensors , or the like, warrant that the Peter Jackson Online Store will be uninterrupted or error-free, nor do they make any warranty as to the results that may be obtained from the use of the PJ Online Store, or as to the accuracy, reliability, or currency of any information content, service, or merchandise provided. This site is provided by Peter Jackson Australia Pty. on an "as is" and "as available" basis. To the full extent permissible by applicable law, Peter Jackson Australia Pty. makes no representations or warranties of any kind, express or implied, as to the operation of the site, the information, content, materials or products, included on this site. To the full extent permissible by applicable law, Peter Jackson Australia Pty. disclaims all warranties, express or implied, including but not limited to, implied warranties of merchantability and fitness for a particular purpose. To the full extent permissible by applicable law, Peter Jackson Australia Pty. will not be liable for any damages of any kind arising from the use of this site, or from any products purchased from this site, including but not limited to direct, indirect, incidental, punitive and consequential damages.</p>
-<p>Peter Jackson Australia Pty. reserves the right to change any advertised price before accepting an order. All products are subject to availability and may be withdrawn at any time. If we are unable to fulfil your order, you will be offered an alternative or given a refund for the unavailable product.</p>
-<h3>ONLINE ACCOUNT</h3>
-<p>When you create an account on the PJ website, you must provide true and accurate account information.&nbsp; You must keep your user name and password confidential, as we are entitled to assume that the person using these login details is you.</p>
-<p>Using another person’s details as your own is not accepted by Peter Jackson Australia Pty., and we reserve the right to close your account should you be using multiple proxy IPs in order to distribute our products in any way.</p>
-<p>If you choose to place an order using a 'Guest' account, you will have the option to refund the shoes in both our retail and online stores as well a refund through our online store. Purchasing as a 'Guest' voids the ability to exchange your order online. Additionally, you will not have the ability to track your order should you purchase as a 'Guest'.</p>
-<p>Placing an order using an 'Online account' gives you the ability to exchange, refund and track your order. Using an 'Online account' means that your shipping details are also saved for future use.</p>
-<h3>PRODUCT AVAILABILITY</h3>
-<p>Peter Jackson Australia Pty. aims to provide accurate stock availability, however as our stock numbers vary, the availability is only valid at the time shown.</p>
-<h3>VARIATION</h3>
-<p>Peter Jackson Australia Pty. has the right at any time and without notice to amend, remove or vary the products, services and any pages of its website.</p>
-<h3>TERMS OF SALE</h3>
-<p>By placing an online order with Peter Jackson Australia Pty. for any of our products, you are offering to purchase the goods on and subject to our terms and conditions.</p>
-<p>Dispatch times may vary depending on availability of stock and guarantees or representations of delivery times are subject to delays results from postal services.</p>
-<p>When placing an order, you acknowledge that all your details are true and accurate and that you are the authorised user of the credit or debit card used to place the order, and that there are sufficient funds to cover the cost.</p>
-<h3>CANCELLATION</h3>
-<p>Peter Jackson Australia Pty. may cancel an order if the product is not available for any reason. We will notify you of this if it occurs and will return any payment you have made.</p>
-<p>We will refund the money received using the same method of payment used by you at the checkout to pay for the product.</p>
-<p>If you wish to cancel your order, please notify our Customer Care team as soon as possible on 03 9670 9132. No cancellation fees will apply if this occurs before the order is dispatched. Once the order has been dispatched it cannot be cancelled, and instead the item must be returned in new condition in order for a full refund to be given.</p>
-<h3>CREDIT CARD INFORMATION</h3>
-<p>All credit card information collected by Peter Jackson Australia Pty. for the purpose of payment of orders purchased on our website will be stored securely. The credit card details will be masked on your account and will not be visible to any Peter Jackson Australia Pty. Customer Service staff.</p>
-<h3>DELIVERY</h3>
-<p>We aim to deliver your order to your requested place of delivery and within the time line indicated by us, however we cannot promise an exact date for your order delivery.</p>
-<p>We shall aim to let you know if there are any expected delays and we are unable to meet our estimated delivery date, however we will not be held liable for any loss, damage, costs, liabilities, charges or expenses arising from late delivery.</p>
-<h3>EXCHANGES AND RETURNS</h3>
-<p>You may exchange or return an item within 30 days of receiving the order. For all online purchases, the 30 day limit only applies to the days in which the shoes were in your possession, therefore eliminating any transit time.</p>
-<p>For more information on our Exchanges and Returns, see shipping and returns page.</p>
-<h3>LOSS OF GOODS</h3>
-<p>Once the order has been received by Peter Jackson Australia Pty. nominated delivery company, risk of loss of goods shall be passed on to you and Peter Jackson Australia Pty. will not be liable for any loss, damage or liability from this point.</p>
-<h3>PROMOTIONAL CODES</h3>
-<p>We may offer promotional discounts codes which may apply to any or certain purchases made through the PJ website.</p>
-<p>Promotional codes are valid for a specific time period and cannot be used in conjunction with other promotional codes, including automated discounts at the shopping cart.</p>
-<p>If you use a promotional code to purchase a product, in which you later exchange or return, and the price has returned to normal, you will only be refunded the amount that you paid.</p>
-<p>Any further conditions of using the promotional codes will be specified at the time.</p>
-<h3>CIRCUMSTANCES BEYOND OUR CONTROL</h3>
-<p>Peter Jackson Australia Pty. shall not be liable to you for any breach, hindrance or delay in the performance of a contract attributable to any cause beyond our reasonable control.</p>
-<h3>INDEMNITY</h3>
-<p>You agree to indemnify, defend and hold harmless Peter Jackson Australia Pty., its directors, officers, employees, consultants, agents and affiliates from any and all third party claims, liability, damage and/or costs (including but not limited to legal fees) arising from your use of this website or your breach of these Terms and Conditions.</p>
-<h3>AMENDMENTS TO TERMS AND CONDITIONS</h3>
-<p>Peter Jackson Australia Pty. reserves the right to amend these Terms and Conditions at any time and without informing you. All changes will be posted online and continued use of the site will be deemed acceptance of the new Terms and Conditions.</p>
+    <p>Peter Jackson Australia Pty. takes the security of your personal information very seriously. Our privacy policy, which states how we will use your personal information, can be found on our Privacy page. By using our website, you consent to the collection, use and disclosure of your personal information as set out in our privacy policy agree that all the data provided is correct.</p>
+    <h3>DISCLAIMER AND LIABILITY</h3>
+    <p>We have taken every step to make sure that the information provided on this website is correct and accurate. The use of the Peter Jackson Online Store if at your own risk. To the full extent permissible by applicable law, Peter Jackson Australia Pty., nor its affiliates, nor any of their officers, directors, or employees, agents, third-party content providers, merchants, sponsors, licensors , or the like, warrant that the Peter Jackson Online Store will be uninterrupted or error-free, nor do they make any warranty as to the results that may be obtained from the use of the PJ Online Store, or as to the accuracy, reliability, or currency of any information content, service, or merchandise provided. This site is provided by Peter Jackson Australia Pty. on an "as is" and "as available" basis. To the full extent permissible by applicable law, Peter Jackson Australia Pty. makes no representations or warranties of any kind, express or implied, as to the operation of the site, the information, content, materials or products, included on this site. To the full extent permissible by applicable law, Peter Jackson Australia Pty. disclaims all warranties, express or implied, including but not limited to, implied warranties of merchantability and fitness for a particular purpose. To the full extent permissible by applicable law, Peter Jackson Australia Pty. will not be liable for any damages of any kind arising from the use of this site, or from any products purchased from this site, including but not limited to direct, indirect, incidental, punitive and consequential damages.</p>
+    <p>Peter Jackson Australia Pty. reserves the right to change any advertised price before accepting an order. All products are subject to availability and may be withdrawn at any time. If we are unable to fulfil your order, you will be offered an alternative or given a refund for the unavailable product.</p>
+    <h3>ONLINE ACCOUNT</h3>
+    <p>When you create an account on the PJ website, you must provide true and accurate account information.&nbsp; You must keep your user name and password confidential, as we are entitled to assume that the person using these login details is you.</p>
+    <p>Using another person’s details as your own is not accepted by Peter Jackson Australia Pty., and we reserve the right to close your account should you be using multiple proxy IPs in order to distribute our products in any way.</p>
+    <p>If you choose to place an order using a 'Guest' account, you will have the option to refund the shoes in both our retail and online stores as well a refund through our online store. Purchasing as a 'Guest' voids the ability to exchange your order online. Additionally, you will not have the ability to track your order should you purchase as a 'Guest'.</p>
+    <p>Placing an order using an 'Online account' gives you the ability to exchange, refund and track your order. Using an 'Online account' means that your shipping details are also saved for future use.</p>
+    <h3>PRODUCT AVAILABILITY</h3>
+    <p>Peter Jackson Australia Pty. aims to provide accurate stock availability, however as our stock numbers vary, the availability is only valid at the time shown.</p>
+    <h3>VARIATION</h3>
+    <p>Peter Jackson Australia Pty. has the right at any time and without notice to amend, remove or vary the products, services and any pages of its website.</p>
+    <h3>TERMS OF SALE</h3>
+    <p>By placing an online order with Peter Jackson Australia Pty. for any of our products, you are offering to purchase the goods on and subject to our terms and conditions.</p>
+    <p>Dispatch times may vary depending on availability of stock and guarantees or representations of delivery times are subject to delays results from postal services.</p>
+    <p>When placing an order, you acknowledge that all your details are true and accurate and that you are the authorised user of the credit or debit card used to place the order, and that there are sufficient funds to cover the cost.</p>
+    <h3>CANCELLATION</h3>
+    <p>Peter Jackson Australia Pty. may cancel an order if the product is not available for any reason. We will notify you of this if it occurs and will return any payment you have made.</p>
+    <p>We will refund the money received using the same method of payment used by you at the checkout to pay for the product.</p>
+    <p>If you wish to cancel your order, please notify our Customer Care team as soon as possible on 03 9670 9132. No cancellation fees will apply if this occurs before the order is dispatched. Once the order has been dispatched it cannot be cancelled, and instead the item must be returned in new condition in order for a full refund to be given.</p>
+    <h3>CREDIT CARD INFORMATION</h3>
+    <p>All credit card information collected by Peter Jackson Australia Pty. for the purpose of payment of orders purchased on our website will be stored securely. The credit card details will be masked on your account and will not be visible to any Peter Jackson Australia Pty. Customer Service staff.</p>
+    <h3>DELIVERY</h3>
+    <p>We aim to deliver your order to your requested place of delivery and within the time line indicated by us, however we cannot promise an exact date for your order delivery.</p>
+    <p>We shall aim to let you know if there are any expected delays and we are unable to meet our estimated delivery date, however we will not be held liable for any loss, damage, costs, liabilities, charges or expenses arising from late delivery.</p>
+    <h3>EXCHANGES AND RETURNS</h3>
+    <p>You may exchange or return an item within 30 days of receiving the order. For all online purchases, the 30 day limit only applies to the days in which the shoes were in your possession, therefore eliminating any transit time.</p>
+    <p>For more information on our Exchanges and Returns, see shipping and returns page.</p>
+    <h3>LOSS OF GOODS</h3>
+    <p>Once the order has been received by Peter Jackson Australia Pty. nominated delivery company, risk of loss of goods shall be passed on to you and Peter Jackson Australia Pty. will not be liable for any loss, damage or liability from this point.</p>
+    <h3>PROMOTIONAL CODES</h3>
+    <p>We may offer promotional discounts codes which may apply to any or certain purchases made through the PJ website.</p>
+    <p>Promotional codes are valid for a specific time period and cannot be used in conjunction with other promotional codes, including automated discounts at the shopping cart.</p>
+    <p>If you use a promotional code to purchase a product, in which you later exchange or return, and the price has returned to normal, you will only be refunded the amount that you paid.</p>
+    <p>Any further conditions of using the promotional codes will be specified at the time.</p>
+    <h3>CIRCUMSTANCES BEYOND OUR CONTROL</h3>
+    <p>Peter Jackson Australia Pty. shall not be liable to you for any breach, hindrance or delay in the performance of a contract attributable to any cause beyond our reasonable control.</p>
+    <h3>INDEMNITY</h3>
+    <p>You agree to indemnify, defend and hold harmless Peter Jackson Australia Pty., its directors, officers, employees, consultants, agents and affiliates from any and all third party claims, liability, damage and/or costs (including but not limited to legal fees) arising from your use of this website or your breach of these Terms and Conditions.</p>
+    <h3>AMENDMENTS TO TERMS AND CONDITIONS</h3>
+    <p>Peter Jackson Australia Pty. reserves the right to amend these Terms and Conditions at any time and without informing you. All changes will be posted online and continued use of the site will be deemed acceptance of the new Terms and Conditions.</p>
 </div>
 EOT;
         $blockExists = $page->checkIdentifier('terms', $storeId);
         if (false == $blockExists) {
 
-            $page->setTitle('Terms')
+            $page->setTitle('Terms & Conditions | Peter Jackson Menswear')
                 ->setIdentifier('terms')
                 ->setIsActive(true)
                 ->setPageLayout('1column')
+                ->setLayoutUpdateXml(
+                    <<<EOT
+<referenceContainer name="content">
+    <referenceBlock name="page.main.title">
+        <action method="setPageTitle">
+            <argument translate="true" name="title" xsi:type="string">TERMS &amp; CONDITIONS</argument>
+        </action>
+    </referenceBlock>
+</referenceContainer>
+<move element="page.main.title" destination="page.top" before="breadcrumbs"/>
+<referenceContainer name="page.top">
+    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
+</referenceContainer>
+EOT
+                )
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();

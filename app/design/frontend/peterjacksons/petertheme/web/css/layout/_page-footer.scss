@@ -48,10 +48,13 @@
         box-sizing: border-box;
     }
 
-
     &__upper-upper {
         background-color: white;
-        padding: 44px 0 35px 0;
+        padding: 44px 0 10px 0;
+    }
+
+    &__upper-lower {
+        margin-top: 15px;
     }
 
     &__signup {
@@ -189,6 +192,7 @@
                 font-size: 18px;
                 line-height: 32px;
                 cursor: pointer;
+                color: #666;
 
                 &::before,
                 &::after {
