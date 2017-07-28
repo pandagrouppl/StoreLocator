@@ -1,31 +1,3 @@
-.amasty-quickview-ajax-view .page-wrapper {
-
-    .product-main__wrapper {
-        flex-direction: row;
-
-        .product-content__tabs a {
-            padding: 0 35px 0 0;
-        }
-
-    }
-}
-
-.product-add-form {
-
-    .product-options-wrapper {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .select__wrapper--Size {
-        width: 100%;
-    }
-
-    .field.configurable.required {
-        margin-right: 15px;
-    }
-}
-
 .product-main__right {
     padding: 0;
 
@@ -48,16 +20,33 @@
 
 
     .data.item.content {
-        color: #333;
         font-size: 13px;
-        text-align: justify;
+        line-height: 20px;
     }
 
     .product.attribute.description {
         color: #333;
-        line-height: 15px;
-        text-align: justify;
         max-height: 178px;
         overflow-y: auto;
     }
+
+
+    .product-add-form {
+
+        .product-options-wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .select__wrapper--Size {
+            width: 100%;
+        }
+
+        .field.configurable.required {
+            margin-right: 15px;
+        }
+    }
 }
+
+
+
