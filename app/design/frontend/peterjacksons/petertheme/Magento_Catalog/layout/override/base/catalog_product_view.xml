@@ -40,22 +40,19 @@
                 </container>
                 <container name="product.content.main" htmlTag="section" htmlClass="product-main__right product-content">
                     <container name="product.info.main" htmlTag="div" htmlClass="product-info-main">
-                        <container name="product.info.price" label="Product info auxiliary container" htmlTag="div"
-                                   htmlClass="product-info-price">
-                            <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div"
-                                       htmlClass="product-info-stock-sku">
-                                <container name="product.info.type" before="-"/>
-                                <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku"
-                                       template="product/view/attribute.phtml">
-                                    <arguments>
-                                        <argument name="at_call" xsi:type="string">getSku</argument>
-                                        <argument name="at_code" xsi:type="string">sku</argument>
-                                        <argument name="css_class" xsi:type="string">sku</argument>
-                                        <argument name="at_label" xsi:type="string">Product code</argument>
-                                        <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
-                                    </arguments>
-                                </block>
-                            </container>
+                        <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div"
+                                   htmlClass="product-info-main__price">
+                            <container name="product.info.type" before="-"/>
+                            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku"
+                                   template="product/view/attribute.phtml">
+                                <arguments>
+                                    <argument name="at_call" xsi:type="string">getSku</argument>
+                                    <argument name="at_code" xsi:type="string">sku</argument>
+                                    <argument name="css_class" xsi:type="string">sku</argument>
+                                    <argument name="at_label" xsi:type="string">Product code</argument>
+                                    <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
+                                </arguments>
+                            </block>
                         </container>
                         <container htmlClass="product-content__price" htmlTag="section" name="product.content.price">
                             <block class="Magento\Catalog\Pricing\Render" name="product.price.final">

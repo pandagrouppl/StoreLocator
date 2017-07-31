@@ -1,9 +1,10 @@
 .price-box {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
 
     .special-price {
         color: $red;
+        margin-bottom: 10px;
     }
 
     .old-price {
