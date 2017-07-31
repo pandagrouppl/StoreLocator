@@ -1,19 +1,18 @@
-//@media all and (max-width: $bp-header) {
-//    //.product-main__wrapper {
-//    //    //padding: 0 20px;
-//    //    display: flex;
-//    //    justify-content: center;
-//    //}
-//
-//    .product-main__right {
-//
-//    }
-//
-//    //.fotorama {
-//    //    display: flex;
-//    //    justify-content: center;
-//    //}
-//}
+.fancybox-overlay {
 
+    .fancybox-wrap {
+        display: flex;
+        margin-top: 70px;
+        //width: 754px !important;
+
+        .fancybox-skin {
+            border-radius: 0;
+        }
+
+        .fancybox-inner {
+            width: 754px !important;
+        }
+    }
+}
 
 
