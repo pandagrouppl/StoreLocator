@@ -1,18 +1,91 @@
-.fancybox-overlay {
+.amasty-quickview-ajax-view {
 
-    .fancybox-wrap {
-        display: flex;
-        margin-top: 70px;
-        //width: 754px !important;
+    .page-main {
+        margin: 0;
+        padding: 0 25px;
 
-        .fancybox-skin {
-            border-radius: 0;
+        .product-main {
+
+            &__wrapper {
+                flex-direction: row;
+
+                @media all and (max-width: $sm-breakpoint) {
+                    flex-direction: column;
+                }
+            }
+
+            &__right {
+                justify-content: center;
+                margin: 0 15px;
+
+                .product-info-main {
+                    max-width: 100%;
+                    width: 286px;
+
+                    &__price {
+                        font-size: 12px;
+                        color: #181818;
+                        margin: 10px 0 0 0;
+                    }
+
+                    &__options-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .product-content {
+
+                    &__price {
+                        font-size: 30px;
+                        margin: 10px 0;
+
+                    }
+
+                    &__title {
+
+                        h1 {
+                            font-size: 30px;
+                            font-weight: normal;
+                            width: 100%;
+                            color: #242424;
+                        }
+                    }
+
+                    &__tabs {
+                        margin: 0 0 5px 0;
+
+                        a {
+                            padding: 0;
+                        }
+
+                    }
+                }
+
+                .product-info-price {
+                    font-size: 10px;
+                    color: #181818;
+                }
+
+                .product-info-detailed {
+
+                    &__description {
+                        font-size: 14px;
+                        color: #333;
+                        max-height: 51px;
+                        width: 300px;
+                        text-align: justify;
+                        overflow-y: scroll;
+                        line-height: 17px;
+                        cursor: default;
+                    }
+                }
+
+            }
+
         }
 
-        .fancybox-inner {
-            width: 754px !important;
-        }
     }
+
 }
-
-
