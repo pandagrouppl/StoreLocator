@@ -4,7 +4,6 @@ import $ = require("jquery");
 export class Inliners {
 
     constructor() {
-        this._showSearch();
         this._preventSpinnerClick();
         this._toggleFilters();
         this._toggleResponsiveMenu();
@@ -24,19 +23,6 @@ export class Inliners {
         $('.layered-nav__title').on('click', function() {
             $(this).find('figure').toggleClass('layered-nav__minus--plus');
             $(this).next().toggle();
-        });
-    }
-
-    private _showSearch(): void {
-        $('.header-right__show-search-overlay').on('click', () => {
-            console.log('elo');
-            $('.search-overlay').show();
-        });
-        $('.search-overlay').click(() => {
-            $('.search-overlay').hide();
-        });
-        $('.search-overlay__form').click((event) => {
-            event.stopPropagation();
         });
     }
 

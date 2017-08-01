@@ -6,6 +6,20 @@ export class Popups {
         this._faqPopup();
         this._shippingPopup();
         this._successCloseOverlay();
+        this._showSearch();
+    }
+
+    _showSearch() {
+        $('.header-right__show-search-overlay').on('click', () => {
+            console.log('elo');
+            $('.search-overlay').show();
+        });
+        $('.search-overlay').click(() => {
+            $('.search-overlay').hide();
+        });
+        $('.search-overlay__form').click((event) => {
+            event.stopPropagation();
+        });
     }
 
     _faqPopup() {

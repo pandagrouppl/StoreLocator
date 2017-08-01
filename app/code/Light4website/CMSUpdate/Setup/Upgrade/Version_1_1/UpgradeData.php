@@ -1120,7 +1120,9 @@ EOT;
                 ->setLayoutUpdateXml(
                     <<<EOT
 <referenceContainer name="page.top">
-    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
+    <referenceBlock name="breadcrumbs">
+        <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
+    </referenceBlock>
 </referenceContainer>
 EOT
                 )
@@ -1272,6 +1274,11 @@ EOT;
                 ->setPageLayout('1column')
                 ->setLayoutUpdateXml(
                     <<<EOT
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs">
+        <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
+    </referenceBlock>
+</referenceContainer>
 <referenceContainer name="content">
     <referenceBlock name="page.main.title">
         <action method="setPageTitle">
@@ -1280,9 +1287,6 @@ EOT;
     </referenceBlock>
 </referenceContainer>
 <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
-<referenceContainer name="page.top">
-    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
-</referenceContainer>
 EOT
                 )
                 ->setStores(array(0))
@@ -1546,39 +1550,39 @@ EOT;
         $block = $this->_blockFactory->create();
         $content = <<<EOT
 <div class="page-footer__linkbox">
-<h3>Customer Service</h3>
-<ul>
-    <li><a href="{{store url='contact_us'}}">Contact us</a></li>
-    <li><a href="{{store url='size-chart'}}">Size charts</a></li>
-    <li><a class="shipping-returns-click">Shipping &amp; returns</a></li>
-    <li><a class="faq-click">FAQ</a></li>
-</ul>
+    <h3>Customer Service</h3>
+    <ul>
+        <li><a href="{{store url='contact_us'}}">Contact us</a></li>
+        <li><a href="{{store url='size-chart'}}">Size charts</a></li>
+        <li><a href="{{store url='shipping-returns'}}">Shipping &amp; returns</a></li>
+        <li><a class="faq-click">FAQ</a></li>
+    </ul>
 </div>
 <div class="page-footer__linkbox">
-<h3>About Us</h3>
-<ul>
-    <li><a href="{{store url='about_us'}}">Our story</a></li>
-    <li><a href="{{store url='our-design'}}">Design</a></li>
-    <li><a href="{{store url='our-labels'}}">Our labels</a></li>
-    <li><a href="{{store url='our-mills'}}">Mills &amp; Productions</a></li>
-    <li><a href="{{store url='sustainability'}}">Sustainability</a></li>
-</ul>
+    <h3>About Us</h3>
+    <ul>
+        <li><a href="{{store url='about_us'}}">Our story</a></li>
+        <li><a href="{{store url='our-design'}}">Design</a></li>
+        <li><a href="{{store url='our-labels'}}">Our labels</a></li>
+        <li><a href="{{store url='our-mills'}}">Mills &amp; Productions</a></li>
+        <li><a href="{{store url='sustainability'}}">Sustainability</a></li>
+    </ul>
 </div>
 <div class="page-footer__linkbox">
-<h3>My Account</h3>
-<ul>
-    <li><a class="myacc-trig" href="{{store url='customer/account/login/'}}">Sign in</a></li>
-    <li><a href="{{store url='checkout/cart/'}}">View cart</a></li>
-    {{block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/wishlistlink.phtml"}}
-</ul>
+    <h3>My Account</h3>
+    <ul>
+        <li><a class="myacc-trig" href="{{store url='customer/account/login/'}}">sign in</a></li>
+        <li><a href="{{store url='checkout/cart/'}}">view cart</a></li>
+        {{block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/wishlistlink.phtml"}}
+    </ul>
 </div>
 <div class="page-footer__linkbox">
-<h3>Information</h3>
-<ul>
-    <li><a href="{{store url='career'}}">Careers</a></li>
-    <li><a href="{{store url='storelocator'}}">Store locator</a></li>
-    <li><a href="{{store url='terms'}}">Terms and conditions</a></li>
-</ul>
+    <h3>Information</h3>
+    <ul>
+        <li><a href="{{store url='careers'}}">careers</a></li>
+        <li><a href="{{store url='storelocator'}}">store locator</a></li>
+        <li><a href="{{store url='terms'}}">terms and conditions</a></li>
+    </ul>
 </div>
 EOT;
         $blockExists = $block->getCollection()->addFilter('identifier', 'footer-links')->getData();

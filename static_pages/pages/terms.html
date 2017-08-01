@@ -1,3 +1,8 @@
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs">
+        <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
+    </referenceBlock>
+</referenceContainer>
 <referenceContainer name="content">
     <referenceBlock name="page.main.title">
         <action method="setPageTitle">
@@ -6,9 +11,7 @@
     </referenceBlock>
 </referenceContainer>
 <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
-<referenceContainer name="page.top">
-    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
-</referenceContainer>
+
 
 <div class="std"><h3>PRIVACY POLICY</h3>
     <p>Peter Jackson Australia Pty. takes the security of your personal information very seriously. Our privacy policy, which states how we will use your personal information, can be found on our Privacy page. By using our website, you consent to the collection, use and disclosure of your personal information as set out in our privacy policy agree that all the data provided is correct.</p>
