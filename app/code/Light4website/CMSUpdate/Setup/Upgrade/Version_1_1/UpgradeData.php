@@ -870,7 +870,7 @@ EOT;
 
         $setup->startSetup();
 
-        $page = $this->_pageFactory->create();
+        $block = $this->_blockFactory->create();
         $content = <<<EOT
 <div class="std">
 <h1 style="text-align: left;">SHIPPING &amp; RETURNS POLICY</h1>
@@ -1091,18 +1091,43 @@ EOT;
 </p></div>
 EOT;
 
-        $blockExists = $page->checkIdentifier('shipping-returns', $storeId);
+        $blockExists = $block->getCollection()->addFilter('identifier', 'shipping-returns')->getData();
         if (false == $blockExists) {
 
-            $page->setTitle('Shipping returns')
+            $block->setTitle('Shipping returns')
                 ->setIdentifier('shipping-returns')
                 ->setIsActive(true)
-                ->setPageLayout('1column')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
         }
 
+        $setup->endSetup();
+
+        $setup->startSetup();
+
+        $page = $this->_pageFactory->create();
+        $content = <<<EOT
+{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="138"}}
+EOT;
+        $blockExists = $page->checkIdentifier('shipping-returns', $storeId);
+        if (false == $blockExists) {
+
+            $page->setTitle('SHIPPING & RETURNS POLICY')
+                ->setIdentifier('shipping-returns')
+                ->setIsActive(true)
+                ->setPageLayout('1column')
+                ->setLayoutUpdateXml(
+                    <<<EOT
+<referenceContainer name="page.top">
+    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
+</referenceContainer>
+EOT
+                )
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        }
 
         $setup->endSetup();
 
@@ -1220,7 +1245,7 @@ EOT;
     <h3>DELIVERY</h3>
     <p>We aim to deliver your order to your requested place of delivery and within the time line indicated by us, however we cannot promise an exact date for your order delivery.</p>
     <p>We shall aim to let you know if there are any expected delays and we are unable to meet our estimated delivery date, however we will not be held liable for any loss, damage, costs, liabilities, charges or expenses arising from late delivery.</p>
-    <h3>EXCHANGES AND RETURNS</h3>
+    <hRETURNSNGES AND RETURNS</h3>
     <p>You may exchange or return an item within 30 days of receiving the order. For all online purchases, the 30 day limit only applies to the days in which the shoes were in your possession, therefore eliminating any transit time.</p>
     <p>For more information on our Exchanges and Returns, see shipping and returns page.</p>
     <h3>LOSS OF GOODS</h3>

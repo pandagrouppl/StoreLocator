@@ -157,5 +157,26 @@ EOT
         }
 
         $setup->endSetup();
+
+
+        $setup->startSetup();
+
+        $page = $this->_pageFactory->create();
+        $content = file_get_contents('pages/brownlow-skit.phtml', FILE_USE_INCLUDE_PATH);
+
+        $pageExists = $page->getCollection()->addFilter('identifier', 'brownlow-skit')->getFirstItem();
+        if (false == $pageExists) {
+            $page->setTitle('The Brownlow Throw Down')
+                ->setIdentifier('brownlow-skit')
+                ->setIsActive(true)
+                ->setPageLayout('1column')
+                ->setStores(array(0))
+                ->setContent($content)
+                ->save();
+        } else {
+            $pageExists->setContent($content)->save();
+        }
+
+        $setup->endSetup();
     }
 }

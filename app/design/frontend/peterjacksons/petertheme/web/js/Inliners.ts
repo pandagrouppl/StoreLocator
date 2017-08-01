@@ -16,7 +16,6 @@ export class Inliners {
         this._scrollTopArrow();
         this._footerNav();
         this._footerLinksAlteration();
-        this._successCloseOverlay();
         this._pinHeader();
         this._headerWidth();
     }
@@ -172,19 +171,6 @@ export class Inliners {
         });
     }
 
-    private _successCloseOverlay(): void {
-        const $overlay = $('.popup-success');
-        $('.popup-success__content').click((e) => {
-            e.stopPropagation();
-        });
-        [$overlay,
-        $('.popup-success__close'),
-        $('.popup-success__content .continue-button')
-        ].map(($i) => {
-                $i.click(() => {$overlay.hide()});
-        });
-
-    }
 
 // HEADER
 

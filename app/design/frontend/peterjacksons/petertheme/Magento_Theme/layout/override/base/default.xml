@@ -149,6 +149,16 @@
                     </block>
                 </container>
             </container>
+            <container name="shipping.overlay" label="Shipping overlay" htmlTag="div" htmlClass="shipping__overlay">
+                <container name="shipping.popup" label="shipping popup" htmlTag="section" htmlClass="shipping__popup">
+                    <block class="Magento\Framework\View\Element\Template" name="shipping.title" template="Magento_Theme::html/footer/shipping-title.phtml" />
+                    <block class="Magento\Cms\Block\Block" name="shipping">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">shipping-returns</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="html/absolute_footer.phtml" />
         </referenceContainer>
         <referenceContainer name="content">

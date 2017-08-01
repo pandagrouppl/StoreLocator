@@ -1,0 +1,47 @@
+<div class="brownlow">
+    <div class="brownlow__text-wrapper">
+        <h1>THE BROWNLOW THROW DOWN</h1>
+        <p class="brownlow__text">Watch Hamish Mclachlan and Andrew Welsh put our newest threads to the test to prove that there's a PJ suit for every occasion. See the dynamic duo battle it out in this year's 2016 AFL Brownlow Medal red carpet special.</p>
+    </div>
+    <div class="brownlow__video-wrapper">
+        <div id="player" class="brownlow__iframe"><br>
+        </div>
+    </div>
+</div>
+<script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '100%',
+            width: '100%',
+            playerVars: {
+                loop: 1,
+                controls: 1,
+                showinfo: 0,
+                autohide: 1,
+                modestbranding: 1,
+                vq: 'hd1080'},
+            videoId: 'w43xI288icY',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': function(e){
+                    if (e.data === YT.PlayerState.ENDED) {
+                        player.playVideo();
+                    }
+                }
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    var done = false;
+    function onPlayerStateChange(event) {
+
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
