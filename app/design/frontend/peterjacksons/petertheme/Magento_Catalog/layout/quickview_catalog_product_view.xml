@@ -15,5 +15,8 @@
     <update handle="catalog_product_view"/>
     <body>
         <move element="product.info.details" destination="product.info.main" after="product.info.stock.sku" />
+        <referenceContainer name="columns">
+            <block class="Magento\Framework\View\Element\Template" name="quickview.header" template="Light4website_Cms::quickview_header.phtml" before="-"/>
+        </referenceContainer>
     </body>
 </page>
