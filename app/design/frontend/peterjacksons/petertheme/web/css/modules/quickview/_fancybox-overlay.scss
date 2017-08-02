@@ -1,91 +1,107 @@
+.amasty-quickview-ajax-view.page-layout-1column.catalog-product-view {
+    padding-top: 0;
+}
+
 .amasty-quickview-ajax-view {
+
+    height: 545px;
 
     .page-main {
         margin: 0;
-        padding: 0 25px;
+        padding: 0 25px 17px 25px;
+    }
 
-        .product-main {
+    .product-info-main {
+        max-width: 100%;
+        width: 286px;
 
-            &__wrapper {
-                flex-direction: row;
+        @media all and (max-width: $sm-breakpoint) {
+            width: 100%;
+        }
 
-                @media all and (max-width: $sm-breakpoint) {
-                    flex-direction: column;
-                }
+        &__fieldset {
+            flex: 1 0 75%;
+        }
+
+        &__options-wrapper {
+            @media all and (max-width: $sm-breakpoint) {
+                border: 0;
+                padding: 0;
             }
+        }
 
-            &__right {
-                justify-content: center;
-                margin: 0 15px;
+        &__price {
+            font-size: 10px;
+            color: #181818;
+        }
 
-                .product-info-main {
-                    max-width: 100%;
-                    width: 286px;
+    }
 
-                    &__price {
-                        font-size: 12px;
-                        color: #181818;
-                        margin: 10px 0 0 0;
-                    }
+    .product-content {
 
-                    &__options-wrapper {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                    }
-                }
+        &__price {
+            font-size: 30px;
+            margin: 10px 0;
+        }
 
-                .product-content {
+        &__title {
 
-                    &__price {
-                        font-size: 30px;
-                        margin: 10px 0;
+            h1 {
+                font-size: 30px;
+                color: #242424;
+            }
+        }
 
-                    }
+        &__tabs {
+            margin: 0 0 5px 0;
 
-                    &__title {
+            a {
+                padding: 0;
+            }
+        }
 
-                        h1 {
-                            font-size: 30px;
-                            font-weight: normal;
-                            width: 100%;
-                            color: #242424;
-                        }
-                    }
+        &__size-chart {
 
-                    &__tabs {
-                        margin: 0 0 5px 0;
-
-                        a {
-                            padding: 0;
-                        }
-
-                    }
-                }
-
-                .product-info-price {
-                    font-size: 10px;
-                    color: #181818;
-                }
-
-                .product-info-detailed {
-
-                    &__description {
-                        font-size: 14px;
-                        color: #333;
-                        max-height: 51px;
-                        width: 300px;
-                        text-align: justify;
-                        overflow-y: scroll;
-                        line-height: 17px;
-                        cursor: default;
-                    }
-                }
-
+            &::before {
+                margin: 0 5px 0 0;
             }
 
         }
 
     }
 
+    .product-info-detailed {
+        &__description {
+            font-size: 14px;
+            color: #333;
+            max-height: 51px;
+            width: 300px;
+            text-align: justify;
+            overflow-y: scroll;
+            line-height: 17px;
+            cursor: default;
+
+            @media all and (max-width: $sm-breakpoint) {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .product-main {
+        &__wrapper {
+            flex-direction: row;
+
+            @media all and (max-width: $sm-breakpoint) {
+                flex-direction: column;
+            }
+        }
+
+        &__right {
+            justify-content: center;
+            margin: 0 15px;
+
+
+        }
+    }
 }

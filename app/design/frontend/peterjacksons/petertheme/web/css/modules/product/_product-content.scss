@@ -63,6 +63,7 @@
         font-weight: 500;
         margin-left: 10px;
         cursor: pointer;
+        text-transform: uppercase;
 
         @media all and (max-width: $xs-breakpoint) {
             margin-left: 0;
