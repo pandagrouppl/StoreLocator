@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Model\Quote;
 
 use Magento\Quote\Model\Quote\Address\Total\AbstractTotal;
@@ -72,20 +66,17 @@ class GiftCard extends AbstractTotal
 
         $giftCardQuoteCollection = $this->giftCardQuoteCollection->create()
             ->addFieldToFilter('quote_id', ['eq' => $quote->getId()])
-            ->joinAccount()
-        ;
+            ->joinAccount();
 
         $giftAmount = 0;
         $baseGiftAmount = 0;
 
-        $grandTotal = $total->getGrandTotal();
-        $subTotal = $total->getSubtotal();
-        $baseSubTotal = $total->getBaseSubtotal();
+        $amount = $total->getSubtotal() + $total->getDiscountAmount();
+        $baseAmount = $total->getBaseSubtotal() +  $total->getBaseDiscountAmount();
 
-        $shippingAmount = $total->getData('shipping_amount');
-        $baseShippingAmount = $total->getData('base_shipping_amount');
+        list($baseAdditionalAmount, $additionalAmount) = $this->getAdditionalAmount($total);
 
-        if ($baseSubTotal) {
+        if ($baseAmount > 0) {
             $this->giftCardLabel = [];
             foreach ($giftCardQuoteCollection as $giftCard) {
                 $currentValue = $giftCard->getCurrentValue();
@@ -99,17 +90,18 @@ class GiftCard extends AbstractTotal
 
                 $this->giftCardLabel[] = $giftCard->getCode();
 
-                if ($subTotal - $giftAmount < 0) {
-                    $giftAmount = $subTotal;
-                    $baseGiftAmount = $baseSubTotal;
+                if ($amount - $giftAmount < 0) {
+                    $giftAmount = $amount;
+                    $baseGiftAmount = $baseAmount;
 
-                    if ($this->dataHelper->isAllowedToPaidForShipping()) {
-                        $delta = $currentValue - $subTotal;
-                        $baseDelta = $currentValueRate - $baseSubTotal;
-                        $giftAmount += ($shippingAmount > $delta) ? $delta : $shippingAmount;
-                        $baseGiftAmount += ($baseShippingAmount > $baseDelta) ? $baseDelta : $baseShippingAmount;
-                    }
+                    //apply for tax and shipping
+                    $delta = $currentValue - $amount;
+                    $baseDelta = $currentValueRate - $baseAmount;
+                    $giftAmount += ($additionalAmount > $delta) ? $delta : $additionalAmount;
+                    $baseGiftAmount += ($baseAdditionalAmount > $baseDelta) ? $baseDelta : $baseAdditionalAmount;
 
+                    $giftAmount = min($giftAmount, $total->getGrandTotal());
+                    $baseGiftAmount = min($baseGiftAmount, $total->getBaseGrandTotal());
                     $giftCard->setGiftAmount($giftAmount);
                     $giftCard->setBaseGiftAmount($baseGiftAmount);
                     $giftCard->save();
@@ -126,13 +118,33 @@ class GiftCard extends AbstractTotal
             $quote->setAmastyGift($giftAmount);
             $quote->setBaseAmastyGift($baseGiftAmount);
 
-            $total->setGrandTotal($grandTotal - $giftAmount);
+            $total->setGrandTotal($total->getGrandTotal() - $giftAmount);
             $total->setBaseGrandTotal($total->getBaseGrandTotal() - $baseGiftAmount);
 
             $this->giftCardAmount = $giftAmount;
         }
 
         return $this;
+    }
+
+    /**
+     * Returns shipping and/or tax amounts, depends on config options.
+     * @param Total $total
+     * @return array
+     */
+    private function getAdditionalAmount(Total $total)
+    {
+        $baseAmount = 0;
+        $amount = 0;
+        if ($this->dataHelper->isAllowedToPaidForShipping()) {
+            $baseAmount = $total->getData('base_shipping_amount');
+            $amount = $total->getData('shipping_amount');
+        }
+        if ($this->dataHelper->isAllowedToPaidForTax()) {
+            $baseAmount += $total->getData('base_tax_amount');
+            $amount += $total->getData('tax_amount');
+        }
+        return [$baseAmount, $amount];
     }
 
     public function fetch(Quote $quote, Total $total)

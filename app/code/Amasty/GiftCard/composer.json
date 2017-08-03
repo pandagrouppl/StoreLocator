@@ -3,10 +3,10 @@
     "description": "Gift Card by Amasty",
     "require": {
         "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
-        "Amasty/Base": "*"
+        "amasty/base": "*"
     },
     "type": "magento2-module",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "license": [
         "Commercial"
     ],

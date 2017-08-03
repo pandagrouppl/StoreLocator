@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 
 namespace Amasty\GiftCard\Setup;
 
@@ -127,21 +121,6 @@ class InstallData implements InstallDataInterface
         $entityType = ProductAttributeInterface::ENTITY_TYPE_CODE;
         $eavSetup->addAttributeGroup($entityType, 'Default', $attributeGroupName, 9);
 
-        $entityTypeId = $eavSetup->getEntityTypeId($entityType);
-
-        # ---------------------- BUG PROBLEM ---------------------- #
-//        $group = 'Prices';
-
-        # ---------------------- BUG SOLUTION --------------------- #
-        $groupAttribute = $eavSetup->getAttributeGroupByCode($entityTypeId, 'Default', 'gift-card-information');
-        $pricesGroup = $eavSetup->getAttributeGroupByCode($entityTypeId, 'Default', 'advanced-pricing');
-        if (isset($groupAttribute)) {
-            $group = '';
-        } else {
-            $group = 'Prices';
-        }
-        # ------------------------ END BUG ------------------------ #
-
         $eavSetup->addAttribute(
             $entityType,
             'am_giftcard_prices',
@@ -154,7 +133,7 @@ class InstallData implements InstallDataInterface
                 'required' => false,
                 'sort_order' => -5,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,
@@ -185,7 +164,7 @@ class InstallData implements InstallDataInterface
                 'type' => 'int',
                 'sort_order' => -4,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,
@@ -205,7 +184,7 @@ class InstallData implements InstallDataInterface
                 'required' => false,
                 'sort_order' => -3,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,
@@ -228,7 +207,7 @@ class InstallData implements InstallDataInterface
                 'required' => false,
                 'sort_order' => -2,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,
@@ -253,7 +232,7 @@ class InstallData implements InstallDataInterface
 			    'required' => true,
 			    'sort_order' => -1,
 			    'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+			    'group' => 'Prices',
 			    'is_used_in_grid' => true,
 			    'is_visible_in_grid' => false,
 			    'is_filterable_in_grid' => false,
@@ -274,7 +253,7 @@ class InstallData implements InstallDataInterface
                 'required' => false,
                 'sort_order' => 0,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,
@@ -295,7 +274,7 @@ class InstallData implements InstallDataInterface
                 'required' => false,
                 'sort_order' => 1,
                 'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
-                'group' => $group,
+                'group' => 'Prices',
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => false,
                 'is_filterable_in_grid' => false,

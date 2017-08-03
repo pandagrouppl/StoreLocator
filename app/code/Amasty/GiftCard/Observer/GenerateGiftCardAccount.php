@@ -1,14 +1,11 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Observer;
 
+use Amasty\GiftCard\Model\Product\Type\GiftCard;
+use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
-use Psr\Log\LoggerInterface;
+use Magento\Sales\Model\Order\Invoice;
+use Magento\Framework\Exception\LocalizedException;
 
 class GenerateGiftCardAccount implements ObserverInterface
 {
@@ -22,7 +19,7 @@ class GenerateGiftCardAccount implements ObserverInterface
      */
     protected $coreRegistry;
     /**
-     * @var \Magento\Sales\Model\Order\Invoice
+     * @var Invoice
      */
     protected $invoice;
     /**
@@ -42,9 +39,13 @@ class GenerateGiftCardAccount implements ObserverInterface
      */
     protected $account;
     /**
-     * @var LoggerInterface
+     * @var \Magento\Framework\DataObject
      */
-    protected $logInterface;
+    private $dataObject;
+    /**
+     * @var \Magento\Framework\Message\ManagerInterface
+     */
+    private $messageManager;
 
     public function __construct(
         \Magento\Sales\Model\ResourceModel\Order\Invoice\Item\Collection $invoiceCollection,
@@ -54,7 +55,8 @@ class GenerateGiftCardAccount implements ObserverInterface
         \Amasty\GiftCard\Helper\Data $dataHelper,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Amasty\GiftCard\Model\Account $account,
-        LoggerInterface $logInterface
+        \Magento\Framework\DataObject $dataObject,
+        \Magento\Framework\Message\ManagerInterface $messageManager
     ) {
         $this->invoiceCollection = $invoiceCollection;
         $this->coreRegistry = $coreRegistry;
@@ -63,16 +65,17 @@ class GenerateGiftCardAccount implements ObserverInterface
         $this->dataHelper = $dataHelper;
         $this->storeManager = $storeManager;
         $this->account = $account;
-        $this->logInterface = $logInterface;
+        $this->dataObject = $dataObject;
+        $this->messageManager = $messageManager;
     }
 
-    public function execute(\Magento\Framework\Event\Observer $observer)
+    public function execute(Observer $observer)
     {
         $order = $observer->getEvent()->getOrder();
-        $loadedInvoices = array();
+        $loadedInvoices = [];
 
         foreach ($order->getAllItems() as $item) {
-            if ($item->getProductType() != \Amasty\GiftCard\Model\Product\Type\GiftCard::TYPE_GIFTCARD_PRODUCT) {
+            if ($item->getProductType() != GiftCard::TYPE_GIFTCARD_PRODUCT) {
                 continue;
             }
 
@@ -81,15 +84,17 @@ class GenerateGiftCardAccount implements ObserverInterface
 
             $paidInvoiceItems = (isset($options['am_giftcard_paid_invoice_items'])
                 ? $options['am_giftcard_paid_invoice_items']
-                : array());
+                : []);
 
-            $invoiceItemCollection = $this->invoiceCollection
-                ->addFieldToFilter('order_item_id', $item->getId());
-            $registryPaidInvoiceItems = $this->coreRegistry->registry('am_giftcard_paid_invoice_items');
-            $registryPaidInvoiceItems = is_array($registryPaidInvoiceItems) ? $registryPaidInvoiceItems : array();
-            foreach ($invoiceItemCollection as $invoiceItem) {
+            $this->invoiceCollection->getSelect()->reset('where');
+            $this->invoiceCollection->clear();
+            $this->invoiceCollection
+                ->addFieldToFilter('order_item_id', $item->getId())
+                ->load();
+
+            foreach ($this->invoiceCollection->getItems() as $invoiceItem) {
                 $invoiceId = $invoiceItem->getParentId();
-                if(isset($loadedInvoices[$invoiceId])) {
+                if (isset($loadedInvoices[$invoiceId])) {
                     $invoice = $loadedInvoices[$invoiceId];
                 } else {
                     $invoice = $this->invoice->create();
@@ -97,9 +102,8 @@ class GenerateGiftCardAccount implements ObserverInterface
                     $loadedInvoices[$invoiceId] = $invoice;
                 }
 
-                if ($invoice->getState() == \Magento\Sales\Model\Order\Invoice::STATE_PAID &&
-                    !in_array($invoiceItem->getId(), $paidInvoiceItems) &&
-                    !in_array($invoiceItem->getId(), $registryPaidInvoiceItems)
+                if ($invoice->getState() == Invoice::STATE_PAID
+                    && !in_array($invoiceItem->getId(), $paidInvoiceItems)
                 ) {
                     $qty += $invoiceItem->getQty();
                     $paidInvoiceItems[] = $invoiceItem->getId();
@@ -118,27 +122,28 @@ class GenerateGiftCardAccount implements ObserverInterface
 
                 $websiteId = $this->storeManager->getStore($order->getStoreId())->getWebsiteId();
 
-                $data = new \Magento\Framework\DataObject();
-                $data->setWebsiteId($websiteId)
+                $this->dataObject->setWebsiteId($websiteId)
                     ->setAmount($amount)
                     ->setOrder($order)
                     ->setLifetime($lifetime)
                     ->setProductOptions($options)
                     ->setOrderItem($item);
-                $listGoodAccounts = array();
-                $codes = (isset($options['am_giftcard_created_codes']) ? $options['am_giftcard_created_codes'] : array());
+                $listGoodAccounts = [];
+                $codes = (isset($options['am_giftcard_created_codes']) ? $options['am_giftcard_created_codes'] : []);
                 for ($i = 0; $i < $qty; $i++) {
                     try {
-                        $account = $this->account->createAccount($data);
+                        $account = $this->account->createAccount($this->dataObject);
                         $listGoodAccounts[] = $account;
                         $codes[] = $account->getCode();
-                    } catch (\Exception $e) {
-                        $this->logInterface->critical($e);
+                    } catch (LocalizedException $e) {
                         $codes[] = null;
+                        $this->messageManager->addErrorMessage(
+                            __("%1 Only %2 accounts were created.", $e->getMessage(), $i)
+                        );
+                        break;
                     }
                 }
                 $options['am_giftcard_created_codes'] = $codes;
-
 
                 $item->setProductOptions($options);
                 $item->save();

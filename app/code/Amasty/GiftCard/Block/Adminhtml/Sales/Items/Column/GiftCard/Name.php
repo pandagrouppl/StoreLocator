@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Block\Adminhtml\Sales\Items\Column\GiftCard;
 
 use Magento\Framework\Pricing\PriceCurrencyInterface;
@@ -57,26 +51,25 @@ class Name extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
 
     protected function _getGiftcardOptions()
     {
-        $result = array();
-
+        $result = [];
 
         $value = $this->getItem()->getOriginalPrice();
 
         if ($value) {
-            $result[] = array(
+            $result[] = [
                 'label' => __('Card Value'),
                 'value' => $this->dataHelper->round($value)
-            );
+            ];
         }
 
         $value = $this->_prepareCustomOption('am_giftcard_type');
         $giftcardType = $value;
 
         if ($value) {
-            $result[] = array(
+            $result[] = [
                 'label' => __('Card Type'),
                 'value' => $this->dataHelper->getCardType($value)
-            );
+            ];
         }
 
         $value = $this->_prepareCustomOption('am_giftcard_image');
@@ -84,12 +77,13 @@ class Name extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
             $image = $this->imageModel;
             $image->getResource()->load($image, $value);
             if ($image->getId()) {
-                $value = '<img src="'.$image->getImageUrl().'"  width="270px;" title="'. __('Image Id %d', $image->getId()).'"/>';
-                $result[] = array(
+                $value = '<img src="'. $image->getImageUrl() .
+                         '"  width="270px;" title="'. __('Image Id %1', $image->getId()).'"/>';
+                $result[] = [
                     'label' => __('Gift Card Image'),
                     'value' => $value,
                     'custom_view'=> true,
-                );
+                ];
             }
 
         }
@@ -100,10 +94,10 @@ class Name extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
             if ($email) {
                 $value = "{$value} &lt;{$email}&gt;";
             }
-            $result[] = array(
+            $result[] = [
                 'label' => __('Gift Card Sender'),
                 'value' => $value
-            );
+            ];
         }
 
         $value = $this->_prepareCustomOption('am_giftcard_recipient_name');
@@ -112,34 +106,33 @@ class Name extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
             if ($email) {
                 $value = "{$value} &lt;{$email}&gt;";
             }
-            $result[] = array(
+            $result[] = [
                 'label' => __('Gift Card Recipient'),
                 'value' => $value
-            );
+            ];
         }
 
         $value = $this->_prepareCustomOption('am_giftcard_message');
         if ($value) {
-            $result[] = array(
+            $result[] = [
                 'label' => __('Gift Card Message'),
                 'value' => $value
-            );
+            ];
         }
 
         if ($value = $this->_prepareCustomOption('am_giftcard_lifetime')) {
-            $result[] = array(
+            $result[] = [
                 'label'=> __('Gift Card Lifetime'),
                 'value'=> __('%1 days', $value),
-            );
+            ];
         }
 
         if ($value = $this->_prepareCustomOption('am_giftcard_date_delivery')) {
-            $result[] = array(
+            $result[] = [
                 'label'=> __('Date of certificate delivery'),
                 'value'=>$this->formatDate($value, \IntlDateFormatter::SHORT, true),
-            );
+            ];
         }
-
 
         $createdCodes = 0;
         $totalCodes = $this->getItem()->getQtyOrdered();
@@ -154,20 +147,18 @@ class Name extends \Magento\Sales\Block\Adminhtml\Items\Column\Name
                 }
             }
         } else {
-            $codes = array();
+            $codes = [];
         }
 
         for ($i = $createdCodes; $i < $totalCodes; $i++) {
             $codes[] = __('N/A');
         }
 
-        $result[] = array(
+        $result[] = [
             'label'=> __('Gift Card Accounts'),
             'value'=>implode('<br />', $codes),
             'custom_view'=>true,
-        );
-
-
+        ];
 
         return $result;
     }

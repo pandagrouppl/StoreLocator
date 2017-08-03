@@ -1,11 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
--->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="amgiftcard" translate="label" type="text" sortOrder="70903" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -24,7 +17,11 @@
                     <source_model>Amasty\GiftCard\Model\Config\Source\ProductType</source_model>
                 </field>
                 <field id="allow_to_paid_for_shipping" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Allow giftcard to paid for shipping</label>
+                    <label>Use a gift card to pay for shipping</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allow_to_paid_for_tax" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use a gift card to pay for tax</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>

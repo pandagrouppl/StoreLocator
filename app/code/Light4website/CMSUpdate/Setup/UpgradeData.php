@@ -27,7 +27,6 @@ class UpgradeData implements UpgradeDataInterface
     protected $_storeManager;
 
     protected $upgradeData_1_1;
-    protected $upgradeData_1_2;
     protected $upgradeData_1_3;
     protected $upgradeData_1_4;
 
@@ -38,7 +37,6 @@ class UpgradeData implements UpgradeDataInterface
      * @param \Magento\Cms\Model\BlockFactory $blockFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param Upgrade\Version_1_1\UpgradeData $upgradeData_1_1
-     * @param Upgrade\Version_1_2\UpgradeData $upgradeData_1_2
      * @param Upgrade\Version_1_3\UpgradeData $upgradeData_1_3
      * @param Upgrade\Version_1_4\UpgradeData $upgradeData_1_4
      */
@@ -47,7 +45,6 @@ class UpgradeData implements UpgradeDataInterface
         \Magento\Cms\Model\BlockFactory $blockFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Light4website\CMSUpdate\Setup\Upgrade\Version_1_1\UpgradeData $upgradeData_1_1,
-        \Light4website\CMSUpdate\Setup\Upgrade\Version_1_2\UpgradeData $upgradeData_1_2,
         \Light4website\CMSUpdate\Setup\Upgrade\Version_1_3\UpgradeData $upgradeData_1_3,
         \Light4website\CMSUpdate\Setup\Upgrade\Version_1_4\UpgradeData $upgradeData_1_4
     ) {
@@ -55,7 +52,6 @@ class UpgradeData implements UpgradeDataInterface
         $this->_blockFactory = $blockFactory;
         $this->_storeManager = $storeManager;
         $this->upgradeData_1_1 = $upgradeData_1_1;
-        $this->upgradeData_1_2 = $upgradeData_1_2;
         $this->upgradeData_1_3 = $upgradeData_1_3;
         $this->upgradeData_1_4 = $upgradeData_1_4;
     }
@@ -69,11 +65,6 @@ class UpgradeData implements UpgradeDataInterface
         if (version_compare($context->getVersion(), '1.1') < 0)
         {
             $this->upgradeData_1_1->upgrade($setup, $context);
-        }
-
-        if (version_compare($context->getVersion(), '1.2') < 0)
-        {
-            $this->upgradeData_1_2->upgrade($setup, $context);
         }
 
         if (version_compare($context->getVersion(), '1.3') < 0)

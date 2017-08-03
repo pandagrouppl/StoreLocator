@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 
 namespace Amasty\GiftCard\Plugin\Quote;
 
@@ -42,7 +36,7 @@ class ConvertToOrder
             'am_giftcard_recipient_name',
             'am_giftcard_recipient_email',
             'am_giftcard_date_delivery',
-            'am_giftcard_message',
+            'am_giftcard_message'
         );
         $productOptions = $orderItem->getProductOptions();
         $customOptions = [];
@@ -72,6 +66,8 @@ class ConvertToOrder
             \Amasty\GiftCard\Model\GiftCard::XML_PATH_EMAIL_TEMPLATE,
             $orderItem->getStore()
         );
+
+        $productOptions["am_giftcard_code_set"] = $item->getProduct()->getAmGiftcardCodeSet();
 
         $orderItem->setProductOptions($productOptions);
 

@@ -60,7 +60,7 @@ Active,Active
 "Add Price","Add Price"
 "Card Value","Card Value"
 "Card Type","Card Type"
-"Image Id %d","Image Id %d"
+"Image Id %1","Image Id %1"
 "Gift Card Image","Gift Card Image"
 "Gift Card Sender","Gift Card Sender"
 "Gift Card Recipient","Gift Card Recipient"
@@ -72,6 +72,7 @@ Active,Active
 N/A,N/A
 "Gift Card Accounts","Gift Card Accounts"
 "Gift Card (%1)","Gift Card (%1)"
+"Gift Card","Gift Card"
 "This Gift Code already exists","This Gift Code already exists"
 "Gift Card has been successfully added","Gift Card has been successfully added"
 "Wrong Gift Card code","Wrong Gift Card code"
@@ -113,17 +114,22 @@ Timezone,Timezone
 Message,Message
 "Please correct the target currency.","Please correct the target currency."
 Expired,Expired
-"No free codes","No free codes"
+"Not enough free codes in the pool.","Not enough free codes in the pool."
 "Wrong gift card code","Wrong gift card code"
 "Wrong gift card website","Wrong gift card website"
 "Gift card %1 is expired.","Gift card %1 is expired."
 "Gift card %1 is used.","Gift card %1 is used."
 "Gift card %1 is not enabled.","Gift card %1 is not enabled."
 "Gift card %1  balance does not have funds.","Gift card %1  balance does not have funds."
-"Please be aware that it is not possible to use the gift card you purchased for your own orders.","Please be aware that it is not possible to use the gift card you purchased for your own orders."
-"Please add {L} or {D} placeholders into the template ""%s""","Please add {L} or {D} placeholders into the template ""%s"""
-"Maximum number of code combinations for the current template is %d, please update Quantity field accordingly.","Maximum number of code combinations for the current template is %d, please update Quantity field accordingly."
-"Over time, you can generate no more than %d codes.","Over time, you can generate no more than %d codes."
+"Please be aware that it is not possible to use 
+                the gift card you purchased for your own orders.","Please be aware that it is not possible to use 
+                the gift card you purchased for your own orders."
+"Maximum number of code combinations for the current template achieved","Maximum number of code combinations for the current template achieved"
+"Please add {L} or {D} placeholders into the template ""%1""","Please add {L} or {D} placeholders into the template ""%1"""
+"Maximum number of code combinations for the current template is %1, 
+            please update Quantity field accordingly.","Maximum number of code combinations for the current template is %1, 
+            please update Quantity field accordingly."
+"Over time, you can generate no more than %1 codes.","Over time, you can generate no more than %1 codes."
 Percent,Percent
 Fixed,Fixed
 Virtual,Virtual
@@ -141,6 +147,10 @@ Combined,Combined
 GiftCard,GiftCard
 "This gift card account is not active.","This gift card account is not active."
 "Gift Card was deleted.","Gift Card was deleted."
+"%1 Only %2 accounts were created.","%1 Only %2 accounts were created."
+"Not enough free gift card codes in the code pool.
+                Please generate more codes before invoicing the order.","Not enough free gift card codes in the code pool.
+                Please generate more codes before invoicing the order."
 "From %1","From %1"
 "All Store Views","All Store Views"
 "Use Config Settings","Use Config Settings"
@@ -174,9 +184,10 @@ Submit,Submit
 "Choose card Image","Choose card Image"
 "Please be aware that delivery date of printed certificates may be different due to post.","Please be aware that delivery date of printed certificates may be different due to post."
 "Select timezone","Select timezone"
-"Gift Card","Gift Card"
 Enabled,Enabled
 "Product Types, Which Can Be Bought With Gift Card","Product Types, Which Can Be Bought With Gift Card"
+"Use a gift card to pay for shipping","Use a gift card to pay for shipping"
+"Use a gift card to pay for tax","Use a gift card to pay for tax"
 "Gift Card options","Gift Card options"
 "Lifetime (Days)","Lifetime (Days)"
 "Allow Message","Allow Message"
@@ -208,3 +219,4 @@ Order,Order
 "Unused Gift Codes","Unused Gift Codes"
 "Image Thumbnail","Image Thumbnail"
 "Image title","Image title"
+50,50

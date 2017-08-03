@@ -1,19 +1,15 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 
 namespace Amasty\GiftCard\Model\ResourceModel\Product\Attribute\Backend;
 
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use \Magento\Framework\Model\ResourceModel\Db\Context;
+use Magento\Store\Model\StoreManagerInterface;
 
-class Amountprice extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+class Amountprice extends AbstractDb
 {
     /**
-     * @var \Magento\Store\Model\StoreManagerInterface
+     * @var StoreManagerInterface
      */
     protected $storeManager;
 
@@ -29,19 +25,18 @@ class Amountprice extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 
     public function __construct(
         Context $context,
-        \Magento\Store\Model\StoreManagerInterface $storeManager
-    )
-    {
+        StoreManagerInterface $storeManager
+    ) {
         parent::__construct($context);
         $this->storeManager = $storeManager;
     }
 
     public function deleteAllPrices($product, $attribute)
     {
-        $condition = array(
+        $condition = [
             'product_id=?' => $product->getId(),
             'attribute_id=?' => $attribute->getId(),
-        );
+        ];
 
         if (!$attribute->isScopeGlobal()) {
             if ($storeId = $product->getStoreId()) {
@@ -65,21 +60,20 @@ class Amountprice extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     public function loadPrices($product, $attribute)
     {
         $query = $this->getConnection()->select()
-            ->from($this->getMainTable(), array(
+            ->from($this->getMainTable(), [
                 'website_id',
                 'price' => 'value'
-            ))
+            ])
             ->where('product_id=:product_id')
             ->where('attribute_id=:attribute_id');
-        $bindParams = array(
+        $bindParams = [
             'product_id'   => $product->getId(),
             'attribute_id' => $attribute->getId()
-        );
+        ];
         if ($storeId = $product->getStoreId()) {
             $query->where('website_id IN (0, :website_id)');
             $bindParams['website_id'] = $this->storeManager->getStore($storeId)->getWebsiteId();
         }
         return $this->getConnection()->fetchAll($query, $bindParams);
     }
-
 }

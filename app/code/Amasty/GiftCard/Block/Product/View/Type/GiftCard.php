@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Block\Product\View\Type;
 
 class GiftCard extends \Magento\Catalog\Block\Product\View\AbstractView

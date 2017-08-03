@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\VersionControl\AbstractDb;
@@ -20,11 +14,11 @@ class Code extends AbstractDb
     public function massSaveCodes($listCodes, $params)
     {
         if(count($listCodes) > 0) {
-            $insert = array();
+            $insert = [];
             foreach($listCodes as $code) {
-                $insert[] = array_merge(array(
+                $insert[] = array_merge([
                     'code' => $code,
-                ), $params);
+                ], $params);
             }
             $this->getConnection()->insertMultiple($this->getMainTable(), $insert);
         }
@@ -58,9 +52,9 @@ class Code extends AbstractDb
             ->where('enabled=1')
             ->where('code_set_id=:code_set_id')
             ->limit(1);
-        $bindParams = array(
+        $bindParams = [
             'code_set_id'   => $codeSetId
-        );
+        ];
 
         if ($data = $connection->fetchRow($query, $bindParams)) {
             $object->setData($data);
@@ -68,5 +62,4 @@ class Code extends AbstractDb
 
         return $this;
     }
-
 }

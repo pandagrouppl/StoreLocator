@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Model\Product;
 
 use Magento\Customer\Api\GroupManagementInterface;
@@ -95,7 +89,7 @@ class Price extends \Magento\Catalog\Model\Product\Type\Price
         $finalPrice = $this->_applyOptionsPrice($product, $qty, $finalPrice);
 
         $product->setData('final_price', $finalPrice);
-        $product->setData('price', $finalPrice);
+//        $product->setData('price', $finalPrice);
         return max(0, $product->getData('final_price'));
     }
 

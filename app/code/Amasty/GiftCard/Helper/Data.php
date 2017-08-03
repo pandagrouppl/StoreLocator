@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Helper;
 
 use Magento\Framework\Pricing\PriceCurrencyInterface;
@@ -309,6 +303,16 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->scopeConfig->isSetFlag(
             'amgiftcard/general/allow_to_paid_for_shipping',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAllowedToPaidForTax()
+    {
+        return $this->scopeConfig->isSetFlag(
+            'amgiftcard/general/allow_to_paid_for_tax',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
     }
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Model\Config\Source;
 
 class GiftCardCodeSet extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource

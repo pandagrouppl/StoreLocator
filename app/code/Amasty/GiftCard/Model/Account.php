@@ -1,12 +1,8 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 namespace Amasty\GiftCard\Model;
 
+use Amasty\GiftCard\Model\GiftCard;
+use Braintree\Exception;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Pricing\PriceCurrencyInterface;
 
@@ -132,27 +128,30 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getListStatuses()
     {
-        return array(
+        return [
             self::STATUS_INACTIVE => __('Inactive'),
             self::STATUS_ACTIVE   => __('Active'),
             self::STATUS_EXPIRED  => __('Expired'),
-            self::STATUS_USED	  => __('Used'),
-        );
+            self::STATUS_USED => __('Used'),
+        ];
     }
 
     public function generateCode($codeSetId = null)
     {
-        if(is_null($codeSetId)) {
+        if ($codeSetId === null) {
             $codeSetId = $this->getCodeSetId();
         }
         $code = $this->codeModel->loadFreeCode($codeSetId);
-        if(!$code->getId()) {
-            throw new LocalizedException(__('No free codes'));
+        if (!$code->getId() || $code->getUsed()) {
+            throw new LocalizedException(__('Not enough free codes in the pool.'));
         }
 
         $this->setCodeId($code->getId());
 
         $code->setUsed(1);
+        if ($code->getStoredData()) {
+            $code->storedData = [];
+        }
         $this->codeResourceModel->save($code);
 
         return $code;
@@ -160,7 +159,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getCode()
     {
-        if(!$code = $this->getData('code')) {
+        if (!$code = $this->getData('code')) {
             $code = $this->getCodeModel()->getCode();
             $this->setData('code', $code);
         }
@@ -170,7 +169,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getCodeModel()
     {
-        if(!$codeModel = $this->getData('codeModel')) {
+        if (!$codeModel = $this->getData('codeModel')) {
             $this->codeResourceModel->load($this->codeModel, $this->getCodeId());
             $codeModel = $this->codeModel;
             $this->setData('codeModel', $codeModel);
@@ -181,7 +180,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getOrder()
     {
-        if(!$order = $this->getData('order')) {
+        if (!$order = $this->getData('order')) {
             $this->orderModel->getResource()->load($this->orderModel, $this->getOrderId());
             $order = $this->orderModel;
             $this->setData('order', $order);
@@ -192,12 +191,12 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function sendDataToMail()
     {
-        if(!$this->getData('recipient_email') || $this->getIsSent()) {
+        if (!$this->getData('recipient_email') || $this->getIsSent()) {
             return false;
         }
 
         $storeId = $this->getOrder()->getStoreId();
-        if($this->getData('store_id')) {
+        if ($this->getData('store_id')) {
             $storeId = $this->getData('store_id');
         }
 
@@ -210,32 +209,32 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
         $imageGiftCard = null;
         $id = null;
-        if($this->isImage()) {
+        if ($this->isImage()) {
             $id = uniqid('am_giftcard');
             $imageGiftCard = "cid:$id";
         }
 
         $templateParams = [
-            'recipient_name'	=> $this->getData('recipient_name'),
-            'sender_name'		=> $this->getData('sender_name'),
-            'initial_value'		=> $this->dataHelper->round($this->getData('initial_value')),
-	        'currency_code'     => $this->getOrder()->getOrderCurrencyCode(),
-            'sender_message'	=> $this->getData('sender_message'),
-            'gift_code'			=> $this->getCode(),
-            'image_base64'		=> $imageGiftCard,
-            'expired_date'		=> $this->date->date('Y-m-d', $this->getData('expired_date')),
+            'recipient_name' => $this->getData('recipient_name'),
+            'sender_name' => $this->getData('sender_name'),
+            'initial_value' => $this->dataHelper->round($this->getData('initial_value')),
+            'currency_code' => $this->getOrder()->getOrderCurrencyCode(),
+            'sender_message'=> $this->getData('sender_message'),
+            'gift_code'=> $this->getCode(),
+            'image_base64'=> $imageGiftCard,
+            'expired_date'=> $this->date->date('Y-m-d', $this->getData('expired_date')),
         ];
 
         $from = $this->scopeConfig->getValue(
             'amgiftcard/email/email_identity',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-            );
+        );
 
         $emailCC = '';
-        if($emailCC = $this->scopeConfig->getValue(
+        if ($emailCC = $this->scopeConfig->getValue(
             'amgiftcard/email/email_recepient_cc',
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE)
-        ) {
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        )) {
             $emailCC = explode(",", $emailCC);
             array_walk($emailCC, 'trim');
         }
@@ -251,7 +250,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
         $transport->sendMessage();
 
-        if($this->scopeConfig->getValue(
+        if ($this->scopeConfig->getValue(
             'amgiftcard/email/send_confirmation_to_sender',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
             )
@@ -259,20 +258,19 @@ class Account extends \Magento\Framework\Model\AbstractModel
         ) {
 
             $templateParams = [
-                'recipient_name'	=> $this->getData('recipient_name'),
-                'sender_name'		=> $this->getData('sender_name'),
-                'initial_value'		=> $this->dataHelper->round($this->getData('initial_value')),
-                'currency_code'     => $this->getOrder()->getOrderCurrencyCode(),
-                'sender_message'	=> $this->getData('sender_message'),
-                'expired_date'		=> $this->date->date('Y-m-d', $this->getData('expired_date'))
+                'recipient_name' => $this->getData('recipient_name'),
+                'sender_name' => $this->getData('sender_name'),
+                'initial_value' => $this->dataHelper->round($this->getData('initial_value')),
+                'currency_code' => $this->getOrder()->getOrderCurrencyCode(),
+                'sender_message' => $this->getData('sender_message'),
+                'expired_date' => $this->date->date('Y-m-d', $this->getData('expired_date'))
             ];
 
             $transport = $this->uploadTransportBuilder
                 ->setTemplateIdentifier($this->scopeConfig->getValue(
                     'amgiftcard/email/email_template_confirmation_to_sender',
                     \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-                    )
-                )
+                ))
                 ->setTemplateOptions(['area' => 'frontend', 'store' => $storeId])
                 ->setTemplateVars($templateParams)
                 ->setFrom($from)
@@ -288,7 +286,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function sendExpiryNotification()
     {
-        if(!$this->getData('recipient_email')) {
+        if (!$this->getData('recipient_email')) {
             return false;
         }
 
@@ -301,15 +299,15 @@ class Account extends \Magento\Framework\Model\AbstractModel
         $from = $this->scopeConfig->getValue(
             'amgiftcard/email/email_identity',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-            );
+        );
         $template = $this->scopeConfig->getValue(
             'amgiftcard/email/email_template_notify',
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
         $templateParams = [
-            'recipient_name'	=> $this->getData('recipient_name'),
-            'gift_code'			=> $this->getCode(),
-            'expired_date'		=> $this->date->date('Y-m-d', $this->getData('expired_date'))
+            'recipient_name' => $this->getData('recipient_name'),
+            'gift_code' => $this->getCode(),
+            'expired_date' => $this->date->date('Y-m-d', $this->getData('expired_date'))
         ];
 
         $transport = $this->uploadTransportBuilder->setTemplateIdentifier($template)
@@ -324,7 +322,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getImageWithCodePath()
     {
-        if(!$this->isImage()) {
+        if (!$this->isImage()) {
             return '';
         }
         return $this->getImageDirPath() . $this->getImagePath();
@@ -348,11 +346,11 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getImagePath()
     {
-        if(!$this->isImage()) {
+        if (!$this->isImage()) {
             return '';
         }
         $imagePath = $this->getData('image_path');
-        if(!$imagePath || !is_file($this->getImageDirPath() . $imagePath)) {
+        if (!$imagePath || !is_file($this->getImageDirPath() . $imagePath)) {
             $imagePath = $this->_buildImage();
             $this->setData('image_path', $imagePath);
             $this->getResource()->save($this);
@@ -362,7 +360,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function getImage()
     {
-        if(!$image = $this->getData('image')) {
+        if (!$image = $this->getData('image')) {
             $this->imageModel->getResource()->load($this->imageModel, $this->getImageId());
             $image = $this->imageModel;
             $this->setData('image', $image);
@@ -373,16 +371,19 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     protected function _buildImage()
     {
-        if(!$this->isImage()) {
+        if (!$this->isImage()) {
             return null;
         }
         $image = $this->getImage();
 
-        $imageInfo = getimagesize($image->getImagePath());
+        $imageInfo = @getimagesize($image->getImagePath());
+        if (!$imageInfo) {
+            return null;
+        }
 
         $imageResource = null;
 
-        switch($imageInfo['mime']) {
+        switch ($imageInfo['mime']) {
             case 'image/png':
                 $imageResource = imagecreatefrompng($image->getImagePath());
                 break;
@@ -401,10 +402,10 @@ class Account extends \Magento\Framework\Model\AbstractModel
         $fontFile = $this->directoryList->getPath('media') .$DS. self::FONT_FILE_ARIAL;
         $fontSize = 15;
 
-        imagettftext($imageResource, $fontSize, 0, (int)$this->getImage()->getCodePosX(), $this->getImage()->getCodePosY()+$fontSize+2,$color, $fontFile, $this->getCode());
+        imagettftext($imageResource, $fontSize, 0, (int)$this->getImage()->getCodePosX(),
+            $this->getImage()->getCodePosY()+$fontSize+2,$color, $fontFile, $this->getCode());
 
         $imagePath = uniqid().'_'.preg_replace("/[^A-Za-z0-9_-]/","",$this->getCode());
-
 
         switch($imageInfo['mime']) {
             case 'image/png':
@@ -431,46 +432,55 @@ class Account extends \Magento\Framework\Model\AbstractModel
     {
         $product = $data->getOrderItem()->getProduct();
         $codeSetId = $product->getAmGiftcardCodeSet();
-        if(!$codeSetId) {
+        if (!$codeSetId) {
             $codeSetId = $this->productResourceModel->getAttributeRawValue(
-                $product->getId(), 'am_giftcard_code_set', $data->getOrder()->getStoreId()
+                $product->getId(),
+                'am_giftcard_code_set',
+                $data->getOrder()->getStoreId()
             );
         }
         $code = $this->generateCode($codeSetId);
 
         $productOptions = $data->getProductOptions();
 
-        $this->setData(array(
-            'code_id' 			=> $code->getId(),
-            'image_id' 			=> isset($productOptions['am_giftcard_image']) ? $productOptions['am_giftcard_image'] : null,
-            'buyer_id' 			=> $this->_getCustomerId(),
-            'order_id'			=> $data->getOrder()->getId(),
-            'website_id'		=> $data->getWebsiteId(),
-            'product_id'		=> $product->getId(),
-            'status_id'			=> self::STATUS_ACTIVE,
-            'initial_value'		=> $data->getAmount(),
-            'current_value'		=> $data->getAmount(),
-            'sender_name'		=> $productOptions['am_giftcard_sender_name'],
-            'sender_email'		=> $productOptions['am_giftcard_sender_email'],
-            'recipient_name'	=> $productOptions['am_giftcard_recipient_name'],
-            'recipient_email'	=> $productOptions['am_giftcard_recipient_email'],
-            'sender_message'	=> isset($productOptions['am_giftcard_message']) ? $productOptions['am_giftcard_message'] : null,
-            'date_delivery'		=> $productOptions['am_giftcard_date_delivery'],
-        ));
+        $dateDelivery = isset($productOptions['am_giftcard_date_delivery'])
+            ? $productOptions['am_giftcard_date_delivery']
+            : $this->date->gmtDate('Y-m-d');
+        $this->setData([
+            'code_id' => $code->getId(),
+            'image_id' => isset($productOptions['am_giftcard_image']) ? $productOptions['am_giftcard_image'] : null,
+            'buyer_id' => $this->_getCustomerId(),
+            'order_id' => $data->getOrder()->getId(),
+            'website_id' => $data->getWebsiteId(),
+            'product_id' => $product->getId(),
+            'status_id' => self::STATUS_ACTIVE,
+            'initial_value' => $data->getAmount(),
+            'current_value' => $data->getAmount(),
+            'sender_name' => isset($productOptions['am_giftcard_sender_name'])
+                ? $productOptions['am_giftcard_sender_name'] : null,
+            'sender_email' => isset($productOptions['am_giftcard_sender_email'])
+                ? $productOptions['am_giftcard_sender_email'] : null,
+            'recipient_name' => isset($productOptions['am_giftcard_recipient_name'])
+                ? $productOptions['am_giftcard_recipient_name'] : null,
+            'recipient_email' => isset($productOptions['am_giftcard_recipient_email'])
+                ? $productOptions['am_giftcard_recipient_email'] : null,
+            'sender_message' => isset($productOptions['am_giftcard_message'])
+                ? $productOptions['am_giftcard_message'] : null,
+            'date_delivery' => $dateDelivery,
+        ]);
 
-
-        if($lifetime = $data->getLifetime()){
-	        $deliveryDate = $productOptions['am_giftcard_date_delivery'];
-            $expiredDate = $this->date->gmtDate('Y-m-d H:i:s', $deliveryDate . "+{$lifetime} days");
-	        $this->setData('expired_date', $expiredDate);
+        if ($lifetime = $data->getLifetime()) {
+            $expiredDate = $this->date->gmtDate('Y-m-d H:i:s', $dateDelivery . "+{$lifetime} days");
+            $this->setData('expired_date', $expiredDate);
         }
 
         $this->getResource()->save($this);
         $code->setUsed(1)->save();
 
-        $dateDelivery = $productOptions['am_giftcard_date_delivery'];
         $currentDate = $this->date->gmtDate('Y-m-d H:i:s');
-        if((!$dateDelivery || strtotime($dateDelivery) <= strtotime($currentDate)) && $this->getGiftcardType() != \Amasty\GiftCard\Model\GiftCard::TYPE_PRINTED){
+        if ((strtotime($dateDelivery) <= strtotime($currentDate))
+            && $this->getGiftcardType() != GiftCard::TYPE_PRINTED
+        ) {
             $this->sendDataToMail();
         }
 
@@ -486,7 +496,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     protected function _getCustomerId()
     {
-        if($this->customerSession->isLoggedIn()) {
+        if ($this->customerSession->isLoggedIn()) {
             $customerId = $this->customerSession->getCustomer()->getId();
         } else {
             $customerId = null;
@@ -502,7 +512,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
 
     public function isValid($website = null)
     {
-        if(!$this->getId()){
+        if (!$this->getId()) {
             $this->messageManager->addErrorMessage(__('Wrong gift card code'));
             return false;
         }
@@ -524,7 +534,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
             return false;
         }
 
-        if($this->isExpired()) {
+        if ($this->isExpired()) {
             $this->messageManager->addErrorMessage(__('Gift card %1 is expired.', $this->getCode()));
             return false;
         }
@@ -537,7 +547,8 @@ class Account extends \Magento\Framework\Model\AbstractModel
         return true;
     }
 
-    public function canApplyCardForQuote($quote) {
+    public function canApplyCardForQuote($quote)
+    {
         $website = $this->storeManager->getStore($quote->getStoreId())->getWebsiteId();
         $customerId = $this->_getCustomerId();
         $allowThemselves = $this->scopeConfig->getValue(
@@ -546,9 +557,10 @@ class Account extends \Magento\Framework\Model\AbstractModel
         );
         $buyerId = $this->getBuyerId();
         if ($this->isValid($website)) {
-            if(!$allowThemselves && $buyerId && $customerId && $customerId == $buyerId) {
-                $this->messageManager->addErrorMessage(__('Please be aware that it is not possible to use the gift card you purchased for your own orders.'));
-	            return false;
+            if (!$allowThemselves && $buyerId && $customerId && $customerId == $buyerId) {
+                $this->messageManager->addErrorMessage(__('Please be aware that it is not possible to use 
+                the gift card you purchased for your own orders.'));
+                return false;
             }
             return true;
         }
@@ -586,7 +598,7 @@ class Account extends \Magento\Framework\Model\AbstractModel
      */
     public function getStatus($statusId = null)
     {
-        if(is_null($statusId)) {
+        if($statusId === null) {
             $statusId = $this->getStatusId();
         }
         $listStatuses = $this->getListStatuses();

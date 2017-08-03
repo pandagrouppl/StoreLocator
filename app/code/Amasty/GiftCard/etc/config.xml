@@ -1,11 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
--->
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
@@ -13,7 +6,8 @@
             <general>
                 <active>1</active>
                 <allowed_product_types>simple,grouped,configurable,virtual,bundle,downloadable</allowed_product_types>
-                <allow_to_paid_for_shipping>1</allow_to_paid_for_shipping>
+                <allow_to_paid_for_shipping>0</allow_to_paid_for_shipping>
+                <allow_to_paid_for_tax>0</allow_to_paid_for_tax>
             </general>
             <card>
                 <lifetime>0</lifetime>

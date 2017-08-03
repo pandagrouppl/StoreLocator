@@ -1,11 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
--->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
         <arguments>
@@ -17,5 +10,8 @@
             </argument>
         </arguments>
     </virtualType>
+    <type name="\Magento\Sales\Block\Adminhtml\Order\View">
+        <plugin name="Amasty_GiftCard::NotificationGiftCard" type="Amasty\GiftCard\Plugin\Admin\NotificationGiftCard" />
+    </type>
 </config>
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Amasty Team
- * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
- * @package Amasty_GiftCard
- */
-
 
 namespace Amasty\GiftCard\Plugin\Quote;
 
@@ -24,8 +18,7 @@ class Item
     public function afterGetPrice(
         \Magento\Quote\Model\Quote\Item $item,
         $price
-    )
-    {
+    ){
         $product = $item->getProduct();
         if ($product->getTypeId() == \Amasty\GiftCard\Model\Product\Type\GiftCard::TYPE_GIFTCARD_PRODUCT) {
             if (isset($item->getOptionsByCode()['info_buyRequest'])
