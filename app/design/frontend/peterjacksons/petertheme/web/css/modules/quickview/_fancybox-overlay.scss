@@ -3,17 +3,52 @@
 }
 
 .amasty-quickview-ajax-view {
+    height: 580px;
 
-    height: 545px;
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+
+        @media all and (max-width: $sm-breakpoint) {
+            justify-content: space-between;
+        }
+    }
+
+    &__goto-product {
+        text-transform: none;
+        text-decoration: underline;
+        font-size: 14px;
+        margin: 18px 20px 0 0;
+
+        a {
+            color: #222;
+
+            &:hover {
+                color: #999;;
+            }
+        }
+    }
+
+    &__close {
+        font-size: 30px;
+        margin: 9px 0 0 0;
+        color: #838282;
+
+        &:hover {
+            color: #999;
+        }
+    }
+
 
     .page-main {
         margin: 0;
-        padding: 0 25px 17px 25px;
+        padding: 0 25px 0 25px;
     }
 
     .product-info-main {
         max-width: 100%;
         width: 286px;
+        margin: 0 0 20px 0;
 
         @media all and (max-width: $sm-breakpoint) {
             width: 100%;
@@ -61,6 +96,7 @@
         }
 
         &__size-chart {
+            margin: 0;
 
             &::before {
                 margin: 0 5px 0 0;
@@ -91,6 +127,7 @@
     .product-main {
         &__wrapper {
             flex-direction: row;
+            padding: 0;
 
             @media all and (max-width: $sm-breakpoint) {
                 flex-direction: column;
@@ -98,7 +135,6 @@
         }
 
         &__right {
-            justify-content: center;
             margin: 0 15px;
 
 

@@ -14,9 +14,11 @@
     <update handle="page_calendar"/>
     <update handle="catalog_product_view"/>
     <body>
-        <move element="product.info.details" destination="product.info.main" after="product.info.stock.sku" />
-        <referenceContainer name="columns">
-            <block class="Magento\Framework\View\Element\Template" name="quickview.header" template="Light4website_Cms::quickview_header.phtml" before="-"/>
-        </referenceContainer>
+        <referenceBlock name="content">
+                <block class="Magento\Catalog\Block\Product\View" name="quickview.header"
+                template="Light4website_Cms::quickview_header.phtml" before="-"/>
+                <move element="product.info.details" destination="product.info.main" after="product.info.stock.sku" />
+        </referenceBlock>
+        <referenceBlock name="product.info.fabric" remove="true" />
     </body>
 </page>
