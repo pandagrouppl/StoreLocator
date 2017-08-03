@@ -83,7 +83,7 @@ define([
 				wrapCSS: '',
 
 				arrows: true,
-				closeBtn: true,
+				closeBtn: false,
 				closeClick: false,
 				nextClick: false,
 				mouseWheel: true,
@@ -634,6 +634,7 @@ define([
 			},
 
 			getViewport: function () {
+
 				var locked = (F.current && F.current.locked) || false,
 						rez = {
 							x: W.scrollLeft(),

@@ -23,6 +23,7 @@
     &__wrapper {
         min-width: 50px;
         position: relative;
+        z-index: 0;
 
         &--product-page {
             position: relative;
@@ -30,7 +31,11 @@
         }
 
         &--Size {
-            width: 40%;
+            margin-right: 15px;
+
+            @media all and (max-width: $xs-breakpoint) {
+                margin-bottom: 10px;
+            }
         }
 
         &--cart-qty {
@@ -40,5 +45,11 @@
         &--cart-size {
             width: 100px;
         }
+
+        > div.mage-error {
+            padding-top: 3px;
+            color: red;
+        }
+
     }
 }

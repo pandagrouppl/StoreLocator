@@ -1,6 +1,6 @@
 .page-main {
     max-width: 1080px;
-    margin: auto auto 100px auto;
+    margin: auto auto 56px auto;
     padding: 0 20px;
     box-sizing: border-box;
 
@@ -11,6 +11,7 @@
 
     &__messages {
         font-size: 14px;
+
         .success {
             color: green;
         }

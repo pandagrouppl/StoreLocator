@@ -23,11 +23,12 @@ class View extends \Magento\Catalog\Controller\Product\View
             $page = $this->resultPageFactory->create(false, ['isIsolated' => true]);
 
             $product = $this->_initProduct();
-            $page->addHandle('catalog_product_view');
+            $page->addHandle('quickview_catalog_product_view'); // core template -> custom template default: ('catalog_product_view')
             if ( $product ) {
                 $type = $product->getTypeId();
-                $page->addHandle('catalog_product_view_type_' . $type);
+                $page->addHandle('quickview_catalog_product_view_type_' . $type); // core template -> custom template default: ('catalog_product_view_type_')
             }
+
             return $page;
         } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
             return $this->noProductRedirect();

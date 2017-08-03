@@ -2,6 +2,7 @@
 
     &__wrapper {
         display: flex;
+        padding: 0 0 88px 0;
         @include container();
 
         @media all and (max-width: $bp-header) {
@@ -30,13 +31,26 @@
 
         @media all and (max-width: $bp-header) {
             width: 100%;
+
+            .fotorama {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 
     &__right {
-        width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
-        padding: 0 30px;
+        padding: 0;
+        margin-left: 20px;
+
+        @media all and (max-width: $bp-header) {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 

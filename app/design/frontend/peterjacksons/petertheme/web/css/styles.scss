@@ -57,6 +57,8 @@
 @import 'modules/product/product-main';
 @import 'modules/product/product-content';
 @import 'modules/product/products-related';
+@import 'modules/product/product-info-main';
+@import 'modules/product/product-info-detailed';
 
 @import "modules/account/dashboard/account-dashboard";
 @import "modules/account/dashboard/account-form";
@@ -90,6 +92,7 @@
 @import "modules/cms/look-book";
 @import "modules/cms/msfw";
 @import "modules/cms/popup-success";
+@import "modules/quickview/fancybox-overlay";
 
 @import "modules/blog/blog";
 @import "modules/blog/post-list";

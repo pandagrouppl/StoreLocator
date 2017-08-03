@@ -8,5 +8,9 @@
         height: 51px;
         border: 1px solid $grey;
         border-radius: 4px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

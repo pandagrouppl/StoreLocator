@@ -1,0 +1,22 @@
+.product-info-main {
+    max-width: 100%;
+    width: 415px;
+
+    &__sku {
+        font-size: 12px;
+        color: #181818;
+        margin: 10px 0 0 0;
+    }
+
+    &__options-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @media all and (max-width: $sm-breakpoint) {
+            border-top: 1px solid #ddd;
+            padding: 26px 0 0 0;
+        }
+    }
+
+}
