@@ -17,12 +17,16 @@
             .header {
                 border-bottom: none;
 
-                &-middle__logo img {
+                &-middle__logo > img {
                     filter: brightness(0);
                 }
 
-                .ui-corner-all, .ui-menu-item, .header-left, .header-right {
-                    span, a, i {
+                .header-left__account,
+                .header-left__book,
+                .header-right__search,
+                .header-right__wishlist,
+                .header-right__minicart  {
+                    > a, > a > i {
                         filter: brightness(0);
                     }
                 }
