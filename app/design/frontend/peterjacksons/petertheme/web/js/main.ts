@@ -21,6 +21,7 @@ export = class Main {
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
             const mailChimpAjax = MailChimpAjax('mc-embedded-subscribe-form');
             const mailChimpAjax2 = MailChimpAjax('mc-embedded-subscribe-form-blog');
+            const mailChimpAjax2 = MailChimpAjax('subscribe-form-footer');
             const popup = new popups.Popups();
             const lookBook = new LookBook.LookBook();
             const sizeChart = new SizeChart.SizeChart();
