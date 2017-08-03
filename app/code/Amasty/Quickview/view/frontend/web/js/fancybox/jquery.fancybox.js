@@ -83,7 +83,7 @@ define([
 				wrapCSS: '',
 
 				arrows: true,
-				closeBtn: false,
+				closeBtn: true,
 				closeClick: false,
 				nextClick: false,
 				mouseWheel: true,
