@@ -38,6 +38,7 @@
             display: flex;
             align-items: center;
             margin: 0 10px 10px 0;
+            font-weight: 500;
 
             &::before {
                 @include sprite(brownstar);

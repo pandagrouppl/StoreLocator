@@ -1,0 +1,16 @@
+<?php
+
+$_product = $block->getProduct();
+$productUrl = $_product->getProductUrl();
+
+?>
+
+<div class="amasty-quickview-ajax-view__header">
+    <div class="amasty-quickview-ajax-view__goto-product">
+        <a href="<?php echo $productUrl ?>">
+            View full details
+        </a>
+    </div>
+
+    <a href="javascript:parent.jQuery.fancybox.close();" class="amasty-quickview-ajax-view__close">x</a>
+</div>
