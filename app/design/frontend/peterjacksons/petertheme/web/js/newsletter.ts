@@ -1,15 +1,12 @@
 import $ = require("jquery");
 
-const MailChimpAjax = (id) => {
+const newsletter = (id) => {
     'use strict';
     const $form = $('#' + id);
-    const form = document.getElementById(id);
-    console.log(form.checkValidity());
     const $message = $form.children('.newsletter').children('.newsletter__messages');
-    console.log($form, $message);
     if ( $form.length > 0 ) {
-        $('#' + id +' input[type="submit"]').bind('click', function ( event ) {
-            if ( event ) event.preventDefault();
+        $form.submit((event) => {
+            event.preventDefault();
             const url = $form.attr('action');
             $.ajax({
                 type: $form.attr('method'),
@@ -18,7 +15,6 @@ const MailChimpAjax = (id) => {
                 dataType    : 'jsonp',
                 jsonpCallback: 'subscribeSalesforce'
             }).done(function(json) {
-                console.log(json);
                 if (json.success == 'True') {
                     $message.text(json.message).css("color", "green");
                     $('.popup-success').show();
@@ -32,4 +28,4 @@ const MailChimpAjax = (id) => {
     }
 };
 
-export = MailChimpAjax;
+export = newsletter;
