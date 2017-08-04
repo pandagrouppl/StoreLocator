@@ -3,22 +3,27 @@ import $ = require("jquery");
 const MailChimpAjax = (id) => {
     'use strict';
     const $form = $('#' + id);
-    const $message = $form.children('.mailchimp__messages');
+    const form = document.getElementById(id);
+    console.log(form.checkValidity());
+    const $message = $form.children('.newsletter').children('.newsletter__messages');
+    console.log($form, $message);
     if ( $form.length > 0 ) {
         $('#' + id +' input[type="submit"]').bind('click', function ( event ) {
             if ( event ) event.preventDefault();
-            const url = $form.attr('action').replace('/post?', '/post-json?').concat('&c=?');
+            const url = $form.attr('action');
             $.ajax({
                 type: $form.attr('method'),
                 url: url,
                 data: $form.serialize(),
-                dataType    : 'jsonp'
+                dataType    : 'jsonp',
+                jsonpCallback: 'subscribeSalesforce'
             }).done(function(json) {
-                if (json.result == 'success') {
-                    $message.text('Successfully signed up.').css("color", "green");
+                console.log(json);
+                if (json.success == 'True') {
+                    $message.text(json.message).css("color", "green");
                     $('.popup-success').show();
                 } else {
-                    $message.text('Please fill in the form.').css("color", "red");
+                    $message.text(json.message).css("color", "red");
                 }
             }).fail(function() {
                 $message.text('Internal Error! Check your internet connection!').css("color", "red");

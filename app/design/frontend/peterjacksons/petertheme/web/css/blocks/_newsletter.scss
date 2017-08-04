@@ -3,7 +3,7 @@ $border: 4px;
 $input-height: 49px;
 
 .page-footer__signup {
-    .mailchimp {
+    .newsletter {
         display: flex;
         flex-wrap: wrap;
         position: relative;
@@ -100,7 +100,7 @@ $input-height: 49px;
 }
 
 .blog-sidebar__subscribe {
-    .mailchimp {
+    .newsletter {
 
         &__input-wrap {
             @include form-element-wrapper();
