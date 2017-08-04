@@ -33,10 +33,7 @@
 
             #{$root}--second {
                 opacity: 1;
-            }
 
-            .catalog-item__star {
-                @include sprite(wishlist-icon-dark);
             }
         }
     }
@@ -46,6 +43,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        position: relative;
     }
 
     &__star {
@@ -54,6 +52,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        cursor: pointer;
     }
 
     &__content {
@@ -66,10 +65,25 @@
             margin: 10px 0;
         }
 
+        .old-price {
+            margin-right: 6px;
+        }
+
         .price {
             font-size: 17px;
             font-family: Roboto;
             font-weight: 300;
+        }
+
+        .price-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .special-price {
+            border-left: 1px solid black;
+            padding-left: 6px;
         }
     }
 

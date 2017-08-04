@@ -47,14 +47,15 @@ $schema = ($block->getZone() == 'item_view') ? true : false;
     ]); ?>
 <?php endif; ?>
 
-<?php if ($block->showMinimalPrice()): ?>
-    <?php if ($block->getUseLinkForAsLowAs()):?>
-        <a href="<?php /* @escapeNotVerified */ echo $block->getSaleableItem()->getProductUrl(); ?>" class="minimal-price-link">
-            <?php /* @escapeNotVerified */ echo $block->renderAmountMinimal(); ?>
-        </a>
-    <?php else:?>
-        <span class="minimal-price-link">
-            <?php /* @escapeNotVerified */ echo $block->renderAmountMinimal(); ?>
-        </span>
-    <?php endif?>
-<?php endif; ?>
+<!-- Minimal Price-->
+<?php //if ($block->showMinimalPrice()): ?>
+<!--    --><?php //if ($block->getUseLinkForAsLowAs()):?>
+<!--        <a href="--><?php ///* @escapeNotVerified */ echo $block->getSaleableItem()->getProductUrl(); ?><!--" class="minimal-price-link">-->
+<!--            --><?php ///* @escapeNotVerified */ echo $block->renderAmountMinimal(); ?>
+<!--        </a>-->
+<!--    --><?php //else:?>
+<!--        <span class="minimal-price-link">-->
+<!--            --><?php ///* @escapeNotVerified */ echo $block->renderAmountMinimal(); ?>
+<!--        </span>-->
+<!--    --><?php //endif?>
+<?php //endif; ?>
