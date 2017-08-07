@@ -46,7 +46,6 @@ define([
          * @private
          */
         _create: function () {
-            debugger;
             // Initial setting of various option values
             this._initializeOptions();
 
