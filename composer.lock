@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69a5dc1860e54166d3a8233af6bd9462",
-    "content-hash": "57478cd71d1887da07999ef0303c2c5e",
+    "hash": "8dd077f9f16a14dcedb0e30a1a269a09",
+    "content-hash": "fce9218cb6ceee864cb5c1126b3e9964",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -6283,6 +6283,28 @@
             ],
             "description": "An extendable framework for version control hooks.",
             "time": "2014-09-22 08:40:36"
+        },
+        {
+            "name": "snowdog/frontools",
+            "version": "1.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
+                "reference": "7c0cc60d5cfeb260baacdc5d5bf2d05a5e8acb85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/7c0cc60d5cfeb260baacdc5d5bf2d05a5e8acb85",
+                "reference": "7c0cc60d5cfeb260baacdc5d5bf2d05a5e8acb85",
+                "shasum": ""
+            },
+            "type": "magento2-component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+            "time": "2017-07-04 14:11:21"
         },
         {
             "name": "strategery/magento2-infinitescroll",

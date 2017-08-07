@@ -18,28 +18,42 @@
         border: 0;
         text-align: center;
 
-
         &::placeholder {
             color: black;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
         }
     }
 
     &__zoom {
         @include sprite(header-zoom);
         transform: scale(0.65);
+        width: 35px;
     }
 
     &__title {
         font-family: Merriweather;
         font-weight: bold;
         font-style: italic;
-        font-size: 20px;
+        font-size: 23px;
         color: #666;
-        margin: 30px 0;
+        margin: 30px 10px 30px 0;
+        display: inline-block;
+
 
         &--subscribe {
             text-align: center;
         }
+    }
+
+    &__instalink {
+        font-size: 14px;
+        letter-spacing: 0;
+        font-style: normal;
+        font-family: Roboto;
+        color: #666;
     }
 
     &__instagram, &__subscribe {
