@@ -36,8 +36,6 @@
     }
 }
 
-
-
 .amasty-quickview-ajax-view {
     height: 580px;
 
@@ -83,7 +81,6 @@
 
     .product-info-main {
         max-width: 100%;
-        width: 286px;
         margin: 0 0 20px 0;
 
         @media all and (max-width: $sm-breakpoint) {
@@ -143,11 +140,11 @@
     }
 
     .product-info-detailed {
+
         &__description {
             font-size: 14px;
             color: #333;
             max-height: 51px;
-            width: 300px;
             text-align: justify;
             overflow-y: scroll;
             line-height: 17px;
@@ -173,7 +170,13 @@
         &__right {
             margin: 0 15px;
 
+            .select__select {
+                width: 100%;
+            }
 
+            .select__select--color {
+                display: none;
+            }
         }
     }
 }
