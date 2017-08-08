@@ -332,7 +332,7 @@ define([
 
             this._clearSelect(element);
             element.options[0] = new Option('', '');
-            element.options[0].innerHTML = this.options.spConfig.chooseText;
+            element.options[0].innerHTML = "Select Size";
             prevConfig = false;
 
             if (element.prevSetting) {
