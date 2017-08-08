@@ -358,7 +358,7 @@ EOT;
             $page->setTitle('Made To Measure')
                 ->setIdentifier('made-to-measure')
                 ->setIsActive(true)
-                ->setPageLayout('1column')
+                ->setPageLayout('1column-unconstrained-width')
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
