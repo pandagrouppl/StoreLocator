@@ -214,6 +214,12 @@ EOT
                 ->setIdentifier('shipping-returns')
                 ->setIsActive(true)
                 ->setPageLayout('1column')
+                ->setLayoutUpdateXml(<<<EOT
+<referenceContainer name="page.top">
+    <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml" after="breadcrumbs"/>
+</referenceContainer>
+EOT
+                )
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
