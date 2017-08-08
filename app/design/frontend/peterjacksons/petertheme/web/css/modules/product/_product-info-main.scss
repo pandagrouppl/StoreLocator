@@ -1,6 +1,5 @@
 .product-info-main {
     max-width: 100%;
-    width: 415px;
 
     &__sku {
         font-size: 12px;
@@ -12,6 +11,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 10px;
 
         @media all and (max-width: $sm-breakpoint) {
             border-top: 1px solid #ddd;

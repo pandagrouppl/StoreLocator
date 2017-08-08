@@ -1,4 +1,5 @@
 .product-info-detailed {
+    max-width: 100%;
 
     &__description {
         font-size: 13px;
@@ -6,7 +7,10 @@
         color: #333;
         max-height: 178px;
         overflow-y: auto;
-        max-width: 415px;
+
+        @media all and (max-width: $bp-header) {
+            max-width: 505px;
+        }
     }
 
 }
