@@ -33,7 +33,7 @@ class Delete extends \Magento\Backend\App\Action
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
 
-        $id = $this->getRequest()->getParam('id');
+        $id = (int)$this->getRequest()->getParam('id');
         if ($id) {
             $this->logger->info('Start deleting store.');
             try {
@@ -47,9 +47,8 @@ class Delete extends \Magento\Backend\App\Action
                 $this->logger->info('Finish deleting store.');
                 return $resultRedirect->setPath('*/*/');
             } catch (\Exception $e) {
-
                 $this->messageManager->addErrorMessage($e->getMessage());
-                $this->logger->error('    Error while deleting the store id='.$id, $e->getMessage());
+                $this->logger->error('    Error while deleting the store id=' . $id, $e->getMessage());
 
                 $this->logger->info('Finish deleting store.');
                 return $resultRedirect->setPath('*/*/edit', ['id' => $id]);

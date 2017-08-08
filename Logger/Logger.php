@@ -4,7 +4,7 @@ namespace PandaGroup\StoreLocator\Logger;
 
 class Logger extends \Monolog\Logger
 {
-    public function canLog()
+    private function canLog()
     {
         $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
 

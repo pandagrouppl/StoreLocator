@@ -28,12 +28,11 @@ class Edit extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        $id = $this->getRequest()->getParam('id');
+        $id = (int)$this->getRequest()->getParam('id');
         $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator');
 
         if ($id) {
             $model->load($id);
-//            var_dump($model); exit;
 
             if (!$model->getId()) {
                 $this->messageManager->addErrorMessage(__('This store no longer exists.'));
