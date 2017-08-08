@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "2c4827573feb28011f024280845153645f26456b"
+                "reference": "406fb49d82ee09bf449519994603b85ab4c81ba1"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-07-31 10:11:56"
+            "time": "2017-08-08 09:15:33"
         },
         {
             "name": "PandaGroup/MigrationTool",

@@ -359,6 +359,13 @@ EOT;
                 ->setIdentifier('made-to-measure')
                 ->setIsActive(true)
                 ->setPageLayout('1column-unconstrained-width')
+                ->setLayoutUpdateXml(
+                    <<<EOT
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs" remove="true" />
+</referenceContainer>
+EOT
+                )
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
