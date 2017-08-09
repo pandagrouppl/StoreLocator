@@ -28,5 +28,7 @@
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>
             </arguments>
         </referenceBlock>
+        <referenceBlock name="product_list_toolbar" remove="true" />
+
     </body>
 </page>
