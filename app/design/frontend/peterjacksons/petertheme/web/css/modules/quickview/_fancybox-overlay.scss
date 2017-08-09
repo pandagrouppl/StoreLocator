@@ -161,6 +161,7 @@
         &__wrapper {
             flex-direction: row;
             padding: 0;
+            align-items: center;
 
             @media all and (max-width: $sm-breakpoint) {
                 flex-direction: column;
