@@ -1,6 +1,7 @@
 #!/bin/bash
 # Update Peterjacksons script
 git pull
+composer install
 php bin/magento maintenance:enable
 php bin/magento setup:static-content:deploy -t peterjacksons/petertheme
 (cd tools && gulp compile)

@@ -22,7 +22,8 @@
         "PL/Migs": "dev-master",
         "Amasty/Base": "dev-master",
         "Amasty/Rules": "dev-master",
-        "Amasty/RulesPro": "dev-master"
+        "Amasty/RulesPro": "dev-master",
+        "snowdog/frontools": "^1.5"
 
     },
     "require-dev": {

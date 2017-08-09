@@ -332,7 +332,7 @@ define([
 
             this._clearSelect(element);
             element.options[0] = new Option('', '');
-            element.options[0].innerHTML = 'Select Size';
+            element.options[0].innerHTML = "Select Size";
             prevConfig = false;
 
             if (element.prevSetting) {
@@ -494,8 +494,7 @@ define([
          * @private
          */
         _displayRegularPriceBlock: function (optionId) {
-            if (typeof optionId != 'undefined'
-                && this.options.spConfig.optionPrices[optionId].oldPrice.amount
+            if (this.options.spConfig.optionPrices[optionId].oldPrice.amount
                 != this.options.spConfig.optionPrices[optionId].finalPrice.amount
             ) {
                 $(this.options.slyOldPriceSelector).show();

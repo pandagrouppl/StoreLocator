@@ -17,13 +17,15 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
     <?php foreach ($_attributes as $_attribute): ?>
         <div class="field configurable required">
             <div class="control select__wrapper select__wrapper--<?php echo trim($_attribute->getProductAttribute()->getStoreLabel()) ?>">
+                <div class="select__select--color"><?php echo $block->escapeHtml($_product->getAttributeText('colour')); ?></div>
+                <form name="<?php echo $block->escapeHtml($_product->getAttributeText('colour')); ?>" class="select__select--color"></form>
                 <figure class="select__arrow"></figure>
                 <select name="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
                         data-selector="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
                         data-validate="{required:true}"
                         id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
                         class="super-attribute-select select__select">
-                    <option value=""><?php /* @escapeNotVerified */ echo __('SELECT ') ?><?php echo $block->escapeHtml($_attribute->getProductAttribute()->getStoreLabel()) ?></option>
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>
                 </select>
             </div>
         </div>
