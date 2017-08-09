@@ -75,11 +75,11 @@ class UpgradeData implements UpgradeDataInterface
 
 
         $setup->startSetup();
-        $page = $this->_pageFactory->create()->load('contact-us');
-        $content = file_get_contents('pages/contact-us.phtml', FILE_USE_INCLUDE_PATH);
-        $layoutContent = file_get_contents('pages/contact-us.xml', FILE_USE_INCLUDE_PATH);
+        $page = $this->_pageFactory->create()->load('contact_us');
+        $content = file_get_contents('pages/contact_us.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/contact_us.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Contact Us')
-            ->setIdentifier('contact-us')
+            ->setIdentifier('contact_us')
             ->setIsActive(true)
             ->setPageLayout('1column')
             ->setLayoutUpdateXml($layoutContent)
