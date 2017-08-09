@@ -1,0 +1,15 @@
+<body>
+    <referenceContainer name="page.top">
+        <referenceBlock name="breadcrumbs">
+            <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
+        </referenceBlock>
+    </referenceContainer>
+    <referenceContainer name="content">
+    <referenceBlock name="page.main.title">
+        <action method="setPageTitle">
+            <argument translate="true" name="title" xsi:type="string">TERMS &amp; CONDITIONS</argument>
+        </action>
+    </referenceBlock>
+    </referenceContainer>
+    <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
+</body>
