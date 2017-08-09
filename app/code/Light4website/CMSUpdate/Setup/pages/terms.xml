@@ -1,8 +1,0 @@
-<referenceContainer name="content">
-    <referenceBlock name="page.main.title">
-        <action method="setPageTitle">
-        <argument translate="true" name="title" xsi:type="string">TERMS & CONDITIONS</argument>
-        </action>
-    </referenceBlock>
-</referenceContainer>
-<move element="page.main.title" destination="page.top" before="breadcrumbs"/>

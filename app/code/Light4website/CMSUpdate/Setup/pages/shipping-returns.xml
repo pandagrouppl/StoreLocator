@@ -1,0 +1,5 @@
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs">
+        <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
+    </referenceBlock>
+</referenceContainer>
