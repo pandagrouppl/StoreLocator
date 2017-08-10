@@ -29,6 +29,8 @@
             </arguments>
         </referenceBlock>
         <referenceBlock name="product_list_toolbar" remove="true" />
-
+        <referenceBlock name="category.products">
+            <block class="Magento\Framework\View\Element\Template" name="suits.description" template="Magento_Theme::html/suits-description.phtml"/>
+        </referenceBlock>
     </body>
 </page>
