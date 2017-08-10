@@ -10,7 +10,7 @@
     <update handle="catalog_category_view"/>
     <body>
         <move element="category.description" destination="page.top" before="-"/>
-        <move element="product_list_toolbar" destination="breadcrumbs" before="-"/>
+        <!--<move element="product_list_toolbar" destination="breadcrumbs" before="-"/>-->
         <referenceBlock name="page.main.title" remove="true"/>
         <referenceBlock name="category.image" remove="true"/>
         <referenceBlock name="category.product.addto.compare" remove="true"/>
@@ -28,7 +28,7 @@
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>
             </arguments>
         </referenceBlock>
-        <referenceBlock name="product_list_toolbar" remove="true" />
+        <!--<referenceBlock name="product_list_toolbar" remove="true" />-->
         <referenceBlock name="category.products">
             <block class="Magento\Framework\View\Element\Template" name="suits.description" template="Magento_Theme::html/suits-description.phtml"/>
         </referenceBlock>
