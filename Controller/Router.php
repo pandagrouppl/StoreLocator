@@ -8,19 +8,15 @@ namespace PandaGroup\StoreLocator\Controller;
  */
 class Router implements \Magento\Framework\App\RouterInterface
 {
-    /**
-     * @var \Magento\Framework\App\ActionFactory
-     */
+    /** @var \Magento\Framework\App\ActionFactory  */
     protected $actionFactory;
 
-    /**
-     * Response
-     *
-     * @var \Magento\Framework\App\ResponseInterface
-     */
+    /** @var \Magento\Framework\App\ResponseInterface  */
     protected $_response;
 
     /**
+     * Router constructor.
+     *
      * @param \Magento\Framework\App\ActionFactory $actionFactory
      * @param \Magento\Framework\App\ResponseInterface $response
      */

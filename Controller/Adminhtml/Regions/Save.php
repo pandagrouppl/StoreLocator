@@ -17,7 +17,16 @@ class Save extends \Magento\Backend\App\Action
     /** @var \PandaGroup\StoreLocator\Model\StatesFactory  */
     protected $statesFactory;
 
-
+    /**
+     * Save constructor.
+     *
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
+     * @param \PandaGroup\StoreLocator\Model\RegionsData $regionsData
+     * @param \PandaGroup\StoreLocator\Model\States $states
+     * @param \PandaGroup\StoreLocator\Model\StatesFactory $statesFactory
+     */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $registry,
@@ -39,7 +48,7 @@ class Save extends \Magento\Backend\App\Action
         $resultRedirect = $this->resultRedirectFactory->create();
         $data = $this->getRequest()->getPostValue();
         if ($data) {
-            $id = $this->getRequest()->getParam('id');
+            $id = (int) $this->getRequest()->getParam('id');
 
             $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\States')->load($id);
             if (!$model->getId() && $id) {

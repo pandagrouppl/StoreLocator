@@ -32,8 +32,7 @@ class GoogleApi extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Json\Helper\Data $jsonHelper,
         \PandaGroup\StoreLocator\Logger\Logger $logger,
         array $data = []
-    )
-    {
+    ) {
         parent::__construct($context, $registry);
         $this->configProvider = $configProvider;
         $this->jsonHelper = $jsonHelper;

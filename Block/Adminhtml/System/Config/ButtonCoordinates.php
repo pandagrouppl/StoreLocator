@@ -4,9 +4,6 @@ namespace PandaGroup\StoreLocator\Block\Adminhtml\System\Config;
 
 class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
 {
-//    /** @var UrlInterface */
-//    protected $_urlBuilder;
-
     /** @var \Magento\Framework\Json\Helper\Data */
     protected $jsonHelper;
 
@@ -20,7 +17,6 @@ class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
         \Magento\Framework\Json\Helper\Data $jsonHelper,
         array $data = []
     ) {
-//        $this->_urlBuilder = $context->getUrlBuilder();
         $this->jsonHelper = $jsonHelper;
         parent::__construct($context, $data);
     }
@@ -55,10 +51,6 @@ class ButtonCoordinates extends \Magento\Config\Block\System\Config\Form\Field
 
         return $button->toHtml();
     }
-    
-//    public function getAdminUrl(){
-//        return $this->_urlBuilder->getUrl('magepalGmailsmtpapp/test', ['store' => $this->_request->getParam('store')]);
-//    }
 
     /**
      * Render button

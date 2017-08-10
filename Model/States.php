@@ -14,6 +14,15 @@ class States extends \Magento\Framework\Model\AbstractModel implements \PandaGro
         $this->_init('PandaGroup\StoreLocator\Model\ResourceModel\States');
     }
 
+    /**
+     * Add new Region
+     *
+     * @param $sourceStateId
+     * @param $stateName
+     * @param string $shortStateName
+     * @param $country
+     * @return int|null
+     */
     public function addNewRegion($sourceStateId, $stateName, $shortStateName = '', $country) {
 
         $objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
@@ -23,7 +32,7 @@ class States extends \Magento\Framework\Model\AbstractModel implements \PandaGro
 
         $logger->info('Start adding new region.');
 
-    // Check if already exist corrected region
+        // Check if already exist corrected region
         $statesCollection = $this->getCollection();
 
         $statesCollection
@@ -40,7 +49,7 @@ class States extends \Magento\Framework\Model\AbstractModel implements \PandaGro
         }
 
 
-    // If there aren't created earlier -> create new
+        // If there aren't created earlier -> create new
 
         /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
         $statesModel = $objectManager->create('PandaGroup\StoreLocator\Model\States');
@@ -54,13 +63,6 @@ class States extends \Magento\Framework\Model\AbstractModel implements \PandaGro
         /** @var \PandaGroup\StoreLocator\Helper\ConfigProvider $configProvider */
         $configProvider = $objectManager->create('PandaGroup\StoreLocator\Helper\ConfigProvider');
 
-//        /** @var \PandaGroup\StoreLocator\Model\States $statesModel */
-//        $statesModel = $this->create();
-
-//        if ($stateName == '-') {
-//            $stateName = $country;
-//            $logger->info('    Replace state name by country name: '.$country);
-//        }
         if (true === empty($shortStateName)) {
             $shortStateName = $googleApiModel->getRegionShortName($stateName);
             $logger->info('    Download short state name from Google Api: '.$shortStateName);
@@ -114,11 +116,10 @@ class States extends \Magento\Framework\Model\AbstractModel implements \PandaGro
         return (int) $statesModel->getId();
     }
 
-
     /**
      * Delete regions which no store is assigned
      *
-     * @return int
+     * @return int|null
      */
     public function deleteUnused()
     {

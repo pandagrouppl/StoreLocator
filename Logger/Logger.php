@@ -55,11 +55,6 @@ class Logger extends \Monolog\Logger
         return $this->addRecord(static::EMERGENCY, $message, $context);
     }
 
-
-
-
-
-
     public function debug($message, array $context = array())
     {
         return $this->addRecord(static::DEBUG, $message, $context);

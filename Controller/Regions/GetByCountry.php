@@ -11,18 +11,22 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
     protected $listState;
 
     /**
-     * Constructor
+     * GetByCountry constructor.
+     *
+     * @param \Magento\Framework\App\Action\Context $context
+     * @param \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+     * @param \PandaGroup\StoreLocator\Model\Config\Source\ListState $listState
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory,
         \PandaGroup\StoreLocator\Model\Config\Source\ListState $listState
-    )
-    {
+    ) {
         $this->resultJsonFactory = $resultJsonFactory;
         $this->listState = $listState;
         parent::__construct($context);
     }
+
     /**
      * Blog Index, shows a list of recent blog posts.
      *
@@ -65,11 +69,6 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
                 } else {
                     $regionsByCountry[1] = '';
 
-//                $response = [
-//                    'status' => 0,
-//                    'states' => ['1' => 'Grrr']
-//                ];
-
                     $response = [
                         'status' => 0,
                         'error' => __('Luck of states.')
@@ -78,8 +77,6 @@ class GetByCountry extends \Magento\Framework\App\Action\Action
             }
 
         }
-
-
 
         $result->setData($response);
         return $result;

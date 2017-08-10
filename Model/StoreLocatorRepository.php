@@ -30,8 +30,8 @@ class StoreLocatorRepository implements \PandaGroup\StoreLocator\Api\StoreLocato
     public function __construct(
         \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator $resource,
         \PandaGroup\StoreLocator\Model\StoreLocatorFactory $storeLocatorFactory,
-        \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $collectionFactory)
-    {
+        \PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\CollectionFactory $collectionFactory
+    ) {
         $this->resource = $resource;
         $this->storeLocatorFactory = $storeLocatorFactory;
         $this->collectionFactory = $collectionFactory;
@@ -135,6 +135,4 @@ class StoreLocatorRepository implements \PandaGroup\StoreLocator\Api\StoreLocato
         return $this->delete($this->getById($storeId));
     }
 
-
 }
-

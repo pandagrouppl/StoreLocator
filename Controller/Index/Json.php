@@ -11,18 +11,22 @@ class Json extends \Magento\Framework\App\Action\Action
     protected $storeLocatorModel;
 
     /**
-     * Constructor
+     * Json constructor.
+     *
+     * @param \Magento\Framework\App\Action\Context $context
+     * @param \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+     * @param \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory,
         \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel
-    )
-    {
+    ) {
         $this->resultJsonFactory = $resultJsonFactory;
         $this->storeLocatorModel = $storeLocatorModel;
         parent::__construct($context);
     }
+
     /**
      * Blog Index, shows a list of recent blog posts.
      *
@@ -47,6 +51,5 @@ class Json extends \Magento\Framework\App\Action\Action
 
         $result->setData($response);
         return $result;
-
     }
 }

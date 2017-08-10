@@ -3,9 +3,10 @@ namespace PandaGroup\StoreLocator\Controller\Adminhtml\Regions;
 
 class Index extends \Magento\Backend\App\Action
 {
-    /** @var \Magento\Framework\View\Result\PageFactory  */
+    /** @var \Magento\Framework\View\Result\PageFactory */
     protected $resultPageFactory = false;
 
+    /** @var \Magento\Backend\Model\View\Result\Page */
     protected $resultPage = null;
 
     /**
@@ -26,16 +27,11 @@ class Index extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        //Call page factory to render layout and page content
-//        $this->_setPageData();
-//        return $this->getResultPage();
-
-
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Magento_Backend::system_store');
         $resultPage->addBreadcrumb(__('System'), __('System'));
-        $resultPage->addBreadcrumb(__('Manage Regions'), __('Manage Regions'));
+        $resultPage->addBreadcrumb(__('Store Locator'), __('Manage Regions'));
         $resultPage->getConfig()->getTitle()->prepend(__('Manage Regions'));
         return $resultPage;
     }
@@ -49,26 +45,5 @@ class Index extends \Magento\Backend\App\Action
     {
         return $this->_authorization->isAllowed('PandaGroup_StoreLocator::storelocator');
     }
-
-//    public function getResultPage()
-//    {
-//        if (is_null($this->resultPage)) {
-//            $this->resultPage = $this->resultPageFactory->create();
-//        }
-//        return $this->resultPage;
-//    }
-//
-//    protected function _setPageData()
-//    {
-//        $resultPage = $this->getResultPage();
-//        $resultPage->setActiveMenu('PandaGroup_StoreLocator::index');
-//        $resultPage->getConfig()->getTitle()->prepend((__('Store Locator Manager')));
-//
-//        //Add bread crumb
-//        $resultPage->addBreadcrumb(__('Panda Group'), __('Panda Group'));
-//        $resultPage->addBreadcrumb(__('Store Locator'), __('Manage Stores'));
-//
-//        return $this;
-//    }
 
 }

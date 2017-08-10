@@ -19,7 +19,7 @@ class MassDelete extends \Magento\Backend\App\Action
         foreach ($selectedIds as $id) {
             if ($id) {
                 try {
-
+                    $id = (int) $id;
                     $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\States');
                     $model->load($id);
                     $model->delete();

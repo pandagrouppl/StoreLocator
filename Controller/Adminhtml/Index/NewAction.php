@@ -5,9 +5,7 @@ namespace PandaGroup\StoreLocator\Controller\Adminhtml\Index;
 
 class NewAction extends \Magento\Backend\App\Action
 {
-    /**
-     * @var \Magento\Backend\Model\View\Result\ForwardFactory
-     */
+    /** @var \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory */
     protected $resultForwardFactory;
 
     /**

@@ -23,8 +23,8 @@ class StatesRepository implements \PandaGroup\StoreLocator\Api\StatesRepositoryI
     public function __construct(
         \PandaGroup\StoreLocator\Model\ResourceModel\States $resource,
         \PandaGroup\StoreLocator\Model\StatesFactory $statesFactory,
-        \PandaGroup\StoreLocator\Model\ResourceModel\States\CollectionFactory $collectionFactory)
-    {
+        \PandaGroup\StoreLocator\Model\ResourceModel\States\CollectionFactory $collectionFactory
+    ) {
         $this->resource = $resource;
         $this->statesFactory = $statesFactory;
         $this->collectionFactory = $collectionFactory;
@@ -128,6 +128,4 @@ class StatesRepository implements \PandaGroup\StoreLocator\Api\StatesRepositoryI
         return $this->delete($this->getById($stateId));
     }
 
-
 }
-

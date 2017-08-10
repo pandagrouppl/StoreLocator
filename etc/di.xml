@@ -2,6 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
 <!-- LOGGER -->
+
     <type name="PandaGroup\StoreLocator\Logger\Handler">
         <arguments>
             <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
@@ -16,40 +17,8 @@
         </arguments>
     </type>
 
-    <!--<virtualType name="PandaGroupStoreLocatorIdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">-->
-        <!--<arguments>-->
-            <!--<argument name="appliers" xsi:type="array">-->
-                <!--<item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>-->
-                <!--<item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>-->
-            <!--</argument>-->
-        <!--</arguments>-->
-    <!--</virtualType>-->
-    <!--<virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">-->
-        <!--<argument name="collection" xsi:type="object" shared="false">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Collection</argument>-->
-        <!--<argument name="filterPool" xsi:type="object" shared="false">PandaGroupStoreLocatorIdFilterPool</argument>-->
-    <!--</virtualType>-->
-
     <virtualType name="PandaGroupStoreLocatorListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
     <virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Cms\Model\Block\DataProvider"/>
-
-<!-- STORES GRID (without join)-->
-
-    <!--<virtualType name="PandaGroupStoreLocatorFormDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>-->
-
-    <!--<virtualType name="PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">-->
-        <!--<arguments>-->
-            <!--<argument name="mainTable" xsi:type="string">storelocator</argument>-->
-            <!--<argument name="resourceModel" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator</argument>-->
-        <!--</arguments>-->
-    <!--</virtualType>-->
-    <!--<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
-        <!--<arguments>-->
-            <!--<argument name="collections" xsi:type="array">-->
-                <!--<item name="storelocator_index_index_listing_data_source" xsi:type="string">PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator\Grid\Collection</item>-->
-
-            <!--</argument>-->
-        <!--</arguments>-->
-    <!--</type>-->
 
 <!-- STORES GRID -->
 
@@ -69,7 +38,6 @@
         </arguments>
     </type>
 
-
 <!-- REGIONS GRID -->
 
     <virtualType name="PandaGroupStoreLocatorRegionsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
@@ -87,13 +55,6 @@
             </argument>
         </arguments>
     </type>
-
-
-
-
-
-
-
 
  <!--FRONT -->
     <type name="Magento\Framework\App\RouterList">

@@ -45,7 +45,7 @@ class Save extends \Magento\Backend\App\Action
         $data = $this->getRequest()->getPostValue();
         if ($data) {
             $this->logger->info('Start saving new store/edit exist store.');
-            $id = $this->getRequest()->getParam('id');
+            $id = (int) $this->getRequest()->getParam('id');
 
             $stateIdFromStatesDataSource = $this->getRequest()->getPostValue('state_source_id');
             $nameFromStatesDataSource = $this->regionsData->load($stateIdFromStatesDataSource)->getData('name');

@@ -34,8 +34,7 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel implements \Pa
         \PandaGroup\StoreLocator\Model\States $states,
         \PandaGroup\StoreLocator\Logger\Logger $logger,
         array $data = []
-    )
-    {
+    ) {
         parent::__construct($context, $registry);
         $this->_init('PandaGroup\StoreLocator\Model\ResourceModel\StoreLocator');
         $this->configProvider = $configProvider;
@@ -256,10 +255,6 @@ class StoreLocator extends \Magento\Framework\Model\AbstractModel implements \Pa
 
                         // Find region on RegionsData table
                         $foundedRegion = $regionsDataModel->findRegionByName($stateName, $countryName);
-
-//                        if (true === empty($foundedRegion)) {
-//                            $this->sendMessage('Cannot found region for: ' . $address, 'error');
-//                        }
 
                         $isFounded = true;
 

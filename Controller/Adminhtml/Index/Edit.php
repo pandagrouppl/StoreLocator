@@ -15,6 +15,9 @@ class Edit extends \Magento\Backend\App\Action
     /**
      * Edit constructor.
      *
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -28,7 +31,7 @@ class Edit extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        $id = (int)$this->getRequest()->getParam('id');
+        $id = (int) $this->getRequest()->getParam('id');
         $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\StoreLocator');
 
         if ($id) {

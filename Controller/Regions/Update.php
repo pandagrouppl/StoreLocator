@@ -11,14 +11,17 @@ class Update extends \Magento\Framework\App\Action\Action
     protected $storeLocatorModel;
 
     /**
-     * Constructor
+     * Update constructor.
+     *
+     * @param \Magento\Framework\App\Action\Context $context
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
+     * @param \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel
      */
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
         \PandaGroup\StoreLocator\Model\StoreLocator $storeLocatorModel
-    )
-    {
+    ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->storeLocatorModel = $storeLocatorModel;
         parent::__construct($context);

@@ -15,6 +15,9 @@ class Edit extends \Magento\Backend\App\Action
     /**
      * Edit constructor.
      *
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
@@ -28,12 +31,11 @@ class Edit extends \Magento\Backend\App\Action
 
     public function execute()
     {
-        $id = $this->getRequest()->getParam('id');
+        $id = (int) $this->getRequest()->getParam('id');
         $model = $this->_objectManager->create('PandaGroup\StoreLocator\Model\States');
 
         if ($id) {
             $model->load($id);
-//            var_dump($model); exit;
 
             if (!$model->getId()) {
                 $this->messageManager->addErrorMessage(__('This region no longer exists.'));

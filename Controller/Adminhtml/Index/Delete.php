@@ -33,7 +33,7 @@ class Delete extends \Magento\Backend\App\Action
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultRedirectFactory->create();
 
-        $id = (int)$this->getRequest()->getParam('id');
+        $id = (int) $this->getRequest()->getParam('id');
         if ($id) {
             $this->logger->info('Start deleting store.');
             try {

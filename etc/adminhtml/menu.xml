@@ -2,10 +2,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-// One field
-        <!--<add id="PandaGroup_StoreLocator::store_locator" title="Store Locator" module="PandaGroup_StoreLocator" parent="Magento_Backend::other_settings" sortOrder="9539503" resource="PandaGroup_StoreLocator::base"/>-->
-
-// Tab + fields
         <add id="PandaGroup_StoreLocator::store_locator" title="Store Locator" module="PandaGroup_StoreLocator" parent="Magento_Backend::stores" sortOrder="9539503" resource="PandaGroup_StoreLocator::store_locator"/>
         <add id="PandaGroup_StoreLocator::store_locator_list"
              title="Stores"
