@@ -2,7 +2,7 @@
     <referenceContainer name="content">
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Size Charts</argument>
+                <argument translate="true" name="title" xsi:type="string">Contact Us</argument>
             </action>
         </referenceBlock>
     </referenceContainer>

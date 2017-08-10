@@ -7,4 +7,7 @@
         </referenceBlock>
     </referenceContainer>
     <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
+    <referenceContainer name="page.top">
+        <referenceBlock name="breadcrumbs" remove="true" />
+    </referenceContainer>
 </body>
