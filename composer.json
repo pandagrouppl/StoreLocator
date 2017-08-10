@@ -8,7 +8,7 @@
         "AFL-3.0"
     ],
     "require": {
-        "magento/product-community-edition": "2.1.5",
+        "magento/product-community-edition": "2.1.8",
         "PandaGroup/MigrationTool": "dev-master",
         "composer/composer": "@alpha",
         "strategery/magento2-infinitescroll": "^0.2.0",
