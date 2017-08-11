@@ -5,7 +5,6 @@ import * as SizeChart from "./SizeChart";
 import * as Inliners from "./Inliners";
 import * as MadeToMeasure from "./MadeToMeasure";
 import * as newsletter from "./newsletter";
-import * as cart from "./cart";
 import * as LookBook from "./LookBook";
 import * as mills from "./our-mills";
 import * as popups from "./popups";
@@ -23,7 +22,6 @@ export = class Main {
             const madeToMeasure = new MadeToMeasure.MadeToMeasure();
             const newsletter1 = newsletter('subscribe-form-footer');
             const newsletter2 = newsletter('subscribe-form-blog');
-            //const cart1 = cart('product_addtocart_form');
             const popup = new popups.Popups();
             const lookBook = new LookBook.LookBook();
             const sizeChart = new SizeChart.SizeChart();
