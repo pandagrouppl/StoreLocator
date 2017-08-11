@@ -64,37 +64,23 @@
                             </block>
                         </container>
                         <container name="alert.urls" as="alert_urls" label="Alert Urls"/>
-                        <block class="Magento\Catalog\Block\Product\View" name="product.info"
-                               template="product/view/form.phtml" after="alert.urls">
-                            <block class="Magento\Framework\View\Element\Template" name="product.info.form.options"
-                                   as="options_container">
-                                <block class="Magento\Catalog\Block\Product\View"
-                                       name="product.info.options.wrapper.bottom"
-                                       as="product_options_wrapper_bottom"
-                                       template="product/view/options/wrapper/bottom.phtml">
-                                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper"
-                                       as="product_options_wrapper" template="product/view/options/wrapper.phtml">
-                                    <block class="Magento\Catalog\Block\Product\View\Options"
-                                           name="product.info.options"
-                                           as="product_options" template="product/view/options.phtml">
-                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType"
-                                               as="default" template="product/view/options/type/default.phtml"/>
-                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Text" as="text"
-                                               template="product/view/options/type/text.phtml"/>
-                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\File" as="file"
-                                               template="product/view/options/type/file.phtml"/>
-                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Select"
-                                               as="select"
-                                               template="product/view/options/type/select.phtml"/>
-                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Date" as="date"
-                                               template="product/view/options/type/date.phtml"/>
+                        <block class="Magento\Catalog\Block\Product\View" name="product.info" template="product/view/form.phtml" after="alert.urls">
+                            <container name="product.info.form.content" as="product_info_form_content">
+                                <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="product/view/addtocart.phtml"/>
+                            </container>
+                            <block class="Magento\Framework\View\Element\Template" name="product.info.form.options" as="options_container">
+                                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="product/view/options/wrapper.phtml">
+                                    <block class="Magento\Catalog\Block\Product\View\Options" name="product.info.options" as="product_options" template="product/view/options.phtml">
+                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" as="default" template="product/view/options/type/default.phtml"/>
+                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Text" as="text" template="product/view/options/type/text.phtml"/>
+                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\File" as="file" template="product/view/options/type/file.phtml"/>
+                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Select" as="select" template="product/view/options/type/select.phtml"/>
+                                        <block class="Magento\Catalog\Block\Product\View\Options\Type\Date" as="date" template="product/view/options/type/date.phtml"/>
                                     </block>
-                                    <block class="Magento\Framework\View\Element\Html\Calendar" name="html_calendar"
-                                           as="html_calendar" template="Magento_Theme::js/calendar.phtml"/>
+                                    <block class="Magento\Framework\View\Element\Html\Calendar" name="html_calendar" as="html_calendar" template="Magento_Theme::js/calendar.phtml"/>
                                 </block>
-                                    <block class="Magento\Catalog\Block\Product\View"
-                                           name="product.info.addtocart.additional" as="product.info.addtocart"
-                                           template="product/view/addtocart.phtml"/>
+                                <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="product/view/options/wrapper/bottom.phtml">
+                                    <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="product/view/addtocart.phtml"/>
                                 </block>
                             </block>
                         </block>
