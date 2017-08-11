@@ -4,6 +4,7 @@
 
     &__wrapper {
         display: flex;
+        flex-direction: row-reverse;
     }
 
     &__label {
@@ -17,7 +18,7 @@
 
     &__column {
         width: 10px;
-        height: 17px;
+        height: 14px;
         display: block;
         margin-right: 2px;
         border: 1px solid black;

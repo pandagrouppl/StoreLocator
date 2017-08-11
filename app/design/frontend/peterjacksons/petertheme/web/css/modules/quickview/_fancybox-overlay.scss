@@ -103,6 +103,9 @@
             color: #181818;
         }
 
+        &__select-wrapper {
+            width: 100%;
+        }
     }
 
     .product-content {
@@ -130,6 +133,7 @@
 
         &__size-chart {
             margin: 0;
+            padding-top: 2px;
 
             &::before {
                 margin: 0 5px 0 0;
