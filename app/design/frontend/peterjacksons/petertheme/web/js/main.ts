@@ -15,6 +15,7 @@ export = class Main {
     }
 
     start() {
+
         const ourMills = new mills.OurMills();
         $(() =>  {
             const inliners = new Inliners.Inliners();

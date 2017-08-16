@@ -383,6 +383,18 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block size-chart was installed/updated\n";
         $setup->endSetup();
 
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('suits-description');
+        $content = file_get_contents('blocks/suits-description.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Suits description')
+            ->setIdentifier('suits-description')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block suits-description was installed/updated\n";
+        $setup->endSetup();
+
 
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('404-error');

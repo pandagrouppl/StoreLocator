@@ -18,4 +18,12 @@
             padding: 26px 0 0 0;
         }
     }
+
+    &__select-wrapper {
+        height: 36px;
+
+        > div.mage-error {
+            color: red;
+        }
+    }
 }
