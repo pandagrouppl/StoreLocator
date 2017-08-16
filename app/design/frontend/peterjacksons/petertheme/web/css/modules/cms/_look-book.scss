@@ -31,14 +31,20 @@
         transform: translate(0, -50%);
         border: 0;
         cursor: pointer;
+        padding: 20px;
+
 
         &--prev {
             transform: scaleX(-1);
-            left: -5%;
+            left: -6%;
         }
 
         &--next {
-            right: -5%;
+            right: -6%;
+        }
+
+        &:hover {
+            background-color: #d9d9d9;
         }
     }
 }
