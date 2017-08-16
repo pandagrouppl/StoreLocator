@@ -28,18 +28,18 @@
         width: 30px;
         z-index: 100;
         top: 50%;
-        transform: translate(0, -50%);
         border: 0;
         cursor: pointer;
         padding: 20px;
 
 
         &--prev {
-            transform: scaleX(-1);
+            transform: scaleX(-1) translate(0, -50%);
             left: -6%;
         }
 
         &--next {
+            transform: translate(0, -50%);
             right: -6%;
         }
 
