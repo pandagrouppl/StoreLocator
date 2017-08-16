@@ -14,6 +14,7 @@
         "strategery/magento2-infinitescroll": "^0.2.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "PandaGroup/Base": "dev-master",
+        "PandaGroup/Migration": "dev-master",
         "PandaGroup/StoreLocator": "dev-master",
         "PandaGroup/Frontools": "dev-master",
         "PandaGroup/Checkout": "dev-master",
@@ -67,6 +68,10 @@
         {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-migration"
         },
         {
             "type": "vcs",
