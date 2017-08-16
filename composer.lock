@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "e61dbf300735ea33d9ece9e8a35fd1215cee47d1"
+                "reference": "74133830487005f2f23f4b6221b62e967a21d6a3"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-08-09 13:43:24"
+            "time": "2017-08-11 11:49:55"
         },
         {
             "name": "PandaGroup/Checkout",

@@ -1,5 +1,6 @@
 .look-book {
     position: relative;
+    margin-top: 20px;
 
     &__img {
         width: 100%;
@@ -27,17 +28,23 @@
         width: 30px;
         z-index: 100;
         top: 50%;
-        transform: translate(0, -50%);
         border: 0;
         cursor: pointer;
+        padding: 20px;
+
 
         &--prev {
-            transform: scaleX(-1);
-            left: -5%;
+            transform: scaleX(-1) translate(0, -50%);
+            left: -6%;
         }
 
         &--next {
-            right: -5%;
+            transform: translate(0, -50%);
+            right: -6%;
+        }
+
+        &:hover {
+            background-color: #d9d9d9;
         }
     }
 }

@@ -1,3 +1,4 @@
+import "slick";
 import $ = require("jquery");
 
 export class LookBook {

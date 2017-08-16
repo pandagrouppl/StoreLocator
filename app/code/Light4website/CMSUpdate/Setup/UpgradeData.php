@@ -93,10 +93,12 @@ class UpgradeData implements UpgradeDataInterface
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('look-book');
         $content = file_get_contents('pages/look-book.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/look-book.xml', FILE_USE_INCLUDE_PATH);
             $page->setTitle('Look Book')
                 ->setIdentifier('look-book')
                 ->setIsActive(true)
                 ->setPageLayout('1column')
+                ->setLayoutUpdateXml($layoutContent)
                 ->setStores(array(0))
                 ->setContent($content)
                 ->save();
