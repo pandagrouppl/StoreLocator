@@ -109,10 +109,12 @@ class UpgradeData implements UpgradeDataInterface
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('made-to-measure');
         $content = file_get_contents('pages/made-to-measure.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/made-to-measure.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Made To Measure')
             ->setIdentifier('made-to-measure')
             ->setIsActive(true)
-            ->setPageLayout('1column')
+            ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();
