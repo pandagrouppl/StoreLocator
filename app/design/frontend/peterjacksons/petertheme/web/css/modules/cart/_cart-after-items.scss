@@ -13,6 +13,33 @@
 
     &__right {
         flex: 1 0 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media all and (max-width: $cms-sm-brkpt) {
+            flex: 1 0 100%;
+            justify-content: center;
+        }
+
+        .after-items__checkout-button > button {
+            @media all and (max-width: $cms-sm-brkpt) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__bottom {
+        flex: 1;
+        margin: 20px 0 50px;
+        padding: 20px 0 20px 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
     }
 
     &__discount {
@@ -27,6 +54,19 @@
 
         &-fieldset {
             display: flex;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                flex-direction: column;
+            }
+
+            .primary {
+                display: flex;
+
+                > button {
+                    flex-basis: 100%;
+                    justify-content: center;
+                }
+            }
         }
 
         &-input {
@@ -38,12 +78,15 @@
             @include button-grey(0 30px, 0 0 0 5px, 16px);
             border: 1px solid #b4b2b2;
             color: #666666;
-            margin: 0 0 0 5px;
             height: 40px;
 
             &:hover {
                 background-color: white;
                 color: #181818;
+            }
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                margin: 10px 0 0 0;
             }
         }
     }
@@ -59,6 +102,9 @@
 
         &-icon {
             @include sprite(buttonarrowleft);
+            width: 9px;
+            height: 15px;
+            background-position: -309px -103px;
         }
     }
 
@@ -70,6 +116,7 @@
         .grand.totals {
             display: flex;
             align-items: center;
+            margin: 30px 0 30px 0;
 
             th.mark {
                 margin-right: 10px;
@@ -79,6 +126,10 @@
 
     &__checkout-button {
         text-align: right;
+
+        @media all and (max-width: $cms-sm-brkpt) {
+            flex-basis: 100%;
+        }
 
         > button {
             @include button-blue(0, 10px 0, 15px, normal);

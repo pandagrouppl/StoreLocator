@@ -1,13 +1,23 @@
 .items-table {
     width: 100%;
     letter-spacing: 1px;
+    margin-top: 40px;
 
     &__row {
         display: flex;
         border-bottom: 1px solid #DDD;
 
+        @media all and (max-width: $cms-sm-brkpt) {
+            border-bottom: 0px;
+            border-top: 1px solid #DDD;
+        }
+
         &--header {
             font-size: 20px;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                display: none;
+            }
 
             > div {
                 padding: 10px 5px;
@@ -95,6 +105,7 @@
             &-delivery {
                 font-size: 12px;
                 font-style: italic;
+                color: #666;
             }
 
         }
