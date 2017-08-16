@@ -16,6 +16,18 @@ define([
         ajaxSubmit: function(form) {
             var self = this;
             $(self.options.minicartSelector).trigger('contentLoading');
+
+            /* Trigger content loading from quickview */
+            if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
+                var eventLoading = new CustomEvent('miniCartContentLoading', {
+                    detail: {
+                        minicartSelector: self.options.minicartSelector,
+                        status: 'contentLoading'
+                    }
+                });
+                parent.document.dispatchEvent(eventLoading);
+            }
+
             self.disableAddToCartButton(form);
 
             $.ajax({
@@ -32,19 +44,20 @@ define([
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
-
                     /* Quick view close & update minicart */
                     if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
                         var parent = window.parent;
                         var body = parent.document.getElementsByTagName('BODY')[0];
                         body.classList.remove('fancybox-lock');
                         body.style.marginRight = null;
-
-                        const event = new CustomEvent('quickView', {
+                        var event = new CustomEvent('quickView', {
                             detail: {
                                 method: 'post',
-                                action: form.attr('action')
+                                action: form.attr('action'),
+                                minicartSelector: self.options.minicartSelector,
+                                status: 'contentUpdated'
                             }
+
                         });
                         parent.document.dispatchEvent(event);
                         parent.document.querySelector('.fancybox-overlay').remove();

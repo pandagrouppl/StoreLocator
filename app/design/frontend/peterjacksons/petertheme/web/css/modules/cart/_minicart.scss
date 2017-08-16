@@ -1,7 +1,18 @@
+.ui-effects-wrapper {
+        position: absolute !important;
+        top: 55px;
+        right: 10px;
+}
+
+.header-right__minicart {
+    > .ui-widget {
+        position: absolute;
+        top: 55px;
+        right: 10px;
+    }
+}
+
 .minicart {
-    position: absolute;
-    top: 55px;
-    right: 10px;
     background: #fff;
     width: 268px;
     border: 1px solid #d7d7d7;
