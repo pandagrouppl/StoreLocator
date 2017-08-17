@@ -2,12 +2,28 @@
 
     &--list {
         width: 48%;
-        margin: 0 1% 20px 1%;
+        margin: 20px 1% 20px 1%;
+        max-width: 303px;
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 49%;
+            margin: 10px;
+        }
     }
 
     &--grid {
         width: 31%;
         margin: 40px 1% 40px 1%;
+
+        @media all and (max-width: $sm-breakpoint) {
+            width: 32%;
+            margin: 20px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 49%;
+            margin: 10px;
+        }
     }
 
     &__img {
@@ -92,6 +108,14 @@
         font-size: 17px;
         font-weight: 500;
         height: 30px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            height: 40px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            height: 55px;
+        }
 
         &:hover {
             color: $grey-dark;
