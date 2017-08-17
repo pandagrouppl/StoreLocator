@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "d0b35a3a20cc2082234c76186701790a0066a745"
+                "reference": "6d43986737959712b81b0775ef60eb473bd99ae7"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-17 11:44:23"
+            "time": "2017-08-17 13:18:10"
         },
         {
             "name": "PandaGroup/Frontools",
