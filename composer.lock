@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c6a2783d212d23d902be09458a5a0623",
-    "content-hash": "d46cc46afc298fe81ed55fece2c699b5",
+    "hash": "c0836fa99c67a85ecd3bb32ed01659b4",
+    "content-hash": "6e4ed4867fac1eb2a7cf47108fa39d19",
     "packages": [
         {
             "name": "Amasty/Base",
@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "74133830487005f2f23f4b6221b62e967a21d6a3"
+                "reference": "ca534a5bd6b9210936a005971615903e4091eb4d"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-08-11 11:49:55"
+            "time": "2017-08-16 05:30:51"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "4f6db69b85404d2430a7881cc77ec1deee9168a7"
+                "reference": "f5d6ea5ce16343221f05c42c697582de35e33821"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-09 14:03:20"
+            "time": "2017-08-17 10:37:12"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -151,6 +151,21 @@
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
             "time": "2017-08-08 12:26:43"
+        },
+        {
+            "name": "PandaGroup/Migration",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-migration",
+                "reference": "08ed497a915f7534e6aad14fe9db1bb1f0011973"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Migration module for Peter Jackson",
+            "time": "2017-08-16 09:35:59"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -9620,6 +9635,7 @@
         "pandagroup/migrationtool": 20,
         "composer/composer": 15,
         "pandagroup/base": 20,
+        "pandagroup/migration": 20,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
