@@ -2,4 +2,31 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+
+    &-sorter {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .sorter-action {
+        display: flex;
+        margin-left: 5px;
+    }
+
+    .sorter-action::before {
+        font-size: 35px;
+        color: #8f8f8f;
+    }
+
+    .sorter-action.sort-asc:before {
+        content: '\2193';
+    }
+
+    .sorter-action.sort-desc:before {
+        content: '\2191';
+    }
+
+    .sorter-action > span {
+        display: none;
+    }
 }
