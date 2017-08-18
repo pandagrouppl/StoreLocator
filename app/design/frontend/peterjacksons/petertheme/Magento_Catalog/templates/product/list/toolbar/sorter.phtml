@@ -16,15 +16,15 @@
 use Magento\Catalog\Model\Product\ProductList\Toolbar;
 ?>
 <div class="toolbar-sorter sorter">
-<!--    --><?php //if ($block->getCurrentDirection() == 'desc'): ?>
-<!--        <a title="--><?php ///* @escapeNotVerified */ echo __('Set Ascending Direction') ?><!--" href="#" class="action sorter-action sort-desc" data-role="direction-switcher" data-value="asc">-->
-<!--            <span>--><?php ///* @escapeNotVerified */ echo __('Set Ascending Direction') ?><!--</span>-->
-<!--        </a>-->
-<!--    --><?php //else: ?>
-<!--        <a title="--><?php ///* @escapeNotVerified */ echo __('Set Descending Direction') ?><!--" href="#" class="action sorter-action sort-asc" data-role="direction-switcher" data-value="desc">-->
-<!--            <span>--><?php ///* @escapeNotVerified */ echo __('Set Descending Direction') ?><!--</span>-->
-<!--        </a>-->
-<!--    --><?php //endif; ?>
+    <?php if ($block->getCurrentDirection() == 'desc'): ?>
+        <a title="<?php /* @escapeNotVerified */ echo __('Set Ascending Direction') ?>" href="#" class="action sorter-action sort-desc" data-role="direction-switcher" data-value="asc">
+            <span><?php /* @escapeNotVerified */ echo __('Set Ascending Direction') ?></span>
+        </a>
+    <?php else: ?>
+        <a title="<?php /* @escapeNotVerified */ echo __('Set Descending Direction') ?>" href="#" class="action sorter-action sort-asc" data-role="direction-switcher" data-value="desc">
+            <span><?php /* @escapeNotVerified */ echo __('Set Descending Direction') ?></span>
+        </a>
+    <?php endif; ?>
     <div class="select__wrapper">
         <figure class="select__arrow"></figure>
         <select id="sorter" data-role="sorter" class="sorter-options select__select">

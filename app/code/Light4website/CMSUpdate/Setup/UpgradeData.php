@@ -426,6 +426,18 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block popup-success was installed/updated\n";
         $setup->endSetup();
 
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('shipping-info-bar');
+        $content = file_get_contents('blocks/shipping-info-bar.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Shipping Info')
+            ->setIdentifier('shipping-info-bar')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block shipping-info-bar was installed/updated\n";
+        $setup->endSetup();
+
         echo "Finish instalation/updating pages and blocks";
     }
 }

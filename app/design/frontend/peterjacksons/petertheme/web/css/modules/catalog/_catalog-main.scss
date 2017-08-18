@@ -51,9 +51,26 @@
 .catalog-main {
 
     &__description {
-        padding: 40px 20px;
+        padding: 10px 20px 20px 20px;
         text-align: center;
         background: #f1f0f0;
+
+        h1 {
+            color: #232323;
+            font-size: 49px;
+            font-weight: 400;
+            font-family: league_gothic;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #333;
+        }
+
+        > div {
+            color: #333;
+        }
     }
 
     &__bottom-info {
@@ -73,6 +90,12 @@
             line-height: 150%;
             padding: 8px 0 8px 0;
             margin: 0;
+        }
+    }
+
+    .toolbar {
+        @media all and (max-width: 860px) {
+            display: none;
         }
     }
 }

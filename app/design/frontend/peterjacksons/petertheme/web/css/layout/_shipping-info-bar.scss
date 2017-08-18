@@ -1,0 +1,51 @@
+.shipping-info-bar {
+    color: #807f7f;
+    background-color: #e5e5e5;
+    text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: -3px;
+    font-weight: 500;
+
+    @media all and (max-width: $xs-breakpoint) {
+        font-size: 13px;
+    }
+
+    &__wrapper {
+        max-width: 1260px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        line-height: 42px;
+
+        @media all and (max-width: $md-breakpoint) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .free-shipping {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            background: url("http://www.peterjacksons.com/skin/frontend/peter_jackson_new/may2015/images/shipping-ico2.png") no-repeat transparent top left;
+            width: 50px;
+            height: 30px;
+        }
+    }
+
+    .no-return {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            background: url('http://www.peterjacksons.com/skin/frontend/peter_jackson_new/may2015/images/shipping2-ico2.png') no-repeat transparent top center;
+            width: 50px;
+            height: 30px;
+        }
+    }
+}
