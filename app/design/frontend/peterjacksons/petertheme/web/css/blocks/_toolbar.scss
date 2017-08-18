@@ -11,10 +11,11 @@
     .sorter-action {
         display: flex;
         margin-left: 5px;
+        align-items: center;
     }
 
     .sorter-action::before {
-        font-size: 35px;
+        font-size: 30px;
         color: #8f8f8f;
     }
 
