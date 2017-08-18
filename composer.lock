@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "6d43986737959712b81b0775ef60eb473bd99ae7"
+                "reference": "7e0c7c5cbb0d183bcf13772ebb66a2e6a011443d"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-17 13:18:10"
+            "time": "2017-08-18 09:14:59"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -158,14 +158,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration",
-                "reference": "08ed497a915f7534e6aad14fe9db1bb1f0011973"
+                "reference": "0865bed3f6fd57ed354c5ac3befe69e5df6805b3"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Migration module for Peter Jackson",
-            "time": "2017-08-16 09:35:59"
+            "time": "2017-08-18 09:11:14"
         },
         {
             "name": "PandaGroup/MigrationTool",
