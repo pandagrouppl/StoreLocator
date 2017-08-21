@@ -169,11 +169,12 @@ class UpgradeData implements UpgradeDataInterface
 
         $page = $this->_pageFactory->create()->load('schedule-your-appointment');
         $content = file_get_contents('pages/schedule-your-appointment.phtml', FILE_USE_INCLUDE_PATH);
-        echo "Page our-schedule-your-appointment was installed/updated\n";
+        $layoutContent = file_get_contents('pages/schedule-your-appointment.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Custom Tailored Made Suit Appointments')
             ->setIdentifier('schedule-your-appointment')
             ->setIsActive(true)
             ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();

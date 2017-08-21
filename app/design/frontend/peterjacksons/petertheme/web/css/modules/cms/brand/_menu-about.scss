@@ -56,6 +56,12 @@
                 font-style: italic;
                 text-transform: none;
             }
+
+            &--m2m {
+                img {
+                    max-width: 300px;
+                }
+            }
         }
     }
 
