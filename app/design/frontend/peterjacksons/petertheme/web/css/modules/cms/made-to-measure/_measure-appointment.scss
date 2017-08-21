@@ -1,0 +1,30 @@
+.measure-appointment {
+    text-align: center;
+
+    &__title {
+        font-size: 34px;
+        font-family: "GothamBoldRegular", sans-serif;
+        color: #363636;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 0.2em;
+        padding: 40px 0 40px 0;
+    }
+
+    &__text {
+        font-family: 'Roboto','Times New Roman',arial,sans-serif;
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: normal;
+        line-height: 150%;
+        padding-left: 8%;
+        padding-right: 8%;
+        text-align: center;
+    }
+
+    &__app {
+        border: 1px solid #e3e3e3;
+        margin: 50px 0 50px 0;
+    }
+}
+

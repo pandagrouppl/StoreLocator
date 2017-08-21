@@ -128,14 +128,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "7e0c7c5cbb0d183bcf13772ebb66a2e6a011443d"
+                "reference": "971025a9436ae388fce7f874b66aac0583d6a65d"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-18 09:14:59"
+            "time": "2017-08-21 08:16:11"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -158,14 +158,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration",
-                "reference": "f51e3cbe6dfd7e7b6de314b8d13207ab1e54a988"
+                "reference": "45aa51e0a1e618d559a4b591e13b657787e8d500"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Migration module for Peter Jackson",
-            "time": "2017-08-18 09:41:28"
+            "time": "2017-08-21 09:24:54"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -173,7 +173,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration-tool",
-                "reference": "bf48619841ae27000dfb821dc900ecbff2512db6"
+                "reference": "5a5ce1012fff0558a5984389fe76c8d133daf9f0"
             },
             "require": {
                 "magento/framework": "~100.1",
@@ -194,7 +194,7 @@
                 ]
             },
             "description": "Migration Tool",
-            "time": "2017-06-20 09:30:55"
+            "time": "2017-08-18 12:24:31"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -217,12 +217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "37c280936181f70866c2f85ae9912d40802d9c29"
+                "reference": "92aed19d837be0ea743f55330d8f92b6c7ee51e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/37c280936181f70866c2f85ae9912d40802d9c29",
-                "reference": "37c280936181f70866c2f85ae9912d40802d9c29",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/92aed19d837be0ea743f55330d8f92b6c7ee51e9",
+                "reference": "92aed19d837be0ea743f55330d8f92b6c7ee51e9",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -234,7 +234,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-08-10 14:57:24"
+            "time": "2017-08-21 10:23:44"
         },
         {
             "name": "braintree/braintree_php",

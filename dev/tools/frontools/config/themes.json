@@ -2,7 +2,7 @@
     "peterjacksons": {
         "src": "app/design/frontend/peterjacksons/petertheme",
         "dest": "pub/static/frontend/peterjacksons/petertheme",
-        "locale": ["en_US"],
+        "locale": ["en_AU", "en_US"],
         "postcss": ["plugins.autoprefixer()"],
         "modules": {
             "PandaGroup_Careers": "app/code/PandaGroup/Careers/view/frontend/web",
