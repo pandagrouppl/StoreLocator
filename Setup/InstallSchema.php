@@ -483,306 +483,306 @@ class InstallSchema implements InstallSchemaInterface
             $setup->getConnection()->createTable($storeLocatorTable);
         }
 
-        /**
-         * Create table 'storelocator_image'
-         */
-        $tableExistChecker = $setup->getTable('storelocator_image');
-        if ($setup->tableExists($tableExistChecker) !== true) {
-
-            $storeLocatorImageTable = $setup->getConnection()->newTable(
-                $setup->getTable('storelocator_image')
-            )->addColumn(
-                'image_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-                'Image Id'
-            )->addColumn(
-                'image_delete',
-                Table::TYPE_INTEGER,
-                null,
-                [],
-                'Image Delete'
-            )->addColumn(
-                'options',
-                Table::TYPE_INTEGER,
-                null,
-                [],
-                'Options'
-            )->addColumn(
-                'name',
-                Table::TYPE_TEXT,
-                255,
-                [],
-                'Name'
-            )->addColumn(
-                'statuses',
-                Table::TYPE_INTEGER,
-                null,
-                [],
-                'Statuses'
-            )->addColumn(
-                'storelocator_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['unsigned' => true, 'nullable' => false],
-                'Storelocator Id'
-            )->addForeignKey(
-                $setup->getFkName(
-                    'storelocator_image',
-                    'storelocator_id',
-                    'storelocator',
-                    'storelocator_id'
-                ),
-                'storelocator_id',
-                $setup->getTable('storelocator'),
-                'storelocator_id',
-                Table::ACTION_CASCADE
-            )->setComment(
-                'StoreLocator Image'
-            );
-
-            $setup->getConnection()->createTable($storeLocatorImageTable);
-        }
-
-        /**
-         * Create table 'storelocator_value'
-         */
-        $tableExistChecker = $setup->getTable('storelocator_value');
-        if ($setup->tableExists($tableExistChecker) !== true) {
-
-            $storeLocatorValueTable = $setup->getConnection()->newTable(
-                $setup->getTable('storelocator_value')
-            )->addColumn(
-                'value_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-                'Value Id'
-            )->addColumn(
-                'storelocator_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['unsigned' => true, 'nullable' => false],
-                'StoreLocator Id'
-            )->addColumn(
-                'store_id',
-                Table::TYPE_SMALLINT,
-                5,
-                ['unsigned' => true, 'nullable' => false],
-                'Store Id'
-            )->addColumn(
-                'attribute_code',
-                Table::TYPE_TEXT,
-                63,
-                ['default' => '', 'nullable' => false],
-                'Attribute Code'
-            )->addColumn(
-                'value',
-                Table::TYPE_TEXT,
-                null,
-                ['nullable' => false],
-                'Value'
-            )->addIndex(
-                $setup->getIdxName(
-                    $tableExistChecker,
-                    ['storelocator_id', 'store_id', 'attribute_code'],
-                    AdapterInterface::INDEX_TYPE_UNIQUE
-                ),
-                ['storelocator_id', 'store_id', 'attribute_code'],
-                ['type' => AdapterInterface::INDEX_TYPE_UNIQUE]
-            )->addForeignKey(
-                $setup->getFkName(
-                    'storelocator_value',
-                    'storelocator_id',
-                    'storelocator',
-                    'storelocator_id'
-                ),
-                'storelocator_id',
-                $setup->getTable('storelocator'),
-                'storelocator_id',
-                Table::ACTION_CASCADE
-            )->addForeignKey(
-                $setup->getFkName(
-                    'storelocator_value',
-                    'store_id',
-                    'core/store',
-                    'store_id'
-                ),
-                'store_id',
-                $setup->getTable('core/store'),
-                'store_id',
-                Table::ACTION_CASCADE
-            )->setComment(
-                'StoreLocator Value'
-            );
-
-            $setup->getConnection()->createTable($storeLocatorValueTable);
-        }
-
-        /**
-         * Create table 'storelocator_tag'
-         */
-        $tableExistChecker = $setup->getTable('storelocator_tag');
-        if ($setup->tableExists($tableExistChecker) !== true) {
-
-            $storeLocatorTagTable = $setup->getConnection()->newTable(
-                $setup->getTable('storelocator_tag')
-            )->addColumn(
-                'tag_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-                'Tag Id'
-            )->addColumn(
-                'storelocator_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['unsigned' => true, 'nullable' => false],
-                'StoreLocator Id'
-            )->addColumn(
-                'value',
-                Table::TYPE_TEXT,
-                255,
-                [],
-                'Value'
-            )->addIndex(
-                $setup->getIdxName(
-                    $tableExistChecker,
-                    'storelocator_id'
-                ),
-                'storelocator_id'
-            )->addForeignKey(
-                $setup->getFkName(
-                    'storelocator_tag',
-                    'storelocator_id',
-                    'storelocator',
-                    'storelocator_id'
-                ),
-                'storelocator_id',
-                $setup->getTable('storelocator'),
-                'storelocator_id',
-                Table::ACTION_CASCADE
-            )->setComment(
-                'StoreLocator Tag'
-            );
-
-            $setup->getConnection()->createTable($storeLocatorTagTable);
-        }
-
-        /**
-         * Create table 'storelocator_specialday'
-         */
-        $tableExistChecker = $setup->getTable('storelocator_specialday');
-        if ($setup->tableExists($tableExistChecker) !== true) {
-
-            $storeLocatorSpecialDayTable = $setup->getConnection()->newTable(
-                $setup->getTable('storelocator_specialday')
-            )->addColumn(
-                'storelocator_specialday_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-                'Special Day Id'
-            )->addColumn(
-                'specialday_name',
-                Table::TYPE_TEXT,
-                255,
-                ['default' => '', 'nullable' => false],
-                'Specialday Name'
-            )->addColumn(
-                'store_id',
-                Table::TYPE_TEXT,
-                null,
-                ['nullable' => false],
-                'Store Id'
-            )->addColumn(
-                'date',
-                Table::TYPE_DATE,
-                null,
-                ['nullable' => false],
-                'Date'
-            )->addColumn(
-                'specialday_date_to',
-                Table::TYPE_DATE,
-                null,
-                ['nullable' => false],
-                'Special Day Date To'
-            )->addColumn(
-                'specialday_time_open',
-                Table::TYPE_TEXT,
-                5,
-                ['nullable' => false],
-                'Special Day Date Open'
-            )->addColumn(
-                'specialday_time_close',
-                Table::TYPE_TEXT,
-                5,
-                ['nullable' => false],
-                'Special Day Date Close'
-            )->addColumn(
-                'comment',
-                Table::TYPE_TEXT,
-                255,
-                ['default' => null, 'nullable' => true],
-                'Comment'
-            )->setComment(
-                'StoreLocator Special Day'
-            );
-
-            $setup->getConnection()->createTable($storeLocatorSpecialDayTable);
-        }
-
-        /**
-         * Create table 'storelocator_holiday'
-         */
-        $tableExistChecker = $setup->getTable('storelocator_holiday');
-        if ($setup->tableExists($tableExistChecker) !== true) {
-
-            $storeLocatorHolidayTable = $setup->getConnection()->newTable(
-                $setup->getTable('storelocator_holiday')
-            )->addColumn(
-                'storelocator_holiday_id',
-                Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
-                'StoreLocator Holiday Id'
-            )->addColumn(
-                'holiday_name',
-                Table::TYPE_TEXT,
-                255,
-                ['default' => '', 'nullable' => false],
-                'Holiday Name'
-            )->addColumn(
-                'store_id',
-                Table::TYPE_TEXT,
-                null,
-                ['nullable' => false],
-                'Store Id'
-            )->addColumn(
-                'date',
-                Table::TYPE_DATE,
-                null,
-                ['nullable' => false],
-                'Date'
-            )->addColumn(
-                'holiday_date_to',
-                Table::TYPE_DATE,
-                null,
-                ['nullable' => false],
-                'Holiday Date To'
-            )->addColumn(
-                'comment',
-                Table::TYPE_TEXT,
-                255,
-                ['default' => null, 'nullable' => true],
-                'Comment'
-            )->setComment(
-                'StoreLocator Holiday'
-            );
-
-            $setup->getConnection()->createTable($storeLocatorHolidayTable);
-        }
+//        /**
+//         * Create table 'storelocator_image'
+//         */
+//        $tableExistChecker = $setup->getTable('storelocator_image');
+//        if ($setup->tableExists($tableExistChecker) !== true) {
+//
+//            $storeLocatorImageTable = $setup->getConnection()->newTable(
+//                $setup->getTable('storelocator_image')
+//            )->addColumn(
+//                'image_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+//                'Image Id'
+//            )->addColumn(
+//                'image_delete',
+//                Table::TYPE_INTEGER,
+//                null,
+//                [],
+//                'Image Delete'
+//            )->addColumn(
+//                'options',
+//                Table::TYPE_INTEGER,
+//                null,
+//                [],
+//                'Options'
+//            )->addColumn(
+//                'name',
+//                Table::TYPE_TEXT,
+//                255,
+//                [],
+//                'Name'
+//            )->addColumn(
+//                'statuses',
+//                Table::TYPE_INTEGER,
+//                null,
+//                [],
+//                'Statuses'
+//            )->addColumn(
+//                'storelocator_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['unsigned' => true, 'nullable' => false],
+//                'Storelocator Id'
+//            )->addForeignKey(
+//                $setup->getFkName(
+//                    'storelocator_image',
+//                    'storelocator_id',
+//                    'storelocator',
+//                    'storelocator_id'
+//                ),
+//                'storelocator_id',
+//                $setup->getTable('storelocator'),
+//                'storelocator_id',
+//                Table::ACTION_CASCADE
+//            )->setComment(
+//                'StoreLocator Image'
+//            );
+//
+//            $setup->getConnection()->createTable($storeLocatorImageTable);
+//        }
+//
+//        /**
+//         * Create table 'storelocator_value'
+//         */
+//        $tableExistChecker = $setup->getTable('storelocator_value');
+//        if ($setup->tableExists($tableExistChecker) !== true) {
+//
+//            $storeLocatorValueTable = $setup->getConnection()->newTable(
+//                $setup->getTable('storelocator_value')
+//            )->addColumn(
+//                'value_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+//                'Value Id'
+//            )->addColumn(
+//                'storelocator_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['unsigned' => true, 'nullable' => false],
+//                'StoreLocator Id'
+//            )->addColumn(
+//                'store_id',
+//                Table::TYPE_SMALLINT,
+//                5,
+//                ['unsigned' => true, 'nullable' => false],
+//                'Store Id'
+//            )->addColumn(
+//                'attribute_code',
+//                Table::TYPE_TEXT,
+//                63,
+//                ['default' => '', 'nullable' => false],
+//                'Attribute Code'
+//            )->addColumn(
+//                'value',
+//                Table::TYPE_TEXT,
+//                null,
+//                ['nullable' => false],
+//                'Value'
+//            )->addIndex(
+//                $setup->getIdxName(
+//                    $tableExistChecker,
+//                    ['storelocator_id', 'store_id', 'attribute_code'],
+//                    AdapterInterface::INDEX_TYPE_UNIQUE
+//                ),
+//                ['storelocator_id', 'store_id', 'attribute_code'],
+//                ['type' => AdapterInterface::INDEX_TYPE_UNIQUE]
+//            )->addForeignKey(
+//                $setup->getFkName(
+//                    'storelocator_value',
+//                    'storelocator_id',
+//                    'storelocator',
+//                    'storelocator_id'
+//                ),
+//                'storelocator_id',
+//                $setup->getTable('storelocator'),
+//                'storelocator_id',
+//                Table::ACTION_CASCADE
+//            )->addForeignKey(
+//                $setup->getFkName(
+//                    'storelocator_value',
+//                    'store_id',
+//                    'core/store',
+//                    'store_id'
+//                ),
+//                'store_id',
+//                $setup->getTable('core/store'),
+//                'store_id',
+//                Table::ACTION_CASCADE
+//            )->setComment(
+//                'StoreLocator Value'
+//            );
+//
+//            $setup->getConnection()->createTable($storeLocatorValueTable);
+//        }
+//
+//        /**
+//         * Create table 'storelocator_tag'
+//         */
+//        $tableExistChecker = $setup->getTable('storelocator_tag');
+//        if ($setup->tableExists($tableExistChecker) !== true) {
+//
+//            $storeLocatorTagTable = $setup->getConnection()->newTable(
+//                $setup->getTable('storelocator_tag')
+//            )->addColumn(
+//                'tag_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+//                'Tag Id'
+//            )->addColumn(
+//                'storelocator_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['unsigned' => true, 'nullable' => false],
+//                'StoreLocator Id'
+//            )->addColumn(
+//                'value',
+//                Table::TYPE_TEXT,
+//                255,
+//                [],
+//                'Value'
+//            )->addIndex(
+//                $setup->getIdxName(
+//                    $tableExistChecker,
+//                    'storelocator_id'
+//                ),
+//                'storelocator_id'
+//            )->addForeignKey(
+//                $setup->getFkName(
+//                    'storelocator_tag',
+//                    'storelocator_id',
+//                    'storelocator',
+//                    'storelocator_id'
+//                ),
+//                'storelocator_id',
+//                $setup->getTable('storelocator'),
+//                'storelocator_id',
+//                Table::ACTION_CASCADE
+//            )->setComment(
+//                'StoreLocator Tag'
+//            );
+//
+//            $setup->getConnection()->createTable($storeLocatorTagTable);
+//        }
+//
+//        /**
+//         * Create table 'storelocator_specialday'
+//         */
+//        $tableExistChecker = $setup->getTable('storelocator_specialday');
+//        if ($setup->tableExists($tableExistChecker) !== true) {
+//
+//            $storeLocatorSpecialDayTable = $setup->getConnection()->newTable(
+//                $setup->getTable('storelocator_specialday')
+//            )->addColumn(
+//                'storelocator_specialday_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+//                'Special Day Id'
+//            )->addColumn(
+//                'specialday_name',
+//                Table::TYPE_TEXT,
+//                255,
+//                ['default' => '', 'nullable' => false],
+//                'Specialday Name'
+//            )->addColumn(
+//                'store_id',
+//                Table::TYPE_TEXT,
+//                null,
+//                ['nullable' => false],
+//                'Store Id'
+//            )->addColumn(
+//                'date',
+//                Table::TYPE_DATE,
+//                null,
+//                ['nullable' => false],
+//                'Date'
+//            )->addColumn(
+//                'specialday_date_to',
+//                Table::TYPE_DATE,
+//                null,
+//                ['nullable' => false],
+//                'Special Day Date To'
+//            )->addColumn(
+//                'specialday_time_open',
+//                Table::TYPE_TEXT,
+//                5,
+//                ['nullable' => false],
+//                'Special Day Date Open'
+//            )->addColumn(
+//                'specialday_time_close',
+//                Table::TYPE_TEXT,
+//                5,
+//                ['nullable' => false],
+//                'Special Day Date Close'
+//            )->addColumn(
+//                'comment',
+//                Table::TYPE_TEXT,
+//                255,
+//                ['default' => null, 'nullable' => true],
+//                'Comment'
+//            )->setComment(
+//                'StoreLocator Special Day'
+//            );
+//
+//            $setup->getConnection()->createTable($storeLocatorSpecialDayTable);
+//        }
+//
+//        /**
+//         * Create table 'storelocator_holiday'
+//         */
+//        $tableExistChecker = $setup->getTable('storelocator_holiday');
+//        if ($setup->tableExists($tableExistChecker) !== true) {
+//
+//            $storeLocatorHolidayTable = $setup->getConnection()->newTable(
+//                $setup->getTable('storelocator_holiday')
+//            )->addColumn(
+//                'storelocator_holiday_id',
+//                Table::TYPE_INTEGER,
+//                null,
+//                ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true],
+//                'StoreLocator Holiday Id'
+//            )->addColumn(
+//                'holiday_name',
+//                Table::TYPE_TEXT,
+//                255,
+//                ['default' => '', 'nullable' => false],
+//                'Holiday Name'
+//            )->addColumn(
+//                'store_id',
+//                Table::TYPE_TEXT,
+//                null,
+//                ['nullable' => false],
+//                'Store Id'
+//            )->addColumn(
+//                'date',
+//                Table::TYPE_DATE,
+//                null,
+//                ['nullable' => false],
+//                'Date'
+//            )->addColumn(
+//                'holiday_date_to',
+//                Table::TYPE_DATE,
+//                null,
+//                ['nullable' => false],
+//                'Holiday Date To'
+//            )->addColumn(
+//                'comment',
+//                Table::TYPE_TEXT,
+//                255,
+//                ['default' => null, 'nullable' => true],
+//                'Comment'
+//            )->setComment(
+//                'StoreLocator Holiday'
+//            );
+//
+//            $setup->getConnection()->createTable($storeLocatorHolidayTable);
+//        }
 
         $setup->endSetup();
     }
