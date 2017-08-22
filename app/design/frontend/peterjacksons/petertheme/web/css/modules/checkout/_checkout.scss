@@ -23,12 +23,17 @@
     }
 
     &__steps-and-sidebar {
+        margin-top: 22px;
         display: flex;
         align-items: flex-start;
+
+        @media all and (max-width: $lg-breakpoint) {
+            flex-wrap: wrap;
+        }
     }
 
     &__steps {
-        flex: 1;
+        width: 100%;
     }
 
     &__sidebar {
@@ -36,32 +41,52 @@
         background-color: #efefef;
         padding: 15px 15px 40px 15px;
         line-height: 1.3em;
+        margin-left: 20px;
+
+        @media all and (max-width: $lg-breakpoint) {
+            margin-left: 0;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            margin-top: 15px;
+            flex: 1;
+        }
     }
 
     &__sidebar-title {
-        font-weight: bold;
+        font-weight: 500;
         padding: 10px 0;
         text-align: center;
         border-bottom: 1px solid #ddd;
         margin-bottom: 30px;
-        font-size: 22px;
-        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+    &__shipping-method {
+        flex: 1 0 50%;
+    }
+
+    &__shipping-address {
+        padding-right: 10px;
+        flex: 1 0 50%;
     }
 
     &__steps-list {
         display: flex;
-        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            flex-wrap: wrap;
+        }
     }
 
     &__step-wrapper {
         display: flex;
         align-items: center;
-        text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 500;
         padding: 27px 0;
         border-bottom: 1px solid #ddd;
         margin-bottom: 30px;
-
     }
 
     &__step-number {
@@ -151,6 +176,13 @@
 
     &__shipping {
 
+        &-address {
+
+            @media all and (max-width: $sm-breakpoint) {
+                flex-basis: 100%;
+            }
+        }
+
         &-options-wrapper {
             color: #555;
         }
@@ -160,10 +192,6 @@
             border: 2px dashed #ddd;
             padding: 15px;
             border-radius: 5px;
-
-            &--active {
-
-            }
         }
 
         &-name {
@@ -190,10 +218,6 @@
 
         &-button {
             @include button-blue(9px 18px, 3px 7px 3px 0, 12px);
-
-            &--active {
-
-            }
         }
 
     }
@@ -243,37 +267,16 @@
     }
 }
 
-@media screen and (min-width: $lg-breakpoint) {
-    .checkout {
-
-        &__steps-list {
-
-            > li {
-                flex: 1 0 33%;
-                margin-bottom: 30px;
-            }
-        }
-
-        &__shipping-method {
-            padding: 0 10px;
-        }
-    }
-}
-
-@media screen and (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint - 1px) {
-    .checkout {
-
-        &__steps-list {
-
-            > li {
-                flex: 1 0 50%;
-            }
-        }
-
-        &__shipping-method {
-            padding-left: 2vw;
-        }
-    }
-}
+//@media screen and (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint - 1px) {
+//    .checkout {
+//
+//        &__steps-list {
+//
+//            > li {
+//                flex: 1 0 50%;
+//            }
+//        }
+//    }
+//}
 
 
