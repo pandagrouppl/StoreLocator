@@ -21,11 +21,9 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PL/Migs": "dev-master",
-        "Amasty/Base": "dev-master",
-        "Amasty/Rules": "dev-master",
-        "Amasty/RulesPro": "dev-master",
-        "snowdog/frontools": "^1.5"
-
+        "amasty/base": "dev-master",
+        "amasty/module-special-promo": "dev-master",
+        "amasty/module-special-promo-pro": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",
