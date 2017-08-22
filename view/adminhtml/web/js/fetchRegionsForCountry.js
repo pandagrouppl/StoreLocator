@@ -20,7 +20,9 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             this.$state = $('.admin__control-select[name="state_source_id"]');
             this.initLoaders();
             this.bindClick();
-            this.updtSelect();
+            if (this.$cntry.val() !== " ") {
+                this.updtSelect();
+            }
         },
         initLoaders: function() {
             $(document).ajaxStart(function(){
@@ -31,10 +33,11 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
             });
         },
         bindClick: function() {
-            this.$cntry.click(this.updtSelect.bind(this))
+            this.$cntry.click(this.updtSelect.bind(this));
         },
         updtSelect: function() {
-            var activeState = this.$state.val();
+
+            console.log(this.$state.val());
             $.ajax({
                 url: '/storelocator/regions/getbycountry',
                 context: this,
@@ -52,7 +55,8 @@ define(['jquery','Magento_Ui/js/form/element/select'], function ($, Select) {
                                         .text(json.states[state]));
                             }
                         }
-                        if ($('.admin__control-select[name="state_source_id"] option[value=' + activeState + ']').length > 0) {
+                        var activeState = this.$state.val();
+                        if (activeState !== ' ') {
                             this.$state.val(activeState).trigger("change");
                         }
                     } else {
