@@ -4,66 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0836fa99c67a85ecd3bb32ed01659b4",
-    "content-hash": "6e4ed4867fac1eb2a7cf47108fa39d19",
+    "hash": "3ec82fa0052c7a16207661c84fd933e2",
+    "content-hash": "606fd076c64749505c3f597809a3800e",
     "packages": [
-        {
-            "name": "Amasty/Base",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-base.git",
-                "reference": "066e975af2bb0d4673a7c247f4199be76f0b0178"
-            },
-            "require": {
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "Commercial"
-            ],
-            "description": "Amasty Base",
-            "time": "2017-06-19 09:14:21"
-        },
-        {
-            "name": "Amasty/Rules",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git",
-                "reference": "6de061532c06b8139b808d5e54fcef052dcbd04e"
-            },
-            "require": {
-                "amasty/base": "*",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "Commercial"
-            ],
-            "description": "Special Promotions by Amasty",
-            "time": "2017-06-19 09:08:02"
-        },
-        {
-            "name": "Amasty/RulesPro",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git",
-                "reference": "aa6a3540eb4b807d537b11783660b1c4a5ad8eb8"
-            },
-            "require": {
-                "amasty/base": "*",
-                "amasty/rules": "*",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "Commercial"
-            ],
-            "description": "Special Promotions Pro by Amasty",
-            "time": "2017-06-19 09:14:54"
-        },
         {
             "name": "PL/Migs",
             "version": "dev-master",
@@ -128,14 +71,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "971025a9436ae388fce7f874b66aac0583d6a65d"
+                "reference": "0a22ee6a8bb518f24e63938f5f2aac720007f201"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-21 08:16:11"
+            "time": "2017-08-22 11:10:29"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -158,14 +101,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration",
-                "reference": "45aa51e0a1e618d559a4b591e13b657787e8d500"
+                "reference": "ea22ebccda412859a5b049bc44dfb26b2865fd28"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Migration module for Peter Jackson",
-            "time": "2017-08-21 09:24:54"
+            "time": "2017-08-22 08:30:09"
         },
         {
             "name": "PandaGroup/MigrationTool",
@@ -217,12 +160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "92aed19d837be0ea743f55330d8f92b6c7ee51e9"
+                "reference": "f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/92aed19d837be0ea743f55330d8f92b6c7ee51e9",
-                "reference": "92aed19d837be0ea743f55330d8f92b6c7ee51e9",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1",
+                "reference": "f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -234,7 +177,88 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-08-21 10:23:44"
+            "time": "2017-08-22 08:24:10"
+        },
+        {
+            "name": "amasty/base",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-base.git",
+                "reference": "f333e138e440c62708ae0e39754459388b4ac09d"
+            },
+            "require": {
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\Base\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Amasty Base",
+            "time": "2017-08-22 09:54:04"
+        },
+        {
+            "name": "amasty/module-special-promo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git",
+                "reference": "9fb62d040fffbd39b76488b0fd66a97f836aad76"
+            },
+            "require": {
+                "amasty/base": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\Rules\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Special Promotions by Amasty",
+            "time": "2017-08-22 09:57:18"
+        },
+        {
+            "name": "amasty/module-special-promo-pro",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git",
+                "reference": "0d413841c90bc4cd131f0f244c2ea433d07f8daa"
+            },
+            "require": {
+                "amasty/base": "*",
+                "amasty/module-special-promo": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\RulesPro\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Special Promotions Pro by Amasty",
+            "time": "2017-08-22 09:56:57"
         },
         {
             "name": "braintree/braintree_php",
@@ -8280,16 +8304,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.13.1",
+            "version": "v1.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "0ea4f7ed06ca55da1d8fc45da26ff87f261c4088"
+                "reference": "106313aa0d501782260e48ac04a1c671b5d418ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/0ea4f7ed06ca55da1d8fc45da26ff87f261c4088",
-                "reference": "0ea4f7ed06ca55da1d8fc45da26ff87f261c4088",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/106313aa0d501782260e48ac04a1c671b5d418ea",
+                "reference": "106313aa0d501782260e48ac04a1c671b5d418ea",
                 "shasum": ""
             },
             "require": {
@@ -8335,7 +8359,7 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "abandoned": "friendsofphp/php-cs-fixer",
-            "time": "2016-12-01 00:05:05"
+            "time": "2017-08-19 11:43:55"
         },
         {
             "name": "lusitanian/oauth",
@@ -9642,8 +9666,8 @@
         "pandagroup/careers": 20,
         "pl/migs": 20,
         "amasty/base": 20,
-        "amasty/rules": 20,
-        "amasty/rulespro": 20,
+        "amasty/module-special-promo": 20,
+        "amasty/module-special-promo-pro": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
