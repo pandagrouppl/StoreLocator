@@ -40,6 +40,11 @@ $breadcrumbs-color: #928383;
             text-transform: none;
             font-weight: normal;
         }
+
+        &--underline {
+            text-decoration: underline;
+
+        }
     }
 
     &__separator {
