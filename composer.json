@@ -21,9 +21,9 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PL/Migs": "dev-master",
-        "Amasty/Base": "dev-master",
-        "Amasty/Rules": "dev-master",
-        "Amasty/RulesPro": "dev-master",
+        "amasty/base": "dev-master",
+        "amasty/module-special-promo": "dev-master",
+        "amasty/module-special-promo-pro": "dev-master",
         "snowdog/frontools": "^1.5"
 
     },
