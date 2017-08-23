@@ -45,6 +45,7 @@
 
         @media all and (max-width: $lg-breakpoint) {
             margin-left: 0;
+            flex-grow: 1;
         }
 
         @media all and (max-width: $sm-breakpoint) {
@@ -67,7 +68,6 @@
     }
 
     &__shipping-address {
-        padding-right: 10px;
         flex: 1 0 50%;
     }
 
@@ -266,17 +266,5 @@
         }
     }
 }
-
-//@media screen and (min-width: $sm-breakpoint) and (max-width: $lg-breakpoint - 1px) {
-//    .checkout {
-//
-//        &__steps-list {
-//
-//            > li {
-//                flex: 1 0 50%;
-//            }
-//        }
-//    }
-//}
 
 
