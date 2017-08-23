@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ec82fa0052c7a16207661c84fd933e2",
-    "content-hash": "606fd076c64749505c3f597809a3800e",
+    "hash": "60edb2b7123c7439609232d56faed859",
+    "content-hash": "ec02faae093e017b6d1c12959a4fee77",
     "packages": [
         {
             "name": "PL/Migs",
@@ -40,7 +40,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "1123bed5ca9cfc93bc3544587f590d9d3054f970"
+                "reference": "0f730dbbb4f8826a70b4662ea11268f59796fe0a"
             },
             "require": {
                 "magento/framework": "100.0.*|100.1.*",
@@ -48,7 +48,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2017-06-30 10:48:47"
+            "time": "2017-08-23 10:07:01"
         },
         {
             "name": "PandaGroup/Careers",
@@ -71,14 +71,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "0a22ee6a8bb518f24e63938f5f2aac720007f201"
+                "reference": "19a1bed871da35984a1ede0fe270cd3516e8bbeb"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-22 11:10:29"
+            "time": "2017-08-23 09:55:41"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -6337,28 +6337,6 @@
             "time": "2014-09-22 08:40:36"
         },
         {
-            "name": "snowdog/frontools",
-            "version": "1.5.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
-                "reference": "3988ed4e495e625531f11703d313682397c6a9ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/3988ed4e495e625531f11703d313682397c6a9ed",
-                "reference": "3988ed4e495e625531f11703d313682397c6a9ed",
-                "shasum": ""
-            },
-            "type": "magento2-component",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-08-16 15:55:03"
-        },
-        {
             "name": "strategery/magento2-infinitescroll",
             "version": "0.2.0",
             "source": {
@@ -9319,6 +9297,28 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-06-21 13:59:46"
+        },
+        {
+            "name": "snowdog/frontools",
+            "version": "1.5.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
+                "reference": "3988ed4e495e625531f11703d313682397c6a9ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/3988ed4e495e625531f11703d313682397c6a9ed",
+                "reference": "3988ed4e495e625531f11703d313682397c6a9ed",
+                "shasum": ""
+            },
+            "type": "magento2-component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+            "time": "2017-08-16 15:55:03"
         },
         {
             "name": "squizlabs/php_codesniffer",
