@@ -11,9 +11,21 @@
 
     &__messages {
         font-size: 14px;
+        display: inline-block;
+        margin: 10px 0;
+
+        .success, .error {
+            padding: 5px 20px;
+            border-radius: 6px;
+            border: 1px solid black;
+        }
 
         .success {
-            color: green;
+            background-color: rgba(0, 255, 0, 0.19);
+        }
+
+        .error {
+            background-color: rgba(255, 0, 0, 0.61);
         }
     }
 }
