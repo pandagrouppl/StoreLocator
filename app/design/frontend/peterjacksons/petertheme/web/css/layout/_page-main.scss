@@ -12,9 +12,9 @@
     &__messages {
         font-size: 14px;
         display: inline-block;
-        margin: 10px 0;
 
         .success, .error {
+            margin: 10px 0;
             padding: 5px 20px;
             border-radius: 6px;
             border: 1px solid black;
