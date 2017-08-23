@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "60edb2b7123c7439609232d56faed859",
-    "content-hash": "ec02faae093e017b6d1c12959a4fee77",
+    "hash": "3930d27332588c3e9a9a7e97e39b336d",
+    "content-hash": "40c26655a2fe22f22791cb57a904f90e",
     "packages": [
         {
             "name": "PL/Migs",
@@ -181,11 +181,12 @@
         },
         {
             "name": "amasty/base",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-base.git",
-                "reference": "f333e138e440c62708ae0e39754459388b4ac09d"
+            "version": "1.0.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/base.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
@@ -202,16 +203,70 @@
             "license": [
                 "Commercial"
             ],
-            "description": "Amasty Base",
-            "time": "2017-08-22 09:54:04"
+            "description": "Amasty Base"
+        },
+        {
+            "name": "amasty/module-gift-card",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git",
+                "reference": "14d362cc598159163f4823233d6f8c042a630573"
+            },
+            "require": {
+                "amasty/base": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\GiftCard\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Gift Card by Amasty",
+            "time": "2017-08-23 13:38:25"
+        },
+        {
+            "name": "amasty/module-improved-layered-navigation-page",
+            "version": "1.15.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/shopby": "1.15.2",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyPage\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty - Page sub-module"
         },
         {
             "name": "amasty/module-special-promo",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git",
-                "reference": "9fb62d040fffbd39b76488b0fd66a97f836aad76"
+            "version": "1.2.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "amasty/base": "*",
@@ -229,16 +284,16 @@
             "license": [
                 "Commercial"
             ],
-            "description": "Special Promotions by Amasty",
-            "time": "2017-08-22 09:57:18"
+            "description": "Special Promotions by Amasty"
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git",
-                "reference": "0d413841c90bc4cd131f0f244c2ea433d07f8daa"
+            "version": "1.2.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "amasty/base": "*",
@@ -257,8 +312,147 @@
             "license": [
                 "Commercial"
             ],
-            "description": "Special Promotions Pro by Amasty",
-            "time": "2017-08-22 09:56:57"
+            "description": "Special Promotions Pro by Amasty"
+        },
+        {
+            "name": "amasty/quickview",
+            "version": "1.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/quickview.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/base": "*",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\Quickview\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Amasty Quickview by Amasty"
+        },
+        {
+            "name": "amasty/shopby",
+            "version": "1.15.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopby.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/base": ">=1.0.1",
+                "amasty/module-improved-layered-navigation-page": "1.15.2",
+                "amasty/shopby-brand": "1.15.2",
+                "amasty/shopby-root": "1.15.2",
+                "amasty/shopby-seo": "1.15.2",
+                "magento/module-layered-navigation": ">=100.0",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\Shopby\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty"
+        },
+        {
+            "name": "amasty/shopby-brand",
+            "version": "1.15.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-brand.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/shopby": "1.15.2",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyBrand\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty - Brand sub-module"
+        },
+        {
+            "name": "amasty/shopby-root",
+            "version": "1.15.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-root.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/shopby": "1.15.2",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyRoot\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty - Root sub-module"
+        },
+        {
+            "name": "amasty/shopby-seo",
+            "version": "1.15.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-seo.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/shopby": "1.15.2",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbySeo\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty - SEO sub-module"
         },
         {
             "name": "braintree/braintree_php",
@@ -9299,28 +9493,6 @@
             "time": "2015-06-21 13:59:46"
         },
         {
-            "name": "snowdog/frontools",
-            "version": "1.5.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SnowdogApps/magento2-frontools.git",
-                "reference": "3988ed4e495e625531f11703d313682397c6a9ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SnowdogApps/magento2-frontools/zipball/3988ed4e495e625531f11703d313682397c6a9ed",
-                "reference": "3988ed4e495e625531f11703d313682397c6a9ed",
-                "shasum": ""
-            },
-            "type": "magento2-component",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-08-16 15:55:03"
-        },
-        {
             "name": "squizlabs/php_codesniffer",
             "version": "1.5.3",
             "source": {
@@ -9665,9 +9837,6 @@
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
         "pl/migs": 20,
-        "amasty/base": 20,
-        "amasty/module-special-promo": 20,
-        "amasty/module-special-promo-pro": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
