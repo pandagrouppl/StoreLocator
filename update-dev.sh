@@ -2,6 +2,7 @@
 # Update Peterjacksons script
 
 php bin/magento maintenance:enable
+git pull
 composer install
 (cd app/code/PandaGroup/StoreLocator && git remote set-url origin https://github.com/pandagrouppl/storelocator --push)
 php bin/magento setup:upgrade
