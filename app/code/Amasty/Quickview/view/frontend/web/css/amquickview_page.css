@@ -1,9 +1,0 @@
-/*styles for quick view popup*/
-.amasty-quickview-ajax-view {
-    padding-top: 20px;
-    padding-right: 0 !important;
-}
-
-.amasty-tips-navigation, #amasty-tips, .amasty-header, .zopim{
-display: none !important;
-}

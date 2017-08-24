@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
-    <template id="amgiftcard_email_email_template" label="[Gift Card] Send gift card" file="amasty_giftcard_send_code.html" type="html" module="Amasty_GiftCard" area="frontend"/>
-    <template id="amgiftcard_email_email_template_notify" label="[Gift Card] Expiry Notification Email Template" file="amasty_giftcard_expr_notif.html" type="html" module="Amasty_GiftCard" area="frontend"/>
-    <template id="amgiftcard_email_email_template_confirmation_to_sender" label="[Gift Card] Sender Confirmation Email Template" file="amasty_giftcard_confirmation_to_sender.html" type="html" module="Amasty_GiftCard" area="frontend"/>
-</config>

@@ -21,9 +21,13 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PL/Migs": "dev-master",
-        "amasty/base": "dev-master",
-        "amasty/module-special-promo": "dev-master",
-        "amasty/module-special-promo-pro": "dev-master"
+        "amasty/base": "^1.0.5",
+        "amasty/module-special-promo": "^1.2.8",
+        "amasty/module-special-promo-pro": "^1.2.2",
+        "amasty/module-gift-card": "^1.0.5",
+        "amasty/shopby": "^1.15.2",
+        "amasty/quickview": "^1.0.2"
+
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",
@@ -62,66 +66,66 @@
     },
     "minimum-stability": "alpha",
     "prefer-stable": true,
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
         },
-        {
+        "1": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-migration"
         },
-        {
+        "2": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-migration-tool"
         },
-        {
+        "3": {
             "type": "vcs",
             "url": "https://github.com/pandagrouppl/storelocator"
         },
-        {
+        "4": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-base-module.git"
         },
-        {
+        "5": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-devtools.git"
         },
-        {
+        "6": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-checkout.git"
         },
-        {
+        "7": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-anz-payment.git"
         },
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-amasty-base.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-amasty-rules.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-amasty-rules-pro.git"
-        },
-        {
+        "11": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-careers.git"
         },
-        {
+        "12": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-spinner.git"
-        }
-    ],
-    "extra": {
-        "magento-force": "override",
-        "installer-types": ["magento2-panda-module", "magento2-panda-tool"],
-        "installer-paths": {
-            "app/code/{$vendor}/{$name}/": ["type:magento2-panda-module"]
+        },
+        "amastyGiftCard": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git"
+        },
+        "amasty": {
+            "type": "composer",
+            "url": "https://composer.amasty.com/community/"
         }
     },
-    "scripts": {}
+    "extra": {
+        "magento-force": "override",
+        "installer-types": [
+            "magento2-panda-module",
+            "magento2-panda-tool"
+        ],
+        "installer-paths": {
+            "app/code/{$vendor}/{$name}/": [
+                "type:magento2-panda-module"
+            ]
+        }
+    }
 }
