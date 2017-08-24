@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "061ad57840a882dd30265b5875ccfc7a",
-    "content-hash": "bbddee6ceb7546816c7f4750adb8d2f6",
+    "hash": "b479ed3e966ad060578d5265f3b3df79",
+    "content-hash": "9cc861ff5efa57b17ebe4f19f5f3b8eb",
     "packages": [
         {
             "name": "PL/Migs",
@@ -94,6 +94,23 @@
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
             "time": "2017-08-08 12:26:43"
+        },
+        {
+            "name": "PandaGroup/GuestWishlist",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
+                "reference": "0e3ccf9ab8bcd3b834a95c500527b7a4674afb65"
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*",
+                "pandagroup/base": "dev-master",
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup GuestWishlist Module",
+            "time": "2017-08-24 06:43:44"
         },
         {
             "name": "PandaGroup/Migration",
@@ -9847,6 +9864,7 @@
         "pandagroup/migrationtool": 20,
         "composer/composer": 15,
         "pandagroup/base": 20,
+        "pandagroup/guestwishlist": 20,
         "pandagroup/migration": 20,
         "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
