@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3930d27332588c3e9a9a7e97e39b336d",
-    "content-hash": "40c26655a2fe22f22791cb57a904f90e",
+    "hash": "061ad57840a882dd30265b5875ccfc7a",
+    "content-hash": "bbddee6ceb7546816c7f4750adb8d2f6",
     "packages": [
         {
             "name": "PL/Migs",
@@ -138,6 +138,22 @@
             },
             "description": "Migration Tool",
             "time": "2017-08-18 12:24:31"
+        },
+        {
+            "name": "PandaGroup/Quickview",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-quickview.git",
+                "reference": "a88b05ac002dbca8b96ea2874fadb5c558e4a5fb"
+            },
+            "require": {
+                "magento/framework": "100.0.*|100.1.*",
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Quickview Module",
+            "time": "2017-08-24 07:55:10"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -9836,6 +9852,7 @@
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
+        "pandagroup/quickview": 20,
         "pl/migs": 20,
         "phpmd/phpmd": 0
     },
