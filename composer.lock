@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b479ed3e966ad060578d5265f3b3df79",
-    "content-hash": "9cc861ff5efa57b17ebe4f19f5f3b8eb",
+    "hash": "2f137344c52bb2229ccc8102d66778bb",
+    "content-hash": "5197767ca8e589917bc359f8edad89fb",
     "packages": [
         {
             "name": "PL/Migs",
@@ -171,6 +171,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup Quickview Module",
             "time": "2017-08-24 07:55:10"
+        },
+        {
+            "name": "PandaGroup/ShopByLook",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
+                "reference": "dc38916d0b8d8d9a630328127947b9a3003e52bf"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Shop By Look module for Magento 2.x",
+            "time": "2017-08-24 12:48:12"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -9871,6 +9886,7 @@
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
         "pandagroup/quickview": 20,
+        "pandagroup/shopbylook": 20,
         "pl/migs": 20,
         "phpmd/phpmd": 0
     },

@@ -22,6 +22,7 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PandaGroup/Quickview": "dev-master",
+        "PandaGroup/ShopByLook": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
@@ -112,6 +113,10 @@
         "12": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-spinner.git"
+        },
+        "13": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-shopbylook.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
