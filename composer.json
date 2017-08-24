@@ -20,6 +20,7 @@
         "PandaGroup/Checkout": "dev-master",
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
+        "PandaGroup/Quickview": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
@@ -110,6 +111,10 @@
         "amastyGiftCard": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git"
+        },
+        "amastyQuickView": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-quickview.git"
         },
         "amasty": {
             "type": "composer",
