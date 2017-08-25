@@ -1,14 +1,15 @@
+<?php $slurl = $this->getUrl() . 'storelocator' ?>
 <li class="level0">
-    <a href="<?php echo $this->getUrl('storelocator')?>">Stores</a>
+    <a href="<?php echo $slurl; ?>">Stores</a>
     <ul class="level0">
         <section class="header-middle__row">
             <ol class="header-middle__columns">
                 <li class="header-middle__column-item header-middle__column-item--header"><a href="<?php echo $this->getUrl('storelocator')?>">All Stores</a></li>
-                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#qld')?>">Queensland</a></li>
-                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#nsw')?>">New South Wales</a></li>
-                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#act')?>">Canberra</a></li>
-                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#vic')?>">Victoria</a></li>
-                <li class="header-middle__column-item"><a href="<?php echo $this->getUrl('storelocator#sa')?>">South Australia</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $slurl . '#qld'; ?>">Queensland</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $slurl . '#nsw'; ?>">New South Wales</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $slurl . '#act'; ?>">Canberra</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $slurl . '#vic'; ?>">Victoria</a></li>
+                <li class="header-middle__column-item"><a href="<?php echo $slurl . '#sa'; ?>">South Australia</a></li>
             </ol>
         </section>
     </ul>

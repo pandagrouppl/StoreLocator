@@ -3,7 +3,7 @@
 git pull
 composer install
 php bin/magento maintenance:enable
-php bin/magento setup:static-content:deploy en_AU -t peterjacksons/petertheme
+php bin/magento setup:static-content:deploy en_AU en_US -t peterjacksons/petertheme
 (cd tools && gulp compile)
 chown -R magento:www-data .
 php bin/magento cache:flush
