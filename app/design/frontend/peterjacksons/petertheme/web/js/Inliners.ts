@@ -19,17 +19,17 @@ export class Inliners {
         this._headerWidth();
     }
 
+    private _preventSpinnerClick(): void {
+        $('.spinner').click((event) => {
+            event.preventDefault();
+        })
+    }
+
     private _toggleFilter(): void {
         $('.layered-nav__title').on('click', function() {
             $(this).find('figure').toggleClass('layered-nav__minus--plus');
             $(this).next().toggle();
         });
-    }
-
-    private _preventSpinnerClick(): void {
-        $('.spinner').click((event) => {
-            event.preventDefault();
-        })
     }
 
     private _toggleFilters(): void {
@@ -44,41 +44,6 @@ export class Inliners {
 
             $sidebar.find('.layered-nav').toggle();
             $(this).toggleClass('layered-nav__button--closed');
-        });
-    }
-
-    private _toggleResponsiveMenu(): void {
-        $('.header-left__menu').click(() => {
-            $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
-            $('.header-responsive').slideToggle();
-        });
-    }
-
-    private _toggleSubmenuResponsive(): void {
-        $('.header-responsive__toggler').click(function() {
-            $(this).toggleClass('header-responsive__toggler--open');
-            $(this).parent().next().slideToggle();
-        });
-    }
-
-
-    private _shirtFitGuide(): void {
-        $('.slider-with-text__slides').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            speed: 1500,
-            prevArrow: '<div class="slick-prev"></div>',
-            nextArrow: '<div class="slick-next"></div>',
-            responsive: [
-                {
-                    breakpoint: 675,
-                    settings: {
-
-                    }
-                }
-            ]
         });
     }
 
@@ -102,6 +67,7 @@ export class Inliners {
         });
     }
 
+// CMS (this should be inited on CMS pages instead of here
     private _cmsBannerZoom(): void {
         const img = $('.about-banner');
         $('.cms-banner').hover(
@@ -113,6 +79,31 @@ export class Inliners {
             });
     }
 
+    private _shirtFitGuide(): void {
+        $('.slider-with-text__slides').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            speed: 1500,
+            prevArrow: '<div class="slick-prev"></div>',
+            nextArrow: '<div class="slick-next"></div>',
+            responsive: [
+                {
+                    breakpoint: 675,
+                    settings: {
+
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+// FOOTER
+
+    // display scrolltop after 900 px
     private _scrollTopArrow(): void {
         const arrow = $('.arrow-scroller');
 
@@ -129,8 +120,6 @@ export class Inliners {
             return false;
         });
     }
-
-// FOOTER
     
     private _footerNav(): void {
         $(".page-footer__linkbox h3").on("click", function () {
@@ -149,7 +138,7 @@ export class Inliners {
             }
         });
     }
-
+    // prevents header containers move due to bold on hover
     private _footerLinksAlteration(): void {
         $(".page-footer__linkbox a").map((i , v) => {
             const e = $(v);
@@ -159,6 +148,20 @@ export class Inliners {
 
 
 // HEADER
+
+    private _toggleResponsiveMenu(): void {
+        $('.header-left__menu').click(() => {
+            $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
+            $('.header-responsive').slideToggle();
+        });
+    }
+
+    private _toggleSubmenuResponsive(): void {
+        $('.header-responsive__toggler').click(function() {
+            $(this).toggleClass('header-responsive__toggler--open');
+            $(this).parent().next().slideToggle();
+        });
+    }
 
     private _pinHeader(): void {
             const cssClassName = 'headers';
