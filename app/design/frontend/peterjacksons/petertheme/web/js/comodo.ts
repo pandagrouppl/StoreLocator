@@ -1,4 +1,5 @@
-const log = () => {
-    console.log('elo');
+const comodo = () => {
+    console.log('ComodoJS init');
 };
-export = log;
+
+export = comodo;
