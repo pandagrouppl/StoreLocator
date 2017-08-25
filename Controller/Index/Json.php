@@ -34,6 +34,32 @@ class Json extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
+
+
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $transportBuilder = $objectManager->create('Magento\Framework\Mail\Template\TransportBuilder');
+        $storeManager = $objectManager->create('Magento\Store\Model\StoreManagerInterface');
+
+        $store = $storeManager->getStore()->getId();
+        $transport = $transportBuilder->setTemplateIdentifier('customer_create_account_email_template')
+            ->setTemplateOptions(['area' => 'frontend', 'store' => $store])
+            ->setTemplateVars(
+                [
+                    'store' => $storeManager->getStore(),
+                ]
+            )
+            ->setFrom('general')
+            // you can config general email address in Store -> Configuration -> General -> Store Email Addresses
+            ->addTo('akowalczewski@light4website.com', 'Adrianos  K.')
+            ->getTransport();
+        $transport->sendMessage();
+
+        echo 'sent';
+        exit;
+
+
+
+
         $result = $this->resultJsonFactory->create();
 
 //        if (isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] !== $_SERVER['SERVER_ADDR'])) {
