@@ -20,10 +20,11 @@ export class LookBook {
             nextArrow: '<button type="button" class="look-book__arrow look-book__arrow--next"></button>',
             appendArrows: $('.look-book')
         });
+        console.log(this.$slick);
 
         this.$bar = $('.look-book__progress--inside');
 
-        this.$slick.on({
+        this.$slick.add('.look-book__arrow').on({
             mouseenter: () => {
                 this.isPause = true;
             },
