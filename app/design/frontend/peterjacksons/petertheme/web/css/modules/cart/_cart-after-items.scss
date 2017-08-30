@@ -57,6 +57,17 @@
             }
         }
 
+        .comodo-trust-logo {
+            font-weight: 300;
+            font-size: 15px;
+            color: #928383;
+
+            span:last-child {
+                display: block;
+                font-size: 10px;
+            }
+        }
+
         .credit-card-brands {
             @media all and (max-width: $md-breakpoint) {
                 margin: 30px 0;
@@ -66,6 +77,14 @@
                     height: auto;
                 }
             }
+        }
+
+        .shipping-returns-click {
+            font-weight: 300;
+            font-size: 13px;
+            color: #928383;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 
@@ -145,9 +164,11 @@
             display: flex;
             align-items: center;
             margin: 30px 0 30px 0;
+            font-weight: 300;
 
             th.mark {
                 margin-right: 10px;
+                font-weight: 300;
             }
         }
     }
@@ -173,6 +194,11 @@
         border: 1px solid #b4b2b2;
         height: 42px;
         width: 250px;
+
+        @media all and (max-width: $cms-sm-brkpt) {
+            max-width: 600px;
+            width: 100%;
+        }
 
         &:hover {
             background-color: white;

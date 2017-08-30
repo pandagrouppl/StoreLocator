@@ -390,6 +390,18 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block menublock-editorial was installed/updated\n";
         $setup->endSetup();
 
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('shipping-returns-block');
+        $content = file_get_contents('blocks/shipping-returns-block.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Shipping Returns Block')
+            ->setIdentifier('shipping-returns-block')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block shipping-returns-block was installed/updated\n";
+        $setup->endSetup();
+
 
         $setup->startSetup();
         $block = $this->_blockFactory->create()->load('size-chart');

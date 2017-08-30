@@ -163,15 +163,19 @@
 
         &-params {
             font-size: 14px;
+            font-weight: 300;
 
             dt, dd {
                 display: inline-block;
                 margin: 10px 5px 0 0;
+
+                &:first-of-type {
+                    font-weight: 400;
+                }
             }
 
             &-Size {
                 font-size: 16px;
-                font-weight: 300;
             }
 
             &-delivery {
