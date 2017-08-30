@@ -71,14 +71,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "71ed22ac2ddb45d0673a61a72f22b5c12b11e4a5"
+                "reference": "91a6c5c19fe9aa367531d05ff5b1e684343478b1"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-30 08:13:33"
+            "time": "2017-08-30 08:49:10"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -178,14 +178,18 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "dc38916d0b8d8d9a630328127947b9a3003e52bf"
+                "reference": "99f18593477133762d64465cb54024ac5e3c8e56"
+            },
+            "require": {
+                "pandagroup/base": "dev-master",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-08-24 12:48:12"
+            "time": "2017-08-30 11:46:03"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -336,7 +340,7 @@
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "dist": {
                 "type": "zip",
                 "url": "https://composer.amasty.com/community/packages/module-special-promo-pro.zip",
@@ -346,7 +350,7 @@
             "require": {
                 "amasty/base": "*",
                 "amasty/module-special-promo": "*",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -6672,7 +6676,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -6732,7 +6736,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -6781,20 +6785,20 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4"
+                "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/baea7f66d30854ad32988c11a09d7ffd485810c4",
-                "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
+                "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -6826,11 +6830,11 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-01 21:01:25"
+            "time": "2017-07-29 21:54:42"
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -9617,7 +9621,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -9673,16 +9677,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "e70f025ae0b100600de58fadbd97efe3044e6bfb"
+                "reference": "fbeea992f0d30e3c400694c85f60c9bfd10454a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e70f025ae0b100600de58fadbd97efe3044e6bfb",
-                "reference": "e70f025ae0b100600de58fadbd97efe3044e6bfb",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/fbeea992f0d30e3c400694c85f60c9bfd10454a3",
+                "reference": "fbeea992f0d30e3c400694c85f60c9bfd10454a3",
                 "shasum": ""
             },
             "require": {
@@ -9732,24 +9736,24 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-28 15:21:22"
+            "time": "2017-08-10 14:42:21"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "602a15299dc01556013b07167d4f5d3a60e90d15"
+                "reference": "9a5610a8d6a50985a7be485c0ba745c22607beeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/602a15299dc01556013b07167d4f5d3a60e90d15",
-                "reference": "602a15299dc01556013b07167d4f5d3a60e90d15",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/9a5610a8d6a50985a7be485c0ba745c22607beeb",
+                "reference": "9a5610a8d6a50985a7be485c0ba745c22607beeb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
@@ -9781,11 +9785,11 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2017-04-12 14:14:56"
+            "time": "2017-07-29 21:54:42"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.26",
+            "version": "v2.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
