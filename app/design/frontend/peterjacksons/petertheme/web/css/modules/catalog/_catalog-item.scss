@@ -16,7 +16,7 @@
         margin: 40px 1% 40px 1%;
 
         @media all and (max-width: $sm-breakpoint) {
-            width: 32%;
+            width: 41%;
             margin: 20px;
         }
 
@@ -30,6 +30,7 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
+        width: 205px;
 
         $root: &;
 
@@ -45,13 +46,13 @@
             transition: 0.75s all ease;
         }
 
-        &:hover {
-
-            #{$root}--second {
-                opacity: 1;
-
-            }
-        }
+        //&:hover { ??
+        //
+        //    #{$root}--second {
+        //        opacity: 1;
+        //
+        //    }
+        //}
     }
 
     &__info {
