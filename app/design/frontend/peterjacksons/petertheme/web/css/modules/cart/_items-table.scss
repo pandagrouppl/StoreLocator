@@ -8,7 +8,7 @@
         border-bottom: 1px solid #DDD;
 
         @media all and (max-width: $cms-sm-brkpt) {
-            border-bottom: 0px;
+            border-bottom: 0;
             border-top: 1px solid #DDD;
         }
 
@@ -29,6 +29,11 @@
             > div {
                 padding: 20px 5px;
             }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
 
@@ -36,19 +41,53 @@
 
         &--remove {
             width: 5%;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                display: flex;
+                order: 1;
+            }
         }
 
         &--item {
             width: 55%;
             display: flex;
+            flex: 1;
+            justify-content: space-between;
+            min-width: 390px;
+
+            @media all and (max-width: $md-breakpoint) {
+                min-width: 410px;
+            }
+
+            @media all and (max-width: $sm-breakpoint) {
+                min-width: 350px;
+            }
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                display: flex;
+                flex-direction: column;
+                min-width: 95px;
+            }
         }
 
         &--qty {
-            width: 15%;
+            width: 27%;
+
+            @media all and (max-width: $md-breakpoint) {
+                width: 15%;
+            }
+
+            @media all and (max-width: $sm-breakpoint) {
+                width: 20%;
+            }
         }
 
         &--size {
             width: 15%;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                width: auto;
+            }
         }
 
         &--price {
@@ -59,6 +98,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                justify-content: flex-start;
+                margin: 5px 6px;
+                align-items: flex-start;
+            }
+
+            .select__wrapper {
+                .select__select {
+                    min-width: 30px;
+                }
+            }
         }
 
         &--centred-right {
@@ -66,6 +117,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
+
+            @media all and (max-width: $md-breakpoint) {
+                padding-left: 40px;
+            }
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                width: 44px;
+                margin: 5px 6px;
+                display: flex;
+                align-items: flex-start;
+                padding-left: 0;
+            }
         }
     }
 
@@ -77,6 +140,11 @@
 
         &-details {
             padding-left: 5px;
+            max-width: 250px;
+
+            .message.error {
+                color: red;
+            }
         }
 
         &-name {
@@ -86,20 +154,28 @@
 
             a {
                 color: #000;
+
+                @media all and (max-width: $cms-sm-brkpt) {
+                    font-size: 20px;
+                }
             }
         }
 
         &-params {
             font-size: 14px;
+            font-weight: 300;
 
             dt, dd {
                 display: inline-block;
                 margin: 10px 5px 0 0;
+
+                &:first-of-type {
+                    font-weight: 400;
+                }
             }
 
             &-Size {
                 font-size: 16px;
-                font-weight: 300;
             }
 
             &-delivery {
