@@ -46,12 +46,7 @@
                 <container name="headers" htmlClass="header" htmlTag="section">
                     <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle">
-                        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
-                            <arguments>
-                                <argument name="logo_img_width" xsi:type="number">189</argument>
-                                <argument name="logo_img_height" xsi:type="number">64</argument>
-                            </arguments>
-                        </block>
+                        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
                         <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
                             <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
                         </block>
@@ -145,16 +140,6 @@
                     <block class="Magento\Cms\Block\Block" name="Faq">
                         <arguments>
                             <argument name="block_id" xsi:type="string">faq</argument>
-                        </arguments>
-                    </block>
-                </container>
-            </container>
-            <container name="shipping.overlay" label="Shipping overlay" htmlTag="div" htmlClass="shipping__overlay">
-                <container name="shipping.popup" label="shipping popup" htmlTag="section" htmlClass="shipping__popup">
-                    <block class="Magento\Framework\View\Element\Template" name="shipping.title" template="Magento_Theme::html/footer/shipping-title.phtml" />
-                    <block class="Magento\Cms\Block\Block" name="shipping">
-                        <arguments>
-                            <argument name="block_id" xsi:type="string">shipping-returns</argument>
                         </arguments>
                     </block>
                 </container>

@@ -5,6 +5,7 @@ export class Popups {
     constructor() {
         this._faqPopup();
         this._shippingPopup();
+        this._contactPopup();
         this._successCloseOverlay();
         this._showSearch();
     }
@@ -34,11 +35,26 @@ export class Popups {
     }
 
     _shippingPopup() {
-        $('.shipping-returns-click, .shipping__close, .shipping__overlay').on('click', () => {
-            $('.shipping__overlay').toggle();
+        $(' .shipping-returns-click ').on(' click ', () => {
+            $(' .overlay__overlay-shipping ').toggle();
         });
-        $('.shipping__popup').click((e) => {
-            e.stopPropagation();
+        $(' .overlay__close, .overlay__overlay ').on(' click ', () => {
+           $(' .overlay__overlay-shipping ').hide()
+        });
+        $(' .overlay__popup ').click((evt) => {
+            evt.stopPropagation();
+        });
+    }
+
+    _contactPopup() {
+        $(' .contact-us-click-checkout ').on(' click ', () => {
+            $(' .overlay__overlay-contact ').toggle();
+        });
+        $(' .overlay__close, .overlay__overlay ').on('click', () => {
+            $(' .overlay__overlay-contact ').hide()
+        });
+        $(' .overlay__popup ').click((evt) => {
+            evt.stopPropagation();
         });
     }
 

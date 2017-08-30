@@ -1,0 +1,45 @@
+.overlay {
+
+    &__overlay {
+        display: none;
+        z-index: 1000;
+        background-color: rgba(1, 1, 1, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__popup {
+        z-index: 1001;
+        background: white;
+        top: 50%;
+        left: 50%;
+        max-width: 1024px;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        max-height: 90%;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: $black;
+    }
+
+
+    &__close {
+        cursor: pointer;
+        font-size: 30px;
+        color: #666;
+        padding: 8px;
+        margin-right: 10px;
+        position: absolute;
+        right: 0;
+    }
+
+}

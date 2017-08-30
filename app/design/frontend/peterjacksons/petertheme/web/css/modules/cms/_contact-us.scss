@@ -30,6 +30,7 @@ $bp: 680px;
         @media all and (max-width: $bp) {
             width: 100%;
             margin-bottom: 30px;
+            padding-right: 0;
         }
     }
 
