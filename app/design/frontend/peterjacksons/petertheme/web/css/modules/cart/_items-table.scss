@@ -140,7 +140,8 @@
 
         &-details {
             padding-left: 5px;
-            max-width: 250px;
+            max-width: 100%;
+            width: 271px;
 
             .message.error {
                 color: red;
