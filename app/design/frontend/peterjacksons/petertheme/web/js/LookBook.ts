@@ -20,7 +20,6 @@ export class LookBook {
             nextArrow: '<button type="button" class="look-book__arrow look-book__arrow--next"></button>',
             appendArrows: $('.look-book')
         });
-        console.log(this.$slick);
 
         this.$bar = $('.look-book__progress--inside');
 
@@ -30,6 +29,9 @@ export class LookBook {
             },
             mouseleave: () => {
                 this.isPause = false;
+            },
+            click: () => {
+                this.percentTime = 0;
             }
         });
 
