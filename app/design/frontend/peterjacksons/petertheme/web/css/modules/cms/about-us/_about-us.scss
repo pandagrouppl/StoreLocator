@@ -43,6 +43,10 @@
     &--grey {
         background-color: #f8f6f7;
         background-clip: content-box;
+
+        &:last-of-type {
+            margin-bottom: 15px;
+        }
     }
 
     &__separator {
@@ -81,11 +85,8 @@
             line-height: 1.5em;
         }
 
-        &--centered-small {
-            text-align: center;
+        &#{&}--640 {
             max-width: 640px;
-            margin: 0 auto;
-            line-height: 1.5em;
         }
 
         p {
@@ -117,7 +118,19 @@
 
         }
 
-        &--wiab-left {
+        p {
+            line-height: 1.5em;
+        }
+
+    }
+
+    &__wiab-box {
+        box-sizing: border-box;
+        flex: 0 0 50%;
+        padding-bottom: 15px;
+        overflow: hidden;
+
+        &--left {
             flex: 0 1 52.3%;
 
             img {
@@ -125,15 +138,10 @@
             }
         }
 
-        &--wiab-right {
+        &--right {
             flex: 1;
             padding: 95px 61px 80px 80px;
         }
-
-        p {
-            line-height: 1.5em;
-        }
-
     }
 
     &__fullwidth-image {
@@ -325,28 +333,8 @@
 
 @media screen and (max-width: $cms-md-brkpt) {
     .about-us-wrapper {
-        &__suits {
-            flex-wrap: wrap;
-
-            &-item {
-                margin: 38px 0;
-                flex: 0 1 100%;
-                text-align: center;
-
-                img {
-                    max-width: 100%;
-                }
-
-                &:first-child {
-                    padding: 0;
-                    text-align: center;
-                }
-
-                &:last-child {
-                    border-left: none;
-                    padding: 0;
-                }
-            }
+        &__wiab-box {
+            flex: 1 1 100%;
         }
     }
 }
@@ -360,37 +348,8 @@
             }
         }
 
-        &__box {
+        &__box, &__wiab-box {
             padding: 0 0 15px 0;
-        }
-
-        &__special-box {
-            width: 100%;
-
-            .about-us-wrapper__special-box-boldandborder {
-                width: 80%;
-                padding: 15px 0;
-            }
-
-            &--left {
-                div[class*='special-box-r2'] {
-                    display: inline-block;
-                }
-            }
-
-            div {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                max-width: none;
-                max-height: none;
-
-                img {
-                    max-width: none;
-                    max-height: none;
-                    margin: 15px 0;
-                }
-            }
         }
     }
 }

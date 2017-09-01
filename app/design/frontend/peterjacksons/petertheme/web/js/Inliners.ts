@@ -46,7 +46,7 @@ export class Inliners {
     }
 
     private _sliders(): void {
-        $('.slider-regular__slides, .init-slick').slick({
+        $('.slider-regular__slides').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,

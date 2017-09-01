@@ -10,6 +10,7 @@
             padding: 28px 0;
             font-size: 23px;
             font-weight: 500;
+            cursor: pointer;
 
             &--active {
                 border-top: 3px solid #272526;
@@ -97,6 +98,31 @@
             z-index: 2;
         }
 
+        @media screen and (max-width: $cms-md-brkpt) {
+            &__img {
+                padding: 0;
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+
+            &__content {
+                margin: 0;
+            }
+
+            &__slide {
+                flex-wrap: wrap;
+
+                div {
+                    flex: 1 1 100%;
+                }
+            }
+        }
+
+
     }
+
+
 }
 
