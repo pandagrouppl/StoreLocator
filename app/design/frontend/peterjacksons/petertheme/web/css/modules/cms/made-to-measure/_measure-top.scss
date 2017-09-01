@@ -46,7 +46,7 @@
     }
 
     &__button {
-        @include button-custom($pd: 17px 30px 10px 30px, $mg: 30px auto 1px auto, $fontsize: 16px, $bg: #b68554, $color: white, $border: 0);
+        @include button-custom($pd: 17px 30px 10px 30px, $mg: 30px auto 1px auto, $fontsize: 16px, $bg: #b68554, $color: white, $bghov: #b68554, $colorhov: white, $border: 0);
         text-transform: uppercase;
         margin: 30px auto 1px auto;
     }
