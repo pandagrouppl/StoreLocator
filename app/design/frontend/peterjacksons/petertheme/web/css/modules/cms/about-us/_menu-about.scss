@@ -1,0 +1,70 @@
+.menu-about {
+    width: 100%;
+    border-bottom: 1px solid #e4e0e0;
+
+    &--no-border {
+        border-bottom: none;
+    }
+
+    ul {
+        text-align: center;
+
+        padding: 24px 0 26px;
+
+        li {
+            display: inline-block;
+            font-size: 17px;
+            font-weight: 500;
+            padding: 0 5px;
+
+            a {
+                color: #252525;
+
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+    }
+
+
+
+    $menu-pages: ('.about-us', '.suit-fit-guide', '.our-mills', '.sustainability');
+    $uls: ();
+    $lis: ();
+
+    @each $item in $menu-pages {
+        ul#{$item} {
+            li#{$item} {
+                a {
+                    text-decoration: underline;
+                    color: #3a3939;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $cms-md-brkpt) {
+    .menu-about ul li {
+        font-size: 18px;
+        padding: 0 15px 0 15px;
+
+    }
+
+}
+
+@media screen and (max-width: $cms-sm-brkpt) {
+    .menu-about ul li {
+        width: 100%;
+        padding: 10px 15px 10px 15px;
+        border: none;
+        box-sizing: border-box;
+    }
+}
+
+

@@ -48,10 +48,12 @@ class UpgradeData implements UpgradeDataInterface
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('about-us');
         $content = file_get_contents('pages/about-us.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/brownlow-skit.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('About Us')
             ->setIdentifier('about-us')
             ->setIsActive(true)
             ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();
@@ -118,47 +120,19 @@ class UpgradeData implements UpgradeDataInterface
             ->setStores(array(0))
             ->setContent($content)
             ->save();
-        echo "Page look-book was installed/updated\n";
+        echo "Page m2m was installed/updated\n";
         $setup->endSetup();
-
-
-        $setup->startSetup();
-        $page = $this->_pageFactory->create()->load('our-design');
-        $content = file_get_contents('pages/our-design.phtml', FILE_USE_INCLUDE_PATH);
-        $page->setTitle('Our Design')
-            ->setIdentifier('our-design')
-            ->setIsActive(true)
-            ->setPageLayout('1column-unconstrained-width')
-            ->setStores(array(0))
-            ->setContent($content)
-            ->save();
-        echo "Page our-design was installed/updated\n";
-        $setup->endSetup();
-
-
-        $setup->startSetup();
-
-        $page = $this->_pageFactory->create()->load('our-labels');
-        $content = file_get_contents('pages/our-labels.phtml', FILE_USE_INCLUDE_PATH);
-        $page->setTitle('Our Labels')
-            ->setIdentifier('our-labels')
-            ->setIsActive(true)
-            ->setPageLayout('1column-unconstrained-width')
-            ->setStores(array(0))
-            ->setContent($content)
-            ->save();
-        echo "Page our-labels was installed/updated\n";
-        $setup->endSetup();
-
 
         $setup->startSetup();
 
         $page = $this->_pageFactory->create()->load('our-mills');
         $content = file_get_contents('pages/our-mills.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/our-mills.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Our Mills')
             ->setIdentifier('our-mills')
             ->setIsActive(true)
             ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();
@@ -215,12 +189,30 @@ class UpgradeData implements UpgradeDataInterface
 
 
         $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('suit-fit-guide');
+        $content = file_get_contents('pages/suit-fit-guide.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/suit-fit-guide.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Suit fit Guide')
+            ->setIdentifier('suit-fit-guide')
+            ->setIsActive(true)
+            ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page suit-fit-guide was installed/updated\n";
+        $setup->endSetup();
+
+
+        $setup->startSetup();
         $page = $this->_pageFactory->create()->load('sustainability');
         $content = file_get_contents('pages/sustainability.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/sustainability.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Sustainability')
             ->setIdentifier('sustainability')
             ->setIsActive(true)
             ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();

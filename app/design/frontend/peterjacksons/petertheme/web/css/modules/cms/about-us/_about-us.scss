@@ -4,9 +4,9 @@
     font-size: 16px;
     padding: 0 15px;
     color: #242424;
-    letter-spacing: 1px;
     position: relative;
     overflow: hidden;
+    font-family: Roboto, arial, sans-serif;
 
     &--645 {
         max-width: 645px;
@@ -24,12 +24,25 @@
         max-width: 1920px;
     }
 
+    &--1550 {
+        max-width: 1550px;
+    }
+
     &--no-padding {
         padding: 0;
     }
 
     &--lg-margin-top {
         margin-top: 80px;
+    }
+
+    &--where-it-all-began {
+        margin: 98px auto 60px;
+    }
+
+    &--grey {
+        background-color: #f8f6f7;
+        background-clip: content-box;
     }
 
     &__separator {
@@ -39,24 +52,44 @@
 
     &__title {
         text-align: center;
-        font-family: league_gothic;
-        font-size: 48px;
-        font-weight: normal;
-        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 500;
         line-height: normal;
+        margin-bottom: 32px;
 
         &--left {
             text-align: left;
+        }
+
+        &--opening {
+            margin-top: 105px;
         }
     }
 
     &__text-box {
         display: flex;
         flex-wrap: wrap;
-        text-align: justify;
+
+        &--justify {
+            text-align: justify;
+        }
 
         &--centered {
             text-align: center;
+            max-width: 768px;
+            margin: 0 auto;
+            line-height: 1.5em;
+        }
+
+        &--centered-small {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.5em;
+        }
+
+        p {
+            margin: 0 0 15px 0;
         }
     }
 
@@ -83,6 +116,24 @@
             padding: 0 70px 15px 30px;
 
         }
+
+        &--wiab-left {
+            flex: 0 1 52.3%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &--wiab-right {
+            flex: 1;
+            padding: 95px 61px 80px 80px;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+
     }
 
     &__fullwidth-image {
@@ -108,194 +159,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-
-    &__garmet {
-        font-size: 40px;
-        font-family: league_gothic;
-    }
-
-    &__styling-box {
-        display: flex;
-        width: 100%;
-        margin: 100px 0;
-        justify-content: center;
-
-        div {
-            box-sizing: border-box;
-        }
-    }
-
-    &__special-box {
-
-        &--left {
-            padding-right: 33px;
-
-            div[class*='special-box-r'] {
-                display: none;
-            }
-        }
-
-        img {
-            width: 100%;
-        }
-
-        &-boldandborder {
-            border-top: 1px solid #e4e0e0;
-            font-size: 14px;
-            line-height: 1.2em;
-            padding: 18px 0 0 0;
-            margin: 26px 0 0 0;
-            font-weight: 500;
-        }
-
-        &-l1 {
-            width: 476px;
-            margin: 0 0 107px auto;
-            line-height: 26px;
-
-            &-header {
-                margin: 85px 0 25px 0;
-                font-family: league_gothic;
-                font-size: 48px;
-                font-weight: normal;
-                text-transform: uppercase;
-            }
-        }
-
-        &-r1 {
-            width: 566px;
-            padding: 0 0 80px 100px;
-
-            img {
-                max-width: 448px;
-                max-height: 411px;
-            }
-
-            &-bottom {
-                width: 227px;
-            }
-        }
-
-        &-l2 {
-
-            &-top {
-                margin-left: auto;
-                max-width: 564px;
-                max-height: 448px;
-            }
-
-            &-bottom {
-                width: 388px;
-                margin: 21px auto 87px 0;
-            }
-        }
-
-        &-r2 {
-            display: flex;
-            width: 566px;
-            align-content: space-between;
-
-            &-left {
-                max-width: 391px;
-                max-height: 535px;
-            }
-
-            &-right {
-                width: 145px;
-                margin: 0 0 0 30px;
-            }
-        }
-
-        &-l3 {
-            width: 476px;
-            margin-left: auto;
-            max-width: 442px;
-            max-height: 355px;
-
-        }
-
-        &-r3 {
-            width: 174px;
-            margin: 82px 0 0 0;
-        }
-    }
-
-    &__checker-flexbox {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: justify;
-
-        > div {
-            flex: 1 1 50%;
-            box-sizing: border-box;
-        }
-
-        &-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        &-slideshow {
-            overflow: hidden;
-        }
-
-        &-text {
-            padding: 30px;
-        }
-
-    }
-
-    &__checker-title {
-        font-style: italic;
-        font-family: Merriweather;
-        font-weight: bold;
-        font-size: 25px;
-        margin: 0 0 21px 0;
-    }
-
-    &__checker-title-gothic {
-        margin: 45px 0;
-        font-family: league_gothic;
-        font-weight: normal;
-        font-size: 48px;
-        text-transform: uppercase;
-
-        &--centered {
-            text-align: center;
-        }
-
-    }
-
-    &__suits {
-        display: flex;
-        box-sizing: border-box;
-        justify-content: center;
-
-        div {
-            box-sizing: border-box;
-        }
-
-        &-item {
-            flex: 0 1 50%;
-            margin: 38px 0;
-
-            img {
-                max-width: 100%;
-            }
-
-            &:first-child {
-                padding: 0 65px 0 0;
-                text-align: right;
-            }
-
-            &:last-child {
-                border-left: 1px solid #e4e0e0;
-                padding: 0 0 0 65px;
-            }
-        }
     }
 
     &__mills-menu {
@@ -354,6 +217,54 @@
         }
     }
 
+    &__checker-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: justify;
+
+        > div {
+            flex: 1 1 50%;
+            box-sizing: border-box;
+        }
+
+        &-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-slideshow {
+            overflow: hidden;
+        }
+
+        &-text {
+            padding: 30px;
+        }
+
+    }
+
+    &__checker-title {
+        font-style: italic;
+        font-family: Merriweather;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0 0 21px 0;
+    }
+
+    &__checker-title-gothic {
+        margin: 45px 0;
+        font-family: league_gothic;
+        font-weight: normal;
+        font-size: 48px;
+        text-transform: uppercase;
+
+        &--centered {
+            text-align: center;
+        }
+
+    }
+
     &__text-on-image {
         position: relative;
         margin: 10px 0;
@@ -396,51 +307,6 @@
 
         &__styling-box {
             margin: 50px 0;
-        }
-
-        &__special-box {
-
-            &--left {
-                padding: 0;
-
-                div[class*='special-box-r1'], div[class*='special-box-r3'] {
-                    display: inline-block;
-                }
-
-                div[class*='special-box-r2'] {
-                    display: flex;
-                }
-            }
-
-            &--right {
-                display: none;
-                }
-
-            &-l1 {
-                margin: 0 0 20px auto;
-            }
-
-            &-r1 {
-                display: inline-block;
-                padding-bottom: 30px;
-            }
-
-            &-l2-bottom {
-                margin-bottom: 40px;
-            }
-
-            &-r2 {
-                margin-bottom: 30px;
-            }
-
-            &-l3 {
-                max-height: none;
-            }
-
-            &-r3 {
-                width: 400px;
-                margin: 0;
-            }
         }
 
         &__mills-flexbox {

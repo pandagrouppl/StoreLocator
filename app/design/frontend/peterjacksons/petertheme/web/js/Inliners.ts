@@ -8,9 +8,7 @@ export class Inliners {
         this._toggleFilters();
         this._toggleResponsiveMenu();
         this._toggleSubmenuResponsive();
-        this._shirtFitGuide();
         this._sliders();
-        this._cmsBannerZoom();
         this._toggleFilter();
         this._scrollTopArrow();
         this._footerNav();
@@ -48,7 +46,7 @@ export class Inliners {
     }
 
     private _sliders(): void {
-        $('.slider-regular__slides').slick({
+        $('.slider-regular__slides, .init-slick').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -66,40 +64,6 @@ export class Inliners {
             ]
         });
     }
-
-// CMS (this should be inited on CMS pages instead of here
-    private _cmsBannerZoom(): void {
-        const img = $('.about-banner');
-        $('.cms-banner').hover(
-            () => {
-                img.css({'background-size': 'auto 110%'})
-            },
-            () => {
-                img.css({'background-size': 'auto 100%'})
-            });
-    }
-
-    private _shirtFitGuide(): void {
-        $('.slider-with-text__slides').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            speed: 1500,
-            prevArrow: '<div class="slick-prev"></div>',
-            nextArrow: '<div class="slick-next"></div>',
-            responsive: [
-                {
-                    breakpoint: 675,
-                    settings: {
-
-                    }
-                }
-            ]
-        });
-    }
-
-
 
 // FOOTER
 
