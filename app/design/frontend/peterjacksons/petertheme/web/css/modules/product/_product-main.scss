@@ -37,7 +37,15 @@
                 justify-content: center;
 
                 &__stage[style] {
-                    height: 525px;
+                    height: 572px !important;
+                }
+            }
+        }
+
+        @media all and (max-width: $cms-sm-brkpt) {
+            .fotorama {
+                &__stage[style] {
+                    height: 274px !important;
                 }
             }
         }
