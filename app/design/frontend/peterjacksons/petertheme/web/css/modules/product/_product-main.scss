@@ -21,33 +21,11 @@
     }
 
     &__left {
-        width: 55%;
         min-width: 55%;
 
         button.m360-icon.m360-icon-fullscreen-open {
             top: 65px !important;
             right: 65px !important;
-        }
-
-        @media all and (max-width: $bp-header) {
-            width: 100%;
-
-            .fotorama {
-                display: flex;
-                justify-content: center;
-
-                &__stage[style] {
-                    height: 572px !important;
-                }
-            }
-        }
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            .fotorama {
-                &__stage[style] {
-                    height: 274px !important;
-                }
-            }
         }
     }
 
