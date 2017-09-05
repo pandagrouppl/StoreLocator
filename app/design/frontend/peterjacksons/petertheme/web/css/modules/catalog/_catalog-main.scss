@@ -100,7 +100,7 @@
 
     .toolbar {
         @media all and (max-width: 860px) {
-            display: none;
+            display: none !important;
         }
     }
 }
