@@ -82,6 +82,7 @@
     .product-info-main {
         max-width: 100%;
         margin: 0 0 20px 0;
+        width: 319px;
 
         @media all and (max-width: $sm-breakpoint) {
             width: 100%;
@@ -164,8 +165,7 @@
     .product-main {
         &__wrapper {
             flex-direction: row;
-            padding: 0;
-            align-items: center;
+            padding: 0 0 30px 0;
 
             @media all and (max-width: $sm-breakpoint) {
                 flex-direction: column;

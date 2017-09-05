@@ -7,6 +7,7 @@
 
         @media all and (max-width: $bp-header) {
             flex-direction: column;
+            padding: 0 0 88px 0;
         }
 
         .size-chart {
