@@ -19,6 +19,17 @@
     &__list {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0 2% 20px 2%;
+        }
+
+        .product-item-details {
+            max-width: 100%;
+            width: 218px;
+            text-align: center;
+        }
     }
 
     &__item {

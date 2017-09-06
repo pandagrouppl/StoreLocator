@@ -2,11 +2,12 @@
 
     &__wrapper {
         display: flex;
-        padding: 0 0 88px 0;
+        padding: 30px 0 88px 0;
         @include container();
 
         @media all and (max-width: $bp-header) {
             flex-direction: column;
+            padding: 0 0 88px 0;
         }
 
         .size-chart {
@@ -21,21 +22,11 @@
     }
 
     &__left {
-        width: 55%;
         min-width: 55%;
 
         button.m360-icon.m360-icon-fullscreen-open {
             top: 65px !important;
             right: 65px !important;
-        }
-
-        @media all and (max-width: $bp-header) {
-            width: 100%;
-
-            .fotorama {
-                display: flex;
-                justify-content: center;
-            }
         }
     }
 

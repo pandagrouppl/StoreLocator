@@ -45,6 +45,16 @@
             font-size: 15px;
             color: #333;
         }
+
+        .item {
+            padding: 0 0 10px 0;
+        }
+
+        .am_shopby_filter_items_attr_price {
+            .item {
+                padding: 0 0 10px 0;
+            }
+        }
     }
 
     &__line {
