@@ -1,9 +1,9 @@
 .product-info-main {
     max-width: 100%;
 
-    @media all and (max-width: $bp-header) {
-        width: 505px;
-    }
+    //@media all and (max-width: $bp-header) {
+    //    width: 505px;
+    //}
 
     &__sku {
         font-size: 12px;

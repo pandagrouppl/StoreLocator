@@ -82,11 +82,11 @@
     .product-info-main {
         max-width: 100%;
         margin: 0 0 20px 0;
-        width: 319px;
+        //width: 319px;
 
         @media all and (max-width: $sm-breakpoint) {
             max-width: 100%;
-            width: 672px;
+            //width: 672px;
         }
 
         &__fieldset {
