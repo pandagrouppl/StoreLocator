@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2f137344c52bb2229ccc8102d66778bb",
-    "content-hash": "5197767ca8e589917bc359f8edad89fb",
+    "hash": "673858adc8c3ce361e892903d47e4bb1",
+    "content-hash": "a9aac96ad2fe83a72b94f877e904ea83",
     "packages": [
         {
             "name": "PL/Migs",
@@ -79,6 +79,21 @@
             ],
             "description": "Checkout update module for Magento 2.x",
             "time": "2017-08-30 08:49:10"
+        },
+        {
+            "name": "PandaGroup/EmailTester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-email-tester.git",
+                "reference": "fd3e3827ffbd4d2f98b90512cefc4ec76ef403a4"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "EmailTester module",
+            "time": "2017-09-06 12:18:29"
         },
         {
             "name": "PandaGroup/Frontools",
@@ -178,7 +193,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "99f18593477133762d64465cb54024ac5e3c8e56"
+                "reference": "4d369692bb0bde87dc67143f1bf3076a162ae929"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -189,7 +204,7 @@
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-08-30 11:46:03"
+            "time": "2017-09-04 11:16:09"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -233,7 +248,7 @@
         },
         {
             "name": "amasty/base",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "dist": {
                 "type": "zip",
                 "url": "https://composer.amasty.com/community/packages/base.zip",
@@ -241,7 +256,7 @@
                 "shasum": null
             },
             "require": {
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -9891,6 +9906,7 @@
         "pandagroup/careers": 20,
         "pandagroup/quickview": 20,
         "pandagroup/shopbylook": 20,
+        "pandagroup/emailtester": 20,
         "pl/migs": 20,
         "phpmd/phpmd": 0
     },
