@@ -85,8 +85,7 @@
         width: 319px;
 
         @media all and (max-width: $sm-breakpoint) {
-            max-width: 100%;
-            width: 672px;
+            width: 100%;
         }
 
         &__fieldset {
