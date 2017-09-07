@@ -86,14 +86,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-email-tester.git",
-                "reference": "fd3e3827ffbd4d2f98b90512cefc4ec76ef403a4"
+                "reference": "9c06bc84e003928236d5bbbaef4cba70bedbcff1"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "EmailTester module",
-            "time": "2017-09-06 12:18:29"
+            "time": "2017-09-06 13:58:47"
         },
         {
             "name": "PandaGroup/Frontools",
