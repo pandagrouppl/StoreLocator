@@ -1,21 +1,23 @@
 .products-related {
 
     &__title {
-        width: 95%;
+        width: 100%;
         font-family: league_gothic;
         font-size: 34px;
         text-transform: uppercase;
+        text-align: center;
         border-top: 1px solid $grey;
-        max-width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
 
         strong {
             display: inline-block;
             padding: 25px 0;
             border-top: 3px solid $black;
             font-weight: 500;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            max-width: 672px;
+            width: 100%;
         }
     }
 
