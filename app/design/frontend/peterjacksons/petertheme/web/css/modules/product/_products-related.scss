@@ -14,12 +14,22 @@
             border-top: 3px solid $black;
             font-weight: 500;
         }
+
+        @media all and (max-width: $sm-breakpoint) {
+            max-width: 672px;
+            width: 100%;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @media all and (max-width: $sm-breakpoint) {
+            max-width: 672px;
+            width: 100%;
+        }
 
         li {
             margin: 0 2% 20px 2%;
