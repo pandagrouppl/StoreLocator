@@ -186,6 +186,14 @@
         }
 
         &__left {
+            @media all and (max-width: 320px) {
+                width: 219px;
+            }
+
+            @media all and (max-width: 375px) {
+                width: 285px;
+            }
+
             @media all and (max-width: 414px) {
                 width: 324px;
             }
