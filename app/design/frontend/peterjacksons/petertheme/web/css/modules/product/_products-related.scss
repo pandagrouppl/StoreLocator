@@ -25,9 +25,11 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 95%;
-        max-width: 100%;
-        margin: 0 auto;
+
+        @media all and (max-width: $sm-breakpoint) {
+            max-width: 672px;
+            width: 100%;
+        }
 
         li {
             margin: 0 2% 20px 2%;
