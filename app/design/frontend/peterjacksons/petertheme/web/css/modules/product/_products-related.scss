@@ -1,7 +1,7 @@
 .products-related {
 
     &__title {
-        width: 100%;
+        width: 95%;
         font-family: league_gothic;
         font-size: 34px;
         text-transform: uppercase;
@@ -9,6 +9,7 @@
         max-width: 100%;
         display: flex;
         justify-content: center;
+        margin: 0 auto;
 
         strong {
             display: inline-block;
@@ -22,6 +23,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        width: 95%;
+        max-width: 100%;
+        margin: 0 auto;
 
         li {
             margin: 0 2% 20px 2%;
