@@ -9,7 +9,6 @@ atlassian*
 /.idea
 /.gitattributes
 
-/setup
 /dev
 
 /app/code/Magento
