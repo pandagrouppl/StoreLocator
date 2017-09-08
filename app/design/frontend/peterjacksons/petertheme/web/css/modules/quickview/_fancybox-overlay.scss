@@ -184,5 +184,11 @@
                 display: none;
             }
         }
+
+        &__left {
+            @media all and (max-width: 414px) {
+                width: 324px;
+            }
+        }
     }
 }
