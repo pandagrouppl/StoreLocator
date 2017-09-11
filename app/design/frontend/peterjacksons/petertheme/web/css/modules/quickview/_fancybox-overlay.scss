@@ -186,11 +186,11 @@
         }
 
         &__left {
-            @media all and (max-width: 375px) {
+            @media screen and (max-device-width: 320px) {
                 width: 230px;
             }
 
-            @media screen and (max-width: 414px) and (min-width: 376px) {
+            @media screen and (max-device-width: 414px) and (min-device-width: 375px) {
                 width: 324px;
             }
         }
