@@ -186,13 +186,17 @@
         }
 
         &__left {
-            @media only screen and (device-width: 320px),
-                   only screen and (max-width: 320px) {
+            @media only screen
+            and (min-device-width: 320px)
+            and (max-device-width: 568px)
+            and (orientation: portrait) {
                 width: 230px;
             }
 
-            @media only screen and (device-width: 414px),
-                   only screen and (max-width: 414px) {
+            @media only screen
+            and (min-device-width: 375px)
+            and (max-device-width: 667px)
+            and (orientation: portrait) {
                 width: 324px;
             }
         }
