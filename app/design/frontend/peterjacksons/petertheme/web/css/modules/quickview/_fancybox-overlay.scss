@@ -186,11 +186,13 @@
         }
 
         &__left {
-            @media screen and (max-device-width: 320px) {
+            @media only screen and (device-width: 320px),
+                   only screen and (max-width: 320px) {
                 width: 230px;
             }
 
-            @media screen and (max-device-width: 414px) {
+            @media only screen and (device-width: 414px),
+                   only screen and (max-width: 414px) {
                 width: 324px;
             }
         }
