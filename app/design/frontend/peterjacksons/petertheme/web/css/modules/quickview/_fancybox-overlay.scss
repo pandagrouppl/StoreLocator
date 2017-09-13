@@ -82,7 +82,6 @@
     .product-info-main {
         max-width: 100%;
         margin: 0 0 20px 0;
-        width: 319px;
 
         @media all and (max-width: $sm-breakpoint) {
             max-width: 672px;
@@ -198,6 +197,7 @@
             and (max-device-width: 568px)
             and (orientation: landscape) {
                 width: 230px;
+                margin: 0 auto;
             }
 
             @media only screen
@@ -212,6 +212,7 @@
             and (max-device-width: 667px)
             and (orientation: landscape) {
                 width: 285px;
+                margin: 0 auto;
             }
 
             @media only screen
@@ -226,6 +227,7 @@
             and (max-device-width: 736px)
             and (orientation: landscape) {
                 width: 324px;
+                margin: 0 auto;
             }
         }
     }
