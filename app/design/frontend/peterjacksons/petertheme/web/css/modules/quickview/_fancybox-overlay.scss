@@ -190,13 +190,6 @@
             and (max-device-width: 568px)
             and (orientation: portrait) {
                 width: 230px;
-            }
-
-            @media only screen
-            and (min-device-width: 320px)
-            and (max-device-width: 568px)
-            and (orientation: landscape) {
-                width: 230px;
                 margin: 0 auto;
             }
 
@@ -205,13 +198,6 @@
             and (max-device-width: 667px)
             and (orientation: portrait) {
                 width: 285px;
-            }
-
-            @media only screen
-            and (min-device-width: 375px)
-            and (max-device-width: 667px)
-            and (orientation: landscape) {
-                width: 285px;
                 margin: 0 auto;
             }
 
@@ -219,13 +205,6 @@
             and (min-device-width: 414px)
             and (max-device-width: 736px)
             and (orientation: portrait) {
-                width: 324px;
-            }
-
-            @media only screen
-            and (min-device-width: 414px)
-            and (max-device-width: 736px)
-            and (orientation: landscape) {
                 width: 324px;
                 margin: 0 auto;
             }
