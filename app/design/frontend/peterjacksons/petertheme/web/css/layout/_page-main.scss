@@ -28,6 +28,13 @@
             background-color: rgba(255, 0, 0, 0.61);
         }
     }
+
+    &__columns {
+        .column.main {
+            img {}
+            width: 100%;
+        }
+    }
 }
 
 .cms-page-view .page-main {
