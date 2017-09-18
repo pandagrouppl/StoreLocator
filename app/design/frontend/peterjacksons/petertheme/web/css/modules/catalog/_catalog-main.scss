@@ -20,6 +20,11 @@
 
         &__columns {
             display: flex;
+            justify-content: center;
+        }
+
+        .column.main {
+            width: 100%;
         }
     }
 
@@ -95,7 +100,7 @@
 
     .toolbar {
         @media all and (max-width: 860px) {
-            display: none;
+            display: none !important;
         }
     }
 }

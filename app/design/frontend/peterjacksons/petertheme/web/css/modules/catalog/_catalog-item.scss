@@ -5,8 +5,11 @@
         margin: 20px 1% 20px 1%;
         max-width: 303px;
 
-        @media all and (max-width: $xs-breakpoint) {
+        @media all and (max-width: 550px) {
             width: 49%;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
             margin: 10px;
         }
     }
@@ -16,7 +19,7 @@
         margin: 40px 1% 40px 1%;
 
         @media all and (max-width: $sm-breakpoint) {
-            width: 32%;
+            width: 41%;
             margin: 20px;
         }
 
@@ -30,6 +33,7 @@
         position: relative;
         overflow: hidden;
         display: inline-block;
+        width: 219px;
 
         $root: &;
 
@@ -43,14 +47,6 @@
             top: 0;
             opacity: 0;
             transition: 0.75s all ease;
-        }
-
-        &:hover {
-
-            #{$root}--second {
-                opacity: 1;
-
-            }
         }
     }
 
@@ -107,7 +103,7 @@
         color: $black-light;
         font-size: 17px;
         font-weight: 500;
-        height: 30px;
+        height: 40px;
 
         @media all and (max-width: $sm-breakpoint) {
             height: 40px;

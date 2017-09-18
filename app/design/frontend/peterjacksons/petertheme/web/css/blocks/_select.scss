@@ -38,7 +38,6 @@
     }
 
     &__wrapper {
-        min-width: 50px;
         position: relative;
         z-index: 0;
         display: flex;
@@ -46,6 +45,11 @@
         &--product-page {
             position: relative;
             width: 12%;
+            min-width: 62px;
+
+            @media all and (max-width: 457px) {
+                margin-left: 0;
+            }
         }
 
         &--Size {
@@ -57,11 +61,11 @@
         }
 
         &--cart-qty {
-            width: 50px;
+            width: 56px;
         }
 
         &--cart-size {
-            width: 100px;
+            min-width: 111px;
         }
 
         > div.mage-error {
