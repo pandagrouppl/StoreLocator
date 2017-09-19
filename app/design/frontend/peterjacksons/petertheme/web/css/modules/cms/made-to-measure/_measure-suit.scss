@@ -17,6 +17,7 @@
     &__row {
         display: flex;
         justify-content: center;
+        overflow: hidden;
     }
 
     &__column {

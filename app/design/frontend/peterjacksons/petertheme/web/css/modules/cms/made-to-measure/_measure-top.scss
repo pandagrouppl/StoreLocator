@@ -1,5 +1,6 @@
 .measure-top {
     @include bg('made-to-measure-1.jpg');
+    background-size: cover;
     color: $white;
     min-height: 940px;
     display: flex;
@@ -8,6 +9,7 @@
 
     &__img {
         align-self: center;
+        max-width: 100%;
     }
 
     &__bg {
