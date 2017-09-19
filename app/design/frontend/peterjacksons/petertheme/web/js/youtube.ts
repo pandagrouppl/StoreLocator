@@ -51,12 +51,13 @@ if (!Array.from) {
 }
 
 const overlays = Array.from(document.getElementsByClassName('youtube-player-overlay'));
-
+console.log('overlays', overlays);
 if (overlays.length) {
     const containers = Array.from(document.getElementsByClassName('youtube-player-overlay__player'));
     const placeholders = Array.from(document.getElementsByClassName('youtube-player__placeholder'));
-
-    function onYouTubeIframeAPIReady() {
+    console.log('overlays length passed');
+    window.onYouTubeIframeAPIReady = () => {
+        console.log('yt api rdy');
         const player = [];
         containers.map((item, i) => {
             player.push(new YT.Player(item));
