@@ -236,6 +236,7 @@
             flex: 1 1 50%;
             box-sizing: border-box;
             position: relative;
+            overflow: hidden;
 
             > div {
                 position: absolute;
@@ -250,12 +251,16 @@
             object-fit: cover;
         }
 
-        &-slideshow {
-            overflow: hidden;
-        }
-
         &-text {
             padding: 30px;
+        }
+
+        &-slideshow {
+            min-height: 484px;
+
+            div {
+                height: 100%;
+            }
         }
 
     }
@@ -390,14 +395,6 @@
 
 @media screen and (min-width: 1400px) {
     .about-us-wrapper__checker-flexbox {
-
-        &-slideshow {
-            max-height: 484px;
-
-            div {
-                height: 100%;
-            }
-        }
 
         &-vid {
             max-height: 620px;
