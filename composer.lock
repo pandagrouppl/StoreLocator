@@ -86,20 +86,12 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git",
-                "reference": "46248eb548a5ae1513fda0b4a54fd45aef1dd477"
+                "reference": "7ec3e1c7ed46c15b8256b7db0313d5049fcaf282"
             },
             "require": {
                 "wyomind/cronscheduler": "dev-master"
             },
             "type": "magento2-panda-module",
-            "autoload": {
-                "psr-4": {
-                    "PandaGroup\\CronSchedulerExtender\\": ""
-                },
-                "files": [
-                    "registration.php"
-                ]
-            },
             "license": [
                 "MIT"
             ],
@@ -110,7 +102,7 @@
                 }
             ],
             "description": "CronScheduler Extender module for Magento 2.x",
-            "time": "2017-09-22 12:48:55"
+            "time": "2017-09-22 13:12:14"
         },
         {
             "name": "PandaGroup/EmailTester",
