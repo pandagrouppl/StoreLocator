@@ -24,14 +24,17 @@
         "PandaGroup/Quickview": "dev-master",
         "PandaGroup/ShopByLook": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
+        "PandaGroup/CronSchedulerExtender": "dev-master",
+        "PandaGroup/Westfield": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
         "amasty/module-special-promo-pro": "^1.2.2",
         "amasty/module-gift-card": "^1.0.5",
         "amasty/shopby": "^1.15.2",
-        "amasty/quickview": "^1.0.2"
-
+        "amasty/quickview": "^1.0.2",
+        "wyomind/core": "dev-master",
+        "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "4.1.0",
@@ -123,6 +126,14 @@
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-email-tester.git"
         },
+        "15": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git"
+        },
+        "16": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-westfield.git"
+        },
         "amastyGiftCard": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git"
@@ -134,6 +145,14 @@
         "amasty": {
             "type": "composer",
             "url": "https://composer.amasty.com/community/"
+        },
+        "wyomindCore": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-core.git"
+        },
+        "wyomindCronScheduler": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git"
         }
     },
     "extra": {

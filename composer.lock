@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "673858adc8c3ce361e892903d47e4bb1",
-    "content-hash": "a9aac96ad2fe83a72b94f877e904ea83",
+    "hash": "d5c27d48de7fd923d2984448f73040cd",
+    "content-hash": "0b2383119bab16b56fa43085e265ea31",
     "packages": [
         {
             "name": "PL/Migs",
@@ -56,14 +56,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "ca534a5bd6b9210936a005971615903e4091eb4d"
+                "reference": "f69c7edbde4e008fe9da8a537997af37d0b165eb"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-08-16 05:30:51"
+            "time": "2017-09-21 14:00:42"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -71,14 +71,38 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "91a6c5c19fe9aa367531d05ff5b1e684343478b1"
+                "reference": "a361b04c5e0375d57bb6647725fc79a393287d36"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-08-30 08:49:10"
+            "time": "2017-09-08 11:39:45"
+        },
+        {
+            "name": "PandaGroup/CronSchedulerExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git",
+                "reference": "7ec3e1c7ed46c15b8256b7db0313d5049fcaf282"
+            },
+            "require": {
+                "wyomind/cronscheduler": "dev-master"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "description": "CronScheduler Extender module for Magento 2.x",
+            "time": "2017-09-22 13:12:14"
         },
         {
             "name": "PandaGroup/EmailTester",
@@ -193,7 +217,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "4d369692bb0bde87dc67143f1bf3076a162ae929"
+                "reference": "d740620cfa58b8723597be856335e985b37e25c1"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -204,7 +228,7 @@
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-09-04 11:16:09"
+            "time": "2017-09-22 09:28:08"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -245,6 +269,21 @@
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
             "time": "2017-08-22 08:24:10"
+        },
+        {
+            "name": "PandaGroup/Westfield",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-westfield.git",
+                "reference": "71a520a888404037f30e732fc82d308114e9d272"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Westfield module for Magento 2.x",
+            "time": "2017-06-27 08:47:50"
         },
         {
             "name": "amasty/base",
@@ -6800,7 +6839,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6985,6 +7024,60 @@
                 "yui"
             ],
             "time": "2014-09-22 08:08:50"
+        },
+        {
+            "name": "wyomind/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-wyomind-core.git",
+                "reference": "f1dfb1f7f15540cac402bbf4f69094d1a7a0600f"
+            },
+            "require": {
+                "magento/framework": "^100.0.0",
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Wyomind\\Core\\": ""
+                }
+            },
+            "license": [
+                "Commercial License - Copyright 2017 - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+            ],
+            "time": "2017-09-22 06:54:57"
+        },
+        {
+            "name": "wyomind/cronscheduler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git",
+                "reference": "b1d8b3b7c46e2a840b3d5aff7e9fc6dfcd8f2522"
+            },
+            "require": {
+                "magento/framework": ">=100.0.0",
+                "php": "~5.5.0|~5.6.0|~7.0.0",
+                "wyomind/core": ">=3.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Wyomind\\CronScheduler\\": ""
+                }
+            },
+            "license": [
+                "Commercial License - Copyright 2017 - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
+            ],
+            "description": "Cron Scheduler is a toolbox that makes visible and comprehensible the cron tasks that run in the background of your Magento 2 website. This extension helps to monitor cron jobs and provides many features that help to prevent errors.",
+            "time": "2017-09-25 07:00:58"
         },
         {
             "name": "zendframework/zend-code",
@@ -8543,16 +8636,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.13.2",
+            "version": "v1.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "106313aa0d501782260e48ac04a1c671b5d418ea"
+                "reference": "387e4c86c9dc0e1e4c475291fc114ec45b98e624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/106313aa0d501782260e48ac04a1c671b5d418ea",
-                "reference": "106313aa0d501782260e48ac04a1c671b5d418ea",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/387e4c86c9dc0e1e4c475291fc114ec45b98e624",
+                "reference": "387e4c86c9dc0e1e4c475291fc114ec45b98e624",
                 "shasum": ""
             },
             "require": {
@@ -8598,7 +8691,7 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "abandoned": "friendsofphp/php-cs-fixer",
-            "time": "2017-08-19 11:43:55"
+            "time": "2017-09-11 14:11:16"
         },
         {
             "name": "lusitanian/oauth",
@@ -9755,7 +9848,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -9907,7 +10000,11 @@
         "pandagroup/quickview": 20,
         "pandagroup/shopbylook": 20,
         "pandagroup/emailtester": 20,
+        "pandagroup/cronschedulerextender": 20,
+        "pandagroup/westfield": 20,
         "pl/migs": 20,
+        "wyomind/core": 20,
+        "wyomind/cronscheduler": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
