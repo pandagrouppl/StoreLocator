@@ -26,6 +26,12 @@
         text-align: center;
         margin: 0 0 40px 0;
         letter-spacing: 0.1em;
+        width: 100%;
+
+        @media all and (max-width: $bp-measure) {
+            font-size: 32px;
+        }
+
     }
 
     &__paragraph {
