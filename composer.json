@@ -25,6 +25,7 @@
         "PandaGroup/ShopByLook": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
         "PandaGroup/CronSchedulerExtender": "dev-master",
+        "PandaGroup/Westfield": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
@@ -128,6 +129,10 @@
         "15": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git"
+        },
+        "16": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-westfield.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
