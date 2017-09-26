@@ -18,6 +18,18 @@
             }
         }
 
+        @media all and (max-width: 470px) {
+            &__item {
+                margin: 0 15px;
+                font-size: 21px;
+                padding: 20px 0;
+
+                &--active {
+                    padding: 17px 0 20px;
+                }
+            }
+        }
+
     }
 
     .fyf-slider {
@@ -49,6 +61,7 @@
         &__title {
             font-size: 40px;
             margin: 36px 0;
+            line-height: 1em;
         }
 
         &__title-h2 {
@@ -104,6 +117,7 @@
 
                 img {
                     margin: 0 auto;
+                    max-width: 100%;
                 }
             }
 
