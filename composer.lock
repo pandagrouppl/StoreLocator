@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5c27d48de7fd923d2984448f73040cd",
-    "content-hash": "0b2383119bab16b56fa43085e265ea31",
+    "hash": "4f94c753b4c50eaff7ae3b46137b5ec0",
+    "content-hash": "fa9e30b158bea4437ba0c78e373bdbb4",
     "packages": [
         {
             "name": "PL/Migs",
@@ -40,15 +40,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "0f730dbbb4f8826a70b4662ea11268f59796fe0a"
+                "reference": "a94d89f35fffddc1b1d77fd45f3212d8bc47a830"
             },
             "require": {
-                "magento/framework": "100.0.*|100.1.*",
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2017-08-23 10:07:01"
+            "time": "2017-09-28 10:04:50"
         },
         {
             "name": "PandaGroup/Careers",
@@ -56,14 +55,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "1b2d458946a375ff19c2985ce83d5d4150e79378"
+                "reference": "d375c9394a4ce5c653277e4f9b089ed4f4139591"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-09-26 09:35:08"
+            "time": "2017-09-28 08:01:28"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -140,16 +139,40 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "0e3ccf9ab8bcd3b834a95c500527b7a4674afb65"
+                "reference": "fc4e6a49efda610e41b126e7cf74be8587c498be"
             },
             "require": {
-                "magento/framework": "100.0.*|100.1.*",
                 "pandagroup/base": "dev-master",
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2017-08-24 06:43:44"
+            "time": "2017-09-28 09:58:52"
+        },
+        {
+            "name": "PandaGroup/MagentoSlackMonitor",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-magento-slack-monitor.git",
+                "reference": "3004ec6b0b0a124dcd0a96a04988a5ff8ad35956"
+            },
+            "require": {
+                "league/html-to-markdown": "~4.4",
+                "php": "~7.0.0",
+                "staempfli/magento2-module-chat-connector": "~1.1"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "time": "2017-10-02 07:09:04"
         },
         {
             "name": "PandaGroup/Migration",
@@ -172,11 +195,10 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration-tool",
-                "reference": "5a5ce1012fff0558a5984389fe76c8d133daf9f0"
+                "reference": "7d97653155d9b7e52f5a4d80f969b8b46f4d909e"
             },
             "require": {
-                "magento/framework": "~100.1",
-                "monolog/monolog": "~1.16.0",
+                "monolog/monolog": ">=1.16.0",
                 "symfony/console": "~2.3"
             },
             "type": "library",
@@ -193,7 +215,7 @@
                 ]
             },
             "description": "Migration Tool",
-            "time": "2017-08-18 12:24:31"
+            "time": "2017-09-28 10:16:31"
         },
         {
             "name": "PandaGroup/Quickview",
@@ -201,15 +223,11 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-quickview.git",
-                "reference": "a88b05ac002dbca8b96ea2874fadb5c558e4a5fb"
-            },
-            "require": {
-                "magento/framework": "100.0.*|100.1.*",
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+                "reference": "21e3c8b7ea5b5b3ab62fb96af9f084a317e523c0"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Quickview Module",
-            "time": "2017-08-24 07:55:10"
+            "time": "2017-09-28 09:52:40"
         },
         {
             "name": "PandaGroup/ShopByLook",
@@ -229,6 +247,27 @@
             ],
             "description": "Shop By Look module for Magento 2.x",
             "time": "2017-09-22 09:28:08"
+        },
+        {
+            "name": "PandaGroup/SlackIntegration",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-slack-integration.git",
+                "reference": "8caa82662544f1520f85bebb52726b1a26b67c6e"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "description": "Slack Integration module for Magento 2.x",
+            "time": "2017-10-02 07:07:10"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -1072,6 +1111,187 @@
             "time": "2017-04-03 19:08:52"
         },
         {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.0 || ^5.0",
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2017-06-22 18:50:49"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20 10:07:11"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2017-03-20 17:10:46"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "1.6.1",
             "source": {
@@ -1185,6 +1405,70 @@
                 "terminal"
             ],
             "time": "2015-01-18 14:31:58"
+        },
+        {
+            "name": "league/html-to-markdown",
+            "version": "4.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/html-to-markdown.git",
+                "reference": "82ea375b5b2b1da1da222644c0565c695bf88186"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/html-to-markdown/zipball/82ea375b5b2b1da1da222644c0565c695bf88186",
+                "reference": "82ea375b5b2b1da1da222644c0565c695bf88186",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-xml": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mikehaertl/php-shellcommand": "~1.1.0",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "bin": [
+                "bin/html-to-markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\HTMLToMarkdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "http://www.colinodell.com",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Nick Cernis",
+                    "email": "nick@cern.is",
+                    "homepage": "http://modernnerd.net",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "An HTML-to-markdown conversion helper for PHP",
+            "homepage": "https://github.com/thephpleague/html-to-markdown",
+            "keywords": [
+                "html",
+                "markdown"
+            ],
+            "time": "2017-03-16 00:45:59"
         },
         {
             "name": "magento/composer",
@@ -6396,6 +6680,56 @@
             "time": "2017-06-05 06:31:10"
         },
         {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06 14:39:51"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -6635,6 +6969,41 @@
             ],
             "description": "An extendable framework for version control hooks.",
             "time": "2014-09-22 08:40:36"
+        },
+        {
+            "name": "staempfli/magento2-module-chat-connector",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staempfli/magento2-module-chat-connector.git",
+                "reference": "9d47244dc63573d50e1d59f01cb4fb232856a36a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staempfli/magento2-module-chat-connector/zipball/9d47244dc63573d50e1d59f01cb4fb232856a36a",
+                "reference": "9d47244dc63573d50e1d59f01cb4fb232856a36a",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.2",
+                "php": "~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Staempfli\\ChatConnector\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magento 2 Chat Connector required for HipChat and Slack Module",
+            "time": "2017-07-26 08:55:19"
         },
         {
             "name": "strategery/magento2-infinitescroll",
@@ -7031,10 +7400,10 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-wyomind-core.git",
-                "reference": "f1dfb1f7f15540cac402bbf4f69094d1a7a0600f"
+                "reference": "acf1e2561277829cee766e5820289ec34bce4d94"
             },
             "require": {
-                "magento/framework": "^100.0.0",
+                "magento/framework": ">=100.0.0",
                 "php": "~5.5.0|~5.6.0|~7.0.0"
             },
             "type": "magento2-module",
@@ -7049,7 +7418,7 @@
             "license": [
                 "Commercial License - Copyright 2017 - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
             ],
-            "time": "2017-09-22 06:54:57"
+            "time": "2017-09-28 10:08:11"
         },
         {
             "name": "wyomind/cronscheduler",
@@ -10002,6 +10371,8 @@
         "pandagroup/emailtester": 20,
         "pandagroup/cronschedulerextender": 20,
         "pandagroup/westfield": 20,
+        "pandagroup/slackintegration": 20,
+        "pandagroup/magentoslackmonitor": 20,
         "pl/migs": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
