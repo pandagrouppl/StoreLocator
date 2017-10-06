@@ -57,8 +57,18 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                             . 'top:' . $productImage->getHeight() . 'px;"';
                     }
                     ?>
+
                     <?php // Product Image ?>
-                    <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-item__img" tabindex="-1">
+                        <?php
+                        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+                        $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');;
+                        $categoryCode = strtolower($category->getName());
+                        ?>
+                    <?php if($categoryCode === 'suits') { ?>
+                        <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-item__img" tabindex="-1">
+                    <?php } else { ?>
+                        <a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo catalog-item__img catalog-item__img--not-suits" tabindex="-1">
+                    <?php } ?>
                         <?php echo $productImage->toHtml(); ?>
                         <?php $productImageAttr = $_product->getCustomAttribute('hover_image'); ?>
                         <?php if ($productImageAttr):
@@ -67,7 +77,6 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                 ->setImageFile($productImageAttr->getValue());?>
                             <img class="catalog-item__img--second" src="<?php echo $productHoverImage->getUrl(); ?>" />
                         <?php endif; ?>
-
                     </a>
                     <div class="product details product-item-details catalog-item__content">
                         <?php
