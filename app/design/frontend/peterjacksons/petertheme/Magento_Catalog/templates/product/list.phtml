@@ -82,7 +82,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                         <?php
                             $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                         ?>
-                        <h3 class="product name product-item-name">
+                        <h3 class="product name product-item-name catalog-item__product-name">
                             <a class="product-item-link catalog-item__title"
                                href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>">
                                 <?php /* @escapeNotVerified */ echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
