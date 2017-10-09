@@ -103,6 +103,10 @@
         }
     }
 
+    &__no-items {
+        padding: 24px 24px 0 24px;
+    }
+
     &::before {
         content: '';
         position: absolute;
