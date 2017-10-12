@@ -4,7 +4,10 @@ namespace PandaGroup\StoreLocator\Model;
 
 class GoogleApi extends \Magento\Framework\Model\AbstractModel
 {
-    const GOOGLE_API_ADDRESS_URL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
+    const GOOGLE_API_ADDRESS_URL = 'http://maps.googleapis.com/maps/api/geocode/json?address=';
+
+    protected $_categoryCollectionFactory;
+    protected $_categoryHelper;
 
     /** @var \PandaGroup\StoreLocator\Helper\ConfigProvider  */
     protected $configProvider;
