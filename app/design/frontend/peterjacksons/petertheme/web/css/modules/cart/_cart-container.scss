@@ -1,5 +1,29 @@
 .cart-container {
-    button.update {
-        @include button-grey(10px, 10px 0, 15px, normal);
+    display: flex;
+
+    &__form {
+        flex: 1;
+    }
+
+    &__summary {
+        flex-basis: 200px;
+    }
+
+    &__table {
+        background-color: #f3f2f2;
+        padding: 20px 0;
+    }
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__buttons {
+        > button {
+            @include button-blue(0, 10px 0, 15px, normal);
+            height: 42px;
+            width: 250px;
+            max-width: 100%;
+        }
     }
 }

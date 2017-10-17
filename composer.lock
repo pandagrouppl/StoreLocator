@@ -40,14 +40,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "a94d89f35fffddc1b1d77fd45f3212d8bc47a830"
+                "reference": "742c20e6784b42a7dda6facb074a2bb5f2acbda3"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2017-09-28 10:04:50"
+            "time": "2017-10-11 11:02:43"
         },
         {
             "name": "PandaGroup/Careers",
@@ -195,7 +195,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-migration-tool",
-                "reference": "7d97653155d9b7e52f5a4d80f969b8b46f4d909e"
+                "reference": "23eaac18078f41bf5236cd807d9e0deb25f13a31"
             },
             "require": {
                 "monolog/monolog": ">=1.16.0",
@@ -215,7 +215,7 @@
                 ]
             },
             "description": "Migration Tool",
-            "time": "2017-09-28 10:16:31"
+            "time": "2017-10-12 08:41:07"
         },
         {
             "name": "PandaGroup/Quickview",
@@ -290,12 +290,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1"
+                "reference": "b564782eb421d3fb6ae3648087b1661e68069e02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1",
-                "reference": "f60ba0aa19b3733ad6d7c7d1e9f6520017ee2ca1",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/b564782eb421d3fb6ae3648087b1661e68069e02",
+                "reference": "b564782eb421d3fb6ae3648087b1661e68069e02",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -307,7 +307,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-08-22 08:24:10"
+            "time": "2017-10-12 12:55:53"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -329,7 +329,7 @@
             "version": "1.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip",
+                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.0.6",
                 "reference": null,
                 "shasum": null
             },
@@ -464,13 +464,13 @@
             "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview.zip",
+                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.2",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "amasty/base": "*",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {

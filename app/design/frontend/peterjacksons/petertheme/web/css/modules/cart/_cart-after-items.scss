@@ -1,36 +1,5 @@
 .after-items {
-    display: flex;
-    flex-wrap: wrap;
 
-    &__top {
-        flex: 1 0 100%;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            order: 2;
-        }
-    }
-
-    &__left {
-        flex: 1 0 50%;
-    }
-
-    &__right {
-        flex: 1 0 50%;
-        display: flex;
-        justify-content: flex-end;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            flex: 1 0 100%;
-            justify-content: center;
-            order: 3;
-        }
-
-        .after-items__checkout-button > button {
-            @media all and (max-width: $cms-sm-brkpt) {
-                width: 100%;
-            }
-        }
-    }
 
     &__bottom {
         flex-basis: 100%;
@@ -153,62 +122,5 @@
             height: 15px;
             background-position: -309px -103px;
         }
-    }
-
-    &__total-price {
-        @extend .items-table__price;
-        display: flex;
-        flex-direction: row-reverse;
-
-        .grand.totals {
-            display: flex;
-            align-items: center;
-            margin: 30px 0 30px 0;
-            font-weight: 300;
-
-            th.mark {
-                margin-right: 10px;
-                font-weight: 300;
-            }
-        }
-    }
-
-    &__checkout-button {
-        text-align: right;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            flex-basis: 100%;
-        }
-
-        > button {
-            @include button-blue(0, 10px 0, 15px, normal);
-            height: 42px;
-            width: 250px;
-            max-width: 100%;
-        }
-    }
-
-    &__paypal-button {
-        @include button(0, 0);
-        background-color: white;
-        border: 1px solid #b4b2b2;
-        height: 42px;
-        width: 250px;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        &:hover {
-            background-color: white;
-        }
-
-    }
-
-    &__paypal-logo {
-        @include sprite(paypalbutt);
-        display: block;
-        margin: auto;
     }
 }
