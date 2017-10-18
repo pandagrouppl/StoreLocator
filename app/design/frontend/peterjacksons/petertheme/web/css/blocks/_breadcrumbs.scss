@@ -2,6 +2,34 @@ $breadcrumbs-color: #928383;
 .cms-page-view .breadcrumbs {
     max-width: 990px;
 }
+.checkout-cart-index, .checkout-index-index {
+    .breadcrumbs {
+        font-size: 18px;
+        text-align: center;
+
+        &__items {
+            display: block;
+        }
+
+        &__item {
+            display: inline-block;
+            text-transform: none;
+        }
+
+        &__separator {
+            letter-spacing: -1px;
+            font-weight: normal;
+        }
+    }
+}
+.checkout-cart-index .breadcrumbs__item--cart {
+    font-weight: bold;
+}
+
+.checkout-index-index .breadcrumbs__item--delivery {
+    font-weight: bold;
+}
+
 .breadcrumbs {
     @include container();
     box-sizing: border-box;
