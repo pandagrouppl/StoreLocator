@@ -1,3 +1,6 @@
+$border: 1px solid #dbd5d5;
+$summ-pdd: 20px;
+
 .cart-container {
     display: flex;
     color: #181818;
@@ -7,23 +10,74 @@
     }
 
     &__summary {
-        flex-basis: 200px;
+        flex-basis: 340px;
     }
 
     &__table {
         background-color: #f3f2f2;
-        padding: 20px 0;
+        padding: $summ-pdd 0;
     }
 
     &__title {
-        font-size: 16px;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: $summ-pdd;
+        border-bottom: $border;
+    }
+
+    &__total-price {
+        padding-top: $summ-pdd;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        .table-caption {
+            display: none;
+        }
+
+        th {
+            text-align: left;
+            font-weight: normal;
+            font-size: 14px;
+            padding-left: $summ-pdd;
+        }
+
+        td {
+            text-align: right;
+            font-size: 15px;
+            padding-right: $summ-pdd;
+        }
+
+        tr:nth-last-child(2) {
+            th, td {
+                padding-bottom: $summ-pdd;
+            }
+        }
+
+        .grand.totals {
+            th {
+                font-size: 15px;
+            }
+
+            td {
+                font-size: 16px;
+            }
+
+            th, td {
+                border-top: $border;
+                padding-top: $summ-pdd;
+            }
+        }
     }
 
     &__buttons {
         > button {
-            @include button-blue(0, 10px 0, 15px, normal);
-            height: 42px;
-            width: 250px;
+            @include button-checkout();
+
             max-width: 100%;
         }
     }

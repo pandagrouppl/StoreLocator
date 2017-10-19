@@ -122,3 +122,25 @@
     }
 }
 
+
+@mixin button-checkout($bghov: #666, $colorhov: white, $border: 1px solid $grey-dark) {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background 0.3s, color 0.3s ease-in-out;
+    margin-top: 15px;
+    letter-spacing: 0;
+    cursor: pointer;
+    background: #363636;
+    color: white;
+    border: $border;
+    width: 100%;
+    height: 42px;
+
+    &:hover {
+        background: $bghov;
+        color: $colorhov;
+    }
+}
+
