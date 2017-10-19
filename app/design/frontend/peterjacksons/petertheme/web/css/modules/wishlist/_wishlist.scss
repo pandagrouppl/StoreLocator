@@ -1,3 +1,37 @@
+body[class~='guest-wishlist-index-index'] {
+
+    .page-main__title {
+        display: flex;
+        justify-content: center;
+        font-family: league_gothic;
+        font-size: 2.4em;
+        line-height: 65px;
+
+        h1 {
+            font-weight: 400;
+        }
+    }
+
+    .actions-toolbar {
+
+        .secondary {
+            padding: 0 15px 0 15px;
+        }
+
+        a {
+            font-size: 13px;
+            font-family: Roboto;
+            text-transform: none;
+            font-weight: 400;
+            color: #222;
+
+            &:hover {
+                color: $grey-dark;
+            }
+        }
+    }
+}
+
 .wishlist {
 
     &__back {
@@ -12,10 +46,13 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 40px 0 40px 0;
     }
 
     &__item {
-        width: 33%;
+        width: 30%;
+        cursor: default;
+        margin: 0 0 40px 0;
 
         @media all and (max-width: $bp-header) {
             width: 50%;
@@ -23,6 +60,10 @@
 
         @media all and (max-width: 550px) {
             width: 100%;
+        }
+
+        &:hover .wishlist__name {
+            color: $grey-dark;
         }
     }
 
@@ -49,16 +90,17 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 210px;
-        margin: 20px 0 0 0;
+        height: 45px;
     }
 
     &__remove {
         width: 100%;
         display: block;
         text-align: center;
-        color: $grey-dark;
+        color: #b0afaf;
         font-weight: bold;
-        margin: 20px 0;
+        margin: 10px 0;
+        text-transform: uppercase;
     }
 
     .price-box {

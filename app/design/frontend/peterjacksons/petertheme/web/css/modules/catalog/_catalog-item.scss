@@ -48,6 +48,7 @@
             transition: 0.75s all ease;
             width: 100%;
             height: 100%;
+            transform: translateZ(0);
         }
 
         &:hover &--second {
