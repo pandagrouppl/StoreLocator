@@ -1,0 +1,50 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Welcome to %store_name" store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<div class="order-confirmation-wrap" style="border-collapse: collapse; border-spacing: 0; background:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+
+        <tr>
+            <td align="center" valign="top" style="padding:0; ">
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
+                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7">
+                            <h1 style="color: white; text-transform: uppercase; font-size: 30px;">Dear {{var customer.firstname}}, </h1>
+                            <p style="color: white; font-size: 16px;">Your e-mail {{var customer.email}} must be confirmed before using it to log in to our store.</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr>
+                        <td><p style="font-size:16px; padding:0 18px; line-height:30px; text-align:center; color:#5f5f5f;">To confirm the e-mail and instantly log in, please, use <br>
+                            <a href="{{var this.getUrl($store,'customer/account/confirm/',[_query:[id:$customer.id,key:$customer.confirmation,back_url:$back_url],_nosid:1])}}" target="_blank" style="color:#1E7EC8;">{{trans "Confirm Your Account"}}</a></a>.
+                            <br>This link is valid only once.</p></td>
+                    </tr>
+                    <tr>
+                        <td><p style="font-size:16px; padding:0 18px; line-height:30px; text-align:center; color:#5f5f5f;"> Use the following values when prompted to log in:<br/>
+                            <strong>E-mail:</strong> {{var customer.email}}<br/>
+                            <strong>Password:</strong> The password you have chosen.</p></td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+{{template config_path="design/email/footer_template"}}

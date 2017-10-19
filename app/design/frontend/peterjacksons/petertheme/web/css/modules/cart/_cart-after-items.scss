@@ -80,6 +80,10 @@
                 > button {
                     flex-basis: 100%;
                     justify-content: center;
+
+                    > span {
+                        width: 100%;
+                    }
                 }
             }
         }

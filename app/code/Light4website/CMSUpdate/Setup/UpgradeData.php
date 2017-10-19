@@ -459,5 +459,18 @@ class UpgradeData implements UpgradeDataInterface
         $setup->endSetup();
 
         echo "Finish instalation/updating pages and blocks";
+
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('home');
+        $content = file_get_contents('pages/home.phtml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Home')
+            ->setIdentifier('home')
+            ->setIsActive(true)
+            ->setPageLayout('1column')
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page home was installed/updated\n";
+        $setup->endSetup();
     }
 }

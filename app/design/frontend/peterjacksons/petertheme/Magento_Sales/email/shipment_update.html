@@ -1,0 +1,153 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Update to your %store_name shipment" store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var order.getCustomerName()":"Customer Name",
+"var comment":"Order Comment",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status",
+"var shipment.increment_id":"Shipment Id"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<div class="order-confirmation-wrap" style="border-collapse: collapse; border-spacing: 0; background:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+
+        <tr>
+            <td align="center" valign="top" style="padding:0; ">
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr style="display: block; height: 5px;">
+                        <td></td>
+                    </tr>
+                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
+                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px;">
+                            <p style="font-size: 19px; color: #fff;">Dear {{var order.getCustomerName()}},</p>
+                            <p style="font-size: 19px; color: #fff;">Your order # {{var order.increment_id}} status is: <strong>{{var order.getStatusLabel()}}</strong>.</p>
+                            <p style="font-size: 19px; color: #fff;">
+                                You can check the status of your order by<br>
+                                <a href="{{store url="customer/account/"}}" style="color:#fff; text-decoration: none; font-weight: bold">logging into your account</a>.<br>
+                            </p>
+                            <p style="font-size: 19px; color: #fff;">{{var comment}}</p>
+                        </td>
+                    </tr>
+                    <tr style="display: block; height: 10px;">
+                        <td></td>
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
+                    <tr style="height: 41px; font-size: 18px;">
+
+                        <td style="background: #3f3e3e;">
+
+                            <div class="table-width-half" style="float: left; text-align: center; width: 100%; background: #3f3e3e; " valign="top" align="left">
+                                <p style="color: #FFFFFF; font-size: 18px; padding: 11px 0px 11px 36px; margin: 0 0 0 0;"><span style="font-weight: bold;">ORDER NUMBER: #</span>{{var order.increment_id}}</p>
+                            </div>
+                            <div class="table-width-half second" style="float: left; text-align: right; width: 50%; background: #3f3e3e; display: none; " valign="top" align="left">
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr style="display: block; height: 10px;">
+                        <td></td>
+
+                    <tr>
+                        <td class="full-line-width" style="width: 100%;  padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="left">
+                            <div class="wrap-in">
+                                <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">
+                                    Your Shipment #{{var shipment.increment_id}} for Order #{{var order.increment_id}}
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tbody>
+                    <tr>
+                        <td class="table-width-wrap-half" align="left" width="50%" valign="top" style="font-size:18px; padding: 36px 10px 10px 36px; width: 50%; ">
+                            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">BILLING INFORMATION</div>
+
+                            <div class="wrap-in">
+                                {{var formattedBillingAddress|raw}}
+                            </div>
+                        </td>
+                        <th class="hiditres" width="10"></th>
+                        <td class="table-width-wrap-half" align="left" width="50%" valign="top"  style="font-size:18px; padding: 36px 36px 10px 10px; width: 50%; ">
+                            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">PAYMENT METHOD</div>
+                            <div class="wrap-in">
+                                {{var order.getPayment().getMethodInstance().getTitle()}}
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="table-width-wrap-half" align="left" width="50%" valign="top" style="font-size:18px; padding: 36px 10px 10px 36px; width: 50%; ">
+                            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">SHIPPING INFORMATION</div>
+
+                            <div class="wrap-in">
+                                {{var formattedShippingAddress|raw}}
+                            </div>
+                        </td>
+                        <th class="hiditres" width="10"></th>
+                        <td class="table-width-wrap-half" align="left" width="50%" valign="top" style="font-size:18px; padding: 36px 36px 10px 10px; width: 50%; ">
+                            <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">SHIPPING METHOD</div>
+
+                            <div class="wrap-in">
+                                {{var order.shipping_description}}
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr>
+                        <td class="full-line-width" style="width: 100%;  padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 0px solid #e7e7e7;" valign="top" align="left">
+                            <div class="wrap-in">
+                                <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">
+
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tbody>
+                    <tr>
+                        <td class="table-width-wrap table-items-nested" valign="top" width="" style="font-size:16px; padding: 0 36px 10px 10px;">
+                            <div class="wrap-in" style="padding: 5%">
+                                {{layout handle="sales_email_order_shipment_items" shipment=$shipment order=$order}}
+                                {{block type='core/template' area='frontend' template='email/order/shipment/track.phtml' shipment=$shipment order=$order}}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+{{template config_path="design/email/footer_template"}}

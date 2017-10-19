@@ -1,0 +1,59 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Welcome to %store_name" store_name=$store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<div class="order-confirmation-wrap" style="border-collapse: collapse; border-spacing: 0; background:#FFFFFF; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+    <table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+
+        <tr>
+            <td align="center" valign="top" style="padding:0; ">
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
+                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7">
+                            <h1 style="color: white; text-transform: uppercase; font-size: 30px; margin-bottom: 0; text-align: center;">Welcome to Peter Jackson!</h1>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF; color:#5f5f5f;">
+                    <tr>
+                        <td>
+                            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align: center;">{{trans "Welcome to %store_name." store_name=$store.getFrontendName()}}</p>
+                            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; ">
+                                To log in when visiting our site just click <br /><a href="{{store url="customer/account/"}}" style="color:#6b9dda; text-decoration:none;">Login</a> or <a href="{{store url="customer/account/"}}" style="color:#6b9dda; text-decoration:none;">My Account</a> <br />at the top of every page, and then enter your e-mail address and password.</p>
+                            <p style="margin: 0; text-align:center; font-size:16px; padding:0 10px; line-height:20px; font-family: Arial, sans-serif;">
+                                Use the following values when prompted to log in:<br/>
+                                <strong>E-mail</strong>: {{var customer.email}}<br/>
+                                <strong>Password</strong>: The password you have chosen when creating this account</br>
+                            <p style="font-size:16px; text-align: center; line-height:24px; margin:16px 0 16px 0;">When you log in to your account, you will be able to do the following:</p>
+                            <ul style="font-size: 14px; line-height:24px; margin:0; padding:0;">
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Proceed through checkout faster when making a purchase</li>
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Check the status of orders</li>
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">View past orders</li>
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Make changes to your account information</li>
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Change your password</li>
+                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Store alternative addresses (for shipping to multiple family members and friends!)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+{{template config_path="design/email/footer_template"}}
