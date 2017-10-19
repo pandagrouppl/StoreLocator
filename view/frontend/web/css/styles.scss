@@ -1,6 +1,6 @@
-@import 'helpers/sprite';
-@import 'helpers/variables';
-@import 'helpers/mixins';
+@import './../../web/css/helpers/variables';
+@import './../../web/css/helpers/sprite';
+@import './../../web/css/helpers/mixins';
 
 @import "modules/storelocator/storelocator-variables";
 @import "modules/storelocator/storelocator";
