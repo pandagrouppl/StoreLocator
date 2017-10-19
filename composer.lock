@@ -249,7 +249,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-slack-integration.git",
-                "reference": "bc959c795fa50dd5cdaa9c11d5d1641cada87c8d"
+                "reference": "ccc802a5dcd5c0ebd70d2678dc871da04b9fee7a"
             },
             "type": "magento2-panda-module",
             "license": [
@@ -262,7 +262,7 @@
                 }
             ],
             "description": "Slack Integration module for Magento 2.x",
-            "time": "2017-10-18 07:35:06"
+            "time": "2017-10-19 11:44:44"
         },
         {
             "name": "PandaGroup/Spinner",
