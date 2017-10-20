@@ -4,7 +4,7 @@
     <system>
         <section id="pandagroup_store_locator" translate="label" type="text" sortOrder="109" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>pandagroup-store_locator</class>
-            <label><![CDATA[StoreLocator]]></label>
+            <label><![CDATA[Store Locator]]></label>
             <tab>panda_group</tab>
             <resource>PandaGroup_StoreLocator::config</resource>
             <group id="store_locator_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
