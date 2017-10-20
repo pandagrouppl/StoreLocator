@@ -249,7 +249,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-slack-integration.git",
-                "reference": "bc959c795fa50dd5cdaa9c11d5d1641cada87c8d"
+                "reference": "ccc802a5dcd5c0ebd70d2678dc871da04b9fee7a"
             },
             "type": "magento2-panda-module",
             "license": [
@@ -262,7 +262,7 @@
                 }
             ],
             "description": "Slack Integration module for Magento 2.x",
-            "time": "2017-10-18 07:35:06"
+            "time": "2017-10-19 11:44:44"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -285,12 +285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "d94d69a0e55943366ca0646961b2e2be75cd59b4"
+                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d94d69a0e55943366ca0646961b2e2be75cd59b4",
-                "reference": "d94d69a0e55943366ca0646961b2e2be75cd59b4",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/8358f991a32d8d7b639fd05e5daad77c414fd502",
+                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -302,7 +302,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-10-19 08:20:21"
+            "time": "2017-10-20 06:06:37"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -310,14 +310,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "71a520a888404037f30e732fc82d308114e9d272"
+                "reference": "8aee34ba6b79226454697da6eaf083f384fb9a5c"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2017-06-27 08:47:50"
+            "time": "2017-10-20 06:04:32"
         },
         {
             "name": "amasty/base",

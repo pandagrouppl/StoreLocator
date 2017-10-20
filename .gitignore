@@ -19,7 +19,7 @@ atlassian*
 
 /app/design/*/Magento
 
-/app/etc
+/app/etc/env.php
 
 /app/i18n/magento
 
