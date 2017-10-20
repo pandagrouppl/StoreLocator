@@ -28,6 +28,7 @@
         "PandaGroup/Westfield": "dev-master",
         "PandaGroup/SlackIntegration": "dev-master",
         "PandaGroup/MagentoSlackMonitor": "dev-master",
+        "PandaGroup/RegionsPatcher": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
@@ -143,6 +144,10 @@
         "18": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-magento-slack-monitor.git"
+        },
+        "19": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
