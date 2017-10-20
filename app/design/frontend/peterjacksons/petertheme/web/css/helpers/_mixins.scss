@@ -5,9 +5,9 @@
 
 @mixin form-element() {
     height: 40px;
-    background-color: #efefef;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid #b9b9b9;
+    border-radius: 1px;
+    background-color: white;
     box-sizing: border-box;
     width: 100%;
     padding: 0 10px;
@@ -18,11 +18,12 @@
 }
 
 @mixin form-select-arrow() {
-    @include sprite(selectarrcheckout);
+    @include sprite(select-arrow);
     display: block;
     position: absolute;
-    top: 0;
-    right: 3px;
+    right: 14px;
+    top: 50%;
+    transform: translate(0,-50%);
     pointer-events: none;
 }
 

@@ -170,6 +170,14 @@
         }
     }
 
+    &__address-fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        > .field {
+            flex-basis: 100%;
+        }
+    }
+
     &__shipping {
 
         &-address {

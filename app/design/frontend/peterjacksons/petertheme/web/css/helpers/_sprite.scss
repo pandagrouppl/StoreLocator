@@ -2,13 +2,13 @@
 
 $sprite: (
     width: 764px,
-    height: 606px,
+    height: 604px,
     image: '../../img/sprite.png'
 );
 
 $retina-sprite: (
     width: 1528px,
-    height: 1212px,
+    height: 1208px,
     image: '../../img/sprite2x.png'
 );
 
@@ -86,8 +86,8 @@ $sprite-icon: (
         height: 24px
     ),
     buttonarrowleft: (
-        x: -467px,
-        y: -338px,
+        x: -470px,
+        y: -393px,
         width: 7px,
         height: 9px
     ),
@@ -110,13 +110,13 @@ $sprite-icon: (
         height: 64px
     ),
     footer-instagram-white: (
-        x: -699px,
+        x: -606px,
         y: -381px,
         width: 63px,
         height: 63px
     ),
     footer-instagram: (
-        x: -606px,
+        x: -699px,
         y: -381px,
         width: 63px,
         height: 63px
@@ -217,45 +217,45 @@ $sprite-icon: (
         width: 18px,
         height: 18px
     ),
+    select-arrow: (
+        x: -467px,
+        y: -338px,
+        width: 13px,
+        height: 13px
+    ),
     select-arrw: (
-        x: -60px,
+        x: 0px,
         y: -566px,
         width: 30px,
         height: 38px
     ),
-    selectarrcheckout: (
-        x: 0px,
-        y: -566px,
-        width: 30px,
-        height: 40px
-    ),
     store-locator: (
-        x: -120px,
+        x: -60px,
         y: -566px,
         width: 19px,
         height: 32px
     ),
     storelocator-directions: (
-        x: -465px,
-        y: -246px,
-        width: 16px,
-        height: 16px
-    ),
-    storelocator-email: (
         x: -748px,
         y: -136px,
         width: 16px,
         height: 16px
     ),
-    storelocator-phone: (
+    storelocator-email: (
         x: -748px,
         y: -182px,
         width: 16px,
         height: 16px
     ),
-    storelocator-pin: (
+    storelocator-phone: (
         x: -748px,
         y: -228px,
+        width: 16px,
+        height: 16px
+    ),
+    storelocator-pin: (
+        x: -465px,
+        y: -246px,
         width: 16px,
         height: 16px
     ),
