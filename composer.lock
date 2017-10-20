@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f94c753b4c50eaff7ae3b46137b5ec0",
-    "content-hash": "fa9e30b158bea4437ba0c78e373bdbb4",
+    "hash": "48bf28c416908c48aaa9d656be1c5817",
+    "content-hash": "b5637bf688a183dc3ad17c7a1807b1bc",
     "packages": [
         {
             "name": "PL/Migs",
@@ -70,14 +70,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "d7ad45c5a85231279df08ecae65e38507462000d"
+                "reference": "45318eb5f9c863cd71df3df9cec1634950e4002c"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-10-19 08:17:56"
+            "time": "2017-10-20 14:58:09"
         },
         {
             "name": "PandaGroup/CronSchedulerExtender",
@@ -225,12 +225,27 @@
             "time": "2017-09-28 09:52:40"
         },
         {
+            "name": "PandaGroup/RegionsPatcher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git",
+                "reference": "1e92fb24ee54b670902f65ffb09c44a97c393b6a"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Regions Patcher Module",
+            "time": "2017-10-20 12:58:08"
+        },
+        {
             "name": "PandaGroup/ShopByLook",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "d740620cfa58b8723597be856335e985b37e25c1"
+                "reference": "b5c622971c524647e37e442dbb082dc0715be0d4"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -241,7 +256,7 @@
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-09-22 09:28:08"
+            "time": "2017-10-20 14:58:37"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -10038,6 +10053,7 @@
         "pandagroup/westfield": 20,
         "pandagroup/slackintegration": 20,
         "pandagroup/magentoslackmonitor": 20,
+        "pandagroup/regionspatcher": 20,
         "pl/migs": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
