@@ -1,7 +1,7 @@
 .checkout {
-    letter-spacing: 1px;
+    width: 925px;
     color: #515151;
-    margin: 0 0 20px;
+    margin: 0 auto 20px auto;
 
     a {
         margin: 0;
@@ -37,11 +37,12 @@
     }
 
     &__sidebar {
-        flex: 0 0 350px;
+        box-sizing: border-box;
+        flex: 0 0 360px;
         background-color: #efefef;
-        padding: 15px 15px 40px 15px;
+        padding: 15px 0 0 0;
         line-height: 1.3em;
-        margin-left: 20px;
+        margin-left: 90px;
 
         @media all and (max-width: $sm-breakpoint) {
             margin-top: 15px;
@@ -52,11 +53,11 @@
 
     &__sidebar-title {
         font-weight: 500;
-        padding: 10px 0;
+        padding: 10px 0 25px 0;
         text-align: center;
         border-bottom: 1px solid #ddd;
         margin-bottom: 30px;
-        font-size: 25px;
+        font-size: 24px;
     }
 
     &__shipping-method {
@@ -77,29 +78,18 @@
     }
 
     &__step-wrapper {
-        display: flex;
-        align-items: center;
         font-weight: 500;
-        padding: 27px 0;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 30px;
-    }
-
-    &__step-number {
-        background-color: #000;
-        color: #fff;
-        border-radius: 100%;
-        width: 38px;
-        height: 38px;
-        margin: 0 20px 0 0;
-        font-size: 22px;
-        padding: 8px 12px;
-        box-sizing: border-box;
+        padding: 0 0 17px 0;
     }
 
     &__step-title {
-        font-size:  25px;
+        font-size:  26px;
         color: #000;
+    }
+
+    &__step-separator {
+        margin: 30px 0;
+        border-bottom: 1px solid #ddd;
     }
 
     &__input-wrapper {
@@ -171,10 +161,19 @@
     }
 
     &__address-fieldset {
+
         display: flex;
         flex-wrap: wrap;
         > .field {
             flex-basis: 100%;
+
+            &:nth-child(n+5) {
+                flex-basis: 50%;
+            }
+            &:nth-child(5), &:nth-child(7) {
+                box-sizing: border-box;
+                padding-right: 15px;
+            }
         }
     }
 
@@ -193,13 +192,9 @@
 
         &-option {
             margin-bottom: 15px;
-            border: 2px dashed #ddd;
-            padding: 15px;
-            border-radius: 5px;
         }
 
         &-name {
-            text-transform: uppercase;
             font-size: 14px;
             margin-bottom: 10px;
         }

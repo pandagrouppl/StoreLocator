@@ -16,61 +16,63 @@
 
     &__product-info {
         flex: 1;
+        margin: 7px 0 0 31px;
     }
 
     &__remove {
 
     }
 
-    &__product {
 
-        &-details {
-            padding-left: 5px;
-            max-width: 100%;
-            width: 271px;
 
-            @media all and (max-width: $cms-sm-brkpt) {
-                padding-left: 0;
-            }
+    &__product-details {
+        padding-left: 5px;
+        max-width: 100%;
+        width: 271px;
 
-            .message.error {
-                color: red;
-            }
+        @media all and (max-width: $cms-sm-brkpt) {
+            padding-left: 0;
         }
 
-        &-name {
-            font-size: 19px;
-
-            a {
-                color: #181818;
-
-                @media all and (max-width: $cms-sm-brkpt) {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        &-code {
-            font-size: 11px;
-            margin: 5px 0 15px 0;
-
-            dt, dd {
-                display: inline-block;
-            }
-        }
-
-        &-delivery {
-            display: block;
-            margin-top: 18px;
-            font-size: 12px;
-            font-style: italic;
-            color: #666;
+        .message.error {
+            color: red;
         }
     }
 
+    &__product-name {
+        font-size: 19px;
+
+        a {
+            color: #181818;
+
+            @media all and (max-width: $cms-sm-brkpt) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__product-code {
+        font-size: 11px;
+        margin: 7px 0 15px 0;
+
+        dt, dd {
+            display: inline-block;
+        }
+    }
+
+    &__product-delivery {
+        display: block;
+        margin-top: 26px;
+        font-size: 12px;
+        font-style: italic;
+        color: #666;
+    }
+
+
     &__price {
         font-size: 18px;
-        margin-bottom: 25px;
+        font-weight: 300;
+        margin-bottom: 31px;
 
         &--strikethrough {
             text-decoration: line-through;

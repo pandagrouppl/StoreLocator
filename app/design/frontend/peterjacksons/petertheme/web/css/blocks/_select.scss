@@ -60,12 +60,19 @@
             }
         }
 
+        &--cart {
+            .select__select {
+                font-size: 11px;
+                padding-left: 4px;
+            }
+        }
+
         &--cart-qty {
-            width: 56px;
+            width: 61px;
         }
 
         &--cart-size {
-            width: 100px;
+            width: 91px;
         }
 
         > div.mage-error {

@@ -1,16 +1,23 @@
 $border: 1px solid #dbd5d5;
 $summ-pdd: 20px;
 
+.checkout-cart-index .page-main {
+    max-width: 966px;
+    margin: 0 auto;
+}
+
 .cart-container {
     display: flex;
     color: #181818;
+
+
 
     &__form {
         flex: 1;
     }
 
     &__summary {
-        flex-basis: 340px;
+        flex-basis: 365px;
     }
 
     &__table {

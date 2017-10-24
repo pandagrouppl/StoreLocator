@@ -29,7 +29,7 @@
 
 @mixin form-element-wrapper() {
     position: relative;
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
 @mixin bg($bg-file) {
@@ -137,7 +137,7 @@
     color: white;
     border: $border;
     width: 100%;
-    height: 42px;
+    height: 50px;
 
     &:hover {
         background: $bghov;
