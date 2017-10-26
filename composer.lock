@@ -139,11 +139,11 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git",
-                "reference": "1d994ab526bd89f330be2bf000fd47b5035479f0"
+                "reference": "c980ee8ad4df02d2911cb155692d275613387118"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GiftCard Extender Module",
-            "time": "2017-10-26 12:35:48"
+            "time": "2017-10-26 12:50:28"
         },
         {
             "name": "PandaGroup/GuestWishlist",
