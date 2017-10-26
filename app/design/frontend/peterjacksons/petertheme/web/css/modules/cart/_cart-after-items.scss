@@ -57,6 +57,21 @@
         }
     }
 
+    &__payment-graphics {
+        display: flex;
+        align-items: center;
+    }
+
+    &__credit-cards {
+        @include sprite(credit-cards);
+        margin-right: 20px;
+    }
+
+    &__pay-pal {
+        @include sprite(paypal-logo);
+    }
+
+
     &__discount {
 
         &-label {

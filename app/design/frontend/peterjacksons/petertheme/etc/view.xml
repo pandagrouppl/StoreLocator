@@ -32,6 +32,10 @@
                 <width>303</width>
                 <height>603</height>
             </image>
+            <image id="hover_image" type="small_image">
+                <width>303</width>
+                <height>603</height>
+            </image>
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
                 <height>100</height>
