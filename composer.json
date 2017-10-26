@@ -22,9 +22,9 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PandaGroup/Quickview": "dev-master",
-        "PandaGroup/ShopByLook": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
         "PandaGroup/CronSchedulerExtender": "dev-master",
+        "PandaGroup/GiftCardExtender": "dev-master",
         "PandaGroup/Westfield": "dev-master",
         "PandaGroup/SlackIntegration": "dev-master",
         "PandaGroup/MagentoSlackMonitor": "dev-master",
@@ -40,6 +40,8 @@
         "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
+        "mirasvit/module-profiler": "^1.0",
+        "PandaGroup/ShopByLook": "dev-master",
         "phpunit/phpunit": "4.1.0",
         "squizlabs/php_codesniffer": "1.5.3",
         "phpmd/phpmd": "@stable",
@@ -148,6 +150,10 @@
         "19": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git"
+        },
+        "20": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

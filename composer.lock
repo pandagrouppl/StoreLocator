@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "48bf28c416908c48aaa9d656be1c5817",
-    "content-hash": "b5637bf688a183dc3ad17c7a1807b1bc",
+    "hash": "0a3e4e4b9639a59d313eaf06b6664c52",
+    "content-hash": "f1ae7f4a5dfd0493d069b6a3f40ea810",
     "packages": [
         {
             "name": "PL/Migs",
@@ -134,6 +134,18 @@
             "time": "2017-10-17 11:06:22"
         },
         {
+            "name": "PandaGroup/GiftCardExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git",
+                "reference": "c980ee8ad4df02d2911cb155692d275613387118"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup GiftCard Extender Module",
+            "time": "2017-10-26 12:50:28"
+        },
+        {
             "name": "PandaGroup/GuestWishlist",
             "version": "dev-master",
             "source": {
@@ -238,25 +250,6 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup Regions Patcher Module",
             "time": "2017-10-23 08:06:37"
-        },
-        {
-            "name": "PandaGroup/ShopByLook",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "b5c622971c524647e37e442dbb082dc0715be0d4"
-            },
-            "require": {
-                "pandagroup/base": "dev-master",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-10-20 14:58:37"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -8629,6 +8622,25 @@
     ],
     "packages-dev": [
         {
+            "name": "PandaGroup/ShopByLook",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
+                "reference": "b5c622971c524647e37e442dbb082dc0715be0d4"
+            },
+            "require": {
+                "pandagroup/base": "dev-master",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Shop By Look module for Magento 2.x",
+            "time": "2017-10-20 14:58:37"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
@@ -8742,6 +8754,56 @@
             "time": "2017-09-11 14:11:16"
         },
         {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2014-01-12 16:20:24"
+        },
+        {
             "name": "lusitanian/oauth",
             "version": "v0.7.0",
             "source": {
@@ -8807,6 +8869,40 @@
                 "security"
             ],
             "time": "2015-10-07 00:20:04"
+        },
+        {
+            "name": "mirasvit/module-profiler",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mirasvit/module-profiler.git",
+                "reference": "e130fc72d20319d4a1f49412e32e25bf621c38c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mirasvit/module-profiler/zipball/e130fc72d20319d4a1f49412e32e25bf621c38c5",
+                "reference": "e130fc72d20319d4a1f49412e32e25bf621c38c5",
+                "shasum": ""
+            },
+            "require": {
+                "jdorn/sql-formatter": "^1.2",
+                "magento/framework": "100.*|101.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "./registration.php"
+                ],
+                "psr-4": {
+                    "Mirasvit\\Profiler\\": "src/Profiler"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Magento 2 Profiler",
+            "time": "2017-09-28 09:55:47"
         },
         {
             "name": "pdepend/pdepend",
@@ -10046,9 +10142,9 @@
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
         "pandagroup/quickview": 20,
-        "pandagroup/shopbylook": 20,
         "pandagroup/emailtester": 20,
         "pandagroup/cronschedulerextender": 20,
+        "pandagroup/giftcardextender": 20,
         "pandagroup/westfield": 20,
         "pandagroup/slackintegration": 20,
         "pandagroup/magentoslackmonitor": 20,
@@ -10056,6 +10152,7 @@
         "pl/migs": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
+        "pandagroup/shopbylook": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
