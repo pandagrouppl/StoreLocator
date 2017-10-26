@@ -44,6 +44,7 @@
 @import "modules/cart/cart-container";
 @import "modules/cart/items-table";
 @import "modules/cart/minicart";
+@import "modules/cart/sidebar-prices";
 
 @import "modules/catalog/catalog-main";
 @import "modules/catalog/catalog-grid";
@@ -52,7 +53,7 @@
 
 @import "modules/checkout/chckt-auth-wrap";
 @import "modules/checkout/checkout";
-@import "modules/checkout/checkout-table";
+@import "modules/checkout/checkout-minicart";
 @import "modules/checkout/payment-method";
 @import "modules/checkout/shipping-information";
 @import "modules/checkout/checkout-header";

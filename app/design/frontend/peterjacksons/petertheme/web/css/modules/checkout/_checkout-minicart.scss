@@ -1,6 +1,7 @@
-.checkout-table {
+.checkout-minicart {
     font-size: 14px;
-    padding: 0 25px 25px 25px;
+    padding: 0 $checkout-sidebar-pdd $checkout-sidebar-pdd $checkout-sidebar-pdd;
+    border-bottom: $checkout-sidebar-border;
 
     &__title {
         display: flex;
@@ -13,7 +14,7 @@
     }
 
     &.active {
-        .checkout-table__chevron {
+        .checkout-minicart__chevron {
             transform: rotate(0deg);
         }
     }
@@ -27,7 +28,7 @@
     &__item {
         margin: 10px 0;
         display: flex;
-        height: 150px;
+        padding-bottom: 5px;
     }
 
     &__name-and-attrs {
@@ -57,5 +58,4 @@
         display: block;
         margin-right: 20px;
     }
-
 }

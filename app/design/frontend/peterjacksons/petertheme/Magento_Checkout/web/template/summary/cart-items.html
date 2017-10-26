@@ -4,8 +4,8 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="block items-in-cart checkout-table" data-bind="mageInit: {'collapsible':{'openedState': 'active', 'active': true}}">
-    <div class="checkout-table__title title" data-role="title">
+<div class="block items-in-cart checkout-minicart" data-bind="mageInit: {'collapsible':{'openedState': 'active', 'active': true}}">
+    <div class="checkout-minicart__title title" data-role="title">
         <strong role="heading">
             <!-- ko if: maxCartItemsToDisplay < getCartLineItemsCount() -->
             <!-- ko text: maxCartItemsToDisplay --><!-- /ko -->
@@ -19,13 +19,13 @@
             <!-- ko i18n: 'Items in Cart' --><!-- /ko -->
             <!-- /ko -->
         </strong>
-        <figure class="checkout-table__chevron"></figure>
+        <figure class="checkout-minicart__chevron"></figure>
     </div>
-    <div class="checkout-table__container content minicart-items" data-role="content">
+    <div class="checkout-minicart__container content minicart-items" data-role="content">
         <div class="minicart-items-wrapper overflowed">
             <ol class="minicart-items">
                 <!-- ko foreach: items() -->
-                <li class="product-item checkout-table__item">
+                <li class="product-item checkout-minicart__item">
                     <!-- ko foreach: $parent.elems() -->
                     <!-- ko template: getTemplate() --><!-- /ko -->
                     <!-- /ko -->

@@ -1,5 +1,4 @@
-$border: 1px solid #dbd5d5;
-$summ-pdd: 20px;
+
 
 .checkout-cart-index .page-main {
     max-width: 966px;
@@ -9,8 +8,6 @@ $summ-pdd: 20px;
 .cart-container {
     display: flex;
     color: #181818;
-
-
 
     &__form {
         flex: 1;
@@ -23,19 +20,19 @@ $summ-pdd: 20px;
 
     &__table {
         background-color: #f3f2f2;
-        padding: $summ-pdd 0;
+        padding: $checkout-sidebar-pdd 0;
     }
 
     &__title {
         font-size: 22px;
         font-weight: bold;
         text-align: center;
-        padding-bottom: $summ-pdd;
-        border-bottom: $border;
+        padding-bottom: $checkout-sidebar-pdd;
+        border-bottom: $checkout-sidebar-border;
     }
 
     &__total-price {
-        padding-top: $summ-pdd;
+        padding-top: $checkout-sidebar-pdd;
 
         table {
             width: 100%;
@@ -51,18 +48,19 @@ $summ-pdd: 20px;
             text-align: left;
             font-weight: normal;
             font-size: 14px;
-            padding-left: $summ-pdd;
+            padding-left: $checkout-sidebar-pdd;
+            line-height: 25px;
         }
 
         td {
             text-align: right;
             font-size: 15px;
-            padding-right: $summ-pdd;
+            padding-right: $checkout-sidebar-pdd;
         }
 
         tr:nth-last-child(2) {
             th, td {
-                padding-bottom: $summ-pdd;
+                padding-bottom: $checkout-sidebar-pdd;
             }
         }
 
@@ -76,8 +74,8 @@ $summ-pdd: 20px;
             }
 
             th, td {
-                border-top: $border;
-                padding-top: $summ-pdd;
+                border-top: $checkout-sidebar-border;
+                padding-top: $checkout-sidebar-pdd;
             }
         }
     }
