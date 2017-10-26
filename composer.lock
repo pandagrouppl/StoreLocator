@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "26e9d92b7f6d01629c2e00507e91def3",
-    "content-hash": "e22c0ba07d4dcf6b519782cb9d9da7e6",
+    "hash": "0a3e4e4b9639a59d313eaf06b6664c52",
+    "content-hash": "f1ae7f4a5dfd0493d069b6a3f40ea810",
     "packages": [
         {
             "name": "PL/Migs",
@@ -132,6 +132,18 @@
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
             "time": "2017-10-17 11:06:22"
+        },
+        {
+            "name": "PandaGroup/GiftCardExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git",
+                "reference": "1d994ab526bd89f330be2bf000fd47b5035479f0"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup GiftCard Extender Module",
+            "time": "2017-10-26 12:35:48"
         },
         {
             "name": "PandaGroup/GuestWishlist",
@@ -10132,6 +10144,7 @@
         "pandagroup/quickview": 20,
         "pandagroup/emailtester": 20,
         "pandagroup/cronschedulerextender": 20,
+        "pandagroup/giftcardextender": 20,
         "pandagroup/westfield": 20,
         "pandagroup/slackintegration": 20,
         "pandagroup/magentoslackmonitor": 20,

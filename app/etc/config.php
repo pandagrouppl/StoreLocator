@@ -130,6 +130,7 @@ return array (
     'PandaGroup_Checkout' => 1,
     'PandaGroup_CronSchedulerExtender' => 1,
     'PandaGroup_EmailTester' => 1,
+    'PandaGroup_GiftCardExtender' => 1,
     'PandaGroup_GuestWishlist' => 1,
     'PandaGroup_SlackIntegration' => 1,
     'PandaGroup_Migration' => 1,
