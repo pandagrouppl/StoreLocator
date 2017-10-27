@@ -1,0 +1,63 @@
+$field-height: 36px;
+$field-pdd: 0 30px 0 15px;
+
+.discount-field {
+    height: $field-height;
+    background-color: white;
+    color: #515151;
+    font-size: 110%;
+    display: inline-block;
+    position: relative;
+
+    &--voucher {
+        width: 235px;
+    }
+
+    &__applied {
+        border: 1px solid #7eb983;
+        border-radius: 1px;
+        line-height: $field-height;
+        vertical-align: middle;
+        padding: $field-pdd;
+    }
+
+    &__form {
+        border: 1px solid #b9b9b9;
+        border-radius: 1px;
+        height: 100%;
+    }
+
+    &__input {
+        height: 100%;
+        padding: $field-pdd;
+        border: none;
+    }
+
+    &__button {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        height: $field-height;
+        border: none;
+        width: 37px;
+        font-size: 28px;
+        background-color: #464646;
+        color: white;
+
+        &--add {
+
+        }
+
+        &--remove {
+
+        }
+
+
+    }
+
+    &__icon-add {
+        @include sprite(white-input-arrow);
+        margin: 0 auto;
+    }
+
+}

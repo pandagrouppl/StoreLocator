@@ -1,0 +1,52 @@
+<?php /* @var $block \Amasty\GiftCard\Block\Checkout\Cart\GiftCard */ ?>
+<?php if ($block->isEnableGiftFormInCart()): ?>
+    <div class="block discount" id="block-discount">
+
+    <div class="discount-field discount-field--voucher" aria-labelledby="block-discount-heading">
+
+        <?php $getAppliedCodes = $block->getAppliedCodes(); ?>
+        <?php if(count($getAppliedCodes)): ?>
+            <div class="discount-field__applied">
+                <?php foreach ($getAppliedCodes as $code): ?>
+                    <div>
+                        Applied: <?php echo $code->getCode();?>
+                        <button class="discount-field__button discount-field__button--remove" onclick="location.href='<?php echo $block->getUrl('amgiftcard/cart/remove', ['code_id' => $code->getCodeId()]);?>'" title="Remove">
+                            X
+                        </button>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <form class="discount-field__form"
+                  id="amgiftcard-form"
+                  action="<?php echo $block->getUrl('amgiftcard/cart/apply') ?>"
+                  method="post"
+                  data-mage-init='{"discountCode":{"couponCodeSelector": "#coupon_code",
+                                               "removeCouponSelector": "#remove-amgiftcard",
+                                               "applyButton": "button.action.apply",
+                                               "cancelButton": "button.action.cancel"}}'>
+
+                <input type="hidden" name="remove" id="remove-amgiftcard" value="0" />
+                <input class="discount-field__input" type="text" id="am_giftcard_code" name="am_giftcard_code" value=""  placeholder="<?php echo $block->escapeHtml(__('Gift Voucher code'));?>"/>
+                <button class="discount-field__button discount-field__button--add" type="submit" value="<?php echo __('Add Gift Card') ?>">
+                    <figure class="discount-field__icon-add"></figure>
+                </button>
+
+                <script>
+                    require([
+                        'jquery',
+                        'Amasty_GiftCard/js/cart/main'
+                    ], function ($) {
+                        $('#amgiftcard_check_status').amGiftcardCart({
+                            checkCardUrl: "<?php echo $block->getUrl('amgiftcard/cart/check') ?>"
+                        });
+                    });
+
+                </script>
+            </form>
+        <?php endif;?>
+
+
+    </div>
+</div>
+<?php endif;?>

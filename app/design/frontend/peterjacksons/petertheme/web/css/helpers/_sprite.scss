@@ -14,32 +14,32 @@ $retina-sprite: (
 
 $sprite-icon: (
     PJ_logo_black: (
-        x: 0px,
-        y: -451px,
-        width: 252px,
-        height: 20px
-    ),
-    PJ_logo_white: (
         x: -512px,
         y: 0px,
         width: 252px,
         height: 20px
     ),
-    abt-arrw-left: (
-        x: -689px,
-        y: -136px,
-        width: 29px,
-        height: 120px
+    PJ_logo_white: (
+        x: 0px,
+        y: -451px,
+        width: 252px,
+        height: 20px
     ),
-    abt-arrw-right: (
+    abt-arrw-left: (
         x: -630px,
         y: -136px,
         width: 29px,
         height: 120px
     ),
+    abt-arrw-right: (
+        x: -689px,
+        y: -136px,
+        width: 29px,
+        height: 120px
+    ),
     arrow-down: (
-        x: -421px,
-        y: -393px,
+        x: -282px,
+        y: -451px,
         width: 19px,
         height: 10px
     ),
@@ -86,7 +86,7 @@ $sprite-icon: (
         height: 24px
     ),
     buttonarrowleft: (
-        x: -470px,
+        x: -467px,
         y: -393px,
         width: 7px,
         height: 9px
@@ -98,14 +98,14 @@ $sprite-icon: (
         height: 139px
     ),
     footer-facebook-white: (
-        x: -512px,
+        x: -700px,
         y: -287px,
         width: 64px,
         height: 64px
     ),
     footer-facebook: (
-        x: -606px,
-        y: -287px,
+        x: -512px,
+        y: -381px,
         width: 64px,
         height: 64px
     ),
@@ -146,14 +146,14 @@ $sprite-icon: (
         height: 56px
     ),
     footer-youtube-white: (
-        x: -700px,
+        x: -606px,
         y: -287px,
         width: 64px,
         height: 64px
     ),
     footer-youtube: (
         x: -512px,
-        y: -381px,
+        y: -287px,
         width: 64px,
         height: 64px
     ),
@@ -254,10 +254,16 @@ $sprite-icon: (
         height: 16px
     ),
     storelocator-pin: (
-        x: -465px,
-        y: -246px,
+        x: -421px,
+        y: -393px,
         width: 16px,
         height: 16px
+    ),
+    white-input-arrow: (
+        x: -465px,
+        y: -246px,
+        width: 17px,
+        height: 22px
     ),
     wishlist-icon-dark: (
         x: -330px,
