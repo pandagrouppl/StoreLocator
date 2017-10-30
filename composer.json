@@ -33,7 +33,7 @@
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
         "amasty/module-special-promo-pro": "^1.2.2",
-        "amasty/module-gift-card": "^1.0.5",
+        "amasty/module-gift-card": "^1.1",
         "amasty/shopby": "^1.15.2",
         "amasty/quickview": "^1.0.2",
         "wyomind/core": "dev-master",

@@ -1,5 +1,12 @@
 $field-height: 36px;
-$field-pdd: 0 30px 0 15px;
+$field-button: 37px;
+
+.discount-field-wrapper {
+    border-top: 1px solid #afafaf;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .discount-field {
     height: $field-height;
@@ -8,51 +15,57 @@ $field-pdd: 0 30px 0 15px;
     font-size: 110%;
     display: inline-block;
     position: relative;
+    padding: 0 $field-button 0 0;
+    margin-top: 15px;
+
+    * {
+        box-sizing: border-box;
+    }
 
     &--voucher {
-        width: 235px;
+        width: 200px;
+    }
+
+    &--coupon {
+        width: 155px;
+        margin-right: 20px;
     }
 
     &__applied {
-        border: 1px solid #7eb983;
+        border: 1px solid #464646;
         border-radius: 1px;
         line-height: $field-height;
         vertical-align: middle;
-        padding: $field-pdd;
+        background-color: #464646;
+        color: white;
+        padding-left: 15px;
+        height: 100%;
     }
 
-    &__form {
+    &__unapplied {
         border: 1px solid #b9b9b9;
         border-radius: 1px;
         height: 100%;
     }
 
     &__input {
+        box-sizing: border-box;
+        width: 100%;
         height: 100%;
-        padding: $field-pdd;
+        padding-left: 15px;
         border: none;
     }
 
     &__button {
         position: absolute;
-        right: 1px;
-        top: 1px;
+        right: 0px;
+        top: 0px;
         height: $field-height;
         border: none;
-        width: 37px;
+        width: $field-button;
         font-size: 28px;
         background-color: #464646;
         color: white;
-
-        &--add {
-
-        }
-
-        &--remove {
-
-        }
-
-
     }
 
     &__icon-add {
@@ -61,3 +74,5 @@ $field-pdd: 0 30px 0 15px;
     }
 
 }
+
+

@@ -71,60 +71,6 @@
         @include sprite(paypal-logo);
     }
 
-
-    &__discount {
-
-        &-label {
-            display: block;
-            letter-spacing: 1px;
-            margin: 17px 0 12px;
-            text-align: left;
-            font-size: 20px;
-        }
-
-        &-fieldset {
-            display: flex;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                flex-direction: column;
-            }
-
-            .primary {
-                display: flex;
-
-                > button {
-                    flex-basis: 100%;
-                    justify-content: center;
-
-                    > span {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        &-input {
-            @include form-element();
-            text-align: center;
-        }
-
-        &-button {
-            @include button-grey(0 30px, 0 0 0 5px, 16px);
-            border: 1px solid #b4b2b2;
-            color: #666666;
-            height: 40px;
-
-            &:hover {
-                background-color: white;
-                color: #181818;
-            }
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                margin: 10px 0 0 0;
-            }
-        }
-    }
-
     &__continue-link {
         padding: 20px 0;
         display: flex;

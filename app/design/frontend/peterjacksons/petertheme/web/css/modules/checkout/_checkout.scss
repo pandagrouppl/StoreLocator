@@ -252,29 +252,6 @@
         @include sprite(paypal-logo);
         display: inline-block;
     }
-
-    &__discount-title {
-        color: #000;
-        display: block;
-        padding: 17px 0 12px;
-        font-size: 20px;
-    }
-
-    &__discount-form {
-        display: flex;
-    }
-
-    &__discount-input {
-        @include form-element();
-    }
-
-    &__discount-button {
-
-        &--apply {
-            @include button-custom(10px 30px, 0, 16px, bold, white, #666, white, black);
-            margin-left: 5px;
-        }
-    }
 }
 
 

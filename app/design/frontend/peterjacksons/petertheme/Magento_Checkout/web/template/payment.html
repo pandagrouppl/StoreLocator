@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<li id="payment" role="presentation" class="checkout-payment-method checkout__payment-method" data-bind="fadeVisible: isVisible">
+<li id="payment" role="presentation" class="checkout-payment-method checkout__payment-method" data-bind="fadeVisible: isVisible, afterRender: moveGiftcard()">
     <div id="checkout-step-payment"
          class="step-content"
          data-role="content"
@@ -31,5 +31,6 @@
                 <!-- /ko -->
             </div>
         </form>
+        <div id="discount-fields"></div>
     </div>
 </li>

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a3e4e4b9639a59d313eaf06b6664c52",
-    "content-hash": "f1ae7f4a5dfd0493d069b6a3f40ea810",
+    "hash": "076e09dced9b138144e579e585e9dc14",
+    "content-hash": "6ac70f06912396ead99dec086b12be78",
     "packages": [
         {
             "name": "PL/Migs",
@@ -355,15 +355,16 @@
         },
         {
             "name": "amasty/module-gift-card",
-            "version": "1.0.5",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git",
-                "reference": "14d362cc598159163f4823233d6f8c042a630573"
+            "version": "1.1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card.zip?v=1.1.2",
+                "reference": null,
+                "shasum": null
             },
             "require": {
-                "amasty/base": "*",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/base": ">=1.0.6",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -377,8 +378,7 @@
             "license": [
                 "Commercial"
             ],
-            "description": "Gift Card by Amasty",
-            "time": "2017-08-23 13:38:25"
+            "description": "Gift Card by Amasty"
         },
         {
             "name": "amasty/module-improved-layered-navigation-page",
