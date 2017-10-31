@@ -70,14 +70,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "b3156f0bd2a113747719b1c45d101e3eefac32ad"
+                "reference": "4177189d92ebfe5227f19ba8982222e072d8c37d"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-10-27 13:32:55"
+            "time": "2017-10-30 15:25:18"
         },
         {
             "name": "PandaGroup/CronSchedulerExtender",
@@ -139,11 +139,11 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git",
-                "reference": "c980ee8ad4df02d2911cb155692d275613387118"
+                "reference": "47ef6caafc32c9bfe2b806b5463cd7e992a25a7c"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GiftCard Extender Module",
-            "time": "2017-10-26 12:50:28"
+            "time": "2017-10-31 10:46:29"
         },
         {
             "name": "PandaGroup/GuestWishlist",
