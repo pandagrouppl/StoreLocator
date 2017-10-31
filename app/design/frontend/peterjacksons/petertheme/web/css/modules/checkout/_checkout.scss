@@ -224,12 +224,7 @@
         &-delivery {
             font-style: italic;
             flex: 1;
-        }
-
-        &-button {
-            @include button-blue(9px 18px, 3px 7px 3px 0, 12px);
-        }
-
+        } 
     }
 
     &__payments {
@@ -252,6 +247,15 @@
         @include sprite(paypal-logo);
         display: inline-block;
     }
+
+    .opc-progress-bar-item {
+        display: none;
+    }
+
+    .opc-progress-bar-item._complete {
+        display: block;
+    }
+
 }
 
 

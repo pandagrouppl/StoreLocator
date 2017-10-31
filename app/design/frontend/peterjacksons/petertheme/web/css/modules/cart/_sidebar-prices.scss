@@ -20,13 +20,14 @@
         font-weight: normal;
         font-size: 14px;
         padding: 7px $checkout-sidebar-pdd;
-
+        width: 65%;
     }
 
     td {
         text-align: right;
         font-size: 15px;
         padding-right: $checkout-sidebar-pdd;
+        width: 100%;
     }
 
     tr:nth-last-child(2) {
