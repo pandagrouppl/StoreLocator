@@ -81,6 +81,7 @@
                             <input class="checkout__shipping-radio"
                                    data-role="opc-continue"
                                    type="radio"
+                                   name="shipping-methods"
                                    data-bind="attr: {
                                                     'value' : method.carrier_code + '_' + method.method_code,
                                                     'id': 's_method_' + method.carrier_code + '_' + method.method_code,
@@ -91,16 +92,17 @@
                             <!-- /ko -->
                             <!--ko ifnot: ($parent.rates().length == 1)-->
                             <input type="radio"
+                                   name="shipping-methods"
                                    data-role="opc-continue"
                                    data-bind="
-                                           value: method.carrier_code + '_' + method.method_code,
-
-                                           attr: {
+                                            value: method.carrier_code + '_' + method.method_code,
+                                            checked: $parent.isSelected,
+                                            attr: {
                                                 'id': 's_method_' + method.carrier_code + '_' + method.method_code,
                                                 'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
-                                           },
-                                           css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-radio--active' : '',
-                                           click: $parent.selectShippingMethodAlt"
+                                            },
+                                            css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-radio--active' : '',
+                                            click: $parent.selectShippingMethodAlt"
                                    class="checkout__shipping-radio"/>
                             <!--/ko-->
                             <!-- /ko -->
@@ -145,8 +147,8 @@
                 <!-- /ko -->
                 <div class="actions-toolbar" id="shipping-method-buttons-container">
                     <div class="primary">
-                        <button data-role="opc-continue" type="submit" class="button action continue primary">
-                            <span><!-- ko i18n: 'Next'--><!-- /ko --></span>
+                        <button id="proceed-to-payment" data-role="opc-continue" type="submit" class="checkout__next-button" data-bind="fadeVisible: isSelected()">
+                            <span><!-- ko i18n: 'Proceed to Payment'--><!-- /ko --></span>
                         </button>
                     </div>
                 </div>

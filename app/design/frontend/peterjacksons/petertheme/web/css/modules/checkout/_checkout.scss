@@ -94,7 +94,7 @@
     }
 
     &__step-separator {
-        margin: 30px 0;
+        margin: 30px 0 36px;
         border-bottom: 1px solid #ddd;
     }
 
@@ -188,43 +188,52 @@
         }
     }
 
-    &__shipping {
 
-        &-address {
 
-            @media all and (max-width: $sm-breakpoint) {
-                flex-basis: 100%;
-            }
+    &__shipping-address {
+
+        @media all and (max-width: $sm-breakpoint) {
+            flex-basis: 100%;
         }
+    }
 
-        &-options-wrapper {
-            color: #555;
-        }
+    &__shipping-radio {
 
-        &-option {
-            margin-bottom: 15px;
-        }
+        margin-right: 5px;
+    }
 
-        &-name {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
+    &__shipping-options-wrapper {
+        color: #555;
+    }
 
-        &-select {
-            display: flex;
-            align-items: center;
-        }
+    &__shipping-option {
+        margin-bottom: 30px;
+    }
 
-        &-price {
-            font-size: 14px;
-            font-weight: bold;
-            margin-right: 15px;
-        }
+    &__shipping-name {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
 
-        &-delivery {
-            font-style: italic;
-            flex: 1;
-        } 
+    &__shipping-select {
+        display: flex;
+        align-items: center;
+    }
+
+    &__shipping-price {
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    &__shipping-delivery {
+        font-style: italic;
+        flex: 1;
+    }
+
+
+    &__next-button {
+        @include button-checkout();
     }
 
     &__payments {
@@ -237,6 +246,8 @@
     &__payment-method {
         padding-right: 10px;
     }
+
+
 
     &__cc-img {
         @include sprite(credit-cards);
