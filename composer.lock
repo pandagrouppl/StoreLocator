@@ -70,14 +70,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "4177189d92ebfe5227f19ba8982222e072d8c37d"
+                "reference": "40fe1d0aac7746d4e59371e1a22fa609e32c2e08"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-10-30 15:25:18"
+            "time": "2017-11-02 09:45:06"
         },
         {
             "name": "PandaGroup/CronSchedulerExtender",
