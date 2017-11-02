@@ -29,6 +29,7 @@
         "PandaGroup/SlackIntegration": "dev-master",
         "PandaGroup/MagentoSlackMonitor": "dev-master",
         "PandaGroup/RegionsPatcher": "dev-master",
+        "PandaGroup/CouponExtender": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
@@ -154,6 +155,10 @@
         "20": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git"
+        },
+        "21": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

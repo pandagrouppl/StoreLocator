@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "076e09dced9b138144e579e585e9dc14",
-    "content-hash": "6ac70f06912396ead99dec086b12be78",
+    "hash": "efbfe69a477e9be12cbcf658d06f5e62",
+    "content-hash": "02a65ee93292c5be080376b1397ef6bd",
     "packages": [
         {
             "name": "PL/Migs",
@@ -70,14 +70,26 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "4177189d92ebfe5227f19ba8982222e072d8c37d"
+                "reference": "40fe1d0aac7746d4e59371e1a22fa609e32c2e08"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-10-30 15:25:18"
+            "time": "2017-11-02 09:45:06"
+        },
+        {
+            "name": "PandaGroup/CouponExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git",
+                "reference": "210483c1ac9802528b39fac016e64cd8978e4ccb"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Coupon Extender Module",
+            "time": "2017-11-02 13:46:54"
         },
         {
             "name": "PandaGroup/CronSchedulerExtender",
@@ -8627,7 +8639,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "b5c622971c524647e37e442dbb082dc0715be0d4"
+                "reference": "cb52be95544cd81421b8b1025c4cdd12acd0d6c8"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -8638,7 +8650,7 @@
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-10-20 14:58:37"
+            "time": "2017-11-02 13:25:54"
         },
         {
             "name": "doctrine/instantiator",
@@ -10149,6 +10161,7 @@
         "pandagroup/slackintegration": 20,
         "pandagroup/magentoslackmonitor": 20,
         "pandagroup/regionspatcher": 20,
+        "pandagroup/couponextender": 20,
         "pl/migs": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
