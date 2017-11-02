@@ -128,6 +128,7 @@ return array (
     'PandaGroup_Base' => 1,
     'PandaGroup_Careers' => 1,
     'PandaGroup_Checkout' => 1,
+    'PandaGroup_CouponExtender' => 1,
     'PandaGroup_CronSchedulerExtender' => 1,
     'PandaGroup_EmailTester' => 1,
     'PandaGroup_GiftCardExtender' => 1,
