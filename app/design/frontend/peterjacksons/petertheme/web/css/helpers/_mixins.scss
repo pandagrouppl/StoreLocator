@@ -1,5 +1,5 @@
 @mixin container() {
-    max-width: $container-width;
+    max-width: $pdp-container;
     margin: auto;
 }
 
@@ -22,6 +22,16 @@
     display: block;
     position: absolute;
     right: 14px;
+    top: 50%;
+    transform: translate(0,-50%);
+    pointer-events: none;
+}
+
+@mixin form-select-wide-arrow() {
+    @include sprite(select-arrow-thin);
+    display: block;
+    position: absolute;
+    right: 17px;
     top: 50%;
     transform: translate(0,-50%);
     pointer-events: none;
@@ -124,20 +134,20 @@
 }
 
 
-@mixin button-checkout($bghov: #666, $colorhov: white, $border: 1px solid $grey-dark) {
+@mixin button-black($bg: #363636, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark, $height: 50px, $margin-top: 15px, $font-size: 16px) {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: $font-size;
     font-weight: bold;
     border-radius: 3px;
     transition: background 0.3s, color 0.3s ease-in-out;
-    margin-top: 15px;
+    margin-top: $margin-top;
     letter-spacing: 0;
     cursor: pointer;
-    background: #363636;
+    background: $bg;
     color: white;
     border: $border;
     width: 100%;
-    height: 50px;
+    height: $height;
 
     &:hover {
         background: $bghov;

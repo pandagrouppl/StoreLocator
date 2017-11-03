@@ -1,10 +1,64 @@
 .product-info-main {
     max-width: 100%;
 
+    &__title {
+        font-family: Roboto, sans-serif;
+        padding: 0 0 4px 0;
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.15em;
+            font-weight: normal;
+            margin: 100px 0 0 0;
+            width: 100%;
+        }
+    }
+
     &__sku {
         font-size: 12px;
         color: #181818;
-        margin: 10px 0 0 0;
+        margin: 12px 0 20px 0;
+        letter-spacing: 0.05em;
+
+        * {
+            display: inline-block;
+        }
+
+        strong {
+            font-weight: normal;
+            margin-right: 2px;
+        }
+    }
+
+    &__price-and-wishlist {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 26px;
+
+        .price-box {
+            font-size: 27px;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            border-bottom: 1px solid #ddd;
+            padding: 0 0 26px 0;
+        }
+    }
+
+    &__wishlist-star {
+        @include sprite(wishlist-icon);
+        padding: 0 1px 1px 0;
+    }
+
+    &__size-chart {
+        font-size: 17px;
+        cursor: pointer;
+
+        @media all and (max-width: $xs-breakpoint) {
+            margin-left: 0;
+        }
     }
 
     &__options-wrapper {
@@ -12,13 +66,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 10px;
+        align-items: center;
     }
 
-    &__select-wrapper {
-        height: 36px;
-
-        > div.mage-error {
-            color: red;
-        }
+    &__add-to-cart {
+        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
     }
+
 }

@@ -11,7 +11,7 @@ export class SizeChart {
     }
 
     private _toggleSizeChart(): void {
-        $(document).on('click', '.product-content__size-chart, .size-chart__close', () => {
+        $(document).on('click', '.product-info-main__size-chart, .size-chart__close', () => {
             $('#size-chart').toggleClass('size-chart--open');
         });
     }

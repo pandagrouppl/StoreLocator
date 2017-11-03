@@ -138,7 +138,7 @@
 
     &__buttons {
         button {
-            @include button-checkout();
+            @include button-black();
         }
     }
 
@@ -233,7 +233,7 @@
 
 
     &__next-button {
-        @include button-checkout();
+        @include button-black();
     }
 
     &__payments {

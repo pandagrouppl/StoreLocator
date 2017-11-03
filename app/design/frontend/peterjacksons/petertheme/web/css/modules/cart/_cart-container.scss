@@ -82,7 +82,7 @@
 
     &__buttons {
         > button {
-            @include button-checkout();
+            @include button-black();
 
             max-width: 100%;
         }

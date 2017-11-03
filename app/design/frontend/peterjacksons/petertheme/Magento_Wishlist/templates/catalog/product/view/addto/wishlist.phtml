@@ -10,9 +10,9 @@
 ?>
 <?php if ($block->isWishListAllowed()) : ?>
     <a href="#"
-       class="action towishlist"
+       class="action towishlist product-info-main__wishlist-a"
        data-post='<?php /* @escapeNotVerified */ echo $block->getWishlistParams(); ?>'
-       data-action="add-to-wishlist"><span><?php /* @escapeNotVerified */ echo __('Add to') ?><br/><?php /* @escapeNotVerified */ echo __('Wishlist') ?></span></a>
+       data-action="add-to-wishlist"><figure class="product-info-main__wishlist-star"></figure></a>
 <?php endif; ?>
 <script type="text/x-magento-init">
     {

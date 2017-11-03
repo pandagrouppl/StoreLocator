@@ -16,21 +16,15 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
 <?php if ($_product->isSaleable() && count($_attributes)):?>
     <?php foreach ($_attributes as $_attribute): ?>
         <div class="field configurable required">
-            <div class="control select__wrapper select__wrapper--<?php echo trim($_attribute->getProductAttribute()->getStoreLabel()) ?>">
-                <?php $colourAttr = $_product->getAttributeText('colour'); ?>
-                <?php if (null !== $colourAttr) : ?>
-                    <div class="select__select--color"><?php echo $block->escapeHtml($colourAttr); ?></div>
-                <?php endif; ?>
-                <div class="product-info-main__select-wrapper">
-                    <figure class="select__arrow"></figure>
-                    <select name="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
-                            data-selector="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
-                            data-validate="{required:true}"
-                            id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
-                            class="super-attribute-select select__select">
-                        <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>
-                    </select>
-                </div>
+            <div class="select__wrapper select__wrapper--<?php echo trim($_attribute->getProductAttribute()->getStoreLabel()) ?>">
+                <figure class="select__wide-arrow"></figure>
+                <select name="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
+                        data-selector="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
+                        data-validate="{required:true}"
+                        id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
+                        class="super-attribute-select select__pdp-select">
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>asas
+                </select>
             </div>
         </div>
     <?php endforeach; ?>

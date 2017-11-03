@@ -14,14 +14,14 @@ $retina-sprite: (
 
 $sprite-icon: (
     PJ_logo_black: (
-        x: -512px,
-        y: 0px,
+        x: 0px,
+        y: -451px,
         width: 252px,
         height: 20px
     ),
     PJ_logo_white: (
-        x: 0px,
-        y: -451px,
+        x: -512px,
+        y: 0px,
         width: 252px,
         height: 20px
     ),
@@ -79,15 +79,9 @@ $sprite-icon: (
         width: 25px,
         height: 24px
     ),
-    brownstar: (
-        x: -355px,
-        y: -338px,
-        width: 27px,
-        height: 24px
-    ),
     buttonarrowleft: (
-        x: -467px,
-        y: -393px,
+        x: -331px,
+        y: -451px,
         width: 7px,
         height: 9px
     ),
@@ -98,25 +92,25 @@ $sprite-icon: (
         height: 139px
     ),
     footer-facebook-white: (
-        x: -700px,
+        x: -606px,
         y: -287px,
         width: 64px,
         height: 64px
     ),
     footer-facebook: (
-        x: -512px,
-        y: -381px,
+        x: -700px,
+        y: -287px,
         width: 64px,
         height: 64px
     ),
     footer-instagram-white: (
-        x: -606px,
+        x: -699px,
         y: -381px,
         width: 63px,
         height: 63px
     ),
     footer-instagram: (
-        x: -699px,
+        x: -606px,
         y: -381px,
         width: 63px,
         height: 63px
@@ -146,8 +140,8 @@ $sprite-icon: (
         height: 56px
     ),
     footer-youtube-white: (
-        x: -606px,
-        y: -287px,
+        x: -512px,
+        y: -381px,
         width: 64px,
         height: 64px
     ),
@@ -182,7 +176,7 @@ $sprite-icon: (
         height: 26px
     ),
     header-zoom: (
-        x: -393px,
+        x: -330px,
         y: -501px,
         width: 27px,
         height: 27px
@@ -216,6 +210,12 @@ $sprite-icon: (
         y: -393px,
         width: 18px,
         height: 18px
+    ),
+    select-arrow-thin: (
+        x: -467px,
+        y: -393px,
+        width: 15px,
+        height: 8px
     ),
     select-arrow: (
         x: -467px,
@@ -266,16 +266,16 @@ $sprite-icon: (
         height: 22px
     ),
     wishlist-icon-dark: (
-        x: -330px,
+        x: -267px,
         y: -501px,
         width: 33px,
         height: 30px
     ),
     wishlist-icon: (
-        x: -267px,
-        y: -501px,
-        width: 33px,
-        height: 30px
+        x: -355px,
+        y: -338px,
+        width: 27px,
+        height: 25px
     ),
 );
 

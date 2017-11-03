@@ -21,7 +21,7 @@
         </referenceBlock>
         <referenceBlock name="page.main.title">
             <arguments>
-                <argument name="css_class" xsi:type="string">product product-content__title</argument>
+                <argument name="css_class" xsi:type="string">product product-info-main__title</argument>
                 <argument name="add_base_attribute" xsi:type="string">itemprop="name"</argument>
             </arguments>
         </referenceBlock>
@@ -41,7 +41,7 @@
                 <container name="product.content.main" htmlTag="section" htmlClass="product-main__right product-content">
                     <container name="product.info.main" htmlTag="div" htmlClass="product-info-main">
                         <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div"
-                                   htmlClass="product-info-main__price">
+                                   htmlClass="product-info-main__sku">
                             <container name="product.info.type" before="-"/>
                             <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku"
                                    template="product/view/attribute.phtml">
@@ -54,7 +54,7 @@
                                 </arguments>
                             </block>
                         </container>
-                        <container htmlClass="product-content__price" htmlTag="section" name="product.content.price">
+                        <container htmlClass="product-info-main__price-and-wishlist" htmlTag="section" name="product.content.price">
                             <block class="Magento\Catalog\Pricing\Render" name="product.price.final">
                                 <arguments>
                                     <argument name="price_render" xsi:type="string">product.price.render.default</argument>
