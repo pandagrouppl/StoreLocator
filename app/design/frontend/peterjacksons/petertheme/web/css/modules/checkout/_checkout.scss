@@ -265,6 +265,9 @@
 
     .opc-progress-bar-item._complete {
         display: block;
+        span {
+            cursor: pointer;
+        }
     }
 
 }
