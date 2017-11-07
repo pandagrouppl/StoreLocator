@@ -35,7 +35,7 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
         <div class="block-content">
             <?php /* @escapeNotVerified */ echo '<!-- ' . $image . '-->' ?>
             <div class="products-<?php /* @escapeNotVerified */ echo $mode; ?> <?php /* @escapeNotVerified */ echo $mode; ?>">
-                <ol class="products-related__list product-items <?php /* @escapeNotVerified */ echo $type; ?>">
+                <ol class="init-slick products-related__slider product-items <?php /* @escapeNotVerified */ echo $type; ?>">
                     <?php $iterator = 1; ?>
                     <?php foreach ($items as $_item): ?>
                         <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="product-item products-related__item">' : '</li><li class="product-item products-related__item">' ?>
@@ -125,4 +125,11 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
             <?php echo $block->getPagerHtml() ?>
         </div>
     </div>
+
+    <script>
+        require(["js/recentlyViewed"], function(recentlyViewed) {
+            var recentlyviewedinit = recentlyViewed();
+        })
+    </script>
+
 <?php endif;?>
