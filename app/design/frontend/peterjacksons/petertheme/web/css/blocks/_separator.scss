@@ -1,0 +1,11 @@
+.separator {
+    position: relative;
+    width: 100%;
+
+    &__line {
+        margin: 20px -10000px;
+        border: none;
+        border-bottom: 1px solid #c9c9c9;
+
+    }
+}

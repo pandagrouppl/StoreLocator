@@ -1,0 +1,33 @@
+<?php
+
+/** @var $block Magento\Framework\View\Element\Template */
+?>
+<section class="product-main__section-wrap">
+    <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+        <section class="product-main__tabs">
+            <?php
+            $childBlocks = $block->getChildNames();
+            foreach($childBlocks as $blockName): ?>
+                <?php  if(false === empty(trim($block->getChildHtml($blockName)))): // checks, if block does not contain products, and hides it ?>
+                    <div class="data item title" data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $blockName; ?>">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#<?php /* @escapeNotVerified */ echo $blockName; ?>"
+                           id="tab-label-<?php /* @escapeNotVerified */
+                           echo $blockName; ?>-title">
+                            <?php echo $block->getChildData($blockName, 'label'); ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </section>
+        <?php foreach($childBlocks as $blockName): ?>
+            <?php if(false === empty(trim($block->getChildHtml($blockName)))): // checks, if block does not contain products, and hides it ?>
+                <div class="product-main__description" id="<?php /* @escapeNotVerified */ echo $blockName; ?>" data-role="content">
+                    <?php echo $block->getChildHtml($blockName); ?>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+</section>

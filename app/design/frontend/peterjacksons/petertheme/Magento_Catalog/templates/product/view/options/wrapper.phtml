@@ -27,9 +27,10 @@ if ($block->hasRequiredOptions()) {
                 <?php endfor; ?>
             </select>
         </div>
-        <div class="product-info-main__size-chart">
-            <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
-        </div>
     <?php endif; ?>
+    <div class="product-info-main__size-chart">
+        <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
+    </div>
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('size-chart')->toHtml();?>
 </div>
 

@@ -73,4 +73,20 @@
         @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
     }
 
+    &__free-delivery {
+        margin: 34px 0 0 3px;
+        letter-spacing: 0.05em;
+
+        strong {
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__free-delivery-trigger {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
 }

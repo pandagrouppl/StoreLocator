@@ -21,6 +21,7 @@
 @import "blocks/breadcrumbs";
 @import "blocks/price-box";
 @import "blocks/layered-nav";
+@import "blocks/separator";
 @import "blocks/size-chart";
 @import "blocks/popup-login";
 @import "blocks/newsletter";
@@ -60,9 +61,9 @@
 @import "modules/checkout/checkout-header";
 
 @import 'modules/product/product-main';
+
 @import 'modules/product/products-related';
 @import 'modules/product/product-info-main';
-@import 'modules/product/product-info-detailed';
 
 @import "modules/account/dashboard/account-dashboard";
 @import "modules/account/dashboard/account-form";
