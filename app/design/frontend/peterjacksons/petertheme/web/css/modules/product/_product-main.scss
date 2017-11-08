@@ -62,65 +62,78 @@
         &--ending {
             margin-bottom: 30px;
         }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
     }
 
     &__tabs {
-        display: flex;
-        margin: 0 0 39px;
-        text-transform: uppercase;
+        position: relative;
 
-        a {
-            font-size: 19px;
-            color: #030303;
-            margin-right: 47px;
-            display: block;
-            letter-spacing: 0.055em;
-            padding-bottom: 6px;
+        .active .product-main__tab-switch {
+            font-weight: 600;
+            border-bottom: 1px solid #030303;
 
-            @media all and (min-width: $pdp-desc-bp) and (max-width: $sm-breakpoint) {
-                font-size: 16px;
-                padding: 0;
-                margin-right: 10px;
-            }
-
-            @media all and (max-width: $pdp-desc-bp) {
-                font-size: 14px;
-                padding: 0;
-                margin-right: 0px;
-            }
-
-            &:hover {
-                color: #666;
-            }
-        }
-
-        .active {
-
-            a {
-                font-weight: 600;
-                border-bottom: 1px solid #030303;
-
-                @media all and (max-width: $sm-breakpoint) {
-                    //border-bottom: 0;
-                }
+            @media all and (max-width: $sm-breakpoint) {
+                border-bottom: none;
             }
         }
     }
 
-    //&__tab-switch {
-    //    @media all and (max-width: $sm-breakpoint) {
-    //        @include expandable-nav();
-    //    }
-    //}
+    &__tab-switch {
+        font-size: 19px;
+        color: #030303;
+        display: block;
+        letter-spacing: 0.055em;
+        padding-bottom: 6px;
+        text-transform: uppercase;
 
+        &:hover {
+            color: #666;
+        }
+
+
+    }
+
+
+
+    @media all and (max-width: $sm-breakpoint) {
+        //@include expandable-nav();
+    }
+
+    &__tab {
+        @media all and (min-width: $sm-breakpoint+1) {
+            float: left;
+            width: auto;
+            margin: 0 39px 0 0;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            @include expandable-nav();
+        }
+    }
 
     &__description {
+        width: 100%;
         font-size: 13px;
         line-height: 20px;
         color: #333;
 
+        @media all and (min-width: $sm-breakpoint+1) {
+            float: right;
+            margin-left: -100%;
+            margin-top: 50px;
+        }
+
         @media all and (max-width: $sm-breakpoint) {
-            max-width: 505px;
+            //max-width: 505px;
+        }
+
+        p {
+            margin: 0;
         }
     }
 

@@ -13,38 +13,17 @@ define([
 
     $.widget("light4website.tabs", $.mage.tabs, {
 
-        _create : function () {
-            if((typeof this.options.disabled) === "string") {
-                this.options.disabled = this.options.disabled.split(" ").map(function(item) {
-                    return parseInt(item, 10);
-                });
-            }
-
-            this._processPanels();
-
-            this._mobileToggle();
-
-            this._handleDeepLinking();
-
-            this._processTabIndex();
-
-            this._closeOthers();
-
-            this._bind();
-        },
-
         /**
-         * Move description to align proper on mobile
+         * Adding callback to close others tabs when one gets opened. Modified to ude deactivate instead of force (no hide animation)
          * @private
          */
-        _mobileToggle: function() {
-            if(window.innerWidth < 560) {
-                $.each(this.collapsibles, function() {
-                    var tab_id = this.getAttribute('aria-controls');
-                    var tab_source = document.getElementById(tab_id);
-                    $(this).append(tab_source);
+        _closeOthers: function() {
+            var self = this;
+            $.each(this.collapsibles, function() {
+                $(this).on("beforeOpen", function () {
+                    self.collapsibles.not(this).collapsible("deactivate");
                 });
-            }
+            });
         }
     });
 

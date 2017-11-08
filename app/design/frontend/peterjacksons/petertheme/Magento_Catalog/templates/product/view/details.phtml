@@ -7,50 +7,37 @@
 // @codingStandardsIgnoreFile
 
 ?>
-<?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')): ?>
+<?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')):?>
     <section class="product-main__section-wrap">
         <?php $layout = $block->getLayout(); ?>
-        <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}, "collapsible":true}'>
-            <section class="product-main__tabs">
-                <?php foreach ($detailedInfoGroup as $name): ?>
-                    <?php
-                    $alias = $layout->getElementAlias($name);
-                    $label = $block->getChildData($alias, 'title');
-                    ?>
-
-                    <div class="data item title"
-                         aria-labeledby="tab-label-<?php /* @escapeNotVerified */
-                         echo $alias; ?>-title"
-                         data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */
-                    echo $alias; ?>">
-                        <a class="data switch product-main__tab-switch"
-                           tabindex="-1"
-                           data-toggle="switch"
-                           href="#<?php /* @escapeNotVerified */
-                           echo $alias; ?>"
-                           id="tab-label-<?php /* @escapeNotVerified */
-                           echo $alias; ?>-title">
-                            <?php /* @escapeNotVerified */
-                            echo $label; ?>
-                        </a>
-                    </div>
-
-                <?php endforeach; ?>
-            </section>
-            <?php foreach ($detailedInfoGroup as $name): ?>
+        <div class="product data items product-main__tabs" data-mage-init='{"tabs":{
+        "openedState":"active",
+        "animate": true
+        }}'>
+            <?php foreach ($detailedInfoGroup as $name):?>
                 <?php
                 $html = $layout->renderElement($name);
+                if (!trim($html)) {
+                    continue;
+                }
                 $alias = $layout->getElementAlias($name);
                 $label = $block->getChildData($alias, 'title');
                 ?>
-                <div class="data item content product-main__description" id="<?php /* @escapeNotVerified */
-                echo $alias; ?>" data-role="content">
-                    <?php /* @escapeNotVerified */
-                    echo $html; ?>
+                <div class="data item title product-main__tab"
+                     aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title"
+                     data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>">
+                    <a class="data switch product-main__tab-switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#<?php /* @escapeNotVerified */ echo $alias; ?>"
+                       id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title">
+                        <?php /* @escapeNotVerified */ echo $label; ?>
+                    </a>
                 </div>
-
-            <?php endforeach; ?>
+                <div class="data item content product-main__description" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content">
+                    <?php /* @escapeNotVerified */ echo $html; ?>
+                </div>
+            <?php endforeach;?>
         </div>
     </section>
 <?php endif; ?>
-
