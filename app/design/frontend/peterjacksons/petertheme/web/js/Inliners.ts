@@ -11,6 +11,7 @@ export class Inliners {
         this._sliders();
         this._toggleFilter();
         this._scrollTopArrow();
+        // this._pdpNav();
         this._footerNav();
         this._footerLinksAlteration();
         this._pinHeader();
@@ -65,6 +66,27 @@ export class Inliners {
         });
     }
 
+//    PDP nav
+
+    // private _pdpNav(): void {
+    //     $(".product-main__tab-switch").on("click", function () {
+    //         if ($(window).width() <= 768) {
+    //             if (true === $(this).hasClass("active")) {
+    //                 $(this).removeClass("active").addClass("inactive");
+    //                 let $ul = $(this).next("ul");
+    //                 $ul.stop().slideUp(400, () => {
+    //                     $ul.css("display","");
+    //                 });
+    //
+    //             } else {
+    //                 $(this).removeClass("inactive").addClass("active");
+    //                 $(this).next("ul").stop().slideDown(400);
+    //             }
+    //         }
+    //     });
+    // }
+
+
 // FOOTER
 
     // display scrolltop after 900 px
@@ -102,6 +124,7 @@ export class Inliners {
             }
         });
     }
+
     // prevents header containers move due to bold on hover
     private _footerLinksAlteration(): void {
         $(".page-footer__linkbox a").map((i , v) => {

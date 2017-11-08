@@ -30,9 +30,14 @@ $breadcrumbs-color: #928383;
 .checkout-index-index .breadcrumbs__item--delivery {
     font-weight: bold;
 }
+
 .catalog-product-view .breadcrumbs {
     padding: 21px 20px 0 4px;
+    @media all and (max-width: $sm-breakpoint) {
+        display: none;
+    }
 }
+
 .breadcrumbs {
     @include container();
     box-sizing: border-box;

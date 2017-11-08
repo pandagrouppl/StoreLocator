@@ -10,14 +10,10 @@
 <?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')): ?>
     <section class="product-main__section-wrap">
         <?php $layout = $block->getLayout(); ?>
-        <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}}'>
+        <div class="product data items" data-mage-init='{"tabs":{"openedState":"active"}, "collapsible":true}'>
             <section class="product-main__tabs">
                 <?php foreach ($detailedInfoGroup as $name): ?>
                     <?php
-                    $html = $layout->renderElement($name);
-                    if (!trim($html)) {
-                        continue;
-                    }
                     $alias = $layout->getElementAlias($name);
                     $label = $block->getChildData($alias, 'title');
                     ?>
@@ -27,7 +23,7 @@
                          echo $alias; ?>-title"
                          data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */
                     echo $alias; ?>">
-                        <a class="data switch"
+                        <a class="data switch product-main__tab-switch"
                            tabindex="-1"
                            data-toggle="switch"
                            href="#<?php /* @escapeNotVerified */
@@ -44,9 +40,6 @@
             <?php foreach ($detailedInfoGroup as $name): ?>
                 <?php
                 $html = $layout->renderElement($name);
-                if (!trim($html)) {
-                    continue;
-                }
                 $alias = $layout->getElementAlias($name);
                 $label = $block->getChildData($alias, 'title');
                 ?>

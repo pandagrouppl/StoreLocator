@@ -155,3 +155,79 @@
     }
 }
 
+@mixin expandable-nav() {
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #666;
+
+    &::before,
+    &::after {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 36px;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: '—';
+        opacity: 0;
+        font-size: 28px;
+    }
+
+    &.active {
+
+        &::before {
+            animation: changeSign2 0.2s linear 0.2s forwards alternate;
+        }
+
+        &::after {
+            animation: changeSign 0.4s linear forwards alternate;
+        }
+    }
+
+    &.inactive {
+
+        &::before {
+            animation: changeSign 0.2s linear 0.2s forwards alternate;
+        }
+
+        &::after {
+            animation: changeSign2 0.4s linear forwards alternate;
+        }
+    }
+
+    @at-root {
+        @keyframes changeSign {
+
+            0% {
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes changeSign2 {
+
+            0% {
+                opacity: 0;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+}

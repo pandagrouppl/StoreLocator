@@ -39,6 +39,12 @@
     }
 }
 
+.catalog-product-view .page-main {
+    @media all and (max-width: $sm-breakpoint) {
+        padding: 0;
+    }
+}
+
 body[class~='checkout-index-index'] {
     .page-main {
         max-width: 1260px;

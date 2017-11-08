@@ -49,10 +49,6 @@
         &--Size {
             width: 153px;
             margin-right: 13px;
-
-            @media all and (max-width: $xs-breakpoint) {
-                margin-bottom: 10px;
-            }
         }
 
         &--qty {

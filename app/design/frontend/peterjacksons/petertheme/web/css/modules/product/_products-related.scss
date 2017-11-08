@@ -12,6 +12,7 @@
     }
 
     &__slider {
+        margin-top: 53px;
 
         .slick-arrow {
             background: url(../../mage/gallery/gallery.png) no-repeat;
@@ -51,13 +52,13 @@
 
     &__name {
         color: $black;
-        text-transform: uppercase;
+        font-weight: normal;
         font-size: 17px;
-        margin: 10px 0;
+        margin: 21px 0 4px 0;
         display: block;
 
         &:hover {
-            color: $grey;
+            color: $grey-dark;
         }
     }
 
@@ -66,7 +67,7 @@
         justify-content: center;
 
         .price {
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 300;
         }
     }
