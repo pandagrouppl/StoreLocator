@@ -21,9 +21,10 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
                 <select name="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
                         data-selector="super_attribute[<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
                         data-validate="{required:true}"
+                        data-label="<?php echo trim($_attribute->getProductAttribute()->getStoreLabel()) ?>"
                         id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
                         class="super-attribute-select select__pdp-select">
-                    <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>asas
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>
                 </select>
             </div>
         </div>
