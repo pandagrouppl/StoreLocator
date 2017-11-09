@@ -10,9 +10,11 @@
 <?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')):?>
     <section class="product-main__section-wrap">
         <?php $layout = $block->getLayout(); ?>
-        <div class="product data items product-main__tabs" data-mage-init='{"tabs":{
+        <?php // see js/extend/tabs-custom and js/extend/collapisble-animate-override ?>
+        <div class="product data items product-main__tabs" data-mage-init='{"js/extend/tabs-custom":{
         "openedState":"active",
-        "animate": true
+        "animate": true,
+        "animationBreakpoint": 768
         }}'>
             <?php foreach ($detailedInfoGroup as $name):?>
                 <?php

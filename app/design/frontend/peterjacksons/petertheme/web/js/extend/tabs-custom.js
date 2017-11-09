@@ -6,7 +6,7 @@ define([
     "jquery",
     "jquery/ui",
     "mage/mage",
-    "mage/collapsible",
+    "js/extend/collapsible-animate-override",
     "mage/tabs"
 ], function($){
     "use strict";
