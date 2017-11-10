@@ -36,20 +36,11 @@
         max-width: 100%;
         width: 218px;
         text-align: center;
+        margin: 0 auto;
     }
 
     &__item {
         margin: 0 5px 20px 5px;
-        //&[aria-hidden="true"] {
-        //    display: block !important;
-        //    height: 0px;
-        //    overflow: hidden;
-        //}
-        //&[aria-hidden="false"] {
-        //    display: block !important;
-        //    height: auto;
-        //}
-
     }
 
     &__wrapper {

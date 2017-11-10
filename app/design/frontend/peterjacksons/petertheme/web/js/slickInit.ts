@@ -29,7 +29,7 @@ const sl = (config, element) => {
      * Fix to reposition slick when it was hidden
      */
 
-    $('.product-main__tab').click(() => {
+    $('#product-sliders .product-main__tab').click(() => {
         $(element).css('opacity', 0);
         setTimeout(() => {
             $(element).slick('setPosition');
