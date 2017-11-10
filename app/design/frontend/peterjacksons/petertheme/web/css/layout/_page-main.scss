@@ -21,7 +21,7 @@
         }
 
         .success {
-            background-color: rgba(0, 255, 0, 0.19);
+            background-color: rgba(127, 204, 126, 0.37);
         }
 
         .error {
@@ -36,6 +36,12 @@
     &--unconstrained {
         max-width: none;
         padding: 0 0;
+    }
+}
+
+.catalog-product-view .page-main {
+    @media all and (max-width: $sm-breakpoint) {
+        padding: 0;
     }
 }
 

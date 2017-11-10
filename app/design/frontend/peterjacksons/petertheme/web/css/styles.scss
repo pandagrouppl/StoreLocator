@@ -17,9 +17,11 @@
 @import "blocks/search-overlay";
 @import "blocks/select";
 @import "blocks/spinner";
+@import "blocks/discount-field";
 @import "blocks/breadcrumbs";
 @import "blocks/price-box";
 @import "blocks/layered-nav";
+@import "blocks/separator";
 @import "blocks/size-chart";
 @import "blocks/popup-login";
 @import "blocks/newsletter";
@@ -44,6 +46,7 @@
 @import "modules/cart/cart-container";
 @import "modules/cart/items-table";
 @import "modules/cart/minicart";
+@import "modules/cart/sidebar-prices";
 
 @import "modules/catalog/catalog-main";
 @import "modules/catalog/catalog-grid";
@@ -52,16 +55,15 @@
 
 @import "modules/checkout/chckt-auth-wrap";
 @import "modules/checkout/checkout";
-@import "modules/checkout/checkout-table";
+@import "modules/checkout/checkout-minicart";
 @import "modules/checkout/payment-method";
 @import "modules/checkout/shipping-information";
 @import "modules/checkout/checkout-header";
 
 @import 'modules/product/product-main';
-@import 'modules/product/product-content';
+
 @import 'modules/product/products-related';
 @import 'modules/product/product-info-main';
-@import 'modules/product/product-info-detailed';
 
 @import "modules/account/dashboard/account-dashboard";
 @import "modules/account/dashboard/account-form";

@@ -41,6 +41,7 @@ define([
                     }
                 },
                 success: function(res) {
+                    console.log('success', res);
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
@@ -64,8 +65,12 @@ define([
                     }
 
                     if (res.backUrl) {
-                        window.location = res.backUrl;
-                        return;
+                        self.enableFailedAddToCartButton(form);
+                        $(self.options.minicartSelector).trigger('contentLoaded');
+                    } else {
+                        self.enableAddToCartButton(form);
+                        $(self.options.minicartSelector).trigger('openMinicart');
+                        $(self.options.minicartSelector).trigger('contentUpdated');
                     }
 
                     if (res.minicart) {
@@ -84,9 +89,24 @@ define([
                             .find('span')
                             .html(res.product.statusText);
                     }
-                    self.enableAddToCartButton(form);
                 }
             });
+        },
+
+        enableFailedAddToCartButton: function(form) {
+            var addToCartButtonTextAdded = this.options.addToCartButtonTextAdded || $t('Failed to add');
+            var self = this,
+                addToCartButton = $(form).find(this.options.addToCartButtonSelector);
+
+            addToCartButton.find('span').text(addToCartButtonTextAdded);
+            addToCartButton.attr('title', addToCartButtonTextAdded);
+
+            setTimeout(function() {
+                var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to Cart');
+                addToCartButton.removeClass(self.options.addToCartButtonDisabledClass);
+                addToCartButton.find('span').text(addToCartButtonTextDefault);
+                addToCartButton.attr('title', addToCartButtonTextDefault);
+            }, 1000);
         }
     });
 

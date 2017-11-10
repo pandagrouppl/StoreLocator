@@ -8,37 +8,41 @@
 <!-- ko foreach: getRegion('before_details') -->
     <!-- ko template: getTemplate() --><!-- /ko -->
 <!-- /ko -->
-<div class="product-item-name-block checkout-table__name-and-attrs">
-    <div class="checkout-table__name">
+<div class="product-item-name-block checkout-minicart__name-and-attrs">
+    <div class="checkout-minicart__name">
         <strong class="product-item-name" data-bind="text: $parent.name"></strong>
     </div>
-    <div class="checkout-table__attrs">
+    <div class="checkout-minicart__attrs">
         <!-- ko if: (JSON.parse($parent.options).length > 0)-->
         <div class="product options">
-            <dl class="item-options">
-                <dt class="label">Product Code: </dt>
-                <dd class="values">placeholder</dd>
+            <ol class="item-options">
                 <!--ko foreach: JSON.parse($parent.options)-->
-                <dt class="label" data-bind="text: label"></dt>:
-                <!-- ko if: ($data.full_view)-->
-                <dd class="values" data-bind="html: full_view"></dd>
+                <li class="checkout-minicart__attribute">
+                    <span class="checkout-minicart__attrs-label label" data-bind="text: label+':'"></span>
+                    <!-- ko if: ($data.full_view)-->
+                    <span class="checkout-minicart__attrs-value values" data-bind="html: full_view"></span>
+                    <!-- /ko -->
+                    <!-- ko ifnot: ($data.full_view)-->
+                    <span class="checkout-minicart__attrs-value values" data-bind="html: value"></span>
+                    <!-- /ko -->
+                </li>
                 <!-- /ko -->
-                <!-- ko ifnot: ($data.full_view)-->
-                <dd class="values" data-bind="html: value"></dd>
-                <!-- /ko -->
-                <!-- /ko -->
-            </dl>
+                <li class="checkout-minicart__attribute">
+                    <span class="checkout-minicart__attrs-label label"><!-- ko i18n: 'Qty' --><!-- /ko -->:</span>
+                    <span class="checkout-minicart__attrs-value values" data-bind="text: $parent.qty"></span>
+                </li>
+                <li class="checkout-minicart__attribute">
+                    <span class="checkout-minicart__attrs-label label"><!-- ko i18n: 'Price' --><!-- /ko -->:</span>
+                    <span class="checkout-minicart__attrs-value values">
+                        <!-- ko foreach: getRegion('after_details') -->
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                        <!-- /ko -->
+                    </span>
+                </li>
+            </ol>
         </div>
         <!-- /ko -->
     </div>
-</div>
-<div class="details-qty checkout-table__qty">
-    <span class="value" data-bind="text: $parent.qty"></span>
-</div>
-<div class="checkout-table__price">
-    <!-- ko foreach: getRegion('after_details') -->
-    <!-- ko template: getTemplate() --><!-- /ko -->
-    <!-- /ko -->
 </div>
 
 

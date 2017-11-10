@@ -1,11 +1,19 @@
 .product-main {
+    @include container();
 
-    &__wrapper {
+    @media all and (max-width: $sm-breakpoint) {
+        > section {
+            padding: 0 27px;
+        }
+    }
+
+    &__gal-act-wrapper {
         display: flex;
-        padding: 30px 0 88px 0;
-        @include container();
+        justify-content: space-between;
+        padding: 30px 0 11px 0;
 
-        @media all and (max-width: $bp-header) {
+
+        @media all and (max-width: $sm-breakpoint) {
             flex-direction: column;
             padding: 0 0 88px 0;
         }
@@ -19,10 +27,15 @@
             height: 550px;
             overflow-y: auto;
         }
+
+        div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap > div.fotorama__stage > div.fotorama__arr {
+            opacity: 1;
+            transform: none;
+        }
     }
 
     &__left {
-        min-width: 55%;
+        min-width: 56%;
 
         button.m360-icon.m360-icon-fullscreen-open {
             top: 65px !important;
@@ -35,13 +48,95 @@
         box-sizing: border-box;
         padding: 0;
         margin-left: 20px;
+        flex-basis: 348px;
 
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: $sm-breakpoint) {
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
     }
+
+    &__section-wrap {
+        max-width: 100%;
+        margin-top: 54px;
+
+        &--ending {
+            margin-bottom: 30px;
+        }
+
+        &::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+
+    &__tabs {
+        position: relative;
+
+        .active .product-main__tab-switch {
+            font-weight: 600;
+            border-bottom: 1px solid #030303;
+
+            @media all and (max-width: $sm-breakpoint) {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__tab-switch {
+        font-size: 19px;
+        color: #030303;
+        display: block;
+        letter-spacing: 0.055em;
+        padding-bottom: 6px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #666;
+        }
+
+
+    }
+
+
+
+    @media all and (max-width: $sm-breakpoint) {
+        //@include expandable-nav();
+    }
+
+    &__tab {
+        @media all and (min-width: $sm-breakpoint+1) {
+            float: left;
+            width: auto;
+            margin: 0 39px 0 0;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            @include expandable-nav();
+        }
+    }
+
+    &__description {
+        width: 100%;
+        font-size: 13px;
+        line-height: 20px;
+        color: #333;
+
+        @media all and (min-width: $sm-breakpoint+1) {
+            float: right;
+            margin-left: -100%;
+            margin-top: 50px;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            //max-width: 505px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+
 }
 

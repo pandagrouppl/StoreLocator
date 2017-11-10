@@ -1,204 +1,78 @@
 .items-table {
+    font-family: Roboto, arial, sans-serif;
     width: 100%;
-    letter-spacing: 1px;
-    margin-top: 40px;
 
-    &__row {
+
+    &__item {
         display: flex;
         border-bottom: 1px solid #DDD;
+        padding: 20px 0;
 
         @media all and (max-width: $cms-sm-brkpt) {
             border-bottom: 0;
             border-top: 1px solid #DDD;
         }
-
-        &--header {
-            font-size: 20px;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                display: none;
-            }
-
-            > div {
-                padding: 10px 18px;
-            }
-        }
-
-        &--item {
-
-            > div {
-                padding: 20px 5px;
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
     }
 
-    &__column {
-
-        &--remove {
-            width: 5%;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                display: flex;
-                order: 1;
-            }
-        }
-
-        &--item {
-            width: 55%;
-            display: flex;
-            flex: 1;
-            justify-content: space-between;
-            min-width: 360px;
-
-            @media all and (max-width: $md-breakpoint) {
-                min-width: 335px;
-            }
-
-            @media all and (max-width: $sm-breakpoint) {
-                min-width: 230px;
-            }
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                display: flex;
-                flex-direction: column;
-                min-width: 95px;
-            }
-        }
-
-        &--qty {
-            width: 27%;
-
-            @media all and (max-width: $md-breakpoint) {
-                width: 20%;
-            }
-
-            @media all and (max-width: $sm-breakpoint) {
-                width: 41%;
-            }
-        }
-
-        &--size {
-            width: 15%;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                width: auto;
-            }
-        }
-
-        &--price {
-            width: 10%;
-        }
-
-        &--centred {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                justify-content: flex-start;
-                margin: 5px 0;
-                align-items: flex-start;
-            }
-
-            .select__wrapper {
-                .select__select {
-                    min-width: 30px;
-                }
-            }
-        }
-
-        &--centred-right {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-
-            @media all and (max-width: $md-breakpoint) {
-                padding-left: 40px;
-            }
-
-            @media all and (max-width: $sm-breakpoint) {
-                padding-left: 65px;
-            }
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                width: 44px;
-                margin: 5px 0;
-                display: flex;
-                align-items: flex-start;
-                padding-left: 0;
-            }
-        }
+    &__product-info {
+        flex: 1;
+        margin: 7px 0 0 31px;
     }
 
     &__remove {
-        @include sprite(remove-ico);
+
     }
 
-    &__product {
 
-        &-details {
-            padding-left: 5px;
-            max-width: 100%;
-            width: 271px;
+
+    &__product-details {
+        padding-left: 5px;
+        max-width: 100%;
+        width: 271px;
+
+        @media all and (max-width: $cms-sm-brkpt) {
+            padding-left: 0;
+        }
+
+        .message.error {
+            color: red;
+        }
+    }
+
+    &__product-name {
+        font-size: 19px;
+
+        a {
+            color: #181818;
 
             @media all and (max-width: $cms-sm-brkpt) {
-                padding-left: 0;
+                font-size: 20px;
             }
-
-            .message.error {
-                color: red;
-            }
-        }
-
-        &-name {
-            font-family: league_gothic, sans-serif;
-            font-size: 30px;
-            text-transform: uppercase;
-
-            a {
-                color: #000;
-
-                @media all and (max-width: $cms-sm-brkpt) {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        &-params {
-            font-size: 14px;
-            font-weight: 300;
-
-            dt, dd {
-                display: inline-block;
-                margin: 10px 5px 0 0;
-
-                &:first-of-type {
-                    font-weight: 400;
-                }
-            }
-
-            &-Size {
-                font-size: 16px;
-            }
-
-            &-delivery {
-                font-size: 12px;
-                font-style: italic;
-                color: #666;
-            }
-
         }
     }
 
+    &__product-code {
+        font-size: 11px;
+        margin: 7px 0 15px 0;
+
+        dt, dd {
+            display: inline-block;
+        }
+    }
+
+    &__product-delivery {
+        display: block;
+        margin-top: 26px;
+        font-size: 12px;
+        font-style: italic;
+        color: #666;
+    }
+
+
     &__price {
-        font-size: 16px;
-        letter-spacing: 1px;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 31px;
 
         &--strikethrough {
             text-decoration: line-through;
@@ -206,6 +80,34 @@
 
         &--special {
             color: red;
+        }
+    }
+
+    &__options-and-actions {
+        display: flex;
+    }
+
+    &__cart-select {
+        font-size: 14px;
+        margin-right: 12px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__actions {
+        font-size: 15px;
+        margin: auto 0 0 10px;
+        display: flex;
+        flex-direction: column;
+
+        * {
+            color: #181818;
+            &:hover {
+                color: #767676;
+            }
         }
     }
 }

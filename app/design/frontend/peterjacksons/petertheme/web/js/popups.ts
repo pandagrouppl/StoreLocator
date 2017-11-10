@@ -35,7 +35,7 @@ export class Popups {
     }
 
     _shippingPopup() {
-        $(' .shipping-returns-click ').on(' click ', () => {
+        $(' .shipping-returns-click, .product-info-main__free-delivery-trigger ').on(' click ', () => {
             $(' .overlay__overlay-shipping ').toggle();
         });
         $(' .overlay__close, .overlay__overlay ').on(' click ', () => {

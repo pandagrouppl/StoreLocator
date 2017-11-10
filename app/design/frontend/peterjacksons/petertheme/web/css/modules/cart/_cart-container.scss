@@ -1,5 +1,90 @@
+
+
+.checkout-cart-index .page-main {
+    max-width: 966px;
+    margin: 0 auto;
+}
+
 .cart-container {
-    button.update {
-        @include button-grey(10px, 10px 0, 15px, normal);
+    display: flex;
+    color: #181818;
+
+    &__form {
+        flex: 1;
+    }
+
+    &__summary {
+        flex-basis: 365px;
+        margin-left: 60px;
+    }
+
+    &__table {
+        background-color: #f3f2f2;
+        padding: $checkout-sidebar-pdd 0;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: $checkout-sidebar-pdd;
+        border-bottom: $checkout-sidebar-border;
+    }
+
+    &__total-price {
+        padding-top: $checkout-sidebar-pdd;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        .table-caption {
+            display: none;
+        }
+
+        th {
+            text-align: left;
+            font-weight: normal;
+            font-size: 14px;
+            padding-left: $checkout-sidebar-pdd;
+            line-height: 25px;
+        }
+
+        td {
+            text-align: right;
+            font-size: 15px;
+            padding-right: $checkout-sidebar-pdd;
+        }
+
+        tr:nth-last-child(2) {
+            th, td {
+                padding-bottom: $checkout-sidebar-pdd;
+            }
+        }
+
+        .grand.totals {
+            th {
+                font-size: 15px;
+            }
+
+            td {
+                font-size: 16px;
+            }
+
+            th, td {
+                border-top: $checkout-sidebar-border;
+                padding-top: $checkout-sidebar-pdd;
+            }
+        }
+    }
+
+    &__buttons {
+        > button {
+            @include button-black();
+
+            max-width: 100%;
+        }
     }
 }

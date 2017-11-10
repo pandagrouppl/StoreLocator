@@ -5,6 +5,10 @@ body {
     font-size: 12px;
 }
 
+.page-wrapper {
+    overflow: hidden;
+}
+
 .no-display {
     display: none;
 }
@@ -37,6 +41,10 @@ body {
 
 .custom-slide._show {
     visibility: visible;
+}
+
+._block-content-loading {
+    position: relative;
 }
 
 

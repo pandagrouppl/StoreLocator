@@ -32,11 +32,11 @@ if ($block->getIsInCatalogProduct()) {
             }
      }'
     >
-    <input type="button" class="paypal__button" data-action="checkout-form-submit"
+    <button type="submit" class="paypal__button" data-action="checkout-form-submit"
            data-checkout-url="<?php echo $block->escapeUrl($block->getCheckoutUrl()); ?>"
-           src="<?php echo $block->escapeUrl($block->getImageUrl()); ?>"
-           alt="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>"
-           title="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>"/>
+           title="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>">
+        <span class="paypal__image"></span>
+    </button>
     <?php if ($block->getAdditionalLinkImage()): ?>
         <?php $linkImage = $block->getAdditionalLinkImage(); ?>
         <a href="<?php echo $block->escapeUrl($linkImage['href']);?>">

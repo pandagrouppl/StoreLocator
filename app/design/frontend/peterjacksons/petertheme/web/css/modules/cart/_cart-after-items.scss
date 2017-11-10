@@ -1,36 +1,5 @@
 .after-items {
-    display: flex;
-    flex-wrap: wrap;
 
-    &__top {
-        flex: 1 0 100%;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            order: 2;
-        }
-    }
-
-    &__left {
-        flex: 1 0 50%;
-    }
-
-    &__right {
-        flex: 1 0 50%;
-        display: flex;
-        justify-content: flex-end;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            flex: 1 0 100%;
-            justify-content: center;
-            order: 3;
-        }
-
-        .after-items__checkout-button > button {
-            @media all and (max-width: $cms-sm-brkpt) {
-                width: 100%;
-            }
-        }
-    }
 
     &__bottom {
         flex-basis: 100%;
@@ -88,57 +57,18 @@
         }
     }
 
-    &__discount {
+    &__payment-graphics {
+        display: flex;
+        align-items: center;
+    }
 
-        &-label {
-            display: block;
-            letter-spacing: 1px;
-            margin: 17px 0 12px;
-            text-align: left;
-            font-size: 20px;
-        }
+    &__credit-cards {
+        @include sprite(credit-cards);
+        margin-right: 20px;
+    }
 
-        &-fieldset {
-            display: flex;
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                flex-direction: column;
-            }
-
-            .primary {
-                display: flex;
-
-                > button {
-                    flex-basis: 100%;
-                    justify-content: center;
-
-                    > span {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        &-input {
-            @include form-element();
-            text-align: center;
-        }
-
-        &-button {
-            @include button-grey(0 30px, 0 0 0 5px, 16px);
-            border: 1px solid #b4b2b2;
-            color: #666666;
-            height: 40px;
-
-            &:hover {
-                background-color: white;
-                color: #181818;
-            }
-
-            @media all and (max-width: $cms-sm-brkpt) {
-                margin: 10px 0 0 0;
-            }
-        }
+    &__pay-pal {
+        @include sprite(paypal-logo);
     }
 
     &__continue-link {
@@ -157,62 +87,5 @@
             height: 15px;
             background-position: -309px -103px;
         }
-    }
-
-    &__total-price {
-        @extend .items-table__price;
-        display: flex;
-        flex-direction: row-reverse;
-
-        .grand.totals {
-            display: flex;
-            align-items: center;
-            margin: 30px 0 30px 0;
-            font-weight: 300;
-
-            th.mark {
-                margin-right: 10px;
-                font-weight: 300;
-            }
-        }
-    }
-
-    &__checkout-button {
-        text-align: right;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            flex-basis: 100%;
-        }
-
-        > button {
-            @include button-blue(0, 10px 0, 15px, normal);
-            height: 42px;
-            width: 250px;
-            max-width: 100%;
-        }
-    }
-
-    &__paypal-button {
-        @include button(0, 0);
-        background-color: white;
-        border: 1px solid #b4b2b2;
-        height: 42px;
-        width: 250px;
-
-        @media all and (max-width: $cms-sm-brkpt) {
-            max-width: 600px;
-            width: 100%;
-        }
-
-        &:hover {
-            background-color: white;
-        }
-
-    }
-
-    &__paypal-logo {
-        @include sprite(paypalbutt);
-        display: block;
-        margin: auto;
     }
 }

@@ -2,6 +2,42 @@ $breadcrumbs-color: #928383;
 .cms-page-view .breadcrumbs {
     max-width: 990px;
 }
+.checkout-cart-index, .checkout-index-index {
+    .breadcrumbs {
+        font-size: 18px;
+        text-align: center;
+
+        &__items {
+            display: block;
+        }
+
+        &__item {
+            display: inline-block;
+            text-transform: none;
+        }
+
+        &__separator {
+            letter-spacing: -1px;
+            font-weight: normal;
+        }
+    }
+}
+.checkout-cart-index .breadcrumbs__item--cart {
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.checkout-index-index .breadcrumbs__item--delivery {
+    font-weight: bold;
+}
+
+.catalog-product-view .breadcrumbs {
+    padding: 21px 20px 0 4px;
+    @media all and (max-width: $sm-breakpoint) {
+        display: none;
+    }
+}
+
 .breadcrumbs {
     @include container();
     box-sizing: border-box;

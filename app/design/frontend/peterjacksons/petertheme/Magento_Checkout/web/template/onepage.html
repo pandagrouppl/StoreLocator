@@ -20,10 +20,19 @@
 
         <!--</ol>-->
     </div>
-    <div class="checkout__sidebar">
-        <!-- ko foreach: getRegion('sidebar') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!--/ko-->
+    <div class="checkout__sidebar-wrap">
+        <div class="checkout__sidebar">
+            <!-- ko foreach: getRegion('sidebar') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </div>
+        <div class="checkout__buttons">
+        </div>
     </div>
 </div>
+
+<!-- ko foreach: getRegion('progressBar') -->
+<!-- ko template: getTemplate() --><!-- /ko -->
+<!--/ko-->
+
 

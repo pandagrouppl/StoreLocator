@@ -1,0 +1,53 @@
+.sidebar-prices {
+    padding-top: $checkout-sidebar-pdd;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+
+    .table-caption {
+        display: none;
+    }
+
+    tr {
+        vertical-align: middle;
+    }
+
+    th {
+        text-align: left;
+        font-weight: normal;
+        font-size: 14px;
+        padding: 7px $checkout-sidebar-pdd;
+        width: 65%;
+    }
+
+    td {
+        text-align: right;
+        font-size: 15px;
+        padding-right: $checkout-sidebar-pdd;
+        width: 100%;
+    }
+
+    tr:nth-last-child(2) {
+        th, td {
+            padding-bottom: $checkout-sidebar-pdd;
+        }
+    }
+
+    .grand.totals {
+        th {
+            font-size: 15px;
+        }
+
+        td {
+            font-size: 16px;
+        }
+
+        th, td {
+            border-top: $checkout-sidebar-border;
+            padding-top: $checkout-sidebar-pdd;
+        }
+    }
+}

@@ -4,27 +4,43 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="block items-in-cart checkout-table">
-    <div class="content minicart-items" data-role="content">
-            <ol class="minicart-items checkout-table__items">
-                <li class="product-item checkout-table__item product-item checkout-table__item--header">
-                        <div class="checkout-table__name-and-attrs">
-                            <span><!-- ko i18n: 'Product' --><!-- /ko --></span>
-                        </div>
-                        <div class="checkout-table__qty">
-                            <span><!-- ko i18n: 'Qty' --><!-- /ko --></span>
-                        </div>
-                        <div class="checkout-table__price">
-                            <span><!-- ko i18n: 'Price' --><!-- /ko --></span>
-                        </div>
-                </li>
-                <!-- ko foreach: getItems() -->
-                <li class="product-item checkout-table__item">
-                        <!-- ko foreach: $parent.elems() -->
-                        <!-- ko template: getTemplate() --><!-- /ko -->
-                        <!-- /ko -->
+<div class="block items-in-cart checkout-minicart" data-bind="mageInit: {'collapsible':{'openedState': 'active', 'active': true}}">
+    <div class="checkout-minicart__title title" data-role="title">
+        <strong role="heading">
+            <!-- ko if: maxCartItemsToDisplay < getCartLineItemsCount() -->
+            <!-- ko text: maxCartItemsToDisplay --><!-- /ko -->
+            <!-- ko i18n: 'of' --><!-- /ko -->
+            <!-- /ko -->
+            <span data-bind="text: getItemsQty()"></span>
+            <!-- ko if: getCartLineItemsCount() == 1 -->
+            <!-- ko i18n: 'Item in Cart' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: getCartLineItemsCount() > 1 -->
+            <!-- ko i18n: 'Items in Cart' --><!-- /ko -->
+            <!-- /ko -->
+        </strong>
+        <figure class="checkout-minicart__chevron"></figure>
+    </div>
+    <div class="checkout-minicart__container content minicart-items" data-role="content">
+        <div class="minicart-items-wrapper overflowed">
+            <ol class="minicart-items">
+                <!-- ko foreach: items() -->
+                <li class="product-item checkout-minicart__item">
+                    <!-- ko foreach: $parent.elems() -->
+                    <!-- ko template: getTemplate() --><!-- /ko -->
+                    <!-- /ko -->
                 </li>
                 <!-- /ko -->
             </ol>
+        </div>
     </div>
+    <!-- ko if: maxCartItemsToDisplay < getCartLineItemsCount() -->
+    <div class="actions-toolbar">
+        <div class="secondary">
+            <a class="action viewcart" data-bind="attr: {href: cartUrl}">
+                <span data-bind="i18n: 'View and Edit Cart'"></span>
+            </a>
+        </div>
+    </div>
+    <!-- /ko -->
 </div>

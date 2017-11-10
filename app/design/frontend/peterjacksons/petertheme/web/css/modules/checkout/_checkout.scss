@@ -1,7 +1,10 @@
 .checkout {
-    letter-spacing: 1px;
-    color: #515151;
-    margin: 0 0 20px;
+
+    &__wrapper {
+        width: 925px;
+        color: #515151;
+        margin: 0 auto 20px auto;
+    }
 
     a {
         margin: 0;
@@ -36,12 +39,11 @@
         width: 100%;
     }
 
-    &__sidebar {
-        flex: 0 0 350px;
-        background-color: #efefef;
-        padding: 15px 15px 40px 15px;
+    &__sidebar-wrap {
+        box-sizing: border-box;
+        flex: 0 0 360px;
         line-height: 1.3em;
-        margin-left: 20px;
+        margin-left: 90px;
 
         @media all and (max-width: $sm-breakpoint) {
             margin-top: 15px;
@@ -50,13 +52,18 @@
         }
     }
 
+    &__sidebar {
+        background-color: #efefef;
+        padding: 15px 0 20px 0;
+    }
+
     &__sidebar-title {
         font-weight: 500;
-        padding: 10px 0;
+        padding: 10px 0 25px 0;
         text-align: center;
         border-bottom: 1px solid #ddd;
         margin-bottom: 30px;
-        font-size: 25px;
+        font-size: 24px;
     }
 
     &__shipping-method {
@@ -77,29 +84,18 @@
     }
 
     &__step-wrapper {
-        display: flex;
-        align-items: center;
         font-weight: 500;
-        padding: 27px 0;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 30px;
-    }
-
-    &__step-number {
-        background-color: #000;
-        color: #fff;
-        border-radius: 100%;
-        width: 38px;
-        height: 38px;
-        margin: 0 20px 0 0;
-        font-size: 22px;
-        padding: 8px 12px;
-        box-sizing: border-box;
+        padding: 0 0 17px 0;
     }
 
     &__step-title {
-        font-size:  25px;
+        font-size:  26px;
         color: #000;
+    }
+
+    &__step-separator {
+        margin: 30px 0 36px;
+        border-bottom: 1px solid #ddd;
     }
 
     &__input-wrapper {
@@ -137,7 +133,12 @@
 
         &--login {
             @include button-blue(10px 20px, 5px, 13px);
+        }
+    }
 
+    &__buttons {
+        button {
+            @include button-black();
         }
     }
 
@@ -170,52 +171,69 @@
         }
     }
 
-    &__shipping {
+    &__address-fieldset {
 
-        &-address {
+        display: flex;
+        flex-wrap: wrap;
+        > .field {
+            flex-basis: 100%;
 
-            @media all and (max-width: $sm-breakpoint) {
-                flex-basis: 100%;
+            &:nth-child(n+5) {
+                flex-basis: 50%;
+            }
+            &:nth-child(5), &:nth-child(7) {
+                box-sizing: border-box;
+                padding-right: 15px;
             }
         }
+    }
 
-        &-options-wrapper {
-            color: #555;
+
+
+    &__shipping-address {
+
+        @media all and (max-width: $sm-breakpoint) {
+            flex-basis: 100%;
         }
+    }
 
-        &-option {
-            margin-bottom: 15px;
-            border: 2px dashed #ddd;
-            padding: 15px;
-            border-radius: 5px;
-        }
+    &__shipping-radio {
 
-        &-name {
-            text-transform: uppercase;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
+        margin-right: 5px;
+    }
 
-        &-select {
-            display: flex;
-            align-items: center;
-        }
+    &__shipping-options-wrapper {
+        color: #555;
+    }
 
-        &-price {
-            font-size: 14px;
-            font-weight: bold;
-            margin-right: 15px;
-        }
+    &__shipping-option {
+        margin-bottom: 30px;
+    }
 
-        &-delivery {
-            font-style: italic;
-            flex: 1;
-        }
+    &__shipping-name {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
 
-        &-button {
-            @include button-blue(9px 18px, 3px 7px 3px 0, 12px);
-        }
+    &__shipping-select {
+        display: flex;
+        align-items: center;
+    }
 
+    &__shipping-price {
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    &__shipping-delivery {
+        font-style: italic;
+        flex: 1;
+    }
+
+
+    &__next-button {
+        @include button-black();
     }
 
     &__payments {
@@ -229,6 +247,8 @@
         padding-right: 10px;
     }
 
+
+
     &__cc-img {
         @include sprite(credit-cards);
         display: inline-block;
@@ -239,28 +259,17 @@
         display: inline-block;
     }
 
-    &__discount-title {
-        color: #000;
+    .opc-progress-bar-item {
+        display: none;
+    }
+
+    .opc-progress-bar-item._complete {
         display: block;
-        padding: 17px 0 12px;
-        font-size: 20px;
-    }
-
-    &__discount-form {
-        display: flex;
-    }
-
-    &__discount-input {
-        @include form-element();
-    }
-
-    &__discount-button {
-
-        &--apply {
-            @include button-custom(10px 30px, 0, 16px, bold, white, #666, white, black);
-            margin-left: 5px;
+        span {
+            cursor: pointer;
         }
     }
+
 }
 
 

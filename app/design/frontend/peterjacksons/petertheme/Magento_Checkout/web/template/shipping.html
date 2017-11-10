@@ -6,8 +6,7 @@
 -->
 <li id="shipping" class="checkout-shipping-address checkout__shipping-address" data-bind="fadeVisible: visible()">
     <div class="checkout__step-wrapper">
-        <div class="step-title checkout__step-number">1</div>
-        <div class="step-title checkout__step-title" data-bind="i18n: 'Shipping Address'" data-role="title"></div>
+        <div class="step-title checkout__step-title" data-bind="i18n: 'Delivery Address'" data-role="title"></div>
     </div>
     <div id="checkout-step-shipping"
          class="step-content checkout__address-wrapper"
@@ -56,9 +55,7 @@
     data-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
-        <div class="checkout__step-wrapper">
-            <div class="step-title checkout__step-number">2</div>
-            <div class="step-title checkout__step-title" data-bind="i18n: 'Shipping Methods'" data-role="title"></div>
+        <div class="checkout__step-separator">
         </div>
         <!-- ko foreach: getRegion('before-shipping-method-form') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
@@ -81,30 +78,32 @@
                         <div class="col col-method checkout__shipping-select">
                             <!-- ko ifnot: method.error_message -->
                             <!-- ko if: $parent.rates().length == 1 -->
-                            <input class="checkout__shipping-button"
+                            <input class="checkout__shipping-radio"
                                    data-role="opc-continue"
-                                   type="submit"
-                                   data-bind="
-                                                value: 'choose',
-                                                attr: {
+                                   type="radio"
+                                   name="shipping-methods"
+                                   data-bind="attr: {
+                                                    'value' : method.carrier_code + '_' + method.method_code,
                                                     'id': 's_method_' + method.carrier_code + '_' + method.method_code,
                                                     'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
-                                                },
-                                                css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-button--active' : '',
-                                                click: $parent.selectShippingMethod" />
+                                                }
+                                                click: $parent.selectShippingMethodAlt"
+                                                />
                             <!-- /ko -->
                             <!--ko ifnot: ($parent.rates().length == 1)-->
-                            <input type="submit"
+                            <input type="radio"
+                                   name="shipping-methods"
                                    data-role="opc-continue"
                                    data-bind="
-                                                value: 'choose',
-                                                attr: {
-                                                    'id': 's_method_' + method.carrier_code + '_' + method.method_code,
-                                                    'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
-                                                },
-                                                css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-button--active' : '',
-                                                click: $parent.selectShippingMethod"
-                                   class="checkout__shipping-button"/>
+                                            value: method.carrier_code + '_' + method.method_code,
+                                            checked: $parent.isSelected,
+                                            attr: {
+                                                'id': 's_method_' + method.carrier_code + '_' + method.method_code,
+                                                'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code
+                                            },
+                                            css: ((method.carrier_code + '_' + method.method_code) == $parent.isSelected()) ? 'checkout__shipping-radio--active' : '',
+                                            click: $parent.selectShippingMethodAlt"
+                                   class="checkout__shipping-radio"/>
                             <!--/ko-->
                             <!-- /ko -->
 
@@ -146,6 +145,13 @@
                     <span><!-- ko text: errorValidationMessage()--><!-- /ko --></span>
                 </div>
                 <!-- /ko -->
+                <div class="actions-toolbar" id="shipping-method-buttons-container">
+                    <div class="primary">
+                        <button id="proceed-to-payment" data-role="opc-continue" type="submit" class="checkout__next-button" data-bind="fadeVisible: isSelected()">
+                            <span><!-- ko i18n: 'Proceed to Payment'--><!-- /ko --></span>
+                        </button>
+                    </div>
+                </div>
             </form>
             <!-- /ko -->
             <!-- ko ifnot: rates().length > 0 --><div class="no-quotes-block"><!-- ko i18n: 'Please fill in your address and postal code to display available shipping methods'--><!-- /ko --></div><!-- /ko -->

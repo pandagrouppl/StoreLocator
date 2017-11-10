@@ -22,23 +22,27 @@
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PandaGroup/Quickview": "dev-master",
-        "PandaGroup/ShopByLook": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
         "PandaGroup/CronSchedulerExtender": "dev-master",
+        "PandaGroup/GiftCardExtender": "dev-master",
         "PandaGroup/Westfield": "dev-master",
         "PandaGroup/SlackIntegration": "dev-master",
         "PandaGroup/MagentoSlackMonitor": "dev-master",
+        "PandaGroup/RegionsPatcher": "dev-master",
+        "PandaGroup/CouponExtender": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0.5",
         "amasty/module-special-promo": "^1.2.8",
         "amasty/module-special-promo-pro": "^1.2.2",
-        "amasty/module-gift-card": "^1.0.5",
+        "amasty/module-gift-card": "^1.1",
         "amasty/shopby": "^1.15.2",
         "amasty/quickview": "^1.0.2",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
+        "mirasvit/module-profiler": "^1.0",
+        "PandaGroup/ShopByLook": "dev-master",
         "phpunit/phpunit": "4.1.0",
         "squizlabs/php_codesniffer": "1.5.3",
         "phpmd/phpmd": "@stable",
@@ -143,6 +147,18 @@
         "18": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-magento-slack-monitor.git"
+        },
+        "19": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git"
+        },
+        "20": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git"
+        },
+        "21": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

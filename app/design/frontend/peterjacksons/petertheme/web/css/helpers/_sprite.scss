@@ -1,57 +1,57 @@
 //All changes in this file will be overwritten!
 
 $sprite: (
-    width: 764px,
-    height: 606px,
+    width: 731px,
+    height: 675px,
     image: '../../img/sprite.png'
 );
 
 $retina-sprite: (
-    width: 1528px,
-    height: 1212px,
+    width: 1462px,
+    height: 1350px,
     image: '../../img/sprite2x.png'
 );
 
 $sprite-icon: (
     PJ_logo_black: (
         x: 0px,
-        y: -451px,
+        y: -393px,
         width: 252px,
         height: 20px
     ),
     PJ_logo_white: (
-        x: -512px,
-        y: 0px,
+        x: 0px,
+        y: -443px,
         width: 252px,
         height: 20px
     ),
     abt-arrw-left: (
-        x: -689px,
-        y: -136px,
+        x: -630px,
+        y: -138px,
         width: 29px,
         height: 120px
     ),
     abt-arrw-right: (
-        x: -630px,
-        y: -136px,
+        x: -689px,
+        y: -138px,
         width: 29px,
         height: 120px
     ),
     arrow-down: (
-        x: -421px,
+        x: -420px,
         y: -393px,
         width: 19px,
         height: 10px
     ),
     arrow-left: (
         x: -571px,
-        y: -136px,
+        y: -138px,
         width: 29px,
         height: 121px
     ),
     arrow-right: (
         x: -512px,
-        y: -136px,
+        y: -138px,
         width: 29px,
         height: 121px
     ),
@@ -68,26 +68,14 @@ $sprite-icon: (
         height: 36px
     ),
     blog-share-twt: (
-        x: -65px,
-        y: -501px,
+        x: -400px,
+        y: -246px,
         width: 35px,
         height: 35px
     ),
-    brownline: (
-        x: -412px,
-        y: -338px,
-        width: 25px,
-        height: 24px
-    ),
-    brownstar: (
-        x: -355px,
-        y: -338px,
-        width: 27px,
-        height: 24px
-    ),
     buttonarrowleft: (
-        x: -467px,
-        y: -338px,
+        x: -469px,
+        y: -393px,
         width: 7px,
         height: 9px
     ),
@@ -99,91 +87,91 @@ $sprite-icon: (
     ),
     footer-facebook-white: (
         x: -512px,
-        y: -287px,
+        y: -289px,
         width: 64px,
         height: 64px
     ),
     footer-facebook: (
         x: -606px,
-        y: -287px,
+        y: -289px,
         width: 64px,
         height: 64px
     ),
     footer-instagram-white: (
-        x: -699px,
-        y: -381px,
+        x: -93px,
+        y: -493px,
         width: 63px,
         height: 63px
     ),
     footer-instagram: (
-        x: -606px,
-        y: -381px,
+        x: 0px,
+        y: -493px,
         width: 63px,
         height: 63px
     ),
     footer-mastercard: (
         x: -622px,
-        y: -50px,
+        y: -52px,
         width: 80px,
         height: 29px
     ),
     footer-pintrest: (
-        x: 0px,
-        y: -501px,
+        x: -251px,
+        y: -493px,
         width: 35px,
         height: 35px
     ),
     footer-twitter: (
-        x: -400px,
-        y: -246px,
+        x: -186px,
+        y: -493px,
         width: 35px,
         height: 35px
     ),
     footer-visa: (
         x: -512px,
-        y: -50px,
+        y: -52px,
         width: 80px,
         height: 56px
     ),
     footer-youtube-white: (
-        x: -700px,
-        y: -287px,
+        x: -512px,
+        y: -383px,
         width: 64px,
         height: 64px
     ),
     footer-youtube: (
-        x: -512px,
-        y: -381px,
+        x: -606px,
+        y: -383px,
         width: 64px,
         height: 64px
     ),
     header-account: (
-        x: -732px,
-        y: -50px,
+        x: -700px,
+        y: -383px,
         width: 31px,
         height: 29px
     ),
     header-book: (
-        x: -199px,
-        y: -501px,
+        x: -385px,
+        y: -493px,
         width: 38px,
         height: 31px
     ),
     header-case: (
-        x: -130px,
-        y: -501px,
+        x: -316px,
+        y: -493px,
         width: 39px,
         height: 31px
     ),
     header-star: (
-        x: -313px,
-        y: -393px,
+        x: -516px,
+        y: -493px,
         width: 30px,
         height: 26px
     ),
     header-zoom: (
-        x: -393px,
-        y: -501px,
+        x: 0px,
+        y: -586px,
         width: 27px,
         height: 27px
     ),
@@ -206,70 +194,82 @@ $sprite-icon: (
         height: 47px
     ),
     paypalbutt: (
-        x: 0px,
-        y: -393px,
-        width: 283px,
-        height: 28px
+        x: -512px,
+        y: 0px,
+        width: 219px,
+        height: 22px
     ),
     remove-ico: (
-        x: -373px,
-        y: -393px,
+        x: -412px,
+        y: -338px,
         width: 18px,
         height: 18px
     ),
+    select-arrow-thin: (
+        x: -325px,
+        y: -443px,
+        width: 15px,
+        height: 8px
+    ),
+    select-arrow: (
+        x: -282px,
+        y: -443px,
+        width: 13px,
+        height: 13px
+    ),
     select-arrw: (
-        x: -60px,
-        y: -566px,
+        x: -700px,
+        y: -289px,
         width: 30px,
         height: 38px
     ),
-    selectarrcheckout: (
-        x: 0px,
-        y: -566px,
-        width: 30px,
-        height: 40px
-    ),
     store-locator: (
-        x: -120px,
-        y: -566px,
+        x: 0px,
+        y: -643px,
         width: 19px,
         height: 32px
     ),
     storelocator-directions: (
-        x: -465px,
-        y: -246px,
+        x: -460px,
+        y: -338px,
         width: 16px,
         height: 16px
     ),
     storelocator-email: (
-        x: -748px,
-        y: -136px,
+        x: -282px,
+        y: -393px,
         width: 16px,
         height: 16px
     ),
     storelocator-phone: (
-        x: -748px,
-        y: -182px,
+        x: -328px,
+        y: -393px,
         width: 16px,
         height: 16px
     ),
     storelocator-pin: (
-        x: -748px,
-        y: -228px,
+        x: -374px,
+        y: -393px,
         width: 16px,
         height: 16px
     ),
+    white-input-arrow: (
+        x: -465px,
+        y: -246px,
+        width: 17px,
+        height: 22px
+    ),
     wishlist-icon-dark: (
-        x: -330px,
-        y: -501px,
+        x: -453px,
+        y: -493px,
         width: 33px,
         height: 30px
     ),
     wishlist-icon: (
-        x: -267px,
-        y: -501px,
-        width: 33px,
-        height: 30px
+        x: -355px,
+        y: -338px,
+        width: 27px,
+        height: 25px
     ),
 );
 
