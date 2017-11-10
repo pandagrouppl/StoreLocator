@@ -10,7 +10,7 @@
 
 }
 @media all and (min-width: $bp-header) {
-    .cms-index-defaultindex, .cms-home {
+    .cms-index-defaultindex, .cms-home, .cms-the-new-wave {
         .headers {
             position: fixed;
 
@@ -18,16 +18,31 @@
                 border-bottom: none;
 
                 &-middle__logo > img {
-                    filter: brightness(0);
+                    filter: brightness(100);
+                }
+
+                .ui-corner-all, .ui-menu-item {
+                    span, a, i {
+                        color: white;
+                    }
+                }
+
+                .header-right {
+                    span, a, i {
+                        filter: brightness(100);
+                    }
                 }
 
                 .header-left__account,
-                .header-left__book,
+                .header-left__book {
+                    filter: brightness(100);
+                }
+
                 .header-right__search,
                 .header-right__wishlist,
                 .header-right__minicart  {
                     > a, > a > i {
-                        filter: brightness(0);
+                        filter: brightness(100);
                     }
                 }
             }
@@ -42,10 +57,22 @@
                         filter: none;
                     }
 
-                    .ui-corner-all, .ui-menu-item, .header-left, .header-right {
+                    .ui-corner-all, .ui-menu-item {
+                        span, a, i {
+                            filter: none;
+                            color: black;
+                        }
+                    }
+
+                    .header-right {
                         span, a, i {
                             filter: none;
                         }
+                    }
+
+                    .header-left__account,
+                    .header-left__book {
+                        filter: none;
                     }
                 }
             }
