@@ -1,0 +1,3 @@
+<referenceContainer name="page.top">
+    <referenceBlock name="breadcrumbs" remove="true" />
+</referenceContainer>
