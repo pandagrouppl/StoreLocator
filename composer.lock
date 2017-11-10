@@ -70,14 +70,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "cbc934aebcd359a0abdc2c885e8d1a472608ed57"
+                "reference": "86fe0bf9b8ea18daeeba9076a1c9db841c0567bb"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-11-02 13:59:12"
+            "time": "2017-11-09 16:19:05"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -330,14 +330,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "8aee34ba6b79226454697da6eaf083f384fb9a5c"
+                "reference": "85319a30d23bc7f81733a4486de4d30f6c7568d4"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2017-10-20 06:04:32"
+            "time": "2017-11-03 13:05:49"
         },
         {
             "name": "amasty/base",
@@ -476,10 +476,10 @@
         },
         {
             "name": "amasty/quickview",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.2",
+                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.3",
                 "reference": null,
                 "shasum": null
             },
