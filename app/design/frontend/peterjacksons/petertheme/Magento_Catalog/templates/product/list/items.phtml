@@ -164,7 +164,7 @@ switch ($type = $block->getType()) {
     <?php endif; ?>
     <div class="block-content content" aria-labelledby="block-<?php /* @escapeNotVerified */ echo $class?>-heading">
         <div class="products wrapper grid products-grid products-<?php /* @escapeNotVerified */ echo $type; ?>">
-            <ol class="products-related__list products list items product-items">
+            <ol class="products-related__slider products list items product-items" data-mage-init='{"js/slickInit": {}}'>
                 <?php $iterator = 1; ?>
                 <?php foreach ($items as $_item): ?>
                 <?php $available = ''; ?>
