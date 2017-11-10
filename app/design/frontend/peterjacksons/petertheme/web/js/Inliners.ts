@@ -11,7 +11,7 @@ export class Inliners {
         this._sliders();
         this._toggleFilter();
         this._scrollTopArrow();
-        // this._pdpNav();
+        this._scrollTopPDP();
         this._footerNav();
         this._footerLinksAlteration();
         this._pinHeader();
@@ -68,23 +68,14 @@ export class Inliners {
 
 //    PDP nav
 
-    // private _pdpNav(): void {
-    //     $(".product-main__tab-switch").on("click", function () {
-    //         if ($(window).width() <= 768) {
-    //             if (true === $(this).hasClass("active")) {
-    //                 $(this).removeClass("active").addClass("inactive");
-    //                 let $ul = $(this).next("ul");
-    //                 $ul.stop().slideUp(400, () => {
-    //                     $ul.css("display","");
-    //                 });
-    //
-    //             } else {
-    //                 $(this).removeClass("inactive").addClass("active");
-    //                 $(this).next("ul").stop().slideDown(400);
-    //             }
-    //         }
-    //     });
-    // }
+    private _scrollTopPDP(): void {
+        const arrow = $('.product-main__arrow-scroller');
+
+        arrow.on('click', () => {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    }
 
 
 // FOOTER

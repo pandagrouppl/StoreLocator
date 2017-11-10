@@ -160,6 +160,8 @@
                         </arguments>
                     </block>
                 </block>
+                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::separator.phtml" />
+                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::backtotop.phtml" />
                 <block class="Magento\Catalog\Block\Product\View\Additional" name="product.info.additional"
                        as="product_additional_data"/>
                 <block class="Magento\Cookie\Block\RequireCookie" name="require-cookie"
