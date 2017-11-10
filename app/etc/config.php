@@ -124,6 +124,7 @@ return array (
     'Magento_Wishlist' => 1,
     'MagicToolbox_Magic360' => 1,
     'Mirasvit_Profiler' => 1,
+    'PL_Migs' => 1,
     'PandaGroup_Base' => 1,
     'PandaGroup_Careers' => 1,
     'PandaGroup_Checkout' => 1,
