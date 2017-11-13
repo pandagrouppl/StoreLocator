@@ -11,7 +11,7 @@ const module = (config, element) => {
     const $zopim = $('.catalog-product-view .zopim');
 
     $element.click(() => {
-        const headerCorrection = $header.outerHeight() + $header.position().top * 1.7;
+        const headerCorrection = $header.outerHeight() + $header.position().top * 2;
         $('html, body').animate({
             scrollTop: $('.product-info-main').offset().top - headerCorrection
         }, 1000);
