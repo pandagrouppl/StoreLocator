@@ -1,0 +1,82 @@
+.success-popup {
+    display: none;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__popup {
+        padding: 50px 67px;
+        width: 700px;
+        background-color: white;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        font-size: 22px;
+    }
+
+    &__buttons {
+        margin-top: 46px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            max-width: 260px;
+        }
+    }
+
+    &__continue {
+        @include button-black($bg: white, $color: #333);
+    }
+
+    &__gotocheckout {
+        @include button-black();
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__popup {
+            padding: 50px 30px;
+            width: 90%;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__buttons {
+            flex-wrap: wrap;
+            margin-top: 26px;
+
+            button {
+                max-width: none;
+                flex: 1 1 100%;
+            }
+        }
+
+        &__continue {
+            order: 2;
+            border: none;
+        }
+
+        &__gotocheckout {
+            order: 1;
+        }
+    }
+}

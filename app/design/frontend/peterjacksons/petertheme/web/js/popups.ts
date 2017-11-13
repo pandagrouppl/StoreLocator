@@ -8,6 +8,7 @@ export class Popups {
         this._contactPopup();
         this._successCloseOverlay();
         this._showSearch();
+        this._cartAdd();
     }
 
     _showSearch() {
@@ -64,6 +65,15 @@ export class Popups {
         });
         $('.popup-success, .popup-success__close, .popup-success__content .continue-button').on('click', () => {
             $('.popup-success').hide()
+        });
+    }
+
+    _cartAdd() {
+        $('.success-popup__popup').click((e) => {
+            e.stopPropagation();
+        });
+        $('.success-popup, .success-popup__continue').on('click', () => {
+            $('.success-popup').hide()
         });
     }
 }

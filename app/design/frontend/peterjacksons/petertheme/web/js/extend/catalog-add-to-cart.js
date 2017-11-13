@@ -107,6 +107,23 @@ define([
                 addToCartButton.find('span').text(addToCartButtonTextDefault);
                 addToCartButton.attr('title', addToCartButtonTextDefault);
             }, 1000);
+        },
+
+        enableAddToCartButton: function(form) {
+            var addToCartButtonTextAdded = this.options.addToCartButtonTextAdded || $t('Added');
+            var self = this,
+                addToCartButton = $(form).find(this.options.addToCartButtonSelector);
+
+            addToCartButton.find('span').text(addToCartButtonTextAdded);
+            addToCartButton.attr('title', addToCartButtonTextAdded);
+            $('#success-popup').fadeIn();
+
+            setTimeout(function() {
+                var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to Cart');
+                addToCartButton.removeClass(self.options.addToCartButtonDisabledClass);
+                addToCartButton.find('span').text(addToCartButtonTextDefault);
+                addToCartButton.attr('title', addToCartButtonTextDefault);
+            }, 1000);
         }
     });
 
