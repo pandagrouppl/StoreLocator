@@ -8,6 +8,7 @@ import visibilityCheck = require("js/visibilityCheck")
 const module = (config, element) => {
     const $element = $(element);
     const $header = $('.header');
+    const $zopim = $('.catalog-product-view .zopim');
 
     $element.click(() => {
         const headerCorrection = $header.outerHeight() + $header.position().top * 1.7;
@@ -18,9 +19,16 @@ const module = (config, element) => {
 
     $(window).scroll(() => {
         if (visibilityCheck('#product-addtocart-button')) {
-            $element.fadeOut()
+            $element.fadeOut();
+            $zopim.css({
+                right: '4px', bottom: '12px'
+            })
+
         } else {
-            $element.fadeIn()
+            $element.fadeIn();
+            $zopim.css({
+                right: '4px', bottom: '112px'
+            })
         }
     });
 
