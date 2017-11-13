@@ -63,8 +63,18 @@
             margin-bottom: 30px;
         }
 
+        @media all and (max-width: $sm-breakpoint) {
+            margin-top: 0;
+
+            &--tabs {
+                &#{&} {
+                    padding: 0;
+                }
+            }
+        }
+
         &::after {
-            content: "";
+            content: '';
             clear: both;
             display: table;
         }
@@ -94,18 +104,12 @@
         &:hover {
             color: #666;
         }
-
-
-    }
-
-
-
-    @media all and (max-width: $sm-breakpoint) {
-        //@include expandable-nav();
     }
 
     &__tab {
-        @media all and (min-width: $sm-breakpoint+1) {
+        outline: none;
+
+        @media all and (min-width: $sm-breakpoint + 1) {
             float: left;
             width: auto;
             margin: 0 39px 0 0;
@@ -113,6 +117,29 @@
 
         @media all and (max-width: $sm-breakpoint) {
             @include expandable-nav();
+            padding: 0 27px 11px 27px;
+            box-sizing: border-box;
+
+            &:not(:first-of-type) {
+                border-top: 1px solid #c9c9c9;
+                padding-top: 19px;
+
+                &::before, &::after {
+                    top: 20px;
+                }
+            }
+
+            &:last-of-type {
+                padding-bottom: 0;
+
+                a {
+                    padding-bottom: 0;
+                }
+            }
+
+            &::before, &::after {
+                right: 20px;
+            }
         }
     }
 
@@ -122,14 +149,19 @@
         line-height: 20px;
         color: #333;
 
-        @media all and (min-width: $sm-breakpoint+1) {
+        @media all and (min-width: $sm-breakpoint + 1) {
             float: right;
             margin-left: -100%;
             margin-top: 50px;
         }
 
         @media all and (max-width: $sm-breakpoint) {
-            //max-width: 505px;
+            padding: 0 27px;
+            box-sizing: border-box;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
         }
 
         p {
@@ -137,6 +169,14 @@
         }
     }
 
+    &__arrow-scroller {
+        text-align: center;
+        margin: 25px 0;
+        font-size: 16px;
 
+        @media all and (min-width: $sm-breakpoint + 1) {
+            display: none;
+        }
+    }
 }
 

@@ -8,7 +8,7 @@
 
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml')):?>
-    <section class="product-main__section-wrap">
+    <section class="product-main__section-wrap product-main__section-wrap--tabs">
         <?php $layout = $block->getLayout(); ?>
         <?php // see js/extend/tabs-custom and js/extend/collapisble-animate-override ?>
         <div class="product data items product-main__tabs" data-mage-init='{"js/extend/tabs-custom":{
@@ -25,7 +25,7 @@
                 $alias = $layout->getElementAlias($name);
                 $label = $block->getChildData($alias, 'title');
                 ?>
-                <div class="data item title product-main__tab"
+                <nav class="data item title product-main__tab"
                      aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title"
                      data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>">
                     <a class="data switch product-main__tab-switch"
@@ -35,7 +35,7 @@
                        id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title">
                         <?php /* @escapeNotVerified */ echo $label; ?>
                     </a>
-                </div>
+                </nav>
                 <div class="data item content product-main__description" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content">
                     <?php /* @escapeNotVerified */ echo $html; ?>
                 </div>
