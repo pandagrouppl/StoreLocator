@@ -61,7 +61,7 @@
 
         h1 {
             color: #232323;
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 500;
         }
 
@@ -72,6 +72,10 @@
 
         > div {
             color: #333;
+        }
+
+        span {
+            font-size: 12px !important;
         }
     }
 
