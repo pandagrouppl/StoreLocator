@@ -1,6 +1,7 @@
 .floating-addtocart {
     @media all and (min-width: $sm-breakpoint + 1) {
         display: none !important;
+        opacity: 0 !important;
     }
 
     @media all and (max-width: $sm-breakpoint) {
