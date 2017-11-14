@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "efbfe69a477e9be12cbcf658d06f5e62",
-    "content-hash": "02a65ee93292c5be080376b1397ef6bd",
+    "hash": "af40178189ca66e2c6c7abc1012c6786",
+    "content-hash": "d7a350ec9329965ffab6cdfaa77ad935",
     "packages": [
         {
             "name": "PL/Migs",
@@ -6692,20 +6692,20 @@
         },
         {
             "name": "strategery/magento2-infinitescroll",
-            "version": "0.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "00bc8af13de545d21ae5bcf84198b6350bdbb093"
+                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/00bc8af13de545d21ae5bcf84198b6350bdbb093",
-                "reference": "00bc8af13de545d21ae5bcf84198b6350bdbb093",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f981d59f01118f7c9f6179ed43c039cbcd952bd1",
+                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5.0|~5.6.0|~7.0.0"
+                "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -6716,13 +6716,16 @@
                     "Strategery\\Infinitescroll\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0",
                 "AFL-3.0"
             ],
             "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
-            "time": "2016-07-26 14:09:18"
+            "support": {
+                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
+                "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
+            },
+            "time": "2017-11-08 15:02:39"
         },
         {
             "name": "symfony/console",
@@ -6784,7 +6787,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -6844,7 +6847,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -6893,7 +6896,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.11",
+            "version": "v3.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6942,7 +6945,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -9885,7 +9888,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -9941,7 +9944,7 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
@@ -10004,7 +10007,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.3.11",
+            "version": "v3.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -10053,7 +10056,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.29",
+            "version": "v2.8.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -10146,6 +10149,7 @@
     "stability-flags": {
         "pandagroup/migrationtool": 20,
         "composer/composer": 15,
+        "strategery/magento2-infinitescroll": 20,
         "pandagroup/base": 20,
         "pandagroup/guestwishlist": 20,
         "pandagroup/migration": 20,

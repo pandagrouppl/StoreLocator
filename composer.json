@@ -11,7 +11,7 @@
         "magento/product-community-edition": "2.1.8",
         "PandaGroup/MigrationTool": "dev-master",
         "composer/composer": "@alpha",
-        "strategery/magento2-infinitescroll": "^0.2.0",
+        "strategery/magento2-infinitescroll": "dev-master",
         "oomphinc/composer-installers-extender": "^1.1",
         "PandaGroup/Base": "dev-master",
         "PandaGroup/GuestWishlist": "dev-master",
@@ -31,12 +31,12 @@
         "PandaGroup/RegionsPatcher": "dev-master",
         "PandaGroup/CouponExtender": "dev-master",
         "PL/Migs": "dev-master",
-        "amasty/base": "^1.0.5",
-        "amasty/module-special-promo": "^1.2.8",
-        "amasty/module-special-promo-pro": "^1.2.2",
+        "amasty/base": "^1.0",
+        "amasty/module-special-promo": "^1.2",
+        "amasty/module-special-promo-pro": "^1.2",
         "amasty/module-gift-card": "^1.1",
-        "amasty/shopby": "^1.15.2",
-        "amasty/quickview": "^1.0.2",
+        "amasty/shopby": "^1.15",
+        "amasty/quickview": "^1.0",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master"
     },
@@ -179,6 +179,10 @@
         "wyomindCronScheduler": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git"
+        },
+        "infiniteScroll": {
+            "type": "vcs",
+            "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll"
         }
     },
     "extra": {
