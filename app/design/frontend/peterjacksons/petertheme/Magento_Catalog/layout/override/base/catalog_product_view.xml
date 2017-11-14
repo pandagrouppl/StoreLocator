@@ -98,7 +98,7 @@
                         </container>
                     </container>
                 </container>
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::separator.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="panda.separator1" template="PandaGroup_Catalog::separator.phtml" />
                 <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.details"
                        template="product/view/details.phtml" after="product.info.media">
                     <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description"
@@ -133,8 +133,8 @@
                     </block>
                 </block>
                 <referenceBlock name="reviews.tab" remove="true"/>
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::separator.phtml" />
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::tabs.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="panda.separator2" template="PandaGroup_Catalog::separator.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="panda.tabs" template="PandaGroup_Catalog::tabs.phtml">
                     <block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">
                         <arguments>
                             <argument name="type" xsi:type="string">related</argument>
@@ -160,9 +160,9 @@
                         </arguments>
                     </block>
                 </block>
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::separator.phtml" />
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::backtotop.phtml" />
-                <block class="Magento\Framework\View\Element\Template" template="PandaGroup_Catalog::floatingbutton.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="panda.separator3" template="PandaGroup_Catalog::separator.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="panda.backtotop" template="PandaGroup_Catalog::backtotop.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="panda.floatingbutton" template="PandaGroup_Catalog::floatingbutton.phtml">
                     <block class="Magento\Catalog\Pricing\Render" name="floating.button.price">
                         <arguments>
                             <argument name="price_render" xsi:type="string">product.price.render.default</argument>

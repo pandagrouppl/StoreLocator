@@ -11,14 +11,24 @@
         <css src="mage/gallery/gallery.css"/>
     </head>
     <update handle="catalog_product_opengraph"/>
-    <update handle="page_calendar"/>
     <update handle="catalog_product_view"/>
     <body>
         <referenceBlock name="content">
-                <block class="Magento\Catalog\Block\Product\View" name="quickview.header"
-                template="Light4website_Cms::quickview_header.phtml" before="-"/>
-                <move element="product.info.details" destination="product.info.main" after="product.info.stock.sku" />
+                <block class="Magento\Framework\View\Element\Template" name="quickview.header"
+                       template="Light4website_Cms::quickview_header.phtml" before="-"/>
+
+                <block class="Magento\Catalog\Block\Product\View" name="quickview.footer"
+                       template="Light4website_Cms::quickview_footer.phtml" after="-"/>
         </referenceBlock>
-        <referenceBlock name="product.info.fabric" remove="true" />
+        <referenceBlock name="panda.separator1" remove="true" />
+        <referenceBlock name="panda.separator2" remove="true" />
+        <referenceBlock name="panda.separator3" remove="true" />
+        <referenceBlock name="panda.tabs" remove="true" />
+        <referenceBlock name="panda.backtotop" remove="true" />
+        <referenceBlock name="panda.floatingbutton" remove="true" />
+        <referenceBlock name="product.info.details" remove="true" />
+        <referenceBlock name="prpopuplogin" remove="true" />
+        <referenceBlock name="pslogin_buttons" remove="true" />
+        <referenceBlock name="authentication-popup" remove="true" />
     </body>
 </page>
