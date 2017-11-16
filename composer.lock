@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af40178189ca66e2c6c7abc1012c6786",
-    "content-hash": "d7a350ec9329965ffab6cdfaa77ad935",
+    "hash": "82b477f67e300b725d54cd44eab1c070",
+    "content-hash": "8668e814312f0cffc62437dd83bd378c",
     "packages": [
         {
             "name": "PL/Migs",
@@ -136,14 +136,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "88a42db30d60b150f0be2b2c637af84e072ffab1"
+                "reference": "6ebc7fc664cfeba9f5af1e1ffae3724ed8c1b236"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-10-17 11:06:22"
+            "time": "2017-11-16 09:57:42"
         },
         {
             "name": "PandaGroup/GiftCardExtender",
@@ -341,10 +341,10 @@
         },
         {
             "name": "amasty/base",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.0.6",
+                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.0.7",
                 "reference": null,
                 "shasum": null
             },
