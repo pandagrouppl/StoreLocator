@@ -9,7 +9,9 @@ var config = {
     "map": {
         "*": {
             "catalogAddToCart": "js/extend/catalog-add-to-cart",
-            "configurable": "js/extend/configurable-extend"
+            "configurable": "js/extend/configurable-extend",
+            "Amasty_Quickview/js/amquickview-vendor": "Amasty_Quickview/js/amquickview",
+            "Amasty_Quickview/js/amquickview": "js/extend/amquickview"
         }
     }
 };
