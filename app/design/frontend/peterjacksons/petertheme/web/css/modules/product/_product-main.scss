@@ -1,3 +1,9 @@
+@media all and (max-width: $sm-breakpoint) {
+    .catalog-product-view .zopim {
+        display: none;
+    }
+}
+
 .product-main {
     @include container();
 
