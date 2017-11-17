@@ -41,6 +41,7 @@
         "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
+        "salesforce-mc/fuel-sdk-php": "^1.1",
         "mirasvit/module-profiler": "^1.0",
         "PandaGroup/ShopByLook": "dev-master",
         "phpunit/phpunit": "4.1.0",
