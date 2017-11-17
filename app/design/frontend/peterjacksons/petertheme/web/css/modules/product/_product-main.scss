@@ -121,7 +121,7 @@
         }
 
         @media all and (max-width: $sm-breakpoint) {
-            @include expandable-nav();
+            @include expandable-nav($displayMinus: false);
             padding: 0 27px 11px 27px;
             box-sizing: border-box;
 
