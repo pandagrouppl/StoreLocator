@@ -1,15 +1,17 @@
 .paypal {
 
     &__button {
-        @include button-black($bg: white, $bghov: #eeeeee, $height: 55px, $margin-top: 11px);
+        @include button-black($bg: white, $bghov: white, $border: 1px solid #d0d0d0, $height: 55px, $margin-top: 11px);
 
         &:hover {
             cursor: pointer;
+            border: 1px solid black;
         }
     }
 
     &__image {
         @include sprite(paypalbutt);
         display: block;
+        margin: 0 auto;
     }
 }

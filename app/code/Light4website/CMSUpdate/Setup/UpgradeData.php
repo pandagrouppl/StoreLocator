@@ -458,19 +458,51 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block shipping-info-bar was installed/updated\n";
         $setup->endSetup();
 
-        echo "Finish instalation/updating pages and blocks";
-
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('home');
         $content = file_get_contents('pages/home.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/home.xml', FILE_USE_INCLUDE_PATH);
         $page->setTitle('Home')
             ->setIdentifier('home')
             ->setIsActive(true)
             ->setPageLayout('1column')
+            ->setLayoutUpdateXml($layoutContent)
             ->setStores(array(0))
             ->setContent($content)
             ->save();
         echo "Page home was installed/updated\n";
         $setup->endSetup();
+
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('sartorial-ninja');
+        $content = file_get_contents('pages/sartorial-ninja.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/sartorial-ninja.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Sartorial Ninja')
+            ->setIdentifier('sartorial-ninja')
+            ->setIsActive(true)
+            ->setPageLayout('1column')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page sartorial ninja was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('the-new-wave');
+        $content = file_get_contents('pages/the-new-wave.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/the-new-wave.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('The New Wave')
+            ->setIdentifier('the-new-wave')
+            ->setIsActive(true)
+            ->setPageLayout('1column')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page the new wave was installed/updated\n";
+        $setup->endSetup();
+
+        echo "Finish instalation/updating pages and blocks";
     }
 }

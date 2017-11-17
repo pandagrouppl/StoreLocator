@@ -5,6 +5,14 @@ body {
     font-size: 12px;
 }
 
+* {
+    outline: none;
+}
+
+.page-wrapper {
+    overflow: hidden;
+}
+
 .no-display {
     display: none;
 }

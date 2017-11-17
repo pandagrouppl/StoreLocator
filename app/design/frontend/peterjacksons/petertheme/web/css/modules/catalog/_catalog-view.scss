@@ -8,12 +8,13 @@
     }
 
     &__label {
-        margin-right: 5px;
+        color: #333333;
+        font-size: 15px;
     }
 
     &__row {
         display: flex;
-        margin-right: 10px;
+        margin-left: 15px;
     }
 
     &__column {
@@ -21,7 +22,7 @@
         height: 14px;
         display: block;
         margin-right: 2px;
-        border: 1px solid black;
+        border: 0.25px solid black;
 
         &--active {
             background: black;
@@ -29,6 +30,7 @@
 
         &--inactive {
             background: white;
+            border-color: #b9b9b9;
         }
     }
 }

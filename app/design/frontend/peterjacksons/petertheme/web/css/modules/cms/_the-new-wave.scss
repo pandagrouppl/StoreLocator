@@ -1,0 +1,123 @@
+.new-wave-banner {
+    background-image: url('../../img/assets/the-new-wave/ss17-bg-01.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 56vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__top {
+        text-align: center;
+
+        img {
+            width: 65%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.new-wave-content {
+    position: relative;
+    padding: 50px 0 80px 0;
+
+    &__wrapper {
+        max-width: 900px;
+        margin: 0 auto 0 auto;
+        padding: 0 9% 0 9%;
+
+        p {
+            text-align: center;
+            font-weight: 300;
+            font-size: 16.5px;
+            line-height: 150%;
+            margin: 16px 0 16px 0;
+            color: #222;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__scroll-down {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.1s ease;
+        bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            bottom: 20px;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 3.5em;
+            height: 3.5em;
+            border-top: 0.2em solid black;
+            border-right: 0.2em solid black;
+            transform: rotate(135deg);
+        }
+    }
+}
+
+.new-wave-video {
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.new-wave-posters {
+    max-width: 84%;
+    margin: 0 auto 0 auto;
+    padding: 50px 0;
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 54%;
+    }
+
+    &__right-side {
+        display: flex;
+        flex-direction: column;
+        padding: 0 9% 0 6%;
+
+        h1 {
+            text-transform: uppercase;
+            color: #000;
+            font-size: 35px;
+            letter-spacing: 9px;
+            font-weight: 400;
+            transform: scaleY(1.1);
+
+            strong {
+                font-size: 55px;
+                display: block;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #f7941d;
+                margin-top: 10px;
+
+            }
+        }
+    }
+}

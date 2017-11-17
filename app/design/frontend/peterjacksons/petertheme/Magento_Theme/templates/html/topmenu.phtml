@@ -18,7 +18,7 @@
 <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
 
 <nav class="header-middle__navigation" data-action="navigation">
-    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "delay":0, "position":{"my":"left top","at":"left bottom"}}}'>
         <?php /* @escapeNotVerified */ echo $_menu; ?>
         <?php /* @escapeNotVerified */ echo $block->getChildHtml(); ?>
     </ul>

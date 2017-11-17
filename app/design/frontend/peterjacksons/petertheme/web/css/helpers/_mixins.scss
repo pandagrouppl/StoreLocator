@@ -1,5 +1,5 @@
 @mixin container() {
-    max-width: $pdp-container;
+    max-width: $container-width;
     margin: auto;
 }
 
@@ -134,17 +134,17 @@
 }
 
 
-@mixin button-black($bg: #363636, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark, $height: 50px, $margin-top: 15px, $font-size: 16px) {
-    padding: 10px 20px;
+@mixin button-black($bg: #363636, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark, $height: 50px, $margin-top: 15px, $font-size: 16px, $color: white, $padding: 10px 20px) {
+    padding: $padding;
     font-size: $font-size;
     font-weight: bold;
-    border-radius: 3px;
+    border-radius: 1px;
     transition: background 0.3s, color 0.3s ease-in-out;
     margin-top: $margin-top;
     letter-spacing: 0;
     cursor: pointer;
     background: $bg;
-    color: white;
+    color: $color;
     border: $border;
     width: 100%;
     height: $height;
@@ -155,3 +155,79 @@
     }
 }
 
+@mixin expandable-nav() {
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #666;
+
+    &::before,
+    &::after {
+        content: '+';
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 36px;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: '—';
+        opacity: 0;
+        font-size: 28px;
+    }
+
+    &.active {
+
+        &::before {
+            animation: changeSign2 0.2s linear 0.2s forwards alternate;
+        }
+
+        &::after {
+            animation: changeSign 0.4s linear forwards alternate;
+        }
+    }
+
+    &.inactive {
+
+        &::before {
+            animation: changeSign 0.2s linear 0.2s forwards alternate;
+        }
+
+        &::after {
+            animation: changeSign2 0.4s linear forwards alternate;
+        }
+    }
+
+    @at-root {
+        @keyframes changeSign {
+
+            0% {
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes changeSign2 {
+
+            0% {
+                opacity: 0;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,264 @@
+.sartorial-ninja-banner {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.sartorial-ninja-content {
+    width: 1200px;
+    max-width: 100%;
+    min-height: 400px;
+    position: relative;
+    top: -185px;
+    margin: 0 auto -90px auto;
+    background: white;
+
+    &__header {
+        min-height: 100px;
+        padding: 60px 110px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin: 0 0 20px 0;
+    }
+
+    &__description {
+        font-size: 16px;
+        margin: 10px 0;
+        font-weight: 600;
+        padding: 0 15%;
+        line-height: 160%;
+    }
+
+    &__subtext {
+        font-size: 16px;
+        font-weight: 300;
+        margin: 10px 0;
+        line-height: 160%;
+        color: #222;
+    }
+
+    &__photos {
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__quote {
+        padding: 50px 20px;
+        text-align: center;
+
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 130%;
+            color: #000;
+            font-size: 32px;
+            text-align: center;
+            font-weight: 500;
+            font-style: italic;
+        }
+    }
+
+    &__questions {
+        display: flex;
+        font-size: 17px;
+        line-height: 160%;
+        color: #222;
+        letter-spacing: 1px;
+
+        strong {
+            font-weight: 500;
+        }
+
+        &--left-box {
+            padding-right: 50px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 47%;
+        }
+
+        &--right-box {
+            padding-left: 50px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 50%;
+        }
+
+        p {
+            &:nth-child(2n+1) {
+                padding-top: 10px;
+                margin: 10px 0;
+                font-weight: 500;
+            }
+
+            &:nth-child(2n) {
+                font-weight: 300;
+                margin: 10px 0;
+            }
+        }
+
+        &--photo {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &--left-side {
+        flex-direction: row-reverse;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .sartorial-ninja-content {
+        max-width: 90%;
+        top: -100px;
+
+        &__header {
+            padding: 55px 80px 50px 80px;
+        }
+
+        &__photos {
+            img {
+                max-width: 98%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .sartorial-ninja-content {
+        &__questions {
+            font-size: 15px;
+            line-height: 140%;
+
+            p {
+                &:nth-child(2n+1) {
+                    padding-top: 5px;
+                }
+
+                &:nth-child(2n) {
+                    font-weight: 300;
+                    margin: 10px 0;
+                }
+            }
+
+            &--left-box {
+                padding-right: 30px;
+            }
+
+            &--right-box {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .sartorial-ninja-content {
+        &__header {
+            padding: 45px 50px 50px 50px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        &__description {
+            font-size: 15px;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        &__subtext {
+            font-size: 15px;
+        }
+
+        &__quote {
+            padding: 40px 20px;
+
+            p {
+                font-size: 26px;
+            }
+        }
+
+        &__questions {
+            line-height: 120%;
+
+            &--left-box {
+                padding-right: 30px;
+            }
+
+            &--right-box {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .sartorial-ninja-content {
+        &__header {
+            padding: 45px 40px 40px 40px;
+        }
+
+        &__title {
+            font-size: 35px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+
+        &__subtext {
+            font-size: 14px;
+        }
+
+        &__questions {
+            flex-wrap: wrap;
+            font-size: 14px;
+            line-height: 160%;
+
+            &--left-box {
+                padding-right: 0;
+                flex-grow: 1;
+            }
+
+            &--right-box {
+                padding-left: 0;
+                flex-grow: 1;
+                order: 2;
+            }
+
+            &--photo {
+                margin: 10px 0;
+            }
+        }
+
+        &__quote {
+            padding: 30px 20px;
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,12 +1,25 @@
-.product-main {
+@media all and (max-width: $sm-breakpoint) {
+    .catalog-product-view .zopim {
+        display: none !important;
+    }
+}
 
-    &__wrapper {
+.product-main {
+    @include container();
+
+    @media all and (max-width: $sm-breakpoint) {
+        > section {
+            padding: 0 27px;
+        }
+    }
+
+    &__gal-act-wrapper {
         display: flex;
         justify-content: space-between;
-        padding: 30px 0 88px 0;
-        @include container();
+        padding: 30px 0 11px 0;
 
-        @media all and (max-width: $bp-header) {
+
+        @media all and (max-width: $sm-breakpoint) {
             flex-direction: column;
             padding: 0 0 88px 0;
         }
@@ -19,6 +32,10 @@
             position: fixed;
             height: 550px;
             overflow-y: auto;
+        }
+
+        div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap > div.fotorama__stage > div.fotorama__arr {
+            display: block !important;
         }
     }
 
@@ -38,11 +55,132 @@
         margin-left: 20px;
         flex-basis: 348px;
 
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: $sm-breakpoint) {
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        }
+    }
+
+    &__section-wrap {
+        max-width: 100%;
+        margin-top: 54px;
+
+        &--ending {
+            margin-bottom: 30px;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            margin-top: 0;
+
+            &--tabs {
+                &#{&} {
+                    padding: 0;
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+    }
+
+    &__tabs {
+        position: relative;
+
+        .active .product-main__tab-switch {
+            font-weight: 600;
+            border-bottom: 1px solid #030303;
+
+            @media all and (max-width: $sm-breakpoint) {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__tab-switch {
+        font-size: 19px;
+        color: #030303;
+        display: block;
+        letter-spacing: 0.055em;
+        padding-bottom: 6px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #666;
+        }
+    }
+
+    &__tab {
+        outline: none;
+
+        @media all and (min-width: $sm-breakpoint + 1) {
+            float: left;
+            width: auto;
+            margin: 0 39px 0 0;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            @include expandable-nav();
+            padding: 0 27px 11px 27px;
+            box-sizing: border-box;
+
+            &:not(:first-of-type) {
+                border-top: 1px solid #c9c9c9;
+                padding-top: 19px;
+
+                &::before, &::after {
+                    top: 20px;
+                }
+            }
+
+            &:last-of-type {
+                padding-bottom: 0;
+
+                a {
+                    padding-bottom: 0;
+                }
+            }
+
+            &::before, &::after {
+                right: 20px;
+            }
+        }
+    }
+
+    &__description {
+        width: 100%;
+        font-size: 13px;
+        line-height: 20px;
+        color: #333;
+
+        @media all and (min-width: $sm-breakpoint + 1) {
+            float: right;
+            margin-left: -100%;
+            margin-top: 50px;
+        }
+
+        @media all and (max-width: $sm-breakpoint) {
+            padding: 0 27px;
+            box-sizing: border-box;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__arrow-scroller {
+        text-align: center;
+        margin: 25px 0;
+        font-size: 16px;
+
+        @media all and (min-width: $sm-breakpoint + 1) {
+            display: none;
         }
     }
 }

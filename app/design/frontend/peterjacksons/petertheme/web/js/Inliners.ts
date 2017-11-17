@@ -11,6 +11,7 @@ export class Inliners {
         this._sliders();
         this._toggleFilter();
         this._scrollTopArrow();
+        this._scrollTopPDP();
         this._footerNav();
         this._footerLinksAlteration();
         this._pinHeader();
@@ -65,6 +66,18 @@ export class Inliners {
         });
     }
 
+//    PDP nav
+
+    private _scrollTopPDP(): void {
+        const arrow = $('.product-main__arrow-scroller');
+
+        arrow.on('click', () => {
+            $(window).scrollTop('0');
+            return false;
+        });
+    }
+
+
 // FOOTER
 
     // display scrolltop after 900 px
@@ -102,6 +115,7 @@ export class Inliners {
             }
         });
     }
+
     // prevents header containers move due to bold on hover
     private _footerLinksAlteration(): void {
         $(".page-footer__linkbox a").map((i , v) => {

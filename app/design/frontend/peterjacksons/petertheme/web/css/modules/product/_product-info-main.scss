@@ -11,6 +11,10 @@
             font-weight: normal;
             margin: 100px 0 0 0;
             width: 100%;
+
+            @media all and (max-width: $sm-breakpoint) {
+                margin: 46px 0 0 0;
+            }
         }
     }
 
@@ -40,11 +44,6 @@
         .price-box {
             font-size: 27px;
         }
-
-        @media all and (max-width: $sm-breakpoint) {
-            border-bottom: 1px solid #ddd;
-            padding: 0 0 26px 0;
-        }
     }
 
     &__wishlist-star {
@@ -56,8 +55,9 @@
         font-size: 17px;
         cursor: pointer;
 
-        @media all and (max-width: $xs-breakpoint) {
+        @media all and (max-width: $sm-breakpoint) {
             margin-left: 0;
+            text-decoration: underline;
         }
     }
 
@@ -67,10 +67,44 @@
         flex-wrap: wrap;
         margin-bottom: 10px;
         align-items: center;
+
+        @media all and (max-width: $sm-breakpoint) {
+            margin-left: 0;
+            flex-wrap: nowrap;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__fieldset {
+        @media all and (max-width: $sm-breakpoint) {
+            flex: 1;
+        }
+    }
+
+    &__qty-select {
+        @media all and (max-width: $sm-breakpoint) {
+            display: none;
+        }
     }
 
     &__add-to-cart {
         @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+    }
+
+    &__free-delivery {
+        margin: 34px 0 0 3px;
+        letter-spacing: 0.05em;
+
+        strong {
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__free-delivery-trigger {
+        text-decoration: underline;
+        cursor: pointer;
     }
 
 }

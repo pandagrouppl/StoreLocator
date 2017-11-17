@@ -1,0 +1,17 @@
+.separator {
+    position: relative;
+    width: 100%;
+
+    &__line {
+        margin: 20px -10000px;
+        border: none;
+        border-bottom: 1px solid #c9c9c9;
+
+    }
+}
+
+.catalog-product-view .product-main > .separator:nth-of-type(3) {
+    @media all and (min-width: $sm-breakpoint + 1) {
+        display: none;
+    }
+}

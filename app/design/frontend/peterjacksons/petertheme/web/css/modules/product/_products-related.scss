@@ -1,69 +1,61 @@
 .products-related {
 
-    &__title {
-        width: 100%;
-        font-family: league_gothic;
-        font-size: 34px;
-        text-transform: uppercase;
-        text-align: center;
-        border-top: 1px solid $grey;
+    &__slider {
+        margin-top: 53px;
+        max-height: 400px;
 
-        strong {
-            display: inline-block;
-            padding: 25px 0;
-            border-top: 3px solid $black;
-            font-weight: 500;
+        .slick-arrow {
+            background: url('../../mage/gallery/gallery.png') no-repeat;
+            position: absolute;
+            top: 23%;
+            height: 80px;
+            width: 30px;
+            z-index: 1;
+            transform: scale(0.7);
         }
 
-        @media all and (max-width: $sm-breakpoint) {
-            max-width: 672px;
-            width: 100%;
+        .slick-prev {
+            background-position: -108px -80px;
+        }
+
+        .slick-next {
+            background-position: -185px -80px;
+            right: 0;
+        }
+
+        .slick-track {
+            margin: 0 auto;
+        }
+
+        .product-image-photo {
+            margin: 0 auto;
         }
     }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        @media all and (max-width: $sm-breakpoint) {
-            max-width: 672px;
-            width: 100%;
-        }
-
-        li {
-            margin: 0 2% 20px 2%;
-        }
-
-        .product-item-details {
-            max-width: 100%;
-            width: 218px;
-            text-align: center;
-        }
+    &__details {
+        max-width: 100%;
+        width: 218px;
+        text-align: center;
+        margin: 0 auto;
     }
 
     &__item {
-        margin: 0 2% 20px 2%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 0 5px 20px 5px;
     }
 
-    &__img-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &__wrapper {
+        text-align: center;
     }
 
     &__name {
         color: $black;
-        text-transform: uppercase;
+        font-weight: normal;
         font-size: 17px;
-        margin: 10px 0;
+        margin: 21px 0 4px 0;
         display: block;
 
         &:hover {
-            color: $grey;
+            color: $grey-dark;
         }
     }
 
@@ -72,7 +64,7 @@
         justify-content: center;
 
         .price {
-            font-size: 17px;
+            font-size: 15px;
             font-weight: 300;
         }
     }

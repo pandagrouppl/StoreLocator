@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Theme\Block\Html\Title
+ */
+$title = '';
+if (trim($block->getPageHeading())) {
+    $title = '<span' .  $block->getAddBaseAttribute() . '>' . $block->escapeHtml($block->getPageHeading()) . '</span>';
+}
+?>
+<div class="success-popup" id="success-popup">
+    <div class="success-popup__overlay">
+        <div class="success-popup__popup">
+            <h1 class="success-popup__title"><?php /* @escapeNotVerified */ echo $title ?></h1>
+            <span class="success-popup__text">Successfully added to your cart</span>
+            <div class="success-popup__buttons">
+                <button class="success-popup__continue">Continue Shopping</button>
+                <button class="success-popup__gotocheckout" onclick="location = ('/checkout')">Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+

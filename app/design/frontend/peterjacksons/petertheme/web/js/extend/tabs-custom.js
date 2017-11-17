@@ -6,12 +6,18 @@ define([
     "jquery",
     "jquery/ui",
     "mage/mage",
-    "mage/collapsible",
+    "js/extend/collapsible-animate-override",
     "mage/tabs"
 ], function($){
     "use strict";
 
     $.widget("light4website.tabs", $.mage.tabs, {
+
+
+        /**
+         * Add support for tab closing tab when clicking on (-)
+         * @private
+         */
 
         _create : function () {
             if((typeof this.options.disabled) === "string") {
@@ -19,10 +25,7 @@ define([
                     return parseInt(item, 10);
                 });
             }
-
             this._processPanels();
-
-            this._mobileToggle();
 
             this._handleDeepLinking();
 
@@ -31,20 +34,35 @@ define([
             this._closeOthers();
 
             this._bind();
+
+            /**
+             * Trying to implement tab hiding on (-) clicking
+             */
+            // var self = this;
+            // var tabIds = Object.keys(this.element["0"].children).filter(v => v.indexOf('tab-label') !== -1);
+            // var tabsIds = tabIds.map(v => '#' + v.replace(/\./g, '\\.'));
+            // $(tabsIds.join(', ')).click(function(e) {
+            //     console.log(e.currentTarget.className);
+            //     console.log(e.currentTarget.className.indexOf('active'));
+            //     if (e.currentTarget.className.indexOf('active') !== -1) {
+            //         this.deactivate();
+            //     }
+            // });
+
         },
 
+
         /**
-         * Move description to align proper on mobile
+         * Adding callback to close others tabs when one gets opened. Modified to ude deactivate instead of force (no hide animation)
          * @private
          */
-        _mobileToggle: function() {
-            if(window.innerWidth < 560) {
-                $.each(this.collapsibles, function() {
-                    var tab_id = this.getAttribute('aria-controls');
-                    var tab_source = document.getElementById(tab_id);
-                    $(this).append(tab_source);
+        _closeOthers: function() {
+            var self = this;
+            $.each(this.collapsibles, function() {
+                $(this).on("beforeOpen", function () {
+                    self.collapsibles.not(this).collapsible("deactivate");
                 });
-            }
+            });
         }
     });
 

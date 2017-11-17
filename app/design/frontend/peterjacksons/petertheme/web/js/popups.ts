@@ -8,6 +8,7 @@ export class Popups {
         this._contactPopup();
         this._successCloseOverlay();
         this._showSearch();
+        this._cartAdd();
     }
 
     _showSearch() {
@@ -35,7 +36,7 @@ export class Popups {
     }
 
     _shippingPopup() {
-        $(' .shipping-returns-click ').on(' click ', () => {
+        $(' .shipping-returns-click, .product-info-main__free-delivery-trigger ').on(' click ', () => {
             $(' .overlay__overlay-shipping ').toggle();
         });
         $(' .overlay__close, .overlay__overlay ').on(' click ', () => {
@@ -64,6 +65,15 @@ export class Popups {
         });
         $('.popup-success, .popup-success__close, .popup-success__content .continue-button').on('click', () => {
             $('.popup-success').hide()
+        });
+    }
+
+    _cartAdd() {
+        $('.success-popup__popup').click((e) => {
+            e.stopPropagation();
+        });
+        $('.success-popup, .success-popup__continue').on('click', () => {
+            $('.success-popup').hide()
         });
     }
 }

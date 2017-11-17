@@ -5,7 +5,7 @@
         border: 1px solid #d0d0d0;
         border-radius: 1px;
         font-size: 16px;
-        color: #464646;
+        color: #252525;
         padding-left: 17px;
         letter-spacing: 1px;
         -webkit-appearance: none;
@@ -16,24 +16,25 @@
 
     &__select {
         background: $white;
-        height: 38px;
-        border: 1px solid #959494;
-        border-radius: 3px;
+        height: 26px;
+        border: 1px solid #b9b9b9;
         width: 158px;
-        text-transform: uppercase;
-        font-size: 14px;
+        font-size: 13px;
         color: #464646;
         padding-left: 8px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-family: Roboto, sans-serif;
     }
 
     &__arrow {
-        @include sprite(select-arrw);
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        pointer-events: none;
-        z-index: 10;
+        @include form-select-arrow();
+        //display: block;
+        //position: absolute;
+        //top: 0;
+        //right: 0;
+        //pointer-events: none;
+        //z-index: 10;
     }
 
     &__wide-arrow {
@@ -45,14 +46,11 @@
         z-index: 0;
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         &--Size {
             width: 153px;
             margin-right: 13px;
-
-            @media all and (max-width: $xs-breakpoint) {
-                margin-bottom: 10px;
-            }
         }
 
         &--qty {

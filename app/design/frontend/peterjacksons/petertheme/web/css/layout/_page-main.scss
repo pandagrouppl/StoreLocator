@@ -1,6 +1,6 @@
 .page-main {
     max-width: 1080px;
-    margin: auto auto 0px auto;
+    margin: auto auto 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
 
@@ -39,9 +39,35 @@
     }
 }
 
+.catalog-product-view .page-main {
+    @media all and (max-width: $sm-breakpoint) {
+        padding: 0;
+    }
+}
+
 body[class~='checkout-index-index'] {
     .page-main {
         max-width: 1260px;
     }
 }
 
+body[class~='cms-index-index'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+body[class~='cms-sartorial-ninja'] {
+    .page-main {
+        max-width: 1260px;
+        padding: 0;
+    }
+}
+
+body[class~='cms-the-new-wave'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+}

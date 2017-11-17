@@ -17,7 +17,7 @@ if ($block->hasRequiredOptions()) {
         <?php echo $block->getChildHtml('', true);?>
     </div>
     <?php if ($block->shouldRenderQuantity()): ?>
-        <div class="control select__wrapper select__wrapper--qty">
+        <div class="product-info-main__qty-select control select__wrapper select__wrapper--qty">
             <figure class="select__wide-arrow"></figure>
             <select class="select__pdp-select" type="number" name="qty" id="qty"
                     title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
@@ -27,9 +27,10 @@ if ($block->hasRequiredOptions()) {
                 <?php endfor; ?>
             </select>
         </div>
-        <div class="product-info-main__size-chart">
-            <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
-        </div>
     <?php endif; ?>
+    <div class="product-info-main__size-chart">
+        <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
+    </div>
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('size-chart')->toHtml();?>
 </div>
 

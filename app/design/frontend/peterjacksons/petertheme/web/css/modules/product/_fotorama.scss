@@ -1,0 +1,17 @@
+.product-main .product-main__gal-act-wrapper div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap {
+
+    .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,
+    .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:focus {
+        opacity: 0;
+    }
+
+    .fotorama__stage:before, .fotorama__nav:before, .fotorama__stage:after, .fotorama__nav:after {
+        display: none;
+    }
+
+    > div.fotorama__stage > div.fotorama__arr {
+        opacity: 1;
+        transform: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
