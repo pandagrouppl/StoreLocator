@@ -72,7 +72,7 @@ export class Inliners {
         const arrow = $('.product-main__arrow-scroller');
 
         arrow.on('click', () => {
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            $(window).scrollTop('0');
             return false;
         });
     }

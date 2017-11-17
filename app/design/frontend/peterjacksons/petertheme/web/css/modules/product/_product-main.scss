@@ -35,8 +35,7 @@
         }
 
         div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap > div.fotorama__stage > div.fotorama__arr {
-            //opacity: 1;
-            //transform: none;
+            display: block !important;
         }
     }
 

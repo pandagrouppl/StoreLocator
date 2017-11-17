@@ -236,7 +236,8 @@
                 </var>
                 <var name="options">
                     <var name="options">
-                        <var name="nav">dots</var>
+                        <!--<var name="nav">dots</var>-->
+                        <var name="arrows">true</var>
                     </var>
                 </var>
             </var>

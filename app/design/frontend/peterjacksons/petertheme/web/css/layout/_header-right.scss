@@ -26,10 +26,6 @@
         font-size: 18px;
         display: block;
         padding: 5px;
-
-        @media all and (max-width: $bp-header) {
-            display: none;
-        }
     }
 
     &__wishlist {
