@@ -30,6 +30,7 @@
         "PandaGroup/MagentoSlackMonitor": "dev-master",
         "PandaGroup/RegionsPatcher": "dev-master",
         "PandaGroup/CouponExtender": "dev-master",
+        "PandaGroup/SortByExtender": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0",
         "amasty/module-special-promo": "^1.2",
@@ -160,6 +161,10 @@
         "21": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git"
+        },
+        "22": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-sort-by-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
