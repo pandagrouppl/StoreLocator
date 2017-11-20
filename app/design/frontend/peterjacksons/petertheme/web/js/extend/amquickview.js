@@ -30,7 +30,6 @@ define([
             if (!productId) return;
 
             var url = this.options['url'] +"?id=" + productId;
-            console.log($.fancybox.open);
             $.fancybox.open({
                 customerData: this.customerData,
                 src    : url,
@@ -38,7 +37,8 @@ define([
                 opts   : {
                     iframe : {
                         css : {
-                            width : '900px'
+                            width : '900px',
+                            height: '669px'
                         }
                     },
                     afterClose : function() {

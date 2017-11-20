@@ -1,0 +1,59 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product view template
+ *
+ * @see \Magento\Catalog\Block\Product\View\Description
+ */
+?>
+<?php
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_product = $block->getProduct();
+$_call = $block->getAtCall();
+$_code = $block->getAtCode();
+$_className = $block->getCssClass();
+$_attributeLabel = $block->getAtLabel();
+$_attributeType = $block->getAtType();
+$_attributeAddAttribute = $block->getAddAttribute();
+
+if ($_attributeLabel && $_attributeLabel == 'default') {
+    $_attributeLabel = $_product->getResource()->getAttribute($_code)->getFrontendLabel();
+}
+if ($_attributeType && $_attributeType == 'text') {
+    $_attributeValue = ($_helper->productAttribute($_product, $_product->$_call(), $_code)) ? $_product->getAttributeText($_code) : '';
+} else {
+    $_attributeValue = $_helper->productAttribute($_product, $_product->$_call(), $_code);
+}
+
+?>
+
+<?php if ($_attributeValue): ?>
+<div class="product attribute <?php /* @escapeNotVerified */ echo $_className?>">
+    <?php if ($_attributeLabel != 'none'): ?><strong class="type"><?php /* @escapeNotVerified */ echo $_attributeLabel?></strong><?php endif; ?>
+    <div class="value" <?php /* @escapeNotVerified */ echo $_attributeAddAttribute;?>><?php /* @escapeNotVerified */ echo $_attributeValue; ?></div>
+    <?php if ($_attributeType === 'detailed_info'): ?>
+<!--        todo fix it
+
+ - Finishing Quickview layout
+- Investigation of m2.peterjacksons issues - autocomplete error in console (found out it's Magento core bug), 'http://' request bug - somehow related to deployment process, it fixed itself after another deploy
+- Applying fixes to Product Page - hiding "Messages", "Scroll Top", investigation how to effectively disable  minicart on mobile view
+- Consultations about ways to develop new "1/2 columns" switch on mobile page
+
+
+ -->
+        <?php
+        $productImageAttr = $_product->getCustomAttribute( 'description_img' );
+        $productImage = $this->helper('Magento\Catalog\Helper\Image')
+            ->init($_product, 'description_img')
+            ->setImageFile($productImageAttr->getValue());
+        ?>
+        <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
+    <?php endif; ?>
+</div>
+<?php endif; ?>

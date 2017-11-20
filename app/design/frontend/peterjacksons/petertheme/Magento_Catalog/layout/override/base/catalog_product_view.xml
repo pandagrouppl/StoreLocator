@@ -107,16 +107,18 @@
                             <argument name="at_call" xsi:type="string">getDescription</argument>
                             <argument name="at_code" xsi:type="string">description</argument>
                             <argument name="css_class" xsi:type="string">description</argument>
+                            <argument name="at_type" xsi:type="string">detailed_info</argument>
                             <argument name="at_label" xsi:type="string">none</argument>
                             <argument name="title" translate="true" xsi:type="string">Description</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.fabric"
+                    <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.fit"
                            template="product/view/attribute.phtml" group="detailed_info">
                         <arguments>
                             <argument name="at_call" xsi:type="string">getFit</argument>
                             <argument name="at_code" xsi:type="string">fit</argument>
                             <argument name="css_class" xsi:type="string">fit</argument>
+                            <argument name="at_type" xsi:type="string">detailed_info</argument>
                             <argument name="at_label" xsi:type="string">none</argument>
                             <argument name="title" translate="true" xsi:type="string">Garment Fit</argument>
                         </arguments>
@@ -127,6 +129,7 @@
                             <argument name="at_call" xsi:type="string">getFabric</argument>
                             <argument name="at_code" xsi:type="string">fabric</argument>
                             <argument name="css_class" xsi:type="string">fabric</argument>
+                            <argument name="at_type" xsi:type="string">detailed_info</argument>
                             <argument name="at_label" xsi:type="string">none</argument>
                             <argument name="title" translate="true" xsi:type="string">Fabric &amp; Care</argument>
                         </arguments>
