@@ -1,7 +1,6 @@
 var config = {
     deps: [
-        "js/main",
-        'js/youtube'
+        "js/main"
     ],
     paths: {
         slick: 'js/vendor/slick.min'
@@ -15,6 +14,3 @@ var config = {
         }
     }
 };
-
-
-

@@ -1,3 +1,8 @@
+/**
+ * Inits youtube player with popup, requires use of block {{widget type="Magento\Cms\Block\Widget\Block" img_path="about-us/box3-01.jpg" description_bold="Sheep Shape: " description="From Raw Material" iframe_url="https://www.youtube.com/embed/ipI1jXlv6Wk?version=3&amp;playlist=ipI1jXlv6Wk&amp;rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;enablejsapi=1" template="Light4website_Cms::youtube.phtml"}}
+ * on CMS page
+ */
+
 if (!Array.from) {
     Array.from = (function () {
         var toStr = Object.prototype.toString;
@@ -50,14 +55,12 @@ if (!Array.from) {
     }());
 }
 
+
 const overlays = Array.from(document.getElementsByClassName('youtube-player-overlay'));
-console.log('overlays', overlays);
 if (overlays.length) {
     const containers = Array.from(document.getElementsByClassName('youtube-player-overlay__player'));
     const placeholders = Array.from(document.getElementsByClassName('youtube-player__placeholder'));
-    console.log('overlays length passed');
     window.onYouTubeIframeAPIReady = () => {
-        console.log('yt api rdy');
         const player = [];
         containers.map((item, i) => {
             player.push(new YT.Player(item));
