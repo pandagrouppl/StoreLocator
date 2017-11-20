@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cb0f84314a2d74316ad1fde10450c721",
-    "content-hash": "bc5635a02eb37ff2d84910e746a5f79f",
+    "hash": "77176ad7537a317bdf3a30ac49dba5ea",
+    "content-hash": "ab7e2f21f81554f4c23b9c74b372c946",
     "packages": [
         {
             "name": "PL/Migs",
@@ -33,6 +33,24 @@
             ],
             "description": "ANZ eGate Payment. The payment method is for Migs support",
             "time": "2017-06-13 14:57:49"
+        },
+        {
+            "name": "PandaGroup/AttributeUpdate",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/peterjacksons-attribute-update.git",
+                "reference": "68b57e59cc1dd57d978e461599d36fcdbe86a600"
+            },
+            "type": "magento2-panda-module",
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "description": "Attribute Update for Peter Jacksons",
+            "time": "2017-11-20 13:23:29"
         },
         {
             "name": "PandaGroup/Base",
@@ -283,6 +301,27 @@
             ],
             "description": "Slack Integration module for Magento 2.x",
             "time": "2017-10-23 10:42:40"
+        },
+        {
+            "name": "PandaGroup/SortByExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-sort-by-extender.git",
+                "reference": "b138e698e224a3446bb089168380cf500d8a0a39"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "description": "Attribute Update for Peter Jacksons",
+            "time": "2017-11-20 11:49:04"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -10347,6 +10386,8 @@
         "pandagroup/magentoslackmonitor": 20,
         "pandagroup/regionspatcher": 20,
         "pandagroup/couponextender": 20,
+        "pandagroup/sortbyextender": 20,
+        "pandagroup/attributeupdate": 20,
         "pl/migs": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
