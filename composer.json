@@ -1,8 +1,8 @@
 {
-    "name": "magento/project-community-edition",
-    "description": "eCommerce Platform for Growth (Community Edition)",
+    "name": "l4w/peterjacksons.com-magento2",
+    "description": "Peter Jacksons Magento 2 project",
     "type": "project",
-    "version": "2.1.5",
+    "version": "2.1.8",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
