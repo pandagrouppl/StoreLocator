@@ -87,6 +87,13 @@
 
     &__tabs {
         position: relative;
+        opacity: 0;
+        transition: opacity 1s;
+
+        &[role="tablist"] {
+            opacity: 1;
+        }
+
 
         .active .product-main__tab-switch {
             font-weight: 600;
@@ -171,6 +178,24 @@
 
         p {
             margin: 0;
+        }
+    }
+
+    &__description-wrapper {
+        display: flex;
+        //max-width: 930px;
+    }
+
+    &__description-content {
+        flex: 1 1;
+    }
+
+    &__description-image {
+        flex: 0 0 300px;
+        padding: 10px;
+
+        img {
+            max-width: 100%;
         }
     }
 

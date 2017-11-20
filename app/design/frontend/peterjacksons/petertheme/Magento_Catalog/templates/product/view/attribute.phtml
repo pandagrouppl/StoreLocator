@@ -30,21 +30,31 @@ if ($_attributeType && $_attributeType == 'text') {
 } else {
     $_attributeValue = $_helper->productAttribute($_product, $_product->$_call(), $_code);
 }
-
 ?>
 
 <?php if ($_attributeValue): ?>
-<div class="product attribute <?php /* @escapeNotVerified */ echo $_className?>">
+    <?php if ($_attributeType === 'detailed_info'): ?>
+        <div class="product attribute <?php /* @escapeNotVerified */ echo $_className?> product-main__description-wrapper">
+    <?php else: ?>
+        <div class="product attribute <?php /* @escapeNotVerified */ echo $_className?>">
+    <?php endif; ?>
     <?php if ($_attributeLabel != 'none'): ?><strong class="type"><?php /* @escapeNotVerified */ echo $_attributeLabel?></strong><?php endif; ?>
-    <div class="value" <?php /* @escapeNotVerified */ echo $_attributeAddAttribute;?>><?php /* @escapeNotVerified */ echo $_attributeValue; ?></div>
-<!--    --><?php //if ($_attributeType === 'detailed_info'): ?>
-<!--        --><?php
-//        $productImageAttr = $_product->getCustomAttribute( 'description_img' );
-//        $productImage = $this->helper('Magento\Catalog\Helper\Image')
-//            ->init($_product, 'description_img')
-//            ->setImageFile($productImageAttr->getValue());
-//        ?>
-<!--        <img src="--><?php //echo $productImage->getUrl() ?><!--" alt="--><?php //echo $block->escapeHtml($_product->getTitle()) ?><!--" />-->
-<!--    --><?php //endif; ?>
-</div>
+        <div class="value product-main__description-content" <?php /* @escapeNotVerified */ echo $_attributeAddAttribute;?>>
+            <?php /* @escapeNotVerified */ echo $_attributeValue; ?>
+        </div>
+        <?php if ($_attributeType === 'detailed_info'): ?>
+            <div class="product-main__description-image">
+                <?php
+                $productImageAttr = $_product->getCustomAttribute($_code . '_img');
+                if (null !== $productImageAttr) {
+                    $productImage = $this->helper('Magento\Catalog\Helper\Image')->init($_product, 'description_img');
+                    $productImage->setImageFile($productImageAttr->getValue());
+                    ?>
+                    <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
+                    <?php
+                }
+                ?>
+            </div>
+        <?php endif; ?>
+    </div>
 <?php endif; ?>
