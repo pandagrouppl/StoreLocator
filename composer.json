@@ -31,6 +31,7 @@
         "PandaGroup/RegionsPatcher": "dev-master",
         "PandaGroup/CouponExtender": "dev-master",
         "PandaGroup/SortByExtender": "dev-master",
+        "PandaGroup/AttributeUpdate": "dev-master",
         "PL/Migs": "dev-master",
         "amasty/base": "^1.0",
         "amasty/module-special-promo": "^1.2",
@@ -165,6 +166,10 @@
         "22": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-sort-by-extender.git"
+        },
+        "23": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-attribute-update.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
