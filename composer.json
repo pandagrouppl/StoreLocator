@@ -2,13 +2,13 @@
     "name": "l4w/peterjacksons.com-magento2",
     "description": "Peter Jacksons Magento 2 project",
     "type": "project",
-    "version": "2.1.8",
+    "version": "2.1.10",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
     ],
     "require": {
-        "magento/product-community-edition": "2.1.8",
+        "magento/product-community-edition": "2.1.10",
         "PandaGroup/MigrationTool": "dev-master",
         "composer/composer": "@alpha",
         "strategery/magento2-infinitescroll": "dev-master",
