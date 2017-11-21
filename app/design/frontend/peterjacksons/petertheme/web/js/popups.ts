@@ -73,7 +73,10 @@ export class Popups {
             e.stopPropagation();
         });
         $('.success-popup, .success-popup__continue').on('click', () => {
-            $('.success-popup').hide()
+            $('.success-popup').hide();
+            if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
+                window.parent.jQuery('[data-fancybox-close]').click();
+            }
         });
     }
 }

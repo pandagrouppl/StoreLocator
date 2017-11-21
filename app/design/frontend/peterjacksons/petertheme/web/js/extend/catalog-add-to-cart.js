@@ -18,15 +18,15 @@ define([
             $(self.options.minicartSelector).trigger('contentLoading');
 
             /* Trigger content loading from quickview */
-            if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
-                var eventLoading = new CustomEvent('miniCartContentLoading', {
-                    detail: {
-                        minicartSelector: self.options.minicartSelector,
-                        status: 'contentLoading'
-                    }
-                });
-                parent.document.dispatchEvent(eventLoading);
-            }
+            // if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
+            //     var eventLoading = new CustomEvent('miniCartContentLoading', {
+            //         detail: {
+            //             minicartSelector: self.options.minicartSelector,
+            //             status: 'contentLoading'
+            //         }
+            //     });
+            //     parent.document.dispatchEvent(eventLoading);
+            // }
 
             self.disableAddToCartButton(form);
 
@@ -41,29 +41,10 @@ define([
                     }
                 },
                 success: function(res) {
-                    console.log('success', res);
+
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
-                    /* Quick view close & update minicart */
-                    if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
-                        var parent = window.parent;
-                        var body = parent.document.getElementsByTagName('BODY')[0];
-                        body.classList.remove('fancybox-lock');
-                        body.style.marginRight = null;
-                        var event = new CustomEvent('quickView', {
-                            detail: {
-                                method: 'post',
-                                action: form.attr('action'),
-                                minicartSelector: self.options.minicartSelector,
-                                status: 'contentUpdated'
-                            }
-
-                        });
-                        parent.document.dispatchEvent(event);
-                        parent.document.querySelector('.fancybox-overlay').remove();
-                    }
-
                     if (res.backUrl) {
                         self.enableFailedAddToCartButton(form);
                         $(self.options.minicartSelector).trigger('contentLoaded');
@@ -72,16 +53,13 @@ define([
                         $(self.options.minicartSelector).trigger('openMinicart');
                         $(self.options.minicartSelector).trigger('contentUpdated');
                     }
-
+                    if (res.messages) {
+                        $(self.options.messagesSelector).html(res.messages);
+                    }
                     if (res.minicart) {
                         $(self.options.minicartSelector).replaceWith(res.minicart);
                         $(self.options.minicartSelector).trigger('contentUpdated');
                     }
-
-                    if (res.messages) {
-                        $(self.options.messagesSelector).html(res.messages);
-                    }
-
                     if (res.product && res.product.statusText) {
                         $(self.options.productStatusSelector)
                             .removeClass('available')

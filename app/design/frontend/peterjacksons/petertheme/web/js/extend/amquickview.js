@@ -38,7 +38,8 @@ define([
                     iframe : {
                         css : {
                             width : '900px',
-                            height: '669px'
+                            height: 'inherit',
+                            "max-height": '669px'
                         }
                     },
                     afterClose : function() {

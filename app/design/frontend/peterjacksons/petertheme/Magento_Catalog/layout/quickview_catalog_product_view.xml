@@ -21,9 +21,8 @@
                        template="Light4website_Cms::quickview_footer.phtml" after="-"/>
         </referenceBlock>
         <referenceBlock name="panda.separator1" remove="true" />
-        <referenceBlock name="panda.separator2" remove="true" />
         <referenceBlock name="panda.separator3" remove="true" />
-        <referenceBlock name="panda.tabs" remove="true" />
+        <referenceBlock name="panda.related" remove="true" />
         <referenceBlock name="panda.backtotop" remove="true" />
         <referenceBlock name="panda.floatingbutton" remove="true" />
         <referenceBlock name="product.info.details" remove="true" />

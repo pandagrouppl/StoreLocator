@@ -7,7 +7,7 @@ import "slick";
 
 const sl = (config, element) => {
 
-    $(element).slick({
+    $(element).slick(Object.assign({}, {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 2,
@@ -23,7 +23,7 @@ const sl = (config, element) => {
                 }
             }
         ]
-    });
+    }, config));
 
     /**
      * Fix to reposition slick when it was hidden

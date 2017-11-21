@@ -75,7 +75,7 @@
         &__right {
             @media all and (min-width: $sm-breakpoint + 1) {
                 margin: 50px 0 20px 35px;
-                flex: 0 0 328px;
+                flex: 0 0 348px;
             }
             @media all and (max-width: $sm-breakpoint) {
                 order:1;
