@@ -88,14 +88,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "86fe0bf9b8ea18daeeba9076a1c9db841c0567bb"
+                "reference": "ad9898d26973ff7b8bf366c35ac76f3bb3a6ce3b"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-11-09 16:19:05"
+            "time": "2017-11-21 10:08:22"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -154,14 +154,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "6ebc7fc664cfeba9f5af1e1ffae3724ed8c1b236"
+                "reference": "df088cf8c6bde32a7b44cca438dbfb39ec3778c6"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-11-16 09:57:42"
+            "time": "2017-11-20 15:59:38"
         },
         {
             "name": "PandaGroup/GiftCardExtender",
