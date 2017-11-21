@@ -10,7 +10,7 @@
     }
 }
 
-.catalog-product-view .product-main > .separator:nth-of-type(3) {
+.catalog-product-view .product-main > hr:last-of-type {
     @media all and (min-width: $sm-breakpoint + 1) {
         display: none;
     }

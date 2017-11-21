@@ -5,7 +5,8 @@
 }
 
 .product-main {
-    @include container();
+    max-width: 920px;
+    margin: 0 auto;
 
     @media all and (max-width: $sm-breakpoint) {
         > section {
@@ -40,20 +41,24 @@
     }
 
     &__left {
-        min-width: 56%;
+        flex: 1 1;
 
         button.m360-icon.m360-icon-fullscreen-open {
             top: 65px !important;
             right: 65px !important;
         }
+        @media all and (min-width: $sm-breakpoint + 1) {
+            > .gallery-placeholder {
+                max-width: 500px;
+            }
+        }
     }
 
     &__right {
-        max-width: 100%;
         box-sizing: border-box;
         padding: 0;
         margin-left: 20px;
-        flex-basis: 348px;
+        flex: 0 0 348px;
 
         @media all and (max-width: $sm-breakpoint) {
             margin: 0;
@@ -183,7 +188,6 @@
 
     &__description-wrapper {
         display: flex;
-        //max-width: 930px;
     }
 
     &__description-content {
@@ -192,7 +196,7 @@
 
     &__description-image {
         flex: 0 0 300px;
-        padding: 10px;
+        padding: 10px 10px 10px 27px;
 
         img {
             max-width: 100%;

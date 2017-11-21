@@ -136,8 +136,7 @@
                     </block>
                 </block>
                 <referenceBlock name="reviews.tab" remove="true"/>
-                <block class="Magento\Framework\View\Element\Template" name="panda.separator2" template="PandaGroup_Catalog::separator.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="panda.tabs" template="PandaGroup_Catalog::tabs.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="panda.related" template="PandaGroup_Catalog::tabs.phtml">
                     <block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">
                         <arguments>
                             <argument name="type" xsi:type="string">related</argument>

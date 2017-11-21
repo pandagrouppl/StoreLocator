@@ -42,6 +42,19 @@
 
     &__minicart {
         position: relative;
+        display: none;
+
+        &--mobile {
+            @media all and (max-width: $sm-breakpoint) {
+                display: block;
+            }
+        }
+
+        &--desktop {
+            @media all and (min-width: $sm-breakpoint + 1) {
+                display: block;
+            }
+        }
 
         &-icon {
             @include sprite(header-case);

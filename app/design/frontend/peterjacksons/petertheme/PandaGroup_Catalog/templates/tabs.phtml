@@ -1,33 +1,43 @@
 <?php
 
 /** @var $block Magento\Framework\View\Element\Template */
-?>
-<section id="product-sliders" class="product-main__section-wrap product-main__section-wrap--tabs product-main__section-wrap--ending">
-    <div class="product data items product-main__tabs" data-mage-init='{"js/extend/tabs-custom":{
-        "openedState":"active",
-        "animate": true,
-        "animationBreakpoint": 768
-        }}'>
-        <?php
-        $childBlocks = $block->getChildNames();
-        foreach($childBlocks as $blockName): ?>
-            <?php  if(false === empty(trim($block->getChildHtml($blockName)))): // checks, if block does not contain products, and hides it ?>
-                <nav class="data item title product-main__tab"
-                     aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $blockName; ?>-title"
-                     data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $blockName; ?>">
-                    <a class="data switch product-main__tab-switch"
-                       tabindex="-1"
-                       data-toggle="switch"
-                       href="#<?php /* @escapeNotVerified */ echo $blockName; ?>"
-                       id="tab-label-<?php /* @escapeNotVerified */ echo $blockName;?>-title">
-                        <?php echo $block->getChildData($blockName, 'label'); ?>
-                    </a>
-                </nav>
-                <div class="data item content product-main__description" id="<?php /* @escapeNotVerified */ echo $blockName; ?>" data-role="content">
-                    <?php echo $block->getChildHtml($blockName); ?>
-                </div>
-            <?php endif; ?>
-        <?php endforeach;?>
-    </div>
 
-</section>
+$childBlocks = $block->getChildNames();
+$rel = trim($block->getChildHtml('catalog.product.related'));
+$upsell = trim($block->getChildHtml('product.info.upsell'));
+$recent = trim($block->getChildHtml('recently_viewed'));
+?>
+
+<?php if($rel || $upsell || $recent): ?>
+
+    <hr class="separator__line"/>
+
+    <section id="product-sliders" class="product-main__section-wrap product-main__section-wrap--tabs product-main__section-wrap--ending">
+        <div class="product data items product-main__tabs" data-mage-init='{"js/extend/tabs-custom":{
+            "openedState":"active",
+            "animate": true,
+            "animationBreakpoint": 768
+            }}'>
+            <?php
+
+            foreach($childBlocks as $blockName): ?>
+                <?php if(false === empty(trim($block->getChildHtml($blockName)))): // checks, if block does not contain products, and hides it ?>
+                    <nav class="data item title product-main__tab"
+                         aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $blockName; ?>-title"
+                         data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $blockName; ?>">
+                        <a class="data switch product-main__tab-switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#<?php /* @escapeNotVerified */ echo $blockName; ?>"
+                           id="tab-label-<?php /* @escapeNotVerified */ echo $blockName;?>-title">
+                            <?php echo $block->getChildData($blockName, 'label'); ?>
+                        </a>
+                    </nav>
+                    <div class="data item content product-main__description" id="<?php /* @escapeNotVerified */ echo $blockName; ?>" data-role="content">
+                        <?php echo $block->getChildHtml($blockName); ?>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach;?>
+        </div>
+    </section>
+<?php endif; ?>
