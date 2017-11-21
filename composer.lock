@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4ed5a69bb8421dfad3323112d150f15",
-    "content-hash": "c3f7ebdd82358a2521b2d6932d425874",
+    "hash": "9f5f9f8e1000866a28bd13f1e1e915d3",
+    "content-hash": "a35dd233b11241b6846cbabdc4692ba4",
     "packages": [
         {
             "name": "PL/Migs",

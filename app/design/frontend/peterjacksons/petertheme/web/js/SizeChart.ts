@@ -30,7 +30,7 @@ export class SizeChart {
         e.preventDefault();
         const url = $slctd.attr('href');
         this.$charts.find(`.${this.cssActive}`).removeClass(this.cssActive);
-        this.$charts.find(`[data-href=${url}]`).addClass(this.cssActive);
+        this.$charts.find(`[data-href="${url}"]`).addClass(this.cssActive);
         $('.size-chart__tabs').find('.' + this.cssActiveTab).removeClass(this.cssActiveTab);
         $slctd.addClass(this.cssActiveTab);
     }
