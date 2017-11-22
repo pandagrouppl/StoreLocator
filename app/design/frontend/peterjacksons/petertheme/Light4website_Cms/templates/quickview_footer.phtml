@@ -12,3 +12,14 @@ $productUrl = $_product->getProductUrl();
         </a>
     </div>
 </div>
+
+<script>
+    /**
+     * fix to calculate proper size of Quickview fancybox
+     */
+    require(['jquery'], function($){
+        $(window).on("load", function() {
+            window.parent.jQuery(window.parent).trigger('resize');
+        })
+    });
+</script>

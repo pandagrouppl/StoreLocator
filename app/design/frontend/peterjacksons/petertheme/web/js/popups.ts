@@ -74,9 +74,9 @@ export class Popups {
         });
         $('.success-popup, .success-popup__continue').on('click', () => {
             $('.success-popup').hide();
-            if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
-                window.parent.jQuery('[data-fancybox-close]').click();
-            }
+        });
+        $('.success-popup__gotocheckout').on('click', () => {
+            window.location.assign('/checkout');
         });
     }
 }

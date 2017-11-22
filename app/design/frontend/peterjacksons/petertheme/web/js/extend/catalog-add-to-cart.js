@@ -7,7 +7,6 @@ define([
     'mage/translate',
     'jquery/ui',
     'Magento_Catalog/js/catalog-add-to-cart',
-    'Magento_Customer/js/customer-data'
 ], function($, $t) {
     "use strict";
 
@@ -17,23 +16,13 @@ define([
             var self = this;
             $(self.options.minicartSelector).trigger('contentLoading');
 
-            /* Trigger content loading from quickview */
-            // if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
-            //     var eventLoading = new CustomEvent('miniCartContentLoading', {
-            //         detail: {
-            //             minicartSelector: self.options.minicartSelector,
-            //             status: 'contentLoading'
-            //         }
-            //     });
-            //     parent.document.dispatchEvent(eventLoading);
-            // }
-
             self.disableAddToCartButton(form);
 
             $.ajax({
                 url: form.attr('action'),
                 data: form.serialize(),
                 type: 'post',
+                context: parent.document,
                 dataType: 'json',
                 beforeSend: function() {
                     if (self.isLoaderEnabled()) {
@@ -41,7 +30,6 @@ define([
                     }
                 },
                 success: function(res) {
-
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
@@ -49,9 +37,16 @@ define([
                         self.enableFailedAddToCartButton(form);
                         $(self.options.minicartSelector).trigger('contentLoaded');
                     } else {
-                        self.enableAddToCartButton(form);
-                        $(self.options.minicartSelector).trigger('openMinicart');
-                        $(self.options.minicartSelector).trigger('contentUpdated');
+                        if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
+                            window.parent.jQuery(self.options.minicartSelector).trigger('openMinicart');
+                            window.parent.jQuery(self.options.minicartSelector).trigger('contentUpdated');
+                            window.parent.jQuery.fancybox.close();
+                        } else {
+                            self.enableAddToCartButton(form);
+                            $(self.options.minicartSelector).trigger('contentUpdated');
+                            $(self.options.minicartSelector).trigger('openMinicart');
+
+                        }
                     }
                     if (res.messages) {
                         $(self.options.messagesSelector).html(res.messages);
@@ -95,6 +90,8 @@ define([
             addToCartButton.find('span').text(addToCartButtonTextAdded);
             addToCartButton.attr('title', addToCartButtonTextAdded);
             $('#success-popup').fadeIn();
+
+
 
             setTimeout(function() {
                 var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to Cart');
