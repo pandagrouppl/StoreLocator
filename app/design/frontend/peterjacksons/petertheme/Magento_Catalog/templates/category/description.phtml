@@ -16,6 +16,11 @@
 ?>
 <?php if ($_description = $block->getCurrentCategory()->getDescription()): ?>
     <div class="category-description catalog-main__description">
-        <?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_description, 'description') ?>
+        <div class="catalog-main__description--left-column">
+            <a href="/" class="catalog-main__description--back"></a>
+        </div>
+        <div class="catalog-main__description--right-column">
+            <?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_description, 'description') ?>
+        </div>
     </div>
 <?php endif; ?>

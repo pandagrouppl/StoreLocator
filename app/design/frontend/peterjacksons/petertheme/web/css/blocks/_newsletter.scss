@@ -14,18 +14,21 @@ $input-height: 49px;
 
         &__input {
             border: none;
-            border-bottom: 2px solid #afafaf;
-            font-size: 12px;
+            border-bottom: 1px solid #4b4a4d;
+            font-size: 14px;
             height: $input-height;
             padding: 0;
             transition: all 0.2s ease;
             width: 100%;
             margin-bottom: 2px;
+            background: #f9f2f2;
 
             &:focus {
                 outline: none;
-                border-bottom-width: $border;
+                border-bottom-width: 2px;
                 margin-bottom: 2px - $border / 2;
+                font-size: 17px;
+                height: 35px;
             }
 
             &::clear {
@@ -43,12 +46,13 @@ $input-height: 49px;
             border: none;
             font-weight: bold;
             font-size: 14px;
-            color: #666;
+            color: #4c4b4d;
             background: none;
             padding: 0;
             max-width: 240px;
             cursor: pointer;
             text-transform: uppercase;
+            transform: translateZ(0);
         }
 
         @media all and (min-width: $sm-breakpoint) {
@@ -56,6 +60,7 @@ $input-height: 49px;
             &__input-wrap {
                 flex: 1;
                 padding: 0 $padding;
+                height: 52px;
             }
 
             &__messages {
@@ -85,10 +90,6 @@ $input-height: 49px;
                 position: relative;
                 padding: 0 $padding;
                 text-align: center;
-            }
-
-            &__input {
-                font-size: 14px;
             }
 
             &__submit {

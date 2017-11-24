@@ -3,10 +3,20 @@
     justify-content: flex-end;
     margin-bottom: 20px;
 
+    @media all and (max-width: 550px) {
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
     &-sorter {
         display: flex;
         flex-direction: row-reverse;
         margin-left: 35px;
+
+        @media all and (max-width: 550px) {
+            margin-left: 0;
+        }
     }
 
     .sorter-action {
@@ -20,11 +30,11 @@
         color: #8f8f8f;
     }
 
-    .sorter-action.sort-asc:before {
+    .sorter-action.sort-asc::before {
         content: '\2193';
     }
 
-    .sorter-action.sort-desc:before {
+    .sorter-action.sort-desc::before {
         content: '\2191';
     }
 

@@ -2,9 +2,17 @@
     display: flex;
     align-items: center;
 
+    @media all and (max-width: 550px) {
+        padding-left: 20px;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: row-reverse;
+
+        @media all and (max-width: 550px) {
+            flex-direction: row;
+        }
     }
 
     &__label {
@@ -28,9 +36,21 @@
             background: black;
         }
 
+        @media all and (max-width: 550px) {
+            &--active:nth-of-type(1) {
+                display: none;
+            }
+        }
+
         &--inactive {
             background: white;
             border-color: #b9b9b9;
+        }
+
+        @media all and (max-width: 550px) {
+            &--inactive:nth-of-type(1) {
+                display: none;
+            }
         }
     }
 }
