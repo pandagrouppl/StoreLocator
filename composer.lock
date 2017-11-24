@@ -260,11 +260,11 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-quickview.git",
-                "reference": "21e3c8b7ea5b5b3ab62fb96af9f084a317e523c0"
+                "reference": "acce35a427ae452123026f86caf4ee824623975b"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Quickview Module",
-            "time": "2017-09-28 09:52:40"
+            "time": "2017-11-24 13:27:16"
         },
         {
             "name": "PandaGroup/RegionsPatcher",
