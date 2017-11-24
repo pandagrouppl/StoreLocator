@@ -130,8 +130,8 @@
                 <height>340</height>
             </image>
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
-                <width>175</width>
-                <height>220</height>
+                <width>220</width>
+                <height>278</height>
             </image>
             <image id="recently_viewed_products_images_names_widget" type="small_image">
                 <width>75</width>
@@ -146,8 +146,8 @@
                 <height>340</height>
             </image>
             <image id="related_products_list" type="small_image">
-                <width>175</width>
-                <height>220</height>
+                <width>220</width>
+                <height>278</height>
             </image>
             <image id="review_page_product_image" type="small_image">
                 <width>285</width>

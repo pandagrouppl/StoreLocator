@@ -80,6 +80,8 @@
             @media all and (max-width: $sm-breakpoint) {
                 order:1;
             }
+
+
         }
 
         &__left {
@@ -102,6 +104,11 @@
                 margin-right: 88px;
             }
 
+        }
+
+        &__wishlist-a {
+            /* prevent hiding by amasty_quickview::page.phtml */
+            display: block !important;
         }
     }
 }
