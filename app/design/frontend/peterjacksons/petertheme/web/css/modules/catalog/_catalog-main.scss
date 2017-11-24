@@ -4,10 +4,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media all and (max-width: 550px) {
+            display: none;
+        }
     }
 
     .sidebar {
-        min-width: 180px;
+        min-width: 211px;
         order: -1;
 
         @media all and (max-width: 860px) {
@@ -58,6 +62,11 @@
         padding: 10px 20px 20px 20px;
         text-align: center;
         background: #f7f7f7;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
 
         h1 {
             color: #232323;
@@ -68,6 +77,10 @@
         h2 {
             font-weight: normal;
             color: #333;
+
+            @media all and (max-width: 550px) {
+                display: none;
+            }
         }
 
         > div {
@@ -76,6 +89,40 @@
 
         span {
             font-size: 12px !important;
+        }
+
+        &--left-column {
+            @media all and (max-width: 550px) {
+                display: flex;
+                box-sizing: border-box;
+                align-items: center;
+
+                a {
+                    content: '';
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    border-top: 0.2em solid black;
+                    border-right: 0.2em solid black;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+
+        &--right-column {
+            @media all and (max-width: 550px) {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+                box-sizing: border-box;
+
+                > div {
+                    @media all and (max-width: 550px) {
+                        display: none;
+                    }
+                }
+            }
+
         }
     }
 
@@ -99,10 +146,10 @@
         }
     }
 
-    .toolbar {
-        @media all and (max-width: 860px) {
-            display: none !important;
-        }
-    }
+    //.toolbar {
+    //    @media all and (max-width: 860px) {
+    //        display: none !important;
+    //    }
+    //}
 }
 

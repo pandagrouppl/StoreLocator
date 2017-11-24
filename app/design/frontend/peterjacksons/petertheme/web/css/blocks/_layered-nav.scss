@@ -19,40 +19,130 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+
+        .swatch-option {
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #b2b2b2;
+            overflow: hidden;
+            border-radius: 3px;
+            min-width: 0;
+            max-width: 12px;
+            padding: 0;
+        }
+
+        .swatch-option:not(.disabled):hover {
+            border-radius: 3px;
+            border: 1px solid black;
+            outline: 0;
+        }
+
+        .amasty-shopby-swatch-attribute-options-images-labels .swatch-option-link-layered {
+            padding-top: 5px !important;
+        }
     }
 
     &__clear {
         text-decoration: underline;
         font-weight: bold;
-        color: $black-light;
+        color: #807E7E;
     }
 
     &__title {
         padding: 10px 0;
         margin: 10px 0;
-        border-bottom: 1px solid $grey-dark;
+        border-top: 1px solid #BBB9B9;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 17px;
         color: #333;
         display: flex;
         justify-content: space-between;
     }
 
     &__content {
-        margin-left: 7px;
+        margin-left: 5px;
 
         a {
-            font-size: 15px;
+            font-size: 14px;
             color: #333;
+            font-weight: 300;
         }
 
         .item {
-            padding: 0 0 20px 0;
+            padding: 0 0 18px 0;
         }
 
         .am_shopby_filter_items_attr_price {
             .item {
                 padding: 0 0 20px 0;
+            }
+        }
+
+        .am_shopby_slider_container {
+            margin-left: 0;
+            margin-right: 9px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .am_shopby_slider_container .ui-slider.ui-slider-horizontal .ui-slider-handle {
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            margin-top: -4px;
+            background: #808080;
+            border-radius: 10px;
+        }
+
+        .ui-slider-horizontal {
+            height: 5px;
+            background: #CECCCC;
+        }
+
+        .am_shopby_slider_display {
+            text-align: left;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #333;
+            font-weight: 300;
+        }
+
+        .amasty-shopby-swatch-attribute-options-images-labels .swatch-option {
+            margin: 0 18px 0 0;
+        }
+
+        .swatch-option {
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #b2b2b2;
+            overflow: hidden;
+            border-radius: 3px;
+            min-width: 0;
+            max-width: 12px;
+            padding: 0;
+        }
+
+        .swatch-option:not(.disabled):hover {
+            border-radius: 3px;
+            border: 1px solid black;
+            outline: 0;
+        }
+
+        .swatch-option.selected {
+            border-radius: 3px;
+            border: 1px solid black;
+            outline: 0;
+        }
+
+        .amasty-shopby-swatch-attribute-options-images-labels .swatch-option-link-layered {
+            padding-bottom: 18px !important;
+
+            span.count {
+                display: none;
             }
         }
     }
@@ -89,4 +179,3 @@
         }
     }
 }
-

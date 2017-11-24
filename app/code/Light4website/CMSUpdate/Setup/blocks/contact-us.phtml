@@ -1,30 +1,26 @@
 <section class="contact-us">
     <section class="contact-us__left">
         <h2 class="contact-us__title">Get in touch with us</h2>
-        <h3 class="contact-us__subtitle">We’d love to hear from you</h3>
         <p class="contact-us__paragraph">Our aim is to achieve 100% customer satisfaction
             and to do so we need and value your feedback.</p>
 
         <p class="contact-us__paragraph">Should you have a question which is not covered on
             the website please contact us by phone or email.</p>
 
-
-        <address class="contact-us__address">
-            Peter Jackson Head Office <br>
-            426 Johnston Street<br>
-            Abbotsford, VIC 3067<br>
-            <strong>Phone </strong>(03) 9415 6281<br>
-            <strong>Email </strong>info@peterjacksons.com
-        </address>
+        <div class="contact-us__address">
+            <p>Peter Jackson Head Office </p><br>
+            <p>426 Johnston Street, Abbotsford, VIC 3067 </p><br>
+            <p><span>Phone </span>(03) 9415 6281 </p><br>
+            <p><span>Email </span>info@peterjacksons.com</p><br>
+        </div>
     </section>
     <section class="contact-us__right">
-        <h3 class="contact-us__subtitle">Send us a message</h3>
         <form>
-            <input class="contact-us__input" type="text" name="contact-us[name]" placeholder="Name" title="Name">
-            <input class="contact-us__input" type="text" name="contact_us[email]" placeholder="Email" title="Email">
-            <input class="contact-us__input" type="text" name="contact_us[phone]" placeholder="Phone" title="Phone">
-            <textarea class="contact-us__textarea" name="contact_us[message]" placeholder="Message" title="Message"></textarea>
-            <button class="contact-us__button" type="submit" title="Submit">Submit</button>
+            <input class="contact-us__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" name="contact_us[email]" placeholder="Email*" title="Your email address" required>
+            <input class="contact-us__input" type="text" pattern="[a-zA-Z0-9]+" name="contact-us[name]" placeholder="Your full name*" title="Only alphanumeric characters allowed" required>
+            <input class="contact-us__input" type="text" name="contact_us[subject]" placeholder="Subject*" title="Subject" required>
+            <textarea class="contact-us__textarea" name="contact_us[message]" placeholder="Type your enquiry here." title="Message" required></textarea>
+            <button class="contact-us__button" type="submit" title="Submit">Submit your enquiry</button>
         </form>
     </section>
 </section>
