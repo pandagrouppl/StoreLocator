@@ -6,11 +6,11 @@
 @mixin form-element() {
     height: 40px;
     border: 1px solid #b9b9b9;
-    border-radius: 1px;
+    border-radius: 2px;
     background-color: white;
     box-sizing: border-box;
     width: 100%;
-    padding: 0 10px;
+    padding: 18px;
     color: #515151;
     font-size: 110%;
     -webkit-appearance: none;

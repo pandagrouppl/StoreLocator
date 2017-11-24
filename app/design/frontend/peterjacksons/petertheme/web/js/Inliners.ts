@@ -153,6 +153,10 @@ export class Inliners {
                     $nav.removeClass(docked);
                 }
             });
+
+            $( '.header-shippingbar' ).click(function() {
+                window.location.href = "/shipping-returns";
+            });
     }
     // this silly fix is required for Safari bugged column rendering
     private _headerWidth(): void {
@@ -166,6 +170,7 @@ export class Inliners {
                 'max-width': 200 * cols});
         })
     }
+
 
 
 }

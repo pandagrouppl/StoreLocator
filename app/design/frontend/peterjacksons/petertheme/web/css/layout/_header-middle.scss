@@ -35,14 +35,24 @@
 
             > a {
                 color: $black;
-                font-size: 14px;
+                font-size: 13.5px;
                 font-weight: 300;
                 text-transform: uppercase;
+                padding: 6px 0;
+                transition: font-weight, border 300ms ease-in;
+                border-bottom: 3px solid transparent;
+
+                &:hover {
+                    color: #383a4b;
+                    font-weight: 500;
+                    border-bottom: 2px solid #4c4b4d;
+                }
             }
 
             &.active > a, &.has-active > a {
                 padding: 0 0 6px 0;
                 border-bottom: 2px solid;
+                font-weight: 500;
             }
 
             &.active .first span, &.has-active .active span {
@@ -80,13 +90,18 @@
 
         a {
             color: $black;
+            transition: color 300ms ease-in;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.5);
+            }
         }
     }
 
     &__column-item {
         margin: 5px 0;
         padding: 5px 23px;
-        font-size: 15px;
+        font-size: 13.5px;
     }
 
     &__block {

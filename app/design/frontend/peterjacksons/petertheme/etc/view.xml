@@ -24,13 +24,13 @@
                 <width>303</width>
                 <height>603</height>
             </image>
-            <image id="category_page_grid-1" type="small_image">
-                <width>303</width>
-                <height>603</height>
-            </image>
             <image id="category_page_list" type="small_image">
                 <width>303</width>
-                <height>603</height>
+                <height>405</height>
+            </image>
+            <image id="category_page_list_suits" type="small_image">
+                <width>467</width>
+                <height>622</height>
             </image>
             <image id="hover_image" type="small_image">
                 <width>303</width>
