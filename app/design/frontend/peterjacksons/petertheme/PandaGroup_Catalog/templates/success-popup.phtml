@@ -17,8 +17,15 @@ if (trim($block->getPageHeading())) {
 <div class="success-popup" id="success-popup">
     <div class="success-popup__overlay">
         <div class="success-popup__popup">
-            <h1 class="success-popup__title"><?php /* @escapeNotVerified */ echo $title ?></h1>
-            <span class="success-popup__text">Successfully added to your cart</span>
+            <div class="success-popup__body">
+                <div class="success-popup__image">
+                    <img src="" class="success-popup__img" data-mage-init='{"js/success-popup": {}}' />
+                </div>
+                <div class="success-popup__text">
+                    <h1 class="success-popup__title"><?php /* @escapeNotVerified */ echo $title ?></h1>
+                    <span class="success-popup__text">Successfully added to your cart</span>
+                </div>
+            </div>
             <div class="success-popup__buttons">
                 <button class="success-popup__continue">Continue Shopping</button>
                 <button class="success-popup__gotocheckout">Checkout</button>

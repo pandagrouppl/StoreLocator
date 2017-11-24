@@ -8,8 +8,7 @@
         color: #252525;
         padding-left: 17px;
         letter-spacing: 1px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        appearance: none;
         width: 100%;
         font-family: Roboto, sans-serif;
     }
@@ -22,8 +21,7 @@
         font-size: 13px;
         color: #464646;
         padding-left: 8px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        appearance: none;
         font-family: Roboto, sans-serif;
     }
 
@@ -75,7 +73,7 @@
 
         > div.mage-error {
             position: absolute;
-            top:100%;
+            top: 100%;
             padding-top: 3px;
             color: red;
         }

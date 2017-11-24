@@ -13,8 +13,7 @@
     padding: 0 10px;
     color: #515151;
     font-size: 110%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
 }
 
 @mixin form-select-arrow() {
@@ -23,7 +22,7 @@
     position: absolute;
     right: 14px;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     pointer-events: none;
 }
 
@@ -33,7 +32,7 @@
     position: absolute;
     right: 17px;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     pointer-events: none;
 }
 
@@ -77,6 +76,7 @@
 @mixin button($pd: 10px 20px, $mg: 5px, $fontsize: 13px, $font-weight: bold) {
     padding: $pd;
     text-transform: uppercase;
+    font-family: Roboto, arial, sans-serif;
     font-size: $fontsize;
     font-weight: $font-weight;
     border-radius: 5px;
@@ -86,7 +86,7 @@
     cursor: pointer;
 
     &:hover {
-        background: #414c78;;
+        background: #414c78;
     }
 }
 
@@ -137,7 +137,7 @@
 @mixin button-black($bg: #363636, $bghov: #666, $colorhov: white, $border: 1px solid $grey-dark, $height: 50px, $margin-top: 15px, $font-size: 16px, $color: white, $padding: 10px 20px) {
     padding: $padding;
     font-size: $font-size;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 1px;
     transition: background 0.3s, color 0.3s ease-in-out;
     margin-top: $margin-top;
@@ -177,7 +177,8 @@
     &::before {
         @if $displayMinus == true {
             content: '—';
-        } @else {
+        }
+        @else {
             content: '';
         }
         opacity: 0;
