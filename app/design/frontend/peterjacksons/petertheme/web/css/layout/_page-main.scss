@@ -9,24 +9,42 @@
         padding: 0 0;
     }
 
-    &__messages {
-        font-size: 14px;
+    &__message {
+        text-align: center;
 
-        .success, .error {
+        .message {
+            font-size: 14px;
             margin: 10px 0;
             padding: 5px 20px;
-            border-radius: 6px;
-            border: 1px solid black;
+            border-radius: 1px;
+
             display: inline-block;
         }
 
+
         .success {
-            background-color: rgba(127, 204, 126, 0.37);
+            border: 1px solid #399131;
         }
 
         .error {
-            background-color: rgba(255, 0, 0, 0.61);
+            border: 1px solid #d32b21;
         }
+
+        .notice {
+            border: 1px solid #d32b21;
+        }
+    }
+}
+
+.catalog-category-view {
+    .page-main__messages {
+        display: none;
+    }
+}
+
+.catalog-product-view {
+    .page-main__messages .success {
+        display: none;
     }
 }
 

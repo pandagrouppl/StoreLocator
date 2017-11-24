@@ -13,12 +13,12 @@
  */
 ?>
 <div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
-<!--    <div data-role="loader" class="loading-mask">-->
-<!--        <div class="loader">-->
-<!--            <img src="--><?php ///* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?><!--"-->
-<!--                 alt="--><?php ///* @escapeNotVerified */ echo __('Loading...') ?><!--">-->
-<!--        </div>-->
-<!--    </div>-->
+    <div data-role="loader" class="loading-mask">
+        <div class="loader">
+            <img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+                 alt="<?php /* @escapeNotVerified */ echo __('Loading...') ?>">
+        </div>
+    </div>
 </div>
 <!--Fix for jumping content. Loader must be the same size as gallery.-->
 <script>
@@ -36,7 +36,7 @@
         thumbBarHeight = config.thumbheight;
     }
 
-//    loader.style.paddingBottom = ( config.height / config.width * 100) + "%";
+    loader.style.paddingBottom = ( config.height / config.width * 100) + "%";
 </script>
 <script type="text/x-magento-init">
     {

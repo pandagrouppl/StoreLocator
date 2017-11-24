@@ -5,7 +5,7 @@
  */
 ?>
 <div data-bind="scope: 'messages'">
-    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="page-main__message messages">
         <div data-bind="attr: {
             class: 'message-' + message.type + ' ' + message.type + ' message',
             'data-ui-id': 'message-' + message.type
@@ -13,7 +13,7 @@
             <div data-bind="html: message.text"></div>
         </div>
     </div>
-    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="page-main__message messages">
         <div data-bind="attr: {
             class: 'message-' + message.type + ' ' + message.type + ' message',
             'data-ui-id': 'message-' + message.type
@@ -31,8 +31,7 @@
                             "component": "Magento_Theme/js/view/messages"
                         }
                     }
-                },
-            "Magento_Theme/js/hideMessage" : {}
+                }
             }
     }
 </script>

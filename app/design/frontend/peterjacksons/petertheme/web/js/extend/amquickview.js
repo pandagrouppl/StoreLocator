@@ -42,7 +42,7 @@ define([
                         }
                     },
                     afterClose : function() {
-                        var sections = ['cart'];
+                        var sections = ['cart', 'messages'];
                         this.customerData.reload(sections);
                     }
                 }

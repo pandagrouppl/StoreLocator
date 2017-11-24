@@ -6,15 +6,17 @@ define([
     'jquery',
     'mage/translate',
     'jquery/ui',
-    'Magento_Catalog/js/catalog-add-to-cart',
-], function($, $t) {
+    "Magento_Customer/js/customer-data",
+    'jquery/jquery-storageapi',
+    'Magento_Catalog/js/catalog-add-to-cart'
+], function($, $t, _, customerData) {
     "use strict";
 
     $.widget('light4website.catalogAddToCart', $.mage.catalogAddToCart, {
 
         ajaxSubmit: function(form) {
             var self = this;
-            $(self.options.minicartSelector).trigger('contentLoading');
+            // $(self.options.minicartSelector).trigger('contentLoading');
 
             self.disableAddToCartButton(form);
 
@@ -34,18 +36,19 @@ define([
                         $('body').trigger(self.options.processStop);
                     }
                     if (res.backUrl) {
+                        customerData.reload('messages');
                         self.enableFailedAddToCartButton(form);
-                        $(self.options.minicartSelector).trigger('contentLoaded');
+                        // $(self.options.minicartSelector).trigger('contentLoaded');
                     } else {
+                        $(self.options.minicartSelector).trigger('contentLoading');
                         if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
                             window.parent.jQuery(self.options.minicartSelector).trigger('openMinicart');
-                            window.parent.jQuery(self.options.minicartSelector).trigger('contentUpdated');
+                            // window.parent.jQuery(self.options.minicartSelector).trigger('contentUpdated');
                             window.parent.jQuery.fancybox.close();
                         } else {
                             self.enableAddToCartButton(form);
-                            $(self.options.minicartSelector).trigger('contentUpdated');
+                            // $(self.options.minicartSelector).trigger('contentUpdated');
                             $(self.options.minicartSelector).trigger('openMinicart');
-
                         }
                     }
                     if (res.messages) {
@@ -90,8 +93,7 @@ define([
             addToCartButton.find('span').text(addToCartButtonTextAdded);
             addToCartButton.attr('title', addToCartButtonTextAdded);
             $('#success-popup').fadeIn();
-
-
+            $(self.options.minicartSelector).trigger('contentUpdated');
 
             setTimeout(function() {
                 var addToCartButtonTextDefault = self.options.addToCartButtonTextDefault || $t('Add to Cart');

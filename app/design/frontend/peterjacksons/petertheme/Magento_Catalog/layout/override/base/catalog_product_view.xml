@@ -33,6 +33,8 @@
                 </argument>
             </arguments>
         </referenceBlock>
+
+        <move element="page.messages" destination="product.main.wrapper" before="product.galerryandactions.wrapper" />
         <referenceContainer name="content">
             <container name="product.main.wrapper" htmlTag="section" htmlClass="product-main">
                 <container name="product.galerryandactions.wrapper" htmlTag="section" htmlClass="product-main__gal-act-wrapper">
