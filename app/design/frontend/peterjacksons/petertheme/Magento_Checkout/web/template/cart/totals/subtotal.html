@@ -1,0 +1,17 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<tr class="totals sub">
+    <th class="mark" colspan="1" scope="row">
+        <span data-bind="i18n: title"></span>
+        <span class="cart-container__mobile-count" data-bind="text: (JSON.parse(window.localStorage.getItem('mage-cache-storage')).cart.summary_count === 1)
+                                    ? JSON.parse(window.localStorage.getItem('mage-cache-storage')).cart.summary_count + ' (item)'
+                                    : JSON.parse(window.localStorage.getItem('mage-cache-storage')).cart.summary_count + ' (items)'"></span>
+    </th>
+    <td class="amount" data-th="Subtotal">
+        <span class="price" data-bind="text: getValue()"></span>
+    </td>
+</tr>

@@ -2,15 +2,12 @@
     font-family: Roboto, arial, sans-serif;
     width: 100%;
 
-
     &__item {
         display: flex;
-        border-bottom: 1px solid #DDD;
         padding: 20px 0;
 
-        @media all and (max-width: $cms-sm-brkpt) {
-            border-bottom: 0;
-            border-top: 1px solid #DDD;
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #DDD;
         }
     }
 
@@ -22,8 +19,6 @@
     &__remove {
 
     }
-
-
 
     &__product-details {
         padding-left: 5px;

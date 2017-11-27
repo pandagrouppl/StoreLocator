@@ -25,6 +25,19 @@
         font-family: Roboto, sans-serif;
     }
 
+    &__cart-select {
+        background: $white;
+        height: 38px;
+        border: 1px solid #959494;
+        border-radius: 3px;
+        width: 158px;
+        text-transform: uppercase;
+        color: #464646;
+        appearance: none;
+        font-size: 11px;
+        padding-left: 10px;
+    }
+
     &__arrow {
         @include form-select-arrow();
     }
@@ -48,13 +61,6 @@
         &--qty {
             width: 63px;
             margin-right: 18px;
-        }
-
-        &--cart {
-            .select__select {
-                font-size: 11px;
-                padding-left: 4px;
-            }
         }
 
         &--cart-qty {

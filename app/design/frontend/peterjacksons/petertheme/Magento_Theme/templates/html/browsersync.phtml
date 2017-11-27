@@ -1,4 +1,15 @@
-<script id="__bs_script__">//<![CDATA[
-document.write("<script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>");
-    //]]>
-</script>
+<?php
+# DEBUG
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$deployMode = $objectManager->create('Magento\Framework\App\State')->getMode();
+if ($deployMode === \Magento\Framework\App\State::MODE_DEVELOPER) :
+    ?>
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>");
+        //]]>
+    </script>
+    <?php
+endif;
+# END DEBUG
+?>
+

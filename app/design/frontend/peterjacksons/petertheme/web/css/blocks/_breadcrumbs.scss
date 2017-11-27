@@ -17,10 +17,17 @@ $breadcrumbs-color: #928383;
         }
 
         &__separator {
-            letter-spacing: -1px;
+            letter-spacing: -2px;
             font-weight: normal;
         }
     }
+
+    @media all and (max-width: $sm-breakpoint) {
+        .breadcrumbs {
+            display: none;
+        }
+    }
+
 }
 .checkout-cart-index .breadcrumbs__item--cart {
     font-weight: bold;

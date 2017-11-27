@@ -25,10 +25,21 @@
 
     &__title {
         font-size: 22px;
-        font-weight: bold;
+        font-weight: 500;
         text-align: center;
         padding-bottom: $checkout-sidebar-pdd;
         border-bottom: $checkout-sidebar-border;
+    }
+
+    &__count {
+        padding: $checkout-sidebar-pdd;
+        font-size: 15px;
+        border-bottom: $checkout-sidebar-border;
+        font-weight: 500;
+    }
+
+    &__mobile-count {
+        display: none;
     }
 
     &__total-price {
@@ -87,4 +98,77 @@
             max-width: 100%;
         }
     }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__summary {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            margin: 0;
+        }
+
+        &__title,
+        &__count,
+        .totals-tax,
+        .grand.totals {
+            display: none;
+        }
+
+        &__mobile-count {
+            display: inline-block;
+        }
+
+        &__table {
+            background-color: white;
+            padding: 0;
+            .sidebar-prices {
+                padding: 0;
+            }
+            .totals.sub {
+                display: flex;
+                line-height: 57px;
+
+                th, td {
+                    font-size: 20px;
+                }
+
+                .mark {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 0 0 $checkout-sidebar-pdd;
+                    width: 90%;
+                }
+                .amount {
+                    width: 50%;
+                }
+            }
+        }
+
+        &__buttons {
+            > button {
+                margin: 0;
+                height: 74px;
+            }
+
+            > div {
+                display: none;
+            }
+        }
+    }
+
+    @media all and (max-width: $xs-breakpoint) {
+        &__table {
+            .totals.sub {
+                th, td {
+                    font-size: 16px;
+                    width: 50%;
+                }
+                }
+            }
+    }
+
+
 }

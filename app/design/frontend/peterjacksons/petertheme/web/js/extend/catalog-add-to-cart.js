@@ -14,6 +14,18 @@ define([
 
     $.widget('light4website.catalogAddToCart', $.mage.catalogAddToCart, {
 
+        /**
+         * Ajax context is altered to handle quickview closing (otherwise call would terminate with iframe closing
+         *
+         * resBackUrl == true == error in adding returns redirect url. Instead of reloading refresh messages
+         * and show failed message on the button.
+         *
+         * resBackUrl == false == openminicart (if in quickview - call event inside parent).
+         *
+         * Commented sections - disabled minicart loader due to weird behaviors (infinite loader)
+         * @param form
+         */
+
         ajaxSubmit: function(form) {
             var self = this;
             // $(self.options.minicartSelector).trigger('contentLoading');
@@ -35,6 +47,7 @@ define([
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
+
                     if (res.backUrl) {
                         customerData.reload('messages');
                         self.enableFailedAddToCartButton(form);

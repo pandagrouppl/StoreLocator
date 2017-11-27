@@ -1,6 +1,4 @@
 .after-items {
-
-
     &__bottom {
         flex-basis: 100%;
         margin: 20px 0 50px;
@@ -88,4 +86,9 @@
             background-position: -309px -103px;
         }
     }
+
+    @media all and (max-width: $sm-breakpoint) {
+            display: none;
+    }
+
 }
