@@ -58,4 +58,14 @@
         display: block;
         margin-right: 20px;
     }
+
+    &__view-full {
+        text-align: right;
+        margin-top: 10px;
+
+        a {
+            text-transform: none;
+            color: #515151;
+        }
+    }
 }

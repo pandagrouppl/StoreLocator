@@ -3,8 +3,7 @@
 }
 
 .fancybox-slide.fancybox-slide--iframe .fancybox-content {
-    //max-width: 900px;
-    //max-height: 669px;
+    max-width: calc(100% - 50px) !important;
 }
 
 .amasty-quickview-ajax-view {
@@ -65,6 +64,10 @@
     .page-main {
         margin: 0;
         padding: 37px 49px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            padding: 10px !important;
+        }
     }
 
     .product-main {
@@ -89,7 +92,7 @@
             min-width: inherit;
             @media all and (max-width: $sm-breakpoint) {
                 order:2;
-                margin-bottom: 20px;
+                margin: 20px 0;
             }
         }
     }

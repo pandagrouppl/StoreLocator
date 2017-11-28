@@ -8,7 +8,6 @@ import $ = require("jquery");
 
 const module = (config, element) => {
     "use strict";
-    console.log('elo', this, config);
     setTimeout(function() {
         $(element).slideUp()
     }, 4000);

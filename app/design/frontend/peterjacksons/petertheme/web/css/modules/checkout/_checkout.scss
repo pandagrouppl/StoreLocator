@@ -4,6 +4,7 @@
         width: 925px;
         color: #515151;
         margin: 0 auto 20px auto;
+        max-width: 100%;
     }
 
     a {
@@ -29,10 +30,6 @@
         margin-top: 22px;
         display: flex;
         align-items: flex-start;
-
-        @media all and (max-width: $sm-breakpoint) {
-            flex-wrap: wrap;
-        }
     }
 
     &__steps {
@@ -44,12 +41,6 @@
         flex: 0 0 360px;
         line-height: 1.3em;
         margin-left: 90px;
-
-        @media all and (max-width: $sm-breakpoint) {
-            margin-top: 15px;
-            flex: 1;
-            margin-left: 0;
-        }
     }
 
     &__sidebar {
@@ -77,10 +68,6 @@
     &__steps-list {
         display: flex;
         margin-bottom: 30px;
-
-        @media all and (max-width: $sm-breakpoint) {
-            flex-wrap: wrap;
-        }
     }
 
     &__step-wrapper {
@@ -175,25 +162,18 @@
 
         display: flex;
         flex-wrap: wrap;
+
         > .field {
             flex-basis: 100%;
 
             &:nth-child(n+5) {
                 flex-basis: 50%;
             }
+
             &:nth-child(5), &:nth-child(7) {
                 box-sizing: border-box;
                 padding-right: 15px;
             }
-        }
-    }
-
-
-
-    &__shipping-address {
-
-        @media all and (max-width: $sm-breakpoint) {
-            flex-basis: 100%;
         }
     }
 
@@ -247,8 +227,6 @@
         padding-right: 10px;
     }
 
-
-
     &__cc-img {
         @include sprite(credit-cards);
         display: inline-block;
@@ -265,11 +243,76 @@
 
     .opc-progress-bar-item._complete {
         display: block;
+
         span {
             cursor: pointer;
         }
     }
 
+
+}
+
+@media all and (max-width: $sm-breakpoint) {
+    .checkout {
+        &__wrapper {
+            margin-bottom: 0;
+        }
+
+        &__steps {
+            padding: 0 20px;
+        }
+
+        &__sidebar-wrap {
+            margin-top: 15px;
+            flex: 1;
+            margin-left: 0;
+        }
+
+        &__sidebar {
+            padding-bottom: 15px;
+        }
+
+        &__sidebar-title {
+            display: none;
+        }
+
+        &__steps-and-sidebar {
+            flex-wrap: wrap;
+        }
+
+        &__steps-list {
+            flex-wrap: wrap;
+        }
+
+        &__address-fieldset {
+
+            > .field {
+
+                &:nth-child(n+5) {
+                    flex-basis: 100%;
+                }
+
+                &:nth-child(5), &:nth-child(7) {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        &__payment-method {
+            padding-right: 0;
+        }
+
+        &__buttons {
+            button {
+                margin-top: 0;
+                height: 74px;
+            }
+        }
+
+        .opc-progress-bar-item._complete {
+            display: none;
+        }
+    }
 }
 
 

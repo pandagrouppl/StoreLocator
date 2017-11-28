@@ -105,4 +105,55 @@
             }
         }
     }
+
+    @media all and (max-width: $cart-lg-breakpoint) {
+        &__product-info {
+            margin: 7px 0 0 15px;
+        }
+
+        &__options-and-actions {
+            flex-wrap: wrap;
+        }
+
+        &__actions {
+            margin: 10px 0;
+            flex: 1 1 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            > a {
+                margin: 0 10px 10px 0;
+            }
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__product-info {
+            margin: 7px 0 0 31px;
+        }
+    }
+
+    @media all and (max-width: $xs-breakpoint) {
+        &__price {
+            margin-bottom: 15px;
+        }
+
+        &__product-info {
+            margin: 7px 0 0 5px;
+        }
+
+        &__cart-select {
+            margin: 10px 12px 0 0;
+        }
+
+        &__actions {
+            margin: 10px 0;
+            flex: 1 1 100%;
+        }
+
+        &__product-delivery {
+            margin-top: 0;
+        }
+
+    }
 }

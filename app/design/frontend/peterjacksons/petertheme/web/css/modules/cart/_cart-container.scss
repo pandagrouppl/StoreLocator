@@ -99,6 +99,12 @@
         }
     }
 
+    @media all and (max-width: $cart-lg-breakpoint) {
+        &__summary {
+            margin-left: 15px;
+        }
+    }
+
     @media all and (max-width: $sm-breakpoint) {
         &__summary {
             display: block;

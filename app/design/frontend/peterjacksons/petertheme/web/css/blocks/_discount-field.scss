@@ -74,6 +74,11 @@ $field-button: 37px;
         margin: 0 auto;
     }
 
+    @media all and (max-width: $sm-breakpoint) {
+        width: 100%;
+        margin-right: 0;
+    }
+
 }
 
 

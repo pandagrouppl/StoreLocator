@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="block items-in-cart checkout-minicart" data-bind="mageInit: {'collapsible':{'openedState': 'active', 'active': true}}">
+<div class="block items-in-cart checkout-minicart" data-bind="mageInit: {'collapsible':{'openedState': 'active', 'active': false}}">
     <div class="checkout-minicart__title title" data-role="title">
         <strong role="heading">
             <!-- ko if: maxCartItemsToDisplay < getCartLineItemsCount() -->
@@ -35,10 +35,10 @@
         </div>
     </div>
     <!-- ko if: maxCartItemsToDisplay < getCartLineItemsCount() -->
-    <div class="actions-toolbar">
+    <div class="actions-toolbar checkout-minicart__view-full">
         <div class="secondary">
             <a class="action viewcart" data-bind="attr: {href: cartUrl}">
-                <span data-bind="i18n: 'View and Edit Cart'"></span>
+                <span data-bind="i18n: 'View full Cart'"></span>
             </a>
         </div>
     </div>
