@@ -1,0 +1,70 @@
+.checkout-footer {
+    margin: 50px 0 0;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        align-items: center;
+        max-width: $checkout-container;
+
+        @media all and (max-width: $md-breakpoint) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            order: 4;
+        }
+    }
+
+    .comodo-trust-logo {
+        font-weight: 300;
+        font-size: 15px;
+        color: #928383;
+
+        span:last-child {
+            display: block;
+            font-size: 10px;
+        }
+    }
+
+    .credit-card-brands {
+        @media all and (max-width: $md-breakpoint) {
+            margin: 30px 0;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .shipping-returns-click {
+        font-weight: 300;
+        font-size: 13px;
+        color: #928383;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+
+    &__payment-graphics {
+        display: flex;
+        align-items: center;
+    }
+
+    &__credit-cards {
+        @include sprite(credit-cards);
+        margin-right: 20px;
+    }
+
+    &__pay-pal {
+        @include sprite(paypal-logo);
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        display: none;
+    }
+
+}

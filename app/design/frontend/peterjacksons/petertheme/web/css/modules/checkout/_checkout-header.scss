@@ -23,7 +23,7 @@
     padding: 0 30px;
 
     @media all and (max-width: $lg-breakpoint) {
-        padding: 30px 30px;
+        padding: 23px 13px;
         justify-content: space-around;
     }
 
@@ -157,6 +157,9 @@
 
 
     @media all and (max-width: $sm-breakpoint) {
+        background-color: #f3f2f2;
+        border-bottom: none;
+
         &__logo,
         &__left,
         &__right {
@@ -168,6 +171,7 @@
             text-align: center;
             font-size: 23px;
             font-weight: 500;
+
         }
 
         &__back-icon {

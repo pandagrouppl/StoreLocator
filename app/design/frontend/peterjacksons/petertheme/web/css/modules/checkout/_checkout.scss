@@ -1,7 +1,7 @@
 .checkout {
 
     &__wrapper {
-        width: 925px;
+        width: $checkout-container;
         color: #515151;
         margin: 0 auto 20px auto;
         max-width: 100%;
@@ -15,7 +15,6 @@
         background: transparent;
         color: #222;
         text-decoration: none;
-        text-transform: uppercase;
     }
 
     a:hover {
@@ -108,6 +107,7 @@
     &__form-login-wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__form-error, div.mage-error {
@@ -119,7 +119,7 @@
     &__button {
 
         &--login {
-            @include button-blue(10px 20px, 5px, 13px);
+            @include button-black($height: 30px, $margin-top: 0, $margin-right: 10px, $font-size: 14px, $padding: 0 20px);
         }
     }
 
@@ -140,23 +140,30 @@
         &--not-selected {
             border: 2px dashed grey;
         }
+    }
 
-        &-button {
+    &__address-button {
 
             &--select {
-                @include button-blue(10px 20px, 0);
+                @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
+                margin-bottom: 20px;
             }
 
             &--edit {
-                @include button-custom(10px 20px, 0, inherit, bold, white, #666, white, black);
-
+                @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
             }
 
             &--add {
-                @include button-custom(10px 20px, 10px 0, inherit, bold, white, #666, white, black);
+                @include button-custom(10px 20px, 20px 0 10px, inherit, bold, white, #666, white, black);
             }
-        }
     }
+
+    &__address-selected {
+        border-bottom: 1px solid $grey;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
 
     &__address-fieldset {
 
@@ -173,6 +180,10 @@
             &:nth-child(5), &:nth-child(7) {
                 box-sizing: border-box;
                 padding-right: 15px;
+            }
+
+            &.choice {
+                display: flex;
             }
         }
     }

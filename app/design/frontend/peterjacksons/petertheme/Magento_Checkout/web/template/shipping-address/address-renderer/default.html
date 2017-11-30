@@ -4,7 +4,11 @@
  * See COPYING.txt for license details.
  */
 -->
-<div class="shipping-address-item checkout__address" data-bind="css: isSelected() ? 'checkout__address--selected' : 'checkout__address--not-selected'">
+
+<div class="shipping-address-item checkout__address" data-bind="css: isSelected() ? 'checkout__address--selected' : 'checkout__address--not-selected', click: selectAddress">
+    <!-- ko if: isSelected -->
+    <div class="checkout__address-selected" data-bind="i18n: 'Selected address:'"></div>
+    <!-- /ko -->
     <!-- ko text: address().prefix --><!-- /ko --> <!-- ko text: address().firstname --><!-- /ko -->
     <!-- ko text: address().lastname --><!-- /ko --> <!-- ko text: address().suffix --><!-- /ko --><br/>
     <!-- ko text: address().street --><!-- /ko --><br/>
@@ -17,6 +21,9 @@
          <!-- /ko -->
     <!-- /ko -->
 </div>
+<button type="button" data-bind="click: selectAddress, visible: isSelected() ? false : true" class="action action-select-shipping-item checkout__address-button--select">
+    <span data-bind="i18n: 'Pick address'"></span>
+</button>
 <!-- ko if: (address().isEditable()) -->
 <button type="button"
         class="action edit-address-link checkout__address-button--edit"
@@ -24,6 +31,3 @@
     <span data-bind="i18n: 'Edit'"></span>
 </button>
 <!-- /ko -->
-<button type="button" data-bind="click: selectAddress" class="action action-select-shipping-item checkout__address-button--select">
-    <span data-bind="i18n: 'Ship Here'"></span>
-</button>

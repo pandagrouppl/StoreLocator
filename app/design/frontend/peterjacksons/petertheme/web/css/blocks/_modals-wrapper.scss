@@ -62,11 +62,11 @@ body._has-modal-custom .modal-custom-overlay {
         position: relative;
 
         h1 {
-            color: $grey;
+            color: $black;
         }
 
         button.action-close {
-            @include button-grey-no-bd(10px 20px, 0);
+            @include button-grey(10px 20px, 0);
             position: absolute;
             right: 0;
             top: 0;
@@ -75,7 +75,7 @@ body._has-modal-custom .modal-custom-overlay {
     }
 
     label {
-        color: white;
+        color: $black;
         margin: 2px 0;
         display: block;
     }
@@ -86,12 +86,12 @@ body._has-modal-custom .modal-custom-overlay {
             @include button-blue(10px 20px, 10px 0);
         }
         .action-hide-popup {
-            @include button-grey-no-bd(10px 20px, 10px);
+            @include button-grey(10px 20px, 10px);
         }
 
         .actions-toolbar {
             a {
-                color: white;
+                color: $black;
                     &:hover {
                         color: $grey
                     }
@@ -102,7 +102,7 @@ body._has-modal-custom .modal-custom-overlay {
 }
 .modals-overlay {
     z-index: 899;
-    background-color: rgba(51, 51, 51, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 

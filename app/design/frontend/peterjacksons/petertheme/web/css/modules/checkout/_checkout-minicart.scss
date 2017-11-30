@@ -6,16 +6,17 @@
     &__title {
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
     }
 
     &__chevron {
         @include sprite(select-arrow);
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 
     &.active {
         .checkout-minicart__chevron {
-            transform: rotate(0deg);
+            transform: rotate(180deg);
         }
     }
 

@@ -1,5 +1,6 @@
 .sidebar-prices {
-    padding-top: $checkout-sidebar-pdd;
+    margin-top: $checkout-sidebar-pdd;
+    border-collapse: collapse;
 
     table {
         width: 100%;
@@ -26,13 +27,20 @@
     td {
         text-align: right;
         font-size: 15px;
+        font-weight: 500;
         padding-right: $checkout-sidebar-pdd;
         width: 100%;
     }
 
-    tr:nth-last-child(2) {
+    .totals.sub {
         th, td {
-            padding-bottom: $checkout-sidebar-pdd;
+            padding-bottom: 7px;
+        }
+    }
+
+    .totals.shipping {
+        th, td {
+            padding-bottom: 21px;
         }
     }
 
