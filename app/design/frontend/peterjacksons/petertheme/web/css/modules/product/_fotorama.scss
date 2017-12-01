@@ -1,3 +1,8 @@
+.fotorama--fullscreen .fotorama__stage {
+    // gallery resizer prevent resize on fullscreen
+    max-height: none !important;
+}
+
 .product-main .product-main__gal-act-wrapper div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap {
 
     .fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows .fotorama__arr:focus,

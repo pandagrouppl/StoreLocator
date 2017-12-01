@@ -42,19 +42,17 @@ if ($_attributeType && $_attributeType == 'text') {
         <div class="value product-main__description-content" <?php /* @escapeNotVerified */ echo $_attributeAddAttribute;?>>
             <?php /* @escapeNotVerified */ echo $_attributeValue; ?>
         </div>
-        <?php if ($_attributeType === 'detailed_info'): ?>
-            <div class="product-main__description-image">
-                <?php
+        <?php if ($_attributeType === 'detailed_info'):
                 $productImageAttr = $_product->getCustomAttribute($_code . '_img');
                 if (null !== $productImageAttr) {
                     $productImage = $this->helper('Magento\Catalog\Helper\Image')->init($_product, 'description_img');
                     $productImage->setImageFile($productImageAttr->getValue());
                     ?>
-                    <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
+                    <div class="product-main__description-image">
+                        <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
+                    </div>
                     <?php
                 }
-                ?>
-            </div>
-        <?php endif; ?>
+        endif; ?>
     </div>
 <?php endif; ?>

@@ -142,21 +142,32 @@ export class Inliners {
     }
 
     private _pinHeader(): void {
-            const cssClassName = 'headers';
-            const docked = cssClassName+'--fixed';
-            const $nav = $('.'+cssClassName);
-            const offset = $('.header-shippingbar').outerHeight();
-            $(window).scroll(() => {
-                if ($(window).scrollTop() > offset) {
-                    $nav.addClass(docked);
-                } else {
-                    $nav.removeClass(docked);
+        const cssClassName = 'headers';
+        const docked = cssClassName+'--fixed';
+        const $nav = $('.'+cssClassName);
+        const $window = $(window);
+        const $body = $('body');
+        const $shippingBar = $('.header-shippingbar');
+        const $pageWrapper = $('.page-wrapper');
+        const offset = $shippingBar.outerHeight();
+        $window.scroll(() => {
+            if ($window.scrollTop() > offset) {
+                $nav.addClass(docked);
+                if (!($body.hasClass('cms-index-index'))) {
+                    $pageWrapper.css({'margin-top':$nav.height()})
                 }
-            });
 
-            $( '.header-shippingbar' ).click(function() {
-                window.location.href = "/shipping-returns";
-            });
+            } else {
+                $nav.removeClass(docked);
+                if (!($body.hasClass('cms-index-index'))) {
+                    $pageWrapper.css({'margin-top': 0})
+                }
+            }
+        });
+
+        $shippingBar.click(function() {
+            window.location.href = "/shipping-returns";
+        });
     }
     // this silly fix is required for Safari bugged column rendering
     private _headerWidth(): void {
