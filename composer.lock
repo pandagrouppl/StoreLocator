@@ -4,36 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f5f9f8e1000866a28bd13f1e1e915d3",
-    "content-hash": "a35dd233b11241b6846cbabdc4692ba4",
+    "hash": "db6dd697dd8ac80fd876c4a1d7d2879a",
+    "content-hash": "fd050c378899c3a012ba323aa7070bda",
     "packages": [
-        {
-            "name": "PL/Migs",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-anz-payment.git",
-                "reference": "7ac1f076995d2fffab59dcb06e1fa486b0c0a30e"
-            },
-            "require": {
-                "php": "~5.5.22|~5.6.0|~7.0.0"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Linh",
-                    "email": "sales@polacin.com",
-                    "homepage": "http://www.polacin.com/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "ANZ eGate Payment. The payment method is for Migs support",
-            "time": "2017-06-13 14:57:49"
-        },
         {
             "name": "PandaGroup/AttributeUpdate",
             "version": "dev-master",
@@ -1278,6 +1251,33 @@
                 "terminal"
             ],
             "time": "2015-01-18 14:31:58"
+        },
+        {
+            "name": "magenest/module-anz",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-magenest-module-anz.git",
+                "reference": "f6d1a5a45c3baa652f456ad15fce5a93a3f1789b"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magenest\\Anz\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "proprietary"
+            ],
+            "description": "N/A",
+            "time": "2017-11-30 15:05:26"
         },
         {
             "name": "magento/composer",
@@ -6398,16 +6398,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.7",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b"
+                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
-                "reference": "f4b6a522dfa1fd1e477c9cfe5909d5b31f098c0b",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
+                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
                 "shasum": ""
             },
             "require": {
@@ -6486,7 +6486,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2017-10-23 05:04:54"
+            "time": "2017-11-29 06:38:08"
         },
         {
             "name": "psr/log",
@@ -6585,16 +6585,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77"
+                "reference": "7a30649c67ee0d19faacfd9fa2cfb6cc032d9b19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
-                "reference": "50d63f2858d87c4738d5b76a7dcbb99fa8cf7c77",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/7a30649c67ee0d19faacfd9fa2cfb6cc032d9b19",
+                "reference": "7a30649c67ee0d19faacfd9fa2cfb6cc032d9b19",
                 "shasum": ""
             },
             "require": {
@@ -6630,7 +6630,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2017-06-18 15:11:04"
+            "time": "2017-11-30 15:34:22"
         },
         {
             "name": "seld/phar-utils",
@@ -8682,7 +8682,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-shopbylook.git",
-                "reference": "cb52be95544cd81421b8b1025c4cdd12acd0d6c8"
+                "reference": "57dfc59df0c2dc08646a1edd25008e8ed9393b08"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -8693,7 +8693,7 @@
                 "MIT"
             ],
             "description": "Shop By Look module for Magento 2.x",
-            "time": "2017-11-02 13:25:54"
+            "time": "2017-11-27 16:32:10"
         },
         {
             "name": "doctrine/instantiator",
@@ -10389,7 +10389,7 @@
         "pandagroup/couponextender": 20,
         "pandagroup/sortbyextender": 20,
         "pandagroup/attributeupdate": 20,
-        "pl/migs": 20,
+        "magenest/module-anz": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
         "pandagroup/shopbylook": 20,

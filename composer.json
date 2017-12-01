@@ -32,7 +32,7 @@
         "PandaGroup/CouponExtender": "dev-master",
         "PandaGroup/SortByExtender": "dev-master",
         "PandaGroup/AttributeUpdate": "dev-master",
-        "PL/Migs": "dev-master",
+        "magenest/module-anz": "dev-master",
         "amasty/base": "^1.0",
         "amasty/module-special-promo": "^1.2",
         "amasty/module-special-promo-pro": "^1.2",
@@ -113,7 +113,7 @@
         },
         "7": {
             "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-anz-payment.git"
+            "url": "git@bitbucket.org:l4w/magento2-magenest-module-anz.git"
         },
         "8": {
             "type": "vcs",
