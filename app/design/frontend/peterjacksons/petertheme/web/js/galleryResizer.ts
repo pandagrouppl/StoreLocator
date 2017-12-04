@@ -10,8 +10,7 @@ const module = (config, element) => {
         const $window = $(window);
         const $stage = $('.fotorama__stage');
         const resize = () => {
-            console.log(!($element.hasClass('fotorama--fullscreen')));
-            if ($window.width() > 768) {
+            if ($window.width() > 768 && !(window.frameElement) && !(window.frameElement.nodeName === "IFRAME")) {
                 $stage.css({'max-height': '58vh'});
             } else {
                 $stage.css({'max-height': 'none'});
