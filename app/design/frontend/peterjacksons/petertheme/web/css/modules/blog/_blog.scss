@@ -145,4 +145,19 @@
             justify-content: space-between;
         }
     }
+
+    @media all and (max-width: $xs-breakpoint) {
+        &.wordpress-homepage-view, &.wordpress-search-view {
+            .post-list {
+                padding: 0;
+            }
+            .column.main {
+                padding: 0;
+            }
+        }
+
+
+    }
+
 }
+

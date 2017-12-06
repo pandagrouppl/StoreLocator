@@ -1,273 +1,273 @@
 //All changes in this file will be overwritten!
 
 $sprite: (
-    width: 731px,
-    height: 675px,
+    width: 553px,
+    height: 485px,
     image: '../../img/sprite.png'
 );
 
 $retina-sprite: (
-    width: 1462px,
-    height: 1350px,
+    width: 1106px,
+    height: 970px,
     image: '../../img/sprite2x.png'
 );
 
 $sprite-icon: (
     PJ_logo_black: (
         x: 0px,
-        y: -393px,
+        y: -115px,
         width: 252px,
         height: 20px
     ),
     PJ_logo_white: (
         x: 0px,
-        y: -443px,
+        y: -165px,
         width: 252px,
         height: 20px
     ),
     abt-arrw-left: (
-        x: -630px,
-        y: -138px,
+        x: -414px,
+        y: -150px,
         width: 29px,
         height: 120px
     ),
     abt-arrw-right: (
-        x: -689px,
-        y: -138px,
+        x: -414px,
+        y: 0px,
         width: 29px,
         height: 120px
     ),
     arrow-down: (
-        x: -420px,
-        y: -393px,
+        x: -341px,
+        y: -447px,
         width: 19px,
         height: 10px
     ),
     arrow-left: (
-        x: -571px,
-        y: -138px,
+        x: -355px,
+        y: 0px,
         width: 29px,
         height: 121px
     ),
     arrow-right: (
-        x: -512px,
-        y: -138px,
+        x: -355px,
+        y: -151px,
         width: 29px,
         height: 121px
     ),
     blog-share-fb: (
-        x: -335px,
-        y: -246px,
+        x: -473px,
+        y: -125px,
         width: 35px,
         height: 36px
     ),
     blog-share-ptrst: (
-        x: -269px,
-        y: -246px,
+        x: -473px,
+        y: -59px,
         width: 36px,
         height: 36px
     ),
     blog-share-twt: (
-        x: -400px,
-        y: -246px,
+        x: -473px,
+        y: -321px,
         width: 35px,
         height: 35px
     ),
     buttonarrowleft: (
-        x: -469px,
-        y: -393px,
+        x: -538px,
+        y: -191px,
         width: 7px,
         height: 9px
     ),
     credit-cards: (
-        x: 0px,
-        y: -169px,
-        width: 239px,
-        height: 139px
+        x: -110px,
+        y: -267px,
+        width: 100px,
+        height: 25px
     ),
     footer-facebook-white: (
-        x: -512px,
-        y: -289px,
+        x: 0px,
+        y: -353px,
         width: 64px,
         height: 64px
     ),
     footer-facebook: (
-        x: -606px,
-        y: -289px,
-        width: 64px,
-        height: 64px
+        x: -60px,
+        y: -447px,
+        width: 32px,
+        height: 32px
     ),
     footer-instagram-white: (
-        x: -93px,
-        y: -493px,
+        x: -188px,
+        y: -353px,
         width: 63px,
         height: 63px
     ),
     footer-instagram: (
-        x: 0px,
-        y: -493px,
-        width: 63px,
-        height: 63px
+        x: -184px,
+        y: -447px,
+        width: 32px,
+        height: 32px
     ),
     footer-mastercard: (
-        x: -622px,
-        y: -52px,
+        x: -473px,
+        y: 0px,
         width: 80px,
         height: 29px
     ),
     footer-pintrest: (
-        x: -251px,
-        y: -493px,
+        x: -473px,
+        y: -191px,
         width: 35px,
         height: 35px
     ),
     footer-twitter: (
-        x: -186px,
-        y: -493px,
+        x: -473px,
+        y: -256px,
         width: 35px,
         height: 35px
     ),
     footer-visa: (
-        x: -512px,
-        y: -52px,
+        x: 0px,
+        y: -267px,
         width: 80px,
         height: 56px
     ),
     footer-youtube-white: (
-        x: -512px,
-        y: -383px,
+        x: -94px,
+        y: -353px,
         width: 64px,
         height: 64px
     ),
     footer-youtube: (
-        x: -606px,
-        y: -383px,
-        width: 64px,
-        height: 64px
+        x: -122px,
+        y: -447px,
+        width: 32px,
+        height: 32px
     ),
     header-account: (
-        x: -700px,
-        y: -383px,
-        width: 31px,
-        height: 29px
+        x: -300px,
+        y: -267px,
+        width: 25px,
+        height: 25px
     ),
     header-book: (
-        x: -385px,
-        y: -493px,
-        width: 38px,
-        height: 31px
+        x: -240px,
+        y: -267px,
+        width: 30px,
+        height: 25px
     ),
     header-case: (
-        x: -316px,
-        y: -493px,
-        width: 39px,
-        height: 31px
-    ),
-    header-star: (
-        x: -516px,
-        y: -493px,
-        width: 30px,
+        x: -279px,
+        y: -55px,
+        width: 32px,
         height: 26px
     ),
+    header-star: (
+        x: -414px,
+        y: -300px,
+        width: 26px,
+        height: 23px
+    ),
     header-zoom: (
-        x: 0px,
-        y: -586px,
-        width: 27px,
-        height: 27px
+        x: -355px,
+        y: -302px,
+        width: 20px,
+        height: 20px
     ),
     logo-black: (
         x: 0px,
-        y: -338px,
+        y: 0px,
         width: 325px,
         height: 25px
     ),
     payment_logos: (
         x: 0px,
-        y: 0px,
-        width: 482px,
-        height: 139px
+        y: -55px,
+        width: 249px,
+        height: 30px
     ),
     paypal-logo: (
-        x: -269px,
-        y: -169px,
-        width: 182px,
-        height: 47px
+        x: -281px,
+        y: -353px,
+        width: 98px,
+        height: 25px
     ),
     paypalbutt: (
-        x: -512px,
-        y: 0px,
+        x: 0px,
+        y: -215px,
         width: 219px,
         height: 22px
     ),
     remove-ico: (
-        x: -412px,
-        y: -338px,
+        x: -282px,
+        y: -115px,
         width: 18px,
         height: 18px
     ),
     select-arrow-thin: (
-        x: -325px,
-        y: -443px,
+        x: -538px,
+        y: -125px,
         width: 15px,
         height: 8px
     ),
     select-arrow: (
-        x: -282px,
-        y: -443px,
+        x: -539px,
+        y: -59px,
         width: 13px,
         height: 13px
     ),
     select-arrw: (
-        x: -700px,
-        y: -289px,
+        x: 0px,
+        y: -447px,
         width: 30px,
         height: 38px
     ),
     store-locator: (
-        x: 0px,
-        y: -643px,
+        x: -246px,
+        y: -447px,
         width: 19px,
         height: 32px
     ),
     storelocator-directions: (
-        x: -460px,
-        y: -338px,
+        x: -249px,
+        y: -215px,
         width: 16px,
         height: 16px
     ),
     storelocator-email: (
         x: -282px,
-        y: -393px,
+        y: -165px,
         width: 16px,
         height: 16px
     ),
     storelocator-phone: (
-        x: -328px,
-        y: -393px,
+        x: -295px,
+        y: -215px,
         width: 16px,
         height: 16px
     ),
     storelocator-pin: (
-        x: -374px,
-        y: -393px,
+        x: -295px,
+        y: -447px,
         width: 16px,
         height: 16px
     ),
     white-input-arrow: (
-        x: -465px,
-        y: -246px,
+        x: -536px,
+        y: -386px,
         width: 17px,
         height: 22px
     ),
     wishlist-icon-dark: (
-        x: -453px,
-        y: -493px,
+        x: -473px,
+        y: -386px,
         width: 33px,
         height: 30px
     ),
     wishlist-icon: (
-        x: -355px,
-        y: -338px,
+        x: -409px,
+        y: -353px,
         width: 27px,
         height: 25px
     ),

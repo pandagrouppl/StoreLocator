@@ -5,6 +5,7 @@
 
     @media all and (max-width: $sm-breakpoint) {
         order: -1;
+        margin: 0 auto;
     }
 
     &__search-row {

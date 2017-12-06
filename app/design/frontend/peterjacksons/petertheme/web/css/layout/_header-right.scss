@@ -1,8 +1,9 @@
 .header-right {
     display: flex;
+    align-items: flex-end;
 
     > div {
-        padding: 5px;
+        padding: 5px 10px;
     }
 
     &__url-block {
@@ -13,9 +14,7 @@
 
     &__show-search-overlay {
         @include sprite(header-zoom);
-        transform: scale(0.7);
         display: block;
-        height: 31px;
 
         @media all and (max-width: $bp-header) {
             display: none;
@@ -32,7 +31,6 @@
 
         &-icon {
             @include sprite(header-star);
-            transform: scale(0.7);
         }
 
         @media all and (max-width: $bp-header) {
@@ -58,10 +56,9 @@
 
         &-icon {
             @include sprite(header-case);
-            transform: scale(0.7);
 
             @media all and (max-width: $xs-breakpoint) {
-                transform: scale(0.8, 0.8);
+
             }
         }
     }

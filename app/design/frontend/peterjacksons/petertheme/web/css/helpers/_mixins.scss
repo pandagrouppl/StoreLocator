@@ -136,7 +136,7 @@
 
 @mixin button-black(
     $bg: #363636, $bghov: #666, $colorhov: white, $color: white,
-    $border: 1px solid $grey-dark,
+    $border: none,
     $margin-top: 15px, $margin-right: 0, $padding: 10px 20px,
     $font-size: 16px,
     $width: 100%, $height: 50px

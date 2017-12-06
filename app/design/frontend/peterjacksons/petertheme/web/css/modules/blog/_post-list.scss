@@ -38,5 +38,70 @@ $color: #666;
         border-radius: 4px;
         display: inline-block;
     }
-
 }
+
+.wordpress-homepage-view, .wordpress-search-view {
+    .post-list {
+        @media all and (max-width: $xs-breakpoint) {
+            &__item {
+                display: flex;
+                padding: 0;
+            }
+
+            &__image {
+                margin: 0;
+                height: 189px;
+
+                > a {
+                    display: block;
+                    height: 100%;
+                }
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__content {
+                order: -1;
+                flex: 0 0 45%;
+            }
+
+            &__title-and-date {
+                padding: 20px 30px 0 30px;
+                text-align: center;
+
+                * {
+                    color: black;
+                }
+
+                h2 {
+                    margin: 0;
+                }
+            }
+
+            &__name {
+                font-size: 27px;
+                text-transform: none;
+            }
+
+            &__date {
+                font-family: Roboto, arial, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+
+            &__excerpt {
+                display: none;
+            }
+
+            &__readmore {
+                display: none;
+            }
+        }
+    }
+}
+

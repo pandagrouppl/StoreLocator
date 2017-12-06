@@ -10,6 +10,7 @@
 <div class="checkout__payment-button-placeholder"></div>
 <div if="isPaymentMethodsAvailable()"
      class="items payment-methods checkout__payments">
+    <span class="checkout__payby">Pay by</span>
     <div repeat="foreach: paymentGroupsList, item: '$group'"
          class="payment-group">
         <each args="data: getRegion($group().displayArea), as: 'method'" render=""/>

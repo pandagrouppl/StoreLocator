@@ -21,8 +21,24 @@
         color: #999;
     }
 
-    &-messages {
+    &__payby {
         font-size: 14px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 0;
+        padding: 5px 20px;
+        border-radius: 1px;
+        border: 1px solid $grey;
+        display: inline-block;
+
+        .error {
+            border: 1px solid #d32b21;
+        }
     }
 
     &__steps-and-sidebar {
@@ -144,18 +160,18 @@
 
     &__address-button {
 
-            &--select {
-                @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
-                margin-bottom: 20px;
-            }
+        &--select {
+            @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
+            margin-bottom: 20px;
+        }
 
-            &--edit {
-                @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
-            }
+        &--edit {
+            @include button-black($padding: 0 20px, $margin-top: 0, $height: 30px, $width: inherit);
+        }
 
-            &--add {
-                @include button-custom(10px 20px, 20px 0 10px, inherit, bold, white, #666, white, black);
-            }
+        &--add {
+            @include button-custom(10px 20px, 20px 0 10px, inherit, bold, white, #666, white, black);
+        }
     }
 
     &__address-selected {
@@ -227,10 +243,13 @@
         @include button-black();
     }
 
+    // payments
+
     &__payments {
+        margin-bottom: 40px;
 
         button {
-            @include button-blue()
+            @include button-black($width: inherit, $height: inherit, $margin-top: inherit);
         }
     }
 
@@ -246,6 +265,10 @@
     &__pp-img {
         @include sprite(paypal-logo);
         display: inline-block;
+    }
+
+    &__cc-form {
+        margin-top: 35px;
     }
 
     .opc-progress-bar-item {

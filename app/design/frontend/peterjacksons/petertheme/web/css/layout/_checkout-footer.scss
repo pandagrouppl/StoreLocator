@@ -29,16 +29,6 @@
         }
     }
 
-    .credit-card-brands {
-        @media all and (max-width: $md-breakpoint) {
-            margin: 30px 0;
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-    }
 
     .shipping-returns-click {
         font-weight: 300;
@@ -55,12 +45,10 @@
     }
 
     &__credit-cards {
-        @include sprite(credit-cards);
-        margin-right: 20px;
-    }
-
-    &__pay-pal {
-        @include sprite(paypal-logo);
+        @include sprite(payment_logos);
+        @media all and (max-width: $md-breakpoint) {
+            margin: 20px 0;
+        }
     }
 
     @media all and (max-width: $sm-breakpoint) {

@@ -1,12 +1,24 @@
+.payment-group {
+    position: relative;
+}
+
 .payment-method {
     padding-right: 10px;
+
+    &__choice {
+        &--paypal {
+            position: absolute;
+            top: 0;
+            left: 160px;
+        }
+    }
 
     .payment-method-title {
         display: flex;
         align-items: center;
 
-        input, label, div {
-            margin: 0 4px;
+        input.radio {
+            display: none;
         }
     }
 
@@ -18,26 +30,176 @@
         .payment-method-content {
             display: block;
         }
+
+        .payment-method__wrapper {
+            border: 1px solid black;
+        }
     }
 
-    &-title {
-        font-size: 14px;
-        text-transform: uppercase;
-        margin: 10px 0;
+    &__wrapper {
+        border: 1px solid #d6d6d6;
+        padding: 12px 22px;
+        cursor: pointer;
+    }
+
+    &__image {
+        display: block;
+
+        &--credit-card {
+            @include sprite(credit-cards);
+
+        }
+        &--paypal {
+            @include sprite(paypal-logo);
+        }
+    }
+
+    &__same-address {
+        margin-top: 10px;
+
+        label {
+            vertical-align: text-top;
+        }
     }
 
     fieldset {
         border: none;
+        padding: 0;
     }
 
-    .billing-address-details._active {
+    &__paypal, .payment-method-billing-address {
+        margin-top: 30px;
+    }
+
+    .billing-address-details {
         padding: 20px;
         margin: 10px 0;
         border: 2px solid grey;
     }
 
-    &-content {
-        padding: 10px 10px 10px 19px;
+    &__address-select {
+        margin: 10px 0;
+    }
+
+    &__address-select-actions {
+        margin-top: 10px;
+    }
+
+    &__input {
+        @include form-element();
+
+        &--ccv {
+            flex: 0 0 70px;
+            margin-right: 20px;
+        }
+    }
+
+    &__select-wrapper {
+        @include form-element-wrapper();
+
+
+        &--month {
+            flex: 1 0 136px;
+            margin-right: 20px;
+        }
+
+        &--year {
+            flex: 1 0 80px;
+            margin-right: 20px;
+        }
+    }
+
+    &__select {
+        @include form-element();
+    }
+
+    &__select-arrow {
+        @include form-select-arrow();
+    }
+
+    &__expiration {
+        display: block;
+        margin: 20px 0 10px;
+        font-weight: 500;
+    }
+
+    &__cc-fields {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__ccv {
+        display: flex;
+        align-items: center;
+        flex: 1 1 120px;
+        margin: 5px 0;
+    }
+
+    &__ccv-info {
+        display: block;
+        background-color: #ededed;
+        font-size: 15px;
+        padding: 4px 8px;
+        border-radius: 100%;
+        border: 1px solid $grey
+    }
+
+
+    .field-tooltip {
+        position: relative;
+        cursor: pointer;
+
+        .field-tooltip-content {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 8;
+            background-color: rgba(255, 255, 255, .85);
+            border: 1px solid #afafaf;
+            padding: 10px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &._active .field-tooltip-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media all and (max-width: 920px) and (min-width: $sm-breakpoint) {
+        &__select-wrapper {
+            &--month {
+                flex: 1 0 46%;
+                margin-right: 4%;
+            }
+
+            &--year {
+                flex: 1 0 50%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media all and (max-width: 440px) {
+        &__select-wrapper {
+            &--month {
+                flex: 1 0 46%;
+                margin-right: 4%;
+            }
+
+            &--year {
+                flex: 1 0 50%;
+                margin-right: 0;
+            }
+        }
     }
 
 }

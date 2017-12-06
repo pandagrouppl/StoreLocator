@@ -17,5 +17,12 @@
 		</referenceContainer>
 		<referenceBlock name="wp.post_list.pager" remove="true" />
 		<move element="wp.post.list.meta" destination="wp.post.list.entry" before="post.list.image"/>
+
+		<!-- move title and date to one container for xs layout -->
+		<referenceContainer name="wp.post.list.renderer">
+			<container name="wp.title.and.date" htmlTag="div" htmlClass="post-list__title-and-date" before="-" />
+		</referenceContainer>
+		<move element="post.list.heading" destination="wp.title.and.date" />
+		<move element="post.meta.date" destination="wp.title.and.date" />
     </body>
 </page>

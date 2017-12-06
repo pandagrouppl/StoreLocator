@@ -39,3 +39,5 @@ atlassian*
 !/composer.lock
 !/README.md
 !/*.sh
+
+/wp/wp-content/uploads

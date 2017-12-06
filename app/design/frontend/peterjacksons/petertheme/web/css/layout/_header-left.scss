@@ -51,7 +51,7 @@
     }
 
     &__book {
-        margin: 0 0 0 10px;
+        margin: 0 10px;
         position: relative;
 
         @media all and (max-width: $bp-header) {
@@ -60,9 +60,7 @@
 
         i {
             @include sprite(header-book);
-            transform: scale(0.7);
             display: block;
-            height: 25px;
         }
 
         &:hover {
@@ -125,9 +123,7 @@
 
         i {
             @include sprite(header-account);
-            transform: scale(0.7);
             display: block;
-            height: 26px;
         }
     }
 }

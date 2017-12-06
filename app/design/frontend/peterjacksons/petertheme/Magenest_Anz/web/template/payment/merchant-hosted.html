@@ -4,8 +4,11 @@
                name="payment[method]"
                class="radio"
                data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
-        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()"></span></label>
+        <label data-bind="attr: {'for': getCode()}" class="payment-method__wrapper">
+            <span class="payment-method__image payment-method__image--credit-card"></span>
+        </label>
     </div>
+
     <div class="payment-method-content">
         <!-- ko foreach: getRegion('messages') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
@@ -16,8 +19,8 @@
             <!--/ko-->
         </div>
 
-        <form class="form" data-bind="attr: {'id': getCode() + '-form'}">
-            <!-- ko template: 'Magento_Payment/payment/cc-form' --><!-- /ko -->
+        <form class="checkout__cc-form" data-bind="attr: {'id': getCode() + '-form'}">
+            <!-- ko template: 'Magenest_Anz/payment/cc-form' --><!-- /ko -->
         </form>
 
         <div class="checkout-agreements-block">
@@ -27,18 +30,21 @@
         </div>
         <div class="actions-toolbar">
             <div class="primary">
-                <button class="action primary checkout"
+                <button class="action primary checkout" id="payButton"
                         type="submit"
                         data-bind="
                         click: placeOrderAlt,
                         attr: {title: $t('Place Order')},
-                        css: {disabled: !isPlaceOrderActionAllowed()},
                         enable: (getCode() == isChecked()),
+                        visible: (getCode() == isChecked()),
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        afterRender: moveButt('payButton')
                         "
                         disabled>
-                    <span data-bind="text: $t('Place Order')"></span>
+                    <span data-bind="i18n: 'Place Order'"></span>
                 </button>
             </div>
         </div>
+
     </div>
 </div>
