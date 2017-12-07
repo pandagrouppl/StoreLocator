@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "db6dd697dd8ac80fd876c4a1d7d2879a",
-    "content-hash": "fd050c378899c3a012ba323aa7070bda",
+    "hash": "5138198317c632d04cc1825ef0d34244",
+    "content-hash": "36240b16d896e8efce4e82b702d624e7",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -8677,6 +8677,21 @@
     ],
     "packages-dev": [
         {
+            "name": "PandaGroup/Salesforce",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
+                "reference": "68ccb4c7d86600b3a516c1129083109d9c75772b"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
+            "time": "2017-12-07 12:45:59"
+        },
+        {
             "name": "PandaGroup/ShopByLook",
             "version": "dev-master",
             "source": {
@@ -10392,6 +10407,7 @@
         "magenest/module-anz": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
+        "pandagroup/salesforce": 20,
         "pandagroup/shopbylook": 20,
         "phpmd/phpmd": 0
     },
