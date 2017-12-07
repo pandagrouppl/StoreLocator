@@ -2,7 +2,7 @@
     <referenceContainer name="content">
         <referenceBlock name="page.main.title">
             <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Shipping and Returns</argument>
+                <argument translate="true" name="title" xsi:type="string">Returns and Exchanges</argument>
             </action>
         </referenceBlock>
     </referenceContainer>

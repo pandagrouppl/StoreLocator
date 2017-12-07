@@ -3,7 +3,7 @@ import "slick";
 
 const home = () => {
 
-    const $slider = $('.slick-init');
+    const $slider = $( '.slick-init' );
 
     $slider.slick({
         infinite: true,
@@ -16,10 +16,10 @@ const home = () => {
         nextArrow: '<div class="slick-next"></div>',
     });
 
-    $('.home-banner__scroll-down').click(function(evt) {
+    $( '.home-banner__scroll-down' ).click(function(evt) {
         evt.preventDefault();
-        $('html, body').animate({
-            scrollTop: $('#top').offset().top - 135
+        $( 'html, body' ).animate({
+            scrollTop: $( '#top' ).offset().top - 135
         }, 800);
     });
 
