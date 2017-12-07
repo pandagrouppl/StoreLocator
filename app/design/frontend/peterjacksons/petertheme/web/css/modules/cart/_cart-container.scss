@@ -81,11 +81,12 @@
         &__table {
             background-color: white;
             padding: 0;
+
             .sidebar-prices {
                 padding: 0;
             }
+
             .totals.sub {
-                display: flex;
                 line-height: 57px;
 
                 th, td {
@@ -98,6 +99,7 @@
                     padding: 0 0 0 $checkout-sidebar-pdd;
                     width: 90%;
                 }
+
                 .amount {
                     width: 50%;
                 }
