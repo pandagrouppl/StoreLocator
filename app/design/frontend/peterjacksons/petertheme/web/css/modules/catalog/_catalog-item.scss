@@ -3,7 +3,6 @@
     &--list {
         width: 48%;
         margin: 20px 1% 20px 1%;
-        //max-width: 303px;
 
         @media all and (max-width: 550px) {
             width: 100%;
@@ -19,6 +18,11 @@
         margin: 40px 1% 40px 1%;
 
         @media all and (max-width: $sm-breakpoint) {
+            width: 29%;
+            margin: 10px;
+        }
+
+        @media all and (max-width: 550px) {
             width: 44%;
             margin: 10px;
         }

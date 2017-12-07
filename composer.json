@@ -43,6 +43,7 @@
         "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
+        "PandaGroup/Salesforce": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "mirasvit/module-profiler": "^1.0",
         "PandaGroup/ShopByLook": "dev-master",
@@ -170,6 +171,10 @@
         "23": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/peterjacksons-attribute-update.git"
+        },
+        "24": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

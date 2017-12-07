@@ -1,0 +1,138 @@
+.corporate-slider {
+    overflow: hidden;
+
+    &__slide {
+        margin: 0 20px;
+        padding: 0 10px;
+
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                background: #636363;
+            }
+        }
+
+        @media all and (max-width: $bp-measure) {
+            height: 65vh;
+            margin: 0;
+        }
+
+        @media all and (min-width: $bp-measure + 1px) {
+            min-height: 650px;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        height: 102px;
+        width: 30px;
+        z-index: 100;
+        top: 50%;
+        border: 0;
+        text-indent: -9999px;
+        cursor: pointer;
+        margin-top: -90px;
+        outline: none;
+    }
+
+    .slick-prev {
+        @include bg('arrw-right.png');
+        transform: rotate(180deg);
+        left: 2%;
+    }
+
+    .slick-next {
+        @include bg('arrw-right.png');
+        right: 2%;
+    }
+
+    .slick-dots {
+        @include slick-buttons();
+        margin: 40px 0 60px 0;
+
+        @media all and (max-width: $bp-measure) {
+            margin: 40px 0 40px 0;
+        }
+    }
+}
+
+.corporate-content {
+    display: flex;
+    max-width: 1080px;
+    margin: auto auto 0 auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+
+    > div {
+        flex: 1;
+    }
+
+    @media all and (max-width: 674px) {
+        flex-direction: column;
+        margin: 0 5% 95px 5%;
+        padding: 0;
+    }
+
+    &__description {
+        margin: 0 75px 0 0;
+
+        @media all and (max-width: 674px) {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 45px;
+            letter-spacing: 3px;
+            margin: 0 0 25px 0;
+            font-weight: 500;
+
+            @media all and (max-width: 674px) {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 300;
+            text-align: justify;
+
+            @media all and (max-width: $bp-measure) {
+                &:first-of-type {
+                    margin: 0 0 16px 0;
+                }
+
+                &:last-of-type {
+                    margin: 0 0 45px 0;
+                }
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        @media all and (max-width: $bp) {
+            width: 100%;
+        }
+    }
+
+    &__input, &__textarea {
+        @include form-element();
+        margin-bottom: 12px;
+    }
+
+    &__textarea {
+        resize: none;
+        padding: 10px;
+        height: 168px;
+    }
+
+    &__button {
+        @include button-black();
+        max-width: 100%;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-top: 0;
+    }
+}
+

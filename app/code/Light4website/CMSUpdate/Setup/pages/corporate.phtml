@@ -1,0 +1,39 @@
+<section class="corporate-slider">
+    <div class="corporate-slider__slide corporate-slider__slide--1"></div>
+
+    <div class="corporate-slider__slide corporate-slider__slide--2"></div>
+
+    <div class="corporate-slider__slide corporate-slider__slide--3"></div>
+</section>
+
+<section class="corporate-content">
+    <div class="corporate-content__description">
+        <h1>Corporate Styling</h1>
+
+        <p>At Peter Jackson, we have a long heritage of suiting the men of Australia. From our humble origins as a
+            barbershop on Bourke St to the nationwide menswear specialist we stand as today, we have spent the past 60
+            years perfecting the art of tailoring and creating contemporary garments that merge timeless design with
+            some of the finest fabrics.</p>
+
+        <p>Our styling service caters to all corporate and commercial sectors. From finance to real estate, media to
+            hospitality, we're dedicated to working with you to create solutions tailored specifically to your business
+            needs. Our current corporate partners include Master Chef, Channel Seven and Ten Styling teams and the Port
+            Adelaide Football Club.</p>
+    </div>
+
+    <div>
+        <form>
+            <input class="corporate-content__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" name="contact_us[email]" placeholder="Email*" title="Your email address" required>
+            <input class="corporate-content__input" type="text" pattern="[a-zA-Z0-9]+" name="contact-us[name]" placeholder="Your full name*" title="Only alphanumeric characters allowed" required>
+            <input class="corporate-content__input" type="text" name="contact_us[subject]" placeholder="Subject*" title="Subject" required>
+            <textarea class="corporate-content__textarea" name="contact_us[message]" placeholder="Type your enquiry here." title="Message" required></textarea>
+            <button class="corporate-content__button" type="submit" title="Submit">Submit your enquiry</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    require(["js/corporate"], function(mod) {
+        var corporateInit = new mod.corporate();
+    })
+</script>

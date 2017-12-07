@@ -1,5 +1,13 @@
 $bp: 680px;
 
+.cms-contact-us {
+    .breadcrumbs {
+        @media all and (max-width: $bp) {
+            display: none;
+        }
+    }
+}
+
 .contact-us {
     display: flex;
     margin-bottom: 83px;
@@ -12,6 +20,10 @@ $bp: 680px;
         font-size: 40px;
         font-weight: 500;
         margin: 0 0 18px 0;
+
+        @media all and (max-width: $bp) {
+            display: none;
+        }
     }
 
     &__left {
