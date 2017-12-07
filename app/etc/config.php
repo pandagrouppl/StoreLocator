@@ -138,6 +138,7 @@ return array (
     'PandaGroup_Migration' => 1,
     'PandaGroup_Quickview' => 1,
     'PandaGroup_RegionsPatcher' => 1,
+    'PandaGroup_Salesforce' => 1,
     'PandaGroup_ShopByLook' => 1,
     'PandaGroup_MagentoSlackMonitor' => 1,
     'PandaGroup_SortByExtender' => 1,
