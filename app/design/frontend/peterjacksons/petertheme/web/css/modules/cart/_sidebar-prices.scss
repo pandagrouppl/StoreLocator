@@ -15,6 +15,14 @@
 
     tr {
         vertical-align: middle;
+
+        // add padding but not when the border does not exists (not when 2nd last element is Cart Subtotal)
+        &:nth-last-of-type(2):not(.sub) {
+            th, td {
+                padding-bottom: 20px;
+            }
+        }
+
     }
 
     th {
@@ -31,18 +39,6 @@
         font-weight: 500;
         padding-right: $checkout-sidebar-pdd;
         width: 100%;
-    }
-
-    .totals.sub {
-        th, td {
-            padding-bottom: 7px;
-        }
-    }
-
-    .totals.shipping {
-        th, td {
-            padding-bottom: 21px;
-        }
     }
 
     .grand.totals {

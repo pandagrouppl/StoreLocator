@@ -31,7 +31,7 @@
                             enable: (getCode() == isChecked()),
                             visible: (getCode() == isChecked()),
                             click: continueToPayPalAlt,
-                            afterRender: moveButt('paypal-button'),
+                            afterRender: moveButt(getButtonId()),
                             attr: {id: getButtonId()}"
                         disabled>
                     <span data-bind="i18n: 'Continue to PayPal'"></span>
