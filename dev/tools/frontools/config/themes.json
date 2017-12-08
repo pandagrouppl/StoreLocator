@@ -9,7 +9,8 @@
             "PandaGroup_StoreLocator": "app/code/PandaGroup/StoreLocator/view/frontend/web",
             "PandaGroup_Spinner": "app/code/PandaGroup/Spinner/view/frontend/web",
             "PandaGroup_Checkout": "app/code/PandaGroup/Checkout/view/frontend/",
-            "PandaGroup_ShopByLook": "app/code/PandaGroup/ShopByLook/view/frontend/web"
+            "PandaGroup_ShopByLook": "app/code/PandaGroup/ShopByLook/view/frontend/web",
+            "PandaGroup_GuestWishlist": "app/code/PandaGroup/GuestWishlist/view/frontend/web"
         }
     }
 }
