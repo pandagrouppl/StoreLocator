@@ -53,7 +53,7 @@
                     </container>
                     <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right">
                         <container name="search-container" label="Search" />
-                        <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
+                        <block class="Magento\Wishlist\Block\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
                         <container name="header-wrapper" as="minicart-container" label="Minicart" />
                     </container>
                 </container>
