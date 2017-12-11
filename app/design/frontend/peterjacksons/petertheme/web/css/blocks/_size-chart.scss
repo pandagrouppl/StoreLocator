@@ -13,6 +13,10 @@
         border: 1px solid;
     }
 
+    &__overlay {
+        min-width: 500px;
+    }
+
     &__close {
         color: #838282;
         cursor: pointer;
@@ -39,6 +43,10 @@
 
         &:last-child {
             border-right: 0;
+        }
+
+        &:first-child {
+            padding-left: 0;
         }
 
         &--active {

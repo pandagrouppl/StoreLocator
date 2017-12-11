@@ -21,16 +21,11 @@
 
         .size-chart {
             display: none;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 0;
+            left: 0;
             position: fixed;
-            height: 550px;
+            max-height: 100%;
             overflow-y: auto;
-        }
-
-        div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap > div.fotorama__stage > div.fotorama__arr {
-            display: block !important;
         }
     }
 

@@ -1,5 +1,5 @@
 .fotorama--fullscreen .fotorama__stage {
-    // gallery resizer prevent resize on fullscreen
+    // gallery resizer - prevent resize on fullscreen
     max-height: none !important;
 }
 
@@ -14,9 +14,21 @@
         display: none;
     }
 
-    > div.fotorama__stage > div.fotorama__arr {
-        opacity: 1;
-        transform: none;
-        background-color: rgba(255, 255, 255, 0);
+    > div.fotorama__stage {
+
+        div.fotorama__active {
+            // side images hiding fix
+            background-color: white;
+        }
+
+        > div.fotorama__arr {
+            opacity: 1;
+            transform: none;
+            background-color: rgba(255, 255, 255, 0);
+            display: block !important;
+        }
+
     }
+
+
 }
