@@ -154,7 +154,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "c528f80a3c09980ada38e4058e677b215d84684e"
+                "reference": "6dd32580e059f74cc7915939951aec7efc12a579"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -162,7 +162,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2017-10-19 08:57:28"
+            "time": "2017-12-08 08:50:30"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -8682,14 +8682,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "68ccb4c7d86600b3a516c1129083109d9c75772b"
+                "reference": "8bb7b421e616195770b884265f91ac17ccd0aba8"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-07 12:45:59"
+            "time": "2017-12-08 12:24:29"
         },
         {
             "name": "PandaGroup/ShopByLook",
