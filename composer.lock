@@ -127,14 +127,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "df088cf8c6bde32a7b44cca438dbfb39ec3778c6"
+                "reference": "491758878f6859167b96d46be213e02e179da5ad"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-11-20 15:59:38"
+            "time": "2017-12-12 11:14:22"
         },
         {
             "name": "PandaGroup/GiftCardExtender",
