@@ -13,9 +13,10 @@
         <strong class="product-item-name" data-bind="text: $parent.name"></strong>
     </div>
     <div class="checkout-minicart__attrs">
-        <!-- ko if: (JSON.parse($parent.options).length > 0)-->
+
         <div class="product options">
             <ol class="item-options">
+                <!-- ko if: (JSON.parse($parent.options).length > 0)-->
                 <!--ko foreach: JSON.parse($parent.options)-->
                 <li class="checkout-minicart__attribute">
                     <span class="checkout-minicart__attrs-label label" data-bind="text: label+':'"></span>
@@ -26,6 +27,7 @@
                     <span class="checkout-minicart__attrs-value values" data-bind="html: value"></span>
                     <!-- /ko -->
                 </li>
+                <!-- /ko -->
                 <!-- /ko -->
                 <li class="checkout-minicart__attribute">
                     <span class="checkout-minicart__attrs-label label"><!-- ko i18n: 'Qty' --><!-- /ko -->:</span>
@@ -41,7 +43,7 @@
                 </li>
             </ol>
         </div>
-        <!-- /ko -->
+
     </div>
 </div>
 
