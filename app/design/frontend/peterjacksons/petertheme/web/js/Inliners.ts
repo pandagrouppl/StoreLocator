@@ -20,18 +20,6 @@ export class Inliners {
         this._headerWidth();
     }
 
-    private _debounce(func, wait, immediate) {
-        var timeout;
-        return function() {
-            var context = this, args = arguments;
-            clearTimeout(timeout);
-            timeout = setTimeout(function() {
-                timeout = null;
-                if (!immediate) func.apply(context, args);
-            }, wait);
-            if (immediate && !timeout) func.apply(context, args);
-        };}
-
     private _preventSpinnerClick(): void {
         $('.spinner').click((event) => {
             event.preventDefault();
@@ -110,8 +98,6 @@ export class Inliners {
             $(window).resize(fndeb)
         }
     }
-
-
 
 // FOOTER
 
