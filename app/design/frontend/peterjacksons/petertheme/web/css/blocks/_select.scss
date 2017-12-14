@@ -11,6 +11,10 @@
         appearance: none;
         width: 100%;
         font-family: Roboto, sans-serif;
+
+        &::-ms-expand {
+            display: none;
+        }
     }
 
     &__select {
@@ -23,6 +27,10 @@
         padding-left: 8px;
         appearance: none;
         font-family: Roboto, sans-serif;
+
+        &::-ms-expand {
+            display: none;
+        }
     }
 
     &__cart-select {
@@ -36,6 +44,10 @@
         appearance: none;
         font-size: 11px;
         padding-left: 10px;
+
+        &::-ms-expand {
+            display: none;
+        }
     }
 
     &__arrow {

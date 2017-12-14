@@ -1,5 +1,6 @@
 import "slick";
 import $ = require("jquery");
+import _ = require('underscore');
 
 export class Inliners {
 
@@ -11,12 +12,25 @@ export class Inliners {
         this._sliders();
         this._toggleFilter();
         this._scrollTopArrow();
+        this._cartMobileMargin();
         this._scrollTopPDP();
         this._footerNav();
         this._footerLinksAlteration();
         this._pinHeader();
         this._headerWidth();
     }
+
+    private _debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            }, wait);
+            if (immediate && !timeout) func.apply(context, args);
+        };}
 
     private _preventSpinnerClick(): void {
         $('.spinner').click((event) => {
@@ -76,6 +90,27 @@ export class Inliners {
             return false;
         });
     }
+
+// Cart margin
+
+    private _cartMobileMargin(): void {
+        if ($('body.checkout-cart-index').length) {
+            const $cart = $('.cart-container');
+            const fndeb = _.debounce(() => {
+                if ($(window).width() <= 768) {
+                    $cart.css(
+                        "margin-bottom", $('.cart-container__summary').height()
+                    )
+                } else {
+                    $cart.css(
+                        "margin-bottom", 0
+                    )
+                }
+            }, 250, 0);
+            $(window).resize(fndeb)
+        }
+    }
+
 
 
 // FOOTER

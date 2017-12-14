@@ -8,7 +8,7 @@ import "slick";
 const sl = (config, element) => {
 
     $(element).slick(Object.assign({}, {
-        infinite: true,
+        infinite: false,
         slidesToShow: 4,
         slidesToScroll: 2,
         speed: 1500,
