@@ -17,8 +17,8 @@ define([
         /**
          * Ajax context is altered to handle quickview closing (otherwise call would terminate with iframe closing
          *
-         * resBackUrl == true == error in adding returns redirect url. Instead of reloading refresh messages
-         * and show failed message on the button.
+         * resBackUrl == true == error in adding, returns redirect url. Instead of reloading refresh messages
+         * and show failed message on the button. EXCEPT: redirect url had paypal - then redirect to paypal.
          *
          * resBackUrl == false == openminicart (if in quickview - call event inside parent).
          *
@@ -49,11 +49,15 @@ define([
                     }
 
                     if (res.backUrl) {
-                        customerData.reload('messages');
-                        self.enableFailedAddToCartButton(form);
-                        // $(self.options.minicartSelector).trigger('contentLoaded');
+                        if (res.backUrl.match(/paypal/).length) {
+                            window.location = res.backUrl;
+                        } else {
+                            customerData.reload('messages');
+                            self.enableFailedAddToCartButton(form);
+                            // $(self.options.minicartSelector).trigger('contentLoaded');
+                        }
                     } else {
-                        $(self.options.minicartSelector).trigger('contentLoading');
+                        // $(self.options.minicartSelector).trigger('contentLoading');
                         if (window.frameElement && window.frameElement.nodeName === "IFRAME") {
                             window.parent.jQuery(self.options.minicartSelector).trigger('openMinicart');
                             // window.parent.jQuery(self.options.minicartSelector).trigger('contentUpdated');

@@ -38,10 +38,6 @@
         font-weight: 500;
     }
 
-    &__mobile-count {
-        display: none;
-    }
-
     &__buttons {
         > button {
             @include button-black();
@@ -68,19 +64,15 @@
         }
 
         &__title,
-        &__count,
         .totals-tax,
         .grand.totals {
             display: none;
         }
 
-        &__mobile-count {
-            display: inline-block;
-        }
-
         &__table {
             background-color: white;
             padding: 0;
+            position: relative;
 
             .sidebar-prices {
                 padding: 0;
@@ -106,6 +98,16 @@
             }
         }
 
+        &__count {
+            position: absolute;
+            top: 0;
+            left: 32%;
+            border-bottom: none;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 18px 0 0 0;
+        }
+
         &__buttons {
             > button {
                 margin: 0;
@@ -126,7 +128,13 @@
                     width: 50%;
                 }
                 }
-            }
+        }
+
+        &__count {
+            font-size: 16px;
+            padding: 21px 0 0 0;
+        }
+
     }
 
 
