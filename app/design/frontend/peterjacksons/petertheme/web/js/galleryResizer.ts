@@ -11,7 +11,6 @@ const module = (config, element) => {
         const $window = $(window);
         const $stage = $('.fotorama__stage');
         const resize = _.debounce(() => {
-            console.log('resize');
             if ($window.width() > 768 && !(window.frameElement)) {
                 $stage.css({'max-height': '58vh'});
             } else {
