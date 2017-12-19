@@ -23,7 +23,7 @@ if ($block->getIsInCatalogProduct()) {
 }
 ?>
 <div data-label="<?php echo $block->escapeHtml(__('or')); ?>"
-     class="paypal <?php /* @noEscape */ echo $labelPosition; ?> paypal-logo
+     class="paypal__button paypal <?php /* @noEscape */ echo $labelPosition; ?> paypal-logo
         <?php /* @noEscape */ echo $shortcutHtmlId; ?>"
      data-mage-init='{
      "paypalCheckout": {
@@ -32,11 +32,11 @@ if ($block->getIsInCatalogProduct()) {
             }
      }'
     >
-    <button type="submit" class="paypal__button" data-action="checkout-form-submit"
+    <input type="image" data-action="checkout-form-submit" class="paypal__image"
            data-checkout-url="<?php echo $block->escapeUrl($block->getCheckoutUrl()); ?>"
-           title="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>">
-        <span class="paypal__image"></span>
-    </button>
+           src="<?php echo $this->getViewFileUrl('img/assets/product-page/paypalbutt.png'); ?>"
+           alt="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>"
+           title="<?php echo $block->escapeHtml(__('Checkout with PayPal')); ?>"/>
     <?php if ($block->getAdditionalLinkImage()): ?>
         <?php $linkImage = $block->getAdditionalLinkImage(); ?>
         <a href="<?php echo $block->escapeUrl($linkImage['href']);?>">

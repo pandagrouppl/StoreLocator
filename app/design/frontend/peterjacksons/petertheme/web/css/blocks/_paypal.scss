@@ -3,6 +3,11 @@
     &__button {
         @include button-black($bg: white, $bghov: white, $border: 1px solid #d0d0d0, $height: 55px, $margin-top: 11px);
 
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         &:hover {
             cursor: pointer;
             border: 1px solid black;
@@ -10,8 +15,6 @@
     }
 
     &__image {
-        @include sprite(paypalbutt);
-        display: block;
-        margin: 0 auto;
+        width: 219px;
     }
 }
