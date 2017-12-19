@@ -1,7 +1,6 @@
 .size-chart {
     background: white;
     width: 100%;
-    max-width: 922px;
     z-index: 11;
     padding: 20px;
     box-sizing: border-box;
@@ -15,14 +14,39 @@
 
     &__overlay {
         min-width: 500px;
+        max-width: 922px;
+        margin: 0 auto;
     }
 
     &__close {
-        color: #838282;
+        font-size: 13px;
+        margin-right: 15px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         cursor: pointer;
-        font-size: 30px;
-        font-weight: 600;
-        align-self: flex-end;
+        position: fixed;
+        left: 1px;
+        right: 1px;
+        padding: 7px;
+        top: 1px;
+        background: white;
+
+        &:hover {
+            color: #999;
+        }
+
+        span {
+            margin-right: 22px;
+        }
+    }
+
+    &__close-icon {
+        @include sprite(remove-ico);
+        display: inline-block;
+        vertical-align: center;
+        transform: scale(1.3);
     }
 
     &__tabs {
