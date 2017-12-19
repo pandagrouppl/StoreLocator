@@ -21,6 +21,6 @@ $config = [
 <div data-mage-init='<?php /* @noEscape */ echo json_encode($config); ?>'
      class="paypal checkout paypal-logo <?php /* @noEscape */ echo $block->getContainerId(); ?>-container">
     <a id="<?php /* @noEscape */ echo $block->getContainerId(); ?>" href="#/">
-        <button class="paypal__button"><span class="paypal__image"></span></button>
+        <button class="paypal__button"><img src="<?php echo $this->getViewFileUrl('img/assets/product-page/paypalbutt.png'); ?>" class="paypal__image" /></button>
     </a>
 </div>
