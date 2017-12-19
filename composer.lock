@@ -61,14 +61,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "7d1276243a32675d23dff30d9deb0ec0fea91add"
+                "reference": "2e75bab0fc9834ac8de87ac6b729505ca2c830c3"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-12-12 16:17:16"
+            "time": "2017-12-19 16:20:33"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -353,10 +353,10 @@
         },
         {
             "name": "amasty/base",
-            "version": "1.0.9",
+            "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.0.9",
+                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
                 "reference": null,
                 "shasum": null
             },
@@ -488,10 +488,10 @@
         },
         {
             "name": "amasty/quickview",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.3",
+                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.4",
                 "reference": null,
                 "shasum": null
             },
@@ -6936,7 +6936,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -10243,7 +10243,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
