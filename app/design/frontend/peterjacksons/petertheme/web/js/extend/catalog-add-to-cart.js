@@ -47,7 +47,6 @@ define([
                     if (self.isLoaderEnabled()) {
                         $('body').trigger(self.options.processStop);
                     }
-                    debugger;
                     if (res.backUrl) {
                         if ((res.backUrl.match(/paypal/)||[]).length) {
                             window.location = res.backUrl;
