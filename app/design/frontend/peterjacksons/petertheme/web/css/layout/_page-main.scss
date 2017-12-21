@@ -132,6 +132,7 @@ body[class~='cms-page-view'] {
     }
 }
 
+//Homepage
 body[class~='cms-index-index'] {
     .page-main {
         max-width: 100%;
@@ -139,6 +140,7 @@ body[class~='cms-index-index'] {
     }
 }
 
+//Sartorial Ninja Page
 body[class~='cms-sartorial-ninja'] {
     .page-main {
         max-width: 1260px;
@@ -146,7 +148,16 @@ body[class~='cms-sartorial-ninja'] {
     }
 }
 
+//The New Wave Page
 body[class~='cms-the-new-wave'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+//Wishlist
+body[class~='guest-wishlist-index-index'] {
     .page-main {
         max-width: 100%;
         padding: 0;

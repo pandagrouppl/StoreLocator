@@ -1,0 +1,84 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Sales\Block\Order\Items $block */
+?>
+    <div class="table-wrapper order-items">
+        <div class="data table table-order-items" id="my-orders-table">
+            <?php if($block->isPagerDisplayed()): ?>
+                <div>
+                    <div colspan="5" data-block="order-items-pager-top" class="order-pager-wrapper order-pager-wrapper-top">
+                        <?php echo $block->getPagerHtml() ?>
+                    </div>
+                </div>
+            <?php endif ?>
+            <div class="order-details__header">
+                <div class="col name"><?php /* @escapeNotVerified */ echo __('Product name') ?></div>
+                <div class="col sku"><?php /* @escapeNotVerified */ echo __('SKU') ?></div>
+                <div class="col price"><?php /* @escapeNotVerified */ echo __('Price') ?></div>
+                <div class="col qty"><?php /* @escapeNotVerified */ echo __('Quantity') ?></div>
+                <div class="col  "><?php /* @escapeNotVerified */ echo __('Subtotal') ?></div>
+            </div>
+            <?php $items = $block->getItems(); ?>
+            <?php $giftMessage = ''?>
+            <?php foreach ($items as $item): ?>
+                <?php if ($item->getParentItem()) continue; ?>
+                <div class="order-details__items">
+                <?php echo $block->getItemHtml($item) ?>
+                <?php if ($this->helper('Magento\GiftMessage\Helper\Message')->isMessagesAllowed('order_item', $item) && $item->getGiftMessageId()): ?>
+                    <?php $giftMessage = $this->helper('Magento\GiftMessage\Helper\Message')->getGiftMessageForEntity($item); ?>
+                    <div>
+                        <div class="col options" colspan="5">
+                            <a href="#"
+                                id="order-item-gift-message-link-<?php /* @escapeNotVerified */ echo $item->getId() ?>"
+                                class="action show"
+                                aria-controls="order-item-gift-message-<?php /* @escapeNotVerified */ echo $item->getId() ?>"
+                                data-item-id="<?php /* @escapeNotVerified */ echo $item->getId() ?>">
+                                <?php /* @escapeNotVerified */ echo __('Gift Message') ?>
+                            </a>
+                            <?php $giftMessage = $this->helper('Magento\GiftMessage\Helper\Message')->getGiftMessageForEntity($item); ?>
+                            <div class="order-gift-message" id="order-item-gift-message-<?php /* @escapeNotVerified */ echo $item->getId() ?>" role="region" aria-expanded="false" tabindex="-1">
+                                <a href="#"
+                                   title="<?php /* @escapeNotVerified */ echo __('Close') ?>"
+                                   aria-controls="order-item-gift-message-<?php /* @escapeNotVerified */ echo $item->getId()?>"
+                                   data-item-id="<?php /* @escapeNotVerified */ echo $item->getId()?>"
+                                   class="action close">
+                                    <?php /* @escapeNotVerified */ echo __('Close') ?>
+                                </a>
+                                <dl class="item-options">
+                                    <dt class="item-sender"><strong class="label"><?php /* @escapeNotVerified */ echo __('From') ?></strong><?php echo $block->escapeHtml($giftMessage->getSender()) ?></dt>
+                                    <dt class="item-recipient"><strong class="label"><?php /* @escapeNotVerified */ echo __('To') ?></strong><?php echo $block->escapeHtml($giftMessage->getRecipient()) ?></dt>
+                                    <dd class="item-message"><?php /* @escapeNotVerified */ echo $this->helper('Magento\GiftMessage\Helper\Message')->getEscapedGiftMessage($item) ?></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif ?>
+                </div>
+            <?php endforeach; ?>
+            <div class="order-details__summary">
+            <?php if($block->isPagerDisplayed()): ?>
+                <div>
+                    <div colspan="5" data-block="order-items-pager-bottom" class="order-pager-wrapper order-pager-wrapper-bottom">
+                        <?php echo $block->getPagerHtml();?>
+                    </div>
+                </div>
+            <?php endif ?>
+            <?php echo $block->getChildHtml('order_totals') ?>
+            </div>
+        </div>
+    </div>
+<?php if ($giftMessage): ?>
+    <script type="text/x-magento-init">
+    {
+        "a.action.show, a.action.close": {
+            "giftMessage": {}
+        }
+    }
+</script>
+<?php endif; ?>

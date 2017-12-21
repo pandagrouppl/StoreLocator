@@ -12,7 +12,7 @@
     }
 
     &__inputs {
-        @include wrap-form();
+        @include form-element-wrapper();
 
         label {
             margin: 5px 0;
@@ -61,11 +61,9 @@
     &__legend {
         width: 100%;
         padding: 5px 0;
-        border-bottom: 1px solid #e9e8e8;
-        color: #515151;
-        text-align: center;
+        color: black;
         font-size: 30px;
-        font-family: league_gothic, 'HlvtcNeueLTCndnsd', serif;
+        font-family: Roboto, sans-serif;
     }
 
     &__back {
@@ -79,10 +77,15 @@
     }
 
     &__button {
-        @include button-grey(20px);
-        @include wrap-form(360px);
-        display: block;
-        cursor: pointer;
+        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 210px;
+        height: 45px;
+        border-radius: 2px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
     }
 
     .password-strength-meter {
