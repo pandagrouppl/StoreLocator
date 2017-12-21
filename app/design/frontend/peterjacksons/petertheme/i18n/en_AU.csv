@@ -1,15 +1,5 @@
-"Search entire store here...","Search entire store here..."
-Search,Search
-"You have no items in your shopping cart.","You have no items in your shopping cart."
-"View cart","View cart"
-"Go to Checkout","Go to Checkout"
-Price,Price
-"See price before order confirmation.","See price before order confirmation."
-"Cart Subtotal","Cart Subtotal"
-Menu,Menu
-Account,Account
-Settings,Settings
-"1 columnaaaa","1 columnaaaa"
-"2 columns with left baraaaa","2 columns with left baraaaa"
-"2 columns with right baraaa","2 columns with right baraaa"
-"3 columnaaas","3 columnaaas"
+"We don't have as many ""%1"" as you requested.","Item is not available in selected quantity"
+"Zip/Postal Code","Post code"
+"Please select a region, state or province.","State"
+"Phone Number","Mobile number"
+"Email Address","Email"

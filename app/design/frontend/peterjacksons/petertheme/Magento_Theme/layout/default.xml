@@ -9,7 +9,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
-        <referenceContainer name="page.messages" htmlClass="page-main__messages" />
+        <referenceContainer name="page.messages" htmlClass="page-main__message" />
         <referenceContainer name="footer-container">
             <referenceContainer name="footer" remove="true" />
             <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
