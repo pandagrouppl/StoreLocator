@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5138198317c632d04cc1825ef0d34244",
-    "content-hash": "36240b16d896e8efce4e82b702d624e7",
+    "hash": "335b3ac050af1c0883eb171ca2329bed",
+    "content-hash": "a1573eea0896312104da89dd2c563cd4",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -154,7 +154,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "6dd32580e059f74cc7915939951aec7efc12a579"
+                "reference": "9fd504e668080058ff02b92ffc4572a840eda606"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -162,7 +162,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2017-12-08 08:50:30"
+            "time": "2017-12-22 10:04:44"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -253,6 +253,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup Regions Patcher Module",
             "time": "2017-12-21 14:23:50"
+        },
+        {
+            "name": "PandaGroup/Salesforce",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
+                "reference": "91337e9219fce414342d3f232e0f6f6e8dcc5f46"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
+            "time": "2017-12-27 14:33:03"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -1136,6 +1151,52 @@
                 "validator"
             ],
             "time": "2017-04-03 19:08:52"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": " 4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "time": "2017-06-27 22:17:23"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -6536,6 +6597,141 @@
             "time": "2016-10-10 12:19:37"
         },
         {
+            "name": "robrichards/wse-php",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/wse-php.git",
+                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/wse-php/zipball/5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
+                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3",
+                "robrichards/xmlseclibs": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\WsePhp\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Richards",
+                    "homepage": "http://www.cdatazone.org/",
+                    "role": "Main developer"
+                }
+            ],
+            "description": "Libraries for adding WS-* support to ext/soap in PHP.",
+            "homepage": "https://github.com/robrichards/wse-php",
+            "keywords": [
+                "WS-Security",
+                "soap",
+                "ws-addressing"
+            ],
+            "time": "2017-03-09 16:42:34"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "suggest": {
+                "ext/mcrypt": "MCrypt extension",
+                "ext/openssl": "OpenSSL extension"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "time": "2016-09-08 13:15:00"
+        },
+        {
+            "name": "salesforce-mc/fuel-sdk-php",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salesforce-marketingcloud/FuelSDK-PHP.git",
+                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salesforce-marketingcloud/FuelSDK-PHP/zipball/188970aadb34ef1b71cf70a9107ca0a6273123ba",
+                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-openssl": "*",
+                "ext-soap": "*",
+                "firebase/php-jwt": ">=5.0.0",
+                "php": ">=5.6.24",
+                "robrichards/wse-php": "2.0.1"
+            },
+            "require-dev": {
+                "dompdf/dompdf": "0.6",
+                "phpdocumentor/phpdocumentor": "2.8.0",
+                "phpunit/phpunit": ">=5.7.20"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FuelSdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Salesforce Marketing Cloud Fuel SDK for PHP",
+            "homepage": "https://developer.salesforce.com/docs/atlas.en-us.mc-sdks.meta/mc-sdks/index-sdk.htm",
+            "keywords": [
+                "exacttarget",
+                "fuel sdk",
+                "fuel-sdk",
+                "marketing cloud",
+                "php sdk",
+                "salesforce",
+                "sdk"
+            ],
+            "time": "2017-10-24 12:10:44"
+        },
+        {
             "name": "seld/cli-prompt",
             "version": "1.0.3",
             "source": {
@@ -8677,21 +8873,6 @@
     ],
     "packages-dev": [
         {
-            "name": "PandaGroup/Salesforce",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "8bb7b421e616195770b884265f91ac17ccd0aba8"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-08 12:24:29"
-        },
-        {
             "name": "PandaGroup/ShopByLook",
             "version": "dev-master",
             "source": {
@@ -8822,52 +9003,6 @@
             "description": "A tool to automatically fix PHP code style",
             "abandoned": "friendsofphp/php-cs-fixer",
             "time": "2017-09-11 14:11:16"
-        },
-        {
-            "name": "firebase/php-jwt",
-            "version": "v5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": " 4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2017-06-27 22:17:23"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -9500,141 +9635,6 @@
                 "xunit"
             ],
             "time": "2015-10-02 06:51:40"
-        },
-        {
-            "name": "robrichards/wse-php",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/wse-php.git",
-                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/wse-php/zipball/5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
-                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3",
-                "robrichards/xmlseclibs": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\WsePhp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Richards",
-                    "homepage": "http://www.cdatazone.org/",
-                    "role": "Main developer"
-                }
-            ],
-            "description": "Libraries for adding WS-* support to ext/soap in PHP.",
-            "homepage": "https://github.com/robrichards/wse-php",
-            "keywords": [
-                "WS-Security",
-                "soap",
-                "ws-addressing"
-            ],
-            "time": "2017-03-09 16:42:34"
-        },
-        {
-            "name": "robrichards/xmlseclibs",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
-                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3"
-            },
-            "suggest": {
-                "ext/mcrypt": "MCrypt extension",
-                "ext/openssl": "OpenSSL extension"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\XMLSecLibs\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "A PHP library for XML Security",
-            "homepage": "https://github.com/robrichards/xmlseclibs",
-            "keywords": [
-                "security",
-                "signature",
-                "xml",
-                "xmldsig"
-            ],
-            "time": "2016-09-08 13:15:00"
-        },
-        {
-            "name": "salesforce-mc/fuel-sdk-php",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/salesforce-marketingcloud/FuelSDK-PHP.git",
-                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/salesforce-marketingcloud/FuelSDK-PHP/zipball/188970aadb34ef1b71cf70a9107ca0a6273123ba",
-                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-openssl": "*",
-                "ext-soap": "*",
-                "firebase/php-jwt": ">=5.0.0",
-                "php": ">=5.6.24",
-                "robrichards/wse-php": "2.0.1"
-            },
-            "require-dev": {
-                "dompdf/dompdf": "0.6",
-                "phpdocumentor/phpdocumentor": "2.8.0",
-                "phpunit/phpunit": ">=5.7.20"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FuelSdk\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Salesforce Marketing Cloud Fuel SDK for PHP",
-            "homepage": "https://developer.salesforce.com/docs/atlas.en-us.mc-sdks.meta/mc-sdks/index-sdk.htm",
-            "keywords": [
-                "exacttarget",
-                "fuel sdk",
-                "fuel-sdk",
-                "marketing cloud",
-                "php sdk",
-                "salesforce",
-                "sdk"
-            ],
-            "time": "2017-10-24 12:10:44"
         },
         {
             "name": "sebastian/comparator",
