@@ -20,6 +20,20 @@
             <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="True" />
             <referenceBlock name="customer-account-navigation-product-reviews-link" remove="True" />
             <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="True" />
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-logout-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">customer/account/logout</argument>
+                    <argument name="label" xsi:type="string">Sign out</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="wishlist/general/active" name="customer-account-navigation-wish-list-link">
+                <arguments>
+                    <argument name="path" xsi:type="string">wishlist</argument>
+                    <argument name="label" xsi:type="string">My Wishlist</argument>
+                </arguments>
+            </block>
         </referenceBlock>
+        <referenceBlock name="customer-account-navigation-account-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-newsletter-subscriptions-link" remove="true"/>
     </body>
 </page>

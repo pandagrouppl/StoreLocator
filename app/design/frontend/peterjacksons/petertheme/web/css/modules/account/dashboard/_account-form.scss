@@ -11,6 +11,25 @@
         padding: 0;
     }
 
+    &__two-cols-input {
+        display: flex;
+        justify-content: space-between;
+
+        > div {
+            flex-basis: 49%;
+        }
+    }
+
+    &__two-cols-input-reverse {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        > div {
+            flex-basis: 49%;
+        }
+    }
+
     &__inputs {
         @include form-element-wrapper();
 

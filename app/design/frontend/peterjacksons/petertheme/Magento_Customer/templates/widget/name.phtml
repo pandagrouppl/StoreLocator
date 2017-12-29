@@ -69,16 +69,13 @@ $suffix = $block->showSuffix();
         </div>
     <?php endif; ?>
         <div class="account-form__inputs field field-name-firstname required">
-            <label class="label" for="<?php /* @escapeNotVerified */ echo $block->getFieldId('firstname') ?>">
-                <span><?php /* @escapeNotVerified */ echo $block->getStoreLabel('firstname') ?></span>
-            </label>
-
             <div class="control">
                 <input type="text" id="<?php /* @escapeNotVerified */ echo $block->getFieldId('firstname') ?>"
                        name="<?php /* @escapeNotVerified */ echo $block->getFieldName('firstname') ?>"
                        value="<?php echo $block->escapeHtml($block->getObject()->getFirstname()) ?>"
                        title="<?php /* @escapeNotVerified */ echo $block->getStoreLabel('firstname') ?>"
-                       class="input-text <?php /* @escapeNotVerified */ echo $block->getAttributeValidationClass('firstname') ?>" <?php /* @escapeNotVerified */ echo $block->getFieldParams() ?> <?php if ($block->getAttributeValidationClass('firstname') == 'required-entry') echo ' data-validate="{required:true}"' ?>>
+                       class="input-text <?php /* @escapeNotVerified */ echo $block->getAttributeValidationClass('firstname') ?>" <?php /* @escapeNotVerified */ echo $block->getFieldParams() ?> <?php if ($block->getAttributeValidationClass('firstname') == 'required-entry') echo ' data-validate="{required:true}"' ?>
+                       placeholder="First name*">
             </div>
         </div>
     <?php if ($middle): ?>
@@ -98,16 +95,13 @@ $suffix = $block->showSuffix();
         </div>
     <?php endif; ?>
         <div class="account-form__inputs field field-name-lastname required">
-            <label class="label"  for="<?php /* @escapeNotVerified */ echo $block->getFieldId('lastname') ?>">
-                <span><?php /* @escapeNotVerified */ echo $block->getStoreLabel('lastname') ?></span>
-            </label>
-
             <div class="control">
                 <input type="text" id="<?php /* @escapeNotVerified */ echo $block->getFieldId('lastname') ?>"
                        name="<?php /* @escapeNotVerified */ echo $block->getFieldName('lastname') ?>"
                        value="<?php echo $block->escapeHtml($block->getObject()->getLastname()) ?>"
                        title="<?php /* @escapeNotVerified */ echo $block->getStoreLabel('lastname') ?>"
-                       class="input-text <?php /* @escapeNotVerified */ echo $block->getAttributeValidationClass('lastname') ?>" <?php /* @escapeNotVerified */ echo $block->getFieldParams() ?> <?php if ($block->getAttributeValidationClass('lastname') == 'required-entry') echo ' data-validate="{required:true}"' ?>>
+                       class="input-text <?php /* @escapeNotVerified */ echo $block->getAttributeValidationClass('lastname') ?>" <?php /* @escapeNotVerified */ echo $block->getFieldParams() ?> <?php if ($block->getAttributeValidationClass('lastname') == 'required-entry') echo ' data-validate="{required:true}"' ?>
+                       placeholder="Last name*">
             </div>
         </div>
     <?php if ($suffix): ?>

@@ -14,31 +14,23 @@ $_item = $block->getItem();
         <div class="product name product-item-name"><?php echo $block->escapeHtml($_item->getName()) ?>
             <?php if ($_options = $block->getItemOptions()): ?>
             <?php foreach ($_options as $_option) : ?>
-                <div><?php echo $block->escapeHtml($_option['label']) ?>
-
-
-
-
+                <div>
+                    <?php echo $block->escapeHtml($_option['label']) ?>
+                    <?php if (!$block->getPrintStatus()): ?>
+                        <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
+                            <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                                <?php /* @escapeNotVerified */ echo $_formatedOptionValue['full_view'] ?>
+                            <?php else: ?>
+                                <?php /* @escapeNotVerified */ echo $_formatedOptionValue['value'] ?>
+                            <?php endif; ?>
+                    <?php else: ?>
+                        <div>
+                            <?php echo nl2br($block->escapeHtml((isset($_option['print_value']) ? $_option['print_value'] : $_option['value']))) ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <?php if (!$block->getPrintStatus()): ?>
-                    <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
-                    <div>
-                        <?php if (isset($_formatedOptionValue['full_view'])): ?>
-                            <?php /* @escapeNotVerified */ echo $_formatedOptionValue['full_view'] ?>
-                        <?php else: ?>
-                            <?php /* @escapeNotVerified */ echo $_formatedOptionValue['value'] ?>
-                        <?php endif; ?>
-                    </div>
-                <?php else: ?>
-                    <div>
-                        <?php echo nl2br($block->escapeHtml((isset($_option['print_value']) ? $_option['print_value'] : $_option['value']))) ?>
-                    </div>
-                <?php endif; ?>
             <?php endforeach; ?>
         </div>
-
-
-
         <?php endif; ?>
         <?php $addtInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
         <?php if ($addtInfoBlock) :?>
@@ -46,7 +38,7 @@ $_item = $block->getItem();
         <?php endif; ?>
         <?php echo $block->escapeHtml($_item->getDescription()) ?>
     </td>
-    <td class="col sku" data-th="<?php echo $block->escapeHtml(__('SKU')); ?>"><?php /* @escapeNotVerified */ echo $block->prepareSku($block->getSku()) ?></td>
+    <td class="col sku" data-th="<?php echo $block->escapeHtml(__('SKU')); ?>"><div><?php /* @escapeNotVerified */ echo $block->prepareSku($block->getSku()) ?></div></td>
     <td class="col price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
         <?php echo $block->getItemPriceHtml(); ?>
     </td>
