@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\Sales\Block\Order\Info */ ?>
+<?php $_order = $block->getOrder() ?>
+<div class="delivery-details">
+    <div class="delivery-details__header">
+        <p><?php /* @escapeNotVerified */ echo __('Delivery Details') ?></p>
+    </div>
+    <div class="delivery-details__content">
+    <?php if (!$_order->getIsVirtual()): ?>
+        <div class="delivery-details__address">
+            <div class="delivery-details__title"><span><?php /* @escapeNotVerified */ echo __('Delivery Address') ?></span></div>
+            <div class="delivery-details__info">
+                <?php /* @escapeNotVerified */ echo $block->getFormattedAddress($_order->getShippingAddress()); ?>
+            </div>
+        </div>
+
+        <div class="delivery-details__delivery">
+            <div class="delivery-details__title">
+                <span><?php /* @escapeNotVerified */ echo __('Delivery Method') ?></span>
+            </div>
+            <div class="delivery-details__info">
+            <?php if ($_order->getShippingDescription()): ?>
+                <?php echo $block->escapeHtml($_order->getShippingDescription()) ?>
+            <?php else: ?>
+                <?php /* @escapeNotVerified */ echo __('No shipping information available'); ?>
+            <?php endif; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
+        <div class="delivery-details__payment">
+            <div class="delivery-details__title">
+                <span><?php /* @escapeNotVerified */ echo __('Payment Method') ?></span>
+            </div>
+            <div class="delivery-details__info">
+                <?php echo $block->getPaymentInfoHtml() ?>
+            </div>
+        </div>
+    </div>
+</div>

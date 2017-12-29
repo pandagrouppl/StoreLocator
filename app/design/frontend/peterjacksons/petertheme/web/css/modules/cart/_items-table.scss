@@ -56,6 +56,26 @@
         }
     }
 
+    &__message {
+        font-size: 12px;
+        margin: 5px 0 10px;
+        padding: 5px;
+        border-radius: 1px;
+        display: inline-block;
+
+        &.success {
+            border: 1px solid #399131;
+        }
+
+        &.error {
+            border: 1px solid #d32b21;
+        }
+
+        &.notice {
+            border: 1px solid #d32b21;
+        }
+    }
+
     &__options-and-actions {
         display: flex;
     }

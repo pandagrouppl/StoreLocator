@@ -1,0 +1,19 @@
+.account .page-main {
+    max-width: 966px;
+    margin: 55px auto;
+
+    &__columns {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .account-dashboard {
+        width: 715px;
+        margin: 0 0 0 50px;
+    }
+
+    .account-nav {
+        width: 215px;
+    }
+}

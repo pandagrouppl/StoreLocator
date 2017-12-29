@@ -37,7 +37,7 @@
     </fieldset>
 
     <fieldset class="fieldset password" data-container="change-email-password">
-        <legend class="account-form__legend legend"><span data-title="change-email-password"><?php /* @escapeNotVerified */ echo __('Change Email and Password') ?></span></legend><br>
+<!--        <legend class="account-form__legend legend"><span data-title="change-email-password">--><?php ///* @escapeNotVerified */ echo __('Change Email and Password') ?><!--</span></legend><br>-->
         <div class="account-form__inputs field email required" data-container="change-email">
             <label class="label" for="email"><span><?php /* @escapeNotVerified */ echo __('Email') ?></span></label>
             <div class="control">
@@ -80,11 +80,11 @@
         <?php echo $block->getChildHtml('form_additional_info'); ?>
     </fieldset>
     <div class="actions-toolbar">
-        <div class="secondary">
-            <a class="account-form__back action back" href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>"><span>« <?php /* @escapeNotVerified */ echo __('Back') ?></span></a>
-        </div>
+<!--        <div class="secondary">-->
+<!--            <a class="account-form__back action back" href="--><?php //echo $block->escapeUrl($block->getBackUrl()) ?><!--"><span>« --><?php ///* @escapeNotVerified */ echo __('Back') ?><!--</span></a>-->
+<!--        </div>-->
         <div class="primary">
-            <button type="submit" class="account-form__button action save primary" title="<?php /* @escapeNotVerified */ echo __('Save') ?>"><span><?php /* @escapeNotVerified */ echo __('Save') ?></span></button>
+            <button type="submit" class="account-form__button action save primary" title="<?php /* @escapeNotVerified */ echo __('Save') ?>"><span><?php /* @escapeNotVerified */ echo __('Save Changes') ?></span></button>
         </div>
     </div>
 </form>

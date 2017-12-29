@@ -16,7 +16,7 @@ const home = () => {
         nextArrow: '<div class="slick-next"></div>',
     });
 
-    $( '.home-banner__scroll-down' ).click(function(evt) {
+    $( '.main-banner__scroll-down' ).click(function(evt) {
         evt.preventDefault();
         $( 'html, body' ).animate({
             scrollTop: $( '#top' ).offset().top - 135

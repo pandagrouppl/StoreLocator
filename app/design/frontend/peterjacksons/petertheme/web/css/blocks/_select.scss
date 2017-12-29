@@ -48,6 +48,10 @@
         &::-ms-expand {
             display: none;
         }
+
+        @media all and (max-width: 350px) {
+            padding-left: 5px;
+        }
     }
 
     &__arrow {
@@ -86,6 +90,8 @@
         > div.mage-error {
             position: absolute;
             top: 100%;
+            left: 0;
+            width: inherit;
             padding-top: 3px;
             color: red;
         }

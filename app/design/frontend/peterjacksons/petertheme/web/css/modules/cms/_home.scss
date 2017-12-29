@@ -1,65 +1,47 @@
-.home-banner {
+.main-banner {
+    background-image: url('../../img/assets/home-11-2017/Banner-DEC-sale.jpg');
     width: 100%;
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: -12px -36px;
     position: relative;
+    height: 99vh;
 
-    &--header {
-        background-image: url('../../img/assets/home-11-2017/Banner-DEC-sale.jpg');
-        height: 950px;
-        background-position: 0 -32px;
+    &__wrapper {
+        padding: 23em 0;
     }
 
-    &--custom-wrapper {
-        height: 100%;
+    &__inner {
+        max-width: 1080px;
+        margin: 0 auto;
         display: flex;
-        padding: 0 23.4%;
         justify-content: flex-end;
     }
 
-    &__right-box {
-        position: absolute;
-        top: 25.9%;
+    &__content-box {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 4em;
     }
 
-    &__scroll-down {
-        position: absolute;
-        top: 91%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-        bottom: 0;
-        cursor: pointer;
-
-        &:hover {
-            bottom: 20px;
-        }
-
-        &::after {
-            content: '';
-            display: inline-block;
-            width: 3.5em;
-            height: 3.5em;
-            border-top: 0.2em solid #fff;
-            border-right: 0.2em solid #fff;
-            transform: rotate(135deg);
-        }
-    }
-
-    .btn--center {
-        margin: 44px auto 0 auto;
-    }
-
-    &__fixed-image {
+    &__logo {
         width: 100%;
-        max-width: 530px;
+        max-width: 400px;
         cursor: pointer;
     }
 
-    .btn--black-hover {
-        color: #000;
-        border-color: #000;
+    &__text {
+        font-weight: 400;
+        font-size: 33px;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        margin: 25px 0 25px 0;
+        letter-spacing: 1px;
+        text-align: center;
+        color: white;
     }
 
     button,
@@ -68,14 +50,17 @@
     }
 
     button {
-        background: transparent;
-        border: 1px solid #fff;
-        color: #fff;
-        display: block;
-        font-size: 14px;
-        padding: 12px 39px;
-        margin-top: 40px;
+        font-family: Roboto, sans-serif;
+        font-weight: normal;
+        color: white;
+        font-size: 15px;
+        padding: 11px 36px;
+        border: 1px solid white;
+        text-decoration: none;
+        background: none;
         position: relative;
+        z-index: 2;
+        line-height: 100%;
         text-transform: uppercase;
         cursor: pointer;
         transform: translateZ(0);
@@ -106,21 +91,49 @@
         color: black;
     }
 
-    &__formated-image {
+    &__scroll-down {
+        position: absolute;
+        top: 91.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            bottom: 20px;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 3em;
+            height: 3em;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(135deg);
+        }
+    }
+}
+
+.home-banner {
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__image {
+        background-position: center;
         width: 96%;
         height: 803px;
         margin: 8px 40px 2% 2%;
 
         &--gift {
             background-image: url('../../img/assets/home-11-2017/banner-2017-11-man-gift-guide-big.jpg');
-            background-position: center;
         }
 
-        &--bottom {
-            background-image: url('../../img/assets/home-11-2017/banner-2017-nathan.jpg');
-        }
-
-        &--bottom-secondary {
+        &--measure {
             background-image: url('../../img/assets/home-11-2017/banner-2017-08-design.jpg');
         }
 
@@ -129,83 +142,538 @@
         }
     }
 
-    &--wrapper {
-        width: 100%;
+    &__wrapper {
+        display: flex;
         height: 100%;
-        display: flex;
-        align-items: flex-end;
-    }
 
-    &--wrapper-right {
-        justify-content: flex-end;
-        align-items: center;
-    }
+        &--right {
+            justify-content: flex-end;
+            align-items: center;
+        }
 
-    &--pos-right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        &--left {
+            align-items: flex-end;
+        }
     }
 
     &__box {
-        margin: 5% 5%;
+        margin: 10% 5%;
 
-        &--right {
+        &--gift {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 54%;
         }
-    }
 
-    &__box-right {
-        margin: 5% 20%;
+        &--beard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 45%;
+            height: 100%;
+        }
     }
 
     &__title {
-        color: white;
+        color: #fff;
         font-size: 55px;
-        font-weight: 800;
+        font-weight: 900;
         text-transform: uppercase;
         line-height: 1.1em;
         margin: 0;
+        font-family: futurabold, sans-serif;
 
         &--gift {
-            font-size: 55px;
-            text-transform: uppercase;
-            font-family: 'GothamBook', sans-serif;
+            font-family: GothamBook, sans-serif;
             padding-bottom: 40px;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 10px;
         }
-        
-        &--black {
-            color: #000;
-        }
-    }
 
-    &--br {
-        display: block;
+        &--beard {
+            color: #000;
+            font-size: 55px;
+            text-transform: uppercase;
+            font-family: futurabold, sans-serif;
+            font-weight: 900;
+            margin: 0;
+        }
     }
 
     &__description {
-        color: white;
+        color: #fff;
         font-weight: 300;
         line-height: 1.3em;
         font-size: 16px;
-        margin: 18px 0 0 0;
+        margin: 18px 0 0;
         max-width: 400px;
 
         &--gift {
-            color: white;
-            font-family: 'GothamBook', sans-serif;
+            color: #fff;
+            font-family: GothamBook, sans-serif;
             font-size: 17px;
             letter-spacing: 2.5px;
             line-height: 130%;
         }
 
-        &--black {
+        &--beard {
             color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            line-height: 130%;
+            max-width: none;
+            margin: 18px 0 0 0;
+            font-weight: 300;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        padding: 100px 0 0 0;
+
+        img {
+            margin: 0 30px 20px 0;
+            max-width: 100%;
+        }
+    }
+
+    button,
+    button::after {
+        transition: all 0.3s;
+    }
+
+    button {
+        font-family: Roboto, sans-serif;
+        font-weight: normal;
+        color: white;
+        font-size: 15px;
+        padding: 11px 36px;
+        border: 1px solid white;
+        text-decoration: none;
+        background: none;
+        position: relative;
+        z-index: 2;
+        line-height: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        transform: translateZ(0);
+    }
+
+    button::before,
+    button::after {
+        background: #fff;
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+
+    button:hover {
+        color: black;
+        z-index: 1;
+    }
+
+    .btn-margin-top {
+        margin-top: 40px;
+    }
+
+    .btn-black {
+        border: 1px solid black;
+        color: black;
+        margin: 40px 0 0 0;
+        background-color: transparent;
+    }
+
+    .btn::after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
+
+    .btn:hover::after {
+        width: 100%;
+        color: black;
+    }
+}
+
+@media all and (max-width: 1500px) {
+    .main-banner {
+        height: 700px;
+        background-position: center -32px;
+        background-size: cover;
+
+        &__wrapper {
+            padding: 14.64em 0;
+        }
+
+        &__content-box {
+            max-width: 300px;
+            margin: 0 10.2em;
+        }
+
+        &__logo {
+            max-width: 300px;
+        }
+
+        &__text {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        &__scroll-down {
+            top: 90%;
+        }
+
+        button {
+            font-size: 12px;
+        }
+    }
+
+    .home-banner {
+        &__image {
+            height: 650px;
+
+            &--measure {
+                height: 605px;
+            }
+
+            &--beard {
+                background-position: center right;
+            }
+        }
+
+        &__box {
+            &--beard {
+                width: 55%;
+            }
+        }
+
+        &__title {
+            &--beard {
+                font-size: 41px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1260px) {
+    .main-banner {
+        height: 615px;
+
+        &__wrapper {
+            padding: 13.64em 0;
+        }
+
+        &__content-box {
+            max-width: 250px;
+            margin: 0 14.2em;
+        }
+
+        &__logo {
+            max-width: 250px;
+        }
+
+        &__text {
+            font-size: 25px;
+            margin: 15px 0;
+        }
+
+        &__scroll-down {
+            top: 88%;
+        }
+
+        button {
+            font-size: 12px;
+        }
+    }
+
+    .home-banner {
+        &__image {
+            height: 500px;
+
+            &--gift {
+                background-position: center center;
+                background-size: cover;
+            }
+
+            &--measure {
+                background-position: 0 0;
+                height: 518px;
+            }
+
+            &--beard {
+                height: 550px;
+                background-position: center right;
+                background-size: cover;
+            }
+        }
+
+        &__slash {
+            font-size: 0;
+            display: block;
+            height: 1px;
+            background: #fff;
+            margin: 25px auto 25px auto;
+        }
+
+        &__title {
+            &--gift {
+                font-size: 40px;
+                padding-bottom: 30px;
+            }
+        }
+
+        &__logos {
+            padding: 50px 0 0 0;
+        }
+    }
+}
+
+@media all and (max-width: 975px) {
+    .main-banner {
+        height: 500px;
+        background-position: center top 0;
+        background-size: cover;
+
+        &__wrapper {
+            padding: 11.64em 0;
+        }
+
+        &__content-box {
+            max-width: 200px;
+            margin: 0 16.2em;
+        }
+
+        &__logo {
+            max-width: 200px;
+        }
+
+        &__text {
+            font-size: 21px;
+            margin: 15px 0;
+        }
+
+        &__scroll-down {
+            top: 89%;
+        }
+    }
+
+    .home-banner {
+        &__image {
+            &--gift {
+                margin-top: 20px;
+                height: 450px;
+            }
+
+            &--measure {
+                height: 375px;
+            }
+
+            &--beard {
+                height: 450px;
+            }
+        }
+
+        &__slash {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 750px) {
+    .main-banner {
+        &__content-box {
+            margin: 0 8.2em;
+        }
+    }
+
+    .home-banner {
+        &__image {
+            &--gift {
+                height: 375px;
+            }
+
+            &--beard {
+                background-image: url('../../img/assets/home-11-2017/banner-2017-11-decembeard-mob2.jpg');
+                background-position: left;
+            }
+        }
+
+        &__slash {
+            width: 50%;
+            margin: 15px auto 15px auto;
+        }
+
+        &__title {
+            &--beard {
+                font-size: 30px;
+            }
+        }
+
+        &__description {
+            &--beard {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 650px) {
+    .home-banner {
+        &__image {
+            &--beard {
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 560px) {
+    .main-banner {
+        height: auto;
+        background-image: url('../../img/assets/home-11-2017/banner-2017-12-sale-mob.jpg');
+        background-position-x: left;
+
+        &__wrapper {
+            padding: 8.4em 0;
+        }
+
+        &__content-box {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        &__logo {
+            max-width: 300px;
+        }
+
+        &__text {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        button {
+            border-color: #363636;
+            background: #363636;
+            font-weight: 600;
+
+            &:hover {
+                color: white;
+            }
+
+            &::before,
+            &::after {
+                background: none;
+            }
+        }
+
+        &__scroll-down {
+            top: 94%;
+
+            &::after {
+                width: 1.3em;
+                height: 1.3em;
+            }
+        }
+    }
+
+    .home-banner {
+        &__image {
+            &--gift {
+                background-image: url('../../img/assets/home-11-2017/banner-2017-11-man-gift-guide-mob2.jpg');
+                background-size: cover;
+                margin-top: 10px;
+                height: 325px;
+            }
+
+            &--measure {
+                background-image: url('../../img/assets/home-11-2017/banner-2017-08-design-mb.jpg');
+                background-position: right 0 center;
+                height: 340px;
+            }
+        }
+
+        &__description {
+            display: none;
+        }
+
+        &__wrapper {
+            &--center {
+                justify-content: center;
+            }
+        }
+
+        &__box {
+            &--gift {
+                padding: 20px;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .btn-margin-top {
+            margin-top: 10px;
+        }
+
+        &__logos {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    .men-guide {
+        &__header {
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 460px) {
+    .home-banner {
+        &__image {
+            &--beard {
+                height: 300px;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media all and (max-width: 400px) {
+    .home-banner {
+        &__image {
+            &--beard {
+                background-image: url('../../img/assets/home-11-2017/banner-2017-11-decembeard-mob.jpg');
+                background-position: left;
+            }
+        }
+    }
+
+    .men-guide-slider {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__more {
+            font-size: 13px;
+        }
+
+        p {
+            font-size: 13px;
         }
     }
 }
@@ -374,25 +842,10 @@
 
 @media all and (max-width: 1500px) {
     .home-banner {
-        &--header {
-            height: 700px;
-            background-position: center;
-            margin: 0 0 40px 0;
-        }
-
-        &--custom-wrapper {
-            height: 100%;
-            padding: 0;
-        }
-
         &__right-box {
             max-width: 300px;
             padding: 0 20%;
             top: 26.9%;
-        }
-
-        &__formated-image {
-            height: 650px;
         }
 
         &__title {
@@ -436,19 +889,6 @@
 
 @media all and (max-width: 1260px) {
     .home-banner {
-        &--header {
-            height: 615px;
-        }
-
-        &__formated-image {
-            height: 500px;
-            background-size: cover;
-            margin-bottom: 40px;
-
-            &--beard {
-                background-position: center right;
-            }
-        }
 
         &__right-box {
             max-width: 250px;
@@ -479,16 +919,6 @@
 
 @media all and (max-width: 975px) {
     .home-banner {
-        &--header {
-            height: 500px;
-            background-position: center;
-            margin: 0 0 20px 0;
-        }
-
-        &__formated-image {
-            margin-bottom: 20px;
-        }
-
         &__right-box {
             max-width: 200px;
             top: 25.9%;
@@ -543,44 +973,14 @@
 
 @media all and (max-width: 900px) {
     .home-banner {
-        &__formated-image {
-            height: 400px;
-            background-position: center;
-        }
-
-        &--wrapper {
-            justify-content: flex-end;
-        }
-
         &__box {
             margin: 7% 3%;
-            text-align: right;
-
-            .btn--pos-right {
-                margin: 20px 0 0 auto;
-            }
-        }
-
-        &--wrapper-left {
-            justify-content: flex-start;
-        }
-
-        &__box-left {
-            text-align: left;
         }
     }
 }
 
 @media all and (max-width: 750px) {
     .home-banner {
-        &__formated-image {
-            height: 375px;
-            background-position: center;
-        }
-
-        &--space {
-            margin: 15px auto 15px auto;
-        }
 
         &__title--gift {
             font-size: 35px;
@@ -605,42 +1005,6 @@
 
 @media all and (max-width: 560px) {
     .home-banner {
-        &--header {
-            height: 400px;
-            margin: 0 0 10px 0;
-        }
-
-        &--pos-right {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__right-box {
-            top: 15%;
-            max-width: 260px;
-        }
-
-        &__formated-image {
-            height: 340px;
-            max-height: 340px;
-            margin-bottom: 10px;
-
-            &--gift {
-                background-image: url('../../img/assets/home-11-2017/banner-2017-11-man-gift-guide-mob2.jpg');
-            }
-
-            &--bottom {
-                background-position: right -100px center;
-            }
-
-            &--bottom-secondary {
-                background-image: url('../../img/assets/home-11-2017/banner-2017-08-design-mb.jpg');
-            }
-        }
-
-        &--custom-wrapper {
-            justify-content: center;
-        }
 
         &__box {
             margin: 10% 8%;
@@ -683,66 +1047,6 @@
     }
 }
 
-@media all and (max-width: 480px) {
-    .men-guide {
-        &__header {
-            h1 {
-                font-size: 25px;
-            }
 
-            p {
-                font-size: 13px;
-            }
-        }
-    }
-}
 
-@media all and (max-width: 460px) {
-    .home-banner {
-        &--header {
-            background-position: right -290px top;
-        }
 
-        &__formated-image {
-            &--bottom-secondary {
-                background-position: left -77px center;
-            }
-        }
-
-        button {
-            margin-top: 10px;
-        }
-    }
-}
-
-@media all and (max-width: 400px) {
-    .home-banner {
-        &__formated-image {
-            background-position: right -90px center;
-
-            &--bottom {
-                background-position: right -120px center;
-            }
-        }
-
-        &__centered {
-            img {
-                max-width: 40%;
-            }
-        }
-    }
-
-    .men-guide-slider {
-        &__title {
-            font-size: 16px;
-        }
-
-        &__more {
-            font-size: 13px;
-        }
-
-        p {
-            font-size: 13px;
-        }
-    }
-}
