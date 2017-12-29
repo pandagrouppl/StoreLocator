@@ -34,10 +34,9 @@
         "PandaGroup/AttributeUpdate": "dev-master",
         "magenest/module-anz": "dev-master",
         "amasty/base": "^1.0",
-        "amasty/module-special-promo": "^1.2",
-        "amasty/module-special-promo-pro": "^1.2",
+        "amasty/module-special-promo-pro": "^2.0",
         "amasty/module-gift-card": "^1.1",
-        "amasty/shopby": "^1.15",
+        "amasty/shopby": "^2.4",
         "amasty/quickview": "^1.0",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master"

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5138198317c632d04cc1825ef0d34244",
-    "content-hash": "36240b16d896e8efce4e82b702d624e7",
+    "hash": "c03843179a43c4d0ee334b8ef060282c",
+    "content-hash": "85298371a108ace8056345ca06c59603",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -61,14 +61,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "2e75bab0fc9834ac8de87ac6b729505ca2c830c3"
+                "reference": "ccbba9c492ccf976e6c816e1b90ac2e94900e057"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2017-12-19 16:20:33"
+            "time": "2017-12-21 14:04:13"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -154,7 +154,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "6dd32580e059f74cc7915939951aec7efc12a579"
+                "reference": "9fd504e668080058ff02b92ffc4572a840eda606"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -162,7 +162,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2017-12-08 08:50:30"
+            "time": "2017-12-22 10:04:44"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -245,14 +245,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git",
-                "reference": "dcbf3eb57822fd3070ad69765916312656d9c8c2"
+                "reference": "56f6b767826ce6096a26a60ca81c2eb4ac9cbc4a"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Regions Patcher Module",
-            "time": "2017-10-23 08:06:37"
+            "time": "2017-12-21 14:23:50"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -356,7 +356,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
+                "url": "https://composer.amasty.com/community/packages/base-1.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -382,7 +382,7 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card.zip?v=1.1.2",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -406,16 +406,16 @@
         },
         {
             "name": "amasty/module-improved-layered-navigation-page",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page.zip",
+                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -433,10 +433,10 @@
         },
         {
             "name": "amasty/module-special-promo",
-            "version": "1.3.1",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo.zip?v=1.3.1",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -460,10 +460,10 @@
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "1.3.1",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro.zip?v=1.3.1",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -491,7 +491,7 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.4",
+                "url": "https://composer.amasty.com/community/packages/quickview-1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -515,21 +515,22 @@
         },
         {
             "name": "amasty/shopby",
-            "version": "1.15.2",
+            "version": "2.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-2.4.7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "amasty/base": ">=1.0.1",
-                "amasty/module-improved-layered-navigation-page": "1.15.2",
-                "amasty/shopby-brand": "1.15.2",
-                "amasty/shopby-root": "1.15.2",
-                "amasty/shopby-seo": "1.15.2",
+                "amasty/module-improved-layered-navigation-page": ">=2.4.5",
+                "amasty/shopby-brand": ">=2.4.5",
+                "amasty/shopby-root": ">=2.4.5",
+                "amasty/shopby-seo": ">=2.4.5",
+                "amasty/shopbybase": ">=2.4.5",
                 "magento/module-layered-navigation": ">=100.0",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -547,16 +548,16 @@
         },
         {
             "name": "amasty/shopby-brand",
-            "version": "1.15.2",
+            "version": "2.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-brand.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-brand-2.4.6.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -574,16 +575,16 @@
         },
         {
             "name": "amasty/shopby-root",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-root.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -601,16 +602,16 @@
         },
         {
             "name": "amasty/shopby-seo",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-seo.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -625,6 +626,33 @@
                 "Commercial"
             ],
             "description": "Improved Layered Navigation by Amasty - SEO sub-module"
+        },
+        {
+            "name": "amasty/shopbybase",
+            "version": "2.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopbybase-2.4.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/base": ">=1.0.1",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyBase\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Base Improved Layered Navigation by Amasty"
         },
         {
             "name": "braintree/braintree_php",
@@ -899,16 +927,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+                "reference": "049797d727261bf27f2690430d935067710049c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
+                "reference": "049797d727261bf27f2690430d935067710049c2",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +948,7 @@
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -991,15 +1019,18 @@
                 "lavalite",
                 "lithium",
                 "magento",
+                "majima",
                 "mako",
                 "mediawiki",
                 "modulework",
+                "modx",
                 "moodle",
                 "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
                 "puppet",
+                "pxcms",
                 "reindex",
                 "roundcube",
                 "shopware",
@@ -1012,7 +1043,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09 07:53:48"
+            "time": "2017-12-29 09:13:20"
         },
         {
             "name": "composer/semver",
@@ -6736,12 +6767,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1"
+                "reference": "3c50c54b2a47dea50eca814e684977b825105036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f981d59f01118f7c9f6179ed43c039cbcd952bd1",
-                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/3c50c54b2a47dea50eca814e684977b825105036",
+                "reference": "3c50c54b2a47dea50eca814e684977b825105036",
                 "shasum": ""
             },
             "require": {
@@ -6762,10 +6793,10 @@
             ],
             "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
             "support": {
-                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
+                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/0.2.4",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2017-11-08 15:02:39"
+            "time": "2017-12-21 12:11:04"
         },
         {
             "name": "symfony/console",
@@ -8682,14 +8713,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "8bb7b421e616195770b884265f91ac17ccd0aba8"
+                "reference": "852467ed481b99224e5dbff71ab8f1f00c6eeac8"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-08 12:24:29"
+            "time": "2017-12-29 11:33:03"
         },
         {
             "name": "PandaGroup/ShopByLook",
