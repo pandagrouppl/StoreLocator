@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f29dfd5b22937a3a9b528f3464e93262",
-    "content-hash": "02493e23706ff426d05c1de3966f9331",
+    "hash": "893258cc11c04f8d6e294730d6738c07",
+    "content-hash": "b2d3fdbbd9c092b8181b63eb247f2972",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -260,14 +260,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "852467ed481b99224e5dbff71ab8f1f00c6eeac8"
+                "reference": "9b3b3d2ef7bc5e2951159d9623c21844326161d9"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-29 11:33:03"
+            "time": "2017-12-29 12:13:20"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -10435,10 +10435,10 @@
         "pandagroup/couponextender": 20,
         "pandagroup/sortbyextender": 20,
         "pandagroup/attributeupdate": 20,
+        "pandagroup/salesforce": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
-        "pandagroup/salesforce": 20,
         "pandagroup/shopbylook": 20,
         "phpmd/phpmd": 0
     },
