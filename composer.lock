@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5138198317c632d04cc1825ef0d34244",
-    "content-hash": "36240b16d896e8efce4e82b702d624e7",
+    "hash": "893258cc11c04f8d6e294730d6738c07",
+    "content-hash": "b2d3fdbbd9c092b8181b63eb247f2972",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -154,7 +154,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "6dd32580e059f74cc7915939951aec7efc12a579"
+                "reference": "9fd504e668080058ff02b92ffc4572a840eda606"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -162,7 +162,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2017-12-08 08:50:30"
+            "time": "2017-12-22 10:04:44"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -253,6 +253,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup Regions Patcher Module",
             "time": "2017-12-21 14:23:50"
+        },
+        {
+            "name": "PandaGroup/Salesforce",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
+                "reference": "9b3b3d2ef7bc5e2951159d9623c21844326161d9"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
+            "time": "2017-12-29 12:13:20"
         },
         {
             "name": "PandaGroup/SlackIntegration",
@@ -356,7 +371,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
+                "url": "https://composer.amasty.com/community/packages/base-1.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -382,7 +397,7 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card.zip?v=1.1.2",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -406,16 +421,16 @@
         },
         {
             "name": "amasty/module-improved-layered-navigation-page",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page.zip",
+                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -433,10 +448,10 @@
         },
         {
             "name": "amasty/module-special-promo",
-            "version": "1.3.1",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo.zip?v=1.3.1",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -460,10 +475,10 @@
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "1.3.1",
+            "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro.zip?v=1.3.1",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -491,7 +506,7 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.4",
+                "url": "https://composer.amasty.com/community/packages/quickview-1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -515,21 +530,22 @@
         },
         {
             "name": "amasty/shopby",
-            "version": "1.15.2",
+            "version": "2.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-2.4.7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "amasty/base": ">=1.0.1",
-                "amasty/module-improved-layered-navigation-page": "1.15.2",
-                "amasty/shopby-brand": "1.15.2",
-                "amasty/shopby-root": "1.15.2",
-                "amasty/shopby-seo": "1.15.2",
+                "amasty/module-improved-layered-navigation-page": ">=2.4.5",
+                "amasty/shopby-brand": ">=2.4.5",
+                "amasty/shopby-root": ">=2.4.5",
+                "amasty/shopby-seo": ">=2.4.5",
+                "amasty/shopbybase": ">=2.4.5",
                 "magento/module-layered-navigation": ">=100.0",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -547,16 +563,16 @@
         },
         {
             "name": "amasty/shopby-brand",
-            "version": "1.15.2",
+            "version": "2.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-brand.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-brand-2.4.6.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -574,16 +590,16 @@
         },
         {
             "name": "amasty/shopby-root",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-root.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -601,16 +617,16 @@
         },
         {
             "name": "amasty/shopby-seo",
-            "version": "1.15.2",
+            "version": "2.4.5",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-seo.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopby": "1.15.2",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6"
+                "amasty/shopbybase": ">=2.4.5",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
             "autoload": {
@@ -625,6 +641,33 @@
                 "Commercial"
             ],
             "description": "Improved Layered Navigation by Amasty - SEO sub-module"
+        },
+        {
+            "name": "amasty/shopbybase",
+            "version": "2.4.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/shopbybase-2.4.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/base": ">=1.0.1",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyBase\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Base Improved Layered Navigation by Amasty"
         },
         {
             "name": "braintree/braintree_php",
@@ -899,16 +942,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+                "reference": "049797d727261bf27f2690430d935067710049c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/049797d727261bf27f2690430d935067710049c2",
+                "reference": "049797d727261bf27f2690430d935067710049c2",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +963,7 @@
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -991,15 +1034,18 @@
                 "lavalite",
                 "lithium",
                 "magento",
+                "majima",
                 "mako",
                 "mediawiki",
                 "modulework",
+                "modx",
                 "moodle",
                 "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
                 "puppet",
+                "pxcms",
                 "reindex",
                 "roundcube",
                 "shopware",
@@ -1012,7 +1058,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09 07:53:48"
+            "time": "2017-12-29 09:13:20"
         },
         {
             "name": "composer/semver",
@@ -1136,6 +1182,52 @@
                 "validator"
             ],
             "time": "2017-04-03 19:08:52"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": " 4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "time": "2017-06-27 22:17:23"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -6536,6 +6628,141 @@
             "time": "2016-10-10 12:19:37"
         },
         {
+            "name": "robrichards/wse-php",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/wse-php.git",
+                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/wse-php/zipball/5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
+                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3",
+                "robrichards/xmlseclibs": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\WsePhp\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Richards",
+                    "homepage": "http://www.cdatazone.org/",
+                    "role": "Main developer"
+                }
+            ],
+            "description": "Libraries for adding WS-* support to ext/soap in PHP.",
+            "homepage": "https://github.com/robrichards/wse-php",
+            "keywords": [
+                "WS-Security",
+                "soap",
+                "ws-addressing"
+            ],
+            "time": "2017-03-09 16:42:34"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "suggest": {
+                "ext/mcrypt": "MCrypt extension",
+                "ext/openssl": "OpenSSL extension"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "time": "2016-09-08 13:15:00"
+        },
+        {
+            "name": "salesforce-mc/fuel-sdk-php",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salesforce-marketingcloud/FuelSDK-PHP.git",
+                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salesforce-marketingcloud/FuelSDK-PHP/zipball/188970aadb34ef1b71cf70a9107ca0a6273123ba",
+                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-openssl": "*",
+                "ext-soap": "*",
+                "firebase/php-jwt": ">=5.0.0",
+                "php": ">=5.6.24",
+                "robrichards/wse-php": "2.0.1"
+            },
+            "require-dev": {
+                "dompdf/dompdf": "0.6",
+                "phpdocumentor/phpdocumentor": "2.8.0",
+                "phpunit/phpunit": ">=5.7.20"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FuelSdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Salesforce Marketing Cloud Fuel SDK for PHP",
+            "homepage": "https://developer.salesforce.com/docs/atlas.en-us.mc-sdks.meta/mc-sdks/index-sdk.htm",
+            "keywords": [
+                "exacttarget",
+                "fuel sdk",
+                "fuel-sdk",
+                "marketing cloud",
+                "php sdk",
+                "salesforce",
+                "sdk"
+            ],
+            "time": "2017-10-24 12:10:44"
+        },
+        {
             "name": "seld/cli-prompt",
             "version": "1.0.3",
             "source": {
@@ -6736,12 +6963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1"
+                "reference": "3c50c54b2a47dea50eca814e684977b825105036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f981d59f01118f7c9f6179ed43c039cbcd952bd1",
-                "reference": "f981d59f01118f7c9f6179ed43c039cbcd952bd1",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/3c50c54b2a47dea50eca814e684977b825105036",
+                "reference": "3c50c54b2a47dea50eca814e684977b825105036",
                 "shasum": ""
             },
             "require": {
@@ -6762,10 +6989,10 @@
             ],
             "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
             "support": {
-                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
+                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/0.2.4",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2017-11-08 15:02:39"
+            "time": "2017-12-21 12:11:04"
         },
         {
             "name": "symfony/console",
@@ -8677,21 +8904,6 @@
     ],
     "packages-dev": [
         {
-            "name": "PandaGroup/Salesforce",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "8bb7b421e616195770b884265f91ac17ccd0aba8"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-08 12:24:29"
-        },
-        {
             "name": "PandaGroup/ShopByLook",
             "version": "dev-master",
             "source": {
@@ -8822,52 +9034,6 @@
             "description": "A tool to automatically fix PHP code style",
             "abandoned": "friendsofphp/php-cs-fixer",
             "time": "2017-09-11 14:11:16"
-        },
-        {
-            "name": "firebase/php-jwt",
-            "version": "v5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": " 4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2017-06-27 22:17:23"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -9500,141 +9666,6 @@
                 "xunit"
             ],
             "time": "2015-10-02 06:51:40"
-        },
-        {
-            "name": "robrichards/wse-php",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/wse-php.git",
-                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/wse-php/zipball/5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
-                "reference": "5dde350ec77930f2ff6c1bb15c4d9e257b1d2496",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3",
-                "robrichards/xmlseclibs": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\WsePhp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Richards",
-                    "homepage": "http://www.cdatazone.org/",
-                    "role": "Main developer"
-                }
-            ],
-            "description": "Libraries for adding WS-* support to ext/soap in PHP.",
-            "homepage": "https://github.com/robrichards/wse-php",
-            "keywords": [
-                "WS-Security",
-                "soap",
-                "ws-addressing"
-            ],
-            "time": "2017-03-09 16:42:34"
-        },
-        {
-            "name": "robrichards/xmlseclibs",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/53bb1e9cae490a8f93af41bd9df6ea897161ca05",
-                "reference": "53bb1e9cae490a8f93af41bd9df6ea897161ca05",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3"
-            },
-            "suggest": {
-                "ext/mcrypt": "MCrypt extension",
-                "ext/openssl": "OpenSSL extension"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\XMLSecLibs\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "A PHP library for XML Security",
-            "homepage": "https://github.com/robrichards/xmlseclibs",
-            "keywords": [
-                "security",
-                "signature",
-                "xml",
-                "xmldsig"
-            ],
-            "time": "2016-09-08 13:15:00"
-        },
-        {
-            "name": "salesforce-mc/fuel-sdk-php",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/salesforce-marketingcloud/FuelSDK-PHP.git",
-                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/salesforce-marketingcloud/FuelSDK-PHP/zipball/188970aadb34ef1b71cf70a9107ca0a6273123ba",
-                "reference": "188970aadb34ef1b71cf70a9107ca0a6273123ba",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-openssl": "*",
-                "ext-soap": "*",
-                "firebase/php-jwt": ">=5.0.0",
-                "php": ">=5.6.24",
-                "robrichards/wse-php": "2.0.1"
-            },
-            "require-dev": {
-                "dompdf/dompdf": "0.6",
-                "phpdocumentor/phpdocumentor": "2.8.0",
-                "phpunit/phpunit": ">=5.7.20"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FuelSdk\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Salesforce Marketing Cloud Fuel SDK for PHP",
-            "homepage": "https://developer.salesforce.com/docs/atlas.en-us.mc-sdks.meta/mc-sdks/index-sdk.htm",
-            "keywords": [
-                "exacttarget",
-                "fuel sdk",
-                "fuel-sdk",
-                "marketing cloud",
-                "php sdk",
-                "salesforce",
-                "sdk"
-            ],
-            "time": "2017-10-24 12:10:44"
         },
         {
             "name": "sebastian/comparator",
@@ -10404,10 +10435,10 @@
         "pandagroup/couponextender": 20,
         "pandagroup/sortbyextender": 20,
         "pandagroup/attributeupdate": 20,
+        "pandagroup/salesforce": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
-        "pandagroup/salesforce": 20,
         "pandagroup/shopbylook": 20,
         "phpmd/phpmd": 0
     },

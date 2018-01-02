@@ -16,17 +16,17 @@
 ?>
 <form class="account-form form-address-edit" action="<?php /* @escapeNotVerified */ echo $block->getSaveUrl() ?>" method="post" id="form-validate" enctype="multipart/form-data" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
     <fieldset class="fieldset">
-        <legend class="account-form__legend legend"><span><?php /* @escapeNotVerified */ echo __('Contact Information') ?></span></legend><br>
+        <legend class="account-form__legend legend"><span><?php /* @escapeNotVerified */ echo __('Address Book') ?></span></legend><br>
         <?php echo $block->getBlockHtml('formkey')?>
         <input type="hidden" name="success_url" value="<?php /* @escapeNotVerified */ echo $block->getSuccessUrl() ?>">
         <input type="hidden" name="error_url" value="<?php /* @escapeNotVerified */ echo $block->getErrorUrl() ?>">
         <?php echo $block->getNameBlockHtml() ?>
-        <div class="account-form__inputs field company">
-            <label class="label" for="company"><span><?php /* @escapeNotVerified */ echo __('Company') ?></span></label>
-            <div class="control">
-                <input type="text" name="company" id="company" title="<?php /* @escapeNotVerified */ echo __('Company') ?>" value="<?php echo $block->escapeHtml($block->getAddress()->getCompany()) ?>" class="input-text <?php /* @escapeNotVerified */ echo $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('company') ?>">
-            </div>
-        </div>
+<!--        <div class="account-form__inputs field company">-->
+<!--            <label class="label" for="company"><span>--><?php ///* @escapeNotVerified */ echo __('Company') ?><!--</span></label>-->
+<!--            <div class="control">-->
+<!--                <input type="text" name="company" id="company" title="--><?php ///* @escapeNotVerified */ echo __('Company') ?><!--" value="--><?php //echo $block->escapeHtml($block->getAddress()->getCompany()) ?><!--" class="input-text --><?php ///* @escapeNotVerified */ echo $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('company') ?><!--">-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="account-form__inputs field telephone required">
             <label class="label" for="telephone"><span><?php /* @escapeNotVerified */ echo __('Phone Number') ?></span></label>
             <div class="control">
@@ -41,7 +41,7 @@
         </div>
     </fieldset>
     <fieldset class="fieldset">
-        <legend class="account-form__legend legend"><span><?php /* @escapeNotVerified */ echo __('Address') ?></span></legend><br>
+<!--        <legend class="account-form__legend legend"><span>--><?php ///* @escapeNotVerified */ echo __('Address') ?><!--</span></legend><br>-->
         <?php $_streetValidationClass = $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('street'); ?>
         <div class="account-form__inputs field street required">
             <label for="street_1" class="label"><span><?php /* @escapeNotVerified */ echo __('Street Address') ?></span></label>

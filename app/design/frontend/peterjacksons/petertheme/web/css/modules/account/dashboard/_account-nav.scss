@@ -1,7 +1,7 @@
 .account-nav {
     width: 100%;
-    background: $grey;
-    padding: 15px 100px;
+    background: #fbf8f8;
+    padding: 15px 0;
     box-sizing: border-box;
     margin: 20px 0;
 
@@ -9,26 +9,29 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
     }
 
     .nav.item {
-        margin: 5px 10px;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: Roboto;
-        font-weight: 500;
-        font-size: 14px;
+        margin: 10px 20px;
+        text-align: left;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        color: #363636;
+
+        strong {
+            font-weight: none;
+        }
 
         a {
-            color: $black;
+            color: #363636;
         }
 
         &.current, &:hover {
-            color: $grey-dark;
-
-            a {
-                color: $grey-dark;
-            }
+            color: #363636;
+            font-weight: 500;
+            text-decoration: underline;
         }
     }
 }

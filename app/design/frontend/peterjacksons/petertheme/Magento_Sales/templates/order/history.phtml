@@ -1,0 +1,55 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /* @var $block Magento\Sales\Block\Order\History */ ?>
+<?php $_orders = $block->getOrders(); ?>
+<?php echo $block->getChildHtml('info');?>
+<?php if ($_orders && count($_orders)): ?>
+
+    <div class="orders-history__wrapper">
+        <div class="orders-history__header"><?php /* @escapeNotVerified */ echo __('My Orders') ?></div>
+
+        <div class="orders-history__table-header">
+            <div class="orders-history__number"><?php /* @escapeNotVerified */ echo __('Order Number') ?></div>
+            <div class="orders-history__date"><?php /* @escapeNotVerified */ echo __('Date') ?></div>
+            <div class="orders-history__total"><?php /* @escapeNotVerified */ echo __('Order Total') ?></div>
+            <div class="orders-history__status"><?php /* @escapeNotVerified */ echo __('Order Status') ?></div>
+        </div>
+        <div>
+            <?php foreach ($_orders as $_order): ?>
+                <div class ="orders-history__items">
+                    <div data-th="<?php echo $block->escapeHtml(__('Order #')) ?>" class="col id"><?php /* @escapeNotVerified */ echo $_order->getRealOrderId() ?></div>
+                    <?php
+                        $createdDate = new \Datetime($_order->getCreatedAt());
+                        $createdDate = $createdDate->format('d/m/y');
+                    ?>
+                    <div data-th="<?php echo $block->escapeHtml(__('Date')) ?>" class="col date"><?php /* @escapeNotVerified */ echo $createdDate ?></div>
+                    <?php $extra = $block->getChildBlock('extra.container'); ?>
+                    <?php if ($extra): ?>
+                        <?php $extra->setOrder($_order); ?>
+                        <?php /* @noEscape */ echo $extra->getChildHtml() ?>
+                    <?php endif; ?>
+                    <div data-th="<?php echo $block->escapeHtml(__('Order Total')) ?>" class="col total"><?php /* @escapeNotVerified */ echo $_order->formatPrice($_order->getGrandTotal()) ?></div>
+                    <div data-th="<?php echo $block->escapeHtml(__('Status')) ?>" class="col status"><?php /* @escapeNotVerified */ echo $_order->getStatusLabel() ?></div>
+                    <div data-th="<?php echo $block->escapeHtml(__('Actions')) ?>" class="col actions">
+                        <a href="<?php /* @escapeNotVerified */ echo $block->getViewUrl($_order) ?>" class="action view">
+                            <span><?php /* @escapeNotVerified */ echo __('View Order') ?></span>
+                        </a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+
+<!--    --><?php //if ($block->getPagerHtml()): ?>
+<!--        <div class="order-products-toolbar toolbar bottom">--><?php //echo $block->getPagerHtml(); ?><!--</div>-->
+<!--    --><?php //endif ?>
+<?php else: ?>
+    <div class="message info empty"><span><?php /* @escapeNotVerified */ echo __('You have placed no orders.'); ?></span></div>
+<?php endif ?>
