@@ -371,7 +371,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base-1.1.0.zip",
+                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
                 "reference": null,
                 "shasum": null
             },
@@ -397,7 +397,7 @@
             "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.1.2.zip",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card.zip?v=1.1.2",
                 "reference": null,
                 "shasum": null
             },
@@ -506,7 +506,7 @@
             "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview-1.0.4.zip",
+                "url": "https://composer.amasty.com/community/packages/quickview.zip?v=1.0.4",
                 "reference": null,
                 "shasum": null
             },
