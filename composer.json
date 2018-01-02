@@ -32,6 +32,7 @@
         "PandaGroup/CouponExtender": "dev-master",
         "PandaGroup/SortByExtender": "dev-master",
         "PandaGroup/AttributeUpdate": "dev-master",
+        "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
         "amasty/base": "^1.0",
         "amasty/module-special-promo": "^1.2",
@@ -175,6 +176,10 @@
         "24": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git"
+        },
+        "25": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-customer-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
