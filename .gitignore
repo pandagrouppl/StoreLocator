@@ -39,5 +39,6 @@ atlassian*
 !/composer.lock
 !/README.md
 !/*.sh
+!build.js
 
 /wp/wp-content/uploads
