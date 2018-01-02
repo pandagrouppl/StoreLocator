@@ -1,6 +1,7 @@
 var config = {
     deps: [
-        "js/main"
+        "js/main",
+        "jquery/jquery.cookie"
     ],
     paths: {
         slick: 'js/vendor/slick.min'
