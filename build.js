@@ -211,8 +211,7 @@
                 'validation',
                 'Magento_Wishlist/js/view/wishlist',
                 'Magento_Sales/js/view/last-ordered-items',
-                'text!Plumrocket_Popuplogin/template/modal.html',
-                'json!js-translation'
+                'text!Plumrocket_Popuplogin/template/modal.html'
             ],
             exclude: [
                 'requirejs/require'
