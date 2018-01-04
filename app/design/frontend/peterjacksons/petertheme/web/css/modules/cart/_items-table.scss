@@ -105,6 +105,16 @@
         }
     }
 
+    @media all and (min-width: $sm-breakpoint + 1px) {
+        &__price {
+            margin-bottom: 21px;
+        }
+
+        &__cart-select {
+            margin-top: 10px;
+        }
+    }
+
     @media all and (max-width: $cart-lg-breakpoint) {
         &__product-info {
             margin: 7px 0 0 15px;
