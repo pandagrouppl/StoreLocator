@@ -9,7 +9,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="catalog_category_view"/>
     <head>
-        <script src="bundles/catalog.js" />
+        <!--<script src="bundles/catalog.js" />-->
     </head>
     <body>
         <move element="category.description" destination="page.top" before="-"/>
