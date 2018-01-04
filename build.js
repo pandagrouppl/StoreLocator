@@ -1,20 +1,9 @@
 {
     // Enable js minification with Uglify. Uncomment this out during development tomake builds faster
-    // optimize: 'none',
+    optimize: 'none',
     inlineText: true,
-    // Files that are required for all pages will be included in require.js file
-    deps: [
-        'jquery/jquery.cookie',
-        'jquery/jquery-migrate',
-        'jquery/jquery.mobile.custom',
-        'mage/common',
-        'mage/dataPost',
-        'mage/bootstrap',
-        'mage/translate-inline'
-    ],
     // Shim configuration for non-AMD modules. Copied from requirejs-config
     shim: {
-        'jquery/jquery.storageapi.min': ['jquery/jquery.cookie'],
         'jquery/jquery-migrate': ['jquery'],
         'jquery/jquery.hashchange': ['jquery', 'jquery/jquery-migrate'],
         'jquery/jstree/jquery.hotkeys': ['jquery'],
@@ -166,6 +155,20 @@
             name: 'bundles/default',
             create: true,
             include: [
+                'jquery',
+                'mage/mage',
+                'mage/apply/main',
+                'mage/translate',
+                'jquery/jquery.cookie',
+                'jquery/jquery-storageapi',
+                'jquery/jquery-migrate',
+                'jquery/jquery.mobile.custom',
+                'mage/common',
+                'mage/dataPost',
+                'mage/bootstrap',
+                'mage/translate-inline',
+                'js/responsive',
+                'js/theme',
                 'loaderAjax',
                 'mage/cookies',
                 'dropdown',
@@ -210,8 +213,7 @@
                 'pageCache',
                 'validation',
                 'Magento_Wishlist/js/view/wishlist',
-                'Magento_Sales/js/view/last-ordered-items',
-                'text!Plumrocket_Popuplogin/template/modal.html'
+                'Magento_Sales/js/view/last-ordered-items'
             ],
             exclude: [
                 'requirejs/require'
