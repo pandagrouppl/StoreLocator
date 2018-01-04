@@ -33,6 +33,7 @@
         "PandaGroup/SortByExtender": "dev-master",
         "PandaGroup/AttributeUpdate": "dev-master",
         "PandaGroup/Salesforce": "dev-master",
+        "PandaGroup/SpecialPriceFixer": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "magenest/module-anz": "dev-master",
         "amasty/base": "^1.0",
@@ -174,6 +175,10 @@
         "24": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git"
+        },
+        "25": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-special-price-fixer.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

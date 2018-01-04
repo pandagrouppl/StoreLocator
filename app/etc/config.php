@@ -143,6 +143,7 @@ return array (
     'PandaGroup_ShopByLook' => 1,
     'PandaGroup_MagentoSlackMonitor' => 1,
     'PandaGroup_SortByExtender' => 1,
+    'PandaGroup_SpecialPriceFixer' => 1,
     'PandaGroup_Spinner' => 1,
     'PandaGroup_StoreLocator' => 1,
     'PandaGroup_Westfield' => 1,
