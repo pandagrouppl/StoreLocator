@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "893258cc11c04f8d6e294730d6738c07",
-    "content-hash": "b2d3fdbbd9c092b8181b63eb247f2972",
+    "hash": "268ee2675fbb6c2d07ca959c50679d88",
+    "content-hash": "271c434fa2da9d01232982978b708a26",
     "packages": [
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -61,14 +61,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "dca9416436781630be29f813b11210c72b8f08a1"
+                "reference": "449635d72c2fcf414c24984ffaa01c6eb3b369c6"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-02 15:12:10"
+            "time": "2018-01-05 14:29:25"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -127,14 +127,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-devtools.git",
-                "reference": "3d40a7eba7948cd3443221a1000728b02ff24c94"
+                "reference": "22248b30d9b1066e00a54064e3092d572f03943b"
             },
             "type": "magento2-component",
             "license": [
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2017-12-12 11:29:53"
+            "time": "2018-01-05 10:29:30"
         },
         {
             "name": "PandaGroup/GiftCardExtender",
@@ -310,6 +310,21 @@
             ],
             "description": "Attribute Update for Peter Jacksons",
             "time": "2017-11-20 11:49:04"
+        },
+        {
+            "name": "PandaGroup/SpecialPriceFixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-special-price-fixer.git",
+                "reference": "3c2b438b8ae981a8ae48b9697c1f424c528d320b"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Special Price Fixer Module",
+            "time": "2018-01-03 14:40:42"
         },
         {
             "name": "PandaGroup/Spinner",
@@ -10436,6 +10451,7 @@
         "pandagroup/sortbyextender": 20,
         "pandagroup/attributeupdate": 20,
         "pandagroup/salesforce": 20,
+        "pandagroup/specialpricefixer": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
