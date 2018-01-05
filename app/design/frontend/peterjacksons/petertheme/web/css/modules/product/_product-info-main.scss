@@ -49,6 +49,10 @@
     &__wishlist-star {
         @include sprite(wishlist-icon);
         padding: 0 1px 1px 0;
+
+        &.active {
+            @include sprite(wishlist-icon-dark);
+        }
     }
 
     &__size-chart {

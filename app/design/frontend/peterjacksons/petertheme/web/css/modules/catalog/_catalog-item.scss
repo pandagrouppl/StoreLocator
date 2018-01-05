@@ -82,6 +82,10 @@
         top: 10px;
         right: 10px;
         cursor: pointer;
+
+        &.active {
+            @include sprite(wishlist-icon-dark);
+        }
     }
 
     &__content {

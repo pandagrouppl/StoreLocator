@@ -8,12 +8,76 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
+    <head>
+        <!--<script src="bundles/default.js" />-->
+    </head>
     <body>
+        <!-- Change to our header -->
+        <referenceBlock name="header.links" remove="true"/>
+        <referenceBlock name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="header.container">
+            <container name="header.shippingbar" label="FREE EXPRESS SHIPPING AUSTRALIA WIDE" htmlTag="section" htmlClass="header-shippingbar" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar.phtml"/>
+            </container>
+            <container name="header.message" label="Header Message" htmlTag="section" htmlClass="header-message">
+                <block class="Magento\Cms\Block\Block" name="block_identifier">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">header-message</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="header.headers" htmlTag="div" htmlClass="headers">
+                <!-- desktop -->
+                <container name="headers" htmlClass="header" htmlTag="section">
+                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-"/>
+                    <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
+                        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
+                        <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
+                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
+                        </block>
+                    </container>
+                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right" after="header.center">
+                        <container name="search-container" label="Search" before="-"/>
+                        <block class="Magento\Wishlist\Block\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml" after="search-container"/>
+                        <container name="header-wrapper" as="minicart-container" label="Minicart" after="wishlist-count"/>
+                    </container>
+                </container>
+                <!-- mobile -->
+                <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">
+                    <block class="Light4website\Menu\Block\Html\Responsivemenu" name="responsive.topnav" template="html/topmenu-responsive.phtml" ttl="3600">
+                        <block class="Magento\Framework\View\Element\Template" name="responsive.search" as="respTopSearch" template="Magento_Theme::html/header/search-responsive.phtml" />
+                        <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.responsive.other" as="catalogTopResp" template="Magento_Theme::html/header/other-responsive.phtml"/>
+                    </block>
+                </container>
+            </container>
+        </referenceContainer>
+        <!-- -->
         <referenceContainer name="page.messages" htmlClass="page-main__message" />
+
+        <!-- our footer -->
         <referenceContainer name="footer-container">
             <referenceContainer name="footer" remove="true" />
             <block class="Magento\Theme\Block\Html\Footer" name="footer-content" template="Magento_Theme::html/footer/footer-content.phtml"/>
         </referenceContainer>
+        <!-- -->
+
+        <!-- faq -->
+        <referenceContainer name="before.body.end">
+            <container name="faq.overlay" label="Faq overlay" htmlTag="div" htmlClass="faq__overlay">
+                <container name="faq.popup" label="Faq popup" htmlTag="section" htmlClass="faq__popup">
+                    <block class="Magento\Framework\View\Element\Template" name="faq.title" template="Magento_Theme::html/footer/faq-title.phtml" />
+                    <block class="Magento\Cms\Block\Block" name="Faq">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">faq</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="html/absolute_footer.phtml" />
+        </referenceContainer>
+        <!-- -->
+
         <referenceBlock name="navigation.sections" remove="true"/>
     </body>
 </page>
