@@ -88,6 +88,13 @@
     &__input {
         @include form-element();
 
+        &--ccnum {
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+        }
+
         &--ccv {
             flex: 0 0 70px;
             margin-right: 20px;
