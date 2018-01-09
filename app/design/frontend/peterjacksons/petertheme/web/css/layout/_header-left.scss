@@ -124,6 +124,7 @@
         i {
             @include sprite(header-account);
             display: block;
+            cursor: pointer;
         }
     }
 }
