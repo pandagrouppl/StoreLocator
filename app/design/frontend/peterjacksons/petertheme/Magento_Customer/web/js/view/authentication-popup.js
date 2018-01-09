@@ -25,7 +25,7 @@ define(
             forgotPasswordUrl: window.authenticationPopup.customerForgotPasswordUrl,
 
             /**
-             * Magento 2.1 Bugfix (it's fixed in 2.2) Remove after upgrade
+             * Magento 2.1 BugFix (it's fixed in 2.2) Remove after upgrade
              */
             autocomplete: ((window.checkout && window.checkout.autocomplete) ? window.checkout.autocomplete : null),
             modalWindow: null,
