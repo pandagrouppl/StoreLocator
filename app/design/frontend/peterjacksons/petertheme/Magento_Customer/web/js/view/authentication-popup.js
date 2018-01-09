@@ -1,19 +1,9 @@
 /**
- * Plumrocket Inc.
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the End-user License Agreement
- * that is available through the world-wide-web at this URL:
- * http://wiki.plumrocket.net/wiki/EULA
- * If you are unable to obtain it through the world-wide-web, please
- * send an email to support@plumrocket.com so we can send you a copy immediately.
- *
- * @package     Plumrocket_SocialLoginFree
- * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
- * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
  */
-
+/*jshint browser:true jquery:true*/
+/*global alert*/
 define(
     [
         'jquery',
@@ -27,11 +17,13 @@ define(
         'Magento_Ui/js/modal/alert',
         'mage/validation'
     ],
-    function($, ko, Component, loginAction, customerData, authenticationPopup, $t, url, alert) {
+    function ($, ko, Component, loginAction, customerData, authenticationPopup, $t, url, alert) {
         'use strict';
+
         return Component.extend({
             registerUrl: window.authenticationPopup.customerRegisterUrl,
             forgotPasswordUrl: window.authenticationPopup.customerForgotPasswordUrl,
+
             /**
              * Magento 2.1 Bugfix (it's fixed in 2.2) Remove after upgrade
              */
@@ -40,16 +32,17 @@ define(
             isLoading: ko.observable(false),
 
             defaults: {
-                template: 'Plumrocket_SocialLoginFree/customer/authentication-popup'
+                template: 'Magento_Customer/authentication-popup'
             },
 
-            psloginButtons: window.psloginButtons,
-
-            initialize: function() {
+            /**
+             * Init
+             */
+            initialize: function () {
                 var self = this;
                 this._super();
                 url.setBaseUrl(window.authenticationPopup.baseUrl);
-                loginAction.registerLoginCallback(function() {
+                loginAction.registerLoginCallback(function () {
                     self.isLoading(false);
                 });
             },
@@ -62,13 +55,14 @@ define(
             },
 
             /** Is login form enabled for current customer */
-            isActive: function() {
+            isActive: function () {
                 var customer = customerData.get('customer');
+
                 return customer() == false;
             },
 
             /** Show login popup window */
-            showModal: function() {
+            showModal: function () {
                 if (this.modalWindow) {
                     $(this.modalWindow).modal('openModal');
                 } else {
@@ -79,15 +73,15 @@ define(
             },
 
             /** Provide login action */
-            login: function(loginForm) {
+            login: function (loginForm) {
                 var loginData = {},
                     formDataArray = $(loginForm).serializeArray();
                 formDataArray.forEach(function (entry) {
                     loginData[entry.name] = entry.value;
                 });
 
-                if($(loginForm).validation()
-                    && $(loginForm).validation('isValid')
+                if ($(loginForm).validation() &&
+                    $(loginForm).validation('isValid')
                 ) {
                     this.isLoading(true);
                     loginAction(loginData, null, false);

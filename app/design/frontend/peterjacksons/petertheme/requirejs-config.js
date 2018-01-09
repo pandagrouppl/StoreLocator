@@ -6,7 +6,7 @@ var config = {
     paths: {
         slick: 'js/vendor/slick.min'
     },
-    "map": {
+    map: {
         "*": {
             "catalogAddToCart": "js/extend/catalog-add-to-cart",
             "configurable": "js/extend/configurable-extend",
