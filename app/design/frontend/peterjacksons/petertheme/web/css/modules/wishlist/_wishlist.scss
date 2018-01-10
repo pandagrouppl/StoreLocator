@@ -120,6 +120,11 @@ body[class~='guest-wishlist-index-index'] {
 
     .product-item-inner {
         width: 100%;
+
+        .unavailable {
+            text-align: center;
+            color: red;
+        }
     }
 
     .actions-primary {
@@ -130,4 +135,30 @@ body[class~='guest-wishlist-index-index'] {
     .product-image-wrapper {
         padding-bottom: 0 !important;
     }
+}
+
+// Account Dashboard Wishlist
+body[class~='account'] {
+
+    .wishlist {
+
+        &__back {
+            display: none;
+        }
+
+        &__item {
+            width: 32%;
+            cursor: default;
+            margin: 0 30px 40px 0;
+
+            @media all and (max-width: $sm-breakpoint) {
+                width: 45%;
+            }
+        }
+
+        &__name {
+            text-align: center;
+        }
+    }
+
 }

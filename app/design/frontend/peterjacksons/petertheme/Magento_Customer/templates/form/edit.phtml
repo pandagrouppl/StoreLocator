@@ -26,6 +26,14 @@
         <?php if ($_gender->isEnabled()): ?>
             <?php echo $_gender->setGender($block->getCustomer()->getGender())->toHtml() ?>
         <?php endif ?>
+        <div class="account-form__checkboxes field choice">
+            <input type="checkbox" name="change_email" id="change-email" data-role="change-email" value="1" title="<?php /* @escapeNotVerified */ echo __('Change Email') ?>" class="checkbox" />
+            <label class="label" for="change-email"><span><?php /* @escapeNotVerified */ echo __('Change Email') ?></span></label>
+        </div>
+        <div class="account-form__checkboxes field choice">
+            <input type="checkbox" name="change_password" id="change-password" data-role="change-password" value="1" title="<?php /* @escapeNotVerified */ echo __('Change Password') ?>"<?php if ($block->getChangePassword()): ?> checked="checked"<?php endif; ?> class="checkbox" />
+            <label class="label" for="change-password"><span><?php /* @escapeNotVerified */ echo __('Change Password') ?></span></label>
+        </div>
     </fieldset>
 
     <fieldset class="fieldset password" data-container="change-email-password">
@@ -104,4 +112,15 @@
         });
 
     });
+</script>
+<script type="text/x-magento-init">
+    {
+        "[data-role=change-email], [data-role=change-password]": {
+            "changeEmailPassword": {
+                "titleChangeEmail": "<?php /* @escapeNotVerified */ echo __('Change Email') ?>",
+                "titleChangePassword": "<?php /* @escapeNotVerified */ echo __('Change Password') ?>",
+                "titleChangeEmailAndPassword": "<?php /* @escapeNotVerified */ echo __('Change Email and Password') ?>"
+            }
+        }
+    }
 </script>

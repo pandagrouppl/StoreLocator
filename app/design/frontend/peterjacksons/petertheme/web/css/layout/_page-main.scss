@@ -162,4 +162,20 @@ body[class~='guest-wishlist-index-index'] {
     }
 }
 
+//Success Page
+body[class~='checkout-onepage-success'] {
+    .page-main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-main__title.page-main__description {
+        display: none;
+    }
+
+    .page-footer {
+        margin: 0;
+    }
+}
 

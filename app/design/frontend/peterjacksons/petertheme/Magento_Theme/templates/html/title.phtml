@@ -17,8 +17,11 @@ if (trim($block->getPageHeading())) {
 }
 ?>
 <?php if ($title): ?>
-    <div class="page-main__title<?php /* @escapeNotVerified */ echo $cssClass; ?>">
-        <h1
+    <div class="page-main__title<?php /* @escapeNotVerified */ echo $cssClass; ?> page-main__description">
+        <div class="page-main__description--left-column">
+            <a href="javascript:history.go(-1)" class="page-main__description--back"></a>
+        </div>
+        <h1 class="page-main__description--right-column"
             <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
             <?php if ($block->getAddBaseAttributeAria()): ?>
                 aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"

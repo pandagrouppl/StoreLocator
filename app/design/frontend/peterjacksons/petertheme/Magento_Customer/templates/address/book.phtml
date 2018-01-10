@@ -67,7 +67,7 @@
     </div>
 </div>
 
-<div class="block block-addresses-list">
+<div class="block block-addresses-list account-dashboard__list">
     <h2 class="block-title account-dashboard__title"><?php /* @escapeNotVerified */ echo __('Additional Address Entries') ?></h2>
     <div class="block-content">
         <?php if ($_pAddsses = $block->getAdditionalAddresses()): ?>
@@ -91,9 +91,6 @@
 </div>
 
 <div class="actions-toolbar">
-    <div class="secondary">
-        <a class="account-form__back action back" href="<?php echo $block->escapeUrl($block->getBackUrl()) ?>"><span>« <?php /* @escapeNotVerified */ echo __('Back') ?></span></a>
-    </div>
     <div class="primary">
         <button type="button" role="add-address" title="<?php /* @escapeNotVerified */ echo __('Add New Address') ?>" class="account-form__button action primary add"><span><?php /* @escapeNotVerified */ echo __('Add New Address') ?></span></button>
     </div>
