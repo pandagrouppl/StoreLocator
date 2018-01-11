@@ -11,6 +11,25 @@
         padding: 0;
     }
 
+    &__two-cols-input {
+        display: flex;
+        justify-content: space-between;
+
+        > div {
+            flex-basis: 49%;
+        }
+    }
+
+    &__two-cols-input-reverse {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        > div {
+            flex-basis: 49%;
+        }
+    }
+
     &__inputs {
         @include form-element-wrapper();
 
@@ -44,6 +63,7 @@
     &__checkboxes {
         @include wrap-form();
         margin: 5px auto;
+        max-width: 100%;
 
 
         &--bold {
@@ -64,20 +84,23 @@
         color: black;
         font-size: 30px;
         font-family: Roboto, sans-serif;
+
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
     }
 
     &__back {
-        @include wrap-form(360px);
         font-weight: bold;
         font-size: 16px;
         text-transform: uppercase;
         color: $black-light;
         display: block;
-        margin: 20px auto;
+        margin: 50px 0 20px 0;
     }
 
     &__button {
-        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        @include button-black($height: 55px, $margin-top: 30px, $font-size: 18px);
         box-sizing: border-box;
         width: 100%;
         max-width: 210px;
@@ -86,6 +109,12 @@
         font-size: 13px;
         font-weight: 500;
         text-transform: uppercase;
+        padding: 15px 0 15px 0;
+        border-top: 1px solid #d7d7d7;
+
+        @media all and (max-width: $bp-header) {
+            max-width: 100%;
+        }
     }
 
     .password-strength-meter {

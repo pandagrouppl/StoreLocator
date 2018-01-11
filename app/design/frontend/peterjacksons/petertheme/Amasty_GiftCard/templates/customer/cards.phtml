@@ -1,0 +1,30 @@
+<?php
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2017 Amasty (https://www.amasty.com)
+ * @package Amasty_GiftCard
+ */
+?>
+<?php /* @var $block \Amasty\GiftCard\Block\Customer\Cards */ ?>
+
+<?php $_cards = $block->getCards() ?>
+<?php if(count($_cards)): ?>
+<div class="amgiftcard">
+<fieldset class="gift-card__box">
+    <?php foreach($_cards as $_card): ?>
+        <div class="am-gift-card-info customer-account-gift-card-item gift-card__box--item">
+            <p><?php echo __("Card code: %1", '<strong>' . $_card->getCode() . '</strong>'); ?></p>
+            <p><?php echo __("Status: %1", '<strong>' . $_card->getStatus() . '</strong>'); ?></p>
+            <p><?php echo __('Current Balance: %1', '<strong>' . $block->getCurrentBalance($_card->getCurrentValue()) . '</strong>'); ?></p>
+            <?php if ($_card->getExpiredDate()): ?>
+                <?php $_validTill = $block->getExpiredDate($_card->getExpiredDate()); ?>
+            <?php else: ?>
+                <?php $_validTill = __('unlimited'); ?>
+            <?php endif; ?>
+            <p><?php echo __('Valid till: %1', '<strong>' . $_validTill . '</strong>'); ?></p>
+
+        </div>
+    <?php endforeach; ?>
+</fieldset>
+</div>
+<?php endif;?>

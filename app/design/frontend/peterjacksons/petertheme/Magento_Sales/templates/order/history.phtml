@@ -23,20 +23,38 @@
         </div>
         <div>
             <?php foreach ($_orders as $_order): ?>
-                <div class ="orders-history__items">
-                    <div data-th="<?php echo $block->escapeHtml(__('Order #')) ?>" class="col id"><?php /* @escapeNotVerified */ echo $_order->getRealOrderId() ?></div>
-                    <?php
+                <div class="orders-history__items">
+
+                    <div class="orders-history__items--mobile">
+
+                        <div class=""><?php /* @escapeNotVerified */ echo __('Order #') ?></div>
+                        <div class=""><?php /* @escapeNotVerified */ echo __('Date') ?></div>
+                        <div class=""><?php /* @escapeNotVerified */ echo __('Order Total') ?></div>
+                        <div class=""><?php /* @escapeNotVerified */ echo __('Order Status') ?></div>
+
+                    </div>
+
+                    <div class="orders-history__items--desktop">
+                        <div data-th="<?php echo $block->escapeHtml(__('Order #')) ?>" class="col id"><?php /* @escapeNotVerified */ echo $_order->getRealOrderId() ?></div>
+                        <?php
+                        /** Change date format **/
                         $createdDate = new \Datetime($_order->getCreatedAt());
                         $createdDate = $createdDate->format('d/m/y');
-                    ?>
-                    <div data-th="<?php echo $block->escapeHtml(__('Date')) ?>" class="col date"><?php /* @escapeNotVerified */ echo $createdDate ?></div>
-                    <?php $extra = $block->getChildBlock('extra.container'); ?>
-                    <?php if ($extra): ?>
-                        <?php $extra->setOrder($_order); ?>
-                        <?php /* @noEscape */ echo $extra->getChildHtml() ?>
-                    <?php endif; ?>
-                    <div data-th="<?php echo $block->escapeHtml(__('Order Total')) ?>" class="col total"><?php /* @escapeNotVerified */ echo $_order->formatPrice($_order->getGrandTotal()) ?></div>
-                    <div data-th="<?php echo $block->escapeHtml(__('Status')) ?>" class="col status"><?php /* @escapeNotVerified */ echo $_order->getStatusLabel() ?></div>
+                        ?>
+                        <div data-th="<?php echo $block->escapeHtml(__('Date')) ?>" class="col date"><?php /* @escapeNotVerified */ echo $createdDate ?></div>
+                        <?php $extra = $block->getChildBlock('extra.container'); ?>
+                        <?php if ($extra): ?>
+                            <?php $extra->setOrder($_order); ?>
+                            <?php /* @noEscape */ echo $extra->getChildHtml() ?>
+                        <?php endif; ?>
+                        <div data-th="<?php echo $block->escapeHtml(__('Order Total')) ?>" class="col total"><?php /* @escapeNotVerified */ echo $_order->formatPrice($_order->getGrandTotal()) ?></div>
+                        <div data-th="<?php echo $block->escapeHtml(__('Status')) ?>" class="col status"><?php /* @escapeNotVerified */ echo $_order->getStatusLabel() ?></div>
+                    </div>
+
+
+
+
+
                     <div data-th="<?php echo $block->escapeHtml(__('Actions')) ?>" class="col actions">
                         <a href="<?php /* @escapeNotVerified */ echo $block->getViewUrl($_order) ?>" class="action view">
                             <span><?php /* @escapeNotVerified */ echo __('View Order') ?></span>
@@ -46,10 +64,6 @@
             <?php endforeach; ?>
         </div>
     </div>
-
-<!--    --><?php //if ($block->getPagerHtml()): ?>
-<!--        <div class="order-products-toolbar toolbar bottom">--><?php //echo $block->getPagerHtml(); ?><!--</div>-->
-<!--    --><?php //endif ?>
 <?php else: ?>
     <div class="message info empty"><span><?php /* @escapeNotVerified */ echo __('You have placed no orders.'); ?></span></div>
 <?php endif ?>

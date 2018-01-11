@@ -1,30 +1,39 @@
 .account-dashboard {
     &__title {
-        font-family: league_gothic, 'HlvtcNeueLTCndnsd', serif;
+        font-family: Roboto, sans-serif;
         font-size: 30px;
         font-weight: normal;
-        color: #515151;
+        color: black;
         width: 100%;
-        border-bottom: 1px solid #e9e8e8;
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #d7d7d7;
     }
 
     &__link {
-        text-transform: uppercase;
-        color: $black-light;
-        font-size: 16px;
+        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 210px;
+        height: 45px;
+        border-radius: 2px;
+        font-size: 13px;
         font-weight: 500;
-
-        &:hover {
-            color: $grey-dark;
-        }
+        text-transform: uppercase;
     }
 
     &__content {
         font-size: 16px;
+        color: #363636;
     }
 
     &__address {
         margin: 0 0 20px 0;
+        font-style: normal;
+    }
+
+    &__list {
+        padding: 15px 0 50px 0;
+        border-bottom: 1px solid #d7d7d7;
     }
 }
 
