@@ -66,7 +66,7 @@ export default class StoreHeader extends Component {
         const { regions } = this.props;
         return(
             <header className="storelocator-header">
-                <h1 className="storelocator-header__title">Find nearest shop</h1>
+                <h1 className="storelocator-header__title">Store Locator</h1>
                 <section className="storelocator-header__row">
                     {this.props.stateStore.view === 'list' ?
                         <article className="storelocator-header__filters">
