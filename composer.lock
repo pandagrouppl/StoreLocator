@@ -169,7 +169,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "42a08f445e14223ccd57af110de695176392ffb3"
+                "reference": "17e1db34a3e2a3fec2ddb942c2c6a732f628da82"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -177,7 +177,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-01-02 13:31:54"
+            "time": "2018-01-12 13:47:15"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -362,12 +362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502"
+                "reference": "9e145244b8a000f8fa2ddf059f2fe97833d8775a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/8358f991a32d8d7b639fd05e5daad77c414fd502",
-                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/9e145244b8a000f8fa2ddf059f2fe97833d8775a",
+                "reference": "9e145244b8a000f8fa2ddf059f2fe97833d8775a",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -379,7 +379,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-10-20 06:06:37"
+            "time": "2018-01-12 15:01:24"
         },
         {
             "name": "PandaGroup/Westfield",
