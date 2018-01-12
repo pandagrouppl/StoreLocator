@@ -129,27 +129,14 @@
         height: 803px;
         margin: 8px 40px 2% 2%;
 
-        &--gift {
-            background-image: url('../../img/assets/home-11-2017/banner-2017-11-man-gift-guide-big.jpg');
-        }
-
         &--measure {
             background-image: url('../../img/assets/home-11-2017/banner-2017-08-design.jpg');
-        }
-
-        &--beard {
-            background-image: url('../../img/assets/home-11-2017/banner-2017-11-decembeard.jpg');
         }
     }
 
     &__wrapper {
         display: flex;
         height: 100%;
-
-        &--right {
-            justify-content: flex-end;
-            align-items: center;
-        }
 
         &--left {
             align-items: flex-end;
@@ -158,22 +145,6 @@
 
     &__box {
         margin: 10% 5%;
-
-        &--gift {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 54%;
-        }
-
-        &--beard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            width: 45%;
-            height: 100%;
-        }
     }
 
     &__title {
@@ -184,22 +155,6 @@
         line-height: 1.1em;
         margin: 0;
         font-family: futurabold, sans-serif;
-
-        &--gift {
-            font-family: GothamBook, sans-serif;
-            padding-bottom: 40px;
-            font-weight: 700;
-            letter-spacing: 10px;
-        }
-
-        &--beard {
-            color: #000;
-            font-size: 55px;
-            text-transform: uppercase;
-            font-family: futurabold, sans-serif;
-            font-weight: 900;
-            margin: 0;
-        }
     }
 
     &__description {
@@ -209,35 +164,6 @@
         font-size: 16px;
         margin: 18px 0 0;
         max-width: 400px;
-
-        &--gift {
-            color: #fff;
-            font-family: GothamBook, sans-serif;
-            font-size: 17px;
-            letter-spacing: 2.5px;
-            line-height: 130%;
-        }
-
-        &--beard {
-            color: #000;
-            font-family: 'Roboto', sans-serif;
-            font-size: 17px;
-            line-height: 130%;
-            max-width: none;
-            margin: 18px 0 0 0;
-            font-weight: 300;
-        }
-    }
-
-    &__logos {
-        display: flex;
-        align-items: center;
-        padding: 100px 0 0 0;
-
-        img {
-            margin: 0 30px 20px 0;
-            max-width: 100%;
-        }
     }
 
     button,
@@ -277,13 +203,6 @@
 
     .btn-margin-top {
         margin-top: 40px;
-    }
-
-    .btn-black {
-        border: 1px solid black;
-        color: black;
-        margin: 40px 0 0 0;
-        background-color: transparent;
     }
 
     .btn::after {
@@ -339,22 +258,6 @@
             &--measure {
                 height: 605px;
             }
-
-            &--beard {
-                background-position: center right;
-            }
-        }
-
-        &__box {
-            &--beard {
-                width: 55%;
-            }
-        }
-
-        &__title {
-            &--beard {
-                font-size: 41px;
-            }
         }
     }
 }
@@ -394,40 +297,10 @@
         &__image {
             height: 500px;
 
-            &--gift {
-                background-position: center center;
-                background-size: cover;
-            }
-
             &--measure {
                 background-position: 0 0;
                 height: 518px;
             }
-
-            &--beard {
-                height: 550px;
-                background-position: center right;
-                background-size: cover;
-            }
-        }
-
-        &__slash {
-            font-size: 0;
-            display: block;
-            height: 1px;
-            background: #fff;
-            margin: 25px auto 25px auto;
-        }
-
-        &__title {
-            &--gift {
-                font-size: 40px;
-                padding-bottom: 30px;
-            }
-        }
-
-        &__logos {
-            padding: 50px 0 0 0;
         }
     }
 }
@@ -463,22 +336,9 @@
 
     .home-banner {
         &__image {
-            &--gift {
-                margin-top: 20px;
-                height: 450px;
-            }
-
             &--measure {
                 height: 375px;
             }
-
-            &--beard {
-                height: 450px;
-            }
-        }
-
-        &__slash {
-            width: 100%;
         }
     }
 }
@@ -487,46 +347,6 @@
     .main-banner {
         &__content-box {
             margin: 0 8.2em;
-        }
-    }
-
-    .home-banner {
-        &__image {
-            &--gift {
-                height: 375px;
-            }
-
-            &--beard {
-                background-image: url('../../img/assets/home-11-2017/banner-2017-11-decembeard-mob2.jpg');
-                background-position: left;
-            }
-        }
-
-        &__slash {
-            width: 50%;
-            margin: 15px auto 15px auto;
-        }
-
-        &__title {
-            &--beard {
-                font-size: 30px;
-            }
-        }
-
-        &__description {
-            &--beard {
-                display: none;
-            }
-        }
-    }
-}
-
-@media all and (max-width: 650px) {
-    .home-banner {
-        &__image {
-            &--beard {
-                height: 400px;
-            }
         }
     }
 }
@@ -582,12 +402,6 @@
 
     .home-banner {
         &__image {
-            &--gift {
-                background-image: url('../../img/assets/home-11-2017/banner-2017-11-man-gift-guide-mob2.jpg');
-                background-size: cover;
-                margin-top: 10px;
-                height: 325px;
-            }
 
             &--measure {
                 background-image: url('../../img/assets/home-11-2017/banner-2017-08-design-mb.jpg');
@@ -606,21 +420,8 @@
             }
         }
 
-        &__box {
-            &--gift {
-                padding: 20px;
-                background: rgba(0, 0, 0, 0.5);
-            }
-        }
-
         .btn-margin-top {
             margin-top: 10px;
-        }
-
-        &__logos {
-            img {
-                display: none;
-            }
         }
     }
 }
@@ -641,12 +442,6 @@
 
 @media all and (max-width: 460px) {
     .home-banner {
-        &__image {
-            &--beard {
-                height: 300px;
-            }
-        }
-
         button {
             margin-top: 10px;
         }
@@ -654,15 +449,6 @@
 }
 
 @media all and (max-width: 400px) {
-    .home-banner {
-        &__image {
-            &--beard {
-                background-image: url('../../img/assets/home-11-2017/banner-2017-11-decembeard-mob.jpg');
-                background-position: left;
-            }
-        }
-    }
-
     .men-guide-slider {
         &__title {
             font-size: 16px;
@@ -761,21 +547,6 @@
         letter-spacing: 0.5px;
         padding: 0 40px;
         margin: 0;
-    }
-
-    &__button {
-        margin-top: 40px;
-        background-color: #363636;
-        border: none;
-        border-radius: 3px;
-        padding: 13px 42px;
-        color: white;
-        transition: all 0.5s ease;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #666666;
-        }
     }
 
     .slick-initialized .slick-slide {
@@ -887,56 +658,11 @@
     }
 }
 
-@media all and (max-width: 1260px) {
-    .home-banner {
-
-        &__right-box {
-            max-width: 250px;
-        }
-
-        &__box-right {
-            margin: 5% 10%;
-        }
-
-        &__title--gift {
-            text-align: center;
-        }
-
-        .btn--black-hover {
-            margin-left: auto;
-        }
-
-        &--space {
-            font-size: 0;
-            display: block;
-            height: 1px;
-            width: 55px;
-            background: #fff;
-            margin: 25px auto 25px auto;
-        }
-    }
-}
-
 @media all and (max-width: 975px) {
     .home-banner {
-        &__right-box {
-            max-width: 200px;
-            top: 25.9%;
-            padding: 0 20%;
-        }
 
         &__box {
             margin: 12% 5%;
-        }
-
-        &__title--gift {
-            padding-bottom: 20px;
-        }
-
-        &__description {
-            &--gift {
-                display: none;
-            }
         }
     }
 
@@ -980,13 +706,6 @@
 }
 
 @media all and (max-width: 750px) {
-    .home-banner {
-
-        &__title--gift {
-            font-size: 35px;
-        }
-    }
-
     .men-guide {
         &__boxes {
             display: block;
@@ -1008,11 +727,6 @@
 
         &__box {
             margin: 10% 8%;
-
-            &--right {
-                background: rgba(0, 0, 0, 0.5);
-                padding: 20px;
-            }
         }
 
         &__title {
@@ -1030,12 +744,6 @@
             margin-top: 10px;
         }
 
-        .btn--black {
-            border-color: #363636;
-            background: #363636;
-            color: #fff;
-        }
-
         &__scroll-down {
             top: 93%;
 
@@ -1046,7 +754,3 @@
         }
     }
 }
-
-
-
-
