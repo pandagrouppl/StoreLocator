@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div class="block <?php /* @escapeNotVerified */ echo $block->getBlockCss(); ?>">
+    <?php
+
+    $content = $block->getChildHtml();
+
+    /********** Get current tab name form child content **********/
+    $startPos = strpos ($content ,'item current') + 14;
+    $contentAfterName = substr($content, $startPos);
+    $length = strpos($contentAfterName ,'</li>');
+    $currentTabName = html_entity_decode(substr($content, $startPos, $length));
+
+    ?>
+    <div class="title <?php /* @escapeNotVerified */ echo $block->getBlockCss();?>-title" data-mage-init='{"toggleAdvanced": {"toggleContainers": "#<?php /* @escapeNotVerified */ echo $block->getBlockCss(); ?>", "selectorsToggleClass": "active"}}'>
+        <strong><?php /* @escapeNotVerified */ echo $currentTabName; ?></strong>
+        <figure class="checkout-minicart__chevron"></figure>
+    </div>
+    <div class="content <?php /* @escapeNotVerified */ echo $block->getBlockCss(); ?>-content" id="<?php /* @escapeNotVerified */ echo $block->getBlockCss(); ?>">
+        <?php echo $content; ?>
+    </div>
+</div>

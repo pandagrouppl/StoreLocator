@@ -1,0 +1,55 @@
+.amgiftcard {
+
+    .gift-card {
+
+        &__box {
+            border: 0;
+            padding: 0;
+
+            &--item {
+                display: flex;
+                justify-content: space-between;
+                font-size: 17px;
+                font-weight: 300;
+                border-bottom: 1px solid #d7d7d7;
+                color: #363636;
+                padding: 15px 0 15px 0;
+
+                @media all and (max-width: $bp-header) {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &__header {
+            font-size: 30px;
+            color: black;
+            margin: 0 0 25px 0;
+
+            @media all and (max-width: $bp-header) {
+                display: none;
+            }
+        }
+
+        &__button {
+            @include button-black($height: 55px, $margin-top: 30px, $font-size: 18px);
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 210px;
+            height: 45px;
+            border-radius: 2px;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            @media all and (max-width: $bp-header) {
+                max-width: 100%;
+            }
+        }
+
+        &__code {
+            @include form-element();
+        }
+
+    }
+}
