@@ -61,14 +61,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "f1e6e2c9ff28e04b96ed96565248a8de50ba4edb"
+                "reference": "7c43098c456da7f9188041fc454b1364405e94b4"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-10 13:41:19"
+            "time": "2018-01-12 11:20:02"
         },
         {
             "name": "PandaGroup/CouponExtender",
