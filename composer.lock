@@ -169,7 +169,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "42a08f445e14223ccd57af110de695176392ffb3"
+                "reference": "953ad44369cc39a5bcf19a9e733ed5e188fc2342"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -177,7 +177,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-01-02 13:31:54"
+            "time": "2018-01-12 11:58:09"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -401,7 +401,7 @@
             "version": "1.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
+                "url": "https://composer.amasty.com/community/packages/base-1.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
