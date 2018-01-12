@@ -57,6 +57,7 @@ body._has-modal-custom .modal-custom-overlay {
 .modal-inner-wrap {
     min-width: 350px;
     width: 20vw;
+    background-color: white; padding: 20px;
 
     .modal-header, .block-title {
         position: relative;
