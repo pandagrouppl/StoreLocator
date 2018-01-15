@@ -131,6 +131,7 @@ return array (
     'PandaGroup_AnzExtender' => 1,
     'PandaGroup_Careers' => 1,
     'PandaGroup_Checkout' => 1,
+    'PandaGroup_Corporate' => 1,
     'PandaGroup_CouponExtender' => 1,
     'PandaGroup_CronSchedulerExtender' => 1,
     'PandaGroup_CustomerExtender' => 1,
