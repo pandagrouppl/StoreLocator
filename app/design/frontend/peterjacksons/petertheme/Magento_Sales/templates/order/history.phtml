@@ -54,12 +54,12 @@
 
 
 
-
+                    <a href="<?php /* @escapeNotVerified */ echo $block->getViewUrl($_order) ?>" class="action view">
                     <div data-th="<?php echo $block->escapeHtml(__('Actions')) ?>" class="col actions">
-                        <a href="<?php /* @escapeNotVerified */ echo $block->getViewUrl($_order) ?>" class="action view">
                             <span><?php /* @escapeNotVerified */ echo __('View Order') ?></span>
-                        </a>
                     </div>
+                    </a>
+
                 </div>
             <?php endforeach; ?>
         </div>
