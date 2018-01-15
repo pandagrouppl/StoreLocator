@@ -179,3 +179,17 @@ body[class~='checkout-onepage-success'] {
     }
 }
 
+body[class~='contact-index-index'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .page-main__columns {
+        max-width: 1080px;
+        margin: 50px auto 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+

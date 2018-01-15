@@ -32,6 +32,7 @@
         "PandaGroup/CouponExtender": "dev-master",
         "PandaGroup/SortByExtender": "dev-master",
         "PandaGroup/AttributeUpdate": "dev-master",
+        "PandaGroup/AnzExtender": "dev-master",
         "PandaGroup/Salesforce": "dev-master",
         "PandaGroup/SpecialPriceFixer": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
@@ -46,8 +47,6 @@
         "wyomind/cronscheduler": "dev-master"
     },
     "require-dev": {
-        "PandaGroup/Salesforce": "dev-master",
-        "salesforce-mc/fuel-sdk-php": "^1.1",
         "mirasvit/module-profiler": "^1.0",
         "PandaGroup/ShopByLook": "dev-master",
         "phpunit/phpunit": "4.1.0",
@@ -186,6 +185,10 @@
         "26": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-special-price-fixer.git"
+        },
+        "27": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-anz-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
