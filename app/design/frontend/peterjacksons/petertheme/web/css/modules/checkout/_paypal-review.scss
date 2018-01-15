@@ -90,9 +90,28 @@
     &__items {
         background-color: #efefef;
         padding: 15px 15px 20px 15px;
+        margin-left: 35px;
 
         .product-image-wrapper {
             padding-bottom: 0 !important;
+        }
+
+        .please-wait {
+            display: block;
+            margin-top: 5px;
+        }
+    }
+
+    .paypal-review-discount div {
+        box-sizing: border-box;
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        flex-direction: column;
+
+        &__items {
+            margin: 35px 0 0 0;
+
         }
     }
 }
