@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8fcc3e26cedd0d73f9fe9940f6728d3",
-    "content-hash": "7025d7e218354f07e105074237cea4ef",
+    "hash": "0a0031071c8a1a669b447fcc826fce9c",
+    "content-hash": "33799c29b8c70276a0ad9507ef4c36a9",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -88,6 +88,21 @@
             ],
             "description": "Checkout update module for Magento 2.x",
             "time": "2018-01-12 11:20:02"
+        },
+        {
+            "name": "PandaGroup/Corporate",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-corporate.git",
+                "reference": "cab2ee957b2dd2d3c502d28526e9196a69b78cb3"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Corporate module for Magento 2.x",
+            "time": "2018-01-15 12:28:15"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -188,7 +203,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "389f5c979600244ba825f342d55231927d9e3e99"
+                "reference": "af0f04fb20174e8442ed126c2436bb2ca4e48945"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -196,7 +211,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-01-15 13:33:43"
+            "time": "2018-01-15 14:13:08"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -10473,6 +10488,7 @@
         "pandagroup/frontools": 20,
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
+        "pandagroup/corporate": 20,
         "pandagroup/quickview": 20,
         "pandagroup/emailtester": 20,
         "pandagroup/cronschedulerextender": 20,
