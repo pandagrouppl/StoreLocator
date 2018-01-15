@@ -5,7 +5,7 @@
         font-size: 40px;
         background: #f7f7f7;
         margin: 0;
-        height: 135px;
+        height: 163px;
         font-family: 'Roboto', sans-serif;
         display: flex;
         justify-content: center;
@@ -16,7 +16,7 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        margin: 40px auto;
+        margin: 13px auto;
         max-width: 960px;
     }
 
@@ -29,7 +29,7 @@
     &__filter {
         font-weight: bold;
         font-size: 22px;
-        margin-right: 10px;
+        margin-right: 20px;
         cursor: pointer;
 
         &--active {
@@ -41,16 +41,16 @@
         color: $grey-dark;
         text-decoration: underline;
         cursor: pointer;
-        margin: 0 30px;
+        margin: 0 30px 0 0;
         font-size: 17px;
     }
 
     &__input {
-        height: 40px;
+        height: 38px;
         border: 1px solid #b9b9b9;
         background-color: white;
         box-sizing: border-box;
-        padding: 0 18px;
+        padding: 0 22px;
         color: #515151;
         font-size: 14px;
     }
@@ -60,7 +60,7 @@
         font-size: 16px;
         font-weight: 400;
         transition: background 0.3s, color 0.3s ease-in-out;
-        margin: 15px;
+        margin: 11px 0 0 12px;
         letter-spacing: 0;
         cursor: pointer;
         background: #363636;
