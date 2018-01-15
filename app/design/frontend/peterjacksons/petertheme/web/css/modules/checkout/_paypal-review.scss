@@ -1,0 +1,98 @@
+.paypal-review {
+    display: flex;
+    justify-content: space-between;
+
+    .box-title, .paypal-review-title {
+        margin-top: 25px;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        display: block;
+        font-size: 14px;
+    }
+
+    .box-order-shipping-method .box-title {
+        margin-top: 0;
+    }
+
+    .paypal-review-title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+
+        .action.edit {
+            font-size: 15px;
+            margin: auto 0 0 10px;
+
+            * {
+                color: #181818;
+
+                &:hover {
+                    color: #767676;
+                }
+            }
+
+        }
+    }
+
+    .table-paypal-review-items {
+        width: 100%;
+        font-size: 14px;
+
+        th {
+            text-align: left;
+            padding: 7px 0;
+        }
+
+        td {
+            text-align: right;
+        }
+    }
+
+    &__select-wrapper {
+        @include form-element-wrapper();
+    }
+
+    &__select {
+        @include form-element();
+    }
+
+    &__select-arrow {
+        @include form-select-arrow();
+    }
+
+    address {
+        padding: 20px;
+        margin: 10px 0 0 0;
+        border: 2px solid grey;
+    }
+
+    .box-actions a, .action.update.primary {
+        display: inline-block;
+        @include button-black($height: inherit, $width: inherit, $font-size: 13px, $margin-top: 5px);
+    }
+
+    .action.checkout.primary {
+        @include button-black();
+    }
+
+
+    &__payment-method {
+        display: flex;
+    }
+
+    &__payment-text {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__items {
+        background-color: #efefef;
+        padding: 15px 15px 20px 15px;
+
+        .product-image-wrapper {
+            padding-bottom: 0 !important;
+        }
+    }
+}
