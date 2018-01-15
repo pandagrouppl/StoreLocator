@@ -10,7 +10,7 @@
         <referenceContainer name="content">
             <referenceBlock name="page.main.title">
                 <action method="setPageTitle">
-                    <argument translate="true" name="title" xsi:type="string">Contact Us</argument>
+                    <argument translate="true" name="title" xsi:type="string">Contact us</argument>
                 </action>
             </referenceBlock>
         <move element="page.main.title" destination="page.top" before="breadcrumbs"/>
