@@ -20,6 +20,7 @@
         "PandaGroup/Frontools": "dev-master",
         "PandaGroup/Checkout": "dev-master",
         "PandaGroup/Careers": "dev-master",
+        "PandaGroup/Corporate": "dev-master",
         "PandaGroup/Spinner": "^1.0.0",
         "PandaGroup/Quickview": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
@@ -189,6 +190,10 @@
         "27": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-anz-extender.git"
+        },
+        "28": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-corporate.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
