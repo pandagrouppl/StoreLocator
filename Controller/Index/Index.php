@@ -28,7 +28,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend(__('Store Locator'));
+        $resultPage->getConfig()->getTitle()->set(__('Store Locator'));
         return $resultPage;
     }
 
