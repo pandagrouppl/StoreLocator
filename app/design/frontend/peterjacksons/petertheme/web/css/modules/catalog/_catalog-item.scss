@@ -20,16 +20,19 @@
         @media all and (max-width: $sm-breakpoint) {
             width: 29%;
             margin: 10px;
+            min-height: 550px;
         }
 
         @media all and (max-width: 550px) {
             width: 44%;
             margin: 10px;
+            min-height: 500px;
         }
 
         @media all and (max-width: $xs-breakpoint) {
             width: 41%;
             margin: 10px;
+            min-height: 450px;
         }
     }
 
@@ -125,6 +128,8 @@
 
     &__product-name {
         flex: 1;
+        min-height: 30px;
+        max-height: 50px;
     }
 
     &__title {
