@@ -93,6 +93,13 @@
 
     &__add-to-cart {
         @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        &--out-of-stock {
+            cursor: default;
+
+            &:hover {
+                background-color: #363636;
+            }
+        }
     }
 
     &__free-delivery {

@@ -10,6 +10,7 @@
 ?>
 <?php $_product = $block->getProduct(); ?>
 <?php $buttonTitle = __('Add to Cart'); ?>
+<?php $buttonOutOfStock = __('Out of Stock'); ?>
 <?php if ($_product->isSaleable()): ?>
 <div class="box-tocart">
     <div class="fieldset">
@@ -25,6 +26,19 @@
         </div>
     </div>
 </div>
+<?php else: ?>
+    <div class="box-tocart">
+        <div class="fieldset">
+            <div class="actions">
+                <button disabled
+                        title="<?php /* @escapeNotVerified */ echo $buttonOutOfStock ?>"
+                        class="action primary tocart product-info-main__add-to-cart product-info-main__add-to-cart--out-of-stock"
+                        id="product-addtocart-button">
+                    <span><?php /* @escapeNotVerified */ echo $buttonOutOfStock ?></span>
+                </button>
+            </div>
+        </div>
+    </div>
 <?php endif; ?>
 <script type="text/x-magento-init">
     {
