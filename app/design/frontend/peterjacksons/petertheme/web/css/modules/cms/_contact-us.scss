@@ -78,6 +78,7 @@ $bp: 680px;
 
     &__right {
         width: 50%;
+        border: 0;
 
         form {
             display: flex;
@@ -86,6 +87,8 @@ $bp: 680px;
 
         @media all and (max-width: $bp) {
             width: 100%;
+            padding: 0;
+            margin: 0;
         }
     }
 
@@ -98,6 +101,16 @@ $bp: 680px;
         resize: none;
         padding: 10px;
         height: 168px;
+
+        text.placeholder {
+            text-align: center;
+        }
+    }
+
+    .field.comment.required {
+        textarea {
+            line-height: 34px;
+        }
     }
 
     &__button {

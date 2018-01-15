@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<form class="form contact contact-us"
+      action="<?php /* @escapeNotVerified */ echo $block->getFormAction(); ?>"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+      data-mage-init='{"validation":{}}'>
+
+    <section class="contact-us__left">
+        <h2 class="contact-us__title">Get in touch with us</h2>
+        <p class="contact-us__paragraph">Our aim is to achieve 100% customer satisfaction
+            and to do so we need and value your feedback.</p>
+
+        <p class="contact-us__paragraph">Should you have a question which is not covered on
+            the website please contact us by phone or email.</p>
+
+        <div class="contact-us__address">
+            <p>Peter Jackson Head Office </p><br>
+            <p>426 Johnston Street, Abbotsford, VIC 3067 </p><br>
+            <p><span>Phone </span>(03) 9415 6281 </p><br>
+            <p><span>Email </span>info@peterjacksons.com</p><br>
+        </div>
+    </section>
+
+    <fieldset class="fieldset contact-us__right">
+        <div class="field email required">
+            <input placeholder="Email*" name="email" id="email" title="<?php /* @escapeNotVerified */ echo __('Your email address') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('email') ?: $this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text contact-us__input" type="email" data-validate="{required:true, 'validate-email':true}"/>
+        </div>
+        <div class="field name required">
+            <input placeholder="Your full name*" name="name" id="name" title="<?php /* @escapeNotVerified */ echo __('Your full name*') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('name') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text contact-us__input" type="text" data-validate="{required:true}"/>
+        </div>
+        <div class="field comment required">
+                <textarea placeholder="Subject*" name="subject" id="comment" title="<?php /* @escapeNotVerified */ echo __('Subject') ?>" class="input-text contact-us__input" cols="5" rows="3" data-validate="{required:true}"><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+        </div>
+        <div class="field comment required">
+                <textarea placeholder="Type your enquiry here." name="comment" id="comment" title="<?php /* @escapeNotVerified */ echo __('What’s on your mind?') ?>" class="input-text contact-us__textarea" cols="5" rows="3" data-validate="{required:true}"><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+        </div>
+        <?php echo $block->getChildHtml('form.additional.info'); ?>
+
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="hideit" id="hideit" value="" />
+                <button class="contact-us__button" type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit') ?>" class="action submit primary">
+                    <span><?php /* @escapeNotVerified */ echo __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+
+</form>
