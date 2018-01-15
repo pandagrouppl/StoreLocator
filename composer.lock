@@ -4,9 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "793f40afe2d01123f49296cf2107d68b",
-    "content-hash": "39c4fd663c0e78cbc3d9a93a2013fea4",
+    "hash": "c8fcc3e26cedd0d73f9fe9940f6728d3",
+    "content-hash": "7025d7e218354f07e105074237cea4ef",
     "packages": [
+        {
+            "name": "PandaGroup/AnzExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
+                "reference": "615915c0727d98d80d4ce6d2d4949fd89e6aa0cc"
+            },
+            "require": {
+                "magenest/module-anz": "dev-master",
+                "pandagroup/base": "dev-master"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Anz Extender module for Magento 2.x",
+            "time": "2018-01-15 10:01:05"
+        },
         {
             "name": "PandaGroup/AttributeUpdate",
             "version": "dev-master",
@@ -46,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "294d04e41a25156c7c92f4f62673276dd7441870"
+                "reference": "282bc3263e4606d91ea6ef328adbef03c667517f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2017-11-24 16:09:07"
+            "time": "2018-01-15 10:16:07"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -61,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "f1e6e2c9ff28e04b96ed96565248a8de50ba4edb"
+                "reference": "7c43098c456da7f9188041fc454b1364405e94b4"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-10 13:41:19"
+            "time": "2018-01-12 11:20:02"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -169,7 +188,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "42a08f445e14223ccd57af110de695176392ffb3"
+                "reference": "6113e8732fb25ee34adfca7f9d11e26fd73fd28d"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -177,7 +196,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-01-02 13:31:54"
+            "time": "2018-01-15 09:09:41"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -362,12 +381,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502"
+                "reference": "d887850d5eac2663dac66d74b472dd4b20cba2a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/8358f991a32d8d7b639fd05e5daad77c414fd502",
-                "reference": "8358f991a32d8d7b639fd05e5daad77c414fd502",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d887850d5eac2663dac66d74b472dd4b20cba2a7",
+                "reference": "d887850d5eac2663dac66d74b472dd4b20cba2a7",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -379,7 +398,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2017-10-20 06:06:37"
+            "time": "2018-01-15 10:22:00"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -387,14 +406,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "85319a30d23bc7f81733a4486de4d30f6c7568d4"
+                "reference": "305eedfe527eb0e5ddea9459c748d2ab017ac074"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2017-11-03 13:05:49"
+            "time": "2018-01-11 14:29:00"
         },
         {
             "name": "amasty/base",
@@ -10465,6 +10484,7 @@
         "pandagroup/couponextender": 20,
         "pandagroup/sortbyextender": 20,
         "pandagroup/attributeupdate": 20,
+        "pandagroup/anzextender": 20,
         "pandagroup/salesforce": 20,
         "pandagroup/specialpricefixer": 20,
         "pandagroup/customerextender": 20,
