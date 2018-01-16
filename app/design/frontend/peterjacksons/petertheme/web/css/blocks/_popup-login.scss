@@ -1,12 +1,10 @@
-.modal-header {
-
-    img {
-        width: 100%;
-    }
-}
-
 #prpl-modal-popup #prpl-modal-inner-wrap .actions-toolbar button.action {
-    @include button-custom($bg: #c22020, $mg: 0);
+    @include button-black($height: 55px, $font-size: 18px);
+    width: 100%;
+    border-radius: 1px;
+    max-width: 305px;
+    text-transform: uppercase;
+    font-weight: 500;
 
     span {
         line-height: normal;
@@ -16,15 +14,197 @@
 
 
 #prpl-modal-popup {
+    padding: 0 1% !important;
+    z-index: 1000 !important;
+    background: rgba(0, 0, 0, 0.8);
 
     #prpl-modal-inner-wrap {
         width: 100%;
-        max-height: 475px;
+        min-height: 490px;
+        max-height: 572px;
+        margin-top: 3%;
+        max-width: 410px;
+        border-radius: 0;
+
+        .modal-header {
+            border: 0;
+            padding: 51px 0 0 0;
+            font-size: 30px;
+            margin: 0 1px 23px 30px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .modal-content {
+            padding: 0 0 20px 0;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto 15px auto;
+            text-align: center;
+
+            a {
+                color: black;
+                font-size: 15px;
+            }
+
+            .field {
+                margin: 12px 0 0 0;
+            }
+
+            .field.note {
+                width: 305px;
+                margin: 0 auto 20px auto;
+                font-size: 13px;
+            }
+
+            .fieldset {
+                margin: 0;
+                max-height: 242px;
+            }
+
+            .choice.field {
+                max-width: 305px;
+                margin: 0 auto 0 auto;
+                height: 67px;
+                display: flex;
+                padding: 10px 0 0 0;
+
+                span {
+                    font-size: 15px;
+                }
+
+                input {
+                    margin: 0 11px 0 0;
+                }
+            }
+        }
 
         .action-close {
             background: white;
             border: 0;
             cursor: pointer;
         }
+    }
+
+    #prpl-modal-inner-wrap .modal-content .fieldset.login .field input[type="password"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="email"] {
+        @include form-element();
+        width: 100%;
+        height: 36px;
+        border-radius: 1px;
+        max-width: 305px;
+    }
+
+    #prpl-modal-inner-wrap .modal-content .fieldset.login .field.email .control:before,
+    #prpl-modal-inner-wrap .modal-content .fieldset.login .field.password .control:before {
+        content: none;
+    }
+
+    #prpl-modal-inner-wrap .actions-toolbar .prpl-f-password a.action {
+        margin-top: 20px;
+        color: black;
+        font-size: 15px;
+    }
+
+    #prpl-modal-inner-wrap .actions-toolbar .prpl-cr-account {
+        border: 0;
+        font-size: 15px;
+        margin-top: 17px;
+        padding-top: 0;
+
+        a {
+            background-image: none !important;
+            color: black;
+        }
+    }
+
+    #prpl-modal-inner-wrap .modal-content .fieldset {
+        border: 0;
+    }
+
+    #prpl-modal-inner-wrap #socialLoginButtons .pslogin-spacer {
+        display: none;
+    }
+
+    #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li span.pslogin-button-auto {
+        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        width: 100%;
+        border-radius: 1px;
+        max-width: 305px;
+        background: #415f92;
+
+    }
+
+    #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li .pslogin-button-icon {
+        display: none;
+    }
+
+    .pslogin-block .pslogin-buttons ul li .pslogin-button-text {
+        background-color: transparent;
+    }
+
+    #prpl-modal-inner-wrap .actions-toolbar .prpl-cr-account a {
+        padding: 0;
+    }
+
+    #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li .pslogin-button-text {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+
+    #prpl-modal-inner-wrap .modal-content .field input[type="text"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="password"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="url"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="tel"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="search"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="number"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="datetime"],
+    #prpl-modal-inner-wrap .modal-content .field input[type="email"] {
+        @include form-element();
+        width: 100%;
+        height: 36px;
+        border-radius: 1px;
+        max-width: 305px;
+    }
+
+    #prpl-login,
+    #prpl-registration-form {
+        padding: 0 1%;
+
+        fieldset {
+            padding: 0;
+        }
+
+        .actions-toolbar {
+            .secondary {
+                .space {
+                    margin: 16px 0;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .pslogin-buttons.pslogin-buttons-showfull {
+        width: 100%;
+    }
+
+    #prpl-modal-popup #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li span.pslogin-button-auto {
+        margin-top: 0;
+    }
+
+    .secondary.prpl-f-password {
+        margin-bottom: 33px;
+    }
+
+    #prpl-modal-inner-wrap .modal-content div.mage-error {
+        right: -115px;
+    }
+
+    #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li {
+        transition: none;
     }
 }

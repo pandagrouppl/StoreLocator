@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Plumrocket_Popuplogin::css/popuplogin.css"/>
+        <css src="Plumrocket_Popuplogin::css/popuplogin-custom.css"/>
+    </head>
+    <body>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="prpopuplogin_head_components" as="prpopuplogin.components" template="Plumrocket_Popuplogin::js/components.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="after.body.start">
+            <block class="Plumrocket\Popuplogin\Block\Popuplogin" name="prpopuplogin" as="prpopuplogin" template="Plumrocket_Popuplogin::popuplogin.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="types" xsi:type="array"/>
+                        <item name="components" xsi:type="array">
+                            <item name="prpl-popuplogin" xsi:type="array">
+                                <item name="component" xsi:type="string">Plumrocket_Popuplogin/js/view/popuplogin</item>
+                                <item name="provider" xsi:type="string">localStorage</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Plumrocket_Popuplogin/popuplogin</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="messages" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">0</item>
+                                        <item name="component" xsi:type="string">Magento_Ui/js/view/messages</item>
+                                        <item name="provider" xsi:type="string">localStorage</item>
+                                        <item name="displayArea" xsi:type="string">messages</item>
+                                        <item name="template" xsi:type="string">Plumrocket_Popuplogin/messages</item>
+                                    </item>
+                                    <item name="login" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">1</item>
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="provider" xsi:type="string">localStorage</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Plumrocket_Popuplogin/themes/%s/forms/login</item>
+                                            <item name="displayArea" xsi:type="string">popupForms</item>
+                                        </item>
+                                    </item>
+                                    <item name="registration" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">2</item>
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="provider" xsi:type="string">localStorage</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Plumrocket_Popuplogin/themes/%s/forms/registration</item>
+                                            <item name="displayArea" xsi:type="string">popupForms</item>
+                                        </item>
+                                        <item name="children" xsi:type="array">
+                                            <item name="registration-fieldset" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="displayArea" xsi:type="string">registration-fieldsets</item>
+                                                <item name="children" xsi:type="array">
+                                                                     <!-- The following items override configuration of corresponding address attributes -->
+                                                                    <item name="region" xsi:type="array">
+                                                                        <!-- Make region attribute invisible on frontend. Corresponding input element is created by region_id field -->
+                                                                        <item name="visible" xsi:type="boolean">false</item>
+                                                                    </item>
+                                                                    <item name="region_id" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/region</item>
+                                                                        <item name="config" xsi:type="array">
+                                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/select</item>
+                                                                            <item name="customEntry" xsi:type="string">prpl-popuplogin.region</item>
+                                                                        </item>
+                                                                        <item name="validation" xsi:type="array">
+                                                                            <item name="validate-select" xsi:type="string">true</item>
+                                                                        </item>
+                                                                        <!-- Value of region_id field is filtered by the value of county_id attribute -->
+                                                                        <item name="filterBy" xsi:type="array">
+                                                                            <item name="target" xsi:type="string"><![CDATA[${ $.provider }:${ $.parentScope }.country_id]]></item>
+                                                                            <item name="field" xsi:type="string">country_id</item>
+                                                                        </item>
+                                                                    </item>
+                                                    <item name="subscribe" xsi:type="array">
+                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                        <item name="provider" xsi:type="string">localStorage</item>
+                                                        <item name="dataScope" xsi:type="string">prpl-popuplogin.subscribe</item>
+                                                        <item name="value" xsi:type="boolean">true</item>
+                                                        <item name="description" xsi:type="string">Subscribe to newsletter.</item>
+                                                        <item name="sortOrder" xsi:type="number">999</item>
+                                                        <item name="visible" xsi:type="boolean">true</item>
+                                                        <item name="config" xsi:type="array">
+                                                            <item name="customScope" xsi:type="string">prpl-popuplogin</item>
+                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/checkbox</item>
+                                                        </item>
+                                                    </item>
+                                                    <item name="password" xsi:type="array">
+                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                        <item name="provider" xsi:type="string">localStorage</item>
+                                                        <item name="dataScope" xsi:type="string">prpl-popuplogin.password</item>
+                                                        <item name="label" xsi:type="string">Password</item>
+                                                        <item name="sortOrder" xsi:type="number">999</item>
+                                                        <item name="visible" xsi:type="boolean">true</item>
+                                                        <item name="config" xsi:type="array">
+                                                            <item name="customScope" xsi:type="string">prpl-popuplogin</item>
+                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/password</item>
+                                                        </item>
+                                                        <item name="validation" xsi:type="array">
+                                                            <item name="required-entry" xsi:type="boolean">true</item>
+                                                            <item name="validate-password" xsi:type="boolean">true</item>
+                                                        </item>
+                                                    </item>
+                                                    <item name="password_confirmation" xsi:type="array">
+                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
+                                                        <item name="provider" xsi:type="string">localStorage</item>
+                                                        <item name="dataScope" xsi:type="string">prpl-popuplogin.password_confirmation</item>
+                                                        <item name="label" xsi:type="string">Password Confirmation</item>
+                                                        <item name="sortOrder" xsi:type="number">999</item>
+                                                        <item name="visible" xsi:type="boolean">true</item>
+                                                        <item name="config" xsi:type="array">
+                                                            <item name="customScope" xsi:type="string">prpl-popuplogin</item>
+                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/password</item>
+                                                        </item>
+                                                        <item name="validation" xsi:type="array">
+                                                            <item name="required-entry" xsi:type="boolean">true</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                    <item name="forgotpassword" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">3</item>
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Plumrocket_Popuplogin/themes/%s/forms/forgotpassword</item>
+                                            <item name="displayArea" xsi:type="string">popupForms</item>
+                                        </item>
+                                    </item>
+                                    <item name="registration_success" xsi:type="array">
+                                        <item name="sortOrder" xsi:type="string">4</item>
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Plumrocket_Popuplogin/themes/%s/forms/success</item>
+                                            <item name="displayArea" xsi:type="string">popupForms</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

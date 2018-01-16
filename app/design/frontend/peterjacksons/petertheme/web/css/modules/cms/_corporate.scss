@@ -73,7 +73,7 @@
     }
 
     &__description {
-        margin: 0 75px 0 0;
+        margin: 0 69px 0 0;
 
         @media all and (max-width: 674px) {
             margin: 0;
@@ -91,9 +91,22 @@
         }
 
         p {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 300;
             text-align: justify;
+            width: 499px;
+            max-width: 100%;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+            margin: 5px -8px 4px 1px;
+
+            &:last-of-type {
+                margin: 16px 0 0 0;
+            }
+
+            @media all and (max-width: $bp-header) {
+                width: 100%;
+            }
 
             @media all and (max-width: $bp-measure) {
                 &:first-of-type {
@@ -110,6 +123,12 @@
     form {
         display: flex;
         flex-direction: column;
+        width: 469px;
+        padding: 10px 1px 1px 1px;
+
+        @media all and (max-width: 1200px) {
+            width: 100%;
+        }
 
         @media all and (max-width: $bp) {
             width: 100%;
