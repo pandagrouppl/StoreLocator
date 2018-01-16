@@ -93,6 +93,7 @@
 
     &__add-to-cart {
         @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+
         &--out-of-stock {
             cursor: default;
 
@@ -118,4 +119,45 @@
         cursor: pointer;
     }
 
+    &__giftcart-image {
+        cursor: pointer;
+    }
+
+    &__field {
+        margin-bottom: 10px;
+        width: 100%;
+
+        &.mage-error {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        @include pdp-form-elements($height: 39px);
+        box-sizing: border-box;
+    }
+
+    &__textarea {
+        @include pdp-form-elements($height: 5em);
+        box-sizing: border-box;
+        resize: none;
+    }
+}
+
+.page-product-amgiftcard {
+    div.mage-error {
+        color: red;
+        margin-top: 3px;
+        position: inherit;
+    }
+
+    .select__wide-arrow {
+        top: 23px;
+        transform: none;
+    }
 }
