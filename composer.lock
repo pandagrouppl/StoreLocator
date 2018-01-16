@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
-                "reference": "615915c0727d98d80d4ce6d2d4949fd89e6aa0cc"
+                "reference": "f033911d644fc922cc2de680655c0d60dce77a4a"
             },
             "require": {
                 "magenest/module-anz": "dev-master",
@@ -24,7 +24,7 @@
                 "MIT"
             ],
             "description": "Anz Extender module for Magento 2.x",
-            "time": "2018-01-15 10:01:05"
+            "time": "2018-01-16 07:56:42"
         },
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -80,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "7c43098c456da7f9188041fc454b1364405e94b4"
+                "reference": "eaa89955bc2198bf856f11b1c1fa3d3bdfbd7b07"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-12 11:20:02"
+            "time": "2018-01-16 09:55:48"
         },
         {
             "name": "PandaGroup/Corporate",
@@ -396,12 +396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "d887850d5eac2663dac66d74b472dd4b20cba2a7"
+                "reference": "69c825812439097b7741b60d290681fc1df76c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/d887850d5eac2663dac66d74b472dd4b20cba2a7",
-                "reference": "d887850d5eac2663dac66d74b472dd4b20cba2a7",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/69c825812439097b7741b60d290681fc1df76c8c",
+                "reference": "69c825812439097b7741b60d290681fc1df76c8c",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -413,7 +413,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2018-01-15 10:22:00"
+            "time": "2018-01-15 15:37:46"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -432,10 +432,10 @@
         },
         {
             "name": "amasty/base",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base.zip?v=1.1.0",
+                "url": "https://composer.amasty.com/community/packages/base-1.1.1.zip",
                 "reference": null,
                 "shasum": null
             },
