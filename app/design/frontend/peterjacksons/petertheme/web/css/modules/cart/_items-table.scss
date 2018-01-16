@@ -105,6 +105,10 @@
         }
     }
 
+    .product-image-wrapper {
+        padding-bottom: 0 !important;
+    }
+
     @media all and (min-width: $sm-breakpoint + 1px) {
         &__price {
             margin-bottom: 21px;
