@@ -19,7 +19,7 @@ $bp: 680px;
     &__title {
         font-size: 40px;
         font-weight: 500;
-        margin: 0 0 18px 0;
+        margin: 33px 0 18px 0;
 
         @media all and (max-width: $bp) {
             display: none;
@@ -39,16 +39,20 @@ $bp: 680px;
     }
 
     &__paragraph {
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 300;
         margin: 0;
 
         &:first-of-type {
-            margin-bottom: 21px;
+            margin-bottom: 14px;
+            line-height: 25px;
+            width: 450px;
+            max-width: 100%;
         }
 
         &:nth-of-type(2) {
             margin-bottom: 52px;
+            line-height: 21px;
         }
     }
 
@@ -77,8 +81,9 @@ $bp: 680px;
     }
 
     &__right {
-        width: 50%;
+        width: 54%;
         border: 0;
+        padding: 35px 2px 0 0;
 
         form {
             display: flex;
