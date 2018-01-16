@@ -29,31 +29,9 @@
 
         <!--Hidden fields -->
         <div class="fieldset hidden-fields" data-bind="fadeVisible: isPasswordVisible">
-            <div class="field">
-                <div class="control checkout__input-wrapper">
-                    <input class="input-text"
-                           placeholder="Password"
-                           type="password"
-                           data-bind="
-                                css: ns+'__input ' + ns+'__input--'+index,"
-                           name="password"
-                           id="customer-password"
-                           data-validate="{required:true}"
-                           autocomplete="off"/>
-                </div>
-
-            </div>
-            <div class="actions-toolbar checkout__form-login-wrapper">
-                <input name="context" type="hidden" value="checkout" />
-                <div class="primary">
-                    <button type="submit" class="action login primary checkout__button checkout__button--login" data-action="checkout-method-login"><span data-bind="i18n: 'Login'"></span></button>
-                </div>
-                <div class="secondary">
-                    <a class="action remind" data-bind="attr: { href: forgotPasswordUrl }">
-                        <span data-bind="i18n: 'Forgot Your Password?'"></span>
-                    </a>
-                </div>
-            </div>
+            <button class="action login primary checkout__button checkout__button--login show_popup_login" data-action="checkout-method-login">
+                <span data-bind="i18n: 'Login'"></span>
+            </button>
         </div>
         <!--Hidden fields -->
     </div>

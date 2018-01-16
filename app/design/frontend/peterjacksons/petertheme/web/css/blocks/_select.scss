@@ -1,16 +1,7 @@
 .select {
     &__pdp-select {
-        background: $white;
-        height: 49px;
-        border: 1px solid #d0d0d0;
-        border-radius: 1px;
-        font-size: 16px;
-        color: #252525;
-        padding-left: 17px;
-        letter-spacing: 1px;
+        @include pdp-form-elements();
         appearance: none;
-        width: 100%;
-        font-family: Roboto, sans-serif;
 
         &::-ms-expand {
             display: none;
@@ -25,8 +16,8 @@
         font-size: 13px;
         color: #464646;
         padding-left: 8px;
-        appearance: none;
         font-family: Roboto, sans-serif;
+        appearance: none;
 
         &::-ms-expand {
             display: none;

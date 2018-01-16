@@ -248,3 +248,16 @@
     }
 
 }
+
+@mixin pdp-form-elements($height: 49px) {
+    background: $white;
+    height: $height;
+    border: 1px solid #d0d0d0;
+    border-radius: 1px;
+    font-size: 16px;
+    color: #252525;
+    padding-left: 17px;
+    letter-spacing: 1px;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+}

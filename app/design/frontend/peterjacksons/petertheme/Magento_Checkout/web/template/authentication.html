@@ -5,10 +5,12 @@
  */
 -->
 <div class="chckt-auth-wrap">
+    <!-- ko if: (!isCustomerLoggedIn) -->
     <a
         class="chckt-auth-wrap__link show_popup_login">
         <span data-bind="i18n: 'ALREADY REGISTERED?'"></span>
         <span class="chckt-auth-wrap__underline" data-bind="i18n: 'CLICK HERE'"></span>
         <span data-bind="i18n: 'TO LOGIN.'"></span>
     </a>
+    <!-- /ko -->
 </div>

@@ -1,6 +1,7 @@
 .cms-size-chart {
 
     .size-chart {
+        overflow: auto;
 
         &__close {
             display: none;
@@ -8,6 +9,10 @@
 
         &__tabs {
             text-align: center;
+        }
+
+        @media all and (max-width: 560px) {
+            padding: 20px 0;
         }
     }
 }
