@@ -68,7 +68,8 @@
         text-align: center;
         border-bottom: 1px solid #ddd;
         margin-bottom: 30px;
-        font-size: 24px;
+        font-size: 22px;
+        color: #292728;
     }
 
     &__shipping-method {
@@ -250,7 +251,7 @@
     // payments
 
     &__payments {
-        margin-bottom: 40px;
+        margin: 13px 0 40px 0;
 
         button {
             @include button-black($width: inherit, $height: inherit, $margin-top: inherit);
@@ -281,9 +282,11 @@
 
     .opc-progress-bar-item._complete {
         display: block;
+        margin-top: 30px;
 
         span {
             cursor: pointer;
+            font-size: 18px;
         }
     }
 
