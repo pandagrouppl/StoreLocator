@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
-                "reference": "f033911d644fc922cc2de680655c0d60dce77a4a"
+                "reference": "c2115e58db36b60e2ee5593f5de1fb5c58293ac1"
             },
             "require": {
                 "magenest/module-anz": "dev-master",
@@ -24,7 +24,7 @@
                 "MIT"
             ],
             "description": "Anz Extender module for Magento 2.x",
-            "time": "2018-01-16 07:56:42"
+            "time": "2018-01-17 09:02:36"
         },
         {
             "name": "PandaGroup/AttributeUpdate",
