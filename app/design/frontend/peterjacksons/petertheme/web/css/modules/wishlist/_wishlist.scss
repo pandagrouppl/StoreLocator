@@ -50,7 +50,7 @@ body[class~='guest-wishlist-index-index'] {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 40px 0 40px 0;
+        padding: 75px 0 40px 0;
     }
 
     &__item {
@@ -80,7 +80,7 @@ body[class~='guest-wishlist-index-index'] {
     &__name {
         font-size: 17px;
         color: $black-light;
-        margin: 40px 0 15px 0;
+        margin: 40px 0 12px 0;
         display: block;
 
         &:hover {
@@ -89,7 +89,7 @@ body[class~='guest-wishlist-index-index'] {
     }
 
     &__button {
-        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
+        @include button-black($height: 55px, $margin-top: 58px, $font-size: 18px);
         box-sizing: border-box;
         width: 100%;
         max-width: 210px;
@@ -134,6 +134,29 @@ body[class~='guest-wishlist-index-index'] {
 
     .product-image-wrapper {
         padding-bottom: 0 !important;
+    }
+
+    .product-item-tooltip {
+        span {
+            display: none;
+        }
+        
+        strong {
+            display: none;
+        }
+
+        dl {
+            @include pdp-form-elements();
+            padding: 0 34px;
+            width: 140px;
+            max-width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            height: 45px;
+        }
     }
 }
 
