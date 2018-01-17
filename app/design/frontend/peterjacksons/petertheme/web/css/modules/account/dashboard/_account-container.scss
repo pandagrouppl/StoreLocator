@@ -6,6 +6,16 @@
         margin: 0;
     }
 
+    @media all and (max-width: $xs-breakpoint) {
+        padding: 0;
+    }
+
+    .sidebar-main {
+        @media all and (max-width: $xs-breakpoint) {
+            padding: 0 20px;
+        }
+    }
+
     &__columns {
         display: flex;
         flex-direction: row-reverse;
