@@ -1,5 +1,5 @@
 #prpl-modal-popup #prpl-modal-inner-wrap .actions-toolbar button.action {
-    @include button-black($height: 55px, $font-size: 18px);
+    @include button-black($height: 55px, $font-size: 15px);
     width: 100%;
     border-radius: 1px;
     max-width: 305px;
@@ -93,7 +93,6 @@
         @include form-element();
         width: 100%;
         height: 36px;
-        border-radius: 1px;
         max-width: 305px;
     }
 
@@ -166,7 +165,7 @@
         @include form-element();
         width: 100%;
         height: 36px;
-        border-radius: 1px;
+        border-radius: 3px;
         max-width: 305px;
     }
 
@@ -206,5 +205,20 @@
 
     #prpl-modal-inner-wrap #socialLoginButtons .pslogin-buttons li {
         transition: none;
+    }
+
+    input[type=checkbox] {
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        vertical-align: middle;
+        border: 1px solid #b1b1b1;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    input[type=checkbox]:checked {
+        background: #c5c5c580;
     }
 }

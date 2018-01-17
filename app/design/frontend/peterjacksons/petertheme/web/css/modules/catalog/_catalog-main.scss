@@ -72,6 +72,11 @@
             color: #232323;
             font-size: 30px;
             font-weight: 500;
+            margin: 30px 14px 0 0;
+
+            @media all and (max-width: 550px) {
+                margin: 0.67em 0;
+            }
         }
 
         h2 {
@@ -87,8 +92,13 @@
             color: #333;
         }
 
+        p {
+            margin: 15px 0 0 0;
+        }
+
         span {
-            font-size: 12px !important;
+            font-size: 11px !important;
+            color: black;
         }
 
         &--left-column {
