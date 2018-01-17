@@ -23,8 +23,6 @@ atlassian*
 
 /app/i18n/magento
 
-/wp/wp-config.php
-
 /var
 
 /vendor
