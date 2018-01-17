@@ -20,10 +20,11 @@ atlassian*
 /app/design/*/Magento
 
 /app/etc/env.php
+/app/etc/wp-config.php
 
 /app/i18n/magento
 
-/wp/wp-config.php
+
 
 /var
 
