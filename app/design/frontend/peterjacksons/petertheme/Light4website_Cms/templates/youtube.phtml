@@ -5,10 +5,10 @@ $cmsPage = $objectManagerCms->get('\Magento\Cms\Model\Page');
 <div class="youtube-player">
 <div class="youtube-player__placeholder">
     <div class="youtube-player__img">
-        <img src='<?php echo $block->getUrl("pub/media/wysiwyg/") . $this->getData('img_path'); ?>'>
+        <img src='<?php echo $block->getViewFileUrl("img/assets\/") . $this->getData('img_path'); ?>'>
     </div>
     <div class="youtube-player__play-img">
-        <img src='<?php echo $block->getUrl("pub/media/wysiwyg/") . 'about-us/video-play.png'; ?>' alt="" />
+        <img src='<?php echo $block->getViewFileUrl("img/assets\/") . 'video-play.png'; ?>' alt="" />
     </div>
 </div>
     <?php if ($this->getData('description') || $this->getData('description_bold')) : ?>
