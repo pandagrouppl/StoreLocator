@@ -84,39 +84,42 @@ $_item = $block->getItem();
     </div>
 
     <div class="order-details__items--desktop">
-        <td class="col name" data-th="<?php echo $block->escapeHtml(__('Product Name')); ?>">
+        <div class="col name" data-th="<?php echo $block->escapeHtml(__('Product Name')); ?>">
             <div class="product name product-item-name"><?php echo $block->escapeHtml($_item->getName()) ?>
                 <?php if ($_options = $block->getItemOptions()): ?>
-                <?php foreach ($_options as $_option) : ?>
-                    <div class="order-details__items--mobile-size">
-                        <?php echo $block->escapeHtml($_option['label']) ?>
-                        <?php if (!$block->getPrintStatus()): ?>
-                            <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
-                            <?php if (isset($_formatedOptionValue['full_view'])): ?>
-                                <?php /* @escapeNotVerified */ echo $_formatedOptionValue['full_view'] ?>
+                    <?php foreach ($_options as $_option) : ?>
+                        <div class="order-details__items--mobile-size">
+                            <?php echo $block->escapeHtml($_option['label']) ?>
+                            <?php if (!$block->getPrintStatus()): ?>
+                                <?php $_formatedOptionValue = $block->getFormatedOptionValue($_option) ?>
+                                <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                                    <?php /* @escapeNotVerified */ echo $_formatedOptionValue['full_view'] ?>
+                                <?php else: ?>
+                                    <?php /* @escapeNotVerified */ echo $_formatedOptionValue['value'] ?>
+                                <?php endif; ?>
                             <?php else: ?>
-                                <?php /* @escapeNotVerified */ echo $_formatedOptionValue['value'] ?>
+                                <div>
+                                    <?php echo nl2br($block->escapeHtml((isset($_option['print_value']) ? $_option['print_value'] : $_option['value']))) ?>
+                                </div>
                             <?php endif; ?>
-                        <?php else: ?>
-                            <div>
-                                <?php echo nl2br($block->escapeHtml((isset($_option['print_value']) ? $_option['print_value'] : $_option['value']))) ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
-            <?php endif; ?>
+
+
+
             <?php $addtInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
             <?php if ($addtInfoBlock) :?>
                 <?php echo $addtInfoBlock->setItem($_item)->toHtml(); ?>
             <?php endif; ?>
             <?php echo $block->escapeHtml($_item->getDescription()) ?>
-        </td>
-        <td class="col sku" data-th="<?php echo $block->escapeHtml(__('SKU')); ?>"><div><?php /* @escapeNotVerified */ echo $block->prepareSku($block->getSku()) ?></div></td>
-        <td class="col price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
+        </div>
+        <div class="col sku" data-th="<?php echo $block->escapeHtml(__('SKU')); ?>"><div><?php /* @escapeNotVerified */ echo $block->prepareSku($block->getSku()) ?></div></div>
+        <div class="col price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
             <?php echo $block->getItemPriceHtml(); ?>
-        </td>
-        <td class="col qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
+        </div>
+        <div class="col qty" data-th="<?php echo $block->escapeHtml(__('Qty')); ?>">
             <ul class="items-qty">
                 <?php if ($block->getItem()->getQtyOrdered() > 0): ?>
                     <li class="item">
@@ -125,10 +128,10 @@ $_item = $block->getItem();
                     </li>
                 <?php endif; ?>
             </ul>
-        </td>
-        <td class="col subtotal" data-th="<?php echo $block->escapeHtml(__('Subtotal')); ?>">
+        </div>
+        <div class="col subtotal" data-th="<?php echo $block->escapeHtml(__('Subtotal')); ?>">
             <?php echo $block->getItemRowTotalHtml(); ?>
-        </td>
+        </div>
     </div>
 
 
