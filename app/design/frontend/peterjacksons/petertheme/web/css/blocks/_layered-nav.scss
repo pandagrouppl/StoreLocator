@@ -17,7 +17,6 @@
 
     &__row, &__active-filter {
         display: flex;
-        justify-content: space-between;
         align-items: baseline;
 
         .swatch-option {
@@ -62,7 +61,11 @@
     }
 
     &__content {
-        margin-left: 5px;
+        margin-left: 0;
+
+        .swatch-attribute-options {
+            padding-left: 0 !important;
+        }
 
         a {
             font-size: 14px;
