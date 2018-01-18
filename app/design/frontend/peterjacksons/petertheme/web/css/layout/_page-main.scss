@@ -185,6 +185,22 @@ body[class~='checkout-onepage-success'] {
     }
 }
 
+body[class~='checkout-onepage-error'] {
+    .page-main {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-main__title.page-main__description {
+        display: none;
+    }
+
+    .page-footer {
+        margin: 0;
+    }
+}
+
 body[class~='contact-index-index'] {
     .page-main {
         max-width: 100%;

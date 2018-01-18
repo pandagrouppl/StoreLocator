@@ -1,0 +1,103 @@
+.checkout-error {
+    background-image: url('../../img/assets/checkout-order-success/jordanhighway.jpg');
+    background-size: cover;
+    height: 100vh;
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media all and (max-width: 768px) {
+            padding: 30px;
+        }
+    }
+
+    &__content {
+        color: #626161;
+        line-height: 1.3em;
+        height: 453px;
+        background: #FFF;
+        width: 672px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        color: #242424;
+        font-size: 40px;
+        font-family: Roboto, sans-serif;
+        text-align: center;
+        margin: 0;
+        font-weight: 500;
+        line-height: 35px;
+
+        @media all and (max-width: 690px) {
+            font-size: 27px;
+        }
+
+        @media all and (max-width: 520px) {
+            font-size: 22px;
+        }
+    }
+
+    &__box {
+        background: #f4f3f3;
+        padding: 20px 20px;
+    }
+
+    &__number {
+        font-size: 19px;
+        margin: 10px 0;
+        text-align: center;
+
+        a {
+            color: black;
+        }
+    }
+
+    &__para {
+        font-size: 15px;
+        color: black;
+        text-align: center;
+
+        &--bold {
+            font-weight: 400;
+            margin: 25px 0 0 0;
+        }
+    }
+
+    &__info {
+        text-align: center;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__continue {
+        @include button-black($height: 55px);
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 60px;
+
+        @media all and (max-width: 520px) {
+            padding: 10px 10px;
+            font-size: 15px;
+        }
+    }
+
+    .actions-toolbar {
+        margin: 50px 0 50px 0;
+    }
+}
+
+.checkout-onepage-success {
+    .page-main__message .success {
+        display: none;
+    }
+}
