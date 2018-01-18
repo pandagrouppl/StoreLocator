@@ -30,7 +30,7 @@
             <container name="header.headers" htmlTag="div" htmlClass="headers">
                 <!-- desktop -->
                 <container name="headers" htmlClass="header" htmlTag="section">
-                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-"/>
+                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-" cacheable="false"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
                         <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
