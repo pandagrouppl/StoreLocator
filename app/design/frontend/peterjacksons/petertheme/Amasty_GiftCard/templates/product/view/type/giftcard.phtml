@@ -78,7 +78,7 @@
 				</label>
 				<div class="input-box select__wrapper required-entry">
                     <figure class="select__wide-arrow"></figure>
-					<select id="am_giftcard_type" name="am_giftcard_type" class="select__pdp-select">
+					<select id="am_giftcard_type" name="am_giftcard_type" class="select__pdp-select required-entry">
 						<option value=""><?php echo __( '-- Please Select --' ); ?></option>
 						<?php foreach ( $block->getListCardTypes() as $_cardType ): ?>
 							<option
@@ -180,12 +180,12 @@
 				</label>
 				<div class="input-box select__wrapper">
                     <figure class="select__wide-arrow"></figure>
-					<select class="select__pdp-select required-entry" name="am_giftcard_date_delivery_timezone"
+					<select class="select__pdp-select select__pdp-select--timezone required-entry" name="am_giftcard_date_delivery_timezone"
 					        id="am_giftcard_date_delivery_timezone">
 						<option value=""></option>
 						<?php foreach ( $block->getListTimezones() as $_timezone ): ?>
 							<option
-								value="<?php echo $_timezone['value']; ?>"<?php if ( $block->getDefaultValue( 'am_giftcard_date_delivery_timezone' ) == $_timezone['value'] ) {
+								value="<?php echo $_timezone['value']; ?>"<?php if ('Australia/Sydney' == $_timezone['value'] ) {
 								echo " selected";
 							} ?>><?php echo $_timezone['label']; ?></option>
 						<?php endforeach; ?>
