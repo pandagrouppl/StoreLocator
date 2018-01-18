@@ -51,6 +51,7 @@
     }
 
     &__book {
+        //display: none;
         margin: 0 10px;
         position: relative;
 
@@ -66,7 +67,8 @@
         &:hover {
 
             .header-left__catalog {
-                display: block;
+                // hide popup box
+                //display: block;
             }
         }
     }

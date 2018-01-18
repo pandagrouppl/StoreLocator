@@ -36,7 +36,7 @@
         </div>
     </fieldset>
 
-    <fieldset class="fieldset password" data-container="change-email-password">
+    <fieldset class="fieldset password" data-container="change-email-password" style="display: none">
         <div class="account-form__inputs field email required" data-container="change-email">
             <div class="control">
                 <input type="email" name="email" id="email" autocomplete="email" data-input="change-email" value="<?php echo $block->escapeHtml($block->getCustomer()->getEmail()) ?>" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" class="input-text" data-validate="{required:true, 'validate-email':true}" placeholder="Email*"/>
