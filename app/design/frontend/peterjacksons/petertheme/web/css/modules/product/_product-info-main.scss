@@ -49,6 +49,7 @@
     &__wishlist-star {
         @include sprite(wishlist-icon);
         padding: 0 1px 1px 0;
+        cursor: pointer;
 
         &.active {
             @include sprite(wishlist-icon-dark);

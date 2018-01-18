@@ -6,6 +6,11 @@
         &::-ms-expand {
             display: none;
         }
+
+        &--timezone {
+            letter-spacing: 0;
+            font-size: 12px;
+        }
     }
 
     &__select {

@@ -1,3 +1,7 @@
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+?>
+
 <section class="header-left">
     <article class="header-left__menu">
         <span class="header-left__menu-bar header-left__menu-bar--top"></span>
@@ -9,7 +13,12 @@
             <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-catalogue')->toHtml();?>
         </div>
     </article>
-    <article class="header-left__account">
-         <a href="/customer/account/" class="show_popup_login"><i></i></a>
+    <article class="header-left__account show_popup_login">
+        <?php if ($customerSession->isLoggedIn()) {
+            ?> <a href="/customer/account/"><i></i></a> <?php
+        } else {
+            ?> <i></i> <?php
+        }
+        ?>
     </article>
 </section>
