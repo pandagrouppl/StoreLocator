@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
-                "reference": "7a907a62f7c69644d9a879e602c506ba9b14901f"
+                "reference": "a1176e40d6fd1600e5d246b4042cd55ae974c0d7"
             },
             "require": {
                 "magenest/module-anz": "dev-master",
@@ -24,7 +24,7 @@
                 "MIT"
             ],
             "description": "Anz Extender module for Magento 2.x",
-            "time": "2018-01-18 10:27:27"
+            "time": "2018-01-18 12:13:57"
         },
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -80,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "113639071ea362a0394c1028f4d41bb41f448ef0"
+                "reference": "65036f5da1e075b270899269ef6082b0d6a22fae"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-17 11:03:16"
+            "time": "2018-01-18 15:02:49"
         },
         {
             "name": "PandaGroup/Corporate",
@@ -203,7 +203,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "af0f04fb20174e8442ed126c2436bb2ca4e48945"
+                "reference": "5daf4026521b2871baeb9613c6b0a0ce77f58bde"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -211,7 +211,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-01-15 14:13:08"
+            "time": "2018-01-18 14:54:53"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
