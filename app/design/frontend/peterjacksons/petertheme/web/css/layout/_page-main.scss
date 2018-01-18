@@ -1,3 +1,9 @@
+.zopim {
+    @media all and (max-width: $xs-breakpoint) {
+        display: none;
+    }
+}
+
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
