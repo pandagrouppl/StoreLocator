@@ -1,7 +1,9 @@
-<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$customerSession = $objectManager->get('Magento\Customer\Model\Session');
-if($customerSession->isLoggedIn()): ?>
-    <li><a href="<?php echo 'wishlist logged url here' ?>">My wishlist</a></li>
-<?php else: ?>
-    <li><a href="<?php echo 'wishlist not logged url here'?>">My wishlist</a></li>
-<?php endif; ?>
+<?php
+    /** @var Magento\Framework\App\ObjectManager $objectManager */
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+    /** @var PandaGroup\GuestWishlist\Helper\Data $guestWishlistHelper */
+    $guestWishlistHelper = $objectManager->get('PandaGroup\GuestWishlist\Helper\Data');
+?>
+
+<li><a href="<?php echo $guestWishlistHelper->getListUrl() ?>"><?php echo __('My wishlist') ?></a></li>
