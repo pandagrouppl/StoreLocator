@@ -15,6 +15,11 @@
             @media all and (max-width: $sm-breakpoint) {
                 margin: 46px 0 0 0;
             }
+
+            @media all and (max-height: 850px) {
+                margin: 20px 0 0 0;
+            }
+
         }
     }
 

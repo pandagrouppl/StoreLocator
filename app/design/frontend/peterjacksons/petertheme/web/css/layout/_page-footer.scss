@@ -151,14 +151,9 @@
             @include sprite(footer-twitter);
         }
 
-        &--yt {
-            @include sprite(footer-youtube);
-        }
-
         &--pintrest {
             @include sprite(footer-pintrest);
         }
-
     }
 
 }

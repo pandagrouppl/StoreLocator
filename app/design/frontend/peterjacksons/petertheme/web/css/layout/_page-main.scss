@@ -40,9 +40,27 @@
     }
 }
 
+.loading-mask {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
 // Category view
 body[class~='catalog-category-view'] {
-    .page-main__messages {
+    .page-main__message {
         display: none;
     }
 }
@@ -50,7 +68,7 @@ body[class~='catalog-category-view'] {
 
 // Product View
 body[class~='catalog-product-view'] {
-    .page-main__messages .success {
+    .page-main__message .success {
         display: none;
     }
 
@@ -84,21 +102,6 @@ body[class~='checkout-cart-index'] {
 }
 
 body[class~='checkout-index-index'] {
-    .loading-mask {
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 100;
-
-        .loader {
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-    }
 
     .page-main {
         max-width: 1260px;
@@ -208,6 +211,12 @@ body[class~='contact-index-index'] {
         margin: 50px auto 0 auto;
         padding: 0 20px;
         box-sizing: border-box;
+    }
+}
+
+body[class~='page-product-amgiftcard'] {
+    .fotorama--fullscreen {
+        //display: none;
     }
 }
 
