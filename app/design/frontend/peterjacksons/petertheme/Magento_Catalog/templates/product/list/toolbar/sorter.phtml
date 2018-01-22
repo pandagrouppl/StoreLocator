@@ -23,8 +23,19 @@ use Magento\Catalog\Model\Product\ProductList\Toolbar;
             <?php foreach ($block->getAvailableOrders() as $_key => $_order): ?>
 
                 <?php // Show 'Sort by' placeholder on select and disable sort by 'Position' ?>
-                <option <?php if ('position' === $block->getCurrentOrder()) echo 'selected'; ?> hidden>Sort by</option>
-                <?php if ($_key === 'position') continue; ?>
+                <?php //if ($_key == 'position'): ?>
+<!--                    <option --><?php //if ('position' === $block->getCurrentOrder()) echo 'selected'; ?><!-- hidden>Sort by</option>-->
+                    <?php //continue; ?>
+
+                <?php // Show 'Sort by' placeholder on select and disable sort by 'Position' ?>
+                <?php if ($_key == 'position'): ?>
+                    <?php if ('position' === $block->getCurrentOrder()): ?>
+                        <option <?php if ('position' === $block->getCurrentOrder()) echo 'selected'; ?> hidden>Sort by</option>
+                    <?php else: ?>
+                        <option <?php if ('position' === $block->getCurrentOrder()) ?> value="position">Unsort</option>
+                    <?php endif; ?>
+                    <?php continue; ?>
+                <?php endif; ?>
 
                 <option value="<?php /* @escapeNotVerified */ echo $_key; ?>"
                     <?php if ($block->isOrderCurrent($_key)): ?>
