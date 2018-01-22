@@ -4,26 +4,6 @@
     }
 }
 
-body[class~='catalog-category-view'] {
-    .page-main {
-        max-width: 1250px;
-    }
-
-    .breadcrumbs {
-        max-width: 1250px;
-        padding: 52px 20px 25px 23px;
-    }
-
-    .layered-nav {
-        padding-right: 0px;
-
-        &__filter-header {
-            font-size: 20px;
-            margin: 10px 39px 10px 0;
-        }
-    }
-}
-
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
@@ -74,7 +54,7 @@ body[class~='catalog-category-view'] {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         text-align: center;
     }
 }
@@ -84,6 +64,25 @@ body[class~='catalog-category-view'] {
     .page-main__message {
         display: none;
     }
+
+    .page-main {
+        max-width: 1250px;
+    }
+
+    .breadcrumbs {
+        max-width: 1250px;
+        padding: 52px 20px 25px 23px;
+    }
+
+    .layered-nav {
+        padding-right: 0;
+
+        &__filter-header {
+            font-size: 20px;
+            margin: 10px 39px 10px 0;
+        }
+    }
+
 }
 
 
@@ -234,10 +233,3 @@ body[class~='contact-index-index'] {
         box-sizing: border-box;
     }
 }
-
-body[class~='page-product-amgiftcard'] {
-    .fotorama--fullscreen {
-        //display: none;
-    }
-}
-

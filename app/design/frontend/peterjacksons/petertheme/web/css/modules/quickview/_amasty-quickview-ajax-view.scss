@@ -86,7 +86,7 @@
                 flex: 0 0 348px;
             }
             @media all and (max-width: $sm-breakpoint) {
-                order:1;
+                order: 1;
             }
 
 
@@ -96,7 +96,7 @@
             flex: 1 1;
             min-width: inherit;
             @media all and (max-width: $sm-breakpoint) {
-                order:2;
+                order: 2;
                 margin: 20px 0;
             }
         }
@@ -115,7 +115,7 @@
         }
 
         &__wishlist-a {
-            /* prevent hiding by amasty_quickview::page.phtml */
+             //prevent hiding by amasty_quickview::page.phtml
             display: block !important;
         }
     }

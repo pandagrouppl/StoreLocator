@@ -11,10 +11,10 @@
     }
 
     &-edit {
+        @include button-custom(4px 10px, 0, inherit, bold, white, #666, white, black);
         position: absolute;
         right: 0;
         top: 5px;
-        @include button-custom(4px 10px, 0, inherit, bold, white, #666, white, black);
     }
 
     &-content {
@@ -25,5 +25,4 @@
     &__address {
         display: block;
     }
-
 }

@@ -1,8 +1,11 @@
 $breadcrumbs-color: #928383;
+
 .cms-page-view .breadcrumbs {
     max-width: 990px;
 }
+
 .checkout-cart-index, .checkout-index-index {
+
     .breadcrumbs {
         font-size: 18px;
         text-align: center;
@@ -29,6 +32,7 @@ $breadcrumbs-color: #928383;
     }
 
 }
+
 .checkout-cart-index .breadcrumbs__item--cart {
     font-weight: bold;
     margin-bottom: 35px;
@@ -102,6 +106,6 @@ $breadcrumbs-color: #928383;
     }
 }
 
-.cms-contact-us .breadcrumbs{
+.cms-contact-us .breadcrumbs {
     margin-bottom: 42px;
 }
