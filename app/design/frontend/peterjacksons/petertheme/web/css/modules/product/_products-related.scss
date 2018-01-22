@@ -68,5 +68,11 @@
             font-weight: 300;
         }
     }
+    @media all and (max-width: $sm-breakpoint) {
+        .amquickview-hover {
+            display: none !important;
+        }
+    }
+
 }
 

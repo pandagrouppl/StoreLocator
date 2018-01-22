@@ -164,7 +164,17 @@ switch ($type = $block->getType()) {
     <?php endif; ?>
     <div class="block-content content" aria-labelledby="block-<?php /* @escapeNotVerified */ echo $class?>-heading">
         <div class="products wrapper grid products-grid products-<?php /* @escapeNotVerified */ echo $type; ?>">
-            <ol class="products-related__slider products list items product-items" data-mage-init='{"js/slickInit": {}}'>
+            <ol class="products-related__slider products list items product-items" data-mage-init='{
+            "js/slickInit":
+            {
+                "responsive": [{
+                    "breakpoint": 768,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1
+                    }
+                }]
+            }}'>
                 <?php $iterator = 1; ?>
                 <?php foreach ($items as $_item): ?>
                 <?php $available = ''; ?>
