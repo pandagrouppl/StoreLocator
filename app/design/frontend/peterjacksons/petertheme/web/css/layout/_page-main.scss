@@ -1,6 +1,26 @@
 .zopim {
     @media all and (max-width: $xs-breakpoint) {
-        display: none;
+        display: none !important;
+    }
+}
+
+body[class~='catalog-category-view'] {
+    .page-main {
+        max-width: 1250px;
+    }
+
+    .breadcrumbs {
+        max-width: 1250px;
+        padding: 52px 20px 25px 23px;
+    }
+
+    .layered-nav {
+        padding-right: 0px;
+
+        &__filter-header {
+            font-size: 20px;
+            margin: 10px 39px 10px 0;
+        }
     }
 }
 
