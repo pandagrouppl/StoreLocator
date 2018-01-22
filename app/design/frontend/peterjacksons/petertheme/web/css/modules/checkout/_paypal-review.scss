@@ -67,8 +67,8 @@
     }
 
     .box-actions a, .action.update.primary {
-        display: inline-block;
         @include button-black($height: inherit, $width: inherit, $font-size: 13px, $margin-top: 5px);
+        display: inline-block;
     }
 
     .action.checkout.primary {

@@ -53,7 +53,7 @@
         font-size: 80px;
         text-align: center;
         line-height: 123px;
-        font-family: "GothamBook", sans-serif;
+        font-family: 'GothamBook', sans-serif;
         font-weight: bold;
 
         @media all and (max-width: $bp-measure) {
@@ -62,7 +62,7 @@
     }
 
     &__title {
-        font-family: "GothamBoldRegular", sans-serif;
+        font-family: 'GothamBoldRegular', sans-serif;
         font-size: 39px;
         margin-bottom: 45px;
         letter-spacing: 0.1em;
@@ -73,14 +73,14 @@
     }
 
     &__paragraph {
-        font-family: "GothamBoldRegular", sans-serif;
+        font-family: 'GothamBoldRegular', sans-serif;
         margin-bottom: 20px;
         font-size: 18px;
         line-height: 150%;
 
         &--rwd {
             display: none;
-            font-family: "GothamBoldRegular", sans-serif;
+            font-family: 'GothamBoldRegular', sans-serif;
             margin-bottom: 20px;
             font-size: 16px;
             line-height: 140%;
@@ -105,7 +105,7 @@
         text-indent: -9999px;
         cursor: pointer;
         margin-top: -90px;
-        outline:none
+        outline: none;
     }
 
     .slick-prev {

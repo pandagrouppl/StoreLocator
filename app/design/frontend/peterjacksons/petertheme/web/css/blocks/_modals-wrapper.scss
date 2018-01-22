@@ -20,9 +20,6 @@ body._has-modal-custom .modal-custom-overlay {
     transition-duration: 0.3s;
     transition-property: transform, visibility;
     transition-timing-function: ease-in-out;
-
-
-//    width: auto;
 }
 
 .modal-slide,
@@ -54,10 +51,12 @@ body._has-modal-custom .modal-custom-overlay {
     transform: translate(0, 0);
 
 }
+
 .modal-inner-wrap {
     min-width: 350px;
     width: 20vw;
-    background-color: white; padding: 20px;
+    background-color: white;
+    padding: 20px;
 
     .modal-header, .block-title {
         position: relative;
@@ -83,9 +82,11 @@ body._has-modal-custom .modal-custom-overlay {
 
 
     .modal-footer, .block-content {
+
         .action-save-address, .action-login {
             @include button-blue(10px 20px, 10px 0);
         }
+
         .action-hide-popup {
             @include button-grey(10px 20px, 10px);
         }
@@ -93,14 +94,16 @@ body._has-modal-custom .modal-custom-overlay {
         .actions-toolbar {
             a {
                 color: $black;
-                    &:hover {
-                        color: $grey
-                    }
+
+                &:hover {
+                    color: $grey;
                 }
+            }
         }
     }
 
 }
+
 .modals-overlay {
     z-index: 899;
     background-color: rgba(255, 255, 255, 0.95);
