@@ -21,7 +21,7 @@ $input-height: 49px;
             transition: all 0.2s ease;
             width: 100%;
             margin-bottom: 2px;
-            background: #f9f2f2;
+            background: $lightgrey;
 
             &:focus {
                 outline: none;
