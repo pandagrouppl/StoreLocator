@@ -16,6 +16,7 @@ export default class StoreHeader extends Component {
         this.applyFilter = this.applyFilter.bind(this);
         this.resetFilters = this.resetFilters.bind(this);
         this.searchPostcode = this.searchPostcode.bind(this);
+        console.log(props);
     }
 
     componentWillMount() {
@@ -56,6 +57,7 @@ export default class StoreHeader extends Component {
         this.props.stateStore.changeView();
         this.props.stateStore.changeMap();
         this.props.stateStore.removeRef();
+        this.context.router.history.goBack();
     }
 
     applyFilter(region) {
@@ -68,14 +70,15 @@ export default class StoreHeader extends Component {
             <header className="storelocator-header">
                 <h1 className="storelocator-header__title">Store Locator</h1>
                 <section className="storelocator-header__row">
-                    {this.props.stateStore.view === 'list' ?
-                        <article className="storelocator-header__filters">
+                    {this.props.stateStore.view === 'list'
+                        ? <article className="storelocator-header__filters">
                             {regions.map((region) => (
                                 <RegionFilter className={this.isActiveFilter(region.name)} region={region.name}
                                               onFilterClick={this.applyFilter}/>
                             ))}
-                        </article> :
-                        <Link to='/' onClick={() => this.backButton()}><button className="storelocator-header__back">Back</button></Link> }
+                            </article>
+                        : <a onClick={() => this.backButton()}><button className="storelocator-header__back">Back</button></a>
+                    }
                     <article>
                         <a className="storelocator-header__reset" onClick={this.resetFilters}>Reset</a>
                         <input className="storelocator-header__input"

@@ -26,38 +26,38 @@
     }
 
     &__credentials {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 500;
         width: 250px;
+        max-width: 100%;
 
         li {
             margin: 4px 0 0 0;
             display: flex;
             align-items: center;
-            line-height: 26px;
+            line-height: 1.2em;
+            margin-bottom: 8px;
+            word-break: break-word;
+
+            a {
+                max-width: 100%;
+            }
         }
 
 
     }
 
     &__hours-wrapper {
-        position: relative;
+        @include form-element-wrapper();
     }
 
     &__hours {
         @include form-element();
-        font-family: Roboto, sans-serif;
-        color: #464646;
-        font-weight: 400;
-        border: 1px solid #959494;
-        width: 93%;
-        padding: 0 6px;
-        font-size: 121%;
+        padding: 0 18px 0 8px;
     }
 
     &__hours-arrow {
-        @include form-select-arrow();
-        width: 29px;
+        @include form-select-wide-arrow();
     }
 }
 
@@ -75,7 +75,17 @@
     .stores-li {
 
         &__store {
-            flex: 1 1;
+            flex: 0 1 50%;
         }
     }
 }
+
+@media screen and (max-width: 580px) {
+    .stores-li {
+
+        &__store {
+            flex: 1 1 100%;
+        }
+    }
+}
+

@@ -1,4 +1,4 @@
-//import 'preact/devtools';
+import 'preact/devtools';
 import { h, Component } from 'preact';
 import { Provider } from 'mobx-preact';
 import { useStrict } from 'mobx';

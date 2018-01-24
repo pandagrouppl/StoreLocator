@@ -10,6 +10,7 @@ export default class DirectionsTab extends Component {
         this.handleGoogleAutocompletePick =  this.handleGoogleAutocompletePick.bind(this);
         this.state = {start: props.stateStore.waypoints.start, stop:props.initStop, mode: props.stateStore.waypoints.mode, locked: 'b'};
         this.textInputs = [];
+        this.props.stateStore.updateRef(this.directionsPanel);
     }
 
     handleChange(event) {

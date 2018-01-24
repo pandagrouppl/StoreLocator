@@ -1,4 +1,5 @@
 .storelocator-header {
+    letter-spacing: 1px;
 
     &__title {
         text-align: center;
@@ -89,6 +90,10 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+
+                & > * {
+                    box-sizing: border-box;
+                }
             }
         }
 
@@ -99,6 +104,13 @@
 
         &__input {
             flex: 1;
+            flex-basis: 300px;
+        }
+
+        &__search {
+            flex: 1;
+            flex-basis: 120px;
+
         }
 
         &__search, &__input, &__reset {
