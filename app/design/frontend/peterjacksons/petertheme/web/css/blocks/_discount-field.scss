@@ -59,8 +59,8 @@ $field-button: 37px;
 
     &__button {
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
         height: $field-height;
         border: none;
         width: $field-button;

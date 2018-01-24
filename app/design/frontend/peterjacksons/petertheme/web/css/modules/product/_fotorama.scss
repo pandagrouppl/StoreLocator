@@ -1,7 +1,32 @@
-.fotorama--fullscreen .fotorama__stage {
-    // gallery resizer - prevent resize on fullscreen
-    max-height: none !important;
+.fotorama--fullscreen {
+    .fotorama__stage {
+        // gallery resizer mod on PDP - prevent it on fullscreen
+        max-height: none !important;
+
+        .fotorama__fullscreen-icon:focus,
+        .fotorama__zoom-out:focus,
+        .fotorama__zoom-in:focus,
+        .fotorama__arr:focus,
+        .fotorama__stage__shaft:focus,
+        .fotorama__nav__frame--thumb:focus .fotorama__thumb,
+        .fotorama__nav__frame--dot:focus .fotorama__dot {
+            box-shadow: none;
+
+            &::after {
+                box-shadow: none;
+
+            }
+        }
+    }
+
+    .fotorama__nav-wrap {
+        .fotorama__nav__shaft .fotorama__thumb-border {
+            border: 1px solid $grey-dark;
+        }
+    }
 }
+
+
 
 .product-main .product-main__gal-act-wrapper div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap {
 
@@ -10,14 +35,14 @@
         opacity: 0;
     }
 
-    .fotorama__stage:before, .fotorama__nav:before, .fotorama__stage:after, .fotorama__nav:after {
+    .fotorama__stage::before, .fotorama__nav::before, .fotorama__stage::after, .fotorama__nav::after {
         display: none;
     }
 
     > div.fotorama__stage {
 
         div.fotorama__active {
-            // side images hiding fix
+            // Image scraps visible on sides fix
             background-color: white;
         }
 
@@ -29,6 +54,5 @@
         }
 
     }
-
-
 }
+

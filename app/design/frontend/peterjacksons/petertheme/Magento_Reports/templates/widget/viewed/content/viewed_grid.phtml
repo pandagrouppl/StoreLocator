@@ -35,7 +35,18 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
         <div class="block-content">
             <?php /* @escapeNotVerified */ echo '<!-- ' . $image . '-->' ?>
             <div class="products-<?php /* @escapeNotVerified */ echo $mode; ?> <?php /* @escapeNotVerified */ echo $mode; ?>">
-                <ol class="products-related__slider product-items <?php /* @escapeNotVerified */ echo $type; ?>" data-mage-init='{"js/slickInit": {"slidesToScroll":"4"}}'>
+                <ol class="products-related__slider product-items <?php /* @escapeNotVerified */ echo $type; ?>" data-mage-init='{
+            "js/slickInit":
+            {
+                "slidesToScroll": 4,
+                "responsive": [{
+                    "breakpoint": 768,
+                    "settings": {
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1
+                    }
+                }]
+            }}'>
                     <?php $iterator = 1; ?>
                     <?php foreach ($items as $_item): ?>
                         <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="product-item products-related__item">' : '</li><li class="product-item products-related__item">' ?>

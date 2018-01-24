@@ -9,6 +9,7 @@
     }
 
 }
+
 @media all and (min-width: $bp-header) {
     .cms-index-defaultindex, .cms-home, .cms-the-new-wave {
         .headers {
@@ -59,7 +60,7 @@
                     }
 
                     .header-right {
-                         span, a, i {
+                        span, a, i {
                             filter: none;
                         }
                     }

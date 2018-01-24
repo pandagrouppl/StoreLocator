@@ -4,26 +4,6 @@
     }
 }
 
-body[class~='catalog-category-view'] {
-    .page-main {
-        max-width: 1250px;
-    }
-
-    .breadcrumbs {
-        max-width: 1250px;
-        padding: 52px 20px 25px 23px;
-    }
-
-    .layered-nav {
-        padding-right: 0;
-
-        &__filter-header {
-            font-size: 20px;
-            margin: 10px 39px 10px 0;
-        }
-    }
-}
-
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
@@ -60,17 +40,55 @@ body[class~='catalog-category-view'] {
     }
 }
 
+.loading-mask {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
 // Category view
 body[class~='catalog-category-view'] {
-    .page-main__messages {
+    .page-main__message {
         display: none;
     }
+
+    .page-main {
+        max-width: 1250px;
+    }
+
+    .breadcrumbs {
+        max-width: 1250px;
+        padding: 52px 20px 25px 23px;
+    }
+
+    .layered-nav {
+        padding-right: 0;
+
+        &__filter-header {
+            font-size: 20px;
+            margin: 10px 39px 10px 0;
+        }
+    }
+
 }
 
 
 // Product View
 body[class~='catalog-product-view'] {
-    .page-main__messages .success {
+    .page-main__message .success {
         display: none;
     }
 
@@ -104,21 +122,6 @@ body[class~='checkout-cart-index'] {
 }
 
 body[class~='checkout-index-index'] {
-    .loading-mask {
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        position: fixed;
-        right: 0;
-        top: 0;
-        z-index: 100;
-
-        .loader {
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-    }
 
     .page-main {
         max-width: 1260px;
@@ -228,16 +231,5 @@ body[class~='contact-index-index'] {
         margin: 50px auto 0 auto;
         padding: 0 20px;
         box-sizing: border-box;
-    }
-}
-
-body[class~='cms-size-chart'] {
-    .page-main {
-        padding: 73px 20px;
-    }
-
-    .size-chart {
-        max-width: 849px;
-        margin: 0 auto;
     }
 }

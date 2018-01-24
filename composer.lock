@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
-                "reference": "a1176e40d6fd1600e5d246b4042cd55ae974c0d7"
+                "reference": "a77f75b00195ce2e38031900e3ba5354e4c80ce6"
             },
             "require": {
                 "magenest/module-anz": "dev-master",
@@ -24,7 +24,7 @@
                 "MIT"
             ],
             "description": "Anz Extender module for Magento 2.x",
-            "time": "2018-01-18 12:13:57"
+            "time": "2018-01-24 13:02:39"
         },
         {
             "name": "PandaGroup/AttributeUpdate",
@@ -396,12 +396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "69c825812439097b7741b60d290681fc1df76c8c"
+                "reference": "861adb6c7e84aded7bd225a97606a0dbadca483f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/69c825812439097b7741b60d290681fc1df76c8c",
-                "reference": "69c825812439097b7741b60d290681fc1df76c8c",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/861adb6c7e84aded7bd225a97606a0dbadca483f",
+                "reference": "861adb6c7e84aded7bd225a97606a0dbadca483f",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -413,7 +413,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2018-01-15 15:37:46"
+            "time": "2018-01-24 16:41:38"
         },
         {
             "name": "PandaGroup/Westfield",

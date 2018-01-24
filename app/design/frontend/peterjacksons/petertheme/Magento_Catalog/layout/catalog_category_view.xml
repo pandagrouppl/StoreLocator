@@ -32,5 +32,16 @@
         <referenceBlock name="category.products">
             <block class="Magento\Framework\View\Element\Template" name="suits.description" template="Magento_Theme::html/suits-description.phtml"/>
         </referenceBlock>
+
+
+        <!-- add toolbar to breadcrumbs -->
+        <!--<referenceContainer name="page.top">-->
+            <!--<container name="breadcrumbs.and.toolbar" htmlTag="div" htmlClass="ckmcsacsa">-->
+                <!--<block class="Magento\Framework\View\Element\Template" name="jjkljlkjlkjlkjkl" template="Magento_Theme::html/header/right.phtml" />-->
+            <!--</container>-->
+        <!--</referenceContainer>-->
+        <!--<move element="breadcumbs" destination="breadcrumbs.and.toolbar" />-->
+        <!--<move element="product_list_toolbar"  destination="breadcrumbs.and.toolbar2" />-->
+        <!---->
     </body>
 </page>

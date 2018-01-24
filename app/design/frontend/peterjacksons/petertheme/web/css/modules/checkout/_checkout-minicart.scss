@@ -41,16 +41,11 @@
 
     }
 
-    &__attrs {
-
-    }
-
-    &__attribute {}
     &__attrs-label, &__attrs-value {
         display: inline-block;
         line-height: 22px;
     }
-    &__attrs-label {}
+
     &__attrs-value {
         margin-left: 3px;
     }
