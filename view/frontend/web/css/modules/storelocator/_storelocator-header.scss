@@ -118,4 +118,14 @@
         }
     }
 
+    @media all and (max-width: $xs-breakpoint) {
+        &__filters {
+            justify-content: space-between;
+        }
+
+        &__filter {
+            margin-right: 0;
+        }
+    }
+
 }
