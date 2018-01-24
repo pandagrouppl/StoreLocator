@@ -15,7 +15,7 @@ body[class~='catalog-category-view'] {
     }
 
     .layered-nav {
-        padding-right: 0px;
+        padding-right: 0;
 
         &__filter-header {
             font-size: 20px;
@@ -231,3 +231,13 @@ body[class~='contact-index-index'] {
     }
 }
 
+body[class~='cms-size-chart'] {
+    .page-main {
+        padding: 73px 20px;
+    }
+
+    .size-chart {
+        max-width: 849px;
+        margin: 0 auto;
+    }
+}
