@@ -17,6 +17,7 @@
         display: flex;
         justify-content: space-between;
         margin: 13px auto;
+        padding: 0 13px;
         max-width: 960px;
     }
 
@@ -79,4 +80,30 @@
         text-align: center;
         color: $red;
     }
+
+    @media all and (max-width: 800px) {
+        &__row {
+            flex-direction: column;
+
+            article:nth-child(2) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+
+        &__reset {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        &__input {
+            flex: 1;
+        }
+
+        &__search, &__input, &__reset {
+            margin: 5px;
+        }
+    }
+
 }

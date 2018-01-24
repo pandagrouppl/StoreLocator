@@ -1,5 +1,6 @@
 import { h, render } from 'preact';
 import App from './App';
+import 'whatwg-fetch';
 require('es6-promise').polyfill();
 
 
