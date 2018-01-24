@@ -54,10 +54,11 @@ export default class StoreHeader extends Component {
     }
 
     backButton() {
+        this.context.router.history.goBack();
         this.props.stateStore.changeView();
         this.props.stateStore.changeMap();
         this.props.stateStore.removeRef();
-        this.context.router.history.goBack();
+
     }
 
     applyFilter(region) {
