@@ -60,7 +60,9 @@
         justify-content: center;
         flex-direction: column;
         width: 100%;
-        border: 1px solid #dadada;
+        border-left: 1px solid #dadada;
+        border-right: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
         border-radius: 2px;
         background-color: white;
         box-sizing: border-box;
@@ -75,6 +77,10 @@
         display: flex;
         flex-direction: column;
         transition: color 300ms ease-in;
+
+        &:first-of-type {
+            border-top: 1px solid #dadada;
+        }
 
         &:hover {
             color: rgba(0, 0, 0, 0.5);
@@ -268,7 +274,7 @@
 }
 
 hr {
-    max-width: 772px;
+    max-width: 698px;
     margin: 22px auto 41px auto;
 }
 
@@ -294,6 +300,6 @@ hr {
     &__row {
         display: flex;
         justify-content: space-between;
-        padding: 10px 24px 0 60px;
+        padding: 10px 20px 0 55px;
     }
 }
