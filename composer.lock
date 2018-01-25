@@ -80,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "65036f5da1e075b270899269ef6082b0d6a22fae"
+                "reference": "62d0a664363cd65333d58dba9f5db0f8b67cb9dc"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-18 15:02:49"
+            "time": "2018-01-25 15:17:43"
         },
         {
             "name": "PandaGroup/Corporate",
@@ -396,12 +396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "248851865650a0a0c46c9783f7c367b97619834e"
+                "reference": "7507a9e9c37155476b9853bca925e5e64cd69083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/248851865650a0a0c46c9783f7c367b97619834e",
-                "reference": "248851865650a0a0c46c9783f7c367b97619834e",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/7507a9e9c37155476b9853bca925e5e64cd69083",
+                "reference": "7507a9e9c37155476b9853bca925e5e64cd69083",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -413,7 +413,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2018-01-24 20:00:35"
+            "time": "2018-01-25 15:18:11"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -421,14 +421,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "305eedfe527eb0e5ddea9459c748d2ab017ac074"
+                "reference": "45bc9faa3da2ddd2d3a42f159cbd4431922fbcad"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2018-01-11 14:29:00"
+            "time": "2018-01-24 14:21:04"
         },
         {
             "name": "amasty/base",

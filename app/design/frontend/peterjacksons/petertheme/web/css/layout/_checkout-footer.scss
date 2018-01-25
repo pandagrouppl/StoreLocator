@@ -1,7 +1,20 @@
-.checkout-footer {
+.page-footer-checkout {
     margin: 50px 0 0;
-    padding: 20px 0;
+    height: 71px;
+
+    @media all and (max-width: $md-breakpoint) {
+        height: 149px;
+    }
+}
+
+.checkout-footer {
+    padding: 20px;
     border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
 
     &__wrapper {
         display: flex;

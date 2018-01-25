@@ -46,6 +46,12 @@
         }
     }
 
+    @media all and (min-width: $sm-breakpoint + 1) {
+        &__table {
+            margin-top: 20px;
+        }
+    }
+
     @media all and (max-width: $cart-lg-breakpoint) {
         &__summary {
             margin-left: 15px;
