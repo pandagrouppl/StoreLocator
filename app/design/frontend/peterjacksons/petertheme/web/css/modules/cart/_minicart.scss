@@ -45,7 +45,7 @@
 
     &__items-wrapper {
         overflow: auto;
-        height: 250px;
+        max-height: 250px;
         padding: 0 20px;
 
         ol {
@@ -80,25 +80,24 @@
 
     &__buttons {
         padding: 20px;
-
+        display: flex;
+        justify-content: space-between;
+        * {
+            box-sizing: border-box;
+        }
 
         .minicart__button {
 
             &--view-cart {
-                @include button(0, 5px, 12px, 500);
-                width: 100px;
-                height: 30px;
-                line-height: 30px;
-                background: $grey-dark;
-                border: none;
-                color: $white;
+                @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 13px, $height: inherit, $margin-top: 0);
+                flex: 0 0 49%;
+                text-align: center;
             }
 
             &--checkout {
-                @include button-blue(0, 5px, 12px, 500);
-                width: 100px;
-                height: 30px;
-                line-height: 30px;
+                @include button-black($font-size: 13px, $height: inherit, $margin-top: 0);
+                flex: 0 0 49%;
+                margin-left: 5px;
             }
         }
     }

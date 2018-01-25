@@ -38,6 +38,12 @@
             border: 1px solid #d32b21;
         }
     }
+
+    &__description {
+        &--right-column {
+            font-weight: 500;
+        }
+    }
 }
 
 .loading-mask {
