@@ -16,7 +16,6 @@ export default class StoreHeader extends Component {
         this.applyFilter = this.applyFilter.bind(this);
         this.resetFilters = this.resetFilters.bind(this);
         this.searchPostcode = this.searchPostcode.bind(this);
-        console.log(props);
     }
 
     componentWillMount() {
@@ -40,7 +39,7 @@ export default class StoreHeader extends Component {
             if (status === 'OK') {
                 const newGeo = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
                 this.props.stateStore.setError();
-                this.props.stateStore.changeMap(newGeo);
+                this.props.stateStore.changeMap(newGeo, '11');
             } else {
                 this.props.stateStore.setError('Invalid postcode');
             }
@@ -54,11 +53,8 @@ export default class StoreHeader extends Component {
     }
 
     backButton() {
-        this.context.router.history.goBack();
         this.props.stateStore.changeView();
         this.props.stateStore.changeMap();
-        this.props.stateStore.removeRef();
-
     }
 
     applyFilter(region) {
@@ -70,6 +66,18 @@ export default class StoreHeader extends Component {
         return(
             <header className="storelocator-header">
                 <h1 className="storelocator-header__title">Store Locator</h1>
+                <section className="storelocator-header__row storelocator-header__row--breadcrumbs">
+                    <ul className="breadcrumbs__items">
+                        <li className="breadcrumbs__item Home">
+                            <a href="/" title="Home">
+                                Home                </a>
+                            <span className="breadcrumbs__separator">&gt;</span>
+                        </li>
+                        <li className="breadcrumbs__item">
+                            <strong className="breadcrumbs__item breadcrumbs__item--last">Store Locator</strong>
+                        </li>
+                    </ul>
+                </section>
                 <section className="storelocator-header__row">
                     {this.props.stateStore.view === 'list'
                         ? <article className="storelocator-header__filters">
@@ -78,7 +86,7 @@ export default class StoreHeader extends Component {
                                               onFilterClick={this.applyFilter}/>
                             ))}
                             </article>
-                        : <a onClick={() => this.backButton()}><button className="storelocator-header__back">Back</button></a>
+                        : <Link to="/" onClick={() => this.backButton()} className="storelocator-header__back-a"><button className="storelocator-header__back">Back</button></Link>
                     }
                     <article>
                         <a className="storelocator-header__reset" onClick={this.resetFilters}>Reset</a>

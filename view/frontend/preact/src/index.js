@@ -6,7 +6,7 @@ require('es6-promise').polyfill();
 
 const dots = (loader) => {
     let i = 0;
-    setInterval(function() {
+    return setInterval(function() {
         i++;
         loader.insertAdjacentHTML('beforeend', '<span>.</span>');
         if (i >= 4) {
@@ -21,10 +21,11 @@ const dots = (loader) => {
 export function init() {
 
     const loader = document.getElementById('preact-loader');
-    dots(loader);
+    const intrv = dots(loader);
     fetch('/storelocator/index/json')
         .then(data => data.json())
         .then(json => {
+            clearInterval(intrv);
             loader.remove();
             render(<App json={json}/>, document.getElementById('preact-root'));
         });

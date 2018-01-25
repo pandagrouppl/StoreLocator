@@ -15,30 +15,33 @@
 
     &__name {
         font-size: 40px;
-        font-family: league_gothic;
+        font-family: 'Roboto', sans-serif;
         font-weight: normal;
-        text-transform: uppercase;
         margin: 0 0 20px 0;
     }
 
     &__credentials {
-
         li {
             display: flex;
+            margin-bottom: 8px;
         }
     }
 
     &__label {
-        flex: 0 0 25%;
+        flex: 0 0 75px;
         display: block;
         font-weight: bold;
     }
-}
 
-@media screen and (max-width: $md-breakpoint) {
-    .store-view {
+    @media screen and (max-width: $sm-breakpoint) {
         &__store-card, &__tabs {
             flex: 1 1 100%;
         }
+
+        &__name {
+            margin-bottom: 35px;
+        }
     }
 }
+
+

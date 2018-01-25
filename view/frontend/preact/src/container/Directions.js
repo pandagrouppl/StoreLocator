@@ -37,7 +37,10 @@ export default class Directions extends Component {
                 if (status === 'OK') {
                     this.props.stateStore.setError();
                     this.directionsDisplay.setDirections(result);
-                    this.directionsDisplay.setPanel(this.props.stateStore.refDiv);
+                    const dirDiv = document.createElement("div");
+                    const dirPanel = document.querySelector("#dirPanel");
+                    dirPanel.appendChild(dirDiv);
+                    this.directionsDisplay.setPanel(dirDiv);
                 } else {
                     this.props.stateStore.setError('Could not find a route between A and B.');
                 }

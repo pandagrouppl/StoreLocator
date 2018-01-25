@@ -8,7 +8,6 @@ class StateStore {
     @observable waypoints;
     @observable view = 'list';
     @observable error = '';
-    @observable refDiv;
 
     constructor(json) {
         this.json = json;
@@ -75,16 +74,6 @@ class StateStore {
     @action
     setError(error='') {
         this.error = error;
-    }
-
-    @action
-    updateRef(ref) {
-        this.refDiv = ref;
-    }
-
-    @action
-    removeRef() {
-        this.refDiv.remove();
     }
 
     @computed
