@@ -59,36 +59,42 @@ body._has-modal-custom .modal-custom-overlay {
     padding: 20px;
 
     .modal-header, .block-title {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         h1 {
             color: $black;
+            margin: 0;
         }
 
         button.action-close {
-            @include button-grey(10px 20px, 0);
-            position: absolute;
-            right: 0;
-            top: 0;
+            @include button-black($font-size: 13px, $padding: 10px, $height: inherit, $margin-top: 0);
+            flex: 0 0 100px;
             z-index: 999;
         }
     }
 
     label {
         color: $black;
-        margin: 2px 0;
+        margin: 2px;
         display: block;
     }
 
 
     .modal-footer, .block-content {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
 
         .action-save-address, .action-login {
-            @include button-blue(10px 20px, 10px 0);
+            @include button-black($font-size: 13px, $padding: 10px, $height: inherit, $margin-top: 0);
+            flex: 0 0 49%;
         }
 
         .action-hide-popup {
-            @include button-grey(10px 20px, 10px);
+            @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 13px,$padding: 10px, $height: inherit, $margin-top: 0);
+            flex: 0 0 49%;
         }
 
         .actions-toolbar {

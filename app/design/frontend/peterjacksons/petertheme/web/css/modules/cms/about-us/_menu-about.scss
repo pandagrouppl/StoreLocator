@@ -14,11 +14,10 @@
         li {
             display: inline-block;
             font-size: 17px;
-            font-weight: 500;
-            padding: 0 5px;
+            padding: 0 15px;
 
             a {
-                color: #252525;
+                color: $black;
 
                 &:hover {
                     color: #999;
@@ -52,8 +51,7 @@
 @media screen and (max-width: $cms-md-brkpt) {
     .menu-about ul li {
         font-size: 18px;
-        padding: 0 15px 0 15px;
-
+        padding: 0 15px;
     }
 
 }
