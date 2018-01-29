@@ -2,18 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 1 100%;
 
     &__logo {
         @include logo();
-        display: block;
-
-        @media all and (max-width: $xs-breakpoint) {
-            max-width: 175px;
-            margin: 0;
-        }
+        display: flex;
+        align-items: center;
 
         img {
-            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            margin-left: 5px;
+            margin-right: 5px;
         }
     }
 

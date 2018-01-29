@@ -6,6 +6,15 @@
 
     > div {
         padding: 5px;
+
+        @media all and (max-width: $bp-header) {
+            padding: 5px 5px 10px 5px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding-right: 0;
+        }
+
     }
 
     &__url-block {
@@ -16,16 +25,16 @@
 
     &__search {
         margin-left: auto;
+
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
     }
 
     &__show-search-overlay {
         @include sprite(header-zoom);
         display: block;
         transform: scale(0.85);
-
-        @media all and (max-width: $bp-header) {
-            display: none;
-        }
     }
 
     &__counter {
