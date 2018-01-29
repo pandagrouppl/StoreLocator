@@ -15,7 +15,7 @@ $customerSession = $objectManager->get('Magento\Customer\Model\Session');
     </article>
     <article class="header-left__account show_popup_login">
         <?php if ($customerSession->isLoggedIn()) {
-            ?> <i class="header-left__account-popup-toggle"></i>
+            ?> <i class="header-left__account-popup-toggle"></i><span class="header-left__account-greeting" data-mage-init='{"js/customerGreeting":{}}'></span>
             <div class="header-left__account-popup" style="display: none">
                 <a href="/customer/account/">Account</a>
                 <a href="/customer/account/logout/">Log out</a>

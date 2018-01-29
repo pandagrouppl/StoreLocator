@@ -87,6 +87,8 @@
     &__account {
         margin: 0 10px;
         position: relative;
+        display: flex;
+        align-items: center;
 
         @media all and (max-width: $bp-header) {
             display: none;
@@ -97,6 +99,14 @@
             display: block;
             cursor: pointer;
         }
+    }
+
+    &__account-greeting {
+        font-size: 16px;
+        font-weight: 400;
+        color: #8d8b8b;
+        margin-left: 5px;
+        cursor: default;
     }
 
     &__account-popup {

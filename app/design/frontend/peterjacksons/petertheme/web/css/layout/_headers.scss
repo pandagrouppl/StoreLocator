@@ -28,7 +28,7 @@
                     }
                 }
 
-                i, .header-right__counter {
+                i, .header-right__counter, .header-left__account-greeting {
                     filter: brightness(100);
                 }
             }
@@ -49,7 +49,7 @@
                         }
                     }
 
-                    i, .header-right__counter {
+                    i, .header-right__counter, .header-left__account-greeting {
                         filter: none;
                     }
                 }
