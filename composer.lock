@@ -80,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "0be116e21cc48a54aa1997e169cee516fd24174a"
+                "reference": "29e55d4d96287a8e274718d5e749767ec250e00e"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-26 16:20:55"
+            "time": "2018-01-29 11:38:42"
         },
         {
             "name": "PandaGroup/Corporate",
