@@ -18,7 +18,7 @@ $input-height: 49px;
             font-size: 14px;
             height: $input-height;
             padding: 0;
-            transition: all 0.2s ease;
+            transition: all 0.5s ease;
             width: 100%;
             margin-bottom: 2px;
             background: $lightgrey;
@@ -26,9 +26,6 @@ $input-height: 49px;
             &:focus {
                 outline: none;
                 border-bottom-width: 2px;
-                margin-bottom: 2px - $border / 2;
-                font-size: 17px;
-                height: 35px;
             }
 
             &::clear {

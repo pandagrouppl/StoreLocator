@@ -1,9 +1,3 @@
-.zopim {
-    @media all and (max-width: $xs-breakpoint) {
-        display: none !important;
-    }
-}
-
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
@@ -102,10 +96,6 @@ body[class~='catalog-product-view'] {
         .page-main {
             padding: 0;
         }
-
-        .zopim {
-            display: none !important;
-        }
     }
 }
 
@@ -120,10 +110,6 @@ body[class~='checkout-cart-index'] {
         .page-main__title {
             display: none;
         }
-
-        .zopim {
-            display: none !important;
-        }
     }
 }
 
@@ -134,9 +120,6 @@ body[class~='checkout-index-index'] {
     }
 
     @media all and (max-width: $sm-breakpoint) {
-        .zopim {
-            display: none !important;
-        }
 
         .page-main {
             padding: 0;

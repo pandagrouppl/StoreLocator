@@ -1,9 +1,11 @@
 .header-right {
+    @include logo();
     display: flex;
-    align-items: flex-end;
+    flex: 1 1 10%;
+    align-items: center;
 
     > div {
-        padding: 5px 10px;
+        padding: 5px;
     }
 
     &__url-block {
@@ -12,9 +14,14 @@
         color: #8d8b8b;
     }
 
+    &__search {
+        margin-left: auto;
+    }
+
     &__show-search-overlay {
         @include sprite(header-zoom);
         display: block;
+        transform: scale(0.85);
 
         @media all and (max-width: $bp-header) {
             display: none;
@@ -32,6 +39,7 @@
 
         &-icon {
             @include sprite(header-star);
+            transform: scale(0.85);
         }
 
         @media all and (max-width: $bp-header) {
@@ -57,6 +65,7 @@
 
         &-icon {
             @include sprite(header-case);
+            transform: scale(0.85);
         }
     }
 }
