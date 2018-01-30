@@ -1,10 +1,26 @@
+body[class~='cms-size-chart'] {
+    .page-main {
+        max-width: 889px !important;
+        margin: auto auto 70px auto;
+    }
+
+    .breadcrumbs {
+        max-width: 889px;
+        padding: 36px 20px 25px 20px;
+
+        @media all and (max-width: 830px) {
+            display: none;
+        }
+    }
+}
+
 .size-chart {
     width: 100%;
     z-index: 11;
     box-sizing: border-box;
     background: white;
     border: 1px solid #dadada;
-    padding: 0 35px 20px;
+    padding: 0 35px 0;
 
     @media all and (max-width: 830px) {
         border: none;
@@ -20,6 +36,10 @@
     &__overlay {
         max-width: 846px;
         margin: 0 auto;
+
+        @media all and (max-width: 830px) {
+            margin: 0;
+        }
     }
 
     &__close {
@@ -33,9 +53,10 @@
         position: fixed;
         left: 1px;
         right: 1px;
-        padding: 7px;
+        padding: 14px 14px 14px 1px;
         top: 1px;
         background: white;
+        z-index: 9999;
 
         &:hover {
             color: #999;
@@ -67,6 +88,10 @@
         background-color: white;
         box-sizing: border-box;
         color: black;
+
+        @media all and (max-width: 830px) {
+            margin: 50px auto 30px auto;
+        }
     }
 
     &__tab {
@@ -78,6 +103,10 @@
         flex-direction: column;
         transition: color 300ms ease-in;
 
+        &--active {
+            display: block;
+        }
+
         &:first-of-type {
             border-top: 1px solid #dadada;
         }
@@ -88,6 +117,13 @@
 
         &:last-child {
             border-right: 0;
+        }
+
+        &--flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            pointer-events: none;
         }
     }
 
@@ -160,6 +196,7 @@
     &__information {
         font-size: 13px;
         text-transform: none;
+        padding: 0 0 60px 0;
 
         &--box {
             display: flex;
@@ -193,6 +230,10 @@
         max-width: 100%;
         margin: 60px auto 0 auto;
         font-weight: 500;
+
+        @media all and (max-width: 830px) {
+            margin: 22px auto 0 auto;
+        }
     }
 
     &__row {
@@ -209,8 +250,8 @@
         display: flex;
         flex-flow: row nowrap;
         flex-grow: 1;
-        flex-basis: 0;
-        padding: 5px 11px;
+        flex-basis: 6px;
+        padding: 5px 10px;
         word-break: break-word;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -220,6 +261,12 @@
         .space {
             padding: 0 0 0 30px;
             font-weight: 300;
+        }
+
+        .size {
+            font-weight: 300;
+            width: 1px;
+            margin: 0 0 0 3px;
         }
 
         .double-space {
@@ -250,11 +297,11 @@
         }
 
         &--padding {
-            padding: 15px 15px;
+            padding: 15px 12px;
         }
 
         &--padding-center {
-            padding: 5px 15px;
+            padding: 5px 12px;
         }
     }
 
@@ -278,28 +325,65 @@ hr {
     margin: 22px auto 41px auto;
 }
 
-.size-chart-mobile {
-    font-size: 15px;
-
-    @media all and (min-width: 830px) {
+@media all and (min-width: 830px + 1px) {
+    .size-chart-mobile {
         display: none;
     }
+}
 
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        background: #F7F7F7;
-        padding: 10px 26px;
-        font-weight: 500;
+@media all and (max-width: 830px) {
+    .size-chart-mobile {
+        font-size: 15px;
+        display: none;
 
-        span {
-            font-weight: 300;
+        &.size-chart__section--active {
+            display: block;
+        }
+
+        &__section {
+            display: none;
+
+            &--active {
+                display: block;
+            }
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            background: #F7F7F7;
+            padding: 10px 26px;
+            font-weight: 500;
+            margin: 22px 0 0 0;
+
+            &--shoes {
+                font-size: 13px;
+                font-weight: 600;
+                margin: 22px auto 12px auto;
+            }
+
+            span {
+                font-weight: 300;
+            }
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px 0 55px;
+
+            &--shirts {
+                padding: 10px 47px 0 55px;
+            }
+
+            &--accessories {
+                padding: 10px 23px 0 40px;
+            }
+
+            &--shoes {
+                padding: 10px 52px 0 52px;
+            }
         }
     }
-
-    &__row {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px 0 55px;
-    }
 }
+

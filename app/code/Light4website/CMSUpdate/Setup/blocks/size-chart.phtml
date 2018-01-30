@@ -7,26 +7,31 @@
             <div class="suit-label-chart label-chart">
                 <section class="size-chart__tabs" id="element"
                          data-mage-init='{"accordion":{"collapsible": true, "active": true, "multipleCollapsible": false, "disabled": false}}'>
-                    <div data-role="collapsible" data-collapsed="false">
-                            <div href="#chart-suits" class="size-chart__tab size-chart__tab--active">Suits</div>
-                            <div data-role="content">
-                                <a href="#chart-suits" class="size-chart__tab size-chart__tab--active">Suits</a>
+                    <div data-role="collapsible">
+                        <div data-role="trigger" style="position: relative; cursor:pointer;">
+                            <figure class="checkout-minicart__chevron" style="position: absolute; top: 18px; right: 15px;"></figure>
+                            <a href="#chart-suits" id="result"
+                               class="size-chart__tab size-chart__tab--active size-chart__tab--flex">
+                                Suits
+                            </a>
+
+
+
+                            <div data-role="content" style="display: none">
+                                <a href="#chart-suits" class="size-chart__tab">Suits</a>
                                 <a href="#chart-shirts" class="size-chart__tab">Shirts</a>
                                 <a href="#chart-trousers" class="size-chart__tab">Trousers & Chinos</a>
                                 <a href="#chart-accessories" class="size-chart__tab">Accessories</a>
                                 <a href="#chart-shoes" class="size-chart__tab">Shoes</a>
                             </div>
-
+                        </div>
                     </div>
-
-
                 </section>
                 <article class="size-chart__section size-chart__section--active" data-href="#chart-suits">
                     <hr>
                     <div class="size-chart__table">
                         <div class="size-chart__row size-chart__table--size">
-                            <div class="size-chart__box size-chart__box--bold"
-                                 style="flex-grow: 2;">
+                            <div class="size-chart__box size-chart__box--bold" style="flex-grow: 2;">
                                 Size
                             </div>
                             <div class="size-chart__box size-chart__box--center">
@@ -1955,7 +1960,7 @@
                     </div>
                 </article>
 
-                <section class="size-chart-mobile" data-href="#chart-shirts">
+                <section class="size-chart-mobile size-chart__section--active" data-href="#chart-suits">
                     <div class="size-chart-mobile__header">
                         <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
                         <div class="size-chart-mobile__header--right">Measurements</div>
@@ -2117,12 +2122,12 @@
                     </div>
                     <hr>
                 </section>
-                <section class="size-chart-mobile" data-href="#chart-suits">
+                <section class="size-chart-mobile" data-href="#chart-shirts">
                     <div class="size-chart-mobile__header">
                         <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
                         <div class="size-chart-mobile__header--right">Measurements</div>
                     </div>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">37 / S</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 37</div>
@@ -2135,7 +2140,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">38 / S</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 38</div>
@@ -2148,7 +2153,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">39 / M</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 39</div>
@@ -2161,7 +2166,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">40 / M</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 40</div>
@@ -2174,7 +2179,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">41 / L</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 41</div>
@@ -2187,7 +2192,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">42 / L</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 42</div>
@@ -2200,7 +2205,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">43 / XL</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 43</div>
@@ -2213,7 +2218,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">44 / XL</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 44</div>
@@ -2226,7 +2231,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">46 / 2XL</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 46</div>
@@ -2239,7 +2244,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">48 / 2XL</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 48</div>
@@ -2252,7 +2257,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
                         <div class="size-chart-mobile__row--left">50 / 3XL</div>
                         <div class="size-chart-mobile__row--right">
                             <div>Neck 50</div>
@@ -2272,447 +2277,430 @@
                         <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
                         <div class="size-chart-mobile__header--right">Measurements</div>
                     </div>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">37 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">76 / 28</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 37</div>
+                            <div>Waist 79</div>
                             <br>
-                            <div>Chest 100</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 45</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">38 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">80/ 30</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 38</div>
+                            <div>Waist 83</div>
                             <br>
-                            <div>Chest 104</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 46</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">39 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">84 / 32</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 39</div>
+                            <div>Waist 87</div>
                             <br>
-                            <div>Chest 108</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 47</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">40 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">88 / 34</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 40</div>
+                            <div>Waist 91</div>
                             <br>
-                            <div>Chest 110</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 48</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">41 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">92 / 36</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 41</div>
+                            <div>Waist 95</div>
                             <br>
-                            <div>Chest 114</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 49</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">42 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">96 / 38</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 42</div>
+                            <div>Waist 99</div>
                             <br>
-                            <div>Chest 118</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 50</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">43 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">100 / 40</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 43</div>
+                            <div>Waist 103</div>
                             <br>
-                            <div>Chest 122</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 51</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">44 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">104 / 42</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 44</div>
+                            <div>Waist 107</div>
                             <br>
-                            <div>Chest 126</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 52</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">46 / 2XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">108 / 44</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 46</div>
+                            <div>Waist 111</div>
                             <br>
-                            <div>Chest 130</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 53</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">48 / 2XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">112 / 46</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 48</div>
+                            <div>Waist 115</div>
                             <br>
-                            <div>Chest 134</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 54</div>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">50 / 3XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">116 / 48</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 50</div>
+                            <div>Waist 119</div>
                             <br>
-                            <div>Chest 142</div>
+                            <div>Inleg 82</div>
                             <br>
-                            <div>Sleeve 69.5</div>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <h2 class="size-chart__header">Tarintino Trousers - DROP 14</h2>
+                    <div class="size-chart-mobile__header">
+                        <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
+                        <div class="size-chart-mobile__header--right">Measurements</div>
+                    </div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">76 / 28</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 79</div>
                             <br>
-                            <div>Shoulder 56</div>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">80/ 30</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 83</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">84 / 32</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 87</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">88 / 34</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 91</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">92 / 36</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 95</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">96 / 38</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 99</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">100 / 40</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 103</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">104 / 42</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 107</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">108 / 44</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 111</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">112 / 46</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 115</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shirts">
+                        <div class="size-chart-mobile__row--left">116 / 48</div>
+                        <div class="size-chart-mobile__row--right">
+                            <div>Waist 119</div>
+                            <br>
+                            <div>Inleg 82</div>
+                            <br>
+                            <div>Foot Dia. 20</div>
                         </div>
                     </div>
                     <hr>
                 </section>
                 <section class="size-chart-mobile" data-href="#chart-accessories">
+                    <h2 class="size-chart__header">Belts</h2>
                     <div class="size-chart-mobile__header">
                         <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
                         <div class="size-chart-mobile__header--right">Measurements</div>
                     </div>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">37 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">77 / 30 / S</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 37</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 100</div>
-                            <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 45</div>
+                            <div>80 cm / 32 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">38 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">80 / 32 / M</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 38</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 104</div>
-                            <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 46</div>
+                            <div>86 cm / 34 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">39 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">87 / 34 / M</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 39</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 108</div>
-                            <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 47</div>
+                            <div>90 cm / 36 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">40 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">92 / 36 / L</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 40</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 110</div>
-                            <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 48</div>
+                            <div>96 cm / 38 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">41 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">97 / 38 / L</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 41</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 114</div>
-                            <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 49</div>
+                            <div>100 cm / 40 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">42 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">102 / 40 / XL</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 42</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 118</div>
-                            <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 50</div>
+                            <div>106 cm / 42 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">43 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">107 / 42 / 2XL</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 43</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 122</div>
-                            <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 51</div>
+                            <div>110 cm / 44 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">44 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--accessories">
+                        <div class="size-chart-mobile__row--left">112 / 44 / 3XL</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 44</div>
+                            <div>Belt length</div>
                             <br>
-                            <div>Chest 126</div>
-                            <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 52</div>
+                            <div>116 cm / 46 inch</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">46 / 2XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 46</div>
-                            <br>
-                            <div>Chest 130</div>
-                            <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 53</div>
-                        </div>
+
+                    <h2 class="size-chart__header">Socks</h2>
+                    <div class="size-chart-mobile__header">
+                        <div class="size-chart-mobile__header--left">Size</div>
                     </div>
-                    <hr>
                     <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">48 / 2XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 48</div>
-                            <br>
-                            <div>Chest 134</div>
-                            <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 54</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">50 / 3XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 50</div>
-                            <br>
-                            <div>Chest 142</div>
-                            <br>
-                            <div>Sleeve 69.5</div>
-                            <br>
-                            <div>Shoulder 56</div>
-                        </div>
+                        <div class="size-chart-mobile__row--left">6 - 13</div>
                     </div>
                     <hr>
                 </section>
                 <section class="size-chart-mobile" data-href="#chart-shoes">
+                    <h2 class="size-chart__header">Shoes</h2>
                     <div class="size-chart-mobile__header">
-                        <div class="size-chart-mobile__header--left">Size<span>(CM/INCH)</span></div>
+                        <div class="size-chart-mobile__header--left">Size<span>(UK/US/EUR)</span></div>
                         <div class="size-chart-mobile__header--right">Measurements</div>
                     </div>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">37 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">5 / 6 / 39</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 37</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 100</div>
-                            <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 45</div>
+                            <div>24.5 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">38 / S</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">6 / 7 / 40</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 38</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 104</div>
-                            <br>
-                            <div>Sleeve 61.1</div>
-                            <br>
-                            <div>Shoulder 46</div>
+                            <div>25.5 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">39 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">7 / 8 / 41</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 39</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 108</div>
-                            <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 47</div>
+                            <div>26.2 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">40 / M</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">8 / 9 / 42</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 40</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 110</div>
-                            <br>
-                            <div>Sleeve 63.5</div>
-                            <br>
-                            <div>Shoulder 48</div>
+                            <div>27.1 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">41 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">9 / 10 / 43</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 41</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 114</div>
-                            <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 49</div>
+                            <div>27.9 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">42 / L</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">10 / 11 / 44</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 42</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 118</div>
-                            <br>
-                            <div>Sleeve 65</div>
-                            <br>
-                            <div>Shoulder 50</div>
+                            <div>28.8 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">43 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">11 / 12 / 45</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 43</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 122</div>
-                            <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 51</div>
+                            <div>29.6 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">44 / XL</div>
+                    <div class="size-chart-mobile__row size-chart-mobile__row--shoes">
+                        <div class="size-chart-mobile__row--left">12 / 13 / 46</div>
                         <div class="size-chart-mobile__row--right">
-                            <div>Neck 44</div>
+                            <div>Foot length</div>
                             <br>
-                            <div>Chest 126</div>
-                            <br>
-                            <div>Sleeve 66.5</div>
-                            <br>
-                            <div>Shoulder 52</div>
+                            <div>30.5 cm</div>
                         </div>
                     </div>
                     <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">46 / 2XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 46</div>
-                            <br>
-                            <div>Chest 130</div>
-                            <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 53</div>
-                        </div>
+
+                    <h2 class="size-chart__header size-chart-mobile__header--shoes">HOW TO FIND YOUR
+                        <br>FOOT SIZE
+                    </h2>
+                    <div class="size-chart__information--font-size">
+                        <span>Measure your foot from one tip to the other. If after measuring your foot and
+                            consulting the table you find that you are between two sizes, you must opt
+                            for the larger size.</span>
                     </div>
-                    <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">48 / 2XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 48</div>
-                            <br>
-                            <div>Chest 134</div>
-                            <br>
-                            <div>Sleeve 68</div>
-                            <br>
-                            <div>Shoulder 54</div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="size-chart-mobile__row">
-                        <div class="size-chart-mobile__row--left">50 / 3XL</div>
-                        <div class="size-chart-mobile__row--right">
-                            <div>Neck 50</div>
-                            <br>
-                            <div>Chest 142</div>
-                            <br>
-                            <div>Sleeve 69.5</div>
-                            <br>
-                            <div>Shoulder 56</div>
-                        </div>
-                    </div>
-                    <hr>
                 </section>
             </div>
         </section>
@@ -2724,5 +2712,30 @@
         'jquery',
         'accordion'], function ($) {
         $("#element").collapsible();
+
+        $(document).ready(function () {
+            let degrees = 0;
+
+            $('#element').click(function rotateMe() {
+
+                degrees += 180;
+
+                $(' .checkout-minicart__chevron ').css({
+
+                    'transform': 'rotate(' + degrees + 'deg)',
+                    '-ms-transform': 'rotate(' + degrees + 'deg)',
+                    '-moz-transform': 'rotate(' + degrees + 'deg)',
+                    '-webkit-transform': 'rotate(' + degrees + 'deg)',
+                    '-o-transform': 'rotate(' + degrees + 'deg)'
+
+                });
+            });
+        });
+
+        $(' a ').on('click', function( e ) {
+            $(' #result ').html( $(this).text() );
+            e.preventDefault();
+        });
+
     });
 </script>
