@@ -1,0 +1,11 @@
+.fancybox-container .fancybox-inner {
+    .fancybox-slide::before {
+        content: none;
+    }
+
+    .fancybox-content {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

@@ -28,17 +28,8 @@
                     }
                 }
 
-                .header-left__account,
-                .header-left__book {
+                i, .header-right__counter, .header-left__account-greeting {
                     filter: brightness(100);
-                }
-
-                .header-right__search,
-                .header-right__wishlist,
-                .header-right__minicart  {
-                    > a, > a > i {
-                        filter: brightness(100);
-                    }
                 }
             }
 
@@ -52,21 +43,13 @@
                         filter: none;
                     }
 
-                    .header-middle__navigation {
+                    .ui-menu-item {
                         span, a, i {
-                            filter: none;
-                            color: black;
+                            color: inherit;
                         }
                     }
 
-                    .header-right {
-                        span, a, i {
-                            filter: none;
-                        }
-                    }
-
-                    .header-left__account,
-                    .header-left__book {
+                    i, .header-right__counter, .header-left__account-greeting {
                         filter: none;
                     }
                 }

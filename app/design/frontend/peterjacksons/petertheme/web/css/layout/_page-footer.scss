@@ -129,6 +129,10 @@
 
     &__social-icons-ul {
         display: flex;
+
+        li:first-child a {
+            margin-left: 0;
+        }
     }
 
     &__icon {

@@ -10,8 +10,10 @@
  * @var $block \Magento\Theme\Block\Html\Title
  */
 $title = '';
+$text = $block->escapeHtml($block->getPageHeading());
+$alttext = substr($text, 0, strpos($text, "-"));
 if (trim($block->getPageHeading())) {
-    $title = '<span' .  $block->getAddBaseAttribute() . '>' . $block->escapeHtml($block->getPageHeading()) . '</span>';
+    $title = '<span' .  $block->getAddBaseAttribute() . '>' . $alttext . '</span>';
 }
 ?>
 <div class="success-popup" id="success-popup">

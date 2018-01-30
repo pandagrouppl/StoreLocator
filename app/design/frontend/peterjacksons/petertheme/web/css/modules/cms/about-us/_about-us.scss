@@ -57,7 +57,7 @@
     &__title {
         text-align: center;
         font-size: 36px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: normal;
         margin-bottom: 32px;
 
@@ -94,11 +94,16 @@
         }
     }
 
+    &__thin-text {
+        font-weight: 300;
+    }
+
     &__box {
         box-sizing: border-box;
         flex: 0 0 50%;
         padding-bottom: 15px;
         overflow: hidden;
+        line-height: 1.5em;
 
         img {
             max-width: 100%;
@@ -140,7 +145,11 @@
 
         &--right {
             flex: 1;
-            padding: 95px 61px 80px 80px;
+            padding: 0 61px 80px 80px;
+
+            h1 {
+                margin-top: 0;
+            }
         }
     }
 
@@ -163,6 +172,7 @@
     }
 
     &__centered-text {
+        font-size: 36px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -256,7 +266,7 @@
         }
 
         &-text {
-            padding: 30px;
+            padding: 30px 30px 50px 30px;
         }
 
         &-slideshow {
@@ -270,7 +280,6 @@
 
     &__checker-title {
         font-style: italic;
-        font-family: Merriweather;
         font-weight: bold;
         font-size: 25px;
         margin: 0 0 21px 0;
@@ -278,10 +287,8 @@
 
     &__checker-title-gothic {
         margin: 45px 0;
-        font-family: league_gothic;
         font-weight: normal;
         font-size: 48px;
-        text-transform: uppercase;
 
         &--centered {
             text-align: center;
@@ -305,16 +312,19 @@
             max-width: 1300px;
             margin: 0 auto;
         }
+    }
 
-        &-text {
-            max-width: 495px;
-            text-align: justify;
-            color: white;
-            padding: 60px 40px;
+    &__text-on-image-text {
+        max-width: 420px;
+        text-align: justify;
+        color: white;
+        padding: 200px 140px;
+        line-height: 1.6em;
+        font-weight: 400;
+        letter-spacing: 1px;
 
-            &--right {
-                margin: 0 0 0 auto;
-            }
+        &--right {
+            margin: 0 0 0 auto;
         }
     }
 }
@@ -371,6 +381,11 @@
         &__box, &__wiab-box {
             padding: 0 0 15px 0;
         }
+
+        &__text-on-image-text {
+            max-width: none;
+            padding: 30vw 10vw;
+        }
     }
 }
 
@@ -412,7 +427,7 @@
         }
 
         &-text {
-            padding: 30px 5%;
+            padding: 30px 5% 50px 5%;
         }
     }
 }

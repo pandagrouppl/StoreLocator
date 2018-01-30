@@ -154,11 +154,11 @@
         margin: 10px 0 1px;
 
         &--selected {
-            border: 2px solid grey;
+            border: 2px solid $black-light;
         }
 
         &--not-selected {
-            border: 2px dashed grey;
+            border: 2px solid $grey;
             cursor: pointer;
         }
     }
@@ -204,7 +204,9 @@
             }
 
             &.choice {
+                margin-top: 5px;
                 display: flex;
+                align-items: center;
             }
         }
     }
@@ -246,6 +248,7 @@
 
     &__next-button {
         @include button-black();
+        font-weight: 500;
     }
 
     // payments

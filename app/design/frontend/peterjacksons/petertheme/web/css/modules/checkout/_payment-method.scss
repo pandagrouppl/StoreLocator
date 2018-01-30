@@ -68,6 +68,10 @@
         padding: 0;
     }
 
+    &__paypal {
+        display: none;
+    }
+
     &__paypal, .payment-method-billing-address {
         margin-top: 30px;
     }

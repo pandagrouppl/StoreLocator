@@ -59,7 +59,7 @@
     }
 
     &__continue {
-        @include button-black($bg: white, $color: #333);
+        @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark);
     }
 
     &__gotocheckout {

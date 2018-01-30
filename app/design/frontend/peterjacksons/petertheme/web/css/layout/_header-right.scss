@@ -1,9 +1,20 @@
 .header-right {
+    @include logo();
     display: flex;
-    align-items: flex-end;
+    flex: 1 1 10%;
+    align-items: center;
 
     > div {
-        padding: 5px 10px;
+        padding: 5px;
+
+        @media all and (max-width: $bp-header) {
+            padding: 5px 5px 10px 5px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding-right: 0;
+        }
+
     }
 
     &__url-block {
@@ -12,13 +23,18 @@
         color: #8d8b8b;
     }
 
-    &__show-search-overlay {
-        @include sprite(header-zoom);
-        display: block;
+    &__search {
+        margin-left: auto;
 
         @media all and (max-width: $bp-header) {
             display: none;
         }
+    }
+
+    &__show-search-overlay {
+        @include sprite(header-zoom);
+        display: block;
+        transform: scale(0.85);
     }
 
     &__counter {
@@ -32,6 +48,7 @@
 
         &-icon {
             @include sprite(header-star);
+            transform: scale(0.85);
         }
 
         @media all and (max-width: $bp-header) {
@@ -57,6 +74,7 @@
 
         &-icon {
             @include sprite(header-case);
+            transform: scale(0.85);
         }
     }
 }
