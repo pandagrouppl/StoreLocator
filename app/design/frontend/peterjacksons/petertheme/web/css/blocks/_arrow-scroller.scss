@@ -13,6 +13,10 @@
     font-weight: 400;
     z-index: 9999;
 
+    em {
+        font-style: normal;
+    }
+
     @media all and (max-width: $sm-breakpoint) {
         display: none !important;
         opacity: 0 !important;

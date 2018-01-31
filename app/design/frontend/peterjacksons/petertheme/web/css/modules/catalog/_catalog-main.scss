@@ -92,6 +92,7 @@ body[class~='catalogsearch-result-index'] {
         h2 {
             font-weight: normal;
             color: #333;
+            font-size: 12px;
 
             @media all and (max-width: 550px) {
                 display: none;
@@ -107,7 +108,7 @@ body[class~='catalogsearch-result-index'] {
         }
 
         span {
-            font-size: 11px !important;
+            font-size: 12px !important;
             color: black;
         }
 

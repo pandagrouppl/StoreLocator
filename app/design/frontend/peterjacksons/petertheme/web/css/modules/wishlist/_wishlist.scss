@@ -10,7 +10,7 @@ body[class~='guest-wishlist-index-index'] {
         height: 135px;
 
         h1 {
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 
@@ -31,6 +31,16 @@ body[class~='guest-wishlist-index-index'] {
                 color: $grey-dark;
             }
         }
+    }
+
+    .message.info.empty {
+        height: 245px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 0 20px;
     }
 }
 
@@ -89,7 +99,7 @@ body[class~='guest-wishlist-index-index'] {
     }
 
     &__button {
-        @include button-black($height: 55px, $margin-top: 58px, $font-size: 18px);
+        @include button-black($height: 55px, $margin-top: 10px, $font-size: 18px);
         box-sizing: border-box;
         width: 100%;
         max-width: 210px;
