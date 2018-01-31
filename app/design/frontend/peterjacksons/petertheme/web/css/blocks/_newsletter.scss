@@ -15,6 +15,7 @@ $input-height: 49px;
         &__input {
             border: none;
             border-bottom: 1px solid #4b4a4d;
+            border-radius: 0;
             font-size: 14px;
             height: $input-height;
             padding: 0;
