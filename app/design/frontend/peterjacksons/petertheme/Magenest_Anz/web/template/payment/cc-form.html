@@ -24,6 +24,15 @@
     </div>
     <div class="field number required">
         <div class="control">
+            <input type="text"
+                   class="payment-method__input payment-method__input--ccnum input-text"
+                   name="cc_number_input"
+                   data-bind="event: {keyup : formatCCnum},
+                              attr: {
+                                    autocomplete: off,
+                                    title: $t('Credit Card Number'),
+                                    placeholder: $t('Credit Card Number'),
+                                    enable: isActive($parents)}"/>
             <input type="number" name="payment[cc_number]" class="payment-method__input payment-method__input--ccnum input-text" value=""
                    data-bind="attr: {
                                     autocomplete: off,
@@ -34,9 +43,12 @@
                                     'data-validate': JSON.stringify({'required-number':true, 'validate-card-type':getCcAvailableTypesValues(), 'validate-card-number':'#' + getCode() + '_cc_type', 'validate-cc-type':'#' + getCode() + '_cc_type'})},
                               enable: isActive($parents),
                               value: creditCardNumber,
-                              valueUpdate: 'keyup' "/>
+                              valueUpdate: 'keyup',
+                              visible: false"
+            />
         </div>
     </div>
+
     <div class="field date required" data-bind="attr: {id: getCode() + '_cc_type_exp_div'}">
         <label data-bind="attr: {for: getCode() + '_expiration'}" class="payment-method__expiration label">
             <span><!-- ko i18n: 'Expiration Date'--><!-- /ko --></span>

@@ -65,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "282bc3263e4606d91ea6ef328adbef03c667517f"
+                "reference": "c97439ad1c5786edacb20496ea6e6038442dbcf3"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2018-01-15 10:16:07"
+            "time": "2018-01-31 11:26:17"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -80,14 +80,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "29e55d4d96287a8e274718d5e749767ec250e00e"
+                "reference": "bdb1bdae9a7e2424d214dc1e18a22f726d5315d2"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-01-29 11:38:42"
+            "time": "2018-01-31 14:21:48"
         },
         {
             "name": "PandaGroup/Corporate",

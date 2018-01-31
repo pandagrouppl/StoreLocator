@@ -47,6 +47,10 @@ $field-button: 37px;
         border: 1px solid #b9b9b9;
         border-radius: 1px;
         height: 100%;
+
+        &:hover button {
+            background-color: $grey-dark;
+        }
     }
 
     &__input {
@@ -67,6 +71,7 @@ $field-button: 37px;
         font-size: 28px;
         background-color: #464646;
         color: white;
+        cursor: pointer;
     }
 
     &__icon-add {
