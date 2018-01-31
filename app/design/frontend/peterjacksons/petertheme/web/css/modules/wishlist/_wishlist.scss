@@ -32,6 +32,16 @@ body[class~='guest-wishlist-index-index'] {
             }
         }
     }
+
+    .message.info.empty {
+        height: 245px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 300;
+        padding: 0 20px;
+    }
 }
 
 .wishlist {

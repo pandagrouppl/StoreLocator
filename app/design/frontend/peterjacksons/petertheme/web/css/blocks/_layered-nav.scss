@@ -63,6 +63,12 @@
     &__content {
         margin-left: 0;
 
+        span.label {
+            &:hover {
+                border-bottom: 1px solid black;
+            }
+        }
+
         .swatch-attribute-options {
             padding-left: 0 !important;
         }
