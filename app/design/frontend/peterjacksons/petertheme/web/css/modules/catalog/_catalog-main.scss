@@ -56,6 +56,16 @@
     }
 }
 
+body[class~='catalogsearch-result-index'] {
+    @media all and (min-width: 550px + 1px) {
+        .catalog-main__description {
+            padding-bottom: 50px;
+        }
+    }
+
+}
+
+
 .catalog-main {
 
     &__description {
@@ -155,11 +165,5 @@
             margin: 0;
         }
     }
-
-    //.toolbar {
-    //    @media all and (max-width: 860px) {
-    //        display: none !important;
-    //    }
-    //}
 }
 

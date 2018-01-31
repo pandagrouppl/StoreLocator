@@ -210,4 +210,12 @@
     }
 }
 
+// Product View
+body[class~='catalog-product-view'] {
+    .page-footer {
+        margin-top: 0;
+        padding-top: 25px;
+    }
+}
+
 

@@ -25,22 +25,30 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     <?php echo $block->getToolbarHtml() ?>
     <?php echo $block->getAdditionalHtml() ?>
     <?php
+    $categoryCode = 'default';
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
+    if ($category != null) {
+        $categoryCode = strtolower($category->getName());
+    }
+
     if ($block->getMode() == 'grid') {
         // grid == 3 col
         $viewMode = 'grid';
-        $image = 'category_page_grid';
+        if($categoryCode === 'suits') {
+            $image = 'category_page_3col_suits';
+        } else {
+            $image = 'category_page_3col';
+        }
         $showDescription = false;
         $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
     } else {
         // list == 2 col
         $viewMode = 'list';
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');;
-        $categoryCode = strtolower($category->getName());
         if($categoryCode === 'suits') {
-            $image = 'category_page_list_suits';
+            $image = 'category_page_2col_suits';
         } else {
-            $image = 'category_page_list';
+            $image = 'category_page_2col';
         }
         $showDescription = true;
         $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::FULL_VIEW;

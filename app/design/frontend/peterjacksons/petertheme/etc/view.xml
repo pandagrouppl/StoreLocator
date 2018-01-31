@@ -20,17 +20,21 @@
                 <width>150</width>
                 <height>200</height>
             </image>
-            <image id="category_page_grid" type="small_image">
-                <width>303</width>
-                <height>603</height>
+            <image id="category_page_2col" type="small_image">
+                <width>651</width>
+                <height>883</height>
             </image>
-            <image id="category_page_list" type="small_image">
-                <width>303</width>
-                <height>405</height>
+            <image id="category_page_3col" type="small_image">
+                <width>403</width>
+                <height>549</height>
             </image>
-            <image id="category_page_list_suits" type="small_image">
-                <width>467</width>
-                <height>622</height>
+            <image id="category_page_2col_suits" type="small_image">
+                <width>685</width>
+                <height>1458</height>
+            </image>
+            <image id="category_page_3col_suits" type="small_image">
+                <width>344</width>
+                <height>732</height>
             </image>
             <image id="hover_image" type="small_image">
                 <width>303</width>
