@@ -59,8 +59,8 @@
     }
 }
 
-// Category view
-body[class~='catalog-category-view'] {
+// Category view, Search view
+body[class~='catalog-category-view'], body[class~='catalogsearch-result-index'] {
     .page-main__message {
         display: none;
     }

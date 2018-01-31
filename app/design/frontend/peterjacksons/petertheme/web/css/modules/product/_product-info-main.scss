@@ -69,6 +69,10 @@
             margin-left: 0;
             text-decoration: underline;
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__options-wrapper {

@@ -1,35 +1,63 @@
 .floating-addtocart {
-    @media all and (min-width: $sm-breakpoint + 1) {
-        display: none !important;
-        opacity: 0 !important;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: white;
+    border-top: 1px solid $grey;
+
+    &__price-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
     }
 
-    @media all and (max-width: $sm-breakpoint) {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 9;
-        background-color: white;
-        border-top: 1px solid $grey;
+    &__button {
+        @include button-black($height: 67px, $margin-top: 0, $font-size: 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
 
-        &__price-wrapper {
+    @media all and (min-width: $sm-breakpoint + 1) {
+        &__wrapper {
             display: flex;
             justify-content: space-between;
-            padding: 12px 16px;
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
+            padding: 0 40px;
+        }
+
+        &__price-name {
+            margin-right: 15px;
+        }
+
+        &__price-wrapper {
+            align-items: center;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        &__price-text {
+            display: none;
         }
 
         &__button {
-            @include button-black($height: 67px, $margin-top: 0, $font-size: 20px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            font-weight: 500;
+            flex: 0 0 230px;
+            margin: 30px;
+            height: inherit;
+            font-size: 14px;
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__price-name {
+            display: none;
         }
     }
 }

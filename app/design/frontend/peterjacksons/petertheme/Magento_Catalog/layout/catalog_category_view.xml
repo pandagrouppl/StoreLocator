@@ -12,7 +12,6 @@
     </head>
     <body>
         <move element="category.description" destination="page.top" before="-"/>
-        <!--<move element="product_list_toolbar" destination="breadcrumbs" before="-"/>-->
         <referenceBlock name="page.main.title" remove="true"/>
         <referenceBlock name="category.image" remove="true"/>
         <referenceBlock name="category.product.addto.compare" remove="true"/>
@@ -20,28 +19,13 @@
         <referenceContainer name="content" htmlTag="section" htmlClass="catalog-main">
             <block class="Magento\Framework\View\Element\Template" name="arrow.scroller" template="Magento_Theme::html/footer/arrow-scroller.phtml"/>
         </referenceContainer>
-        <!--<referenceBlock name="breadcrumbs">-->
-            <!--<block class="Magento\Catalog\Block\Product\ProductList\Toolbar" name="breadcrumbs.sorter" template="Magento_Catalog::navigation/sorter.phtml"/>-->
-        <!--</referenceBlock>-->
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">catalog-main__title</argument>
             </arguments>
         </referenceBlock>
-        <!--<referenceBlock name="product_list_toolbar" remove="true" />-->
         <referenceBlock name="category.products">
             <block class="Magento\Framework\View\Element\Template" name="suits.description" template="Magento_Theme::html/suits-description.phtml"/>
         </referenceBlock>
-
-
-        <!-- add toolbar to breadcrumbs -->
-        <!--<referenceContainer name="page.top">-->
-            <!--<container name="breadcrumbs.and.toolbar" htmlTag="div" htmlClass="ckmcsacsa">-->
-                <!--<block class="Magento\Framework\View\Element\Template" name="jjkljlkjlkjlkjkl" template="Magento_Theme::html/header/right.phtml" />-->
-            <!--</container>-->
-        <!--</referenceContainer>-->
-        <!--<move element="breadcumbs" destination="breadcrumbs.and.toolbar" />-->
-        <!--<move element="product_list_toolbar"  destination="breadcrumbs.and.toolbar2" />-->
-        <!---->
     </body>
 </page>

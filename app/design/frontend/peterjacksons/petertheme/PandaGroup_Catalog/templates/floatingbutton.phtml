@@ -3,15 +3,20 @@
 /** @var $block Magento\Framework\View\Element\Template */
 ?>
 <div class="floating-addtocart" data-mage-init='{"js/floatingAddtocart":{}}'>
-    <div class="floating-addtocart__price-wrapper">
-        <div class="floating-addtocart__price-text">
-            Price
+    <div class="floating-addtocart__wrapper">
+        <div class="floating-addtocart__price-wrapper">
+            <div id="floating-add-to-cart-name" class="floating-addtocart__price-name">
+
+            </div>
+            <div class="floating-addtocart__price-text">
+                Price
+            </div>
+            <div class="floating-addtocart__price">
+                <?php echo $block->getChildHtml('floating.button.price'); ?>
+            </div>
         </div>
-        <div class="floating-addtocart__price">
-            <?php echo $block->getChildHtml('floating.button.price'); ?>
+        <div class="button floating-addtocart__button">
+            <span id="floating-add-to-cart-text">Add to Cart</span>
         </div>
-    </div>
-    <div class="button floating-addtocart__button">
-        <span>Add to Cart</span>
     </div>
 </div>

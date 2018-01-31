@@ -7,14 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="sidebar.main" remove="True"/>
-        <referenceContainer name="sidebar.additional" remove="True"/>
-        <referenceBlock name="breadcrumbs" remove="True"/>
-        <referenceBlock name="catalogsearch.product.addto.compare" remove="True"/>
+        <referenceContainer name="sidebar.additional" remove="true"/>
+        <referenceBlock name="catalogsearch.product.addto.compare" remove="true"/>
         <referenceBlock name="page.main.title">
-            <arguments>
-                <argument name="css_class" xsi:type="string">catalog-main__title</argument>
-            </arguments>
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magento_Theme::html/search-title.phtml</argument>
+            </action>
         </referenceBlock>
+        <move element="page.main.title" destination="page.wrapper" after="header.container" />
     </body>
 </page>

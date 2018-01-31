@@ -14,13 +14,13 @@
                 <argument name="css_class" xsi:type="string">account-main__title</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="sidebar.additional" remove="True" />
+        <referenceContainer name="sidebar.additional" remove="true" />
         <referenceContainer name="content" htmlTag="section" htmlClass="account-dashboard" />
         <referenceBlock name="customer_account_navigation">
-            <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="True" />
-            <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="True" />
-            <referenceBlock name="customer-account-navigation-product-reviews-link" remove="True" />
-            <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="True" />
+            <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true" />
+            <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="true" />
+            <referenceBlock name="customer-account-navigation-product-reviews-link" remove="true" />
+            <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true" />
             <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-logout-link">
                 <arguments>
                     <argument name="path" xsi:type="string">customer/account/logout</argument>

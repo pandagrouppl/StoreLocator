@@ -63,6 +63,13 @@
         max-width: 100%;
         margin-top: 54px;
 
+        &--descriptions {
+            background-color: $lightgrey;
+            padding: 77px 999em;
+            margin: 60px -999em 0 -999em;
+
+        }
+
         &--ending {
             margin-bottom: 30px;
         }
@@ -95,7 +102,7 @@
 
 
         .active .product-main__tab-switch {
-            font-weight: 600;
+            font-weight: 500;
             border-bottom: 1px solid #030303;
 
             @media all and (max-width: $sm-breakpoint) {
