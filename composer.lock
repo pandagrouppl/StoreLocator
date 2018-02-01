@@ -485,15 +485,16 @@
         },
         {
             "name": "amasty/module-improved-layered-navigation-page",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.5.zip",
+                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopbybase": ">=2.4.5",
+                "amasty/base": ">=1.0.1",
+                "amasty/module-shop-by-base": ">=2.5.1",
                 "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
@@ -511,11 +512,65 @@
             "description": "Improved Layered Navigation by Amasty - Page sub-module"
         },
         {
-            "name": "amasty/module-special-promo",
-            "version": "2.0.3",
+            "name": "amasty/module-shop-by-base",
+            "version": "2.5.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.0.3.zip",
+                "url": "https://composer.amasty.com/community/packages/module-shop-by-base-2.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/base": ">=1.0.1",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyBase\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Base Improved Layered Navigation by Amasty"
+        },
+        {
+            "name": "amasty/module-shop-by-brand",
+            "version": "2.4.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-shop-by-brand-2.4.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "amasty/module-shop-by-base": ">=2.5.1",
+                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Amasty\\ShopbyBrand\\": ""
+                }
+            },
+            "license": [
+                "Commercial"
+            ],
+            "description": "Improved Layered Navigation by Amasty - Brand sub-module"
+        },
+        {
+            "name": "amasty/module-special-promo",
+            "version": "2.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -539,10 +594,10 @@
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.0.3.zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -567,10 +622,10 @@
         },
         {
             "name": "amasty/quickview",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview-1.0.5.zip",
+                "url": "https://composer.amasty.com/community/packages/quickview-1.0.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -594,20 +649,20 @@
         },
         {
             "name": "amasty/shopby",
-            "version": "2.4.7",
+            "version": "2.5.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-2.4.7.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-2.5.1.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "amasty/base": ">=1.0.1",
-                "amasty/module-improved-layered-navigation-page": ">=2.4.5",
-                "amasty/shopby-brand": ">=2.4.5",
-                "amasty/shopby-root": ">=2.4.5",
-                "amasty/shopby-seo": ">=2.4.5",
-                "amasty/shopbybase": ">=2.4.5",
+                "amasty/module-improved-layered-navigation-page": ">=2.4.7",
+                "amasty/module-shop-by-base": ">=2.5.1",
+                "amasty/module-shop-by-brand": ">=2.4.8",
+                "amasty/shopby-root": ">=2.4.7",
+                "amasty/shopby-seo": ">=2.4.7",
                 "magento/module-layered-navigation": ">=100.0",
                 "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
@@ -626,43 +681,17 @@
             "description": "Improved Layered Navigation by Amasty"
         },
         {
-            "name": "amasty/shopby-brand",
-            "version": "2.4.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-brand-2.4.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopbybase": ">=2.4.5",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyBrand\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Brand sub-module"
-        },
-        {
             "name": "amasty/shopby-root",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.5.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopbybase": ">=2.4.5",
+                "amasty/base": ">=1.0.1",
+                "amasty/module-shop-by-base": ">=2.5.1",
                 "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
@@ -681,15 +710,16 @@
         },
         {
             "name": "amasty/shopby-seo",
-            "version": "2.4.5",
+            "version": "2.4.7",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.5.zip",
+                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "amasty/shopbybase": ">=2.4.5",
+                "amasty/base": ">=1.0.1",
+                "amasty/module-shop-by-base": ">=2.5.1",
                 "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
             },
             "type": "magento2-module",
@@ -705,33 +735,6 @@
                 "Commercial"
             ],
             "description": "Improved Layered Navigation by Amasty - SEO sub-module"
-        },
-        {
-            "name": "amasty/shopbybase",
-            "version": "2.4.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopbybase-2.4.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/base": ">=1.0.1",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyBase\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Base Improved Layered Navigation by Amasty"
         },
         {
             "name": "braintree/braintree_php",
@@ -1188,16 +1191,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "2d899e9b33023c631854f36c39ef9f8317a7ab33"
+                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/2d899e9b33023c631854f36c39ef9f8317a7ab33",
-                "reference": "2d899e9b33023c631854f36c39ef9f8317a7ab33",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
+                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
                 "shasum": ""
             },
             "require": {
@@ -1245,7 +1248,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-01-03 16:37:06"
+            "time": "2018-01-31 13:17:27"
         },
         {
             "name": "firebase/php-jwt",
@@ -6876,16 +6879,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.7.0",
+            "version": "1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "9b355654ea99460397b89c132b5c1087b6bf4473"
+                "reference": "d15f59a67ff805a44c50ea0516d2341740f81a38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9b355654ea99460397b89c132b5c1087b6bf4473",
-                "reference": "9b355654ea99460397b89c132b5c1087b6bf4473",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/d15f59a67ff805a44c50ea0516d2341740f81a38",
+                "reference": "d15f59a67ff805a44c50ea0516d2341740f81a38",
                 "shasum": ""
             },
             "require": {
@@ -6921,7 +6924,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2018-01-03 12:13:57"
+            "time": "2018-01-24 12:46:19"
         },
         {
             "name": "seld/phar-utils",
@@ -7118,7 +7121,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -7178,7 +7181,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -7227,7 +7230,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.3",
+            "version": "v3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -7276,16 +7279,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "ea3226daa3c6789efa39570bfc6e5d55f7561a0a"
+                "reference": "905efe90024caa75a2fc93f54e14b26f2a099d96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/ea3226daa3c6789efa39570bfc6e5d55f7561a0a",
-                "reference": "ea3226daa3c6789efa39570bfc6e5d55f7561a0a",
+                "url": "https://api.github.com/repos/symfony/process/zipball/905efe90024caa75a2fc93f54e14b26f2a099d96",
+                "reference": "905efe90024caa75a2fc93f54e14b26f2a099d96",
                 "shasum": ""
             },
             "require": {
@@ -7321,7 +7324,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-29 08:54:45"
         },
         {
             "name": "tedivm/jshrink",
@@ -10219,16 +10222,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "705d1687222c08deabac8993ec2e04ad1a422c52"
+                "reference": "17605ff58313d9fe94e507620a399721fc347b6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/705d1687222c08deabac8993ec2e04ad1a422c52",
-                "reference": "705d1687222c08deabac8993ec2e04ad1a422c52",
+                "url": "https://api.github.com/repos/symfony/config/zipball/17605ff58313d9fe94e507620a399721fc347b6d",
+                "reference": "17605ff58313d9fe94e507620a399721fc347b6d",
                 "shasum": ""
             },
             "require": {
@@ -10271,20 +10274,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-21 19:03:25"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "954ff7c61879479b2f57f427798f9c82555438a6"
+                "reference": "91ad61e6f140b050eba4aa39bc52eece713f2a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/954ff7c61879479b2f57f427798f9c82555438a6",
-                "reference": "954ff7c61879479b2f57f427798f9c82555438a6",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/91ad61e6f140b050eba4aa39bc52eece713f2a71",
+                "reference": "91ad61e6f140b050eba4aa39bc52eece713f2a71",
                 "shasum": ""
             },
             "require": {
@@ -10334,11 +10337,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-29 08:55:23"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.4.3",
+            "version": "v3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -10387,7 +10390,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.33",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
