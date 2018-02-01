@@ -149,10 +149,39 @@ export class Inliners {
 // HEADER
 
     private _toggleResponsiveMenu(): void {
-        $('.header-left__menu').click(() => {
-            $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
-            $('.header-responsive').slideToggle();
+        let open = false;
+
+        const blockOverflow = () => {
+            open = true;
+            document.body.style.overflow = "hidden";
+            document.body.addEventListener("touchmove", (e) => {e.preventDefault();}, false);
+        };
+
+        const clearOverflow = () =>  {
+            open = false;
+            document.body.style.overflow = "";
+            document.body.removeEventListener("touchmove", (e) => {e.preventDefault();}, false);
+        };
+
+        $('.header-left__menu').click((e) => {
+                $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
+                $('.header-responsive').slideToggle();
+                e.stopPropagation();
+                open ? clearOverflow() : blockOverflow();
         });
+
+        $('body').click((e) => {
+            if (open) {
+                e.preventDefault();
+                $('.header-left__menu-bar').removeClass('header-left__menu-bar--open');
+                $('.header-responsive').slideUp();
+                clearOverflow();
+            }
+        });
+
+        $('.header-responsive').click((e) => {
+            e.stopPropagation();
+        })
     }
 
     private _toggleSubmenuResponsive(): void {
@@ -171,7 +200,8 @@ export class Inliners {
         const $shippingBar = $('.header-shippingbar');
         const $pageWrapper = $('.page-wrapper');
         const offset = $shippingBar.outerHeight();
-        $window.scroll(() => {
+
+        const pinHead = () => {
             if ($window.scrollTop() > offset) {
                 $nav.addClass(docked);
                 if (!($body.hasClass('cms-index-index'))) {
@@ -184,13 +214,21 @@ export class Inliners {
                     $pageWrapper.css({'margin-top': 0})
                 }
             }
-        });
+        };
+
+        pinHead();
+        $window.scroll(pinHead);
 
         $shippingBar.click(function() {
             window.location.href = "/shipping-returns";
         });
     }
-    // this silly fix is required for Safari bugged column rendering
+
+    /**
+     * this silly fix is required for Safari bugged column rendering
+     * @private
+     */
+
     private _headerWidth(): void {
         $('.header-middle__columns').each(function() {
             const $this = $(this);

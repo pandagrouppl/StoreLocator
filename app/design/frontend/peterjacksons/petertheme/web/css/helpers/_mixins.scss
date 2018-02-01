@@ -271,6 +271,23 @@
     }
 }
 
+@mixin header-side-elems() {
+    @include logo();
+    display: flex;
+
+    @media all and (min-width: $bp-header + 1px) {
+        flex: 0 0 130px;
+    }
+
+    @media all and (max-width: $bp-header) {
+        flex: 0 0 70px;
+    }
+
+    @media all and (max-width: $xs-breakpoint) {
+        flex: 0 1 70px;
+    }
+}
+
 @mixin info-popup($top: calc(100% + 18px), $left: -21px) {
     position: absolute;
     padding: 16px;
