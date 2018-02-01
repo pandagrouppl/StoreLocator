@@ -68,7 +68,7 @@
 
     &__info {
         display: flex;
-        flex: 1 1 100%;
+        flex: 1 1 auto;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -149,5 +149,6 @@
         padding: 15px 0;
         font-size: 13px;
         font-weight: 400;
+        text-align: center;
     }
 }
