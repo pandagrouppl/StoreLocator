@@ -10,6 +10,46 @@ define([
 
     $.widget('l4w.amQuickview', $.mage.amQuickview, {
 
+        createHover : function(element) {
+            var self = this;
+            var productId = this.getProductId(element);
+            if (!productId) {
+                console.debug("We didn't find price block with product id");
+                return false;
+            }
+
+            var hover = $('<div />', {
+                class : 'amquickview-hover'
+            });
+            hover.attr("style", this.options['css']);
+            var anchor = element.find('.product-item-photo')
+
+            anchor.css({
+                display : 'block',
+                position : 'relative'
+            });
+
+            hover.css({
+                position : 'absolute',
+                top: 'calc(100% - 40px)'
+            });
+
+            var link = $('<a />', {
+                class : 'amquickview-link',
+                id : 'amquickview-link-' + productId
+            });
+            link.attr('data-product-id', productId);
+            link.html(this.options['text']);
+            hover.appendTo(anchor).hide();
+
+            link.click(function( event ) {
+                self.showPopup( event )
+            });
+            link.appendTo(hover);
+
+            return hover;
+        },
+
         showPopup : function(e) {
             e.preventDefault();
             e.stopImmediatePropagation();

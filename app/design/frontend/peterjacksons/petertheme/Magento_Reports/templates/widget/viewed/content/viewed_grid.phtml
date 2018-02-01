@@ -31,7 +31,7 @@ if ($exist = ($block->getRecentlyViewedProducts() && $block->getRecentlyViewedPr
 }
 ?>
 <?php if ($exist):?>
-    <div class="block widget block-viewed-products-<?php /* @escapeNotVerified */ echo $mode; ?>">
+    <div class="products-related block widget block-viewed-products-<?php /* @escapeNotVerified */ echo $mode; ?>">
         <div class="block-content">
             <?php /* @escapeNotVerified */ echo '<!-- ' . $image . '-->' ?>
             <div class="products-<?php /* @escapeNotVerified */ echo $mode; ?> <?php /* @escapeNotVerified */ echo $mode; ?>">
