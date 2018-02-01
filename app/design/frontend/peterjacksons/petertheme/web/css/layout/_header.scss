@@ -1,7 +1,14 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    
+    @media all and (min-width: $bp-header + 1px) {
+        padding: 0 30px;
+    }
+
+    @media all and (max-width: $bp-header) {
+        padding: 0 15px;
+    }
 
     @media all and (max-width: $xs-breakpoint) {
         padding: 5px;

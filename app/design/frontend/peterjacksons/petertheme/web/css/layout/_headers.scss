@@ -10,7 +10,7 @@
 
 }
 
-@media all and (min-width: $bp-header) {
+@media all and (min-width: $bp-header + 1px) {
     .cms-index-defaultindex, .cms-home, .cms-the-new-wave {
         .headers {
             position: fixed;

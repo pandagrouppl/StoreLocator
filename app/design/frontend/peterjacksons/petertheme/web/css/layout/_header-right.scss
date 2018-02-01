@@ -1,7 +1,5 @@
 .header-right {
-    @include logo();
-    display: flex;
-    flex: 1 1 10%;
+    @include header-side-elems();
     align-items: center;
 
     > div {
@@ -76,5 +74,10 @@
             @include sprite(header-case);
             transform: scale(0.85);
         }
+
+        @media all and (max-width: $bp-header) {
+            margin-left: auto;
+        }
+
     }
 }

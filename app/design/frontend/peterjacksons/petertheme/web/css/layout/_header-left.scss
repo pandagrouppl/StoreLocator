@@ -1,7 +1,5 @@
 .header-left {
-    @include logo();
-    display: flex;
-    flex: 1 1 10%;
+    @include header-side-elems();
 
     &__menu {
         display: none;
@@ -9,14 +7,13 @@
         padding: 20px;
         margin: -9px 0 0 -5px;
 
-        @media all and (max-width: $xs-breakpoint) {
-            transform: scale(0.8, 0.8);
-        }
-
         @media all and (max-width: $bp-header) {
             display: inline-block;
         }
 
+        @media all and (max-width: $xs-breakpoint) {
+            transform: scale(0.8, 0.8);
+        }
     }
 
     &__menu-bar {
@@ -30,7 +27,7 @@
         transition: all 500ms ease;
         cursor: pointer;
 
-        @media all and (min-width: $bp-header) {
+        @media all and (min-width: $bp-header + 1px) {
             display: none;
         }
 
