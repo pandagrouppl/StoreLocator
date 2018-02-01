@@ -167,11 +167,7 @@ export class Inliners {
                 $('.header-left__menu-bar').toggleClass('header-left__menu-bar--open');
                 $('.header-responsive').slideToggle();
                 e.stopPropagation();
-                if (open) {
-                    clearOverflow();
-                } else {
-                    blockOverflow();
-                }
+                open ? clearOverflow() : blockOverflow();
         });
 
         $('body').click((e) => {
@@ -227,7 +223,12 @@ export class Inliners {
             window.location.href = "/shipping-returns";
         });
     }
-    // this silly fix is required for Safari bugged column rendering
+
+    /**
+     * this silly fix is required for Safari bugged column rendering
+     * @private
+     */
+
     private _headerWidth(): void {
         $('.header-middle__columns').each(function() {
             const $this = $(this);
