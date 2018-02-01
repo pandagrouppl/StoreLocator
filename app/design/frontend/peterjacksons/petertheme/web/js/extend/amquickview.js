@@ -5,10 +5,8 @@
 define([
     "jquery",
     "jquery/ui",
-    "Amasty_Quickview/js/fancybox/jquery.fancybox.min",
-    "Magento_Customer/js/customer-data",
     "Amasty_Quickview/js/amquickview-vendor"
-], function($, ui, fancybox, customerData, quickview){
+], function($, ui, quickview){
 
     $.widget('l4w.amQuickview', $.mage.amQuickview, {
 
