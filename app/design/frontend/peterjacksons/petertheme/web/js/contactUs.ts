@@ -8,7 +8,6 @@ const careers = (config, element) =>  {
         const spinner = $('.panda-spinner');
         spinner.toggleClass('panda-spinner--active');
         const url = $form.attr('action');
-        const form = new FormData($form);
         $.ajax({
             url: url,
             method: 'post',
