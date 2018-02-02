@@ -19,13 +19,16 @@ const module = (config, element) => {
         }, 1000);
     });
 
-    $(window).scroll(() => {
+    const fadeIfVisible = () => {
         if (visibilityCheck('#product-addtocart-button')) {
             $element.fadeOut();
         } else {
             $element.fadeIn();
         }
-    });
+    };
+
+    fadeIfVisible();
+    $(window).scroll(fadeIfVisible);
 
 };
 
