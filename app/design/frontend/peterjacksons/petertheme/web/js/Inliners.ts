@@ -159,12 +159,23 @@ export class Inliners {
             open = true;
             document.body.style.overflow = "hidden";
             document.body.addEventListener("touchmove", eventPreventDefault, false);
+            document.body.addEventListener("click", bodyClick);
         };
 
         const clearOverflow = () =>  {
             open = false;
             document.body.style.overflow = "";
             document.body.removeEventListener("touchmove", eventPreventDefault, false);
+            document.body.removeEventListener("click", bodyClick);
+        };
+
+        const bodyClick = (e) => {
+            if (open) {
+                e.preventDefault();
+                $('.header-left__menu-bar').removeClass('header-left__menu-bar--open');
+                $('.header-responsive').slideUp();
+                clearOverflow();
+            }
         };
 
         $('.header-left__menu').click((e) => {
@@ -172,15 +183,6 @@ export class Inliners {
                 $('.header-responsive').slideToggle();
                 e.stopPropagation();
                 open ? clearOverflow() : blockOverflow();
-        });
-
-        $('body').click((e) => {
-            if (open) {
-                e.preventDefault();
-                $('.header-left__menu-bar').removeClass('header-left__menu-bar--open');
-                $('.header-responsive').slideUp();
-                clearOverflow();
-            }
         });
 
         $('.header-responsive').click((e) => {
