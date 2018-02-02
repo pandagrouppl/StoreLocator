@@ -151,16 +151,20 @@ export class Inliners {
     private _toggleResponsiveMenu(): void {
         let open = false;
 
+        const eventPreventDefault = (e) => {
+            e.preventDefault();
+        };
+
         const blockOverflow = () => {
             open = true;
             document.body.style.overflow = "hidden";
-            document.body.addEventListener("touchmove", (e) => {e.preventDefault();}, false);
+            document.body.addEventListener("touchmove", eventPreventDefault, false);
         };
 
         const clearOverflow = () =>  {
             open = false;
             document.body.style.overflow = "";
-            document.body.removeEventListener("touchmove", (e) => {e.preventDefault();}, false);
+            document.body.removeEventListener("touchmove", eventPreventDefault, false);
         };
 
         $('.header-left__menu').click((e) => {

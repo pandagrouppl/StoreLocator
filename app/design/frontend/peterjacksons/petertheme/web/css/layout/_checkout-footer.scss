@@ -5,6 +5,10 @@
     @media all and (max-width: $md-breakpoint) {
         height: 149px;
     }
+
+    @media all and (max-width: $sm-breakpoint) {
+        display: none;
+    }
 }
 
 .checkout-footer {
@@ -63,9 +67,4 @@
             margin: 20px 0;
         }
     }
-
-    @media all and (max-width: $sm-breakpoint) {
-        display: none;
-    }
-
 }
