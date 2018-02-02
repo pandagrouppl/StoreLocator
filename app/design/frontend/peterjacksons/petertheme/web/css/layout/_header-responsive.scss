@@ -17,6 +17,12 @@
 
     li.level0 {
 
+        li {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         > ul {
             padding: 10px 30px 10px 40px;
         }
@@ -30,7 +36,33 @@
                 font-size: 22px;
                 font-weight: 300;
                 color: $grey-dark;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
+        }
+    }
+
+    li.level1.active div > a {
+        text-decoration: underline;
+
+    }
+
+    li.level0.active,
+    .has-active {
+        .level-top a {
+            text-decoration: underline;
+        }
+
+        .level0.submenu > li.first:first-of-type a {
+            text-decoration: underline;
+        }
+    }
+
+    li.level0.has-active {
+        .level0.submenu > li.first a {
+            text-decoration: none;
         }
     }
 
@@ -88,4 +120,3 @@
         border: 0;
     }
 }
-

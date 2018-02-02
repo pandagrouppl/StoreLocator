@@ -45,7 +45,7 @@
 
                 &:hover {
                     color: #383a4b;
-                    font-weight: 500;
+                    font-weight: 400;
                     border-bottom: 2px solid #4c4b4d;
                 }
             }
@@ -53,7 +53,7 @@
             &.active > a, &.has-active > a {
                 padding: 0 0 6px 0;
                 border-bottom: 2px solid;
-                font-weight: 500;
+                font-weight: 400;
             }
 
             &.active .first span, &.has-active .active span {
