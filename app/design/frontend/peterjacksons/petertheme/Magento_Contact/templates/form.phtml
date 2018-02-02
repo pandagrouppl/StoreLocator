@@ -11,8 +11,8 @@
       action="<?php /* @escapeNotVerified */ echo $block->getFormAction(); ?>"
       id="contact-form"
       method="post"
-      data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
-      data-mage-init='{"validation":{}}'>
+      data-mage-init='{"js/contactUs":{}}'
+      >
 
     <section class="contact-us__left">
         <h2 class="contact-us__title">Get in touch with us</h2>
@@ -32,23 +32,23 @@
 
     <fieldset class="fieldset contact-us__right">
         <div class="field email required">
-            <input placeholder="Email*" name="email" id="email" title="<?php /* @escapeNotVerified */ echo __('Your email address') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('email') ?: $this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text contact-us__input" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            <input placeholder="Email*" name="email" id="email" title="<?php /* @escapeNotVerified */ echo __('Your email address') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('email') ?: $this->helper('Magento\Contact\Helper\Data')->getUserEmail()) ?>" class="input-text contact-us__input" type="email" required/>
         </div>
         <div class="field name required">
-            <input placeholder="Your full name*" name="name" id="name" title="<?php /* @escapeNotVerified */ echo __('Your full name*') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('name') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text contact-us__input" type="text" data-validate="{required:true}"/>
+            <input placeholder="Your full name*" name="name" id="name" title="<?php /* @escapeNotVerified */ echo __('Your full name*') ?>" value="<?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('name') ?: $this->helper('Magento\Contact\Helper\Data')->getUserName()) ?>" class="input-text contact-us__input" type="text" required/>
         </div>
         <div class="field comment required">
-                <textarea placeholder="Subject*" name="subject" id="comment" title="<?php /* @escapeNotVerified */ echo __('Subject') ?>" class="input-text contact-us__input" cols="5" rows="3" data-validate="{required:true}"><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+                <textarea placeholder="Subject*" name="subject" id="comment" title="<?php /* @escapeNotVerified */ echo __('Subject') ?>" class="input-text contact-us__input" cols="5" rows="3" required><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
         </div>
         <div class="field comment required">
-                <textarea placeholder="Type your enquiry here." name="comment" id="comment" title="<?php /* @escapeNotVerified */ echo __('What’s on your mind?') ?>" class="input-text contact-us__textarea" cols="5" rows="3" data-validate="{required:true}"><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+                <textarea placeholder="Type your enquiry here." name="comment" id="comment" title="<?php /* @escapeNotVerified */ echo __('What’s on your mind?') ?>" class="input-text contact-us__textarea" cols="5" rows="3" required><?php echo $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
         </div>
         <?php echo $block->getChildHtml('form.additional.info'); ?>
 
         <div class="actions-toolbar">
             <div class="primary">
                 <input type="hidden" name="hideit" id="hideit" value="" />
-                <button class="contact-us__button" type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit your enquiry') ?>" class="action submit primary">
+                <button class="contact-us__button" type="submit" title="<?php /* @escapeNotVerified */ echo __('Submit your enquiry') ?>">
                     <span><?php /* @escapeNotVerified */ echo __('Submit your enquiry') ?></span>
                 </button>
             </div>
@@ -56,3 +56,11 @@
     </fieldset>
 
 </form>
+<div class="success-popup success-popup--contact" id="contact-success-popup">
+    <div class="success-popup__overlay">
+        <div class="success-popup__popup">
+            <h1 class="success-popup__title">Morgan Charcoal Check</h1>
+            <span class="success-popup__text">Successfully added to your cart</span>
+        </div>
+    </div>
+</div>

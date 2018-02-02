@@ -66,6 +66,25 @@
         @include button-black();
     }
 
+    &--contact .success-popup {
+        &__popup {
+            width: 530px;
+            max-width: 90%;
+        }
+
+        &__title {
+            display: inherit;
+        }
+    }
+
+    @media all and (min-width: $sm-breakpoint + 1px) {
+        &--contact .success-popup {
+            &__popup {
+                padding: 80px;
+            }
+        }
+    }
+
     @media all and (max-width: $sm-breakpoint) {
         &__popup {
             padding: 50px 30px;
@@ -101,5 +120,4 @@
             flex-direction: column;
         }
     }
-
 }
