@@ -1,8 +1,6 @@
-$bp: 680px;
-
 .cms-contact-us {
     .breadcrumbs {
-        @media all and (max-width: $bp) {
+        @media all and (max-width: $sm-breakpoint) {
             display: none;
         }
     }
@@ -110,7 +108,7 @@ $bp: 680px;
         margin-top: 0;
     }
 
-    @media all and (max-width: $bp) {
+    @media all and (max-width: $sm-breakpoint) {
         display: block;
 
         &__title {

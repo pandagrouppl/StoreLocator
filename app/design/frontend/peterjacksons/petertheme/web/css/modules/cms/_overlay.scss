@@ -25,8 +25,8 @@
         padding: 20px 40px;
         box-sizing: border-box;
 
-        @media all and (max-width: 680px) {
-           padding-top: 50px;
+        @media all and (max-width: $sm-breakpoint) {
+            padding-top: 50px;
         }
 
     }
@@ -36,7 +36,6 @@
         text-decoration: underline;
         color: $black;
     }
-
 
     &__close {
         cursor: pointer;
@@ -49,4 +48,35 @@
         top: 10px;
     }
 
+    &__overlay-contact .contact-us {
+        margin-bottom: 40px;
+
+        &__title {
+            display: block;
+            margin-top: 0;
+
+            @media all and (min-width: $sm-breakpoint + 1px) {
+                padding-top: 35px;
+            }
+        }
+
+        form {
+            height: 100%;
+        }
+
+        &__textarea {
+            flex: 1 1;
+            height: inherit;
+        }
+
+
+        &__address {
+            height: inherit;
+            padding-top: 10px;
+        }
+
+        &__left, &__right {
+            flex: 0 1 450px;
+        }
+    }
 }
