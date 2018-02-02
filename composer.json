@@ -36,6 +36,7 @@
         "PandaGroup/AnzExtender": "dev-master",
         "PandaGroup/Salesforce": "dev-master",
         "PandaGroup/SpecialPriceFixer": "dev-master",
+        "PandaGroup/ContactExtender": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -194,6 +195,10 @@
         "28": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-corporate.git"
+        },
+        "29": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-contact-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
