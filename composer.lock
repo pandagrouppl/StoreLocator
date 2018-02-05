@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "01e7694b15cf4f5306d8a4ec4cf10ff6",
-    "content-hash": "dd8eeb219fab21b629045793a2e30207",
+    "hash": "855814e19edc0964a7474133b1f9189c",
+    "content-hash": "6da687a53d7e9e47841502e88bb0c780",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -65,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "c97439ad1c5786edacb20496ea6e6038442dbcf3"
+                "reference": "66f10bb628b5c54a85a4c90c3bee5ee02fa10ec0"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2018-01-31 11:26:17"
+            "time": "2018-02-02 15:17:12"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -88,6 +88,21 @@
             ],
             "description": "Checkout update module for Magento 2.x",
             "time": "2018-01-31 14:21:48"
+        },
+        {
+            "name": "PandaGroup/ContactExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/peterjacksons-contact-extender.git",
+                "reference": "c9b5100e4b885e04873693a35108ecffef13980d"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Contact Extender module for Magento 2.x",
+            "time": "2018-02-02 14:29:17"
         },
         {
             "name": "PandaGroup/Corporate",
@@ -10475,6 +10490,7 @@
         "pandagroup/anzextender": 20,
         "pandagroup/salesforce": 20,
         "pandagroup/specialpricefixer": 20,
+        "pandagroup/contactextender": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,

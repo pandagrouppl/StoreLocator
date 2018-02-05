@@ -2,13 +2,12 @@ import $ = require("jquery");
 
 const careers = (config, element) =>  {
     const $form = $(element);
-    const $popup = $('#contact-success-popup');
+    const $popup = $(`#${config.popupSelector}`);
     $form.submit((event) => {
         event.preventDefault();
         const spinner = $('.panda-spinner');
         spinner.toggleClass('panda-spinner--active');
         const url = $form.attr('action');
-        const form = new FormData($form);
         $.ajax({
             url: url,
             method: 'post',
@@ -17,7 +16,6 @@ const careers = (config, element) =>  {
             contentType: false,
             timeout: 0
         }).done((json) => {
-            console.log(json);
             $('.success-popup__title').text(json.title);
             $('.success-popup__text').text(json.text);
             $popup.show();

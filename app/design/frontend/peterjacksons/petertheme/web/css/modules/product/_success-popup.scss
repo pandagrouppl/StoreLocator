@@ -107,7 +107,6 @@
 
         &__continue {
             order: 2;
-            border: none;
         }
 
         &__gotocheckout {
@@ -117,7 +116,7 @@
 
     @media all and (max-width: $xs-breakpoint) {
         &__body {
-            flex-direction: column;
+            display: block;
         }
     }
 }
