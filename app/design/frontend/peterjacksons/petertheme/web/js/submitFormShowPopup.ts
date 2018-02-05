@@ -1,6 +1,13 @@
 import $ = require("jquery");
 
-const careers = (config, element) =>  {
+/**
+ * Call with
+ * {"js/submitFormShowPopup":{"popupSelector": "popup id"}}
+ * @param config
+ * @param element
+ */
+
+const module = (config, element) =>  {
     const $form = $(element);
     const $popup = $(`#${config.popupSelector}`);
     $form.submit((event) => {
@@ -11,7 +18,7 @@ const careers = (config, element) =>  {
         $.ajax({
             url: url,
             method: 'post',
-            data: $form.serialize(),
+            data: new FormData(element),
             processData: false,
             contentType: false,
             timeout: 0
@@ -33,4 +40,4 @@ const careers = (config, element) =>  {
     });
 };
 
-export = careers;
+export = module;
