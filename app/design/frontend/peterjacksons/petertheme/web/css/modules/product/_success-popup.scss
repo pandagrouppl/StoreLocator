@@ -34,6 +34,10 @@
         max-height: 200px;
     }
 
+    &__fingers {
+        margin-bottom: 25px;
+    }
+
     &__title {
         font-weight: 500;
         font-size: 28px;
@@ -117,6 +121,15 @@
     @media all and (max-width: $xs-breakpoint) {
         &__body {
             display: block;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 1.1em;
+        }
+
+        &__text {
+            font-size: 18px;
         }
     }
 }
