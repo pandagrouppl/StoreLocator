@@ -6,16 +6,6 @@
         margin: 0;
     }
 
-    //@media all and (max-width: $xs-breakpoint) {
-    //    padding: 0;
-    //}
-    //
-    //.sidebar-main {
-    //    @media all and (max-width: $xs-breakpoint) {
-    //        padding: 0 20px;
-    //    }
-    //}
-
     &__columns {
         display: flex;
         flex-direction: row-reverse;
@@ -96,7 +86,7 @@
         align-items: center;
         background: #fbf8f8;
         box-sizing: border-box;
-        margin: 20px 0;
+        margin: 0;
         width: 215px;
         font-family: Roboto, sans-serif;
         font-weight: 300;
@@ -109,6 +99,7 @@
             background-color: white;
             box-sizing: border-box;
             color: black;
+            margin: 20px 0;
         }
     }
 
