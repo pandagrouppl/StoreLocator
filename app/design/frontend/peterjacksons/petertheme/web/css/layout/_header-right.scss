@@ -34,6 +34,14 @@
         font-size: 18px;
         display: block;
         padding: 5px;
+
+        @media all and (max-width: $bp-header-s) {
+            padding: 2px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            font-size: 14px;
+        }
     }
 
     &__wishlist {
@@ -45,7 +53,8 @@
         transform: scale(0.85);
 
         @media all and (max-width: $bp-header-s) {
-            transform: scale(0.6);
+            transform: scale(0.7);
+            margin: -3px;
         }
     }
 
@@ -75,7 +84,8 @@
         transform: scale(0.85);
 
         @media all and (max-width: $bp-header-s) {
-            //transform: scale(0.6);
+            transform: scale(0.7);
+            margin: -3px;
         }
 
     }

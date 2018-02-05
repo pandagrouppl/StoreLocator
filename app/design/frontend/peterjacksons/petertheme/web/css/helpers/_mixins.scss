@@ -266,6 +266,10 @@
     height: 25px;
     margin: 30px 5px 20px 5px;
 
+    @media all and (max-width: $bp-header) {
+        margin: 20px 5px 10px 5px;
+    }
+
     @media all and (max-width: $xs-breakpoint) {
         margin: 10px 0 10px 0;
     }
@@ -281,6 +285,10 @@
 
     @media all and (max-width: $bp-header) {
         flex: 0 0 105px;
+    }
+
+    @media all and (max-width: $bp-header-s) {
+        flex: 0 0 80px;
     }
 
     @media all and (max-width: $xs-breakpoint) {
