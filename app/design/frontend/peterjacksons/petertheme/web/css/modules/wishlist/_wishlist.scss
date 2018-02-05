@@ -9,8 +9,16 @@ body[class~='guest-wishlist-index-index'] {
         background: #f7f7f7;
         height: 135px;
 
+        @media all and (max-width: 1002px) {
+            height: 69px;
+        }
+
         h1 {
             font-weight: 400;
+
+            @media all and (max-width: 1002px) {
+                font-size: 23px;
+            }
         }
     }
 
