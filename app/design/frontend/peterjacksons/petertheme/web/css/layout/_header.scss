@@ -28,7 +28,11 @@
 }
 
 // Product View
-body[class~='cms-index-index'] {
+body[class~='cms-index-index'],
+body[class~='cms-suit-fit-guide'],
+body[class~='cms-about-us'],
+body[class~='cms-our-mills'],
+body[class~='cms-sustainability'] {
     .header {
         border-bottom: 1px solid $grey;
     }
