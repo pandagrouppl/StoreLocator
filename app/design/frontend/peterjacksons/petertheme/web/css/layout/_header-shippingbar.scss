@@ -9,4 +9,8 @@
         font-size: 12px;
         font-weight: 500;
     }
+
+    @media all and (max-width: $bp-header) {
+        display: none;
+    }
 }

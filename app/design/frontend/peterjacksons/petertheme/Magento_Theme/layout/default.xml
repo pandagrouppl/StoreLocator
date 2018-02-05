@@ -33,15 +33,17 @@
                     <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-" cacheable="false"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
-                        <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
-                            <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
-                        </block>
                     </container>
                     <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right" after="header.center">
                         <container name="search-container" label="Search" before="-"/>
                         <block class="Magento\Wishlist\Block\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml" after="search-container"/>
                         <container name="header-wrapper" as="minicart-container" label="Minicart" after="wishlist-count"/>
                     </container>
+                </container>
+                <container name="header-menu" htmlTag="section">
+                    <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
+                        <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
+                    </block>
                 </container>
                 <!-- mobile -->
                 <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">

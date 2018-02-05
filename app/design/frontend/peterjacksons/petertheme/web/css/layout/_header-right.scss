@@ -6,13 +6,8 @@
         padding: 5px;
 
         @media all and (max-width: $bp-header) {
-            padding: 5px 5px 10px 5px;
+            padding: 0 0 5px 0;
         }
-
-        @media all and (max-width: $xs-breakpoint) {
-            padding-right: 0;
-        }
-
     }
 
     &__url-block {
@@ -39,18 +34,27 @@
         font-size: 18px;
         display: block;
         padding: 5px;
+
+        @media all and (max-width: $bp-header-s) {
+            padding: 2px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            font-size: 14px;
+        }
     }
 
     &__wishlist {
         position: relative;
+    }
 
-        &-icon {
-            @include sprite(header-star);
-            transform: scale(0.85);
-        }
+    &__wishlist-icon {
+        @include sprite(header-star);
+        transform: scale(0.85);
 
-        @media all and (max-width: $bp-header) {
-            display: none;
+        @media all and (max-width: $bp-header-s) {
+            transform: scale(0.7);
+            margin: -3px;
         }
     }
 
@@ -70,13 +74,18 @@
             }
         }
 
-        &-icon {
-            @include sprite(header-case);
-            transform: scale(0.85);
-        }
-
         @media all and (max-width: $bp-header) {
             margin-left: auto;
+        }
+    }
+
+    &__minicart-icon {
+        @include sprite(header-case);
+        transform: scale(0.85);
+
+        @media all and (max-width: $bp-header-s) {
+            transform: scale(0.7);
+            margin: -3px;
         }
 
     }
