@@ -95,14 +95,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/peterjacksons-contact-extender.git",
-                "reference": "c9b5100e4b885e04873693a35108ecffef13980d"
+                "reference": "9b276b20b9e94ba3a984440add63a1bff1670535"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Contact Extender module for Magento 2.x",
-            "time": "2018-02-02 14:29:17"
+            "time": "2018-02-05 15:06:15"
         },
         {
             "name": "PandaGroup/Corporate",
