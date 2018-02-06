@@ -264,7 +264,7 @@
 
 @mixin logo() {
     height: 25px;
-    margin: 30px 5px 20px 5px;
+    margin: 20px 5px 20px 5px;
 
     @media all and (max-width: $bp-header) {
         margin: 10px 5px 10px 5px;
