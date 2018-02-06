@@ -2714,10 +2714,9 @@
         $("#element").collapsible();
 
         $(document).ready(function () {
-            let degrees = 0;
+            var degrees = 0;
 
             $('#element').click(function rotateMe() {
-
                 degrees += 180;
 
                 $(' .checkout-minicart__chevron ').css({
@@ -2730,12 +2729,12 @@
 
                 });
             });
-        });
 
-        $(' .size-chart__tab ').on('click', function( e ) {
-            $(' #result ').html( $(this).text() );
-            e.preventDefault();
-        });
+            $(' .size-chart__tab ').on('click', function( e ) {
+                $(' #result ').html( $(this).text() );
+                e.preventDefault();
+            });
 
+        });
     });
 </script>
