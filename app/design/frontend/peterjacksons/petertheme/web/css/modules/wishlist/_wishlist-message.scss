@@ -1,14 +1,20 @@
-
 .wishlist-message {
     @include info-popup-mirrored(55px, 10px);
     display: none;
+    box-shadow: 1px 1px 5px $grey;
 
     &__inner {
         background: #fff;
         width: 268px;
+        max-width: 68vw;
         z-index: 999;
         color: #515151;
         box-sizing: border-box;
+    }
+
+    &--pdp {
+        top: 54px;
+        right: -22px;
     }
 }
 

@@ -83,6 +83,10 @@
         right: 10px;
         cursor: pointer;
 
+        &:hover {
+            opacity: 0.7;
+        }
+
         &.active {
             @include sprite(wishlist-icon-dark);
         }
