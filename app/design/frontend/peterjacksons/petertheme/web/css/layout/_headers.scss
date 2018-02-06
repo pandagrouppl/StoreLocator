@@ -8,51 +8,95 @@
         background-color: white;
     }
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        @media all and (min-width: $bp-header + 1px) {
+            padding: 0 30px;
+        }
+
+        @media all and (max-width: $bp-header) {
+            padding: 0 5px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding: 5px;
+        }
+    }
+
+    &__top-message {
+        background: #464646;
+        padding: 10px;
+        text-align: center;
+
+        a {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
 }
 
+
+body[class~='catalog-product-view'],
+body[class~='cms-suit-fit-guide'],
+body[class~='cms-about-us'],
+body[class~='cms-our-mills'],
+body[class~='cms-sustainability'] {
+    .headers__bottom {
+        border-bottom: 1px solid $grey;
+    }
+}
+
+
 @media all and (min-width: $bp-header + 1px) {
-    .cms-index-defaultindex, .cms-home, .cms-the-new-wave {
+    body[class~='cms-index-defaultindex'],
+    body[class~='cms-home'],
+    body[class~='cms-the-new-wave'] {
         .headers {
             position: fixed;
 
-            .header {
+            &__bottom {
                 border-bottom: none;
+            }
 
-                &-middle__logo > img {
-                    filter: brightness(100);
-                }
+            .header-middle__logo > img {
+                filter: brightness(100);
+            }
 
-                .ui-menu-item {
-                    span, a, i {
-                        color: white;
-                    }
-                }
-
-                i, .header-right__counter, .header-left__account-greeting {
-                    filter: brightness(100);
+            .ui-menu-item {
+                span, a, i {
+                    color: white;
                 }
             }
+
+            i, .header-right__counter, .header-left__account-greeting {
+                filter: brightness(100);
+            }
+
 
             &--fixed, &:hover {
                 background-color: white;
 
-                .header {
+                .headers__bottom {
                     border-bottom: 1px solid #d7d7d7;
+                }
 
-                    &-middle__logo img {
-                        filter: none;
-                    }
+                .header-middle__logo img {
+                    filter: none;
+                }
 
-                    .ui-menu-item {
-                        span, a, i {
-                            color: inherit;
-                        }
-                    }
-
-                    i, .header-right__counter, .header-left__account-greeting {
-                        filter: none;
+                .ui-menu-item {
+                    span, a, i {
+                        color: inherit;
                     }
                 }
+
+                i, .header-right__counter, .header-left__account-greeting {
+                    filter: none;
+                }
+
             }
         }
     }

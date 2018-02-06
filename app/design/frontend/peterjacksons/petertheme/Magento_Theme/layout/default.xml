@@ -29,7 +29,7 @@
             </container>
             <container name="header.headers" htmlTag="div" htmlClass="headers">
                 <!-- desktop -->
-                <container name="headers" htmlClass="header" htmlTag="section">
+                <container name="headers" htmlClass="headers__top" htmlTag="section">
                     <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-" cacheable="false"/>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
@@ -40,7 +40,7 @@
                         <container name="header-wrapper" as="minicart-container" label="Minicart" after="wishlist-count"/>
                     </container>
                 </container>
-                <container name="header-menu" htmlTag="section">
+                <container name="header-menu" htmlTag="section" htmlClass="headers__bottom">
                     <block class="Light4website\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
                         <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
                     </block>

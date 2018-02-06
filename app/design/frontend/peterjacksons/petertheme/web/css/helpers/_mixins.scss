@@ -267,7 +267,7 @@
     margin: 30px 5px 20px 5px;
 
     @media all and (max-width: $bp-header) {
-        margin: 20px 5px 10px 5px;
+        margin: 10px 5px 10px 5px;
     }
 
     @media all and (max-width: $xs-breakpoint) {
@@ -280,7 +280,7 @@
     display: flex;
 
     @media all and (min-width: $bp-header + 1px) {
-        flex: 0 0 130px;
+        flex: 0 0 200px;
     }
 
     @media all and (max-width: $bp-header) {
@@ -346,7 +346,7 @@
     &::before {
         left: inherit;
         right: 25px;
-        top: -17px
+        top: -17px;
     }
 
     &::after {

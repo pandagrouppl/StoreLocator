@@ -55,8 +55,7 @@
     }
 
     &__book {
-        //display: none;
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         position: relative;
 
         @media all and (max-width: $bp-header) {
@@ -83,7 +82,7 @@
     }
 
     &__account {
-        margin: 0 10px;
+        margin: 0;
         position: relative;
         display: flex;
         align-items: center;
