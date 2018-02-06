@@ -15,7 +15,7 @@ body[class~='account'] {
 .orders-history {
 
     &__header {
-        font-size: 30px;
+        font-size: 24px;
         margin: 0 0 35px 0;
 
         @media all and (max-width: $bp-header) {
@@ -117,8 +117,12 @@ body[class~='account'] {
 .delivery-details {
     padding: 0 20px;
 
+    @media all and (max-width: 1002px) {
+        padding: 0;
+    }
+
     &__header {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 400;
         padding: 100px 0 20px 0;
         border-bottom: 1px solid #d7d7d7;
@@ -182,7 +186,7 @@ body[class~='account'] {
 .order-details-items {
 
     &__header {
-        font-size: 28px;
+        font-size: 24px;
         padding: 0 0 30px 0;
 
         @media all and (max-width: $xs-breakpoint) {
