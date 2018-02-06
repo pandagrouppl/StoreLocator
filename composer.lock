@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "855814e19edc0964a7474133b1f9189c",
-    "content-hash": "6da687a53d7e9e47841502e88bb0c780",
+    "hash": "0db6ae8e1fd5d5642bec6ee6e7402946",
+    "content-hash": "19c5749687bd2ecde68106a23d032c17",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "38a5a7b9eacfdc804f946edacc652b6dcc9469d5"
+                "reference": "88cad2547acc0327d821558b6ca386f908e52590"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2017-10-25 09:49:16"
+            "time": "2018-02-06 09:21:11"
         },
         {
             "name": "PandaGroup/Careers",
@@ -392,18 +392,18 @@
         },
         {
             "name": "PandaGroup/Spinner",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-spinner.git",
-                "reference": "f6b017815eef3231b219597bb7f9ad4ade2e54f0"
+                "reference": "233ba3415779d8cb09bb9521efc21a3bcbc880cd"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Spinner for Magento 2.x",
-            "time": "2017-06-29 11:37:38"
+            "time": "2018-02-06 13:28:21"
         },
         {
             "name": "PandaGroup/StoreLocator",
@@ -10476,6 +10476,7 @@
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
         "pandagroup/corporate": 20,
+        "pandagroup/spinner": 20,
         "pandagroup/quickview": 20,
         "pandagroup/emailtester": 20,
         "pandagroup/cronschedulerextender": 20,

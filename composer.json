@@ -21,7 +21,7 @@
         "PandaGroup/Checkout": "dev-master",
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Corporate": "dev-master",
-        "PandaGroup/Spinner": "^1.0.0",
+        "PandaGroup/Spinner": "dev-master",
         "PandaGroup/Quickview": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
         "PandaGroup/CronSchedulerExtender": "dev-master",
