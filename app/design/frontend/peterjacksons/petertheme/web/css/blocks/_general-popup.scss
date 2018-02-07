@@ -1,0 +1,144 @@
+.general-popup {
+    display: none;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__popup {
+        padding: 50px 67px;
+        width: 700px;
+        background-color: white;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &__body {
+        display: flex;
+    }
+
+    &__image {
+        flex: 0 0 180px;
+    }
+
+    &__img {
+        max-height: 200px;
+    }
+
+    &__fingers {
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        margin: 0 0 25px 0;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+
+    &__buttons {
+        margin-top: 46px;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            max-width: 260px;
+        }
+    }
+
+    &__a-negative {
+        @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $height: inherit, $width: 30%);
+    }
+
+    &__a-positive {
+        @include button-black($height: inherit, $width: 30%);
+    }
+
+
+    &__button-negative {
+        @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark);
+    }
+
+    &__button-positive {
+        @include button-black();
+    }
+
+    &--contact .success-popup {
+        &__popup {
+            width: 530px;
+            max-width: 90%;
+        }
+
+        &__title {
+            display: inherit;
+        }
+    }
+
+    @media all and (min-width: $sm-breakpoint + 1px) {
+        &--contact .success-popup {
+            &__popup {
+                padding: 80px;
+            }
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+        &__popup {
+            padding: 50px 30px;
+            width: 90%;
+        }
+
+        &__title {
+            //display: none;
+        }
+
+        &__buttons {
+            flex-wrap: wrap;
+            margin-top: 26px;
+
+            button {
+                max-width: none;
+                flex: 1 1 100%;
+            }
+        }
+
+        &__continue {
+            order: 2;
+        }
+
+        &__gotocheckout {
+            order: 1;
+        }
+    }
+
+    @media all and (max-width: $xs-breakpoint) {
+        &__body {
+            display: block;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 1.1em;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+}

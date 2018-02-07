@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "88cad2547acc0327d821558b6ca386f908e52590"
+                "reference": "b8be9ff7a841480630c55cf65b097753aacef412"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-06 09:21:11"
+            "time": "2018-02-06 16:39:49"
         },
         {
             "name": "PandaGroup/Careers",
@@ -218,7 +218,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "df8fd667b14908e1d30172b3c7e2bf9b2e01dcf2"
+                "reference": "1eefb8a0bac054764d931ee20be85eaf60ec178a"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -226,7 +226,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-02-06 15:07:03"
+            "time": "2018-02-07 12:21:31"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",

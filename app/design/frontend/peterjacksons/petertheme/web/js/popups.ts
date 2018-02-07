@@ -10,6 +10,7 @@ export class Popups {
         this._showSearch();
         this._cartAdd();
         this._showAccHeaderPanel();
+        this._genericPopup();
     }
 
     _showSearch() {
@@ -87,4 +88,21 @@ export class Popups {
             $popup.toggle();
         });
     }
+
+    _genericPopup() {
+        const $trigger = $('.show-general-popup');
+        const $popup = $('.general-popup');
+        console.log($popup);
+        $trigger.on('click ', (e) => {
+            $(e.currentTarget).next('.general-popup').toggle();
+        });
+        $('.general-popup__overlay, .general-popup a, .general-popup button').on('click', () => {
+            $popup.hide()
+        });
+        $('.general-popup__popup').click((e) => {
+            e.stopPropagation();
+        });
+    }
+
+
 }
