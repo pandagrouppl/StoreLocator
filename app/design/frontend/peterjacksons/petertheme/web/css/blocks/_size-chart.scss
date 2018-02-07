@@ -248,6 +248,7 @@ body[class~='cms-size-chart'] {
 
     &__box {
         display: flex;
+        display: -webkit-inline-box;
         flex-flow: row nowrap;
         flex-grow: 1;
         flex-basis: 6px;
