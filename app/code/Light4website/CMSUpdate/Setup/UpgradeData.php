@@ -176,7 +176,7 @@ class UpgradeData implements UpgradeDataInterface
         $page = $this->_pageFactory->create()->load('size-chart');
         $content = file_get_contents('pages/size-chart.phtml', FILE_USE_INCLUDE_PATH);
         $layoutContent = file_get_contents('pages/size-chart.xml', FILE_USE_INCLUDE_PATH);
-        $page->setTitle('Size Chart')
+        $page->setTitle('Size Guide')
             ->setIdentifier('size-chart')
             ->setIsActive(true)
             ->setPageLayout('1column')

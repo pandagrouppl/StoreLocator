@@ -15,6 +15,10 @@
         margin: 10px 0;
     }
 
+    .filter-current {
+        display: none;
+    }
+
     &__row, &__active-filter {
         display: flex;
         align-items: baseline;
