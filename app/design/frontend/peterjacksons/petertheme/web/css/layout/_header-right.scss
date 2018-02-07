@@ -8,6 +8,10 @@
         @media all and (max-width: $bp-header) {
             padding: 0 0 5px 0;
         }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding: 0 0 3px 0;
+        }
     }
 
     &__url-block {
@@ -40,7 +44,7 @@
         }
 
         @media all and (max-width: $xs-breakpoint) {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
@@ -55,6 +59,11 @@
         @media all and (max-width: $bp-header-s) {
             transform: scale(0.7);
             margin: -3px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            transform: scale(0.5);
+            margin: -6px;
         }
     }
 
@@ -86,6 +95,11 @@
         @media all and (max-width: $bp-header-s) {
             transform: scale(0.7);
             margin: -3px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            transform: scale(0.5);
+            margin: -6px;
         }
 
     }

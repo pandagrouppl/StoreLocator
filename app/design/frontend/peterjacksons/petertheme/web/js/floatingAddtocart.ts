@@ -7,7 +7,7 @@ import visibilityCheck = require("js/visibilityCheck")
 
 const module = (config, element) => {
     const $element = $(element);
-    const $header = $('.header');
+    const $header = $('.headers');
 
     $('#floating-add-to-cart-name').text($('[itemprop=name]').text());
     $('#floating-add-to-cart-text').text($('#product-addtocart-button').text());
