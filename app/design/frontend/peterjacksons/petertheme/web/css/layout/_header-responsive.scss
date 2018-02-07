@@ -37,6 +37,10 @@
                 font-weight: 300;
                 color: $grey-dark;
 
+                @media all and (max-width: $pdp-desc-bp) {
+                    font-size: 18px;
+                }
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -118,5 +122,9 @@
         font-size: 26px;
         padding: 10px 10px 10px 40px;
         border: 0;
+
+        @media all and (max-width: $pdp-desc-bp) {
+            font-size: 18px;
+        }
     }
 }

@@ -18,6 +18,7 @@
     &__row, &__active-filter {
         display: flex;
         align-items: baseline;
+        justify-content: space-between;
 
         .swatch-option {
             width: 12px;
