@@ -8,7 +8,6 @@
 
     &__wrapper {
         display: flex;
-        flex-direction: row-reverse;
 
         @media all and (max-width: 550px) {
             flex-direction: row;
