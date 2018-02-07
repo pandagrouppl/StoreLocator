@@ -97,21 +97,9 @@
 
 		<?php if ( $_images = $block->getImages() ): ?>
 
-			<div class="product-info-main__field field required">
-				<label for="am_giftcard_image" class="product-info-main__label label">
-					<span><?php echo __( 'Choose card Image' ); ?></span>
-				</label>
-
-				<div class="input-box">
-					<input type="text" id="am_giftcard_image" name="am_giftcard_image" class="product-info-main__input required-entry"
-					       value="<?php echo $block->getDefaultValue( 'am_giftcard_image' ); ?>"/>
-					<?php foreach ( $_images as $_image ): ?>
-						<img class="product-info-main__giftcart-image amgiftcard-image" data-id="<?php echo $_image->getId() ?>"
-						     src="<?php echo $_image->getImageUrl() ?>"
-						     data-img-full-src="<?php echo $_image->getImageUrl(); ?>"/>
-					<?php endforeach; ?>
-				</div>
-			</div>
+        <input type="text" id="am_giftcard_image" name="am_giftcard_image" title="am_giftcard_image" style="display:none;"
+               value="1>"/>
+					
 
 		<?php endif; ?>
 
@@ -124,14 +112,17 @@
 				       class="product-info-main__input required-entry input-text" value="<?php echo $block->getCustomerName(); ?>"/>
 			</div>
 		</div>
-		<div class="product-info-main__field field required">
+		<div class="product-info-main__field field required" style="display: none">
 			<label for="am_giftcard_sender_email" class="product-info-main__label label">
 				<span><?php echo __( 'Sender Email' ); ?></span>
 			</label>
 			<div class="input-box">
 				<input type="text" id="am_giftcard_sender_email" name="am_giftcard_sender_email"
 				       class="product-info-main__input validate-email required-entry input-text"
-				       value="<?php echo $block->getCustomerEmail(); ?>"/>
+				       value="<?php
+                       $text = $block->getCustomerEmail();
+                       echo (true === empty($text)) ? "sales@peterjacksons.com": $text;
+                       ?>"/>
 			</div>
 		</div>
 
