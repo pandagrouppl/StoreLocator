@@ -37,7 +37,7 @@
                                 <span class="layered-nav__line layered-nav__line--vertical"></span>
                             </figure>
                         </dt>
-                        <dd class="layered-nav__content filter-options-content"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></dd>
+                        <dd class="layered-nav__content filter-options-content" style="display: none"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></dd>
                     <?php endif; ?>
             <?php endforeach; ?>
             <?php if ($wrapOptions): ?>
@@ -46,3 +46,12 @@
         </div>
     </div>
 <?php endif; ?>
+
+<script>
+    require(['jquery'],
+        function ($) {
+        $( document ).ready(function() {
+            $('.layered-nav__content').css( "display", "none" );
+        });
+    });
+</script>

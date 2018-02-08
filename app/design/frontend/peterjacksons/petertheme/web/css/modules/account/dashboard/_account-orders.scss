@@ -135,7 +135,8 @@ body[class~='account'] {
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 20px 20px 0 0;
+        padding: 20px 0 0 0;
+        text-align: center;
 
         @media all and (max-width: $bp-header) {
             flex-wrap: wrap;
@@ -179,6 +180,24 @@ body[class~='account'] {
         dl {
             margin: 0;
             padding-right: 0;
+        }
+
+        dd {
+            display: flex;
+            display: -webkit-inline-box;
+            justify-content: center;
+        }
+
+        tbody {
+            display: flex;
+            display: -webkit-inline-box;
+            flex-direction: column;
+        }
+
+        tr {
+            display: flex;
+            display: -webkit-inline-box;
+            flex-direction: column;
         }
     }
 }
