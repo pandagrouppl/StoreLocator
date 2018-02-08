@@ -195,9 +195,9 @@ body[class~='account'] {
         }
 
         tr {
-            display: flex;
-            display: -webkit-inline-box;
+            display: inline-flex;
             flex-direction: column;
+
         }
     }
 }
