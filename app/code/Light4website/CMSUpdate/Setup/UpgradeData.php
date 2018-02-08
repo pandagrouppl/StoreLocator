@@ -75,23 +75,6 @@ class UpgradeData implements UpgradeDataInterface
         echo "Page brownlow-skit was installed/updated\n";
         $setup->endSetup();
 
-
-//        $setup->startSetup();
-//        $page = $this->_pageFactory->create()->load('contact_us');
-//        $content = file_get_contents('pages/contact_us.phtml', FILE_USE_INCLUDE_PATH);
-//        $layoutContent = file_get_contents('pages/contact_us.xml', FILE_USE_INCLUDE_PATH);
-//        $page->setTitle('Contact Us')
-//            ->setIdentifier('contact_us')
-//            ->setIsActive(true)
-//            ->setPageLayout('1column')
-//            ->setLayoutUpdateXml($layoutContent)
-//            ->setStores(array(0))
-//            ->setContent($content)
-//            ->save();
-//        echo "Page contact-us was installed/updated\n";
-//        $setup->endSetup();
-
-
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('look-book');
         $content = file_get_contents('pages/look-book.phtml', FILE_USE_INCLUDE_PATH);
@@ -275,18 +258,6 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block blog-header was installed/updated\n";
         $setup->endSetup();
 
-
-        $setup->startSetup();
-        $block = $this->_blockFactory->create()->load('contact-us');
-        $content = file_get_contents('blocks/contact-us.phtml', FILE_USE_INCLUDE_PATH);
-        $block->setTitle('Contact Us Block')
-            ->setIdentifier('contact-us')
-            ->setIsActive(true)
-            ->setStores(array(0))
-            ->setContent($content)
-            ->save();
-        echo "Block contact-us was installed/updated\n";
-        $setup->endSetup();
 
 
         $setup->startSetup();

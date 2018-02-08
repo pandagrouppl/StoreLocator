@@ -36,7 +36,7 @@
     }
 
     .continue-button {
-        @include button-blue(13px 60px, 32px 0, 12px, bold);
+        @include button-black($padding: 13px 60px, $margin-top: 32px, $margin-bottom: 32px, $font-size: 14px, $width: inherit);
     }
 
     a {
@@ -59,9 +59,7 @@
         text-align: center;
         font-size: 42px;
         color: #242424;
-        font-family: league_gothic;
         font-weight: normal;
-        text-transform: uppercase;
         line-height: 1em;
     }
 
