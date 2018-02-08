@@ -171,7 +171,7 @@
         }
 
         &--horizontal {
-            display: none;
+            display: block;
             position: absolute;
             height: 15px;
             width: 1px;
@@ -188,7 +188,7 @@
         &--plus {
 
             .layered-nav__line--horizontal {
-                display: block;
+                display: none;
             }
         }
     }
