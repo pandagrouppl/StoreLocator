@@ -10,6 +10,17 @@ import $ = require("jquery");
 const module = (config, element) =>  {
     const $form = $(element);
     const $popup = $(`#${config.popupSelector}`);
+
+    const fillAndShow = (title, text, popup) => {
+        $('.success-popup__title').text(title);
+        $('.success-popup__text').text(text);
+        popup.show();
+        setTimeout(() => {
+            popup.hide();
+            $('.overlay__overlay').hide();
+        }, 3500)
+    };
+
     $form.submit((event) => {
         event.preventDefault();
         const spinner = $('.panda-spinner');
@@ -23,18 +34,11 @@ const module = (config, element) =>  {
             contentType: false,
             timeout: 0
         }).done((json) => {
-            $('.success-popup__title').text(json.title);
-            $('.success-popup__text').text(json.text);
-            $popup.show();
+            fillAndShow(json.title, json.text, $popup);
         }).fail((json) => {
-            $('.success-popup__title').text(json.title);
-            $('.success-popup__text').text(json.text);
-            $popup.show();
+            fillAndShow(json.title, json.text, $popup);
         }).always(() => {
             spinner.toggleClass('panda-spinner--active');
-            setTimeout(() => {
-                $popup.hide();
-            }, 5000)
         });
 
     });
