@@ -34,3 +34,16 @@ if ($block->hasRequiredOptions()) {
     <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('size-chart')->toHtml();?>
 </div>
 
+<script>
+    require(['jquery'],
+        function ($) {
+            $('.product-info-main__size-chart').click(function(){
+                $('.size-chart-overlay').css('position', 'fixed');
+            });
+
+            $('.size-chart__close').click(function(){
+                $('.size-chart-overlay').css('position', '');
+            });
+        });
+</script>
+
