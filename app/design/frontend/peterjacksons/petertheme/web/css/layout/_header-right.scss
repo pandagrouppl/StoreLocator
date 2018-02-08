@@ -5,10 +5,6 @@
     > div {
         padding: 5px;
 
-        @media all and (max-width: $bp-header) {
-            padding: 0 0 5px 0;
-        }
-
         @media all and (max-width: $xs-breakpoint) {
             padding: 0 0 3px 0;
         }
@@ -50,6 +46,10 @@
 
     &__wishlist {
         position: relative;
+
+        @media all and (max-width: $bp-header) {
+            margin-left: auto;
+        }
     }
 
     &__wishlist-icon {
@@ -81,10 +81,6 @@
             @media all and (min-width: $sm-breakpoint + 1) {
                 display: block;
             }
-        }
-
-        @media all and (max-width: $bp-header) {
-            margin-left: auto;
         }
     }
 
