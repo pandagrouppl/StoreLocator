@@ -7,5 +7,14 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
+        overflow-y: auto;
+    }
+}
+
+.fancybox-slide.fancybox-slide--iframe .fancybox-content {
+    max-width: calc(100% - 50px) !important;
+
+    @media all and (max-width: $sm-breakpoint) {
+        height: calc(100% - 100px) !important;
     }
 }

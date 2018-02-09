@@ -1,7 +1,29 @@
+body[class~='catalog-product-view'] {
+    div.wishlist-message {
+        top: 55px;
+        right: -20px;
+    }
+}
+
 .wishlist-message {
-    @include info-popup-mirrored(55px, 10px);
+    @include info-popup-mirrored(55px, 0);
     display: none;
     box-shadow: 1px 1px 5px $grey;
+
+    @media all and (max-width: $bp-header) {
+        top: 50px;
+    }
+
+    @media all and (max-width: $bp-header-s) {
+        top: 45px;
+        right: -6px;
+    }
+
+    @media all and (max-width: $xs-breakpoint) {
+        top: 35px;
+        right: -19px;
+    }
+
 
     &__inner {
         background: #fff;

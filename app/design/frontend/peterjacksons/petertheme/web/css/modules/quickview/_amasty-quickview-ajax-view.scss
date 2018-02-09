@@ -2,15 +2,6 @@
     padding-top: 0;
 }
 
-.fancybox-slide.fancybox-slide--iframe .fancybox-content {
-    max-width: calc(100% - 50px) !important;
-
-    @media all and (max-width: $sm-breakpoint) {
-        height: calc(100% - 100px) !important;
-    }
-
-}
-
 .amasty-quickview-ajax-view {
 
     &__header {

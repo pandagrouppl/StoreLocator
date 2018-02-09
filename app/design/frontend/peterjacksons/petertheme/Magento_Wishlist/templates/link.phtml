@@ -10,8 +10,12 @@
 ?>
 <div class="header-right__wishlist" data-bind="scope: 'wishlist'">
     <a class="header-right__url-block" <?php /* @escapeNotVerified */ echo $block->getLinkAttributes() ?>>
-        <i class="header-right__wishlist-icon"></i>
         <!-- ko if: wishlist().counter -->
+        <i class="header-right__wishlist-icon header-right__wishlist-icon--counter"></i>
+        <span data-bind="text: wishlist().counter" class="header-right__counter"></span>
+        <!-- /ko -->
+        <!-- ko if: !wishlist().counter -->
+        <i class="header-right__wishlist-icon"></i>
         <span data-bind="text: wishlist().counter" class="header-right__counter"></span>
         <!-- /ko -->
     </a>
