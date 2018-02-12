@@ -1,14 +1,37 @@
 .measure-appointment {
-    text-align: center;
+
+    &__head-block {
+        position: relative;
+    }
+
+    &__head-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            max-width: 100vw;
+        }
+    }
+
+    &__content {
+        text-align: center;
+    }
 
     &__title {
         font-size: 34px;
-        font-family: 'GothamBoldRegular', sans-serif;
         color: #363636;
-        font-weight: bold;
+        font-weight: 500;
         text-align: center;
         letter-spacing: 0.2em;
         padding: 40px 0 40px 0;
+        line-height: 1em;
+
+        @media all and (max-width: $sm-breakpoint) {
+            font-size: 28px;
+            letter-spacing: 0.15em;
+        }
+
     }
 
     &__text {
@@ -20,6 +43,10 @@
         padding-left: 8%;
         padding-right: 8%;
         text-align: center;
+
+        @media all and (max-width: $sm-breakpoint) {
+            font-size: 16px;
+        }
     }
 
     &__app {
