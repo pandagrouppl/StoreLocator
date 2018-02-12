@@ -54,6 +54,7 @@ $breadcrumbs-color: #928383;
     @include container();
     box-sizing: border-box;
     padding: 50px 20px 0 20px;
+    line-height: 1.3em;
 
     @media all and (max-width: $bp-header) {
         padding: 20px;
