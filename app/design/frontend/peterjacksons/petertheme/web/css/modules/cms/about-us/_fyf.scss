@@ -5,6 +5,10 @@
         border-top: 1px solid #dad8d9;
         justify-content: center;
 
+        @media all and (max-width: $pdp-desc-bp) {
+            margin-top: 32px;
+        }
+
         &__item {
             margin: 0 44px;
             padding: 28px 0;
@@ -40,6 +44,10 @@
         &__slide {
             padding: 30px 50px;
             display: flex;
+
+            @media all and (max-width: $pdp-desc-bp) {
+                padding: 0 50px 30px 50px;
+            }
         }
 
         &__img {

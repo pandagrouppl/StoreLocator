@@ -89,7 +89,6 @@
 
             @media all and (max-width: $sm-breakpoint) {
                 margin-top: 40px;
-                order: 1;
             }
         }
 
@@ -97,7 +96,6 @@
             flex: 1 1;
             min-width: inherit;
             @media all and (max-width: $sm-breakpoint) {
-                order: 2;
                 margin: 20px 0;
             }
         }

@@ -51,6 +51,10 @@ body[class~='cms-size-chart'] {
         padding: 20px 40px;
         box-sizing: border-box;
         border: 0;
+
+        @media all and (max-width: $pdp-desc-bp) {
+            padding: 20px 10px;
+        }
     }
 
     &__overlay {
@@ -64,7 +68,6 @@ body[class~='cms-size-chart'] {
 
     &__close {
         font-size: 13px;
-        margin-right: 15px;
         color: black;
         display: flex;
         align-items: center;
@@ -111,6 +114,10 @@ body[class~='cms-size-chart'] {
 
         @media all and (max-width: 830px) {
             margin: 50px auto 30px auto;
+        }
+
+        @media all and (max-width: $pdp-desc-bp) {
+            margin: 27px auto 30px auto;
         }
     }
 

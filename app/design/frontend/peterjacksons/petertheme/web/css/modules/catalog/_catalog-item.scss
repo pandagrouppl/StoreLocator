@@ -40,10 +40,6 @@
         width: 100%;
         $root: &;
 
-        &:hover {
-            outline: 1px solid black;
-        }
-
         &--first {
             position: relative;
         }

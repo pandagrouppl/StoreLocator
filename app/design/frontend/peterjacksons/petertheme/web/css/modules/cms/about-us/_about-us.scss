@@ -67,6 +67,10 @@
 
         &--opening {
             margin-top: 105px;
+
+            @media all and (max-width: $pdp-desc-bp) {
+                margin-top: 32px;
+            }
         }
     }
 
