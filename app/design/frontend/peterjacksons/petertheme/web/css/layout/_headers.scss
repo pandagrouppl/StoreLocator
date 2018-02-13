@@ -71,7 +71,7 @@ body[class~='cms-sustainability'] {
                 }
             }
 
-            i, .header-right__counter, .header-left__account-greeting {
+            .filtered-on-header {
                 filter: brightness(100);
             }
 
@@ -93,7 +93,7 @@ body[class~='cms-sustainability'] {
                     }
                 }
 
-                i, .header-right__counter, .header-left__account-greeting {
+                .filtered-on-header {
                     filter: none;
                 }
 

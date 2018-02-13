@@ -1,6 +1,7 @@
 .header-right {
     @include header-side-elems();
     align-items: center;
+    justify-content: flex-end;
 
     > div {
         padding: 5px;
@@ -35,35 +36,22 @@
         display: block;
         padding: 5px;
 
-        @media all and (max-width: $bp-header-s) {
-            padding: 2px;
-        }
-
         @media all and (max-width: $xs-breakpoint) {
-            font-size: 12px;
+            font-size: 14px;
+            padding: 2px;
         }
     }
 
     &__wishlist {
         position: relative;
-
-        @media all and (max-width: $bp-header) {
-            margin-left: auto;
-        }
     }
 
     &__wishlist-icon {
         @include sprite(header-star);
         transform: scale(0.85);
 
-        @media all and (max-width: $bp-header-s) {
-            transform: scale(0.7);
-            margin: -3px;
-        }
-
-        @media all and (max-width: $xs-breakpoint) {
-            transform: scale(0.5);
-            margin: -6px;
+        @media all and (max-width: $bp-header) {
+            transform: none;
         }
     }
 
@@ -88,15 +76,8 @@
         @include sprite(header-case);
         transform: scale(0.85);
 
-        @media all and (max-width: $bp-header-s) {
-            transform: scale(0.7);
-            margin: -3px;
+        @media all and (max-width: $bp-header) {
+            transform: none;
         }
-
-        @media all and (max-width: $xs-breakpoint) {
-            transform: scale(0.5);
-            margin: -6px;
-        }
-
     }
 }

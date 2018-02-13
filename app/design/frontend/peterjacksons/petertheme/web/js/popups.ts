@@ -14,7 +14,7 @@ export class Popups {
     }
 
     _showSearch() {
-        $('.header-right__show-search-overlay').on('click', () => {
+        $('[class*="show-search-overlay"]').on('click', () => {
             $('.search-overlay').show();
         });
         $('.search-overlay').click(() => {

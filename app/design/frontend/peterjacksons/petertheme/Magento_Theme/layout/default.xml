@@ -49,6 +49,7 @@
                 <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">
                     <block class="Light4website\Menu\Block\Html\Responsivemenu" name="responsive.topnav" template="html/topmenu-responsive.phtml" ttl="3600">
                         <block class="Magento\Framework\View\Element\Template" name="responsive.search" as="respTopSearch" template="Magento_Theme::html/header/search-responsive.phtml" />
+                        <block class="Magento\Wishlist\Block\Link" name="responsive.wishlist.link" template="Magento_Theme::html/header/wishlist-responsive.phtml" />
                         <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.responsive.other" as="catalogTopResp" template="Magento_Theme::html/header/other-responsive.phtml"/>
                     </block>
                 </container>

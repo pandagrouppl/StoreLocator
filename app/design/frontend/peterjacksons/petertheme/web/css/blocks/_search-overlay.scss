@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     display: none;
 
     &__container {
@@ -20,7 +20,7 @@
         position: absolute;
         font-style: normal;
         top: 50px;
-        right: 100px;
+        right: 10vw;
         font-size: 50px;
         font-weight: 300;
         cursor: pointer;
@@ -30,6 +30,13 @@
         display: flex;
         border-bottom: 2px solid black;
         padding-bottom: 5px;
+        max-width: 99%;
+        flex: 0 1 500px;
+        margin: 10px;
+    }
+
+    &__row {
+        flex: 1 1 100%;
     }
 
     &__input {
@@ -38,6 +45,15 @@
         font-size: 37.5px;
         color: #242424;
         font-weight: 400;
+        width: 100%;
+
+        @media all and (max-width: $sm-breakpoint) {
+            font-size: 30px;
+        }
+    }
+
+    &__submit {
+        flex: 0 0 32px;
     }
 
     &__zoom {
@@ -49,8 +65,12 @@
     &__zoom-icon {
         @include sprite(header-zoom);
         display: block;
-        transform: scale(1.25);
+        //transform: scale(1.25);
         position: relative;
-        top: 7.5px;
+        top: 12px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            top: 7px;
+        }
     }
 }
