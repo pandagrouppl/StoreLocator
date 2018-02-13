@@ -10,7 +10,7 @@ const module = (config, element) => {
     const check = setInterval(() => {
         let firstname = customerData.get('customer')().firstname;
         if (firstname) {
-            $(element).text('Hi, ' + firstname);
+            $(element).text(firstname);
             clearInterval(check);
         }
     }, 500);

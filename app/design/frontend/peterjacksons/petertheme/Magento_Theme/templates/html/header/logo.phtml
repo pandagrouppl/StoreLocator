@@ -15,5 +15,10 @@
         title="<?php /* @escapeNotVerified */ echo $storeName ?>">
         <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
              alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+             class="header-middle__desktop-logo"
+        />
+        <img src='<?php echo $this->getViewFileUrl('img/assets/mobilelogo.png'); ?>'
+             alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+             class="header-middle__mobile-logo"
         />
     </a>

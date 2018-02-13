@@ -11,6 +11,6 @@
     }
 
     @media all and (max-width: $bp-header) {
-        display: none;
+        padding: 1px 10px;
     }
 }

@@ -20,6 +20,18 @@
         }
     }
 
+    &__desktop-logo {
+        @media all and (max-width: $bp-header) {
+            display: none;
+        }
+    }
+
+    &__mobile-logo {
+        @media all and (min-width: $bp-header + 1px) {
+            display: none;
+        }
+    }
+
     &__navigation {
         z-index: 100;
 
@@ -47,7 +59,7 @@
                 &:hover {
                     color: #383a4b;
                     font-weight: 400;
-                    border-bottom: 2px solid #4c4b4d;
+                    border-bottom: 2px solid #999999;
                 }
             }
 
