@@ -157,7 +157,7 @@ button:hover {
     }
 
     &__header {
-        font-family: Mercury-Display, Arial, sans-serif;
+        font-family: Mercury Display, Arial, sans-serif;
         font-size: 47px;
         color: white;
         text-transform: uppercase;
@@ -212,11 +212,22 @@ button:hover {
     }
 
     &__header {
-        font-family: Mercury-Display, Arial, sans-serif;
+        font-family: Mercury Display, Arial, sans-serif;
         font-size: 47px;
         color: white;
         text-transform: uppercase;
         margin: 0 0 10px 0;
+
+        p {
+            margin: 0;
+        }
+
+        .your-style {
+            display: flex;
+            justify-content: space-between;
+            max-width: 285px;
+            height: 58px;
+        }
     }
 
     &__text-box {
