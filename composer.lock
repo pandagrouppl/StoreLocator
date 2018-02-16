@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "de63d63c8dbfbf202cebc4773a85f20f2189fbe0"
+                "reference": "ed636f43c301a3d05712b3c6974db7124e272b39"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-13 15:43:09"
+            "time": "2018-02-14 16:54:47"
         },
         {
             "name": "PandaGroup/Careers",
@@ -80,7 +80,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-category-widget.git",
-                "reference": "336bb9eebce249713da8428c1d46efef05670a78"
+                "reference": "863bda3d268f30561179988d75fa736f04bd50ad"
             },
             "type": "magento2-panda-module",
             "authors": [
@@ -90,7 +90,7 @@
                 }
             ],
             "description": "Category Widget for Magento 2",
-            "time": "2018-02-13 15:56:48"
+            "time": "2018-02-16 10:58:58"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -491,10 +491,10 @@
         },
         {
             "name": "amasty/module-gift-card",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.2.0.zip",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -7032,12 +7032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "3c50c54b2a47dea50eca814e684977b825105036"
+                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/3c50c54b2a47dea50eca814e684977b825105036",
-                "reference": "3c50c54b2a47dea50eca814e684977b825105036",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f8613663bfbe2a7674d5edf9642b99d2566b271c",
+                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c",
                 "shasum": ""
             },
             "require": {
@@ -7058,10 +7058,10 @@
             ],
             "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
             "support": {
-                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/0.2.4",
+                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2017-12-21 12:11:04"
+            "time": "2018-02-15 12:50:28"
         },
         {
             "name": "symfony/console",
