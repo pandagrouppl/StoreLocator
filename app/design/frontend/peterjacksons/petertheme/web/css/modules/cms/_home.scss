@@ -218,6 +218,17 @@ button:hover {
         text-transform: uppercase;
         margin: 0 0 10px 0;
 
+        &--mobile {
+            font-size: 30px;
+            font-family: Mercury Display, Arial, sans-serif;
+            text-transform: uppercase;
+            color: white;
+
+            p {
+                margin: 0;
+            }
+        }
+
         p {
             margin: 0;
         }
@@ -232,6 +243,16 @@ button:hover {
 
     &__text-box {
         margin: 0 0 45px 0;
+
+        &--mobile {
+            p {
+                font-size: 13px;
+                margin: 0;
+                color: white;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+        }
     }
 
     &__text {
@@ -598,11 +619,18 @@ button:hover {
         height: auto;
 
         &__header {
-            font-size: 42px;
+            font-size: 30px;
+            display: flex;
+            margin: 0;
+
+            br {
+                display: none;
+            }
         }
 
         &__text-box {
-            display: none;
+            display: flex;
+            margin: 0;
         }
 
         &__wrapper {
@@ -610,15 +638,19 @@ button:hover {
         }
 
         &__content-box {
-            max-width: 300px;
+            max-width: 365px;
             margin: 0 1em;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 5px;
         }
 
         &__text {
-            font-size: 16px;
-            margin: 15px 0;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+
+            br {
+                display: none;
+            }
         }
 
         button {
@@ -644,13 +676,26 @@ button:hover {
 
         &__header {
             margin: 0;
+            display: flex;
+
+            br {
+                display: none;
+            }
+
+            &--none {
+                display: none;
+            }
+
+            .your-style {
+                font-size: 30px;
+            }
 
             &--end {
                 font-size: 35px;
             }
 
             .elevate {
-                font-size: 35px;
+                font-size: 30px;
             }
 
             .your {
@@ -667,6 +712,7 @@ button:hover {
 
             &--end {
                 align-items: flex-end;
+                justify-content: flex-start;
             }
         }
 
@@ -687,26 +733,46 @@ button:hover {
             }
         }
 
+        &__text-box {
+            display: flex;
+
+            &--none {
+                display: none;
+            }
+
+            br {
+                display: none;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+
         &__inner {
             margin: 0;
             width: 100%;
         }
 
-        &__text-box {
-            display: none;
+        &__content-box {
+            margin: 1em 1em;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+        }
+    }
+}
+
+@media all and (min-width: 560px) {
+    .home-banner {
+        &__header {
+            &--mobile {
+                display: none;
+            }
         }
 
-        &__content-box {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin: 1em 1em;
-
-            &--end {
-                display: flex;
-                flex-direction: column;
-                margin: 1em -1em;
+        &__text-box {
+            &--mobile {
+                display: none;
             }
         }
     }
