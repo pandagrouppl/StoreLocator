@@ -23,7 +23,8 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
                         data-validate="{required:true}"
                         data-label="<?php echo trim($_attribute->getProductAttribute()->getStoreLabel()) ?>"
                         id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
-                        class="super-attribute-select select__pdp-select">
+                        class="super-attribute-select select__pdp-select"
+                        required>
                     <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>
                 </select>
             </div>
