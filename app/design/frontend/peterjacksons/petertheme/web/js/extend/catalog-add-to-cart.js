@@ -15,6 +15,11 @@ define([
 
     $.widget('light4website.catalogAddToCart', $.mage.catalogAddToCart, {
 
+        /**
+         * prevent submit if form is non-valid (html5 validation)
+         * @private
+         */
+
         _bindSubmit: function() {
             var self = this;
             this.element.on('submit', function(e) {

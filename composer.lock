@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "ed636f43c301a3d05712b3c6974db7124e272b39"
+                "reference": "17bf8e1fd73e182c815cc866ab183b9147cfecbf"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-14 16:54:47"
+            "time": "2018-02-19 13:48:47"
         },
         {
             "name": "PandaGroup/Careers",
@@ -98,14 +98,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "baf81ea9c2d3d27e7e02a75a00c4de3d76450e9b"
+                "reference": "d9baa9f614e2cb4ffbe0a3541c45c3f35b3fc729"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-02-12 13:24:22"
+            "time": "2018-02-19 14:15:34"
         },
         {
             "name": "PandaGroup/ContactExtender",
@@ -454,14 +454,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "45bc9faa3da2ddd2d3a42f159cbd4431922fbcad"
+                "reference": "3dc07f091f527e508af1f2f89dc6f3a1a684283b"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2018-01-24 14:21:04"
+            "time": "2018-02-19 11:01:43"
         },
         {
             "name": "amasty/base",
