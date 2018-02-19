@@ -1,33 +1,79 @@
-<section class="main-banner">
+<section class="main-banner" onclick="location.href='/mens-suits-1.html'">
     <div class="main-banner__wrapper">
         <div class="main-banner__inner">
             <div class="main-banner__content-box">
-                <img src="{{view url='img/assets/home-11-2017/dec-pj-sale.png'}}" class="main-banner__logo" alt="Peter Jacksons Sale Up To 60%" onclick="location.href='/mens-suits-1.html'">
-                <p class="main-banner__text">Up to 60% off</p>
-                <button class="btn" onclick="location.href='/mens-suits-1.html'">Shop Sale</button>
+                <p class="main-banner__header">
+                    Season
+                    <br>
+                    Preview
+                </p>
+                <div class="main-banner__text-box">
+                    <p class="main-banner__text">A journey of passion,
+                        <br>
+                        virtue & success.</p>
+                </div>
+                <button class="btn" onclick="location.href='/mens-suits-1.html'">Any Two Suits $795*</button>
             </div>
         </div>
     </div>
-
-    <a class="main-banner__scroll-down"></a>
 </section>
 
-<section class="home-banner home-banner__image home-banner__image--measure" id="top">
-    <div class="home-banner__wrapper home-banner__wrapper--left">
-        <div class="home-banner__box">
-            <p class="home-banner__title">
-                Design your
-                <br />
-                Own Suit
-            </p>
-            <p class="home-banner__description">
-                Redefine modern tailoring and create a
-                <br />
-                suit, unique to your sense of style.
-            </p>
-            <button class="btn btn-margin-top" onclick="location.href='/made-to-measure'">Book Online</button>
+<section class="home-banner home-banner__image home-banner__image--elevate" onclick="location.href=''">
+    <div class="home-banner__wrapper">
+        <div class="home-banner__inner">
+            <div class="home-banner__content-box">
+                <div class="home-banner__header home-banner__header--none">
+                    <p class="elevate">Elevate</p>
+                    <div class="your-style">
+                        <p>Your</p>
+                        <p>Style</p>
+                    </div>
+                </div>
+                <div class="home-banner__header--mobile">
+                    <p>Elevate Your Style</p>
+                </div>
+                <div class="home-banner__header--none"></div>
+                <div class="home-banner__text-box">
+                    <p class="home-banner__text">Inspider by leaders of industry
+                        <br>
+                        those that cut their own path.</p>
+                </div>
+                <button class="btn" onclick="location.href=''">Discover More</button>
+            </div>
         </div>
     </div>
+</section>
+
+<section class="home-banner home-banner__image home-banner__image--tactile"
+         onclick="location.href='/mens-blazers.html'">
+    <div class="home-banner__wrapper--end">
+        <div class="home-banner__inner--end">
+            <div class="home-banner__content-box home-banner__content-box--end">
+                <div class="home-banner__header home-banner__header--end">
+                    <p>Tactile
+                        <br>
+                        Tailoring</p>
+                </div>
+                <div class="home-banner__text-box home-banner__text-box--none">
+                    <p class="home-banner__text">Our new collection of seasonless</p>
+                    <br>
+                    <p class="home-banner__text">staples are made from wider weaves</p>
+                    <br>
+                    <p class="home-banner__text">for textured, more breathable garment.</p>
+                </div>
+                <div class="home-banner__text-box--mobile">
+                    <p>Made from wider weaves for textured, more breathable garment.</p>
+                </div>
+                <button class="btn" onclick="location.href='/mens-blazers.html'">Discover More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{block class="PandaGroup\CategoryWidget\Block\Category\Widget" template="PandaGroup_CategoryWidget::categorywidget.phtml"}}
+
+<section class="home-banner home-banner__image home-banner__image--measure">
+    <button class="btn btn-measure" onclick="location.href='/mens-blazers.html'">Reserve Your Experience</button>
 </section>
 
 <section class="men-guide">
@@ -43,7 +89,8 @@
                     <div>
                         <div class="men-guide-slider__slide">
                             <div class="men-guide-slider__img">
-                                <img src="{{view url='img/assets/home-11-2017/xmas-guide-blog.jpg'}}" alt="Men's Gift Guide" />
+                                <img src="{{view url='img/assets/home-11-2017/xmas-guide-blog.jpg'}}"
+                                     alt="Men's Gift Guide"/>
                                 <div class="men-guide-slider__content">
                                     <h2 class="men-guide-slider__title">Men's Gift Guide</h2>
                                     <p>Perfect the art of gift giving with our fail-safe guide.</p>
@@ -55,7 +102,8 @@
                     <div>
                         <div class="men-guide-slider__slide">
                             <div class="men-guide-slider__img">
-                                <img src="{{view url='img/assets/home-11-2017/support-decembeard.jpg'}}" alt="Grow a Beard. Help Save Lives." />
+                                <img src="{{view url='img/assets/home-11-2017/support-decembeard.jpg'}}"
+                                     alt="Grow a Beard. Help Save Lives."/>
                                 <div class="men-guide-slider__content">
                                     <h2 class="men-guide-slider__title">Grow a Beard. Help Save Lives.</h2>
                                     <p>Beard up and help us raise awareness with Decembeard.</p>
@@ -74,7 +122,8 @@
                     <div>
                         <div class="men-guide-slider__slide">
                             <div class="men-guide-slider__img">
-                                <img src="{{view url='img/assets/home-11-2017/linen-tailoring-guide.jpg'}}" alt="Light-weight Luxury" />
+                                <img src="{{view url='img/assets/home-11-2017/linen-tailoring-guide.jpg'}}"
+                                     alt="Light-weight Luxury"/>
                                 <div class="men-guide-slider__content">
                                     <h1 class="men-guide-slider__title">Light-weight Luxury</h1>
                                     <p>Read our guide on men's Summer linen tailoring.</p>
@@ -86,7 +135,8 @@
                     <div>
                         <div class="men-guide-slider__slide">
                             <div class="men-guide-slider__img">
-                                <img src="{{view url='img/assets/home-11-2017/derby-day.jpg'}}" alt="Derby Day Form Guide" />
+                                <img src="{{view url='img/assets/home-11-2017/derby-day.jpg'}}"
+                                     alt="Derby Day Form Guide"/>
                                 <div class="men-guide-slider__content">
                                     <h1 class="men-guide-slider__title">Derby Day Form Guide</h1>
                                     <p>Own monochrome &amp; dominate Derby Day with our race day edit.</p>
@@ -103,7 +153,7 @@
 </section>
 
 <script>
-    require(["js/home"], function(home) {
+    require(["js/home"], function (home) {
         var homeInit = home();
     });
 </script>

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0db6ae8e1fd5d5642bec6ee6e7402946",
-    "content-hash": "19c5749687bd2ecde68106a23d032c17",
+    "hash": "33d7d47e9036320f8ce72ebf5f35a77b",
+    "content-hash": "550913e393a0be81cc3824461c4029fc",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "65c710f62795af0ce2864123c8aeb94a8086121d"
+                "reference": "ed636f43c301a3d05712b3c6974db7124e272b39"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-07 15:52:33"
+            "time": "2018-02-14 16:54:47"
         },
         {
             "name": "PandaGroup/Careers",
@@ -75,19 +75,37 @@
             "time": "2018-02-05 14:11:28"
         },
         {
+            "name": "PandaGroup/CategoryWidget",
+            "version": "dev-peter",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-category-widget.git",
+                "reference": "863bda3d268f30561179988d75fa736f04bd50ad"
+            },
+            "type": "magento2-panda-module",
+            "authors": [
+                {
+                    "name": "Karol Brzozowski",
+                    "email": "kbrzozowski@light4website.com"
+                }
+            ],
+            "description": "Category Widget for Magento 2",
+            "time": "2018-02-16 10:58:58"
+        },
+        {
             "name": "PandaGroup/Checkout",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "93a137fc34b0621fbadefba5601861fd4abbd099"
+                "reference": "baf81ea9c2d3d27e7e02a75a00c4de3d76450e9b"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-02-08 12:59:21"
+            "time": "2018-02-12 13:24:22"
         },
         {
             "name": "PandaGroup/ContactExtender",
@@ -218,7 +236,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "1eefb8a0bac054764d931ee20be85eaf60ec178a"
+                "reference": "d4e5fa302b173025a5245563e7570098998477fb"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -226,7 +244,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-02-07 12:21:31"
+            "time": "2018-02-13 16:34:51"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -396,14 +414,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-spinner.git",
-                "reference": "233ba3415779d8cb09bb9521efc21a3bcbc880cd"
+                "reference": "90f1c0e9685a5e2654ba29307c8c5b49cecb5d57"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Spinner for Magento 2.x",
-            "time": "2018-02-06 13:28:21"
+            "time": "2018-02-08 13:25:57"
         },
         {
             "name": "PandaGroup/StoreLocator",
@@ -473,10 +491,10 @@
         },
         {
             "name": "amasty/module-gift-card",
-            "version": "1.1.3",
+            "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.1.3.zip",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6541,16 +6559,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558"
+                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
-                "reference": "c9a3fe35e20eb6eeaca716d6a23cde03f52d1558",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/d305b780829ea4252ed9400b3f5937c2c99b51d4",
+                "reference": "d305b780829ea4252ed9400b3f5937c2c99b51d4",
                 "shasum": ""
             },
             "require": {
@@ -6558,7 +6576,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
                 "sami/sami": "~2.0",
                 "squizlabs/php_codesniffer": "~2.0"
             },
@@ -6629,7 +6647,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2017-11-29 06:38:08"
+            "time": "2018-02-19 04:29:13"
         },
         {
             "name": "psr/log",
@@ -7014,12 +7032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "3c50c54b2a47dea50eca814e684977b825105036"
+                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/3c50c54b2a47dea50eca814e684977b825105036",
-                "reference": "3c50c54b2a47dea50eca814e684977b825105036",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f8613663bfbe2a7674d5edf9642b99d2566b271c",
+                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c",
                 "shasum": ""
             },
             "require": {
@@ -7040,10 +7058,10 @@
             ],
             "description": "Magento2 InfiniteScroll module to load the next catalog page or results when scrolling down a page.",
             "support": {
-                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/0.2.4",
+                "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2017-12-21 12:11:04"
+            "time": "2018-02-15 12:50:28"
         },
         {
             "name": "symfony/console",
@@ -10492,6 +10510,7 @@
         "pandagroup/salesforce": 20,
         "pandagroup/specialpricefixer": 20,
         "pandagroup/contactextender": 20,
+        "pandagroup/categorywidget": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,

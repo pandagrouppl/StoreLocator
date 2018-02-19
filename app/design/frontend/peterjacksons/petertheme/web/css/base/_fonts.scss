@@ -83,3 +83,15 @@
     url("//db.onlinewebfonts.com/t/35f8ced5f37749eae85286963170ad88.ttf") format("truetype"),
     url("//db.onlinewebfonts.com/t/35f8ced5f37749eae85286963170ad88.svg#BasiliaW01-Regular") format("svg");
 }
+
+@font-face {
+    font-family: 'Mercury Display';
+    src: url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.eot');
+    src: url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.woff2') format('woff2'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.woff') format('woff'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.ttf') format('truetype'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.svg#MercuryDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
