@@ -504,6 +504,21 @@ class UpgradeData implements UpgradeDataInterface
 //        echo "Page corporate was installed/updated\n";
 //        $setup->endSetup();
 
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('discover-more-page');
+        $content = file_get_contents('pages/discover-more-page.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/discover-more-page.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Discover More Page')
+            ->setIdentifier('discover-more-page')
+            ->setIsActive(true)
+            ->setPageLayout('1column')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page discover more page was installed/updated\n";
+        $setup->endSetup();
+
         echo "Finish instalation/updating pages and blocks";
     }
 }
