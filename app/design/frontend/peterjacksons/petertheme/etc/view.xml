@@ -23,18 +23,22 @@
             <image id="category_page_2col" type="small_image">
                 <width>651</width>
                 <height>883</height>
+                <transparency>true</transparency>
             </image>
             <image id="category_page_3col" type="small_image">
                 <width>403</width>
                 <height>549</height>
+                <transparency>true</transparency>
             </image>
             <image id="category_page_2col_suits" type="small_image">
-                <width>685</width>
-                <height>1458</height>
+                <width>478</width>
+                <height>1021</height>
+                <transparency>true</transparency>
             </image>
             <image id="category_page_3col_suits" type="small_image">
                 <width>344</width>
                 <height>732</height>
+                <transparency>true</transparency>
             </image>
             <image id="hover_image" type="small_image">
                 <width>303</width>
