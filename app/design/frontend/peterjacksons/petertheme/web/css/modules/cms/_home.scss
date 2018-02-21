@@ -74,61 +74,72 @@ body[class~='cms-home'] {
             font-size: 13px;
         }
     }
-}
 
-button,
-button::after {
-    transition: all 0.3s;
-}
+    button,
+    button::after {
+        transition: all 0.3s;
+    }
 
-button {
-    font-family: Roboto, sans-serif;
-    border-radius: 3px;
-    font-weight: 500;
-    color: white;
-    font-size: 15px;
-    padding: 11px 27px;
-    border: 1px solid white;
-    text-decoration: none;
-    background: none;
-    position: relative;
-    z-index: 0;
-    line-height: 100%;
-    text-transform: uppercase;
-    cursor: pointer;
-    transform: translateZ(0);
-}
+    button {
+        font-family: Roboto, sans-serif;
+        border-radius: 3px;
+        font-weight: 500;
+        color: white;
+        font-size: 15px;
+        padding: 11px 43px;
+        border: 1px solid white;
+        text-decoration: none;
+        background: none;
+        position: relative;
+        z-index: 0;
+        line-height: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        transform: translateZ(0);
 
-button::before,
-button::after {
-    background: #fff;
-    content: '';
-    position: absolute;
-    z-index: -1;
-}
+        @media all and (max-width: 560px) {
+            color: black;
+            background: white;
+            border-radius: 0;
+            padding: 11px 14px;
+        }
+    }
 
-button:hover {
-    color: black;
-    z-index: 1;
-}
+    button::before,
+    button::after {
+        background: #fff;
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
 
-.btn::after {
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 0;
-}
+    button:hover {
+        color: black;
+        z-index: 1;
+    }
 
-.btn:hover::after {
-    width: 100%;
-    color: black;
-}
+    .btn::after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
 
-.btn-measure {
-    margin: 0 0 12em 0;
-    background-color: #B98459;
-    border: #B98459;
-    border-radius: 0;
+    .btn--padding {
+        padding: 11px 23px;
+    }
+
+    .btn:hover::after {
+        width: 100%;
+        color: black;
+    }
+
+    .btn-measure {
+        margin: 0 0 12em 0;
+        background-color: #B98459;
+        border: #B98459;
+        border-radius: 0;
+    }
 }
 
 .main-banner {
@@ -149,11 +160,16 @@ button:hover {
 
     &__inner {
         display: flex;
-        margin: 17em 0 0 22em;
+        margin: 22em 0 0 22em;
     }
 
     &__content-box {
-        margin: 0 4em;
+        margin: 0 5em;
+        height: 300px;
+
+        @media all and (max-width: 560px) {
+            height: 100%;
+        }
     }
 
     &__header {
@@ -161,11 +177,12 @@ button:hover {
         font-size: 47px;
         color: white;
         text-transform: uppercase;
-        margin: 0 0 10px 0;
+        margin: 0 0 10px -1px;
+        letter-spacing: 0;
     }
 
     &__text-box {
-        margin: 0 0 20px 0;
+        margin: 0 0 44px 0;
     }
 
     &__text {
@@ -203,12 +220,17 @@ button:hover {
         margin: 2em 0 0 14em;
 
         &--end {
-            margin: 0 13em 0 0;
+            margin: 0 17em 9em 0;
         }
     }
 
     &__content-box {
         margin: 0 4em;
+        height: 256px;
+
+        @media all and (max-width: 560px) {
+            height: 100%;
+        }
     }
 
     &__header {
@@ -219,7 +241,7 @@ button:hover {
         margin: 0 0 10px 0;
 
         &--margin-zero {
-            margin: 0;
+            margin-bottom: 12px;
         }
 
         &--mobile {
@@ -235,26 +257,33 @@ button:hover {
 
         p {
             margin: 0;
+            letter-spacing: 2px;
         }
 
-        .your-style {
-            display: flex;
-            justify-content: space-between;
-            max-width: 285px;
-            height: 70px;
-        }
+        //.your-style {
+        //    height: 70px;
+        //}
     }
 
     &__text-box {
-        margin: 0 0 20px 0;
+        margin: 0 0 56px 0;
 
         @media all and (max-width: 1500px) {
             margin: 0;
         }
 
         &--mobile {
+            font-size: 14px;
+            margin: 0;
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            @media all and (min-width: 560px) {
+                display: none;
+            }
+
             p {
-                font-size: 13px;
+                font-size: 14px;
                 margin: 0;
                 color: white;
                 font-weight: 300;
@@ -268,8 +297,12 @@ button:hover {
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
         margin: 0;
-        letter-spacing: 2px;
+        letter-spacing: 0;
         color: white;
+
+        @media all and (max-width: 560px) {
+            display: none;
+        }
     }
 
     &__image {
@@ -654,7 +687,6 @@ button:hover {
 
         &__text {
             font-size: 14px;
-            margin: 0 0 10px 0;
 
             br {
                 display: none;
@@ -753,7 +785,7 @@ button:hover {
             }
 
             p {
-                font-size: 13px;
+                font-size: 14px;
             }
         }
 
@@ -773,12 +805,6 @@ button:hover {
 @media all and (min-width: 560px) {
     .home-banner {
         &__header {
-            &--mobile {
-                display: none;
-            }
-        }
-
-        &__text-box {
             &--mobile {
                 display: none;
             }

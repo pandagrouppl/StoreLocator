@@ -71,7 +71,8 @@ body[class~='cms-discover-more-page'] {
         text-transform: uppercase;
         cursor: pointer;
         transform: translateZ(0);
-        margin: 1em 0 0 0;
+        margin: 1.8em 0 0 0;
+        border-radius: 0;
     }
 
     button::before,
@@ -85,6 +86,20 @@ body[class~='cms-discover-more-page'] {
     button:hover {
         color: white;
         z-index: 1;
+    }
+
+    .btn--white {
+        color: white;
+        border: 1px solid white;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    .btn--white:hover::after {
+        width: 100%;
+        background: white;
     }
 
     .btn::after {
@@ -107,16 +122,68 @@ body[class~='cms-discover-more-page'] {
 .elevate {
 
     &__header {
-        background-image: url('../../img/assets/elevate-your-style/header.jpg');
+        background-image: url('../../img/assets/elevate-your-style/header-discover.png');
         width: 100%;
         max-width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 900px;
+        height: 826px;
+
+        @media all and (max-width: 750px) {
+            height: 593px;
+        }
 
         @media all and (max-width: 520px) {
             height: 450px;
+        }
+    }
+
+    &__wrapper {
+        height: 100%;
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__box {
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 259px 0 100px 0;
+        width: 856px;
+        height: 468px;
+
+        @media all and (max-width: 900px) {
+            height: auto;
+        }
+
+        @media all and (max-width: 750px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-size: 44px;
+        color: white;
+        font-family: Mercury Display, Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 31px;
+        margin: 0.7em 0.5em;
+    }
+
+    &__para {
+        font-size: 23px;
+        letter-spacing: 1px;
+        line-height: 32px;
+        color: white;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        margin: 0 0 0.7em 0.9em;
+
+        &--last {
+            margin: 0 0 0 0.9em;
         }
     }
 
@@ -153,7 +220,7 @@ body[class~='cms-discover-more-page'] {
 
 .elevate-images {
     max-width: 1420px;
-    margin: 80px auto;
+    margin: 46px auto;
 
     @media all and (max-width: 1036px) {
         margin: 0;
@@ -169,11 +236,10 @@ body[class~='cms-discover-more-page'] {
         display: flex;
 
         &--left {
-            flex: 1 1 30%;
+            flex: 1;
 
             img {
                 width: 100%;
-                min-width: 498px;
 
                 @media all and (max-width: 520px) {
                     min-width: 100%;
@@ -182,7 +248,8 @@ body[class~='cms-discover-more-page'] {
         }
 
         &--right {
-            margin: 0 0 20px 50px;
+            margin: 0 0 -17px 50px;
+            height: 393px;
 
             @media all and (max-width: 1036px) {
                 width: 100%;
@@ -199,6 +266,8 @@ body[class~='cms-discover-more-page'] {
         font-size: 80px;
         text-transform: uppercase;
         margin: 0;
+        letter-spacing: 14px;
+        line-height: 55px;
 
         @media all and (max-width: 520px) {
             font-size: 65px;
@@ -221,6 +290,8 @@ body[class~='cms-discover-more-page'] {
         font-weight: 300;
         margin: 1em 0 0 1em;
         width: 450px;
+        letter-spacing: 1px;
+        line-height: 32px;
 
         @media all and (max-width: 520px) {
             margin: 1em 0 0 0;
@@ -233,7 +304,7 @@ body[class~='cms-discover-more-page'] {
     background-image: url('../../img/assets/elevate-your-style/AW18-Landing-Page-V4.png');
     width: 100%;
     background-size: cover;
-    height: 734px;
+    height: 666px;
     margin: 0 0 0 80px;
     top: -60px;
     position: relative;
@@ -270,16 +341,19 @@ body[class~='cms-discover-more-page'] {
 
     &__title {
         font-family: Mercury Display, Arial, sans-serif;
-        font-size: 80px;
+        font-size: 73px;
         text-transform: uppercase;
-        margin: 0;
+        margin: 0.3em 0 0.3em 0;
+        letter-spacing: 11px;
+        line-height: 40px;
 
         @media all and (max-width: 520px) {
             font-size: 65px;
         }
 
         &--small {
-            font-size: 55px;
+            font-size: 48px;
+            letter-spacing: 7px;
 
             @media all and (max-width: 520px) {
                 font-size: 46px;
@@ -293,8 +367,10 @@ body[class~='cms-discover-more-page'] {
         align-items: left;
         font-size: 24px;
         font-weight: 300;
-        margin: 1em 0 0 1em;
+        margin: 2em 0 0 1em;
         width: 450px;
+        letter-spacing: 1px;
+        line-height: 30px;
 
         @media all and (max-width: 520px) {
             margin: 1em 0 0 0;
@@ -319,18 +395,25 @@ body[class~='cms-discover-more-page'] {
         top: 0;
     }
 
+    &__box {
+        margin: 0 0 -1px 97px;
+        height: 330px;
+    }
+
     &__reverse {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-around;
 
-        img {
-            width: 100%;
-        }
-
         @media all and (max-width: 1036px) {
             flex-wrap: wrap;
+        }
+
+        img {
+            @media all and (max-width: 1036px) {
+                width: 100%;
+            }
         }
     }
 
@@ -338,6 +421,8 @@ body[class~='cms-discover-more-page'] {
 
         &--99 {
             font-size: 99px;
+            line-height: 1;
+            letter-spacing: 1px;
 
             @media all and (max-width: 520px) {
                 font-size: 65px;
@@ -346,10 +431,13 @@ body[class~='cms-discover-more-page'] {
 
         &--medium {
             font-size: 76px;
+            letter-spacing: 2px;
         }
 
         &--66 {
             font-size: 66px;
+            margin-bottom: -8px;
+            letter-spacing: 0;
 
             @media all and (max-width: 520px) {
                 font-size: 46px;
@@ -358,6 +446,8 @@ body[class~='cms-discover-more-page'] {
 
         &--small {
             font-size: 55px;
+            margin: 0 0 14px 0;
+            letter-spacing: 0;
         }
 
         &--xsmall {
@@ -374,11 +464,16 @@ body[class~='cms-discover-more-page'] {
     position: relative;
     top: -120px;
 
-    @media all and (max-width: 1200px) {
+    @media all and (max-width: 1036px) {
+        flex-wrap: wrap;
         top: 0;
     }
 
-    @media all and (max-width: 1036px) {
-        flex-wrap: wrap;
+    &__box {
+        margin: 97px 0 -17px 40px;
+    }
+
+    &__nomargin {
+        margin: 0;
     }
 }
