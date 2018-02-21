@@ -1,5 +1,16 @@
 <?php $slurl = $this->getUrl() . 'storelocator' ?>
 <li class="level0">
+    <a href="<?php echo $slurl; ?>">Made to Measure</a>
+    <ul class="level0">
+        <section class="header-middle__row">
+            <ol class="header-middle__columns">
+                <li class="header-middle__column-item header-middle__column-item--header"><a href="<?php echo $this->getUrl('made-to-measure')?>">Made to Measure</a></li>
+            </ol>
+            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('menublock-made-to-measure')->toHtml();?>
+        </section>
+    </ul>
+</li>
+<li class="level0">
     <a href="<?php echo $slurl; ?>">Stores</a>
     <ul class="level0">
         <section class="header-middle__row">
@@ -11,6 +22,7 @@
                 <li class="header-middle__column-item"><a href="<?php echo $slurl . '#vic'; ?>">Victoria</a></li>
                 <li class="header-middle__column-item"><a href="<?php echo $slurl . '#sa'; ?>">South Australia</a></li>
             </ol>
+            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('menublock-stores')->toHtml();?>
         </section>
     </ul>
 </li>
