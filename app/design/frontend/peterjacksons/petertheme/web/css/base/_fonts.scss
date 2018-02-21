@@ -85,8 +85,13 @@
 }
 
 @font-face {
-    font-family: 'Mercury Display';
-    src: url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.ttf') format('truetype');
+    font-family: 'Mercury-Display';
+    src: url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.eot');
+    src: url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.woff2') format('woff2'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.woff') format('woff'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.ttf') format('truetype'),
+    url('../../fonts/MercuryDisplay/MercuryDisplay-Bold.svg#MercuryDisplay-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }

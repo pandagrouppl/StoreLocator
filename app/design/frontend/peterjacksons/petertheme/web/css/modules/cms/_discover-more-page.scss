@@ -166,11 +166,12 @@ body[class~='cms-discover-more-page'] {
     &__title {
         font-size: 44px;
         color: white;
-        font-family: Mercury Display, Arial, sans-serif;
+        font-family: Mercury, Mercury-Display, Arial, sans-serif;
         text-transform: uppercase;
         letter-spacing: 5px;
         line-height: 31px;
         margin: 0.7em 0.5em;
+        font-weight: 600;
     }
 
     &__para {
@@ -199,11 +200,12 @@ body[class~='cms-discover-more-page'] {
         }
 
         h3 {
-            font-family: Mercury Display, Arial, sans-serif;
+            font-family: Mercury, Mercury-Display, Arial, sans-serif;
             text-transform: uppercase;
             font-size: 44px;
             margin: 0;
             padding: 25px 0;
+            font-weight: 600;
         }
 
         p {
@@ -262,12 +264,13 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__title {
-        font-family: Mercury Display, Arial, sans-serif;
+        font-family: Mercury, Mercury-Display, Arial, sans-serif;
         font-size: 80px;
         text-transform: uppercase;
         margin: 0;
         letter-spacing: 14px;
         line-height: 55px;
+        font-weight: 600;
 
         @media all and (max-width: 520px) {
             font-size: 65px;
@@ -340,12 +343,13 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__title {
-        font-family: Mercury Display, Arial, sans-serif;
+        font-family: Mercury, Mercury-Display, Arial, sans-serif;
         font-size: 73px;
         text-transform: uppercase;
         margin: 0.3em 0 0.3em 0;
         letter-spacing: 11px;
         line-height: 40px;
+        font-weight: 600;
 
         @media all and (max-width: 520px) {
             font-size: 65px;
