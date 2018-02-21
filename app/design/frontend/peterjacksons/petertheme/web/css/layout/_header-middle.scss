@@ -121,7 +121,7 @@
 
     &__block {
         width: 100%;
-        padding: 6px 23px;
+        padding: 6px 15px;
         break-inside: avoid-column;
         border-left: 1px solid $grey;
         display: flex;
@@ -141,9 +141,15 @@
             }
         }
 
-        img:hover {
-            opacity: 0.65;
+        img {
+
+            //width: 100%;
+
+            &:hover {
+                opacity: 0.65;
+            }
         }
+
     }
 }
 
