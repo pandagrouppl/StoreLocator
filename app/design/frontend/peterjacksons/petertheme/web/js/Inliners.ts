@@ -210,13 +210,13 @@ export class Inliners {
         const pinHead = () => {
             if ($window.scrollTop() > offset) {
                 $nav.addClass(docked);
-                if (!($body.hasClass('cms-index-index'))) {
+                if (!($body.hasClass('cms-index-index') || $body.hasClass('cms-discover-more-page'))) {
                     $pageWrapper.css({'margin-top':$nav.height()})
                 }
 
             } else {
                 $nav.removeClass(docked);
-                if (!($body.hasClass('cms-index-index'))) {
+                if (!($body.hasClass('cms-index-index') || $body.hasClass('cms-discover-more-page'))) {
                     $pageWrapper.css({'margin-top': 0})
                 }
             }

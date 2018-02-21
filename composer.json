@@ -43,9 +43,9 @@
         "magenest/module-anz": "dev-master",
         "amasty/base": "^1.0",
         "amasty/module-special-promo-pro": "^2.0",
-        "amasty/module-gift-card": "^1.1",
+        "amasty/module-gift-card": "1.1.3",
         "amasty/shopby": "2.4.4",
-        "amasty/quickview": "^1.0",
+        "amasty/quickview": "1.0.6",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master"
     },

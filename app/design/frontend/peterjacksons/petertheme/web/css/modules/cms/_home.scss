@@ -165,7 +165,7 @@ button:hover {
     }
 
     &__text-box {
-        margin: 0 0 45px 0;
+        margin: 0 0 20px 0;
     }
 
     &__text {
@@ -218,6 +218,10 @@ button:hover {
         text-transform: uppercase;
         margin: 0 0 10px 0;
 
+        &--margin-zero {
+            margin: 0;
+        }
+
         &--mobile {
             font-size: 30px;
             font-family: Mercury Display, Arial, sans-serif;
@@ -242,7 +246,11 @@ button:hover {
     }
 
     &__text-box {
-        margin: 0 0 45px 0;
+        margin: 0 0 20px 0;
+
+        @media all and (max-width: 1500px) {
+            margin: 0;
+        }
 
         &--mobile {
             p {
@@ -482,7 +490,7 @@ button:hover {
         button {
             font-size: 12px;
             padding: 11px 24px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
     }
 }

@@ -311,6 +311,29 @@ class UpgradeData implements UpgradeDataInterface
         echo "Block menublock-clothing was installed/updated\n";
         $setup->endSetup();
 
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('menublock-made-to-measure');
+        $content = file_get_contents('blocks/menublock-made-to-measure.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Menu Block Made to Measure')
+            ->setIdentifier('menublock-made-to-measure')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block menublock-made-to-measure was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('menublock-stores');
+        $content = file_get_contents('blocks/menublock-stores.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Menu Block Stores')
+            ->setIdentifier('menublock-stores')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block menublock-stores was installed/updated\n";
+        $setup->endSetup();
 
         $setup->startSetup();
         $block = $this->_blockFactory->create()->load('menublock-suits');
@@ -503,6 +526,21 @@ class UpgradeData implements UpgradeDataInterface
 //            ->save();
 //        echo "Page corporate was installed/updated\n";
 //        $setup->endSetup();
+
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('discover-more-page');
+        $content = file_get_contents('pages/discover-more-page.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/discover-more-page.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Discover More Page')
+            ->setIdentifier('discover-more-page')
+            ->setIsActive(true)
+            ->setPageLayout('1column')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page discover more page was installed/updated\n";
+        $setup->endSetup();
 
         echo "Finish instalation/updating pages and blocks";
     }

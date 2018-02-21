@@ -21,16 +21,16 @@
                 <height>200</height>
             </image>
             <image id="category_page_2col" type="small_image">
-                <width>651</width>
-                <height>883</height>
+                <width>480</width>
+                <height>652</height>
             </image>
             <image id="category_page_3col" type="small_image">
                 <width>403</width>
                 <height>549</height>
             </image>
             <image id="category_page_2col_suits" type="small_image">
-                <width>685</width>
-                <height>1458</height>
+                <width>480</width>
+                <height>1022</height>
             </image>
             <image id="category_page_3col_suits" type="small_image">
                 <width>344</width>

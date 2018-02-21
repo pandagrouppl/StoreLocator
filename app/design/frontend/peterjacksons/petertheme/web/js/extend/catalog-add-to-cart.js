@@ -7,12 +7,29 @@ define([
     'mage/translate',
     'jquery/ui',
     "Magento_Customer/js/customer-data",
+    'mage/validation',
     'jquery/jquery-storageapi',
     'Magento_Catalog/js/catalog-add-to-cart'
 ], function($, $t, _, customerData) {
     "use strict";
 
     $.widget('light4website.catalogAddToCart', $.mage.catalogAddToCart, {
+
+        /**
+         * prevent submit if form is non-valid (html5 validation)
+         * @private
+         */
+
+        _bindSubmit: function() {
+            var self = this;
+            this.element.on('submit', function(e) {
+                e.preventDefault();
+                if (e.target.checkValidity()) {
+                    self.submitForm($(this));
+                }
+            });
+        },
+
 
         /**
          * Ajax context is altered to handle quickview closing (otherwise call would terminate with iframe closing
@@ -29,6 +46,8 @@ define([
         ajaxSubmit: function(form) {
             var self = this;
             // $(self.options.minicartSelector).trigger('contentLoading');
+            // console.log(Boolean($(form).validation()));
+
 
             self.disableAddToCartButton(form);
 
