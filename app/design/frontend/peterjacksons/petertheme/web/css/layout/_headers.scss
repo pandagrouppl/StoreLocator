@@ -53,7 +53,8 @@ body[class~='cms-sustainability'] {
 @media all and (min-width: $bp-header + 1px) {
     body[class~='cms-index-defaultindex'],
     body[class~='cms-home'],
-    body[class~='cms-the-new-wave'] {
+    body[class~='cms-the-new-wave'],
+    body[class~='cms-discover-more-page'] {
         .headers {
             position: fixed;
 

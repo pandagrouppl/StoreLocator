@@ -222,3 +222,15 @@ body[class~='contact-index-index'] {
         box-sizing: border-box;
     }
 }
+
+body[class~='cms-discover-more-page'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-shippingbar {
+        display: none;
+    }
+}
