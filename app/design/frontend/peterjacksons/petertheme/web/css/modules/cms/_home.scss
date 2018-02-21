@@ -173,12 +173,13 @@ body[class~='cms-home'] {
     }
 
     &__header {
-        font-family: Mercury Display, Arial, sans-serif;
+        font-family: Times New Roman;
         font-size: 47px;
         color: white;
         text-transform: uppercase;
         margin: 0 0 10px -1px;
         letter-spacing: 0;
+        font-weight: 600;
     }
 
     &__text-box {
@@ -234,11 +235,12 @@ body[class~='cms-home'] {
     }
 
     &__header {
-        font-family: Mercury Display, Arial, sans-serif;
+        font-family: Times New Roman;
         font-size: 47px;
         color: white;
         text-transform: uppercase;
         margin: 0 0 10px 0;
+        font-weight: 600;
 
         &--margin-zero {
             margin-bottom: 12px;
@@ -246,9 +248,10 @@ body[class~='cms-home'] {
 
         &--mobile {
             font-size: 30px;
-            font-family: Mercury Display, Arial, sans-serif;
+            font-family: Times New Roman;
             text-transform: uppercase;
             color: white;
+            font-weight: 600;
 
             p {
                 margin: 0;

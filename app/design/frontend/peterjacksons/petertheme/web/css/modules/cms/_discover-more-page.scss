@@ -141,7 +141,7 @@ body[class~='cms-discover-more-page'] {
 
     &__wrapper {
         height: 100%;
-        max-width: 1420px;
+        max-width: 1250px;
         margin: 0 auto;
         padding: 0 2%;
         display: flex;
@@ -166,7 +166,7 @@ body[class~='cms-discover-more-page'] {
     &__title {
         font-size: 44px;
         color: white;
-        font-family: Mercury, Mercury-Display, Arial, sans-serif;
+        font-family: Times New Roman;
         text-transform: uppercase;
         letter-spacing: 5px;
         line-height: 31px;
@@ -175,8 +175,8 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__para {
-        font-size: 23px;
-        letter-spacing: 1px;
+        font-size: 20px;
+        letter-spacing: 0;
         line-height: 32px;
         color: white;
         font-family: Roboto, sans-serif;
@@ -200,7 +200,7 @@ body[class~='cms-discover-more-page'] {
         }
 
         h3 {
-            font-family: Mercury, Mercury-Display, Arial, sans-serif;
+            font-family: Times New Roman;
             text-transform: uppercase;
             font-size: 44px;
             margin: 0;
@@ -264,7 +264,7 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__title {
-        font-family: Mercury, Mercury-Display, Arial, sans-serif;
+        font-family: Times New Roman;
         font-size: 80px;
         text-transform: uppercase;
         margin: 0;
@@ -343,7 +343,7 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__title {
-        font-family: Mercury, Mercury-Display, Arial, sans-serif;
+        font-family: Times New Roman;
         font-size: 73px;
         text-transform: uppercase;
         margin: 0.3em 0 0.3em 0;
