@@ -25,7 +25,7 @@
         <section id="smtp" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>SMTP</label>
             <tab>mageplaza</tab>
-            <resource>Mageplaza_Smtp::configuration</resource>
+            <!--<resource>Mageplaza_Smtp::configuration</resource>-->
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
