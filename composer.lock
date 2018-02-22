@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "72dd86e2747b3a27987a21211842f6ee",
-    "content-hash": "18fe77eab4de75f993deeb864578fe51",
+    "hash": "17ad11d05f1defaa255fdc7f2cce427a",
+    "content-hash": "9bb4a52f04eeb7e14fea4d52a9aa7551",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "17bf8e1fd73e182c815cc866ab183b9147cfecbf"
+                "reference": "6f90e425c8b12419011837f1debd636fe1adcf95"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-19 13:48:47"
+            "time": "2018-02-21 10:12:53"
         },
         {
             "name": "PandaGroup/Careers",
@@ -236,7 +236,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "d4e5fa302b173025a5245563e7570098998477fb"
+                "reference": "089431aa14c53e7d595b20f9da115a712e8e15b2"
             },
             "require": {
                 "pandagroup/base": "dev-master",
@@ -244,7 +244,7 @@
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-02-13 16:34:51"
+            "time": "2018-02-20 14:09:54"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -6374,94 +6374,6 @@
                 "send email magento2"
             ],
             "time": "2018-02-07 00:42:46"
-        },
-        {
-            "name": "mageplaza/module-core",
-            "version": "1.3.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mageplaza/module-core.git",
-                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
-                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
-                "shasum": ""
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Mageplaza\\Core\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Mageplaza",
-                    "email": "hi@mageplaza.com",
-                    "homepage": "https://www.mageplaza.com",
-                    "role": "Leader"
-                }
-            ],
-            "description": "Mageplaza Core for Magento 2",
-            "time": "2018-02-01 10:16:11"
-        },
-        {
-            "name": "mageplaza/module-smtp",
-            "version": "1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mageplaza/magento-2-smtp.git",
-                "reference": "c424bef0d2ad2a8c84db1b7bd91bbd575fdba0d2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/magento-2-smtp/zipball/c424bef0d2ad2a8c84db1b7bd91bbd575fdba0d2",
-                "reference": "c424bef0d2ad2a8c84db1b7bd91bbd575fdba0d2",
-                "shasum": ""
-            },
-            "require": {
-                "mageplaza/module-core": "^1.3.8"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "psr-4": {
-                    "Mageplaza\\Smtp\\": ""
-                },
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Mageplaza License"
-            ],
-            "authors": [
-                {
-                    "name": "Mageplaza",
-                    "email": "hi@mageplaza.com",
-                    "homepage": "https://www.mageplaza.com",
-                    "role": "Leader"
-                }
-            ],
-            "description": "SMTP Extension for Magento 2 helps the owner of store simply install SMTP (Simple Mail Transfer Protocol) server which transmits the messages into codes or numbers",
-            "keywords": [
-                "email settings",
-                "gmail smtp",
-                "magento 2",
-                "magento 2 smtp",
-                "magento smtp",
-                "mageplaza",
-                "smtp"
-            ],
-            "time": "2018-01-05 07:27:08"
         },
         {
             "name": "monolog/monolog",
