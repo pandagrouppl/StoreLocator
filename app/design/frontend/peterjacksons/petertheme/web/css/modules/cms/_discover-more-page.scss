@@ -157,7 +157,7 @@ body[class~='cms-discover-more-page'] {
         background-color: rgba(0, 0, 0, 0.5);
         margin: 259px 0 100px 0;
         width: 856px;
-        height: 468px;
+        height: auto;
 
         @media all and (max-width: 1036px) {
             margin: 19% auto;
@@ -195,13 +195,17 @@ body[class~='cms-discover-more-page'] {
     }
 
     &__para {
-        font-size: 20px;
+        font-size: 20pt;
         letter-spacing: 0;
         line-height: 32px;
         color: white;
         font-family: Roboto, sans-serif;
         font-weight: 300;
         margin: 0 0 0.7em 0.9em;
+
+        @media all and (max-width: 750px) {
+            font-size: 15pt;
+        }
 
         @media all and (max-width: 560px) {
             display: none;
@@ -336,7 +340,7 @@ body[class~='cms-discover-more-page'] {
         display: flex;
         flex-direction: column;
         align-items: left;
-        font-size: 24px;
+        font-size: 20pt;
         font-weight: 300;
         margin: 1em 0 0 1em;
         width: 450px;
@@ -435,7 +439,7 @@ body[class~='cms-discover-more-page'] {
         display: flex;
         flex-direction: column;
         align-items: left;
-        font-size: 24px;
+        font-size: 20pt;
         font-weight: 300;
         margin: 2em 0 0 1em;
         width: 450px;
@@ -470,7 +474,7 @@ body[class~='cms-discover-more-page'] {
 
     &__box {
         margin: 0 0 -1px 97px;
-        height: 330px;
+        height: auto;
 
         @media all and (max-width: 1036px) {
             margin: 2%;
