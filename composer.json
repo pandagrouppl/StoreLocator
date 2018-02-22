@@ -47,7 +47,9 @@
         "amasty/shopby": "2.4.4",
         "amasty/quickview": "1.0.6",
         "wyomind/core": "dev-master",
-        "wyomind/cronscheduler": "dev-master"
+        "wyomind/cronscheduler": "dev-master",
+        "mageplaza/module-smtp": "^1.1",
+        "magepal/magento2-gmailsmtpapp": "^2.5"
     },
     "require-dev": {
         "mirasvit/module-profiler": "^1.0",
