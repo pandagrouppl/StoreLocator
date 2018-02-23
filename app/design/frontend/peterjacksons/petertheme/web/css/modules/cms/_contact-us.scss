@@ -82,6 +82,7 @@
     &__input, &__textarea {
         @include form-element();
         margin-bottom: 12px;
+        resize: none;
     }
 
     &__textarea {
