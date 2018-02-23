@@ -429,12 +429,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "7507a9e9c37155476b9853bca925e5e64cd69083"
+                "reference": "55891fd783b217d793d6783516c1a489da349631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/7507a9e9c37155476b9853bca925e5e64cd69083",
-                "reference": "7507a9e9c37155476b9853bca925e5e64cd69083",
+                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/55891fd783b217d793d6783516c1a489da349631",
+                "reference": "55891fd783b217d793d6783516c1a489da349631",
                 "shasum": ""
             },
             "type": "magento2-panda-module",
@@ -446,7 +446,7 @@
                 "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
-            "time": "2018-01-25 15:18:11"
+            "time": "2018-02-23 12:24:54"
         },
         {
             "name": "PandaGroup/Westfield",
