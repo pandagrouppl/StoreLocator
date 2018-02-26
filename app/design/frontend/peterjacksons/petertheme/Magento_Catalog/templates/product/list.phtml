@@ -108,10 +108,10 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
                                 </div>
                             </div>
                         </div>
-                        <?php $_promoWysig = $_product->getCustomAttribute('promo_wysig'); ?>
-                        <?php if ($_promoWysig): ?>
+                        <?php $promo_block = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-' . $categoryCode)->toHtml(); ?>
+                        <?php if ($promo_block): ?>
                             <div class="catalog-item__promo">
-                                    <?php echo $_promoWysig->getValue() ?>
+                                <?php echo $promo_block; ?>
                             </div>
                         <?php endif; ?>
                     </div>

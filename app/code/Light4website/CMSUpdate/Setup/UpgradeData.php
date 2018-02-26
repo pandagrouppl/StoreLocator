@@ -218,6 +218,54 @@ class UpgradeData implements UpgradeDataInterface
             echo "Page terms was installed/updated\n";
         $setup->endSetup();
 
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('deal-chinos');
+        $content = file_get_contents('blocks/deal-chinos.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Deal - chinos')
+            ->setIdentifier('deal-chinos')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block deal-chinos was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('deal-shirts');
+        $content = file_get_contents('blocks/deal-shirts.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Deal - Shirts')
+            ->setIdentifier('deal-shirts')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block deal-shirts was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('deal-suits');
+        $content = file_get_contents('blocks/deal-suits.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Deal - suits')
+            ->setIdentifier('deal-suits')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block deal-suits was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('deal-ties');
+        $content = file_get_contents('blocks/deal-ties.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Deal - ties')
+            ->setIdentifier('deal-ties')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block deal-ties was installed/updated\n";
+        $setup->endSetup();
+
 
 
         $setup->startSetup();
