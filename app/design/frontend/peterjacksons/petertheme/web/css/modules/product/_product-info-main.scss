@@ -72,6 +72,7 @@
     &__size-chart {
         font-size: 17px;
         cursor: pointer;
+        margin-left: auto;
 
         @media all and (max-width: $sm-breakpoint) {
             margin-left: 0;

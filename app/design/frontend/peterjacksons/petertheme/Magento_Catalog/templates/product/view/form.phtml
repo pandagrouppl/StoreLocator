@@ -23,15 +23,9 @@
         <input type="hidden" name="related_product" id="related-products-field" value="" />
         <?php echo $block->getBlockHtml('formkey')?>
         <?php echo $block->getChildHtml('form_top'); ?>
-        <?php if (!$block->hasOptions()):?>
+        <?php if ($_product->getTypeId() === 'amgiftcard'):?>
             <?php echo $block->getChildHtml('product_info_form_content'); ?>
         <?php else:?>
-            <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1'):?>
-                <?php echo $block->getChildChildHtml('options_container') ?>
-            <?php endif;?>
-        <?php endif; ?>
-
-        <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2'):?>
             <?php echo $block->getChildChildHtml('options_container') ?>
         <?php endif;?>
         <?php echo $block->getChildHtml('form_bottom'); ?>
