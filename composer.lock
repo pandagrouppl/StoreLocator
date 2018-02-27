@@ -65,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "08d764a9f1289717f5f93c9bc1697acfda53f6e2"
+                "reference": "3653ea96227b040c3d3bdf4bd32f5e278fc76831"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2018-02-05 14:11:28"
+            "time": "2018-02-27 13:42:24"
         },
         {
             "name": "PandaGroup/CategoryWidget",
@@ -454,14 +454,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "3dc07f091f527e508af1f2f89dc6f3a1a684283b"
+                "reference": "84b38b34ba65504f14dc9babba8c9b415e2363d4"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Westfield module for Magento 2.x",
-            "time": "2018-02-19 11:01:43"
+            "time": "2018-02-27 12:37:12"
         },
         {
             "name": "amasty/base",
