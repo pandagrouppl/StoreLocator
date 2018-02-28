@@ -75,6 +75,11 @@ body[class~='cms-home'] {
         }
     }
 
+    .action-close {
+        color: black;
+        transition-duration: 0s;
+    }
+
     button,
     button::after {
         transition: all 0.3s;

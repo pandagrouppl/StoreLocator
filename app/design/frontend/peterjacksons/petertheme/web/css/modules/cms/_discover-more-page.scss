@@ -51,6 +51,16 @@ body[class~='cms-discover-more-page'] {
         }
     }
 
+    .action-close {
+        color: black;
+        transition-duration: 0s;
+        font-size: 14pt;
+
+        &:hover {
+            color: black;
+        }
+    }
+
     button,
     button::after {
         transition: all 0.3s;
