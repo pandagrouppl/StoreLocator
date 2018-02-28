@@ -2,6 +2,12 @@
     padding-top: 0;
 }
 
+body[class~='category-gift-cards'] {
+    .amquickview-hover {
+        display: none !important;
+    }
+}
+
 .amasty-quickview-ajax-view {
 
     &__header {
