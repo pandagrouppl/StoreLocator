@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17ad11d05f1defaa255fdc7f2cce427a",
-    "content-hash": "9bb4a52f04eeb7e14fea4d52a9aa7551",
+    "hash": "e9c83a0ee09a00c9a32f53586c9bb0d5",
+    "content-hash": "de2da6d4d951236b369729419a55694d",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -491,10 +491,10 @@
         },
         {
             "name": "amasty/module-gift-card",
-            "version": "1.1.3",
+            "version": "1.3.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.1.3.zip",
+                "url": "https://composer.amasty.com/community/packages/module-gift-card-1.3.2.zip",
                 "reference": null,
                 "shasum": null
             },
