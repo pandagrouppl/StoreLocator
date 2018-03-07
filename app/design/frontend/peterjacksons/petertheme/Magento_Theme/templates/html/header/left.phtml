@@ -1,7 +1,3 @@
-<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-$customerSession = $objectManager->get('Magento\Customer\Model\Session');
-?>
-
 <section class="header-left">
     <article class="header-left__menu">
         <span class="header-left__menu-bar header-left__menu-bar--top"></span>
@@ -14,16 +10,11 @@ $customerSession = $objectManager->get('Magento\Customer\Model\Session');
         </div>
     </article>
     <article class="header-left__account show_popup_login">
-        <?php if ($customerSession->isLoggedIn()) {
-            ?> <i class="header-left__account-popup-toggle filtered-on-header"></i><span class="header-left__account-greeting filtered-on-header" data-mage-init='{"js/customerGreeting":{}}'></span>
-            <div class="header-left__account-popup" style="display: none">
-                <a href="/customer/account/">Account</a>
-                <a href="/customer/account/logout/">Log out</a>
-            </div><?php
-        } else {
-            ?> <i class="filtered-on-header"></i> <?php
-        }
-        ?>
+        <i class="header-left__account-popup-toggle filtered-on-header"></i><span class="header-left__account-greeting filtered-on-header" data-mage-init='{"js/customerGreeting":{}}'></span>
+        <div class="header-left__account-popup" style="display: none">
+            <a href="/customer/account/">Account</a>
+            <a href="/customer/account/logout/">Log out</a>
+        </div>
     </article>
     <article class="header-left__search">
         <a href="#search" class><i class="header-left__show-search-overlay filtered-on-header"></i></a>

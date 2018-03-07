@@ -6,12 +6,13 @@ const module = (config, element) => {
     if (typeof(firstname) === "undefined") {
         customerData.reload('customer');
     }
-
     const check = setInterval(() => {
         let firstname = customerData.get('customer')().firstname;
         if (firstname) {
             $(element).text(firstname);
             clearInterval(check);
+        } else {
+            $(element).parent().find('.header-left__account-popup').remove();
         }
     }, 500);
 
