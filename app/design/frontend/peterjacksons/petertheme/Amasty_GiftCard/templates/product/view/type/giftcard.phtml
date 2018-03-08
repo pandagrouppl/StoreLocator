@@ -88,24 +88,10 @@
 
         <?php endif; ?>
 
-        <?php if ($_images = $block->getImages()) : ?>
-            <div class="field required">
-                <label for="am_giftcard_image" class="label">
-                    <span><?= __('Choose card Image'); ?></span>
-                </label>
-
-                <div class="input-box">
-                    <input type="text" id="am_giftcard_image" name="am_giftcard_image" class="required-entry"
-                           value="<?= $block->getDefaultValue('am_giftcard_image'); ?>"/>
-                    <?php foreach ($_images as $_image) : ?>
-                        <img class="amgiftcard-image" data-id="<?= $_image->getId() ?>"
-                             src="<?= $_image->getImageUrl() ?>"
-                             data-img-full-src="<?= $_image->getImageUrl(); ?>"/>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-
+        <?php if ( $_images = $block->getImages() ): ?>
+            <input type="text" id="am_giftcard_image" name="am_giftcard_image" style="display:none;" value="1>"/>
         <?php endif; ?>
+
         <?php if ($block->isOptionEnable('am_giftcard_sender_name')) : ?>
             <div class="product-info-main__field field required">
                 <label for="am_giftcard_sender_name" class="product-info-main__label label">

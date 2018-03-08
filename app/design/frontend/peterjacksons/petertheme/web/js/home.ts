@@ -19,7 +19,7 @@ const home = () => {
 
     $widget.slick({
         infinite: true,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
         prevArrow: '<div class="arrows prev"></div>',
