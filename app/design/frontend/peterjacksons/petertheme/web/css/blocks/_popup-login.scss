@@ -87,9 +87,16 @@
         }
 
         .action-close {
-            background: white;
+            color: black;
+            transition-duration: 0s;
+            font-size: 14px;
             border: 0;
+            background: transparent;
             cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
         }
     }
 

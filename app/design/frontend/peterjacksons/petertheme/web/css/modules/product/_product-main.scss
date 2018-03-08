@@ -176,6 +176,10 @@
 
     &__description-wrapper {
         display: flex;
+
+        @media all and (max-width: $sm-breakpoint) {
+            flex-direction: column;
+        }
     }
 
     &__description-content {
