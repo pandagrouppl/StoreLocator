@@ -5,6 +5,34 @@
  */
 -->
 <!--@subject {{trans "Header"}} @-->
+<!--@styles
+@media only screen and (max-width: 620px){
+        #templateColumns{
+            width:100% !important;
+        }
+
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+        .columnImage{
+            height:auto !important;
+            max-width:350px !important;
+            width:100% !important;
+        }
+
+        .leftColumnContent{
+            text-align: center !important;
+        }
+
+        .rightColumnContent{
+            text-align: center !important;
+            padding: 0 !important;
+        }
+    }
+
+@-->
 <!--@vars {
 "var logo_height":"Email Logo Image Height",
 "var logo_width":"Email Logo Image Width",
@@ -30,53 +58,49 @@
 <table class="wrapper" width="100%">
     <tr>
         <td align="center" valign="top" style="padding:0; ">
-            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" style=" border:0px; background-color: #FFF; margin: auto">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateColumns" style="border-bottom: 1px solid #000000; margin: 0;">
                 <tr>
-                    <td align="center" valign="top" style="border-bottom: 1px solid #e7e7e7;">
-                        <a class="logo" href="{{store url=""}}" target="_blank" style="border: 0px; display: inline-block; width: 100%; max-width: 602px; ">
-                            <img
-                                    {{if logo_width}}
-                                    width="{{var logo_width}}"
+                    <td width="50%" class="templateColumnContainer" style="padding: 0 0 8px 0;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td class="leftColumnContent">
+                                    <a class="columnImage" href="{{store url=""}}" target="_blank">
+                                    <img
+                                            {{if logo_width}}
+                                            width="{{var logo_width}}"
+                                            {{else}}
+                                            width="300"
+                                            {{/if}}
+
+                                    {{if logo_height}}
+                                    height="{{var logo_height}}"
                                     {{else}}
-                                    width="180"
+                                    height="100"
                                     {{/if}}
 
-                            {{if logo_height}}
-                            height="{{var logo_height}}"
-                            {{else}}
-                            height="100"
-                            {{/if}}
-
-                            src="{{var logo_url}}"
-                            alt="{{var logo_alt}}"
-                            border="0"
-                            />
-                            <!--<img style="width: 100%;" src="http://peterjacksons.com/newsletter_templates/october_2015/img/edm-spring_03.jpg"/>-->
-                        </a>
+                                    src="{{var logo_url}}"
+                                    alt="{{var logo_alt}}"
+                                    border="0"
+                                    />
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
-                </tr>
-            </table>
-            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="30"
-                   style="border:0px;  margin: auto; background-color: #FFF;">
-                <tr>
-                    <td valign="top">
-                        <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="30" style="border:0px;  ">
+                    <td align="right" width="50%" class="templateColumnContainer" style="padding: 0 0 10px 0; text-align: right; vertical-align: bottom;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
-                                <td valign="top">
-                                    <center>
-                                        <p style="font-size:13px; color:#FFF; font-family: sans-serif;">
-                                            <a href="{{store url=""}}justin" target="_blank"
-                                               style="text-align: center; font-size:14px; line-height: 30px; padding: 0 20px 0 20px; text-decoration: none; color: #000000;">JUST IN</a>
-                                            <a href="{{store url=""}}suits.html" target="_blank"
-                                               style="text-align: center; font-size:14px; line-height: 30px; padding: 0 20px 0 0; text-decoration: none; color: #000000;">SUITS</a>
-                                            <a href="{{store url=""}}shirts.html" target="_blank"
-                                               style="text-align: center; font-size:14px; line-height: 30px; padding: 0 20px 0 0; text-decoration: none; color: #000000;">SHIRTS</a>
-                                            <a href="{{store url=""}}accessories.html" target="_blank"
-                                               style="text-align: center; font-size:14px; line-height: 30px; padding: 0 20px 0 0; text-decoration: none; color: #000000;">ACCESSORIES</a>
-                                            <a href="{{store url=""}}storelocator" target="_blank"
-                                               style="text-align: center; font-size:14px; line-height: 30px; padding: 0 20px 0 0; text-decoration: none; color: #000000;">STORES</a>
-                                        </p>
-                                    </center>
+                                <td class="rightColumnContent">
+                                    <p style="color:#FFF; font-family: sans-serif;">
+                                        <a href="{{store url=""}}suits.html" target="_blank"
+                                        style="text-align: center; font-size:13px; padding: 0 5px 0 0; text-decoration: none; color: #000000;">SUITS</a>
+                                        <a href="{{store url=""}}clothing.html" target="_blank"
+                                        style="text-align: center; font-size:13px; padding: 0 5px 0 0; text-decoration: none; color: #000000;">CLOTHING</a>
+                                        <a href="{{store url=""}}accessories.html" target="_blank"
+                                        style="text-align: center; font-size:13px; padding: 0 5px 0 0; text-decoration: none; color: #000000;">ACCESSORIES</a>
+                                        <a href="{{store url=""}}mens-shoes.html" target="_blank"
+                                        style="text-align: center; font-size:13px; padding: 0 0 0 0; text-decoration: none; color: #000000;">SHOES</a>
+                                    </p>
                                 </td>
                             </tr>
                         </table>

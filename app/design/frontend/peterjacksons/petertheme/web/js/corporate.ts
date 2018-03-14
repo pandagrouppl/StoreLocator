@@ -13,6 +13,8 @@ export class corporate {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
             centerMode: true,
             centerPadding: '10%',
             responsive: [
@@ -22,7 +24,8 @@ export class corporate {
                         centerPadding: '0',
                         dots: true,
                         arrows: false,
-                        autoplay: false
+                        autoplay: true,
+                        autoplaySpeed: 2500
                     }
                 }
             ]

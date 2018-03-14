@@ -5,19 +5,12 @@
         margin: 0 20px;
         padding: 0 10px;
 
-        @for $i from 1 through 5 {
-            &--#{$i} {
-                background: #636363;
-            }
+        img {
+            width: 100%;
         }
 
         @media all and (max-width: $bp-measure) {
-            height: 65vh;
             margin: 0;
-        }
-
-        @media all and (min-width: $bp-measure + 1px) {
-            min-height: 650px;
         }
     }
 

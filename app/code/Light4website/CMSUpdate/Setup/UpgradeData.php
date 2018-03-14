@@ -560,20 +560,20 @@ class UpgradeData implements UpgradeDataInterface
         echo "Page return and exchanges was installed/updated\n";
         $setup->endSetup();
 
-//        $setup->startSetup();
-//        $page = $this->_pageFactory->create()->load('corporate');
-//        $content = file_get_contents('pages/corporate.phtml', FILE_USE_INCLUDE_PATH);
-//        $layoutContent = file_get_contents('pages/corporate.xml', FILE_USE_INCLUDE_PATH);
-//        $page->setTitle('Corporate')
-//            ->setIdentifier('corporate')
-//            ->setIsActive(true)
-//            ->setPageLayout('1column-unconstrained-width')
-//            ->setLayoutUpdateXml($layoutContent)
-//            ->setStores(array(0))
-//            ->setContent($content)
-//            ->save();
-//        echo "Page corporate was installed/updated\n";
-//        $setup->endSetup();
+        $setup->startSetup();
+        $page = $this->_pageFactory->create()->load('corporate');
+        $content = file_get_contents('pages/corporate.phtml', FILE_USE_INCLUDE_PATH);
+        $layoutContent = file_get_contents('pages/corporate.xml', FILE_USE_INCLUDE_PATH);
+        $page->setTitle('Corporate')
+            ->setIdentifier('corporate')
+            ->setIsActive(true)
+            ->setPageLayout('1column-unconstrained-width')
+            ->setLayoutUpdateXml($layoutContent)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Page corporate was installed/updated\n";
+        $setup->endSetup();
 
         $setup->startSetup();
         $page = $this->_pageFactory->create()->load('discover-more-page');
