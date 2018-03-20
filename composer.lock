@@ -65,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "b1d5a15a649125430cbcfab6487973d21b12fc7f"
+                "reference": "2892e00963acf18e17a0c488eebd715b18604392"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2018-03-20 17:25:38"
+            "time": "2018-03-20 18:06:21"
         },
         {
             "name": "PandaGroup/CategoryWidget",
