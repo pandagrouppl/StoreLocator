@@ -50,14 +50,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "6f90e425c8b12419011837f1debd636fe1adcf95"
+                "reference": "3268dd580d91801c826b10367a59bc0d069b1648"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Base Module",
-            "time": "2018-02-21 10:12:53"
+            "time": "2018-03-07 14:11:34"
         },
         {
             "name": "PandaGroup/Careers",
@@ -65,14 +65,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "3653ea96227b040c3d3bdf4bd32f5e278fc76831"
+                "reference": "b1d5a15a649125430cbcfab6487973d21b12fc7f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Caareers module for Magento 2.x",
-            "time": "2018-02-27 13:42:24"
+            "time": "2018-03-20 17:25:38"
         },
         {
             "name": "PandaGroup/CategoryWidget",
