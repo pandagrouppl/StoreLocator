@@ -414,14 +414,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-spinner.git",
-                "reference": "90f1c0e9685a5e2654ba29307c8c5b49cecb5d57"
+                "reference": "630882f8fb9aa8a2184cede3c9849e797d08519f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Spinner for Magento 2.x",
-            "time": "2018-02-08 13:25:57"
+            "time": "2018-03-21 12:19:07"
         },
         {
             "name": "PandaGroup/StoreLocator",
