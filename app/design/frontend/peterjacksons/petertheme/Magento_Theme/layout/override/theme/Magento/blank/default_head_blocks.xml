@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    </head>
+    <body>
+    <referenceContainer name="before.body.end">
+        <block class="Magento\Framework\View\Element\Text" name="exampleScript">
+            <arguments>
+                <argument name="text" xsi:type="string">
+                    <![CDATA[<script type="text/javascript">
+                        require(['js/main'], function(App) {
+                            var app = new App();
+                            app.start();
+                        });</script>]]>
+                </argument>
+            </arguments>
+        </block>
+        <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/browsersync.phtml" name="browserSync" />
+    </referenceContainer>
+    </body>
+</page>
