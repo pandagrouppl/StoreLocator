@@ -357,7 +357,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-slack-integration.git",
-                "reference": "c2226b45433335bcdde0437b73ab5ae2a8e46bb5"
+                "reference": "e59b36699194cba3d1b67a855053d08bac4b6ce6"
             },
             "type": "magento2-panda-module",
             "license": [
@@ -370,7 +370,7 @@
                 }
             ],
             "description": "Slack Integration module for Magento 2.x",
-            "time": "2017-10-23 10:42:40"
+            "time": "2018-03-21 12:55:36"
         },
         {
             "name": "PandaGroup/SortByExtender",
