@@ -47,6 +47,9 @@ class Json extends \Magento\Framework\App\Action\Action
 //            return $result;
 //        }
 
+        $result->setHeader('Cache-Control', 'max-age=86400, public, s-maxage=86400', true);
+        $result->setHeader('X-Magento-Cache-Control', 'max-age=86400, public, s-maxage=86400', true);
+
         $response = $this->storeLocatorModel->getStoresData();
 
         $result->setData($response);
