@@ -89,7 +89,7 @@
         <?php endif; ?>
 
         <?php if ( $_images = $block->getImages() ): ?>
-            <input type="text" id="am_giftcard_image" name="am_giftcard_image" style="display:none;" value="1>"/>
+            <input type="text" id="am_giftcard_image" name="am_giftcard_image" style="display:none;" value="<?php echo $_images->getFirstItem()->getImageId(); ?>"/>
         <?php endif; ?>
 
         <?php if ($block->isOptionEnable('am_giftcard_sender_name')) : ?>

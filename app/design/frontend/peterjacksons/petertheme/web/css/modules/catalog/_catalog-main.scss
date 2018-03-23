@@ -113,6 +113,10 @@ body[class~='catalogsearch-result-index'] {
 
         p {
             margin: 15px 0 0 0;
+
+            @media all and (max-width: 550px) {
+                display: none;
+            }
         }
 
         span {
