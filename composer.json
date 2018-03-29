@@ -37,7 +37,8 @@
         "PandaGroup/Salesforce": "dev-master",
         "PandaGroup/SpecialPriceFixer": "dev-master",
         "PandaGroup/ContactExtender": "dev-master",
-        "PandaGroup/CategoryWidget": "dev-peter",
+        "PandaGroup/CategoryWidget": "dev-master",
+        "PandaGroup/CatalogExtender": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -205,6 +206,10 @@
         "30": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-category-widget.git"
+        },
+        "31": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-catalog-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

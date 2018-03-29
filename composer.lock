@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9c83a0ee09a00c9a32f53586c9bb0d5",
-    "content-hash": "de2da6d4d951236b369729419a55694d",
+    "hash": "167fb65f1d0f125fba69e79a5a9267d0",
+    "content-hash": "2a43ba0a7416e9806cbb46db1d05a9c8",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -75,12 +75,27 @@
             "time": "2018-03-20 18:06:21"
         },
         {
+            "name": "PandaGroup/CatalogExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/peterjacksons-catalog-extender.git",
+                "reference": "43f2053c4d89da881e7ad101f4964ea804d074f9"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Catalog Extender module for Magento 2.x",
+            "time": "2018-03-23 14:21:05"
+        },
+        {
             "name": "PandaGroup/CategoryWidget",
-            "version": "dev-peter",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-category-widget.git",
-                "reference": "863bda3d268f30561179988d75fa736f04bd50ad"
+                "reference": "27b548636dda30a10a7823ac5712d3093d2bdf9b"
             },
             "type": "magento2-panda-module",
             "authors": [
@@ -90,7 +105,7 @@
                 }
             ],
             "description": "Category Widget for Magento 2",
-            "time": "2018-02-16 10:58:58"
+            "time": "2018-02-16 10:13:31"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -10565,6 +10580,7 @@
         "pandagroup/specialpricefixer": 20,
         "pandagroup/contactextender": 20,
         "pandagroup/categorywidget": 20,
+        "pandagroup/catalogextender": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,
