@@ -18,6 +18,7 @@ export class Inliners {
         this._footerLinksAlteration();
         this._pinHeader();
         this._headerWidth();
+        this._removeEmptyStaticBlock();
     }
 
     private _preventSpinnerClick(): void {
@@ -247,6 +248,12 @@ export class Inliners {
         })
     }
 
+    private _removeEmptyStaticBlock(): void {
+        $(document).ready(function () {
+            if($('.catalog-item__promo').text().trim().length < 1)
+            {$('.catalog-item__promo').hide();}
+        });
+    }
 
 
 }

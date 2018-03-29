@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-corporate.git",
-                "reference": "cab2ee957b2dd2d3c502d28526e9196a69b78cb3"
+                "reference": "4f22fcfba2fba82093ae912a5e0adac614fa1722"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Corporate module for Magento 2.x",
-            "time": "2018-01-15 12:28:15"
+            "time": "2018-03-29 12:53:24"
         },
         {
             "name": "PandaGroup/CouponExtender",
