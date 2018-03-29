@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "167fb65f1d0f125fba69e79a5a9267d0",
-    "content-hash": "2a43ba0a7416e9806cbb46db1d05a9c8",
+    "hash": "3d8d90b2dd2aad9652e69392a7a93f40",
+    "content-hash": "ef744650f78f25da4f0ed817fd093cec",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -202,6 +202,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup CustomerExtender Module",
             "time": "2018-01-02 09:52:14"
+        },
+        {
+            "name": "PandaGroup/DiscountInMinicart",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-discount-in-minicart.git",
+                "reference": "66d020106a00ec0bf3f5b3266edbd716c769b3a8"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Discount In Minicart Module",
+            "time": "2018-03-28 10:00:19"
         },
         {
             "name": "PandaGroup/EmailTester",
@@ -10563,6 +10578,7 @@
         "pandagroup/checkout": 20,
         "pandagroup/careers": 20,
         "pandagroup/corporate": 20,
+        "pandagroup/discountinminicart": 20,
         "pandagroup/spinner": 20,
         "pandagroup/quickview": 20,
         "pandagroup/emailtester": 20,

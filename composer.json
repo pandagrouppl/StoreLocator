@@ -21,6 +21,7 @@
         "PandaGroup/Checkout": "dev-master",
         "PandaGroup/Careers": "dev-master",
         "PandaGroup/Corporate": "dev-master",
+        "PandaGroup/DiscountInMiniCart": "dev-master",
         "PandaGroup/Spinner": "dev-master",
         "PandaGroup/Quickview": "dev-master",
         "PandaGroup/EmailTester": "dev-master",
@@ -210,6 +211,10 @@
         "31": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/peterjacksons-catalog-extender.git"
+        },
+        "32": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-discount-in-minicart.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
