@@ -2,6 +2,7 @@
     overflow: hidden;
 
     &__slide {
+        display: none;
         margin: 0 20px;
         padding: 0 10px;
 
@@ -11,6 +12,7 @@
 
         @media all and (max-width: $bp-measure) {
             margin: 0;
+            padding: 0;
         }
     }
 
