@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-corporate.git",
-                "reference": "4f22fcfba2fba82093ae912a5e0adac614fa1722"
+                "reference": "2c20ca53cdf586b383e87b1f33de463a39703941"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Corporate module for Magento 2.x",
-            "time": "2018-03-29 12:53:24"
+            "time": "2018-03-29 14:54:29"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -429,14 +429,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-spinner.git",
-                "reference": "630882f8fb9aa8a2184cede3c9849e797d08519f"
+                "reference": "eeca6bcccedae02f8b0f6bd2926d9ff3e0d2f5e6"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Spinner for Magento 2.x",
-            "time": "2018-03-21 12:19:07"
+            "time": "2018-03-29 14:45:06"
         },
         {
             "name": "PandaGroup/StoreLocator",
