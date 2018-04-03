@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Model\Menu\Item">
+        <plugin name="package" type="Anowave\Package\Model\Plugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Config\Model\Config\Structure\Element\Field">
+        <plugin name="package" type="Anowave\Package\Model\Plugin" sortOrder="1" />
+    </type>
+    <type name="Magento\Backend\Model\Menu\Builder">
+        <plugin name="package" type="Anowave\Package\Model\Plugin\Builder" sortOrder="1" />
+    </type>
+</config>
