@@ -50,7 +50,8 @@
         "amasty/quickview": "1.0.6",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master",
-        "magepal/magento2-gmailsmtpapp": "^2.5"
+        "magepal/magento2-gmailsmtpapp": "^2.5",
+        "webshopapps/module-matrixrate": "^20.1"
     },
     "require-dev": {
         "mirasvit/module-profiler": "^1.0",

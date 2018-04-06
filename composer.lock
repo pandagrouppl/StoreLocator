@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3d8d90b2dd2aad9652e69392a7a93f40",
-    "content-hash": "ef744650f78f25da4f0ed817fd093cec",
+    "hash": "4c26d6d32f47deee56d9adfb464eb310",
+    "content-hash": "fd9243f562c89ffda57346c6bdd6107c",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -7501,6 +7501,47 @@
                 "yui"
             ],
             "time": "2014-09-22 08:08:50"
+        },
+        {
+            "name": "webshopapps/module-matrixrate",
+            "version": "20.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webshopapps/module-matrixrate.git",
+                "reference": "0ce8bb6fe3ba953be76d1619a882a9f157b6d06c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webshopapps/module-matrixrate/zipball/0ce8bb6fe3ba953be76d1619a882a9f157b6d06c",
+                "reference": "0ce8bb6fe3ba953be76d1619a882a9f157b6d06c",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "src/registration.php"
+                ],
+                "psr-4": {
+                    "WebShopApps\\MatrixRate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "ShipperHQ",
+                    "email": "sales@wshipperhq.com",
+                    "homepage": "http://www.Shipperhq.com"
+                },
+                {
+                    "name": "Karen Baker"
+                }
+            ],
+            "description": "Magento Shipping Multiple Table Rates - MatrixRate",
+            "time": "2017-12-20 15:57:32"
         },
         {
             "name": "wyomind/core",
