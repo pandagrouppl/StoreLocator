@@ -234,3 +234,9 @@ body[class~='cms-discover-more-page'] {
         display: none;
     }
 }
+
+body[class~='corporate-index-index'] {
+    .page-main__message {
+        display: none;
+    }
+}
