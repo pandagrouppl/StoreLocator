@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4c26d6d32f47deee56d9adfb464eb310",
-    "content-hash": "fd9243f562c89ffda57346c6bdd6107c",
+    "hash": "dd58385ac24e8f8a7563b839d0d5bc5c",
+    "content-hash": "5f4eb7b0081e768287806fbdd7b912c4",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -495,10 +495,10 @@
         },
         {
             "name": "amasty/base",
-            "version": "1.3.0",
+            "version": "1.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/base-1.3.0.zip",
+                "url": "https://composer.amasty.com/community/packages/base-1.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -575,10 +575,10 @@
         },
         {
             "name": "amasty/module-special-promo",
-            "version": "2.2.0",
+            "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.2.0.zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -602,10 +602,10 @@
         },
         {
             "name": "amasty/module-special-promo-pro",
-            "version": "2.2.0",
+            "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.2.0.zip",
+                "url": "https://composer.amasty.com/community/packages/module-special-promo-pro-2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6353,16 +6353,16 @@
         },
         {
             "name": "magepal/magento2-gmailsmtpapp",
-            "version": "2.5.2",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/magepal/magento2-gmail-smtp-app.git",
-                "reference": "cbb06da6e4d7fd4fc50502da8497435730f33423"
+                "reference": "a6b45b77ea83496278e512b11fd8b2b4a49eda04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/magepal/magento2-gmail-smtp-app/zipball/cbb06da6e4d7fd4fc50502da8497435730f33423",
-                "reference": "cbb06da6e4d7fd4fc50502da8497435730f33423",
+                "url": "https://api.github.com/repos/magepal/magento2-gmail-smtp-app/zipball/a6b45b77ea83496278e512b11fd8b2b4a49eda04",
+                "reference": "a6b45b77ea83496278e512b11fd8b2b4a49eda04",
                 "shasum": ""
             },
             "require": {
@@ -6385,14 +6385,13 @@
             ],
             "authors": [
                 {
-                    "name": "Renon Stewart",
-                    "email": "renon@magepal.com",
-                    "homepage": "http://www.magepal.com/",
+                    "name": "MagePal",
+                    "email": "hello@magepal.com",
+                    "homepage": "https://packagist.org/packages/magepal/",
                     "role": "Leader"
                 }
             ],
             "description": "Configure Magento 2 to send email using Google App, Gmail, Amazon Simple Email Service (SES), Microsoft Office365 and many other SMTP servers",
-            "homepage": "http://www.magepal.com/",
             "keywords": [
                 "Amazon SES",
                 "Amazon Simple Email Service",
@@ -6404,7 +6403,7 @@
                 "magento2 smtp",
                 "send email magento2"
             ],
-            "time": "2018-03-30 15:57:46"
+            "time": "2018-02-07 00:42:46"
         },
         {
             "name": "monolog/monolog",
@@ -7149,6 +7148,62 @@
             "time": "2018-02-15 12:50:28"
         },
         {
+            "name": "symfony/config",
+            "version": "v2.8.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "17605ff58313d9fe94e507620a399721fc347b6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/17605ff58313d9fe94e507620a399721fc347b6d",
+                "reference": "17605ff58313d9fe94e507620a399721fc347b6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/filesystem": "~2.3|~3.0.0"
+            },
+            "require-dev": {
+                "symfony/yaml": "~2.7|~3.0.0"
+            },
+            "suggest": {
+                "symfony/yaml": "To use the yaml reference dumper"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Config\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Config Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-01-21 19:03:25"
+        },
+        {
             "name": "symfony/console",
             "version": "v2.6.13",
             "target-dir": "Symfony/Component/Console",
@@ -7207,17 +7262,80 @@
             "time": "2015-07-26 09:08:40"
         },
         {
-            "name": "symfony/event-dispatcher",
-            "version": "v2.8.38",
+            "name": "symfony/dependency-injection",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "9b69aad7d4c086dc94ebade2d5eb9145da5dac8c"
+                "url": "https://github.com/symfony/dependency-injection.git",
+                "reference": "91ad61e6f140b050eba4aa39bc52eece713f2a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/9b69aad7d4c086dc94ebade2d5eb9145da5dac8c",
-                "reference": "9b69aad7d4c086dc94ebade2d5eb9145da5dac8c",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/91ad61e6f140b050eba4aa39bc52eece713f2a71",
+                "reference": "91ad61e6f140b050eba4aa39bc52eece713f2a71",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "conflict": {
+                "symfony/expression-language": "<2.6"
+            },
+            "require-dev": {
+                "symfony/config": "~2.2|~3.0.0",
+                "symfony/expression-language": "~2.6|~3.0.0",
+                "symfony/yaml": "~2.3.42|~2.7.14|~2.8.7|~3.0.7"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/expression-language": "For using expressions in service container configuration",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-01-29 08:55:23"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v2.8.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "d64be24fc1eba62f9daace8a8918f797fc8e87cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/d64be24fc1eba62f9daace8a8918f797fc8e87cc",
+                "reference": "d64be24fc1eba62f9daace8a8918f797fc8e87cc",
                 "shasum": ""
             },
             "require": {
@@ -7264,20 +7382,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-06 07:35:03"
+            "time": "2018-01-03 07:36:31"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.8.38",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "125403a59e4cb4e3ebf46d0162fabcde613d2b97"
+                "reference": "1f4e8351e0196562f5e8ec584baeceeb8e2e92f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/125403a59e4cb4e3ebf46d0162fabcde613d2b97",
-                "reference": "125403a59e4cb4e3ebf46d0162fabcde613d2b97",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/1f4e8351e0196562f5e8ec584baeceeb8e2e92f6",
+                "reference": "1f4e8351e0196562f5e8ec584baeceeb8e2e92f6",
                 "shasum": ""
             },
             "require": {
@@ -7313,20 +7431,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-19 16:23:47"
+            "time": "2018-01-03 07:36:31"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.8",
+            "version": "v3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433"
+                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/bd14efe8b1fabc4de82bf50dce62f05f9a102433",
-                "reference": "bd14efe8b1fabc4de82bf50dce62f05f9a102433",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/613e26310776f49a1773b6737c6bd554b8bc8c6f",
+                "reference": "613e26310776f49a1773b6737c6bd554b8bc8c6f",
                 "shasum": ""
             },
             "require": {
@@ -7362,20 +7480,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-04 05:07:11"
+            "time": "2018-01-03 07:37:34"
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.38",
+            "version": "v2.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "ee2c91470ff262b1a00aec27875d38594aa87629"
+                "reference": "905efe90024caa75a2fc93f54e14b26f2a099d96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/ee2c91470ff262b1a00aec27875d38594aa87629",
-                "reference": "ee2c91470ff262b1a00aec27875d38594aa87629",
+                "url": "https://api.github.com/repos/symfony/process/zipball/905efe90024caa75a2fc93f54e14b26f2a099d96",
+                "reference": "905efe90024caa75a2fc93f54e14b26f2a099d96",
                 "shasum": ""
             },
             "require": {
@@ -7411,7 +7529,105 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03 05:20:27"
+            "time": "2018-01-29 08:54:45"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v3.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "c865551df7c17e63fc1f09f763db04387f91ae4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/c865551df7c17e63fc1f09f763db04387f91ae4d",
+                "reference": "c865551df7c17e63fc1f09f763db04387f91ae4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-01-03 07:37:34"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.8.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "be720fcfae4614df204190d57795351059946a77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/be720fcfae4614df204190d57795351059946a77",
+                "reference": "be720fcfae4614df204190d57795351059946a77",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-01-03 07:36:31"
         },
         {
             "name": "tedivm/jshrink",
@@ -10347,223 +10563,6 @@
                 "standards"
             ],
             "time": "2014-05-01 03:07:07"
-        },
-        {
-            "name": "symfony/config",
-            "version": "v2.8.38",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/config.git",
-                "reference": "ecacddeaf76732231eea1657f6f5b062dade94c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/ecacddeaf76732231eea1657f6f5b062dade94c9",
-                "reference": "ecacddeaf76732231eea1657f6f5b062dade94c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "symfony/filesystem": "~2.3|~3.0.0"
-            },
-            "require-dev": {
-                "symfony/yaml": "~2.7|~3.0.0"
-            },
-            "suggest": {
-                "symfony/yaml": "To use the yaml reference dumper"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Config\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Config Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-03-19 21:11:56"
-        },
-        {
-            "name": "symfony/dependency-injection",
-            "version": "v2.8.38",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "3d7cbf34cd75ede7f94b9b990f85bd089e15cd55"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/3d7cbf34cd75ede7f94b9b990f85bd089e15cd55",
-                "reference": "3d7cbf34cd75ede7f94b9b990f85bd089e15cd55",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "conflict": {
-                "symfony/expression-language": "<2.6"
-            },
-            "require-dev": {
-                "symfony/config": "~2.2|~3.0.0",
-                "symfony/expression-language": "~2.6|~3.0.0",
-                "symfony/yaml": "~2.3.42|~2.7.14|~2.8.7|~3.0.7"
-            },
-            "suggest": {
-                "symfony/config": "",
-                "symfony/expression-language": "For using expressions in service container configuration",
-                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
-                "symfony/yaml": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DependencyInjection\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony DependencyInjection Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-02-19 16:23:47"
-        },
-        {
-            "name": "symfony/stopwatch",
-            "version": "v3.4.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "eb17cfa072cab26537ac37e9c4ece6c0361369af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/eb17cfa072cab26537ac37e9c4ece6c0361369af",
-                "reference": "eb17cfa072cab26537ac37e9c4ece6c0361369af",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Stopwatch\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Stopwatch Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-02-17 14:55:25"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v2.8.38",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "be720fcfae4614df204190d57795351059946a77"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/be720fcfae4614df204190d57795351059946a77",
-                "reference": "be720fcfae4614df204190d57795351059946a77",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
         },
         {
             "name": "theseer/fdomdocument",
