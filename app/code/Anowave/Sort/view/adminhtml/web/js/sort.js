@@ -108,6 +108,8 @@ define(['jquery','jquery/ui'], function($)
 						{
 							$(this).find('td:first').addClass('sort-drag-icon').find('label').css('cursor','move').attr('title','Drag vertically to change order');
 						});
+
+                        $('.data-grid-filters').hide();
 					}
 					catch (error)
 					{
