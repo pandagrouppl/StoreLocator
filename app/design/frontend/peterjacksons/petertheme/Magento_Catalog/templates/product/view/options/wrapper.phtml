@@ -14,7 +14,10 @@ if ($block->hasRequiredOptions()) {
 <?php
 $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
-$categoryId = $category->getId();
+$categoryId = 0;
+if (true === is_object($category)) {
+    $categoryId = $category->getId();
+}
 $promo_block_suits = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-suits')->toHtml();
 $promo_block_shirts = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-shirts')->toHtml();
 $promo_block_ties = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-ties')->toHtml();
