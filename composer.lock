@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bfc653b85b29cf18b35a35c3b68eb89a",
-    "content-hash": "093c9e1bd304768c55a442b59831e836",
+    "hash": "ad37edb8deaa8e5fd88d0c21fa17d588",
+    "content-hash": "3f9f028a596c99c53ed1e21e1bb6ae4b",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -630,10 +630,10 @@
         },
         {
             "name": "amasty/quickview",
-            "version": "1.0.5",
+            "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/quickview-1.0.5.zip",
+                "url": "https://composer.amasty.com/community/packages/quickview-1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
