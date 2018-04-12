@@ -119,6 +119,10 @@ body[class~='checkout-index-index'] {
         max-width: 1260px;
     }
 
+    .total-rules {
+        display: none;
+    }
+
     @media all and (max-width: $sm-breakpoint) {
 
         .page-main {
