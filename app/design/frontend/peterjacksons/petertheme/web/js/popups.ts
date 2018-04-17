@@ -1,5 +1,4 @@
 import $ = require("jquery");
-import urlBuilder = require("mage/url");
 
 export class Popups {
 
@@ -77,9 +76,6 @@ export class Popups {
         });
         $('.success-popup, .success-popup__continue').on('click', () => {
             $('.success-popup').hide();
-        });
-        $('.success-popup__gotocheckout').on('click', () => {
-            window.location.replace(urlBuilder.build('checkout/'));
         });
     }
 

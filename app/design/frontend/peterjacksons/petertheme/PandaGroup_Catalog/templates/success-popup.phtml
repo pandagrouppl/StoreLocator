@@ -29,8 +29,8 @@ if (trim($block->getPageHeading())) {
                 </div>
             </div>
             <div class="success-popup__buttons">
-                <button class="success-popup__continue">Continue Shopping</button>
-                <button class="success-popup__gotocheckout">Checkout</button>
+                <a class="success-popup__continue" href="#">Continue Shopping</a>
+                <a class="success-popup__gotocheckout" href="<?php echo $block->getBaseUrl() . 'checkout/'; ?>">Checkout</a>
             </div>
         </div>
     </div>
