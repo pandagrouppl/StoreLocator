@@ -158,24 +158,27 @@ body[class~='cms-home'] {
 }
 
 .main-banner {
-    background-image: url('../../img/assets/home-11-2017/main-banner.png');
+    background-image: url('../../img/assets/home-11-2017/main-banner-new.png');
     width: 100%;
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -14px 0px;
+    background-position: -14px 0;
     height: 84vh;
     cursor: pointer;
+
+    &__image {
+        width: 95%;
+    }
 
     &__wrapper {
         height: 100%;
         display: flex;
-        align-items: center;
     }
 
     &__inner {
         display: flex;
-        margin: 32em 0 0 13.4em;
+        margin: 13.4em 0 0 13.4em;
     }
 
     &__content-box {
@@ -183,7 +186,7 @@ body[class~='cms-home'] {
         flex-direction: column;
         align-items: flex-start;
         margin: 0 5em;
-        height: 300px;
+        height: 100%;
 
         @media all and (max-width: 560px) {
             height: 100%;
@@ -338,7 +341,7 @@ body[class~='cms-home'] {
         cursor: pointer;
 
         &--elevate {
-            background-image: url('../../img/assets/home-11-2017/AW18 - HomePageBanner-MOCKUP-2 (1).jpg');
+            background-image: url('../../img/assets/home-11-2017/AW18 - HomePageBanner-MOCKUP-2 (1)-new.jpg');
         }
 
         &--tactile {
@@ -525,7 +528,7 @@ body[class~='cms-home'] {
         background-size: cover;
 
         &__inner {
-            margin: 25em 0 0 0;
+            margin: 8.2em 0 0 3.4em;
         }
 
         &__content-box {
@@ -565,7 +568,7 @@ body[class~='cms-home'] {
         height: 615px;
 
         &__inner {
-            margin: 18em 0 0 -10em;
+            margin: 9.5em 0 0 -2em;
         }
 
         &__content-box {
@@ -619,8 +622,11 @@ body[class~='cms-home'] {
         }
 
         &__inner {
-            margin: 0;
-            padding: 2% 0;
+            margin: 0 0 0 5em;
+        }
+
+        &__image {
+            width: 85%;
         }
 
         &__content-box {
@@ -712,14 +718,18 @@ body[class~='cms-home'] {
             }
         }
 
+        &__image {
+            width: 60%;
+        }
+
         &__text-box {
             display: flex;
             margin: 0;
         }
 
         &__inner {
-            margin: 1em;
-            padding: 5px 10px;
+            margin: 0 1em;
+            padding: 0;
         }
 
         &__content-box {

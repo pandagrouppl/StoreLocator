@@ -384,6 +384,18 @@ class UpgradeData implements UpgradeDataInterface
         $setup->endSetup();
 
         $setup->startSetup();
+        $block = $this->_blockFactory->create()->load('menublock-brand');
+        $content = file_get_contents('blocks/menublock-brand.phtml', FILE_USE_INCLUDE_PATH);
+        $block->setTitle('Menu Block Brand')
+            ->setIdentifier('menublock-brand')
+            ->setIsActive(true)
+            ->setStores(array(0))
+            ->setContent($content)
+            ->save();
+        echo "Block menublock-brand was installed/updated\n";
+        $setup->endSetup();
+
+        $setup->startSetup();
         $block = $this->_blockFactory->create()->load('menublock-suits');
         $content = file_get_contents('blocks/menublock-suits.phtml', FILE_USE_INCLUDE_PATH);
         $block->setTitle('Menu Block Suits')
