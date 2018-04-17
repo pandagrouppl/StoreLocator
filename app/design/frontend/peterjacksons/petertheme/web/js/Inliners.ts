@@ -227,7 +227,7 @@ export class Inliners {
         $window.scroll(pinHead);
 
         $shippingBar.click(function() {
-            window.location.href = "/shipping-returns";
+            window.location.href = "/sale.html";
         });
     }
 

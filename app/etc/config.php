@@ -159,6 +159,7 @@ return array (
     'Plumrocket_Popuplogin' => 1,
     'Plumrocket_SocialLoginFree' => 1,
     'Strategery_Infinitescroll' => 1,
+    'WebShopApps_MatrixRate' => 1,
     'Wyomind_Core' => 1,
     'Wyomind_CronScheduler' => 1,
   ),

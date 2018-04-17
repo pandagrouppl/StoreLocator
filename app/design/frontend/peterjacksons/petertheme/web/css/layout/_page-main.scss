@@ -119,6 +119,10 @@ body[class~='checkout-index-index'] {
         max-width: 1260px;
     }
 
+    .total-rules {
+        display: none;
+    }
+
     @media all and (max-width: $sm-breakpoint) {
 
         .page-main {
@@ -231,6 +235,12 @@ body[class~='cms-discover-more-page'] {
     }
 
     .header-shippingbar {
+        display: none;
+    }
+}
+
+body[class~='corporate-index-index'] {
+    .page-main__message {
         display: none;
     }
 }

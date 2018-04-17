@@ -11,6 +11,35 @@ if ($block->hasRequiredOptions()) {
 }
 ?>
 
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
+$categoryId = 0;
+if (true === is_object($category)) {
+    $categoryId = $category->getId();
+}
+$promo_block_suits = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-suits')->toHtml();
+$promo_block_shirts = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-shirts')->toHtml();
+$promo_block_ties = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('deal-ties')->toHtml();
+?>
+
+<?php if ($categoryId == 4): ?>
+    <div class="catalog-item__promo catalog-item__promo--product">
+        <?php echo $promo_block_suits; ?>
+    </div>
+<?php endif; ?>
+
+<?php if ($categoryId == 5): ?>
+    <div class="catalog-item__promo catalog-item__promo--product">
+        <?php echo $promo_block_shirts; ?>
+    </div>
+<?php endif; ?>
+
+<?php if ($categoryId == 74): ?>
+    <div class="catalog-item__promo catalog-item__promo--product">
+        <?php echo $promo_block_ties; ?>
+    </div>
+<?php endif; ?>
 
 <div class="product-options-wrapper product-info-main__options-wrapper" id="product-options-wrapper"<?php /* @escapeNotVerified */ echo $required; ?>>
     <div class="fieldset product-info-main__fieldset" tabindex="0">

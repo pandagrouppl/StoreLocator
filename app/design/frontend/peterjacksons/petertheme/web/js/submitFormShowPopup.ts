@@ -18,7 +18,7 @@ const module = (config, element) =>  {
         setTimeout(() => {
             popup.hide();
             $('.overlay__overlay').hide();
-        }, 3500)
+        }, 8000)
     };
 
     $form.submit((event) => {

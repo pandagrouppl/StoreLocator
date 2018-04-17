@@ -65,22 +65,12 @@
 
         <?php if ($_product->getAmGiftcardType() == \Amasty\GiftCard\Model\GiftCard::TYPE_COMBINED) : ?>
             <div class="product-info-main__field field required">
-                <label for="am_giftcard_type" class="product-info-main__label label">
-                    <span><?= __('Choose card type'); ?></span>
-                </label>
                 <div class="input-box select__wrapper required-entry">
-                    <figure class="select__wide-arrow"></figure>
-                    <select id="am_giftcard_type" name="am_giftcard_type" class="select__pdp-select required-entry">
-                        <option value=""><?= __('-- Please Select --'); ?></option>
-                        <?php foreach ($block->getListCardTypes() as $_cardType) : ?>
-                            <option
-                                    value="<?= $_cardType['value']; ?>"
-                                <?php if ($block->getDefaultValue('am_giftcard_type') == $_cardType['value']) :
-                                    echo " selected";
-                                endif; ?>><?= $_cardType['label']; ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                    <p class="note am-giftcard-delivery-info" style="display: none">
+
+                    <?php // ------ Gift card value = 3 means combined card on select ------ //?>
+                    <input type="hidden" id="am_giftcard_type" name="am_giftcard_type" value="3">
+
+                    <p class="note am-giftcard-delivery-info">
                         <?= __('Please be aware that printed gift card will be sent to the shipping address you specify during checkout.'); ?>
                     </p>
                 </div>
