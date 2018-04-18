@@ -18,7 +18,8 @@
         <referenceBlock name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="header.container">
-            <container name="header.shippingbar" before="-">
+            <container name="header.shippingbar" label="FREE SHIPPING ON ORDERS $100 OR MORE." htmlTag="section" htmlClass="header-shippingbar" before="-">
+            <!--<container name="header.shippingbar" before="-">-->
                 <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar.phtml"/>
             </container>
             <container name="header.message" label="Header Message" htmlTag="section" htmlClass="header-message">
