@@ -1,1 +1,13 @@
-<a href="/sale.html">GQ ONLINE SHOPPING EVENT - 30% OFF – Voucher Code: GQ30</a>
+<?php
+    $status = (bool) $this->getConfigValue('pandagroup_theme_settings/shipping_bar/enable_bar_select');
+    $link   = $this->getConfigValue('pandagroup_theme_settings/shipping_bar/link_text');
+    $title  = $this->getConfigValue('pandagroup_theme_settings/shipping_bar/title_text');
+?>
+
+<?php if (true === $status) : ?>
+    <section class="header-shippingbar">
+        <a href="<?php echo $link; ?>">
+            <?php echo $title; ?>
+        </a>
+    </section>
+<?php endif; ?>
