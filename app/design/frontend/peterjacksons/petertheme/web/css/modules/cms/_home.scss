@@ -131,16 +131,29 @@ body[class~='cms-home'] {
     }
 
     .btn--padding {
-        padding: 15px 46px;
+        padding: 22px 24px;
         margin: 2.6em 2.7em;
         line-height: 0;
+        border-radius: 0;
+        font-size: 19pt;
+        font-weight: 300;
 
         @media all and (max-width: 1500px) {
-            margin-top: 20px;
+            margin: 2.6em 1.7em;
+        }
+
+        @media all and (max-width: 1260px) {
+            margin: 2.6em 0.7em;
+            font-size: 14pt;
+        }
+
+        @media all and (max-width: 975px) {
+            font-size: 11pt;
         }
 
         @media all and (max-width: 560px) {
             margin: 10px 0 0 0;
+            padding: 15px;
         }
     }
 
@@ -167,26 +180,25 @@ body[class~='cms-home'] {
     height: 84vh;
     cursor: pointer;
 
-    &__image {
-        width: 95%;
-    }
-
     &__wrapper {
         height: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__inner {
         display: flex;
-        margin: 13.4em 0 0 13.4em;
     }
 
     &__content-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin: 0 5em;
         height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 5em 0 0 0;
 
         @media all and (max-width: 560px) {
             height: 100%;
@@ -527,13 +539,8 @@ body[class~='cms-home'] {
         height: 700px;
         background-size: cover;
 
-        &__inner {
-            margin: 8.2em 0 0 3.4em;
-        }
-
         &__content-box {
-            max-width: 300px;
-            margin: 0 10.2em;
+            margin: 0;
         }
 
         button {
@@ -566,14 +573,15 @@ body[class~='cms-home'] {
 
     .main-banner {
         height: 615px;
-
-        &__inner {
-            margin: 9.5em 0 0 -2em;
-        }
+        background-position: -225px 0;
 
         &__content-box {
-            max-width: 250px;
+            max-width: 560px;
             margin: 0 14.2em;
+        }
+
+        &__image {
+            width: 100%;
         }
 
         button {
@@ -618,11 +626,8 @@ body[class~='cms-home'] {
         &__wrapper {
             justify-content: flex-start;
             padding: 0 2%;
-            align-items: flex-end;
-        }
-
-        &__inner {
-            margin: 0 0 0 5em;
+            align-items: center;
+            justify-content: center;
         }
 
         &__image {
@@ -730,6 +735,7 @@ body[class~='cms-home'] {
         &__inner {
             margin: 0 1em;
             padding: 0;
+            height: 100%;
         }
 
         &__content-box {
