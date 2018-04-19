@@ -38,7 +38,9 @@
 
         <referenceBlock name="catalog.topnav" remove="true"/>
         <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
-        <referenceContainer name="header.shippingbar" htmlClass="checkout-shippingbar" />
+        <referenceContainer name="header.shippingbar">
+            <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
+        </referenceContainer>
         <referenceContainer name="header.center" htmlClass="checkout-header__middle" />
         <referenceContainer name="headers" htmlClass="checkout-header" />
         <referenceBlock name="logo" template="html/header/logo-checkout.phtml"/>
