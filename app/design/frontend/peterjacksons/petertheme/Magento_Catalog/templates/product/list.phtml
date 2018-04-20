@@ -26,16 +26,19 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     <?php echo $block->getAdditionalHtml() ?>
     <?php
     $categoryCode = 'default';
+    $parentCategoryCode = 'default';
     $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    /** @var \Magento\Catalog\Model\Category $category */
     $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
     if ($category != null) {
         $categoryCode = strtolower($category->getName());
+        $parentCategoryCode = strtolower($category->getParentCategory()->getName());
     }
 
     if ($block->getMode() == 'grid') {
         // grid == 3 col
         $viewMode = 'grid';
-        if($categoryCode === 'suits') {
+        if($categoryCode === 'suits' OR $parentCategoryCode === 'suits') {
             $image = 'category_page_3col_suits';
         } else {
             $image = 'category_page_3col';
@@ -45,7 +48,7 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     } else {
         // list == 2 col
         $viewMode = 'list';
-        if($categoryCode === 'suits') {
+        if($categoryCode === 'suits' OR $parentCategoryCode === 'suits') {
             $image = 'category_page_2col_suits';
         } else {
             $image = 'category_page_2col';
