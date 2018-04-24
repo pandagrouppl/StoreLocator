@@ -63,7 +63,7 @@ body[class~='cms-sustainability'] {
             }
 
             .header-middle__logo > img {
-                filter: brightness(100);
+                filter: brightness(0) invert(1);
             }
 
             .ui-menu-item {
@@ -73,7 +73,7 @@ body[class~='cms-sustainability'] {
             }
 
             .filtered-on-header {
-                filter: brightness(100);
+                filter: brightness(0) invert(1);
                 -moz-animation: scale(1);
             }
 

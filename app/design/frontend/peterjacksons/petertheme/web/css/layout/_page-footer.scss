@@ -35,6 +35,17 @@
     &__lower {
         background: rgba(255, 255, 255, 0.05);
         transform: translateZ(0);
+
+        &--social-icons {
+            display: none;
+
+            @media all and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 2em 0;
+            }
+        }
     }
 
     &__upper-lower, &__lower-wrapper {
@@ -202,6 +213,7 @@
 
         &__lower-linkbox {
             padding: 10px 0;
+            flex-basis: 100%;
 
             &--copyright {
                 flex-basis: 100%;

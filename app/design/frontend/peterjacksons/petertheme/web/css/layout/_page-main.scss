@@ -154,6 +154,37 @@ body[class~='cms-index-index'] {
         max-width: 100%;
         padding: 0;
     }
+
+    @media all and (max-width: 560px) {
+        .column.main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-banner {
+            order: 1;
+        }
+
+        .widget__slider {
+            order: 2;
+        }
+
+        .home-banner__image--elevate {
+            order: 3;
+        }
+
+        .home-banner__image--measure {
+            order: 4;
+        }
+
+        .home-banner__image--tactile {
+            order: 5;
+        }
+
+        .men-guide {
+            order: 6;
+        }
+    }
 }
 
 //Sartorial Ninja Page
