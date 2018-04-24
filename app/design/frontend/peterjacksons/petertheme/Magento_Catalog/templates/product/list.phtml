@@ -27,10 +27,16 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
     <?php
     $categoryCode = 'default';
     $useLargeImagesTemplate = false;
-    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-    /** @var \Magento\Catalog\Model\Category $category */
-    $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
-    if ($category != null) {
+    $category = $block->getLayer()->getCurrentCategory();
+    $filterCategoryId = $block->getRequest()->getParam('cat');
+
+    if (null != $filterCategoryId) {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        /** @var \Magento\Catalog\Model\Category $category */
+        $category = $objectManager->get('Magento\Catalog\Model\Category')->load($filterCategoryId);
+    }
+
+    if (null != $category) {
         $useLargeImagesTemplate = (bool) $category->getData('large_images_template');
         $categoryCode = strtolower($category->getName());
     }
