@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "233e4c611a5009cbfdb41dca9274e2352847b906"
+                "reference": "74e584791c03ca4646de7a0460ecc7cc37e34139"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-04-17 12:37:29"
+            "time": "2018-04-19 09:25:56"
         },
         {
             "name": "PandaGroup/ContactExtender",
