@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad37edb8deaa8e5fd88d0c21fa17d588",
-    "content-hash": "3f9f028a596c99c53ed1e21e1bb6ae4b",
+    "hash": "c87bc324763a10e047c7029c76432fbe",
+    "content-hash": "47022b4693dfc260d863f59fc79b2b2a",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -275,6 +275,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
             "time": "2018-02-20 14:09:54"
+        },
+        {
+            "name": "PandaGroup/LoginIcon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git",
+                "reference": "eca0d7168630af50ab04a19140ccdc295d19c8ea"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Login Icon Module",
+            "time": "2018-04-27 10:28:42"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -857,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git",
-                "reference": "155f4dc20240aae06dd5cb8747475f37974d053a"
+                "reference": "6319714bb3a4fe699c5db0edb887f5e8fe40a6dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colinmollenhour/Cm_Cache_Backend_Redis/zipball/155f4dc20240aae06dd5cb8747475f37974d053a",
-                "reference": "155f4dc20240aae06dd5cb8747475f37974d053a",
+                "url": "https://api.github.com/repos/colinmollenhour/Cm_Cache_Backend_Redis/zipball/6319714bb3a4fe699c5db0edb887f5e8fe40a6dc",
+                "reference": "6319714bb3a4fe699c5db0edb887f5e8fe40a6dc",
                 "shasum": ""
             },
             "require": {
@@ -10638,6 +10653,7 @@
         "pandagroup/contactextender": 20,
         "pandagroup/categorywidget": 20,
         "pandagroup/catalogextender": 20,
+        "pandagroup/loginicon": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
         "wyomind/core": 20,

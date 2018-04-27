@@ -9,7 +9,6 @@ export class Popups {
         this._successCloseOverlay();
         this._showSearch();
         this._cartAdd();
-        this._showAccHeaderPanel();
         this._genericPopup();
     }
 
@@ -79,13 +78,6 @@ export class Popups {
         });
         $('.success-popup__gotocheckout').on('click', () => {
             window.location.assign('/checkout');
-        });
-    }
-
-    _showAccHeaderPanel() {
-        const $popup = $('.header-left__account-popup');
-        $('.header-left__account-popup-toggle').click(() => {
-            $popup.toggle();
         });
     }
 

@@ -40,6 +40,7 @@
         "PandaGroup/ContactExtender": "dev-master",
         "PandaGroup/CategoryWidget": "dev-master",
         "PandaGroup/CatalogExtender": "dev-master",
+        "PandaGroup/LoginIcon": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -225,6 +226,10 @@
         "32": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-discount-in-minicart.git"
+        },
+        "33": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
