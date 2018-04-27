@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a12c979a98dea003536d27d191748881",
-    "content-hash": "cfed6607efdff104296aeb600eb085b6",
+    "hash": "5c5d311fbb885875606344b438b474cc",
+    "content-hash": "e2d5993bf41482cfeadffe3679ba338b",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -522,6 +522,49 @@
             ],
             "description": "Westfield module for Magento 2.x",
             "time": "2018-02-27 12:37:12"
+        },
+        {
+            "name": "adroll123123124/pixel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git",
+                "reference": "ffe40bea7c449c42b510981ff23d11a8647574ee"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Adroll\\Pixel\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adroll",
+                    "homepage": "https://www.adroll.com",
+                    "email": "ecomm-dev@adroll.com"
+                }
+            ],
+            "description": "Adroll Pixel for Magento 2.x",
+            "keywords": [
+                "Adroll",
+                "Adroll Pixel",
+                "Adroll Retargeting",
+                "Magento",
+                "Magento 2",
+                "Magento 2 Adroll",
+                "Magento Adroll",
+                "Retargeting"
+            ],
+            "time": "2018-04-27 12:23:33"
         },
         {
             "name": "amasty/base",
@@ -10672,6 +10715,7 @@
         "pandagroup/loginicon": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
+        "adroll123123124/pixel": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
         "pandagroup/shopbylook": 20,

@@ -30,6 +30,7 @@ $field-button: 37px;
     &--coupon {
         width: 155px;
         margin-right: 20px;
+        overflow: hidden;
     }
 
     &__applied {

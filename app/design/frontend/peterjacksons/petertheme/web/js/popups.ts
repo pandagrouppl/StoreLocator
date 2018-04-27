@@ -73,8 +73,8 @@ export class Popups {
         $('.success-popup__popup').click((e) => {
             e.stopPropagation();
         });
-        $('.success-popup, .success-popup__continue').on('click', () => {
-            $('.success-popup').hide();
+        $('.success-popup, .success-popup__continue, .success-popup__overlay').on('click', () => {
+            $('.success-popup, .success-popup-corporate__popup').hide();
         });
     }
 
