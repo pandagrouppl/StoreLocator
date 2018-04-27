@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad37edb8deaa8e5fd88d0c21fa17d588",
-    "content-hash": "3f9f028a596c99c53ed1e21e1bb6ae4b",
+    "hash": "93bf2f0f7d9e5baf644fca4a25039695",
+    "content-hash": "e1dcaae1a7b2eee7877c8da4b79a36bb",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "126060c82fa30316afc226130c08495d667e2efe"
+                "reference": "74e584791c03ca4646de7a0460ecc7cc37e34139"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-02-23 17:29:19"
+            "time": "2018-04-19 09:25:56"
         },
         {
             "name": "PandaGroup/ContactExtender",
@@ -477,6 +477,21 @@
                 "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
             },
             "time": "2018-03-22 20:57:52"
+        },
+        {
+            "name": "PandaGroup/ThemeSettings",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-peter-theme-settings.git",
+                "reference": "572b2d8521c3e3c061ae766f836d69267b32bd60"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup ThemeSettings Module",
+            "time": "2018-04-18 11:10:52"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -10612,6 +10627,7 @@
         "composer/composer": 15,
         "strategery/magento2-infinitescroll": 20,
         "pandagroup/base": 20,
+        "pandagroup/themesettings": 20,
         "pandagroup/guestwishlist": 20,
         "pandagroup/migration": 20,
         "pandagroup/storelocator": 20,
