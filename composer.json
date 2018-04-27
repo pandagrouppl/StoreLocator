@@ -41,6 +41,7 @@
         "PandaGroup/ContactExtender": "dev-master",
         "PandaGroup/CategoryWidget": "dev-master",
         "PandaGroup/CatalogExtender": "dev-master",
+        "PandaGroup/LoginIcon": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -230,6 +231,10 @@
         "33": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-peter-theme-settings.git"
+        },
+        "34": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
