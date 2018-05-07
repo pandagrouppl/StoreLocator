@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "93bf2f0f7d9e5baf644fca4a25039695",
-    "content-hash": "e1dcaae1a7b2eee7877c8da4b79a36bb",
+    "hash": "5c5d311fbb885875606344b438b474cc",
+    "content-hash": "e2d5993bf41482cfeadffe3679ba338b",
     "packages": [
         {
             "name": "PandaGroup/AnzExtender",
@@ -113,14 +113,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "233e4c611a5009cbfdb41dca9274e2352847b906"
+                "reference": "74e584791c03ca4646de7a0460ecc7cc37e34139"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Checkout update module for Magento 2.x",
-            "time": "2018-04-17 12:37:29"
+            "time": "2018-04-19 09:25:56"
         },
         {
             "name": "PandaGroup/ContactExtender",
@@ -275,6 +275,21 @@
             "type": "magento2-panda-module",
             "description": "PandaGroup GuestWishlist Module",
             "time": "2018-02-20 14:09:54"
+        },
+        {
+            "name": "PandaGroup/LoginIcon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git",
+                "reference": "eca0d7168630af50ab04a19140ccdc295d19c8ea"
+            },
+            "require": {
+                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+            },
+            "type": "magento2-panda-module",
+            "description": "PandaGroup Login Icon Module",
+            "time": "2018-04-27 10:28:42"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
@@ -507,6 +522,49 @@
             ],
             "description": "Westfield module for Magento 2.x",
             "time": "2018-02-27 12:37:12"
+        },
+        {
+            "name": "adroll123123124/pixel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git",
+                "reference": "ffe40bea7c449c42b510981ff23d11a8647574ee"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Adroll\\Pixel\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adroll",
+                    "homepage": "https://www.adroll.com",
+                    "email": "ecomm-dev@adroll.com"
+                }
+            ],
+            "description": "Adroll Pixel for Magento 2.x",
+            "keywords": [
+                "Adroll",
+                "Adroll Pixel",
+                "Adroll Retargeting",
+                "Magento",
+                "Magento 2",
+                "Magento 2 Adroll",
+                "Magento Adroll",
+                "Retargeting"
+            ],
+            "time": "2018-04-27 12:23:33"
         },
         {
             "name": "amasty/base",
@@ -10654,8 +10712,10 @@
         "pandagroup/contactextender": 20,
         "pandagroup/categorywidget": 20,
         "pandagroup/catalogextender": 20,
+        "pandagroup/loginicon": 20,
         "pandagroup/customerextender": 20,
         "magenest/module-anz": 20,
+        "adroll123123124/pixel": 20,
         "wyomind/core": 20,
         "wyomind/cronscheduler": 20,
         "pandagroup/shopbylook": 20,

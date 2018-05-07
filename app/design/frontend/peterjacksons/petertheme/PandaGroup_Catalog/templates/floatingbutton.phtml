@@ -20,3 +20,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    require(['jquery'], function($) {
+        $(document).ready(function() {
+            $('select#am_giftcard_amount').change(function() {
+                let selectedText = jQuery(this).find('option:selected').text();
+                $('.floating-addtocart__price').text(selectedText);
+            });
+        });
+    });
+</script>
