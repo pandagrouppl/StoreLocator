@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'Adroll_Pixel' => 1,
     'Amasty_Base' => 1,
     'Magento_Store' => 1,
     'Amasty_Quickview' => 1,
@@ -143,6 +144,7 @@ return array (
     'PandaGroup_EmailTester' => 1,
     'PandaGroup_GiftCardExtender' => 1,
     'PandaGroup_GuestWishlist' => 1,
+    'PandaGroup_LoginIcon' => 1,
     'PandaGroup_SlackIntegration' => 1,
     'PandaGroup_Migration' => 1,
     'PandaGroup_Quickview' => 1,
@@ -154,6 +156,7 @@ return array (
     'PandaGroup_SpecialPriceFixer' => 1,
     'PandaGroup_Spinner' => 1,
     'PandaGroup_StoreLocator' => 1,
+    'PandaGroup_ThemeSettings' => 1,
     'PandaGroup_Westfield' => 1,
     'Plumrocket_Base' => 1,
     'Plumrocket_Popuplogin' => 1,
