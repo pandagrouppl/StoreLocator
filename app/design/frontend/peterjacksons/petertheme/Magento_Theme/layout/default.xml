@@ -31,6 +31,17 @@
             <container name="header.headers" htmlTag="div" htmlClass="headers">
                 <!-- desktop -->
                 <container name="headers" htmlClass="headers__top" htmlTag="section">
+                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-">
+                        <arguments>
+                            <argument name="jsLayout" xsi:type="array">
+                                <item name="components" xsi:type="array">
+                                    <item name="customer" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Theme/js/view/customer</item>
+                                    </item>
+                                </item>
+                            </argument>
+                        </arguments>
+                    </block>
                     <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
                     </container>

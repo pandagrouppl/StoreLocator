@@ -282,14 +282,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git",
-                "reference": "f873e68c9a1d9e34dc03a245f00878962df8ce1b"
+                "reference": "1ae4738b99818691993ea64465a2111c363c50fc"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Login Icon Module",
-            "time": "2018-05-08 09:15:52"
+            "time": "2018-05-08 15:46:56"
         },
         {
             "name": "PandaGroup/MagentoSlackMonitor",
