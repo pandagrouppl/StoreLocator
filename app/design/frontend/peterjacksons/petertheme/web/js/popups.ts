@@ -64,8 +64,8 @@ export class Popups {
         $('.popup-success__content').click((e) => {
             e.stopPropagation();
         });
-        $('.popup-success, .popup-success__close, .popup-success__content .continue-button').on('click', () => {
-            $('.popup-success').hide()
+        $('.popup-success, .popup-success__close, .popup-success__content .continue-button, .success-popup-corporate__close, .success-popup__overlay, .success-popup, .success-popup--contact').on('click', () => {
+            $('.popup-success, .success-popup__overlay').hide()
         });
     }
 
@@ -73,8 +73,8 @@ export class Popups {
         $('.success-popup__popup').click((e) => {
             e.stopPropagation();
         });
-        $('.success-popup, .success-popup__continue, .success-popup__overlay').on('click', () => {
-            $('.success-popup, .success-popup-corporate__popup').hide();
+        $('.success-popup, .success-popup__continue').on('click', () => {
+            $('.success-popup').hide();
         });
     }
 
