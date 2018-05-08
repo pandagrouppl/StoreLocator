@@ -1,0 +1,28 @@
+<section class="header-left">
+    <article class="header-left__menu">
+        <span class="header-left__menu-bar header-left__menu-bar--top"></span>
+        <span class="header-left__menu-bar header-left__menu-bar--bottom"></span>
+    </article>
+    <article class="header-left__book">
+        <a href="<?php echo $this->getUrl('look-book')?>"><i class="filtered-on-header"></i></a>
+        <div class="header-left__catalog">
+            <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-catalogue')->toHtml();?>
+        </div>
+    </article>
+    <article class="header-left__account show_popup_login" data-role="customer-section" data-bind="scope: 'customer'">
+        <i class="header-left__account-popup-toggle filtered-on-header"></i>
+        <span class="header-left__account-greeting filtered-on-header" data-bind="text: customer().firstname"></span>
+        <div class="header-left__account-popup" data-bind="html: customer().login_item_html, afterRender: initToggle" style="display: none"></div>
+    </article>
+    <article class="header-left__search">
+        <a href="#search" class><i class="header-left__show-search-overlay filtered-on-header"></i></a>
+    </article>
+</section>
+
+<script type="text/x-magento-init">
+{
+    "[data-role=customer-section]": {
+        "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout(); ?>
+    }
+}
+</script>
