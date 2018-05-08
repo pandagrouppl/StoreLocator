@@ -154,6 +154,7 @@ return array (
     'PandaGroup_SpecialPriceFixer' => 1,
     'PandaGroup_Spinner' => 1,
     'PandaGroup_StoreLocator' => 1,
+    'PandaGroup_ThemeSettings' => 1,
     'PandaGroup_Westfield' => 1,
     'Plumrocket_Base' => 1,
     'Plumrocket_Popuplogin' => 1,
