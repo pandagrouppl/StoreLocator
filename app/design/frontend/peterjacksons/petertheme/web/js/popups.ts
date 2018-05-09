@@ -77,9 +77,6 @@ export class Popups {
         $('.success-popup, .success-popup__continue, .success-popup__overlay').on('click', () => {
             $('.success-popup, .success-popup-corporate__popup').hide();
         });
-        $('.success-popup__gotocheckout').on('click', () => {
-            window.location.assign('/checkout');
-        });
     }
 
     _showAccHeaderPanel() {
