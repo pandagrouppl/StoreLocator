@@ -93,7 +93,7 @@
                                                     </item>
                                                     <item name="password" xsi:type="array">
                                                         <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
-                                                        <item name="provider" xsi:type="string">localStorage</item>
+                                                        <!--<item name="provider" xsi:type="string">localStorage</item>-->
                                                         <item name="dataScope" xsi:type="string">prpl-popuplogin.password</item>
                                                         <item name="label" xsi:type="string">Password</item>
                                                         <item name="sortOrder" xsi:type="number">999</item>
@@ -110,7 +110,7 @@
                                                     </item>
                                                     <item name="password_confirmation" xsi:type="array">
                                                         <item name="component" xsi:type="string">Magento_Ui/js/form/element/abstract</item>
-                                                        <item name="provider" xsi:type="string">localStorage</item>
+                                                        <!--<item name="provider" xsi:type="string">localStorage</item>-->
                                                         <item name="dataScope" xsi:type="string">prpl-popuplogin.password_confirmation</item>
                                                         <item name="label" xsi:type="string">Password Confirmation</item>
                                                         <item name="sortOrder" xsi:type="number">999</item>
