@@ -49,6 +49,7 @@
         "amasty/module-gift-card": "1.3.2",
         "amasty/shopby": "2.4.4",
         "amasty/quickview": "1.0.4",
+        "adroll123123124/pixel": "dev-master",
         "wyomind/core": "dev-master",
         "wyomind/cronscheduler": "dev-master",
         "magepal/magento2-gmailsmtpapp": "2.5.0",
@@ -242,6 +243,11 @@
         "amasty": {
             "type": "composer",
             "url": "https://composer.amasty.com/community/"
+        },
+
+        "adrollPixel": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git"
         },
         "wyomindCore": {
             "type": "vcs",
