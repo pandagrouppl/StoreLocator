@@ -54,6 +54,7 @@
         "wyomind/cronscheduler": "dev-master",
         "magepal/magento2-gmailsmtpapp": "2.5.0",
         "webshopapps/module-matrixrate": "^20.1",
+        "neklo/product_position": "1.2.2",
         "amasty/module-special-promo": "2.0.4",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
@@ -256,6 +257,14 @@
         "wyomindCronScheduler": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git"
+        },
+        "nekloCore": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-neklo-core.git"
+        },
+        "nekloProductPosition": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-neklo-product-position.git"
         },
         "infiniteScroll": {
             "type": "vcs",
