@@ -48,6 +48,10 @@ body[class~='cms-home'] {
     .slider__item-box {
         margin: 15px 0 0 0;
         text-align: center;
+
+        @media all and (min-width: $cms-sm-brkpt) and (max-width:$md-breakpoint) {
+            max-width: 85%;
+        }
     }
 
     .slick-dots {
