@@ -21,6 +21,9 @@ const home = () => {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        speed: 1500,
         arrows: true,
         prevArrow: '<div class="arrows prev"></div>',
         nextArrow: '<div class="arrows next"></div>',
@@ -56,6 +59,7 @@ const home = () => {
         ]
     });
 
+    // Scroll down button
     $( '.main-banner__scroll-down' ).click(function(evt) {
         evt.preventDefault();
         $( 'html, body' ).animate({
