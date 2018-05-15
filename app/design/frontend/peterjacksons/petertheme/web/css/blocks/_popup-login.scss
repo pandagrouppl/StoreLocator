@@ -26,6 +26,10 @@
         max-width: 410px;
         border-radius: 0;
 
+        .message-error {
+            color: $red;
+        }
+
         .modal-header {
             border: 0;
             padding: 51px 0 0 0;
