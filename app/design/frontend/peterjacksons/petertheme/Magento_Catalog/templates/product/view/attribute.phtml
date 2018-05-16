@@ -43,16 +43,20 @@ if ($_attributeType && $_attributeType == 'text') {
     <?php if ($_attributeLabel != 'none'): ?><strong class="type"><?php /* @escapeNotVerified */ echo $_attributeLabel?></strong><?php endif; ?>
         <?php if ($_attributeType === 'detailed_info'):
             $productImageAttr = $_product->getCustomAttribute($_code . '_img');
-            $productImageValue = $productImageAttr->getValue();
-            if (null !== $productImageAttr AND $productImageValue !== 'no_selection') {
-                /** @var Magento\Catalog\Helper\Image $productImage */
-                $productImage = $this->helper('Magento\Catalog\Helper\Image')->init($_product, 'description_img');
-                $productImage->setImageFile($productImageValue);
-                ?>
-                <div class="product-main__description-image">
-                    <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
-                </div>
-                <?php
+
+            if (null !== $productImageAttr) {
+                $productImageValue = $productImageAttr->getValue();
+                if ($productImageValue !== 'no_selection') {
+                    /** @var Magento\Catalog\Helper\Image $productImage */
+                    $productImage = $this->helper('Magento\Catalog\Helper\Image')->init($_product, 'description_img');
+                    $productImage->setImageFile($productImageValue);
+                    ?>
+                    <div class="product-main__description-image">
+                        <img src="<?php echo $productImage->getUrl() ?>"
+                             alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>"/>
+                    </div>
+                    <?php
+                }
             }
         endif; ?>
         <div class="value product-main__description-content" <?php /* @escapeNotVerified */ echo $_attributeAddAttribute;?>>
