@@ -13,7 +13,9 @@
  */
 ?>
 <?php
+/** @var Magento\Catalog\Helper\Output $_helper */
 $_helper = $this->helper('Magento\Catalog\Helper\Output');
+/** @var Magento\Catalog\Model\Product $_product */
 $_product = $block->getProduct();
 $_call = $block->getAtCall();
 $_code = $block->getAtCode();
@@ -41,9 +43,11 @@ if ($_attributeType && $_attributeType == 'text') {
     <?php if ($_attributeLabel != 'none'): ?><strong class="type"><?php /* @escapeNotVerified */ echo $_attributeLabel?></strong><?php endif; ?>
         <?php if ($_attributeType === 'detailed_info'):
             $productImageAttr = $_product->getCustomAttribute($_code . '_img');
-            if (null !== $productImageAttr) {
+            $productImageValue = $productImageAttr->getValue();
+            if (null !== $productImageAttr AND $productImageValue !== 'no_selection') {
+                /** @var Magento\Catalog\Helper\Image $productImage */
                 $productImage = $this->helper('Magento\Catalog\Helper\Image')->init($_product, 'description_img');
-                $productImage->setImageFile($productImageAttr->getValue());
+                $productImage->setImageFile($productImageValue);
                 ?>
                 <div class="product-main__description-image">
                     <img src="<?php echo $productImage->getUrl() ?>" alt="<?php echo $block->escapeHtml($_product->getTitle()) ?>" />
