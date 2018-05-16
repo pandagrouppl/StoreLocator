@@ -55,6 +55,7 @@
         "magepal/magento2-gmailsmtpapp": "2.5.0",
         "webshopapps/module-matrixrate": "^20.1",
         "amasty/module-special-promo": "2.0.4",
+        "apptrian/facebook-pixel": "2.1.6",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
         "symfony/finder": "3.4.4",
@@ -248,6 +249,10 @@
         "adrollPixel": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git"
+        },
+        "apptrianFacebookPixel": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-apptrian-facebookpixel.git"
         },
         "wyomindCore": {
             "type": "vcs",
