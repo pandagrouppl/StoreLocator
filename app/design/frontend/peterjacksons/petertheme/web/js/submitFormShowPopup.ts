@@ -23,7 +23,6 @@ const module = (config, element) =>  {
 
     $form.submit((event) => {
         event.preventDefault();
-        // $('#contact-form').children('input').val('');
         const spinner = $('.panda-spinner');
         spinner.toggleClass('panda-spinner--active');
         const url = $form.attr('action');
@@ -41,7 +40,9 @@ const module = (config, element) =>  {
         }).always(() => {
             spinner.toggleClass('panda-spinner--active');
             $('input').val('');
+            $('.newsletter__submit').val('Submit');
             $('textarea').val('');
+
         });
 
     });
