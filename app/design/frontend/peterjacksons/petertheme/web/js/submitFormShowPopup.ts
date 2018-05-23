@@ -39,6 +39,10 @@ const module = (config, element) =>  {
             fillAndShow(json.title, json.text, $popup);
         }).always(() => {
             spinner.toggleClass('panda-spinner--active');
+            $('input').val('');
+            $('.newsletter__submit').val('Submit');
+            $('textarea').val('');
+
         });
 
     });

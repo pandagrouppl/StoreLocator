@@ -9,14 +9,20 @@
             <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-catalogue')->toHtml();?>
         </div>
     </article>
-    <article class="header-left__account show_popup_login">
-        <i class="header-left__account-popup-toggle filtered-on-header"></i><span class="header-left__account-greeting filtered-on-header" data-mage-init='{"js/customerGreeting":{}}'></span>
-        <div class="header-left__account-popup" style="display: none">
-            <a href="/customer/account/">Account</a>
-            <a href="/customer/account/logout/">Log out</a>
-        </div>
+    <article class="header-left__account show_popup_login" data-role="customer-section" data-bind="scope: 'customer'">
+        <i class="header-left__account-popup-toggle filtered-on-header"></i>
+        <span class="header-left__account-greeting filtered-on-header" data-bind="text: customer().firstname"></span>
+        <div class="header-left__account-popup" data-bind="html: customer().login_item_html, afterRender: initToggle" style="display: none"></div>
     </article>
     <article class="header-left__search">
         <a href="#search" class><i class="header-left__show-search-overlay filtered-on-header"></i></a>
     </article>
 </section>
+
+<script type="text/x-magento-init">
+{
+    "[data-role=customer-section]": {
+        "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout(); ?>
+    }
+}
+</script>

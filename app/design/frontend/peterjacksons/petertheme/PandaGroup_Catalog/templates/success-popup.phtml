@@ -7,32 +7,35 @@
 // @codingStandardsIgnoreFile
 
 /**
- * @var $block \Magento\Theme\Block\Html\Title
+ * @var $block \Magento\Catalog\Block\Product\View\Description
  */
-$title = '';
-$text = $block->escapeHtml($block->getPageHeading());
-$alttext = substr($text, 0, strpos($text, "-"));
-if (trim($block->getPageHeading())) {
-    $title = '<span' .  $block->getAddBaseAttribute() . '>' . $alttext . '</span>';
-}
+$product = $block->getProduct();
+$popupText = sprintf(__('Successfully added %s to your cart'), $product->getName());
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+/** @var Magento\Catalog\Block\Product\AbstractProduct $abstractProductBlock */
+$abstractProductBlock = $objectManager->create('Magento\Catalog\Block\Product\AbstractProduct');
+$imageType = 'cart_page_product_thumbnail';
+$image = $abstractProductBlock->getImage($product, $imageType);
+$imageUrl = $image->getImageUrl();
+
 ?>
 <div class="success-popup" id="success-popup">
     <div class="success-popup__overlay">
         <div class="success-popup__popup">
             <div class="success-popup__body">
                 <div class="success-popup__image">
-                    <img src="" class="success-popup__img" data-mage-init='{"js/success-popup": {}}' />
+<!--                    <img src="" class="success-popup__img" data-mage-init='{"js/success-popup": {}}' />-->
+                    <img src="<?php echo $imageUrl; ?>" class="success-popup__img" />
                 </div>
                 <div class="success-popup__text">
-                    <h1 class="success-popup__title"><?php /* @escapeNotVerified */ echo $title ?></h1>
-                    <span class="success-popup__text">Successfully added to your cart</span>
+                    <span class="success-popup__text"><?php echo $popupText ?></span>
                 </div>
             </div>
             <div class="success-popup__buttons">
-                <a class="success-popup__continue" href="#">Continue Shopping</a>
-                <a class="success-popup__gotocheckout" href="<?php echo $block->getBaseUrl() . 'checkout/'; ?>">Checkout</a>
+                <a class="success-popup__continue" href="#"><?php echo __('Continue Shopping') ?></a>
+                <a class="success-popup__gotocheckout" href="<?php echo $block->getBaseUrl() . 'checkout/'; ?>"><?php echo __('Checkout') ?></a>
             </div>
         </div>
     </div>
 </div>
-

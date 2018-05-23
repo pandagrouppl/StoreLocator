@@ -175,7 +175,7 @@
                         </arguments>
                     </block>
                 </block>
-                <block class="Magento\Theme\Block\Html\Title" name="success.popup" template="PandaGroup_Catalog::success-popup.phtml"/>
+                <block class="Magento\Catalog\Block\Product\View\Description" name="success.popup" template="PandaGroup_Catalog::success-popup.phtml"/>
                 <block class="Magento\Catalog\Block\Product\View\Additional" name="product.info.additional"
                        as="product_additional_data"/>
                 <block class="Magento\Cookie\Block\RequireCookie" name="require-cookie"

@@ -8,7 +8,17 @@
 
     .old-price {
         order: -1;
-        text-decoration: line-through;
         margin-right: 15px;
+        position: relative;
+        font-size: 1em;
+
+        &::after {
+            border-top: 1.4px solid $black;
+            content: "";
+            position: absolute;
+            top: 48%;
+            bottom: 0;
+            width: 101%;
+        }
     }
 }

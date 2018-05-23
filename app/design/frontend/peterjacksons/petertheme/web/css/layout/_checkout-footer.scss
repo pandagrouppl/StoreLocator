@@ -7,7 +7,7 @@
     }
 
     @media all and (max-width: $sm-breakpoint) {
-        display: none;
+        //display: none;
     }
 }
 
@@ -46,13 +46,16 @@
         }
     }
 
-
     .shipping-returns-click {
         font-weight: 300;
         font-size: 13px;
         color: #928383;
         text-decoration: underline;
         cursor: pointer;
+
+        @media all and (max-width: $pdp-desc-bp) {
+            display: none;
+        }
     }
 
 

@@ -41,6 +41,7 @@
         "PandaGroup/ContactExtender": "dev-master",
         "PandaGroup/CategoryWidget": "dev-master",
         "PandaGroup/CatalogExtender": "dev-master",
+        "PandaGroup/LoginIcon": "dev-master",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -67,7 +68,6 @@
     },
     "require-dev": {
         "mirasvit/module-profiler": "^1.0",
-        "PandaGroup/ShopByLook": "dev-master",
         "phpunit/phpunit": "4.1.0",
         "squizlabs/php_codesniffer": "1.5.3",
         "phpmd/phpmd": "@stable",
@@ -233,6 +233,10 @@
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-peter-theme-settings.git"
         },
+        "34": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
+        },
         "amastyGiftCard": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git"
@@ -245,7 +249,6 @@
             "type": "composer",
             "url": "https://composer.amasty.com/community/"
         },
-
         "adrollPixel": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git"
