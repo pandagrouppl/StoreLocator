@@ -2,6 +2,7 @@
 return array (
   'modules' => 
   array (
+    'Adroll_Pixel' => 1,
     'Amasty_Base' => 1,
     'Magento_Store' => 1,
     'Amasty_Quickview' => 1,
@@ -14,6 +15,7 @@ return array (
     'Magento_Indexer' => 1,
     'Anowave_Package' => 1,
     'Magento_Version' => 1,
+    'Apptrian_FacebookPixel' => 1,
     'Magento_Cms' => 1,
     'Magento_Catalog' => 1,
     'Light4website_CMSUpdate' => 1,
@@ -143,12 +145,12 @@ return array (
     'PandaGroup_EmailTester' => 1,
     'PandaGroup_GiftCardExtender' => 1,
     'PandaGroup_GuestWishlist' => 1,
+    'PandaGroup_LoginIcon' => 1,
     'PandaGroup_SlackIntegration' => 1,
     'PandaGroup_Migration' => 1,
     'PandaGroup_Quickview' => 1,
     'PandaGroup_RegionsPatcher' => 1,
     'PandaGroup_Salesforce' => 1,
-    'PandaGroup_ShopByLook' => 1,
     'PandaGroup_MagentoSlackMonitor' => 1,
     'PandaGroup_SortByExtender' => 1,
     'PandaGroup_SpecialPriceFixer' => 1,
