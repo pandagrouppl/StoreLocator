@@ -70,15 +70,6 @@
         @include button-black();
     }
 
-    &__gotocheckout,
-    &__continue {
-        max-width: 260px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     &--contact .success-popup {
         &__popup {
             width: 530px;
@@ -160,9 +151,20 @@
         padding: 5px;
     }
 
+    &__close {
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    &__top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     &__logo {
         max-width: 100%;
-        margin: 20px 0;
+        margin: 10px 0 20px 0;
     }
 
     &__text {

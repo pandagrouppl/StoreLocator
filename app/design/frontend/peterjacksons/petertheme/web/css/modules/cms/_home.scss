@@ -131,21 +131,12 @@ body[class~='cms-home'] {
     }
 
     .btn--padding {
-        padding: 22px 24px;
-        margin: 2.6em 2.7em;
+        padding: 11px 16px;
+        margin: 0 0 2em 0;
         line-height: 0;
         border-radius: 0;
-        font-size: 19pt;
+        font-size: 12pt;
         font-weight: 300;
-
-        @media all and (max-width: 1500px) {
-            margin: 2.6em 1.7em;
-        }
-
-        @media all and (max-width: 1260px) {
-            margin: 2.6em 0.7em;
-            font-size: 14pt;
-        }
 
         @media all and (max-width: 975px) {
             font-size: 11pt;
@@ -154,6 +145,7 @@ body[class~='cms-home'] {
         @media all and (max-width: 560px) {
             margin: 10px 0 0 0;
             padding: 15px;
+            font-size: 9pt;
         }
     }
 
@@ -171,19 +163,23 @@ body[class~='cms-home'] {
 }
 
 .main-banner {
-    background-image: url('../../img/assets/home-11-2017/main-banner-new.png');
+    background-image: url('../../img/assets/home-11-2017/homepage2105.png');
     width: 100%;
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -14px 0;
+    background-position: 0 0;
     height: 84vh;
     cursor: pointer;
+
+    &__image {
+        padding: 7%;
+    }
 
     &__wrapper {
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
     }
 
@@ -198,7 +194,9 @@ body[class~='cms-home'] {
         height: 100%;
         justify-content: center;
         align-items: center;
-        margin: 5em 0 0 0;
+        margin: 14.3em;
+        background: rgba(0, 0, 0, 0.7);
+        width: 450px;
 
         @media all and (max-width: 560px) {
             height: 100%;
@@ -561,10 +559,6 @@ body[class~='cms-home'] {
         height: 700px;
         background-size: cover;
 
-        &__content-box {
-            margin: 0;
-        }
-
         button {
             font-size: 12px;
         }
@@ -595,15 +589,11 @@ body[class~='cms-home'] {
 
     .main-banner {
         height: 615px;
-        background-position: -225px 0;
+        background-position: 0 0;
 
         &__content-box {
             max-width: 560px;
             margin: 0 14.2em;
-        }
-
-        &__image {
-            width: 100%;
         }
 
         button {
@@ -757,20 +747,22 @@ body[class~='cms-home'] {
         &__inner {
             margin: 0 1em;
             padding: 0;
-            height: 100%;
+            height: 65%;
         }
 
         &__content-box {
             margin: 0;
+            max-width: 315px;
         }
 
         img {
             max-width: 100%;
+            padding: 0;
         }
 
         &__wrapper {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             padding: 0;
         }
 

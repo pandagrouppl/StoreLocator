@@ -143,14 +143,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-corporate.git",
-                "reference": "010923f70e2ac54c0432855da1ac929551f9472a"
+                "reference": "31cee498717e63abf5c65b3eabb772339653f922"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Corporate module for Magento 2.x",
-            "time": "2018-04-04 13:27:58"
+            "time": "2018-05-16 14:49:32"
         },
         {
             "name": "PandaGroup/CouponExtender",
@@ -941,12 +941,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git",
-                "reference": "6319714bb3a4fe699c5db0edb887f5e8fe40a6dc"
+                "reference": "155f4dc20240aae06dd5cb8747475f37974d053a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colinmollenhour/Cm_Cache_Backend_Redis/zipball/6319714bb3a4fe699c5db0edb887f5e8fe40a6dc",
-                "reference": "6319714bb3a4fe699c5db0edb887f5e8fe40a6dc",
+                "url": "https://api.github.com/repos/colinmollenhour/Cm_Cache_Backend_Redis/zipball/155f4dc20240aae06dd5cb8747475f37974d053a",
+                "reference": "155f4dc20240aae06dd5cb8747475f37974d053a",
                 "shasum": ""
             },
             "require": {
