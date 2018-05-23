@@ -149,7 +149,6 @@ return array (
     'PandaGroup_SlackIntegration' => 1,
     'PandaGroup_Migration' => 1,
     'PandaGroup_Quickview' => 1,
-    'PandaGroup_RecentlyViewed' => 1,
     'PandaGroup_RegionsPatcher' => 1,
     'PandaGroup_Salesforce' => 1,
     'PandaGroup_MagentoSlackMonitor' => 1,
