@@ -62,13 +62,14 @@ body[class~='cms-sustainability'] {
                 border-bottom: none;
             }
 
-            .header-middle__logo > img {
-                filter: brightness(0) invert(1);
-            }
+            //.header-middle__logo > img {
+            //    filter: brightness(0) invert(1);
+            //}
 
             .ui-menu-item {
                 span, a, i {
-                    color: white;
+                    color: black;
+                    font-weight: 400;
                 }
             }
 
