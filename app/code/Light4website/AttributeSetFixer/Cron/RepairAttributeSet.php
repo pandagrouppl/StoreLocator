@@ -20,31 +20,11 @@ class RepairAttributeSet
 
     public function execute()
     {
-        // ---------------------------------------- BOOT MAGENTO CORE ---------------------------------------- //
-
-//        require dirname(__FILE__) .'/app/bootstrap.php';
-//        $bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
-//        /** @var \Magento\Framework\ObjectManager\ObjectManager $objectManager */
-//        $objectManager = $bootstrap->getObjectManager();
-
-// ---------------------------------------- PREPARE OBJECTS ---------------------------------------- //
-
-//        /** @var Magento\Framework\App\State $state */
-//        $state = $objectManager->create('Magento\Framework\App\State');
-//        try {
-//            $state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
-//        } catch (\Exception $e) {
-//            echo $e->getMessage();
-//            exit;
-//        }
-
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 
 
         /** @var \Magento\Catalog\Model\Product $productModel */
         $productModel = $objectManager->create('Magento\Catalog\Model\Product');
-        /** @var \Magento\Catalog\Model\ProductRepository $productRepository */
-        $productRepository = $objectManager->create('Magento\Catalog\Model\ProductRepository');
         /** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $productCollection */
         $productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
         /** @var \Magento\ConfigurableProduct\Model\ResourceModel\Product\Type\Configurable $confProductModel */
@@ -64,18 +44,12 @@ class RepairAttributeSet
             $attrSetIds[$item['attribute_set_name']] = $item['attribute_set_id'];
         }
 
-//var_dump($attrSetIds); exit;
-
-
-
-
-
 // ---------------------------------------- UPDATE ATTRIBUTE SETS ---------------------------------------- //
 
         $collection = $productCollection->addAttributeToSelect('*')->load();
 
-        $logger->debug('START UPDATE PROCESS');
-        $logger->debug('Quantity of products: ' . $collection->count());
+        $this->logger->debug('START UPDATE PROCESS');
+        $this->logger->debug('Quantity of products: ' . $collection->count());
 
         $qtyOfNotFountAttributeSet = 0;
 
@@ -93,13 +67,13 @@ class RepairAttributeSet
             $giftCardAttributeSet       => ['Gift'],
             $testProductAttributeSet    => ['Test'],
 
-            $suitAttributeSet           => ['Suit'],
-            $shirtAttributeSet          => ['Shirt'],
-            $tieAttributeSet            => ['Tie'],
-            $pantsAttributeSet          => [],
+            $suitAttributeSet           => ['Suit', 'Carlisle Charcoal', 'Bradley Indigo', 'Winston Cobalt', 'Morgan Navy End on End'],
+            $shirtAttributeSet          => ['Shirt', 'Milan'],
+            $tieAttributeSet            => ['Tie', 'Dot', 'Repp'],
+            $pantsAttributeSet          => ['Trouser'],
             $chinoAttributeSet          => ['Chino'],
-            $accessoriesAttributeSet    => ['Cufflink', 'Pin', 'Square', 'Belt', 'Bag'],
-            $clothingAttributeSet       => ['Vest', 'Coat', 'Overcoat', 'Blazer', 'JumperXL', 'Jacket', 'Brogue', 'Derby', 'Trouser', 'Knit', 'Cardigan', 'Sock'],
+            $accessoriesAttributeSet    => ['Cufflink', 'Pin', 'Square', 'Belt', 'Bag', 'Cuff', 'Teardrop', 'Wallet'],
+            $clothingAttributeSet       => ['Vest', 'Coat', 'Overcoat', 'Blazer', 'JumperXL', 'Jacket', 'Brogue', 'Derby', 'Knit', 'Cardigan', 'Sock'],
         ];
 
         /** @var \Magento\Catalog\Model\Product $product */
@@ -120,9 +94,9 @@ class RepairAttributeSet
                             $product->setAttributeSetId($attrSetIds[$attributeSetKey]);
                             try {
                                 $product->save();
-                                $logger->debug('Changed ' . $attributeSetValue . ' in product: ' . $productName . ' so will be set to: ' . $attributeSetKey);
+                                $this->logger->debug('Changed ' . $attributeSetValue . ' in product: ' . $productName . ' so will be set to: ' . $attributeSetKey);
                             } catch (\Exception $e) {
-                                $logger->error('Cannot save product: ' . $productName . ' in attribute set: ' . $attributeSetKey . '. Details: ' . $e->getMessage());
+                                $this->logger->error('Cannot save product: ' . $productName . ' in attribute set: ' . $attributeSetKey . '. Details: ' . $e->getMessage());
 
                                 echo $e->getMessage();
                             }
@@ -159,8 +133,24 @@ class RepairAttributeSet
                         foreach ($attributeSetValues as $attributeSetValue) {
 
                             if (false !== stristr($parentProductName, $attributeSetValue)) {
-                                //$logger->debug('Setting by parent: ' . $parentProductName . ' for: ' . $productName);
+                                //$this->logger->debug('Setting by parent: ' . $parentProductName . ' for: ' . $productName);
                                 //echo 'Found ' . $attributeSetValue . ' in product: ' . $productName . ' so will be set to: ' . $attributeSetKey . "\n";
+
+
+                                // Change attribute set
+                                if (true === isset($attrSetIds[$attributeSetKey]) AND $product->getAttributeSetId() != $attrSetIds[$attributeSetKey]) {
+                                    $product->setAttributeSetId($attrSetIds[$attributeSetKey]);
+                                    try {
+                                        $product->save();
+                                        $this->logger->debug('Changed ' . $attributeSetValue . ' in product: ' . $productName . ' so will be set to: ' . $attributeSetKey);
+                                    } catch (\Exception $e) {
+                                        $this->logger->error('Cannot save product: ' . $productName . ' in attribute set: ' . $attributeSetKey . '. Details: ' . $e->getMessage());
+
+                                        echo $e->getMessage();
+                                    }
+
+                                }
+
                                 $foundAttributeSet = true;
                                 break;
                             }
@@ -175,17 +165,15 @@ class RepairAttributeSet
 
             if (false === $foundAttributeSet) {
                 //echo 'NIE ZNALEZIONO DLA: ' . $productName . "\n";
-                $logger->debug('Not found attribute for: ' . $productName);
+                $this->logger->debug('Not found attribute for: ' . $productName);
 
                 $qtyOfNotFountAttributeSet++;
             }
 
         }
 
-        $logger->debug('Quantity of not founded attribute sets: ' . $qtyOfNotFountAttributeSet);
-
-        $logger->debug('Quantity of not founded attribute sets: ' . $qtyOfNotFountAttributeSet);
-        $logger->debug('Quantity of products: ' . $collection->count());
+        $this->logger->debug('Quantity of not founded attribute sets: ' . $qtyOfNotFountAttributeSet);
+        $this->logger->debug('Quantity of products: ' . $collection->count());
 
 //        echo 'Quantity of not founded attribute sets: ' . $qtyOfNotFountAttributeSet . "\n";
 //        echo 'Quantity of products: ' . $collection->count() . "\n";
