@@ -1,6 +1,6 @@
 <?php
 
-namespace Light4website\CMSUpdate\Setup;
+namespace PandaGroup\CMSUpdate\Setup;
 
 use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Light4website\CMSUpdate\Setup;
+namespace PandaGroup\CMSUpdate\Setup;
 
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;

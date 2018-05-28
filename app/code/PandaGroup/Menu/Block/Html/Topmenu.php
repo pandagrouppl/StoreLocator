@@ -1,6 +1,6 @@
 <?php
 
-namespace Light4website\Menu\Block\Html;
+namespace PandaGroup\Menu\Block\Html;
 
 class Topmenu extends \Magento\Theme\Block\Html\Topmenu
 {
@@ -90,7 +90,7 @@ class Topmenu extends \Magento\Theme\Block\Html\Topmenu
         try {
             $CMS_Block = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($blockName)->toHtml();
             return $CMS_Block;
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
         return '';

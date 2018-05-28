@@ -1,6 +1,6 @@
 <?php
 
-namespace Light4website\CMSUpdate\Block;
+namespace PandaGroup\CMSUpdate\Block;
 
 class NonCacheableBlock extends \Magento\Cms\Block\Block
 {

@@ -1,13 +1,6 @@
 <?php
-/**
- * Copyright © 2013-2017 Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-namespace Light4website\Checkout\Block\Checkout;
 
-use Magento\Directory\Helper\Data as DirectoryHelper;
-use Magento\Customer\Model\Session;
-use Magento\Customer\Api\CustomerRepositoryInterface as CustomerRepository;
+namespace PandaGroup\Checkout\Block\Checkout;
 
 class AttributeMerger extends \Magento\Checkout\Block\Checkout\AttributeMerger
 {

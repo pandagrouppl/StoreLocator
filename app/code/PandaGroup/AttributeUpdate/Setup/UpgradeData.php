@@ -109,6 +109,20 @@ class UpgradeData implements \Magento\Framework\Setup\UpgradeDataInterface
             );
         }
 
+        if (version_compare($context->getVersion(), "1.0.1", "<")) {
+            $eavSetup->addAttribute(\Magento\Catalog\Model\Category::ENTITY, 'large_images_template', [
+                'type'     => 'int',
+                'label'    => 'Use Large Images Template',
+                'input'    => 'boolean',
+                'source'   => 'Magento\Eav\Model\Entity\Attribute\Source\Boolean',
+                'visible'  => true,
+                'default'  => '0',
+                'required' => false,
+                'global'   => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
+                'group'    => 'Design',
+            ]);
+        }
+
         $setup->endSetup();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Light4website\Menu\Block\Html;
+namespace PandaGroup\Menu\Block\Html;
 
 class Responsivemenu extends \Magento\Theme\Block\Html\Topmenu
 {
