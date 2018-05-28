@@ -42,6 +42,9 @@
         "PandaGroup/CategoryWidget": "dev-master",
         "PandaGroup/CatalogExtender": "dev-master",
         "PandaGroup/LoginIcon": "dev-master",
+        "anowave/sort": "2.0.0",
+        "fishpig/module-wordpress": "1.0.0.55",
+        "magictoolbox/magic360": "1.5.11",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
@@ -236,6 +239,22 @@
         "34": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
+        },
+        "anowavePackage": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-anowave-package.git"
+        },
+        "anowaveSort": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-anowave-sort.git"
+        },
+        "fishpigWordpress": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-fishpig-wordpress.git"
+        },
+        "magictoolboxMagic360": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-magictoolbox-magic360.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
