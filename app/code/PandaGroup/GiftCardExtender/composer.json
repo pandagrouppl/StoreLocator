@@ -1,0 +1,6 @@
+{
+    "name": "PandaGroup/GiftCardExtender",
+    "description": "PandaGroup GiftCard Extender Module",
+    "type": "magento2-panda-module",
+    "version": "1.0.0"
+}

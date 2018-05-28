@@ -1,0 +1,12 @@
+{
+    "name": "PandaGroup/CategoryWidget",
+    "description": "Category Widget for Magento 2",
+    "authors": [
+        {
+            "name": "Karol Brzozowski",
+            "email": "kbrzozowski@light4website.com"
+        }
+    ],
+    "require": {},
+    "type": "magento2-panda-module"
+}

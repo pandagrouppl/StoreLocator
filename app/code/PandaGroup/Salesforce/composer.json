@@ -1,0 +1,7 @@
+{
+    "name": "PandaGroup/Salesforce",
+    "description": "Salesforce Marketing Cloud Integration module for Magento 2",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-panda-module"
+}

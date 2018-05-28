@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="\Magento\Wishlist\Block\Link" type="\PandaGroup\GuestWishlist\Block\Overrides\Wishlist\Link"/>
+    <preference for="\Magento\Wishlist\CustomerData\Wishlist" type="\PandaGroup\GuestWishlist\CustomerData\Overrides\Wishlist"/>
+    <preference for="\Magento\Wishlist\Helper\Data" type="\PandaGroup\GuestWishlist\Helper\Data" />
+    <preference for="\Magento\Wishlist\Controller\WishlistProviderInterface" type="\PandaGroup\GuestWishlist\Controller\WishlistProvider" />
+    <preference for="\Magento\Wishlist\Controller\Index\Add" type="\PandaGroup\GuestWishlist\Controller\Index\Add" />
+    <preference for="\Magento\Wishlist\Controller\Index\Remove" type="\PandaGroup\GuestWishlist\Controller\Index\Remove" />
+    <preference for="\Magento\Wishlist\Controller\Index\Cart" type="\PandaGroup\GuestWishlist\Controller\Index\Cart" />
+    <preference for="\Magento\Wishlist\Controller\Index\Fromcart" type="\PandaGroup\GuestWishlist\Controller\Index\Fromcart" />
+    <type name="Magento\Wishlist\Controller\AbstractIndex">
+        <plugin name="authentication" type="\PandaGroup\GuestWishlist\Controller\Index\Plugin\Authentication" sortOrder="10"/>
+    </type>
+    <type name="Magento\Wishlist\Controller\Index\Add">
+        <plugin name="add_product" type="\PandaGroup\GuestWishlist\Controller\Index\Plugin\Add" sortOrder="10"/>
+    </type>
+    <preference for="\Magento\Wishlist\Model\AuthenticationStateInterface" type="\PandaGroup\GuestWishlist\Model\AuthenticationState"/>
+</config>

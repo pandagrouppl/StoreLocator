@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Inchoo d.o.o.
+ * created by Zoran Salamun(zoran.salamun@inchoo.net)
+ * Module is created for Custom Controllers demonstration
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+    <router id="standard">
+        <route id="custom_checkout" frontName="cart">
+            <module name="PandaGroup_Checkout" />
+        </route>
+    </router>
+</config>

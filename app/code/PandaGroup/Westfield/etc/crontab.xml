@@ -1,0 +1,10 @@
+<config>
+<group id="default">
+    <job name="pandagroup_westfield_send_full_catalog" instance="PandaGroup\Westfield\Model\Api" method="sendCatalog">
+        <schedule>0 3 * * *</schedule>
+    </job>
+    <!--<job name="pandagroup_westfield_check_statuses" instance="PandaGroup\Westfield\Model\Api" method="checkStatuses">
+        <schedule>0 4 * * *</schedule>
+    </job>-->
+</group>
+</config>

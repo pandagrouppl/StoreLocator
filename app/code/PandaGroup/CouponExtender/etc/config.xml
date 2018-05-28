@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <pandagroup_coupon>
+            <coupon_extended_settings>
+                <redirects_enable>1</redirects_enable>
+            </coupon_extended_settings>
+        </pandagroup_coupon>
+    </default>
+</config>

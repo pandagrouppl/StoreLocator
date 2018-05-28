@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_emailtester" translate="label" type="text" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-emailtester</class>
+            <label><![CDATA[Email Tester]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_EmailTester::config</resource>
+            <group id="emailtester_basic_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Email Templates Tester</label>
+                <field id="email_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Email To Send Template</label>
+                    <validate>required-entry email2</validate>
+                </field>
+
+                <field id="template_select" translate="select" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Select Template</label>
+                    <source_model>PandaGroup\EmailTester\Model\Config\Source\EmailTemplatesList</source_model>
+                </field>
+
+                <field id="send_email_template_test_button" translate="label" type="button" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\EmailTester\Block\System\Config\SendEmailTemplateTest</frontend_model>
+                    <label>Send Test Email</label>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

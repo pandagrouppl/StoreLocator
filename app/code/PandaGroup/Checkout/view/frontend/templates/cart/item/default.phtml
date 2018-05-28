@@ -1,0 +1,150 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Checkout\Block\Cart\Item\Renderer */
+
+$_item = $block->getItem();
+$product = $_item->getProduct();
+
+$isVisibleProduct = $product->isVisibleInSiteVisibility();
+/** @var \Magento\Msrp\Helper\Data $helper */
+$helper = $this->helper('Magento\Msrp\Helper\Data');
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data');
+?>
+<div class="items-table__item">
+
+    <?php if ($block->hasProductUrl()):?>
+        <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl() ?>"
+           title="<?php echo $block->escapeHtml($block->getProductName()) ?>"
+           tabindex="-1"
+           class="product-item-photo items-table__product-image">
+    <?php else:?>
+        <span class="product-item-photo items-table__product-image">
+    <?php endif;?>
+
+    <?php echo $block->getImage($block->getProductForThumbnail(), 'cart_page_product_thumbnail')->toHtml(); ?>
+
+    <?php if ($block->hasProductUrl()):?>
+        </a>
+    <?php else: ?>
+        </span>
+    <?php endif; ?>
+
+    <div class="items-table__product-info" data-th="<?php echo $block->escapeHtml(__('Item')); ?>" >
+
+        <span class="product-item-name items-table__product-name">
+            <?php if ($block->hasProductUrl()):?>
+                <a href="<?php /* @escapeNotVerified */ echo $block->getProductUrl() ?>"><?php echo $block->escapeHtml($block->getProductName()) ?></a>
+            <?php else: ?>
+                <?php echo $block->escapeHtml($block->getProductName()) ?>
+            <?php endif; ?>
+        </span>
+
+        <dl class="item-options items-table__product-code">
+            <dt>Product Code: </dt><dd><?php /* @escapeNotVerified */ echo $_item->getSku() ?></dd><br>
+        </dl>
+
+        <?php $addInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
+        <?php if ($addInfoBlock): ?>
+            <?php echo $addInfoBlock->setItem($_item)->toHtml() ?>
+        <?php endif;?>
+
+
+        <div class="items-table__price" data-th="<?php echo $block->escapeHtml(__('Price')); ?>">
+            <?php /* @escapeNotVerified */ echo __('Price') ?>:
+            <?php
+            $finalPriceHtml = $block->getUnitPriceHtml($_item);
+            $finalPrice = (float) $product->getFinalPrice();
+            $regularPrice = $product->getPrice();
+            $regularPriceFloat = (float) $regularPrice;
+            $specialPrice = (float) $product->getSpecialPrice();
+            ?>
+            <?php if(($specialPrice && ($specialPrice < $regularPriceFloat) && ($finalPrice !== $regularPriceFloat)) || ($finalPrice < $regularPriceFloat)): ?>
+                <span class="items-table__price items-table__price--strikethrough">
+                    <?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($regularPrice) ?>
+                </span>
+                <span class="items-table__price items-table__price--special">
+                    <?php echo $this->helper('Magento\Checkout\Helper\Data')->formatPrice($finalPrice) ?>
+                </span>
+            <?php else: ?>
+                <span class="items-table__price">
+                    <?php echo $finalPriceHtml; ?>
+                </span>
+            <?php endif; ?>
+        </div>
+
+        <?php if ($messages = $block->getMessages()): ?>
+            <?php foreach ($messages as $message): ?>
+                <div class="items-table__message cart item message <?php /* @escapeNotVerified */ echo $message['type'] ?>"><div><?php echo $block->escapeHtml($message['text']) ?></div></div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+        <div class="items-table__options-and-actions">
+            <div class="items-table__cart-select">
+                <span class="items-table__label">
+                    <?php /* @escapeNotVerified */ echo __('Qty') ?>
+                </span>
+                <div class="select__wrapper select__wrapper--cart-qty select__wrapper--cart">
+                    <figure class="select__arrow"></figure>
+                    <select class="select__cart-select"
+                            id="cart-<?php /* @escapeNotVerified */ echo $_item->getId() ?>-qty"
+                            name="cart[<?php /* @escapeNotVerified */ echo $_item->getId() ?>][qty]"
+                            data-cart-item-id="<?php /* @escapeNotVerified */ echo $_item->getSku() ?>"
+                            title="<?php echo $block->escapeHtml(__('Qty')); ?>"
+                            data-validate="{required:true,'validate-greater-than-zero':true}"
+                            data-role="cart-item-qty"
+                            data-mage-init='{
+                                    "qtyChanger":{"productId":"<?php echo $_item->getId(); ?>"}
+                                    }'
+                    >
+                        <?php $value = $block->getQty();
+
+                        for ($i = 1; $i <= 10; $i++) {
+                            if ($i == $value) {
+                                echo "<option value='{$i}' selected>{$i}</option>";
+                            } else {
+                                echo "<option value='{$i}'>{$i}</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+                <?php
+                $sizeBlock = $this->getLayout()
+                    ->createBlock(
+                        'PandaGroup\Checkout\Block\Cart\Item\Renderer\Size')
+                    ->setData(
+                        [
+                            'childProductId' => $_item->getId(),
+                            'parentProductId' => $parentProductId = $product->getId(),
+                            'productCartOptions' => $block->getOptionList()
+                        ]
+                    );
+                echo $sizeBlock->toHtml();
+                ?>
+            <div class="items-table__actions">
+                <?php /* @escapeNotVerified */ echo $block->getActions($_item) ?>
+            </div>
+        </div>
+        <span class="items-table__product-delivery">Est. delivery 3-4 business days</span>
+    </div>
+    </div>
+
+
+    <?php
+        # DEBUG
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $deployMode = $objectManager->create('Magento\Framework\App\State')->getMode();
+        if ($deployMode === \Magento\Framework\App\State::MODE_DEVELOPER) :
+    ?>
+    <small>
+        <?php echo 'Ids: Product Id: ' . $_item->getId() . ', Parent Id: ' . $product->getId() . '<br>'; ?>
+        <?php echo 'Prices: Regular: ' . $regularPriceFloat . ', Special: ' . $specialPrice . ', Final: ' . $finalPrice, ' FinalHTML:' . $finalPriceHtml; ?>
+    </small>
+    <?php
+        endif;
+        # END DEBUG
+    ?>

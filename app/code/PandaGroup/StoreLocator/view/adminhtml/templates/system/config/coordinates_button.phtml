@@ -1,0 +1,48 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block PandaGroup\StoreLocator\Block\Adminhtml\System\Config\ButtonCoordinates
+ * @var $jsonHelper \Magento\Framework\Json\Helper\Data
+ */
+$jsonHelper = $this->helper('Magento\Framework\Json\Helper\Data');
+?>
+
+<script>
+    require(['jquery'], function ($) {
+        'use strict';
+        window.fetchCountryCoords = function() {
+            var $lat = $('#pandagroup_store_locator_store_locator_map_settings_lat_text');
+            var $lng = $('#pandagroup_store_locator_store_locator_map_settings_lng_text');
+            $lat.css({transition: "border 1s"});
+            $lng.css({transition: "border 1s"});
+            var $cntry = $('#pandagroup_store_locator_store_locator_settings_country_select');
+            var $cntrytext = $('option[value=' + $cntry.val() + ']').text();
+            var $message = $('#google-api-message');
+            if (!$message.length) {
+                $('#pandagroup_set_coordinates_by_country_button').after('<span id="google-api-message"></span>');
+                $message = $($message.selector);
+            }
+            $.ajax({
+                url: 'http://maps.google.com/maps/api/geocode/json',
+                context: this,
+                data: {address: $cntrytext},
+                method: 'get'
+            }).done(function(json) {
+                if (json.status == 'OK') {
+                    $message.text(' Successfully fetched coordinates for ' + json.results[0].formatted_address);
+                    $lat.val(json.results[0].geometry.location.lat).css({border: "1px solid #10bf10"}).trigger("change");
+                    $lng.val(json.results[0].geometry.location.lng).css({border: "1px solid #10bf10"}).trigger("change");
+                } else {
+                    $message.text(' Google Api Error! Cannot find such place! Check your Address!');
+                }
+            }).fail(function() {
+                $message.text(' Internal Error! Check your internet connection!');
+            });
+        }
+    });
+</script>
+
+
+<?php echo $block->getButtonHtml() ?>

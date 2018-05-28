@@ -1,0 +1,6 @@
+<?php
+$helper = $this->helper('\Magento\Checkout\Helper\Cart');
+$count = $helper->getSummaryCount();
+$count == 1 ? $text = $count . ' item in cart' : $text = $count . ' items in cart';
+?>
+<div class="cart-container__count"><?= $text; ?></div>

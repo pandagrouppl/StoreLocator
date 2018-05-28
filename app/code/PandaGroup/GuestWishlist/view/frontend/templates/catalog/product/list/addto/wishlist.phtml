@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var $block Magento\Wishlist\Block\Catalog\Product\ProductList\Item\AddTo\Wishlist */
+$_product = $block->getProduct();
+?>
+
+<?php if ($block->getWishlistHelper()->isAllow()): ?>
+    <a
+        class="action towishlist"
+        title="<?php echo $block->escapeHtml(__('Add to Wishlist')); ?>"
+        aria-label="<?php echo $block->escapeHtml(__('Add to Wishlist')); ?>"
+        data-wishlist-product-id="<?php echo $_product->getId(); ?>"
+        data-message="<?php /* @escapeNotVerified */ echo __('Adding...');?>"
+        data-config='<?php /* @escapeNotVerified */ echo $block->getAddToWishlistParams($_product); ?>'
+        data-mage-init='{"pandaWishlist": {}}'
+    >
+        <figure class="catalog-item__star" ></figure>
+    </a>
+<?php endif; ?>
+
+

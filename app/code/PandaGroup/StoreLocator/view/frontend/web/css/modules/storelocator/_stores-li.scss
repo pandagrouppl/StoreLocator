@@ -1,0 +1,94 @@
+.stores-li {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    &__store {
+        flex: 0 1 25%;
+        box-sizing: border-box;
+        padding: 50px 10px 40px 30px;
+        min-width: 250px;
+        border-bottom: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-family: Roboto, sans-serif;
+        font-weight: 500;
+        padding: 14px 0 20px 0;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    &__credentials {
+        font-size: 16px;
+        width: 250px;
+        max-width: 100%;
+
+        li {
+            margin: 4px 0 0 0;
+            display: flex;
+            align-items: center;
+            line-height: 1.2em;
+            margin-bottom: 8px;
+            word-break: break-word;
+
+            a {
+                max-width: 100%;
+            }
+
+            &:first-child {
+                font-weight: 500;
+            }
+        }
+
+
+    }
+
+    &__hours-wrapper {
+        @include form-element-wrapper();
+    }
+
+    &__hours {
+        @include form-element();
+        padding: 0 18px 0 8px;
+    }
+
+    &__hours-arrow {
+        @include form-select-wide-arrow();
+    }
+}
+
+@media screen and (max-width: $lg-breakpoint) {
+    .stores-li {
+        max-width: 750px;
+
+        &__store {
+            flex: 0 1 33%;
+        }
+    }
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .stores-li {
+
+        &__store {
+            flex: 0 1 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .stores-li {
+
+        &__store {
+            flex: 1 1 100%;
+        }
+    }
+}
+

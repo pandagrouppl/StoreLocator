@@ -9,44 +9,14 @@
     ],
     "require": {
         "magento/product-community-edition": "2.1.10",
-        "PandaGroup/MigrationTool": "dev-master",
         "composer/composer": "@alpha",
         "strategery/magento2-infinitescroll": "dev-master",
         "oomphinc/composer-installers-extender": "^1.1",
-        "PandaGroup/Base": "dev-master",
-        "PandaGroup/ThemeSettings": "dev-master",
-        "PandaGroup/GuestWishlist": "dev-master",
-        "PandaGroup/Migration": "dev-master",
-        "PandaGroup/StoreLocator": "dev-master",
         "PandaGroup/Frontools": "dev-master",
-        "PandaGroup/Checkout": "dev-master",
-        "PandaGroup/Careers": "dev-master",
-        "PandaGroup/Corporate": "dev-master",
-        "PandaGroup/DiscountInMiniCart": "dev-master",
-        "PandaGroup/Spinner": "dev-master",
-        "PandaGroup/Quickview": "dev-master",
-        "PandaGroup/EmailTester": "dev-master",
-        "PandaGroup/CronSchedulerExtender": "dev-master",
-        "PandaGroup/GiftCardExtender": "dev-master",
-        "PandaGroup/Westfield": "dev-master",
-        "PandaGroup/SlackIntegration": "dev-master",
-        "PandaGroup/MagentoSlackMonitor": "dev-master",
-        "PandaGroup/RegionsPatcher": "dev-master",
-        "PandaGroup/CouponExtender": "dev-master",
-        "PandaGroup/SortByExtender": "dev-master",
-        "PandaGroup/AttributeUpdate": "dev-master",
-        "PandaGroup/AnzExtender": "dev-master",
-        "PandaGroup/Salesforce": "dev-master",
-        "PandaGroup/SpecialPriceFixer": "dev-master",
-        "PandaGroup/ContactExtender": "dev-master",
-        "PandaGroup/CategoryWidget": "dev-master",
-        "PandaGroup/CatalogExtender": "dev-master",
-        "PandaGroup/LoginIcon": "dev-master",
         "anowave/sort": "2.0.0",
         "fishpig/module-wordpress": "1.0.0.55",
         "magictoolbox/magic360": "1.5.11",
         "salesforce-mc/fuel-sdk-php": "^1.1",
-        "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
         "amasty/base": "1.1.2",
         "amasty/module-special-promo-pro": "2.0.4",
@@ -294,11 +264,6 @@
         "installer-types": [
             "magento2-panda-module",
             "magento2-panda-tool"
-        ],
-        "installer-paths": {
-            "app/code/{$vendor}/{$name}/": [
-                "type:magento2-panda-module"
-            ]
-        }
+        ]
     }
 }

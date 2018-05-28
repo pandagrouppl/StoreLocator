@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+
+<!-- Override vendor/magento/module-checkout/view/frontend/layout/checkout_index_index.xml -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--<script src="bundles/checkout.js" />-->
+    </head>
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::breadcrumbs-checkout.phtml</argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">cart</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Cart</item>
+                    <item name="label" xsi:type="string">Cart</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}checkout/cart</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">delivery</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Delivery</item>
+                    <item name="label" xsi:type="string">Delivery</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}checkout/</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">payment</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Payment</item>
+                    <item name="label" xsi:type="string">Payment</item>
+                </argument>
+            </action>
+        </referenceBlock>
+
+        <!-- add messages (#2) (they are removed in vendor) -->
+        <referenceContainer name="columns.top">
+            <container name="page.messages2" htmlTag="div" htmlClass="page-main__message">
+                <block class="Magento\Framework\View\Element\Template" name="ajax.message.placeholder" template="Magento_Theme::html/messages.phtml"/>
+                <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceBlock name="page.main.title" remove="true" />
+
+        <referenceBlock name="checkout.root">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::onepage.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="shipping-address-fieldset" xsi:type="array">
+                                                            <item name="displayArea" xsi:type="string">additional-fieldsets</item>
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="company" xsi:type="array">
+                                                                    <item name="visible" xsi:type="boolean">false</item>
+                                                                </item>
+                                                                <item name="fax" xsi:type="array">
+                                                                    <item name="visible" xsi:type="boolean">false</item>
+                                                                </item>
+                                                                <item name="firstname" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1</item>
+                                                                </item>
+                                                                <item name="lastname" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">2</item>
+                                                                </item>
+                                                                <item name="telephone" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">3</item>
+                                                                    <item name="validation" xsi:type="array">
+                                                                        <item name="validate-number" xsi:type="number">0</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="street" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">4</item>
+                                                                </item>
+                                                                <item name="city" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">5</item>
+                                                                </item>
+                                                                <item name="postcode" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">6</item>
+                                                                </item>
+                                                                <item name="country_id" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">7</item>
+                                                                </item>
+                                                                <item name="region_id" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">8</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="component" xsi:type="string">uiComponent</item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="afterMethods" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="discount" xsi:type="array">
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="payments-list" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="anz_merchant_hosted-form" xsi:type="array">
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="displayArea" xsi:type="string">additional-fieldsets</item>
+                                                                        <item name="form-fields" xsi:type="array">
+                                                                            <item name="company" xsi:type="array">
+                                                                                <item name="visible" xsi:type="boolean">false</item>
+                                                                            </item>
+                                                                            <item name="fax" xsi:type="array">
+                                                                                <item name="visible" xsi:type="boolean">false</item>
+                                                                            </item>
+                                                                            <item name="firstname" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">1</item>
+                                                                            </item>
+                                                                            <item name="lastname" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">2</item>
+                                                                            </item>
+                                                                            <item name="telephone" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">3</item>
+                                                                                <item name="validation" xsi:type="array">
+                                                                                    <item name="validate-number" xsi:type="number">0</item>
+                                                                                </item>
+                                                                            </item>
+                                                                            <item name="street" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">4</item>
+                                                                            </item>
+                                                                            <item name="city" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">5</item>
+                                                                            </item>
+                                                                            <item name="postcode" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">6</item>
+                                                                            </item>
+                                                                            <item name="country_id" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">7</item>
+                                                                            </item>
+                                                                            <item name="region_id" xsi:type="array">
+                                                                                <item name="sortOrder" xsi:type="string">8</item>
+                                                                            </item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="totals" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">3</item>
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="tax" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                                <item name="itemsBefore" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">0</item>
+                                                </item>
+                                                <item name="cart_items" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">1</item>
+                                                </item>
+                                                <item name="itemsAfter" xsi:type="array">
+                                                    <item name="sortOrder" xsi:type="string">2</item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                        <item name="shipping-information" xsi:type="array">
+                                            <item name="config" xsi:type="array">
+                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+        <move element="logo" destination="header.center"/>
+        <referenceBlock name="checkout.root">
+            <block class="Amasty\GiftCard\Block\Checkout\Cart\GiftCard" name="checkout.cart.amgiftcard" as="amgiftcard" template="checkout/cart/giftcard.phtml"/>
+            <block class="Magento\Checkout\Block\Cart\Coupon" name="checkout.coupon" template="PandaGroup_Checkout::cart/coupon.phtml"/>
+        </referenceBlock>
+
+        <!--  change header to checkout header -->
+        <referenceContainer name="header.responsive" remove="true" />
+        <referenceBlock name="header.left">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::checkout-header/left.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="headers">
+            <referenceContainer name="header.right" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="header.right.alt" template="PandaGroup_Checkout::checkout-header/right.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
+        <referenceContainer name="header.shippingbar">
+            <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="header.center" htmlClass="checkout-header__middle" />
+        <referenceContainer name="headers" htmlClass="checkout-header" />
+        <referenceBlock name="logo">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">html/header/logo-checkout.phtml</argument>
+            </action>
+        </referenceBlock>
+        <!--  // change header to checkout header -->
+
+        <!-- mobile cart -->
+        <referenceContainer name="header.center">
+            <block class="Magento\Framework\View\Element\Template" name="header.shopping.bag" template="PandaGroup_Checkout::checkout-header/mobile-checkout.phtml"/>
+        </referenceContainer>
+        <!---->
+
+        <!-- remove footer -->
+        <referenceContainer name="footer-container" htmlClass="page-footer-checkout">
+            <block class="Magento\Framework\View\Element\Template" name="after.items-table" as="after" template="PandaGroup_Checkout::cart/checkout-footer.phtml" />
+        </referenceContainer>
+        <referenceBlock name="footer-content" remove="true" />
+        <!---->
+
+        <referenceContainer name="before.body.end">
+            <container name="shipping.overlay" label="Shipping overlay" htmlTag="div" htmlClass="overlay__overlay overlay__overlay-shipping">
+                <container name="shipping.popup" label="shipping popup" htmlTag="section" htmlClass="overlay__popup">
+                    <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/overlay-close.phtml" />
+                    <block class="Magento\Cms\Block\Block" name="shipping.overlay.content">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">shipping-returns-block</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <container name="contact.overlay" label="Contact overlay" htmlTag="div" htmlClass="overlay__overlay overlay__overlay-contact">
+                <container name="contact.popup" label="contact popup" htmlTag="section" htmlClass="overlay__popup">
+                    <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/overlay-close.phtml" />
+                    <block class="Magento\Contact\Block\ContactForm" template="Magento_Contact::form.phtml" />
+                </container>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

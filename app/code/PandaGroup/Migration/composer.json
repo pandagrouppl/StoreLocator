@@ -1,0 +1,7 @@
+{
+    "name": "PandaGroup/Migration",
+    "description": "Migration module for Peter Jackson",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-panda-module"
+}

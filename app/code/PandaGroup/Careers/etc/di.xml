@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+<!-- ATTACHMENT EXTENSION -->
+
+	<preference for="\Magento\Framework\Mail\Template\TransportBuilder" type="PandaGroup\Careers\Magento\Mail\Template\TransportBuilder"/>
+
+<!-- LOGGER -->
+
+	<type name="PandaGroup\Careers\Logger\Handler">
+		<arguments>
+			<argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+		</arguments>
+	</type>
+	<type name="PandaGroup\Careers\Logger\Logger">
+		<arguments>
+			<argument name="name" xsi:type="string">PandaGroup/Careers</argument>
+			<argument name="handlers"  xsi:type="array">
+				<item name="system" xsi:type="object">PandaGroup\Careers\Logger\Handler</item>
+			</argument>
+		</arguments>
+	</type>
+
+<!-- RESUMES GRID -->
+
+	<virtualType name="PandaGroupCareersListingGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"/>
+	<virtualType name="PandaGroup\Careers\Model\ResourceModel\Queue\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">pandagroup_careers_email_queue</argument>
+			<argument name="resourceModel" xsi:type="string">PandaGroup\Careers\Model\ResourceModel\Queue</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="careers_resume_index_listing_data_source" xsi:type="string">PandaGroup\Careers\Model\ResourceModel\Queue\Grid\Collection</item>
+
+			</argument>
+		</arguments>
+	</type>
+
+</config>
+

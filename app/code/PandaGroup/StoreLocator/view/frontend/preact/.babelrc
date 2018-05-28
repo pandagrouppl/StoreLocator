@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    ["transform-react-jsx", { "pragma":"h" }],
+    "transform-decorators-legacy"
+  ],
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react",
+    "stage-2"
+  ]
+}

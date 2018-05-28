@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+	<module name="PandaGroup_CategoryWidget" setup_version="1.0.3">
+		<sequence>
+			<module name="PandaGroup_DiscountBanner"/>
+			<module name="PandaGroup_StickyLabels"/>
+			<module name="Magento_Reports"/>
+		</sequence>
+	</module>
+</config>

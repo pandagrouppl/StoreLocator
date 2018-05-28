@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_theme_settings" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup</class>
+            <label>Theme Settings</label>
+            <tab>panda_group</tab>
+            <resource>Magento_ThemeSettings::config</resource>
+            <group id="shipping_bar" translate="label" type="text" sortOrder="5" showInDefault="5" showInWebsite="1" showInStore="1">
+                <label>Shipping Bar Settings</label>
+                <field id="enable_bar_select" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Bar On Header</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Bar Text</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enable_bar_select">1</field>
+                    </depends>
+                </field>
+                <field id="link_text" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Bar Link</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enable_bar_select">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

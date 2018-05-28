@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!--<add id="PandaGroup_Salesforce::salesforce" title="Salesforce" module="PandaGroup_Salesforce" parent="Magento_Backend::stores" sortOrder="9539506" resource="PandaGroup_Salesforce::salesforce"/>-->
+        <!--<add id="PandaGroup_Salesforce::salesforce_list"-->
+             <!--title="Resumes"-->
+             <!--module="PandaGroup_Salesforce"-->
+             <!--sortOrder="10"-->
+             <!--action="salesforce/resume/index"-->
+             <!--resource="PandaGroup_Salesforce::list"-->
+             <!--parent="PandaGroup_Salesforce::salesforce"/>-->
+        <!--<add id="PandaGroup_Salesforce::salesforce_configuration"-->
+             <!--title="Configuration"-->
+             <!--module="PandaGroup_Salesforce"-->
+             <!--sortOrder="20"-->
+             <!--parent="PandaGroup_Salesforce::salesforce"-->
+             <!--action="adminhtml/system_config/edit/section/pandagroup_salesforce"-->
+             <!--resource="PandaGroup_Salesforce::salesforce_configuration"/>-->
+    </menu>
+</config>

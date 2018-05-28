@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <light4website_westfield>
+            <general>
+                <enabled>0</enabled>
+                <campaign_code>11l217</campaign_code>
+                <gateway_url_production_full>https://www.westfield.com.au/api/product/master/upload/full</gateway_url_production_full>
+                <gateway_url_production_partial>https://www.uat.westfield.com.au/api/product/master/upload/partial</gateway_url_production_partial>
+                <gateway_url_test_full>https://www.westfield.com.au/api/product/master/upload/full</gateway_url_test_full>
+                <gateway_url_test_partial>https://www.westfield.com.au/api/product/master/upload/partial</gateway_url_test_partial>
+                <test_mode>0</test_mode>
+                <debug_mode>0</debug_mode>
+                <color_attribute_code>colour</color_attribute_code>
+            </general>
+        </light4website_westfield>
+    </default>
+</config>

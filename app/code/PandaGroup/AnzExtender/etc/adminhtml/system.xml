@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_anz_extender" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-anz-extender</class>
+            <label><![CDATA[Anz Additional Settings]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_AnzExtender::config</resource>
+            <group id="anz_additional_settings" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Magenest ANZ Additional Settings</label>
+                <field id="send_email_after_canceled_order_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send Email To Customer After Canceled Order</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

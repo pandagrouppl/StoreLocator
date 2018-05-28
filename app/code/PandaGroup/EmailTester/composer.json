@@ -1,0 +1,7 @@
+{
+    "name": "PandaGroup/EmailTester",
+    "description": "EmailTester module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-panda-module"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="pandagroup_category_widget" translate="label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+			<label>Category Widget</label>
+			<tab>panda_group</tab>
+			<resource>PandaGroup_CategoryWidget::config_pandagroup_categorywidget</resource>
+			<group id="category_widget_settings" translate="label" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10">
+				<label>Category Widget Base Settings</label>
+				<field id="enable_select" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+					<label>Enable Widget</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="category_select" translate="label" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20">
+					<label>Select Category</label>
+					<source_model>PandaGroup\CategoryWidget\Model\Config\Source\CategoriesList</source_model>
+				</field>
+				<field id="widget_label_text" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30">
+					<label>Widget Title</label>
+				</field>
+				<field id="show_description_select" translate="label" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40">
+					<label>Show Product Attribute Description</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="hide_on_category_page_select" translate="label" type="select" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40">
+					<label>Hide Widget On Category Page</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

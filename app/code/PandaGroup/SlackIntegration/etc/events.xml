@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="pandagroup_slackintegration_notification_new_order" instance="PandaGroup\SlackIntegration\Observer\NewOrder" />
+    </event>
+    <event name="customer_register_success">
+        <observer name="pandagroup_slackintegration_notification_new_customer" instance="PandaGroup\SlackIntegration\Observer\NewAccount" />
+    </event>
+    <event name="controller_action_postdispatch_review_product_post">
+        <observer name="pandagroup_slackintegration_notification_new_review" instance="PandaGroup\SlackIntegration\Observer\NewReview" />
+    </event>
+    <event name="controller_action_postdispatch_contact_index_post">
+        <observer name="pandagroup_slackintegration_notification_new_contact" instance="PandaGroup\SlackIntegration\Observer\NewContact" />
+    </event>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<pandagroup_category_widget>
+			<category_widget_settings>
+				<enable_select>0</enable_select>
+				<category_select/>
+				<widget_label_text/>
+				<show_description_select>1</show_description_select>
+				<hide_on_category_page_select>0</hide_on_category_page_select>
+			</category_widget_settings>
+		</pandagroup_category_widget>
+	</default>
+</config>

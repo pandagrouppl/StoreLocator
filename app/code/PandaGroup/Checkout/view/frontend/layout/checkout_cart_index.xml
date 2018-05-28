@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--<script src="bundles/cart.js" />-->
+    </head>
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::breadcrumbs-checkout.phtml</argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">cart</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Cart</item>
+                    <item name="label" xsi:type="string">Cart</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">delivery</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Delivery</item>
+                    <item name="label" xsi:type="string">Delivery</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}checkout/</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">payment</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Payment</item>
+                    <item name="label" xsi:type="string">Payment</item>
+                </argument>
+            </action>
+        </referenceBlock>
+
+        <!-- add cart bottom bar and discount field. Add cart.discount for amasty giftcard -->
+        <referenceContainer name="checkout.cart.items">
+            <container name="cart.discount" label="Cart Discount Container" htmlTag="div" htmlClass="discount-field-wrapper" after="checkout.cart.container" />
+            <!-- hide, as there are no discounts on cart design -->
+            <referenceContainer name="cart.discount" display="false" />
+        </referenceContainer>
+        <!-- // -->
+
+        <!-- make sidebar layout with table and buttons-->
+        <referenceContainer name="cart.summary" htmlClass="cart-container__summary">
+            <container name="cart.summary.information" htmlTag="div" htmlClass="cart-container__table" >
+                <block class="Magento\Framework\View\Element\Template" name="cart.summary.items.count" template="PandaGroup_Checkout::cart/cart-count.phtml" />
+            </container>
+            <container name="cart.summary.buttons" htmlTag="div" htmlClass="cart-container__buttons" />
+        </referenceContainer>
+        <!-- move cart.summary to the end of container -->
+        <move element="cart.summary" destination="checkout.cart.container" after="-" />
+        <!-- // -->
+
+        <!-- replace proceed button with ours (no auth check which erased cart content -->
+        <referenceBlock name="checkout.cart.methods.onepage.bottom">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::onepage/link.phtml</argument>
+            </action>
+        </referenceBlock>
+
+        <!-- move all elements from cart.summary to respective places -->
+        <move element="checkout.cart.totals.container" destination="cart.summary.information" />
+        <move element="checkout.cart.shipping" destination="cart.summary.information" />
+        <move element="checkout.cart.summary.title" destination="cart.summary.information" before="-"/>
+        <move element="checkout.cart.coupon" destination="cart.discount" />
+        <move element="checkout.cart.methods.bottom" destination="cart.summary.buttons" />
+        <referenceBlock name="checkout.cart.totals">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/totals.phtml</argument>
+            </action>
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="block-totals" xsi:type="array">
+                            <item name="component" xsi:type="string">Magento_Checkout/js/view/cart/totals</item>
+                            <item name="displayArea" xsi:type="string">totals</item>
+                            <item name="config" xsi:type="array">
+                                <item name="template" xsi:type="string">Magento_Checkout/cart/totals</item>
+                            </item>
+                            <item name="children" xsi:type="array">
+                                <item name="subtotal" xsi:type="array">
+                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/subtotal</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Subtotal</item>
+                                        <item name="template" xsi:type="string">Magento_Checkout/cart/totals/subtotal</item>
+                                    </item>
+                                </item>
+                                <item name="shipping" xsi:type="array">
+                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/cart/totals/shipping</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Shipping</item>
+                                        <item name="template" xsi:type="string">Magento_Checkout/cart/totals/shipping</item>
+                                    </item>
+                                </item>
+                                <item name="amgiftcard" xsi:type="array">
+                                    <item name="component"  xsi:type="string">Amasty_GiftCard/js/cart/totals/giftcard</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Gift Card</item>
+                                    </item>
+                                </item>
+                                <item name="grand-total" xsi:type="array">
+                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/grand-total</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="title" xsi:type="string" translate="true">Total</item>
+                                        <item name="template" xsi:type="string">Magento_Checkout/cart/totals/grand-total</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.shipping">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/shipping.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.coupon">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/coupon.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.methods.bottom">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/methods.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.summary.title">
+            <arguments>
+                <argument translate="true" name="text" xsi:type="string">Order Summary</argument>
+                <argument name="tag" xsi:type="string">div</argument>
+                <argument name="css_class" xsi:type="string">cart-container__title</argument>
+            </arguments>
+        </referenceBlock>
+        <!-- // -->
+
+        <!-- override templates -->
+        <referenceBlock name="checkout.cart.form">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/form.phtml</argument>
+            </action>
+        </referenceBlock>
+        <!---->
+
+        <!-- remove footer -->
+        <referenceContainer name="footer-container" htmlClass="page-footer-checkout">
+            <block class="Magento\Framework\View\Element\Template" name="after.items-table" as="after" template="PandaGroup_Checkout::cart/checkout-footer.phtml" />
+        </referenceContainer>
+        <referenceBlock name="footer-content" remove="true" />
+        <!---->
+
+
+        <!-- shipping overlay -->
+        <referenceContainer name="before.body.end">
+            <container name="shipping.overlay" label="Shipping overlay" htmlTag="div" htmlClass="overlay__overlay overlay__overlay-shipping">
+                <container name="shipping.popup" label="shipping popup" htmlTag="section" htmlClass="overlay__popup">
+                    <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/overlay-close.phtml" />
+                    <block class="Magento\Cms\Block\Block" name="shipping.overlay.content">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">shipping-returns-block</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <container name="contact.overlay" label="Contact overlay" htmlTag="div" htmlClass="overlay__overlay overlay__overlay-contact">
+                <container name="contact.popup" label="contact popup" htmlTag="section" htmlClass="overlay__popup">
+                    <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/footer/overlay-close.phtml" />
+                    <block class="Magento\Contact\Block\ContactForm" template="Magento_Contact::form.phtml" />
+                </container>
+            </container>
+        </referenceContainer>
+        <!-- // -->
+
+        <!--  change header to checkout header -->
+        <referenceContainer name="header.responsive" remove="true" />
+        <referenceBlock name="header.left">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::checkout-header/left.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="headers">
+            <referenceContainer name="header.right" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="header.right.alt" template="PandaGroup_Checkout::checkout-header/right.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
+        <referenceContainer name="header.shippingbar">
+            <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="header.center" htmlClass="checkout-header__middle" />
+        <referenceContainer name="headers" htmlClass="checkout-header" />
+        <referenceBlock name="logo">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">html/header/logo-checkout.phtml</argument>
+            </action>
+        </referenceBlock>
+        <!-- // -->
+
+        <!-- mobile cart -->
+        <referenceContainer name="header.center">
+            <block class="Magento\Framework\View\Element\Template" name="header.shopping.bag" template="PandaGroup_Checkout::checkout-header/mobile-cart.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

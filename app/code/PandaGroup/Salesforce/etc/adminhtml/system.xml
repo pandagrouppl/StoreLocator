@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_salesforce" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-salesforce</class>
+            <label><![CDATA[Salesforce Integration]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_Salesforce::config</resource>
+            <group id="salesforce_base_settings" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Salesforce Settings</label>
+                <field id="status_enable" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Integration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="salesforce_api_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Salesforce API Settings</label>
+                <field id="api_defaultwsdl_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Default WSDL</label>
+                </field>
+                <field id="api_clientid_text" translate="label" type="password" sortOrder="15" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Client Id</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="api_clientsecret_text" translate="label" type="password" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Client Secret</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="api_appsignature_text" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>App Signature</label>
+                </field>
+                <field id="api_xmlloc_text" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>XML Local</label>
+                </field>
+                <field id="api_proxyhost_text" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Proxy Host</label>
+                </field>
+                <field id="api_proxyport_text" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Proxy Port</label>
+                </field>
+                <field id="api_proxyusername_text" translate="label" type="text" sortOrder="45" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Proxy Username</label>
+                </field>
+                <field id="api_proxypassword_text" translate="label" type="password" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Proxy Password</label>
+                </field>
+                <field id="api_baseUrl_text" translate="label" type="text" sortOrder="55" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Base Url</label>
+                </field>
+                <field id="api_baseAuthUrl_text" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Base Auth Url</label>
+                </field>
+            </group>
+            <group id="salesforce_sync_settings" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Synchronisation Settings</label>
+                <field id="start_from_date" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Start From Date</label>
+                    <validate>validate-date-au</validate>
+                </field>
+                <field id="data_extension_prefix_text" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Data Extension Prefix</label>
+                </field>
+                <field id="max_row_qty_per_sync_text" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Max Row Qty Per Sync</label>
+                    <validate>required-number</validate>
+                </field>
+                <field id="manage_data_extensions_button" translate="label" type="button" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Manage Data Extensions</label>
+                    <frontend_model>PandaGroup\Salesforce\Block\System\Config\CreateDataExtensions</frontend_model>
+                </field>
+            </group>
+            <group id="salesforce_internal_data" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Synchronisation Details</label>
+                <field id="last_upload_date" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Last Sync Date</label>
+                    <frontend_model>PandaGroup\Salesforce\Block\System\Config\Form\Field\Disable</frontend_model>
+                </field>
+                <field id="last_upload_status" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Last Sync Status</label>
+                    <frontend_model>PandaGroup\Salesforce\Block\System\Config\Form\Field\Disable</frontend_model>
+                </field>
+            </group>
+            <group id="salesforce_advanced_settings" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Advanced Settings</label>
+                <field id="debug_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Debug Mode</label>
+                    <comment>This turns on logging to custom file.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

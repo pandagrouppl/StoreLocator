@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="default">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/default.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="simple">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/default.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="virtual">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/default.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.bundle.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.virtual.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.default.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.simple.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.configurable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.downloadable.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.grouped.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.amgiftcard.actions.edit" remove="true" />
+        <referenceBlock name="checkout.cart.item.renderers.default.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.amgiftcard.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.bundle.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.virtual.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.default.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.simple.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.configurable.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.downloadable.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.grouped.actions.remove">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">PandaGroup_Checkout::cart/item/renderer/actions/remove.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

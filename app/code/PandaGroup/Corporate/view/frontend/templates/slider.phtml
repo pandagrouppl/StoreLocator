@@ -1,0 +1,23 @@
+<section class="corporate-slider">
+    <div class="corporate-slider__slide corporate-slider__slide--1">
+        <img src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-slider-001.jpg'); ?>"/>
+    </div>
+
+    <div class="corporate-slider__slide corporate-slider__slide--2">
+        <img src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-slider-002.jpg'); ?>"/>
+    </div>
+
+    <div class="corporate-slider__slide corporate-slider__slide--3">
+        <img src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-slider-003.jpg'); ?>"/>
+    </div>
+
+    <div class="corporate-slider__slide corporate-slider__slide--4">
+        <img src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-slider-004.jpg'); ?>"/>
+    </div>
+</section>
+
+<script>
+    require(["js/corporate"], function(mod) {
+        var corporateInit = new mod.corporate();
+    })
+</script>

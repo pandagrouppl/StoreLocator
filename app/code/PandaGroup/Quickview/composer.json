@@ -1,0 +1,6 @@
+{
+    "name": "PandaGroup/Quickview",
+    "description": "PandaGroup Quickview Module",
+    "type": "magento2-panda-module",
+    "version": "1.0.1"
+}

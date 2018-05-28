@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin to add login item html to CustomerData object -->
+    <type name="Magento\Customer\CustomerData\Customer">
+        <plugin disabled="false"
+                name="PandaGroup_LoginIcon_Plugin_CustomerData_Customer"
+                sortOrder="10"
+                type="PandaGroup\LoginIcon\Plugin\CustomerData\Customer" />
+    </type>
+</config>

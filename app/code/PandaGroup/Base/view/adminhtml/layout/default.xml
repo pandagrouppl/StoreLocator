@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author PandaGroup
+ * @copyright Copyright (c) 2017 PandaGroup (https://www.pandagroup.co)
+ * @package PandaGroup_Base
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="PandaGroup_Base::css/main.css"/>
+    </head>
+</page>

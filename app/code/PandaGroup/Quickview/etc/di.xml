@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Overrides quickvew xml layout to use xmls with "quickview_" prefix (changes to quickview look in comparison to PDP) -->
+    <preference for="Amasty\Quickview\Controller\Ajax\View" type="PandaGroup\Quickview\Controller\Ajax\View" />
+
+    <!-- Initializes Quickview on product pages (for complete your look and recently viewed Quickview) -->
+    <type name="\Magento\Catalog\Block\Product\View">
+        <plugin name="PandaGroup_Quickview_Plugin_Product_View" type="PandaGroup\Quickview\Plugin\Product\View" />
+    </type>
+</config>

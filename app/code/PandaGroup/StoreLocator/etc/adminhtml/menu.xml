@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="PandaGroup_StoreLocator::store_locator" title="Store Locator" module="PandaGroup_StoreLocator" parent="Magento_Backend::stores" sortOrder="9539503" resource="PandaGroup_StoreLocator::store_locator"/>
+        <add id="PandaGroup_StoreLocator::store_locator_list"
+             title="Stores"
+             module="PandaGroup_StoreLocator"
+             sortOrder="10"
+             action="storelocator"
+             resource="PandaGroup_StoreLocator::post"
+             parent="PandaGroup_StoreLocator::store_locator"/>
+        <add id="PandaGroup_StoreLocator::store_locator_regions_list"
+             title="Regions"
+             module="PandaGroup_StoreLocator"
+             sortOrder="15"
+             action="storelocator/regions"
+             resource="PandaGroup_StoreLocator::post"
+             parent="PandaGroup_StoreLocator::store_locator"/>
+        <add id="PandaGroup_StoreLocator::store_locator_configuration"
+             title="Configuration"
+             module="PandaGroup_StoreLocator"
+             sortOrder="20"
+             parent="PandaGroup_StoreLocator::store_locator"
+             action="adminhtml/system_config/edit/section/pandagroup_store_locator"
+             resource="PandaGroup_StoreLocator::helloworld_configuration"/>
+    </menu>
+</config>
