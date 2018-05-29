@@ -1,1 +1,0 @@
-Twitter & Facebook Login Extension for M2

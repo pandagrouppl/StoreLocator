@@ -16,6 +16,8 @@
         "anowave/sort": "2.0.0",
         "fishpig/module-wordpress": "1.0.0.55",
         "magictoolbox/magic360": "1.5.11",
+        "plumrocket/module-popuplogin": "2.0.3",
+        "plumrocket/module-psloginfree": "2.1.1",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "magenest/module-anz": "dev-master",
         "amasty/base": "1.1.2",
@@ -225,6 +227,18 @@
         "magictoolboxMagic360": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-magictoolbox-magic360.git"
+        },
+        "plumrocketBase": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-base.git"
+        },
+        "plumrocketPopupLogin": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-popuplogin.git"
+        },
+        "plumrocketPsloginFree": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-psloginfree.git"
         },
         "amastyGiftCard": {
             "type": "vcs",

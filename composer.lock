@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4abbb879847c2188a116ca6f8b0bd00",
-    "content-hash": "c502a1f01cabe1ad9a2dc6f1cbe9aca2",
+    "hash": "6ec4a9d17dbfc637b6f9975d4c40cf04",
+    "content-hash": "503fc81f32771fc14dc576ed783700e8",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -6430,6 +6430,74 @@
                 "x509"
             ],
             "time": "2018-04-15 16:55:05"
+        },
+        {
+            "name": "plumrocket/module-plumbase",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-base.git",
+                "reference": "6a7a2d37fda7daa5ed47c155ea34ba8e6fb970e5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\Base\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:21:22"
+        },
+        {
+            "name": "plumrocket/module-popuplogin",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-popuplogin.git",
+                "reference": "5f45befb988cced86d19886400ab7bb74108a3da"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~5.6.5|~7.0.0|7.0.2|7.0.4|~7.0.6",
+                "plumrocket/module-plumbase": "2.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\Popuplogin\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:27:34"
+        },
+        {
+            "name": "plumrocket/module-psloginfree",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-psloginfree.git",
+                "reference": "14640af3b6dd4d7ac216b2ab74a173952117309c"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~5.6.5|~7.0.0|7.0.2|7.0.4|~7.0.6",
+                "plumrocket/module-plumbase": "2.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\SocialLoginFree\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:28:30"
         },
         {
             "name": "psr/log",
