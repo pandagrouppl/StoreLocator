@@ -544,7 +544,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git",
-                "reference": "ffe40bea7c449c42b510981ff23d11a8647574ee"
+                "reference": "53fae758d27adcc24f1acec228e6dad765002ad6"
             },
             "require": {
                 "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
@@ -579,7 +579,7 @@
                 "Magento Adroll",
                 "Retargeting"
             ],
-            "time": "2018-04-27 12:23:33"
+            "time": "2018-06-01 12:37:46"
         },
         {
             "name": "amasty/base",
