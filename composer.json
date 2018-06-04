@@ -42,11 +42,12 @@
         "PandaGroup/CategoryWidget": "dev-master",
         "PandaGroup/CatalogExtender": "dev-master",
         "PandaGroup/LoginIcon": "dev-master",
+        "PandaGroup/DiscountExtraCentFixer": "1.0.0",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
         "magenest/module-anz": "dev-master",
         "amasty/base": "1.1.2",
-        "amasty/module-special-promo-pro": "2.0.4",
+        "amasty/module-special-promo-pro": "2.2.3",
         "amasty/module-gift-card": "1.3.2",
         "amasty/shopby": "2.4.4",
         "amasty/quickview": "1.0.4",
@@ -55,7 +56,6 @@
         "wyomind/cronscheduler": "dev-master",
         "magepal/magento2-gmailsmtpapp": "2.5.0",
         "webshopapps/module-matrixrate": "^20.1",
-        "amasty/module-special-promo": "2.0.4",
         "apptrian/facebook-pixel": "2.1.6",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
@@ -236,6 +236,10 @@
         "34": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
+        },
+        "35": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-discount-extra-cent-fixer.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
