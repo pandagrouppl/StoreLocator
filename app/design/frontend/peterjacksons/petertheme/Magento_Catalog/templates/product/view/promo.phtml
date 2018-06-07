@@ -1,0 +1,17 @@
+<?php
+/**
+ * Product promo template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+
+<?php
+$_product = $block->getProduct();
+$promoType = $_product->getAttributeText('promo_type');
+?>
+<?php if (false !== $promoType): ?>
+    <div class="catalog-item__promo">
+        <?php echo $promoType; ?>
+    </div>
+<?php endif; ?>

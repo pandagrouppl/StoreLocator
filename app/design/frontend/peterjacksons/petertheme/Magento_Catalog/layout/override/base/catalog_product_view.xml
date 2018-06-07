@@ -71,6 +71,9 @@
                                 </block>
                             </container>
                             <container name="alert.urls" as="alert_urls" label="Alert Urls"/>
+
+                            <block class="Magento\Catalog\Block\Product\View" name="product.promo" template="product/view/promo.phtml" after="alert.urls"/>
+
                             <block class="Magento\Catalog\Block\Product\View" name="product.info" template="product/view/form.phtml" after="alert.urls">
                                 <container name="product.info.form.content" as="product_info_form_content">
                                     <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="product/view/addtocart.phtml"/>
