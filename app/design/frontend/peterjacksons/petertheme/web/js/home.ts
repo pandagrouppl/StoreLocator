@@ -20,7 +20,7 @@ const home = () => {
     $widget.slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 2500,
         speed: 1500,
@@ -32,28 +32,31 @@ const home = () => {
                 breakpoint: 1260,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 2
                 }
             },
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 2,
+                    swipeToSlide: true
                 }
             },
             {
                 breakpoint: 750,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 2,
+                    swipeToSlide: true
                 }
             },
             {
-                breakpoint: 375,
+                breakpoint: 415,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    swipeToSlide: true
                 }
             }
         ]
