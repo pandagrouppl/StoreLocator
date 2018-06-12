@@ -35,10 +35,10 @@ body[class~='cms-home'] {
         }
     }
 
-    .widget__slider-container {
-        display: flex;
-        align-items: center;
-    }
+    //.widget__slider-container {
+    //    display: flex;
+    //    align-items: center;
+    //}
 
     .widget__slider-item {
         display: flex;
@@ -51,7 +51,23 @@ body[class~='cms-home'] {
     }
 
     .slick-dots {
-        display: none !important;
+        //display: none !important;
+        margin-left: 5px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: #acacac;
+            border: none;
+            color: white;
+            width: 13px;
+            height: 13px;
+            font-size: 16px;
+            text-indent: -9999px;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+        }
     }
 
     .widget__slider {
