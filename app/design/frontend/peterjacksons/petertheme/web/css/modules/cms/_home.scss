@@ -48,27 +48,73 @@ body[class~='cms-home'] {
     .slider__item-box {
         margin: 15px 0 0 0;
         text-align: center;
+        padding: 0 30px;
     }
 
     .slick-dots {
         //display: none !important;
-        margin-left: 5px;
         display: flex;
         justify-content: center;
+        padding-top: 40px;
 
         button {
             background-color: #acacac;
             border: none;
-            color: white;
-            width: 13px;
             height: 13px;
             font-size: 16px;
             text-indent: -9999px;
             border-radius: 10px;
             cursor: pointer;
             outline: none;
+            margin-left: 5px;
+            padding: 6px;
+
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding-top: 10px;
         }
     }
+
+    .slick-slide img {
+
+        @media all and (max-width: $xs-breakpoint) {
+            max-width: 100%;
+            height: 80%;
+        }
+    }
+
+    ///* hiding all bullets by default */
+    //.slick-dots li {
+    //    display: none
+    //}
+    ///* only displaying the active bullets and the 2 bullets next to it */
+    //.slick-dots li.slick-active,
+    //.slick-dots li.slick-active + li,
+    //.slick-dots li.slick-active + li + li {
+    //    display: block;
+    //}
+    ///* displaying the last three bullets when slick-active class isn't applied to any li before them  */
+    //.slick-dots li:nth-last-child(1),
+    //.slick-dots li:nth-last-child(2),
+    //.slick-dots li:nth-last-child(3) {
+    //    display: block;
+    //}
+    ///* hiding the last three bullets if slick-active exist before them */
+    //.slick-dots li.slick-active ~ li:nth-last-child(1),
+    //.slick-dots li.slick-active ~ li:nth-last-child(2),
+    //.slick-dots li.slick-active ~ li:nth-last-child(3) {
+    //    display: none;
+    //}
+    ///* specific conditions to always display the last three bullets */
+    //.slick-dots li.slick-active + li + li:nth-last-child(3),
+    //.slick-dots li.slick-active + li + li:nth-last-child(2),
+    //.slick-dots li.slick-active + li + li:nth-last-child(1),
+    //.slick-dots li.slick-active + li:nth-last-child(3),
+    //.slick-dots li.slick-active + li:nth-last-child(2),
+    //.slick-dots li.slick-active + li:nth-last-child(1){
+    //    display: block;
+    //}
 
     .widget__slider {
         padding: 2% 9%;

@@ -20,20 +20,22 @@ const home = () => {
     $widget.slick({
         infinite: true,
         slidesToShow: 4,
-        // slidesToScroll: 1,
+        slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 0,
-        speed: 5000,
-        arrows: false,
+        autoplaySpeed: 7000,
+        speed: 2000,
         cssEase: 'linear',
         dots: true,
-        centerMode: true,
+        pauseOnHover:true,
+        arrows: false,
+        prevArrow: '<div class="arrows prev"></div>',
+        nextArrow: '<div class="arrows next"></div>',
         responsive: [
             {
                 breakpoint: 1260,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 4
 
                 }
             },
@@ -41,21 +43,29 @@ const home = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 3
                 }
             },
             {
                 breakpoint: 750,
                 settings: {
+                    draggable: true,
+                    swipe: true,
+                    autoplaySpeed: 3000,
+                    speed: 2500,
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 2
                 }
             },
             {
                 breakpoint: 375,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    draggable: true,
+                    swipe: true,
+                    autoplaySpeed: 3000,
+                    speed: 2000,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             }
         ]
