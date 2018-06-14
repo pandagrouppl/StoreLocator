@@ -45,10 +45,22 @@ body[class~='cms-home'] {
         justify-content: center;
     }
 
+    .slider__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .slider__item-box {
         margin: 15px 0 0 0;
         text-align: center;
         padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding: 0 15px;
+        }
     }
 
     .slick-dots {
@@ -72,7 +84,7 @@ body[class~='cms-home'] {
         }
 
         @media all and (max-width: $xs-breakpoint) {
-            padding-top: 10px;
+            padding-top: 15px;
         }
     }
 
@@ -80,7 +92,7 @@ body[class~='cms-home'] {
 
         @media all and (max-width: $xs-breakpoint) {
             max-width: 100%;
-            height: 80%;
+            height: 70%;
         }
     }
 
@@ -125,14 +137,49 @@ body[class~='cms-home'] {
     }
 
     .price-box {
-        display: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding-top: 10px;
+
+        .old-price {
+            margin-right: 6px;
+        }
+
+        .price {
+            font-size: 17px;
+            font-family: Roboto;
+            font-weight: 300;
+        }
+
+        .price-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .special-price {
+            border-left: 1px solid black;
+            padding-left: 6px;
+        }
+
+        .old-price,
+        .price,
+        .price-box,
+        .special-price {
+
+            @media all and (max-width: $xs-breakpoint) {
+                font-size: 13px;
+            }
+        }
     }
 
     .slider__item-name {
         font-size: 18px;
         color: black;
+        flex: 1;
 
-        @media all and (max-width: 560px) {
+        @media all and (max-width: $xs-breakpoint) {
             font-size: 13px;
         }
     }

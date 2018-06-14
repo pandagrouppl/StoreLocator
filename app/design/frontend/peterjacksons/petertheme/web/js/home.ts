@@ -22,14 +22,15 @@ const home = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 7000,
+        autoplaySpeed: 5000,
         speed: 2000,
-        cssEase: 'linear',
+        // cssEase: 'linear',
+        // cssEase: 'cubic-bezier(0.950, 0.050, 0.795, 0.035)',
+        useTransform: true,
+        cssEase: 'ease-in-out',
         dots: true,
-        pauseOnHover:true,
+        // pauseOnHover:true,
         arrows: false,
-        prevArrow: '<div class="arrows prev"></div>',
-        nextArrow: '<div class="arrows next"></div>',
         responsive: [
             {
                 breakpoint: 1260,
@@ -42,6 +43,8 @@ const home = () => {
             {
                 breakpoint: 1024,
                 settings: {
+                    autoplaySpeed: 4000,
+                    speed: 2000,
                     slidesToShow: 3,
                     slidesToScroll: 3
                 }
@@ -52,18 +55,19 @@ const home = () => {
                     draggable: true,
                     swipe: true,
                     autoplaySpeed: 3000,
-                    speed: 2500,
+                    speed: 500,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
-                breakpoint: 375,
+                breakpoint: 376,
                 settings: {
                     draggable: true,
                     swipe: true,
-                    autoplaySpeed: 3000,
-                    speed: 2000,
+                    autoplay: false,
+                    // autoplaySpeed: 3000,
+                    speed: 200,
                     slidesToShow: 2,
                     slidesToScroll: 2
                 }
