@@ -513,14 +513,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-peter-theme-settings.git",
-                "reference": "572b2d8521c3e3c061ae766f836d69267b32bd60"
+                "reference": "574018ed098338010620f95789b3ce85af997523"
             },
             "require": {
                 "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup ThemeSettings Module",
-            "time": "2018-04-18T11:10:52+00:00"
+            "time": "2018-06-18T12:19:18+00:00"
         },
         {
             "name": "PandaGroup/Westfield",
@@ -858,11 +858,6 @@
         {
             "name": "apptrian/facebook-pixel",
             "version": "2.1.6",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-apptrian-facebookpixel.git",
-                "reference": "f1808cec6927146778355c83053811bfdfaa9340"
-            },
             "require": {
                 "php": "~5.5|~7.0"
             },
@@ -7278,12 +7273,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c"
+                "reference": "a056f89829e25fc00da406ca7b3b58fdbcad9df5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f8613663bfbe2a7674d5edf9642b99d2566b271c",
-                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/a056f89829e25fc00da406ca7b3b58fdbcad9df5",
+                "reference": "a056f89829e25fc00da406ca7b3b58fdbcad9df5",
                 "shasum": ""
             },
             "require": {
@@ -7307,7 +7302,7 @@
                 "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2018-02-15T12:50:28+00:00"
+            "time": "2018-06-11T12:20:37+00:00"
         },
         {
             "name": "symfony/config",

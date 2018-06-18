@@ -2,11 +2,15 @@
     $status = (bool) $this->getConfigValue('pandagroup_theme_settings/shipping_bar/enable_bar_select');
     $link   = $this->getConfigValue('pandagroup_theme_settings/shipping_bar/link_text');
     $title  = $this->getConfigValue('pandagroup_theme_settings/shipping_bar/title_text');
+    $titleBold  = $this->getConfigValue('pandagroup_theme_settings/shipping_bar/title_text_bold');
 ?>
 
 <?php if (true === $status) : ?>
     <section class="header-shippingbar">
         <a href="<?php echo $link; ?>">
+            <?php if (false === empty($titleBold)) : ?>
+                <span><?php echo $titleBold; ?></span>
+            <?php endif; ?>
             <?php echo $title; ?>
         </a>
     </section>
