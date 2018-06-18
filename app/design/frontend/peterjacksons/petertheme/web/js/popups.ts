@@ -65,8 +65,8 @@ export class Popups {
         $('.popup-success__content').click((e) => {
             e.stopPropagation();
         });
-        $('.popup-success, .popup-success__close, .popup-success__content .continue-button, .success-popup-corporate__close, .success-popup__overlay, .success-popup').on('click', () => {
-            $('.popup-success, .success-popup--contact').hide()
+        $('.popup-success, .popup-success__close, .popup-success__content .continue-button, .success-popup-corporate__close, .success-popup__overlay, .success-popup, .success-popup--contact').on('click', () => {
+            $('.popup-success, .success-popup__overlay').hide()
         });
     }
 
