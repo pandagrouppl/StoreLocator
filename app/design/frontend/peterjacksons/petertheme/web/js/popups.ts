@@ -43,7 +43,7 @@ export class Popups {
             $(' .overlay__overlay-shipping ').toggle();
         });
         $(' .overlay__close, .overlay__overlay ').on(' click ', () => {
-           $(' .overlay__overlay-shipping ').hide()
+            $(' .overlay__overlay-shipping ').hide()
         });
         $(' .overlay__popup ').click((evt) => {
             evt.stopPropagation();
