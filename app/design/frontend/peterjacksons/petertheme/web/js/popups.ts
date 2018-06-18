@@ -11,7 +11,6 @@ export class Popups {
         this._showSearch();
         this._cartAdd();
         this._genericPopup();
-        this._corporateClose();
     }
 
     _showSearch() {
@@ -95,11 +94,6 @@ export class Popups {
         });
     }
 
-    _corporateClose() {
-        $('.success-popup__overlay').on('click', () => {
-            $('.success-popup__overlay').toggle();
-        });
-    }
 
 
 }
