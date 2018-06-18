@@ -24,7 +24,6 @@ return array (
     'Light4website_Menu' => 1,
     'Magento_Email' => 1,
     'Magento_Config' => 1,
-    'Magenest_InstagramShop' => 1,
     'Magento_CatalogInventory' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Authorization' => 1,

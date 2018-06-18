@@ -1,16 +1,17 @@
 .header-shippingbar {
     background-color: #464646;
-    padding: 10px;
+    line-height: 35px;
     text-align: center;
     cursor: pointer;
 
     a {
         color: white;
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 300;
+        letter-spacing: 0.5px;
     }
 
-    @media all and (max-width: $bp-header) {
-        padding: 1px 10px;
+    span {
+        font-weight: 500;
     }
 }
