@@ -63,6 +63,19 @@ body[class~='cms-home'] {
         }
     }
 
+    .amquickview-hover {
+        height: 40px;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .amquickview-link {
+        height: 100%;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
     .slick-dots {
         //display: none !important;
         display: flex;

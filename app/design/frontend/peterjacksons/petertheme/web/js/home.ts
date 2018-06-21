@@ -24,12 +24,9 @@ const home = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         speed: 2000,
-        // cssEase: 'linear',
-        // cssEase: 'cubic-bezier(0.950, 0.050, 0.795, 0.035)',
         useTransform: true,
         cssEase: 'ease-in-out',
         dots: true,
-        // pauseOnHover:true,
         arrows: false,
         responsive: [
             {
@@ -66,7 +63,6 @@ const home = () => {
                     draggable: true,
                     swipe: true,
                     autoplay: false,
-                    // autoplaySpeed: 3000,
                     speed: 200,
                     slidesToShow: 2,
                     slidesToScroll: 2
