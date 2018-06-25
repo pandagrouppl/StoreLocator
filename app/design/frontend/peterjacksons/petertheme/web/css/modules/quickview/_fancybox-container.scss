@@ -9,6 +9,29 @@
         margin-left: auto;
         overflow-y: auto;
     }
+
+    .fancybox-toolbar {
+        opacity: 1;
+        visibility: visible;
+
+        .fancybox-button {
+
+            &--close {
+
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            }
+
+        }
+    }
 }
 
 .fancybox-slide.fancybox-slide--iframe .fancybox-content {

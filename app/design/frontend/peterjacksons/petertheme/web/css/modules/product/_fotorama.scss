@@ -26,6 +26,11 @@
     }
 }
 
+.fotorama__arr--disabled {
+    pointer-events: inherit;
+    opacity: 0;
+}
+
 
 
 .product-main .product-main__gal-act-wrapper div.gallery-placeholder > div.fotorama-item > div.fotorama__wrap {

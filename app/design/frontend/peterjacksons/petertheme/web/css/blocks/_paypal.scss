@@ -12,6 +12,12 @@
             cursor: pointer;
             border: 1px solid black;
         }
+
+        @media (max-width: $xs-breakpoint) {
+            height: 25px;
+            box-sizing: unset;
+            width: calc( 100% - 40px );
+        }
     }
 
     &__image {
