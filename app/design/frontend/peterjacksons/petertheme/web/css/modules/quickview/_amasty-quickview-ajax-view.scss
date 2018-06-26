@@ -101,6 +101,11 @@ body[class~='category-gift-cards'] {
         &__left {
             flex: 1 1;
             min-width: inherit;
+
+            @media all and (max-width: 820px) {
+                flex: unset;
+            }
+
             @media all and (max-width: $sm-breakpoint) {
                 margin: 20px 0;
             }

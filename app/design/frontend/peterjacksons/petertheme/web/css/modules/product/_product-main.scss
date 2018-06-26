@@ -27,6 +27,11 @@
             top: 65px !important;
             right: 65px !important;
         }
+
+        @media all and (max-width: 820px) {
+            flex: unset;
+        }
+
         @media all and (min-width: $sm-breakpoint + 1) {
             > .gallery-placeholder {
                 max-width: 500px;
