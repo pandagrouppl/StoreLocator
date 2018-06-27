@@ -14,14 +14,15 @@
         }
 
         @media (max-width: $xs-breakpoint) {
-            height: 25px;
+            height: 35px;
             box-sizing: unset;
             width: calc( 100% - 40px );
+            margin: 10px auto;
         }
     }
 
     &__image {
-        width: 219px;
+        width: 180px;
         margin: 0 auto;
     }
 }

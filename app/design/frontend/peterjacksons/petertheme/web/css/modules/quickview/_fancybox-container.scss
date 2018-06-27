@@ -21,11 +21,13 @@
                 &::before {
                     opacity: 1;
                     visibility: visible;
+                    background-color: $white;
                 }
 
                 &::after {
                     opacity: 1;
                     visibility: visible;
+                    background-color: $white;
                 }
 
             }
