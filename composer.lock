@@ -13,14 +13,14 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-adroll-pixel-extender.git",
-                "reference": "c07229bb6da2d903cbd6968250288426a9df956e"
+                "reference": "fa00625144b27a48e8d5f7844a2af0feee0be66f"
             },
             "type": "magento2-panda-module",
             "license": [
                 "MIT"
             ],
             "description": "Adroll Extender module for Magento 2.x",
-            "time": "2018-06-26 14:48:57"
+            "time": "2018-06-27 10:02:12"
         },
         {
             "name": "PandaGroup/AnzExtender",
