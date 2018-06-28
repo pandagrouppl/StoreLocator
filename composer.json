@@ -45,6 +45,7 @@
         "PandaGroup/DiscountExtraCentFixer": "1.0.0",
         "salesforce-mc/fuel-sdk-php": "^1.1",
         "PandaGroup/CustomerExtender": "dev-master",
+        "PandaGroup/AdrollExtender": "dev-master",
         "magenest/module-anz": "dev-master",
         "amasty/base": "1.1.2",
         "amasty/module-special-promo": "2.0.4",
@@ -242,6 +243,10 @@
         "35": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-discount-extra-cent-fixer.git"
+        },
+        "36": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-adroll-pixel-extender.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
