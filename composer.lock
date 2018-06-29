@@ -4,9 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c90f85dae1d78960cc4760d3d8fc39e4",
-    "content-hash": "1757383a9b6caf77c537a6d561f879a3",
+    "hash": "f841ac928b979ca2b23c9545aecbefe1",
+    "content-hash": "5c62b92d813645fe9c0635aa38d94adf",
     "packages": [
+        {
+            "name": "PandaGroup/AdrollExtender",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-adroll-pixel-extender.git",
+                "reference": "fa00625144b27a48e8d5f7844a2af0feee0be66f"
+            },
+            "type": "magento2-panda-module",
+            "license": [
+                "MIT"
+            ],
+            "description": "Adroll Extender module for Magento 2.x",
+            "time": "2018-06-27 10:02:12"
+        },
         {
             "name": "PandaGroup/AnzExtender",
             "version": "dev-master",
@@ -95,7 +110,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-category-widget.git",
-                "reference": "edb68a32b70db581bd6810516b0b51f1f7f212c3"
+                "reference": "ec2c66d2a31a82d9da75c6bd64d065ef701e9087"
             },
             "type": "magento2-panda-module",
             "authors": [
@@ -105,7 +120,7 @@
                 }
             ],
             "description": "Category Widget for Magento 2",
-            "time": "2018-06-19 08:28:12"
+            "time": "2018-06-20 07:55:32"
         },
         {
             "name": "PandaGroup/Checkout",
@@ -375,11 +390,11 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-quickview.git",
-                "reference": "acce35a427ae452123026f86caf4ee824623975b"
+                "reference": "876775fef3efd739c87f78084a8dc53baa1aa1cf"
             },
             "type": "magento2-panda-module",
             "description": "PandaGroup Quickview Module",
-            "time": "2017-11-24 13:27:16"
+            "time": "2018-06-19 09:39:44"
         },
         {
             "name": "PandaGroup/RegionsPatcher",
@@ -7279,12 +7294,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "a056f89829e25fc00da406ca7b3b58fdbcad9df5"
+                "reference": "65b52d7ed6cda7107d3f354a21bd15e4dc27e872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/a056f89829e25fc00da406ca7b3b58fdbcad9df5",
-                "reference": "a056f89829e25fc00da406ca7b3b58fdbcad9df5",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/65b52d7ed6cda7107d3f354a21bd15e4dc27e872",
+                "reference": "65b52d7ed6cda7107d3f354a21bd15e4dc27e872",
                 "shasum": ""
             },
             "require": {
@@ -7308,7 +7323,7 @@
                 "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2018-06-11 12:20:37"
+            "time": "2018-06-21 14:37:47"
         },
         {
             "name": "symfony/config",
@@ -10785,6 +10800,7 @@
         "pandagroup/catalogextender": 20,
         "pandagroup/loginicon": 20,
         "pandagroup/customerextender": 20,
+        "pandagroup/adrollextender": 20,
         "magenest/module-anz": 20,
         "adroll123123124/pixel": 20,
         "wyomind/core": 20,
