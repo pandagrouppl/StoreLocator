@@ -47,7 +47,7 @@
         box-sizing: border-box;
         padding: 0;
         margin-left: 20px;
-        flex: 0 0 348px;
+        flex: 0 0 auto;
 
         @media all and (max-width: $sm-breakpoint) {
             margin: 0;
