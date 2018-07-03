@@ -7,4 +7,9 @@
     <type name="\Magento\Catalog\Block\Product\View">
         <plugin name="PandaGroup_Quickview_Plugin_Product_View" type="PandaGroup\Quickview\Plugin\Product\View" />
     </type>
+
+    <!-- Initializes Quickview on home page (for carousel) -->
+    <type name="\Magento\Cms\Block\Page">
+        <plugin name="PandaGroup_Quickview_Plugin_Cms_Page" type="PandaGroup\Quickview\Plugin\Cms\Page" />
+    </type>
 </config>
