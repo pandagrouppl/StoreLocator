@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dbabe5eb06393635ef5da5372e371e82",
-    "content-hash": "2ad1367339873c7bf0eedb04e3dbeb1b",
+    "hash": "65ebf1e798f08de0e5a52ae09087529a",
+    "content-hash": "c6538bb70d418279f02cd274c725b1cd",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -24,11 +24,11 @@
         },
         {
             "name": "adroll123123124/pixel",
-            "version": "0.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-adroll-pixel.git",
-                "reference": "ffe40bea7c449c42b510981ff23d11a8647574ee"
+                "reference": "53fae758d27adcc24f1acec228e6dad765002ad6"
             },
             "require": {
                 "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
@@ -63,7 +63,7 @@
                 "Magento Adroll",
                 "Retargeting"
             ],
-            "time": "2018-04-27 12:23:33"
+            "time": "2018-06-01 12:37:46"
         },
         {
             "name": "amasty/base",
@@ -6180,6 +6180,55 @@
             "time": "2015-08-09 17:44:44"
         },
         {
+            "name": "neklo/core",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-neklo-core.git",
+                "reference": "54defe66351ffbb09bd33bcb9e18808152cb170f"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Neklo\\Core\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-11 10:49:56"
+        },
+        {
+            "name": "neklo/product_position",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-neklo-product-position.git",
+                "reference": "177c29cf2d92e625f99d43a1da3cfb0f0a5cb837"
+            },
+            "require": {
+                "magento/module-catalog": ">=101.0.0",
+                "neklo/core": ">=2.0.0",
+                "php": ">=5.6.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Neklo\\ProductPosition\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Visual Sorting - Product Position",
+            "time": "2018-05-11 10:53:27"
+        },
+        {
             "name": "oomphinc/composer-installers-extender",
             "version": "v1.1.2",
             "source": {
@@ -6882,12 +6931,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll.git",
-                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c"
+                "reference": "65b52d7ed6cda7107d3f354a21bd15e4dc27e872"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/f8613663bfbe2a7674d5edf9642b99d2566b271c",
-                "reference": "f8613663bfbe2a7674d5edf9642b99d2566b271c",
+                "url": "https://api.github.com/repos/Strategery-Inc/Magento2-InfiniteScroll/zipball/65b52d7ed6cda7107d3f354a21bd15e4dc27e872",
+                "reference": "65b52d7ed6cda7107d3f354a21bd15e4dc27e872",
                 "shasum": ""
             },
             "require": {
@@ -6911,7 +6960,7 @@
                 "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2018-02-15 12:50:28"
+            "time": "2018-06-21 14:37:47"
         },
         {
             "name": "symfony/config",
@@ -10358,6 +10407,7 @@
         "composer/composer": 15,
         "strategery/magento2-infinitescroll": 20,
         "pandagroup/frontools": 20,
+        "adroll123123124/pixel": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
