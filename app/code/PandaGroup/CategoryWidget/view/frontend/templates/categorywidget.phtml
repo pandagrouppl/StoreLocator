@@ -22,7 +22,7 @@
     }
 ?>
 
-<?php if (true === $block->getCategoryWidgetStatus() AND $productCollection->count()): ?>
+<?php if (null !== $productCollection AND true === $block->getCategoryWidgetStatus() AND $productCollection->count()): ?>
 
 <section class="widget__slider">
     <h2 class="widget__slider-title"><?php echo $block->getCategoryWidgetLabel(); ?></h2>

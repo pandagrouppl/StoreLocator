@@ -2,6 +2,8 @@
 
 namespace PandaGroup\CategoryWidget\Block\Category;
 
+use FishPig\WordPress\Model\App\Integration\Exception;
+
 class Widget extends \Magento\Catalog\Block\Product\ListProduct
 {
     /** @var \PandaGroup\CategoryWidget\Model\Config  */
@@ -119,7 +121,7 @@ class Widget extends \Magento\Catalog\Block\Product\ListProduct
     }
 
     /**
-     * @return \Magento\Catalog\Model\ResourceModel\Product\Collection
+     * @return \Magento\Catalog\Model\ResourceModel\Product\Collection|null
      */
     public function getProductCollection()
     {
@@ -130,17 +132,42 @@ class Widget extends \Magento\Catalog\Block\Product\ListProduct
 
         /** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $productCollection */
         $productCollection = $this->productCollectionFactory->create();
-        $productCollection->addAttributeToSelect('*');
-        $productCollection->addCategoriesFilter(['in' => $categoryIdArray]);
+        try {
+            $productCollection
+                ->addAttributeToSelect('*')
+                ->joinField(
+                    "position",
+                    "catalog_category_product",
+                    "position",
+                    "product_id = entity_id",
+                    "category_id = {$this->getCategoryWidgetId()}",
+                    "inner"
+                )
+                ->addAttributeToFilter(
+                    'status', \Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_ENABLED
+                )
+                ->addAttributeToFilter(
+                    'visibility',
+                    array(
+                        'in' => [
+                            \Magento\Catalog\Model\Product\Visibility::VISIBILITY_IN_CATALOG,
+                            \Magento\Catalog\Model\Product\Visibility::VISIBILITY_BOTH,
+                        ]
+                    )
+                )
+                ->addCategoriesFilter(['in' => $categoryIdArray])
+            ;
+
+        } catch (\Exception $e) {
+            $this->_logger->error($e->getMessage());
+            return null;
+        }
+
         if (null !== $category) {
             $productCollection->addCategoriesFilter(['in' => [$category->getId()]]);
         }
 
-        $productCollection->addAttributeToFilter('visibility', ['neq' => \Magento\Catalog\Model\Product\Visibility::VISIBILITY_NOT_VISIBLE]);
-
-        $productCollection->addAttributeToFilter(
-            'status',\Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_ENABLED
-        );
+        $productCollection->setOrder('position', \Magento\Framework\Data\Collection::SORT_ORDER_ASC);
 
         return $productCollection;
     }
