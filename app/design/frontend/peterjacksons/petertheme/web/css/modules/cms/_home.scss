@@ -67,6 +67,10 @@ body[class~='cms-home'] {
         height: 40px;
         padding: 0;
         z-index: 1;
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 90%;
+        }
     }
 
     .amquickview-link {
@@ -191,7 +195,7 @@ body[class~='cms-home'] {
     .slider__item-name {
         font-size: 18px;
         color: black;
-        flex: 1;
+        flex: 0 0 auto;
 
         @media all and (max-width: $xs-breakpoint) {
             font-size: 13px;

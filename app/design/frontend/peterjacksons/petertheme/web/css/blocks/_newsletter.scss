@@ -32,6 +32,12 @@ $input-height: 49px;
             &::clear {
                 display: none;
             }
+
+            // sass-lint:disable no-vendor-prefixes
+            &::-ms-clear {
+                display: none;
+            }
+            // sass-lint:enable no-vendor-prefixes
         }
 
         &__messages {

@@ -21,12 +21,15 @@
     }
 
     &__left {
-        flex: 1 1;
+        @media all and (min-width: 820px) {
+            flex: 1 1;
+        }
 
         button.m360-icon.m360-icon-fullscreen-open {
             top: 65px !important;
             right: 65px !important;
         }
+
         @media all and (min-width: $sm-breakpoint + 1) {
             > .gallery-placeholder {
                 max-width: 500px;
@@ -44,7 +47,7 @@
         box-sizing: border-box;
         padding: 0;
         margin-left: 20px;
-        flex: 0 0 348px;
+        flex: 0 0 auto;
 
         @media all and (max-width: $sm-breakpoint) {
             margin: 0;
