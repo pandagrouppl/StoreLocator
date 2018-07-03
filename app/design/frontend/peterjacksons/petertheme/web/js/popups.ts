@@ -42,7 +42,7 @@ export class Popups {
             $(' .overlay__overlay-shipping ').toggle();
         });
         $(' .overlay__close, .overlay__overlay ').on(' click ', () => {
-           $(' .overlay__overlay-shipping ').hide()
+            $(' .overlay__overlay-shipping ').hide()
         });
         $(' .overlay__popup ').click((evt) => {
             evt.stopPropagation();
@@ -74,8 +74,8 @@ export class Popups {
         $('.success-popup__popup').click((e) => {
             e.stopPropagation();
         });
-        $('.success-popup, .success-popup__continue').on('click', () => {
-            $('.success-popup').hide();
+        $('.success-popup, .success-popup__continue, .success-popup__overlay').on('click', () => {
+            $('.success-popup, .success-popup-corporate__popup').hide();
         });
     }
 
@@ -93,6 +93,7 @@ export class Popups {
             e.stopPropagation();
         });
     }
+
 
 
 }
