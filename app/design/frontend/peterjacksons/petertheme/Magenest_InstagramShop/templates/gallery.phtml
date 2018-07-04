@@ -42,19 +42,14 @@ $page = $block->getPageParam();
  */
 $photos = $block->getCollection();
 
-if ($photos->getSize() == 0) {
-    echo '<br/><br/><h2 style="clear:both; font-family: Arial, Helvetica, sans-serif; ">There are no photo to display yet, please comeback later</h2>';
-} else {
-?>
+if ($photos->getSize() == 0) : ?>
+    <br/><br/><h2 style="clear:both; font-family: Arial, Helvetica, sans-serif; ">
+    <?php echo __('There are no photo to display yet, please comeback later'); ?></h2>
+<?php else: ?>
 <!-- If found, display photos here    -->
-<div class="toolbar" style="margin-top:15px;">
-    <?php echo $block->getPagerHtml(); ?>
-</div>
 <div class="photos-wrapper photo__wrapper">
-    <?php
-    /** @var \Magenest\InstagramShop\Model\Photo $photo */
-    foreach ($photos as $photo) {
-        ?>
+    <?php /** @var \Magenest\InstagramShop\Model\Photo $photo */ ?>
+    <?php foreach ($photos as $photo) : ?>
         <div id="<?= $photo->getPhotoId() ?>">
             <a href="<?php echo $photo->getUrl() ?>">
                 <div class="box photo__box">
@@ -90,19 +85,10 @@ if ($photos->getSize() == 0) {
                 echo '<div id="linked-products" style="display: none;"></div>';
             } ?>
         </div>
-        <?php
-    }
-    ?>
+    <?php endforeach; ?>
     <div style="clear: both"></div>
 
-    <div class="toolbar-bottom" style="margin-top: 15px;">
-        <div class="toolbar">
-            <?php echo $block->getPagerHtml(); ?>
-        </div>
-    </div>
-    <?php
-    }
-    ?>
+<?php endif; ?>
     <script>
         require(['jquery'], function ($) {
             var photos = <?=json_encode($photos->getData())?>;
@@ -182,6 +168,3 @@ if ($photos->getSize() == 0) {
         })
     </script>
 </div>
-
-
-

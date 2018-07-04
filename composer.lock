@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "65ebf1e798f08de0e5a52ae09087529a",
-    "content-hash": "c6538bb70d418279f02cd274c725b1cd",
+    "hash": "fbb8ed684702c931c6d4f714e4e06f9a",
+    "content-hash": "27198298b0cf81efe1e87c6e6d3cbc1e",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -1138,6 +1138,32 @@
             ],
             "description": "N/A",
             "time": "2017-11-30 15:05:26"
+        },
+        {
+            "name": "magenest/module-instagram-shop",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-magenest-instagramshop.git",
+                "reference": "8ed36baaa0cfd95d9bb5f3d03462aa8c7e64f5a2"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magenest\\InstagramShop\\": ""
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Instagram Shop with Magento 2",
+            "time": "2018-06-15 08:52:34"
         },
         {
             "name": "magento/composer",
