@@ -32,6 +32,7 @@
         "amasty/module-special-promo": "2.0.4",
         "apptrian/facebook-pixel": "2.1.6",
         "neklo/product_position": "1.2.2",
+        "magenest/module-instagram-shop": "3.0.0",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
         "symfony/finder": "3.4.4",
@@ -275,6 +276,10 @@
         "nekloProductPosition": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-neklo-product-position.git"
+        },
+        "magenestInstagramShop": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-magenest-instagramshop.git"
         },
         "infiniteScroll": {
             "type": "vcs",
