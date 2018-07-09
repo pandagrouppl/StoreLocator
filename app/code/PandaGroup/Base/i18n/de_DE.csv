@@ -1,0 +1,160 @@
+"Panda Group Extensions","Panda Group Extensions"
+"* Required Fields","* Benötigte Felder",theme,frontend/PandaGroup/PureSecretsTheme
+Contact form,Kontaktformular,theme,frontend/PandaGroup/PureSecretsTheme
+Send us an email,Schreiben Sie uns eine E-Mail.,theme,frontend/PandaGroup/PureSecretsTheme
+We are looking forward to contact you,Wir freuen uns auf Ihre Kontaktaufnahme.,theme,frontend/PandaGroup/PureSecretsTheme
+"Write Us","Schreiben Sie uns",theme,frontend/PandaGroup/PureSecretsTheme
+"Jot us a note and we’ll get back to you as quickly as possible.","Schreib uns eine Nachricht und wir melden uns so schnell wie möglich bei dir.",theme,frontend/PandaGroup/PureSecretsTheme
+Name,Vorname,theme,frontend/PandaGroup/PureSecretsTheme
+"Ania tlumaczy","Anna translates",theme,frontend/PandaGroup/PureSecretsTheme
+Email,Email Adresse,theme,frontend/PandaGroup/PureSecretsTheme
+Comment, Kommentar,theme,frontend/PandaGroup/PureSecretsTheme
+"Fields marked with a * are mandatory","Die mit einem * markierten Felder sind Pflichtfelder.",theme,frontend/PandaGroup/PureSecretsTheme
+"Submit","Einreichen",theme,frontend/PandaGroup/PureSecretsTheme
+Order, Bestellnummer,theme,frontend/PandaGroup/PureSecretsTheme
+"Phone Number","Telefonnummer",theme,frontend/PandaGroup/PureSecretsTheme
+"What’s on your mind?","What’s on your mind?",theme,frontend/PandaGroup/PureSecretsTheme
+Go back,Zurück,theme,frontend/PandaGroup/PureSecretsTheme
+Send email,E-Mail senden,theme,frontend/PandaGroup/PureSecretsTheme
+Forgot your password?,Passwort vergessen?,theme,frontend/PandaGroup/PureSecretsTheme
+Forgot your Password?,Passwort vergessen?,theme,frontend/PandaGroup/PureSecretsTheme
+"Forgot Your Password?","Passwort vergessen?",theme,frontend/PandaGroup/PureSecretsTheme
+"Your email", "Ihre E-Mail-Adresse",theme,frontend/PandaGroup/PureSecretsTheme
+Your password, Ihr Passwort,theme,frontend/PandaGroup/PureSecretsTheme
+"If you have an account, sign in with your email address.", "Einloggen mit Ihrer E-Mail-Adresse und Ihrem Passwort",theme,frontend/PandaGroup/PureSecretsTheme
+"Sign In","Anmedlen",theme,frontend/PandaGroup/PureSecretsTheme
+Registered Customers,Ich bin bereits Kunde,theme,frontend/PandaGroup/PureSecretsTheme
+"Fill in with correct streetname and number, please",Bitte beachten Sie die korrekte Schreibweise Ihrer Adresse inkl. Hausnummer.,theme,frontend/PandaGroup/PureSecretsTheme
+"There was a problem with the subscription: This email address is already subscribed.","Es gab ein Problem mit dem Abonnement: Diese E-Mail-Adresse ist bereits abonniert.",theme,frontend/PandaGroup/PureSecretsTheme
+Medium,mittel,theme,frontend/PandaGroup/PureSecretsTheme
+Weak,schwach,theme,frontend/PandaGroup/PureSecretsTheme
+Strong,stark,theme,frontend/PandaGroup/PureSecretsTheme
+"Very Strong","sehr stark",theme,frontend/PandaGroup/PureSecretsTheme
+"You updated your password.", "Du hast dein Passwort aktualisiert.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter the same value again.","Bitte geben Sie den gleichen Wert erneut ein.",theme,frontend/PandaGroup/PureSecretsTheme
+"Adding...","Hinzufügen...",theme,frontend/PandaGroup/PureSecretsTheme
+"Added","Hinzugefügt",theme,frontend/PandaGroup/PureSecretsTheme
+"This is a required field.","Dies ist ein Pflichtfeld.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter a valid email address.","Bitte geben Sie eine gültige E-Mail-Adresse ein.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter a valid email address (Ex: johndoe@domain.com).","Bitte geben Sie eine gültige E-Mail-Adresse<br />ein (z. B. johndoe@domain.com).",theme,frontend/PandaGroup/PureSecretsTheme
+"Minimum length of this field must be equal or greater than %1 symbols. Leading and trailing spaces will be ignored.","Die minimale Länge dieses Feldes muss gleich oder größer als %1 Symbole sein. Führende und nachfolgende Leerzeichen werden ignoriert.",theme,frontend/PandaGroup/PureSecretsTheme
+"Too many password reset requests. Please wait and try again or contact %1.","Zu viele Anfragen zum Zurücksetzen des Passworts. Bitte warten Sie und versuchen Sie es erneut oder wenden Sie sich an %1.",theme,frontend/PandaGroup/PureSecretsTheme
+"You did not sign in correctly or your account is temporarily disabled.","Sie haben sich nicht korrekt angemeldet oder Ihr Konto ist vorübergehend deaktiviert.",theme,frontend/PandaGroup/PureSecretsTheme
+"%1 has been added to your Wish List.","%1 wurde Ihrer Wunschliste hinzugefügt.",theme,frontend/PandaGroup/PureSecretsTheme
+"Click <a href=""%1"">here</a> to continue shopping.","Klicken Sie <a href=""%1"">hier</a>, um mit dem Einkauf fortzufahren.",theme,frontend/PandaGroup/PureSecretsTheme
+"You saved the account information.","Sie haben die Kontoinformationen gespeichert.",theme,frontend/PandaGroup/PureSecretsTheme
+"Your password reset link has expired.","Der Link zum Zurücksetzen des Passworts ist abgelaufen.",theme,frontend/PandaGroup/PureSecretsTheme
+"We saved the subscription.","Wir haben das Abonnement gespeichert.",theme,frontend/PandaGroup/PureSecretsTheme
+"No spam, promised","Kein Spam, versprochen",theme,frontend/PandaGroup/PureSecretsTheme
+"Qty","Menge",theme,frontend/PandaGroup/PureSecretsTheme
+"Recently added item(s)","Zuletzt ergänzte artikel",theme,frontend/PandaGroup/PureSecretsTheme
+"Cart Subtotal","Warenkorb Zwischensumme",theme,frontend/PandaGroup/PureSecretsTheme
+"Item in Cart","Artikel im Warenkorb",theme,frontend/PandaGroup/PureSecretsTheme/Magento_Checkout
+"View and Edit Cart","Einkaufswagen anzeigen",theme,frontend/PandaGroup/PureSecretsTheme
+"Proceed to Checkout","Zur Kasse",theme,frontend/PandaGroup/PureSecretsTheme
+"See Details","Siehe Einzelheiten",theme,frontend/PandaGroup/PureSecretsTheme
+"Enter your destination to get a shipping estimate.","Geben Sie Ihr Ziel ein, um eine Versandkostenschätzung zu erhalten.",theme,frontend/PandaGroup/PureSecretsTheme
+"Flat Rate","Flatrate",theme,frontend/PandaGroup/PureSecretsTheme
+"Fixed","Fest",theme,frontend/PandaGroup/PureSecretsTheme
+"Discount","Rabatt",theme,frontend/PandaGroup/PureSecretsTheme
+"Relevance","Relevanz",theme,frontend/PandaGroup/PureSecretsTheme
+"Add to Cart","in den Warenkorb",theme,frontend/PandaGroup/PureSecretsTheme
+"You need to choose options for your item.","Sie müssen Optionen für Ihren Artikel auswählen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter your email.","Bitte geben Sie ihre E-Mail-Adresse ein.",theme,frontend/PandaGroup/PureSecretsTheme
+"Something went wrong while saving the new password.","Beim Speichern des neuen Passworts ist ein Fehler aufgetreten.",theme,frontend/PandaGroup/PureSecretsTheme
+"We removed the subscription.","Wir haben das Abonnement entfernt.",theme,frontend/PandaGroup/PureSecretsTheme
+"Items in Cart","Artikel im Warenkorb",theme,frontend/PandaGroup/PureSecretsTheme
+"Thank you for registering with %1.","Vielen Dank für die Registrierung bei %1.",theme,frontend/PandaGroup/PureSecretsTheme
+"Letters or punctuation only please","Nur Buchstaben oder Satzzeichen bitte",theme,frontend/PandaGroup/PureSecretsTheme
+"Are you sure you would like to remove this item from the shopping cart?","Sind Sie sicher, dass Sie diesen Artikel aus dem Einkaufswagen entfernen möchten?",theme,frontend/PandaGroup/PureSecretsTheme
+"Update","Aktualisieren",theme,frontend/PandaGroup/PureSecretsTheme
+"There is already an account with this email address. If you are sure that it is your email address, <a href=""%1"">click here</a> to get your password and access your account.","Es gibt bereits ein Konto mit dieser E-Mail-Adresse. Wenn Sie sich sicher sind, dass es Ihre E-Mail-Adresse ist, klicken Sie <a href=""%1"">hier</a>, um Ihr Passwort zu erhalten und auf Ihr Konto zuzugreifen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter at least {0} characters.","Bitte geben Sie mindestens {0} Zeichen ein.",theme,frontend/PandaGroup/PureSecretsTheme
+"You have no items in your shopping cart.","Sie haben keine Artikel in Ihrem Einkaufswagen.",theme,frontend/PandaGroup/PureSecretsTheme
+"You deleted the address.","Sie haben die Adresse gelöscht.",theme,frontend/PandaGroup/PureSecretsTheme
+"Are you sure you want to delete this address?","Sind Sie sicher, dass Sie diese Adresse löschen möchten?",theme,frontend/PandaGroup/PureSecretsTheme
+"Minimum of different classes of characters in password is %1. Classes of characters: Lower Case, Upper Case, Digits, Special Characters.","Das Minimum an verschiedenen Zeichenklassen im Passwort ist %1. Zeichenklassen: Kleinbuchstaben, Großbuchstaben, Ziffern, Sonderzeichen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter a valid number in this field.","Bitte geben Sie eine gültige Nummer in dieses Feld ein.",theme,frontend/PandaGroup/PureSecretsTheme
+"(Flat Rate - Fixed)","(Pauschalpreis - Fest)",theme,frontend/PandaGroup/PureSecretsTheme
+"Thank you for registering with %1.","Vielen Dank für die Registrierung mit %1.",theme,frontend/PandaGroup/PureSecretsTheme
+"There was a problem with the subscription: %1","Es gab ein Problem mit dem Abonnement: %1",theme,frontend/PandaGroup/PureSecretsTheme
+"This email address is already assigned to another user.","Diese E-Mail-Adresse ist bereits einem anderen Benutzer zugewiesen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Minimum length of this field must be equal or greater than %1 symbols.","Bitte wählen Sie ein Passwort, welches aus mindestens %1 Zeichen besteht.",theme,frontend/PandaGroup/PureSecretsTheme
+Fixed,Fixed,theme,frontend/PandaGroup/PureSecretsTheme
+"Ship Here","Schiff hier",theme,frontend/PandaGroup/PureSecretsTheme
+"+ New Address","+ Neue Adresse",theme,frontend/PandaGroup/PureSecretsTheme
+"Change Billing Address","Rechnungsadresse ändern",theme,frontend/PandaGroup/PureSecretsTheme
+"Order Summary","Bestellübersicht",theme,frontend/PandaGroup/PureSecretsTheme
+"Select Method","Wählen Sie Methode",theme,frontend/PandaGroup/PureSecretsTheme
+"Estimated Total","geschätzter Gesamtwert",theme,frontend/PandaGroup/PureSecretsTheme
+"Shipping Address","Lieferanschrift",theme,frontend/PandaGroup/PureSecretsTheme
+"Review & Payments","Überprüfung und Zahlungen",theme,frontend/PandaGroup/PureSecretsTheme
+"Shipping","Versand",theme,frontend/PandaGroup/PureSecretsTheme
+"Select Method","Wählen Sie Methode",theme,frontend/PandaGroup/PureSecretsTheme
+"Check / Money order","Scheck / Zahlungsanweisung",theme,frontend/PandaGroup/PureSecretsTheme
+"Apply Discount Code","Rabattcode anwenden",theme,frontend/PandaGroup/PureSecretsTheme
+"Cash On Delivery","Nachnahme",theme,frontend/PandaGroup/PureSecretsTheme
+"Bank Transfer Payment","Banküberweisung Zahlung",theme,frontend/PandaGroup/PureSecretsTheme
+"View Details","Details anzeigen",theme,frontend/PandaGroup/PureSecretsTheme
+"Place Order","Bestellung aufgeben",theme,frontend/PandaGroup/PureSecretsTheme
+"Some addresses cannot be used due to country-specific configurations.","Einige Adressen können aufgrund länderspezifischer Konfigurationen nicht verwendet werden.",theme,frontend/PandaGroup/PureSecretsTheme
+"Grand Total","Gesamtsumme",theme,frontend/PandaGroup/PureSecretsTheme
+"Shipping & Handling","Versand & Bearbeitung",theme,frontend/PandaGroup/PureSecretsTheme
+"Create an Account","Weiter",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter more or equal than %1 symbols","Bitte geben Sie mehr oder gleich %1 Symbole ein",theme,frontend/PandaGroup/PureSecretsTheme
+"Please enter more or equal than {0} symbols.","Bitte geben Sie mehr oder gleich {0} Symbole ein",theme,frontend/PandaGroup/PureSecretsTheme
+"Save in address book","Im Adressbuch speichern",theme,frontend/PandaGroup/PureSecretsTheme
+"Cancel","Stornieren",theme,frontend/PandaGroup/PureSecretsTheme
+"No Password","Kein Passwort",theme,frontend/PandaGroup/PureSecretsTheme
+"You used coupon code ""%1"".","Sie haben den Gutscheincode ""%1"" verwendet.",theme,frontend/PandaGroup/PureSecretsTheme
+"You canceled the coupon code.","Sie haben den Gutscheincode storniert.",theme,frontend/PandaGroup/PureSecretsTheme
+"%1 has been moved to your wish list.","%1 wurde auf Ihre Wunschliste verschoben.",theme,frontend/PandaGroup/PureSecretsTheme
+
+"Order Date","Auftragsdatum",theme,frontend/PandaGroup/PureSecretsTheme
+"Order Date (%1)","Auftragsdatum (%1)",theme,frontend/PandaGroup/PureSecretsTheme
+Ordered,Bestellt,theme,frontend/PandaGroup/PureSecretsTheme
+"Cancel coupon","Gutschein stornieren",theme,frontend/PandaGroup/PureSecretsTheme
+"Your coupon was successfully removed.","Ihr Gutschein wurde erfolgreich entfernt.",theme,frontend/PandaGroup/PureSecretsTheme
+"You can create an account after checkout.","Sie können nach dem Checkout ein Konto erstellen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Your coupon was successfully applied.","Ihr Gutschein wurde erfolgreich angewendet.",theme,frontend/PandaGroup/PureSecretsTheme
+"Next","Nächster",theme,frontend/PandaGroup/PureSecretsTheme
+"Shipping Methods","Versandarten",theme,frontend/PandaGroup/PureSecretsTheme
+"Apply Discount","Rabatt anwenden",theme,frontend/PandaGroup/PureSecretsTheme
+"Enter discount code","Den Rabattcode ein",theme,frontend/PandaGroup/PureSecretsTheme
+"Flat Rate - Fixed","Pauschalpreis - Fest",theme,frontend/PandaGroup/PureSecretsTheme
+"Payment Method:","Bezahlverfahren:",theme,frontend/PandaGroup/PureSecretsTheme
+"Payment Method:","Bezahlverfahren:",theme,frontend/PandaGroup/PureSecretsTheme/Magentoo_Sales
+"Payment Method:","Bezahlverfahren:",theme,frontend/PandaGroup/PureSecretsTheme/Magento_Paypal
+"Payment Method:","Bezahlverfahren:",theme,frontend/PandaGroup/PureSecretsTheme/Magento_Checkout
+"Your order number is: %1","Deine Bestellnummer lautet: %1",theme,frontend/PandaGroup/PureSecretsTheme
+"Your order number is: %1.","Deine Bestellnummer lautet: %1.",theme,frontend/PandaGroup/PureSecretsTheme
+"Your order number is: ","Deine Bestellnummer lautet: ",theme,frontend/PandaGroup/PureSecretsTheme
+"The fewest you may purchase is %s.","Die wenigsten, die Sie kaufen können, ist %s.",theme,frontend/PandaGroup/PureSecretsTheme/Magento_Ui/
+"The most you may purchase is %s.","Das meiste, was Sie kaufen können, ist %s",theme,frontend/PandaGroup/PureSecretsTheme
+"Attention","Beachtung",theme,frontend/PandaGroup/PureSecretsTheme
+
+"Please wait...","Warten Sie mal...",theme,frontend/PandaGroup/PureSecretsTheme
+"The fewest you may purchase is %1.", "Die wenigsten, die Sie kaufen können, ist %1",theme,frontend/PandaGroup/PureSecretsTheme
+"The most you may purchase is %1.","Das meiste, was Sie kaufen können, ist %1",theme,frontend/PandaGroup/PureSecretsTheme
+"Sorry, no quotes are available for this order at this time","Zur Zeit sind keine Angebote für diese Bestellung verfügbar",theme,frontend/PandaGroup/PureSecretsTheme
+"Coupon code is not valid","Gutscheincode ist nicht gültig",theme,frontend/PandaGroup/PureSecretsTheme
+"""%1"" coupon code is not valid.","""%1"" Gutscheincode ist nicht gültig.",theme,frontend/PandaGroup/PureSecretsTheme
+"We can't find the quote item.","Wir können den Angebotsposten nicht finden.",theme,frontend/PandaGroup/PureSecretsTheme
+"Yes","Ja",theme,frontend/PandaGroup/PureSecretsTheme
+"Remove","Löschen",theme,frontend/PandaGroup/PureSecretsTheme
+"You already have an account with us. Sign in or continue as guest.","Sie haben bereits ein Konto bei uns. Melde dich an oder fahre als Gast fort.",theme,frontend/PandaGroup/PureSecretsTheme
+"Not yet calculated","Noch nicht berechnet",theme,frontend/PandaGroup/PureSecretsTheme
+"Login","Anmeldung",theme,frontend/PandaGroup/PureSecretsTheme
+"Order # %1","Auftrag # %1",theme,frontend/PandaGroup/PureSecretsTheme
+"The coupon code ""%1"" is not valid.","Der Gutscheincode ""%1"" ist nicht gültig.",theme,frontend/PandaGroup/PureSecretsTheme
+"Print receipt","Quittung drucken",theme,frontend/PandaGroup/PureSecretsTheme
+"Order Date:","Auftragsdatum:",theme,frontend/PandaGroup/PureSecretsTheme
+"This email address is already assigned to another user.","Diese E-Mail-Adresse ist bereits einem anderen Benutzer zugewiesen.",theme,frontend/PandaGroup/PureSecretsTheme
+"Please check the shipping address information. %1","Bitte überprüfen Sie die Lieferadresse Informationen. %1",theme,frontend/PandaGroup/PureSecretsTheme
+"regionId is a required field.","RegionId ist ein Pflichtfeld.",theme,frontend/PandaGroup/PureSecretsTheme
+"%fieldName is a required field.","%fieldName ist ein Pflichtfeld.",theme,frontend/PandaGroup/PureSecretsTheme
+"3d secure authenticate fail","3d secure authenticate fehlgeschlagen",theme,frontend/PandaGroup/PureSecretsTheme
+"No Payment Methods","Keine Zahlungsmethoden",theme,frontend/PandaGroup/PureSecretsTheme
+"My billing and shipping address are the same","Meine Rechnungs- und Lieferadresse sind identisch",theme,frontend/PandaGroup/PureSecretsTheme
+"Your subscription has been confirmed.","Ihr Abonnement wurde bestätigt.",theme,frontend/PandaGroup/PureSecretsTheme
+"Order Total Excl. Tax","Summe (ink. MwSt.)",module,Magento_Tax

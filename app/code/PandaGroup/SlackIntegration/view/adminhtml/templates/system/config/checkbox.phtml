@@ -1,0 +1,11 @@
+<input type="hidden" name="<?php echo $this->getNamePrefix() ?>" value="" /><!-- this is send if nothing is checked -->
+<label class="switch">
+    <?php foreach ($this->getValues() as $name => $label): ?>
+        <input type="checkbox" value="<?php echo $name?>"
+               name="<?php echo $this->getNamePrefix() ?>[]"
+               id="<?php echo $this->getHtmlId()?>"
+            <?php echo ($this->isChecked() ? ' checked="checked"' : '') ?>
+        />
+        <div class="slider round"></div>
+    <?php endforeach;?>
+</label>

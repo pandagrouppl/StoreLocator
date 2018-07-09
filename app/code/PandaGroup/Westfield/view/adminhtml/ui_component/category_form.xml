@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="westfield_category">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">PandaGroup\Westfield\Model\Config\Source\Category</item>
+                <item name="config" xsi:type="array">
+                    <item name="class" xsi:type="string">Magento\Ui\Component\Form\Element\MultiSelect</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="label" xsi:type="string" translate="true">Westfield Categories</item>
+                    <item name="template" xsi:type="string">ui/form/field</item>
+                    <item name="source" xsi:type="string">category</item>
+                    <item name="wysiwyg" xsi:type="boolean">false</item>
+                    <item name="dataScope" xsi:type="string">westfield_category</item>
+                    <item name="sortOrder" xsi:type="number">50</item>
+                    <item name="rows" xsi:type="number">8</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

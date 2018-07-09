@@ -1,0 +1,22 @@
+<?php if (false === empty($this->getSizeAttrId($this->getData('parentProductId')))): ?>
+    <div class="items-table__cart-select">
+    <span class="items-table__label">
+                    <?php /* @escapeNotVerified */ echo __('Size') ?>
+                </span>
+    <div class="select__wrapper select__wrapper--cart-size select__wrapper--cart">
+    <figure class="select__arrow"></figure>
+    <select data-role="cart-item-size"
+            data-mage-init='{
+                        "sizeChanger":{
+                            "childProductId":"<?php echo $this->getData('childProductId'); ?>",
+                            "parentProductId":"<?php echo $this->getData('parentProductId'); ?>",
+                            "sizeAttributeId":"<?php echo $this->getSizeAttrId($this->getData('parentProductId')); ?>"
+                            }
+                        }' class="select__cart-select" >
+        <?php
+            echo $this->getSizeAttribute($this->getData('parentProductId'), $this->getData('productCartOptions'));
+        ?>
+    </select>
+    </div>
+    </div>
+<?php endif; ?>

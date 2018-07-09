@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="PandaGroup_Careers::careers" title="Career" module="PandaGroup_Careers" parent="Magento_Backend::stores" sortOrder="9539506" resource="PandaGroup_Careers::careers"/>
+        <add id="PandaGroup_Careers::careers_list"
+             title="Resumes"
+             module="PandaGroup_Careers"
+             sortOrder="10"
+             action="careers/resume/index"
+             resource="PandaGroup_Careers::list"
+             parent="PandaGroup_Careers::careers"/>
+        <add id="PandaGroup_Careers::careers_configuration"
+             title="Configuration"
+             module="PandaGroup_Careers"
+             sortOrder="20"
+             parent="PandaGroup_Careers::careers"
+             action="adminhtml/system_config/edit/section/pandagroup_careers"
+             resource="PandaGroup_Careers::careers_configuration"/>
+    </menu>
+</config>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <pandagroup_salesforce>
+            <salesforce_base_settings>
+                <status_enable>0</status_enable>
+            </salesforce_base_settings>
+            <salesforce_page_advanced_settings>
+                <debug_enable>1</debug_enable>
+            </salesforce_page_advanced_settings>
+        </pandagroup_salesforce>
+    </default>
+</config>

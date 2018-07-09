@@ -1,0 +1,46 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="discount-field discount-field--coupon">
+
+    <?php if (!strlen($block->getCouponCode())): ?>
+        <form class="discount-field__unapplied" id="discount-coupon-form"
+              action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/couponPost') ?>"
+              method="post"
+              data-mage-init='{"discountCode":{"couponCodeSelector": "#coupon_code",
+                                           "removeCouponSelector": "#remove-coupon",
+                                           "applyButton": "button.action.apply",
+                                           "cancelButton": "button.action.cancel"}}'>
+            <input type="hidden" name="remove" id="remove-coupon" value="0" />
+            <input type="text" class="discount-field__input" id="coupon_code" name="coupon_code" value="<?php echo $block->escapeHtml($block->getCouponCode()) ?>" placeholder="<?php echo $block->escapeHtml(__('Promo code'));?>" />
+            <button class="discount-field__button discount-field__button--add" type="submit" value="<?php /* @escapeNotVerified */ echo __('Apply Discount') ?>">
+                <figure class="discount-field__icon-add"></figure>
+            </button>
+        </form>
+    <?php else: ?>
+        <form class="discount-field__applied" id="discount-coupon-form"
+              action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/couponPost') ?>"
+              method="post"
+              data-mage-init='{"discountCode":{"couponCodeSelector": "#coupon_code",
+                                           "removeCouponSelector": "#remove-coupon",
+                                           "applyButton": "button.action.apply",
+                                           "cancelButton": "button.action.cancel"}}'>
+
+            Applied: <?php echo $block->escapeHtml($block->getCouponCode()) ?>
+            <button type="submit" class="discount-field__button discount-field__button--remove" value="<?php /* @escapeNotVerified */ echo __('Cancel Coupon') ?>">
+                X
+            </button>
+
+        </form>
+    <?php endif; ?>
+
+
+
+</div>
+

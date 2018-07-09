@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_careers" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-careers</class>
+            <label><![CDATA[Careers]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_Careers::config</resource>
+            <group id="career_page_settings" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Careers Page Settings</label>
+                <field id="email_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Career Email</label>
+                    <validate>required-entry email2</validate>
+                    <comment>To this Email it will be send all resumes.</comment>
+                </field>
+                <field id="extensions_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Flies Extension</label>
+                    <validate>required-entry</validate>
+                    <comment>Allowed flies extension to append to the resume Email (eg: ".doc, .docx, .txt").</comment>
+                </field>
+            </group>
+            <group id="career_page_advanced_settings" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Advanced Settings</label>
+                <field id="remove_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Remove Resumes</label>
+                    <comment>This remove resume file after sending by Email.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="debug_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Debug Mode</label>
+                    <comment>This turns on logging to custom file.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

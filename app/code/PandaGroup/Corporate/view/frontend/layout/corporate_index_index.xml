@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--<referenceBlock name="breadcrumbs">-->
+            <!--<action method="addCrumb">-->
+                <!--<argument name="crumbName" xsi:type="string">Home</argument>-->
+                <!--<argument name="crumbInfo" xsi:type="array">-->
+                    <!--<item name="title" xsi:type="string">Home</item>-->
+                    <!--<item name="label" xsi:type="string">Home</item>-->
+                    <!--<item name="link" xsi:type="string">/</item>-->
+                <!--</argument>-->
+            <!--</action>-->
+            <!--<action method="addCrumb">-->
+                <!--<argument name="crumbName" xsi:type="string">Corporate</argument>-->
+                <!--<argument name="crumbInfo" xsi:type="array">-->
+                    <!--<item name="title" xsi:type="string">Corporate</item>-->
+                    <!--<item name="label" xsi:type="string">Corporate</item>-->
+                <!--</argument>-->
+            <!--</action>-->
+            <!--<block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>-->
+        <!--</referenceBlock>-->
+
+        <referenceContainer name="top.container">
+            <block class="Magento\Framework\View\Element\Template" name="pandagroup.corporate.slider" template="PandaGroup_Corporate::slider.phtml"/>
+        </referenceContainer>
+
+
+        <referenceContainer name="content">
+            <block class="PandaGroup\Corporate\Block\CorporateForm" name="pandagroup.corporate" template="PandaGroup_Corporate::corporate.phtml">
+                <container name="form.additional.info" label="Form Additional Info"/>
+            </block>
+        </referenceContainer>
+
+        <!--<move element="page.messages" destination="content" before="-"/>-->
+    </body>
+</page>

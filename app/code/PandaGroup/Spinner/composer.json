@@ -1,0 +1,7 @@
+{
+    "name": "PandaGroup/Spinner",
+    "description": "Spinner for Magento 2.x",
+    "version": "1.0.2",
+    "license": "MIT",
+    "type": "magento2-panda-module"
+}

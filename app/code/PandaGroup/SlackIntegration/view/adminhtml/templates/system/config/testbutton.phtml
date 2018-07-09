@@ -1,0 +1,33 @@
+<?php
+$jsonHelper = $this->helper('Magento\Framework\Json\Helper\Data');
+?>
+
+
+    <script>
+        require([
+            'jquery',
+            'Magento_Ui/js/modal/alert'
+        ], function ($, alert) {
+            window.PandaGroupSlackIntegrationTest = function(){
+                var channel = $('#slackintegration_config_general_channel').val();
+                var username = $('#slackintegration_config_general_username').val();
+
+                var text = {"text":"Welcome", "channel":channel, "username":username};
+                $.ajax({
+                    url: $('#slackintegration_config_general_url').val(),
+                    type: 'post',
+                    processData: false,
+                    dataType: 'json',
+                    data: JSON.stringify(text)
+                }).fail(function (jqXHR, textStatus) {
+                    alert({
+                        title:'Result',
+                        content: JSON.stringify(jqXHR)
+                    });
+                });
+            }
+        });
+    </script>
+
+
+<?php echo $block->getButtonHtml() ?>

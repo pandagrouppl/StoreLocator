@@ -1,0 +1,7 @@
+{
+    "name": "PandaGroup/StoreLocator",
+    "description": "Store Locator module for Magento 2.x",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-panda-module"
+}

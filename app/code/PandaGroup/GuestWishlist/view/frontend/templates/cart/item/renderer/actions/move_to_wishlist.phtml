@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Wishlist\Block\Cart\Item\Renderer\Actions\MoveToWishlist */
+?>
+<?php if ($block->isAllowInCart() && $block->isProductVisibleInSiteVisibility()): ?>
+    <a href="#"
+       data-config='<?php /* @escapeNotVerified */ echo $block->getMoveFromCartParams(); ?>'
+       title="<?php echo $block->escapeHtml(__('Move to Wishlist')); ?>"
+       aria-label="<?php echo $block->escapeHtml(__('Move to Wishlist')); ?>"
+       data-message="<?php /* @escapeNotVerified */ echo __('Adding...');?>"
+       class="use-ajax action action-towishlist"
+       data-mage-init='{"pandaWishlist": {}}'
+    >
+        <span><?php /* @escapeNotVerified */ echo __('Move to Wishlist'); ?></span>
+    </a>
+<?php endif ?>

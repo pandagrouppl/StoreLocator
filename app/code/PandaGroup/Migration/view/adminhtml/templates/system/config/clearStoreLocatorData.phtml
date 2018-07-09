@@ -1,0 +1,55 @@
+<?php
+    /* @var $block \PandaGroup\Migration\Block\System\Config\ClearStoreLocatorData */
+?>
+
+<script>
+    require([
+        'jquery',
+        'prototype'
+    ], function(jQuery){
+
+        var collectSpan = jQuery('#clear_store_locator_data_span');
+
+        jQuery('#clear_store_locator_data_button').click(function () {
+            var params = {};
+            new Ajax.Request('<?php echo $block->getAjaxUrl() ?>', {
+                parameters:     params,
+                loaderArea:     false,
+                asynchronous:   true,
+                onCreate: function() {
+                    collectSpan.find('.collected').hide();
+                    collectSpan.find('.processing').show();
+                    jQuery('#clear_store_locator_data_message_span').text('');
+                },
+                onSuccess: function(response) {
+                    collectSpan.find('.processing').hide();
+
+                    var resultText = '';
+                    if (response.status > 200) {
+                        resultText = response.statusText;
+                    } else {
+                        var json = response.responseJSON;
+                        resultStatus = json.done;
+
+                        if (resultStatus == '1') {
+                            collectSpan.find('.collected').show();
+                            resultText = 'Success: '+json.message;
+                        } else {
+                            resultText = 'Error: '+json.message;
+                        }
+                    }
+                    jQuery('#clear_store_locator_data_message_span').text(resultText);
+
+                }
+            });
+        });
+
+    });
+</script>
+
+<?php echo $block->getButtonHtml() ?>
+<span class="collect-indicator" id="clear_store_locator_data_span">
+    <img class="processing" hidden="hidden" alt="Collecting" style="margin:0 5px" src="<?php echo $block->getViewFileUrl('images/process_spinner.gif') ?>"/>
+    <img class="collected" hidden="hidden" alt="Collected" style="margin:-3px 5px" src="<?php echo $block->getViewFileUrl('images/rule_component_apply.gif') ?>"/>
+    <span id="clear_store_locator_data_message_span"></span>
+</span>

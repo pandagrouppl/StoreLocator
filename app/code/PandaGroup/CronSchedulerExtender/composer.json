@@ -1,0 +1,16 @@
+{
+    "name": "PandaGroup/CronSchedulerExtender",
+    "description": "CronScheduler Extender module for Magento 2.x",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karol Brzozowski",
+            "email": "kbrzozowski@light4website.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "wyomind/cronscheduler": "dev-master"
+    },
+    "type": "magento2-panda-module"
+}

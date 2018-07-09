@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+	<!-- Plugins to use 'High to Low' and 'Low to High' options instead of sorting arrow next to select -->
+	<type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+		<plugin name="custom_custom_block_toolbar" type="PandaGroup\SortByExtender\Plugin\Catalog\Block\Toolbar" />
+	</type>
+
+	<type name="Magento\Catalog\Model\Config">
+		<plugin name="custom_catalog_model_config" type="PandaGroup\SortByExtender\Plugin\Catalog\Model\Config" />
+	</type>
+
+</config>

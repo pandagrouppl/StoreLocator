@@ -1,0 +1,9 @@
+{
+    "name": "PandaGroup/SpecialPriceFixer",
+    "description": "PandaGroup Special Price Fixer Module",
+    "type": "magento2-panda-module",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
+    }
+}

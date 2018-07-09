@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_migration" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-migration</class>
+            <label><![CDATA[Migration]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_Migration::config</resource>
+            <group id="migration_basic_settings" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Migration Basic Settings</label>
+                <field id="migration_mode" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Migration Mode</label>
+                    <source_model>PandaGroup\Migration\Model\Config\Source\MigrationMode</source_model>
+                </field>
+            </group>
+            <group id="migration_buttons" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Migration Actions</label>
+                <field id="set_used_for_sort_by_option_button" translate="label" type="button" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\CheckAttrSorting</frontend_model>
+                    <label>Clear Toolbar Filter Select</label>
+                    <comment>Set size attributes sorting option to disable theirs from filtering</comment>
+                </field>
+                <field id="set_theme_button" translate="label" type="button" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetTheme</frontend_model>
+                    <label>Set Peter Theme</label>
+                </field>
+                <field id="clear_store_locator_data_button" translate="label" type="button" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\ClearStoreLocatorData</frontend_model>
+                    <label>Clear StoreLocator Data</label>
+                </field>
+                <field id="set_store_locator_conf_button" translate="label" type="button" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetStoreLocatorConf</frontend_model>
+                    <label>Configure StoreLocator</label>
+                </field>
+                <field id="set_anz_payment_conf_button" translate="label" type="button" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetAnzPaymentConf</frontend_model>
+                    <label>Configure ANZ Payment</label>
+                </field>
+                <field id="set_careers_conf_button" translate="label" type="button" sortOrder="6" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetCareersConf</frontend_model>
+                    <label>Configure Careers Page</label>
+                </field>
+                <field id="set_varnish_conf_button" translate="label" type="button" sortOrder="7" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetVarnishConf</frontend_model>
+                    <label>Configure Varnish Cache</label>
+                </field>
+                <field id="set_gmail_smtp_conf_button" translate="label" type="button" sortOrder="8" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <frontend_model>PandaGroup\Migration\Block\System\Config\SetGmailSmtpConf</frontend_model>
+                    <label>Configure Gmail SMTP</label>
+                    <comment>ONLY DEV !!! This is only test configuration</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

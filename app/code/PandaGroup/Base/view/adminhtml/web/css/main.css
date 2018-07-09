@@ -1,0 +1,20 @@
+.pandagroup-conf-tab .admin__page-nav-title strong:before {
+    background: url(../images/pandagroup-logo.png) no-repeat;
+    width: 25px;
+    height: 19px;
+    content: '';
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+
+.admin__menu [data-ui-id^="menu-pandagroup-"] .submenu-group-title span:before {
+    background: url(../images/pandagroup-logo.png) no-repeat;
+    width: 25px;
+    height: 19px;
+    content: '';
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: bottom;
+    filter: brightness(300%);
+}

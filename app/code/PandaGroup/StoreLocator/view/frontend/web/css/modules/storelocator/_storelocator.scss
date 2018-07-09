@@ -1,0 +1,32 @@
+.storelocator-index-index {
+
+    .page-main {
+        max-width: 100%;
+        min-height: 50vh;
+        padding: 0;
+        position: relative;
+
+    }
+
+    #preact-loader {
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%
+    }
+}
+
+.storelocator {
+
+    margin-bottom: 50px;
+
+    a, .storelocator-header__filter, .stores-li__name {
+        color: #222;
+
+        &:hover {
+            color: #999;
+        }
+
+    }
+}

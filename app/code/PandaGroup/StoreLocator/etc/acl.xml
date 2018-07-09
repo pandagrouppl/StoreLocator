@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="PandaGroup_StoreLocator::store_locator">
+                        <!--<resource id="PandaGroup_StoreLocator::store_locator_list" title="Store Locator List" translate="title" sortOrder="100"/>-->
+                        <!--<resource id="PandaGroup_StoreLocator::store_locator_list" title="Configuration" translate="title" sortOrder="200"/>-->
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

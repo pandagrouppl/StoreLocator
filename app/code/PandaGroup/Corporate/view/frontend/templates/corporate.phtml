@@ -1,0 +1,59 @@
+<section class="corporate-content">
+    <div class="corporate-content__description">
+        <h1>Corporate Styling</h1>
+
+        <p>
+            Peter Jackson offers corporate packages for some of Australia's leading organizations.
+        </p>
+
+        <p>
+            We cater to all commercial sectors, offering businesses garment-programs far greater than any uniform, while
+            always receiving our highest level of service and ongoing support from our National Sales Manager.
+        </p>
+
+        <p>
+            Our wide portfolio of partnerships and clients ranges from finance, real estate and hospitality, to diverse
+            leading media giants and sports teams. With a 100% customizable selection of European textiles, we can tailor
+            solutions depending on your size, requirements, or your every specific need.
+        </p>
+
+        <p>
+            With us, you won't be wearing just an excellent garment, but also the tradition, history, reputation and
+            style that characterises our brand as one of Australia's leading premium menswear brands.
+        </p>
+
+    </div>
+
+    <div>
+
+        <form class="form corporate"
+              action="<?php /* @escapeNotVerified */ echo $block->getFormAction(); ?>"
+              id="corporate-form"
+              method="post"
+              data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>"
+              data-mage-init='{"js/submitFormShowPopup":{"popupSelector": "corporate-success-popup"}}'>
+
+            <input class="corporate-content__input" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" name="email" placeholder="Email*" title="Your email address" required>
+            <input class="corporate-content__input" type="text" pattern="([A-z0-9À-ž\s]){2,}" name="name" placeholder="Your full name*" title="Only alphanumeric characters allowed" required>
+            <input class="corporate-content__input" type="text" name="subject" placeholder="Subject*" title="Subject" required>
+            <textarea class="corporate-content__textarea" name="comment" placeholder="Type your enquiry here." title="Message"></textarea>
+            <button class="corporate-content__button" type="submit" title="Submit">Submit your enquiry</button>
+        </form>
+    </div>
+</section>
+<div class="success-popup success-popup--contact" id="corporate-success-popup">
+    <div class="success-popup__overlay">
+        <div class="success-popup-corporate__popup">
+            <div class="success-popup-corporate__border">
+                <div class="success-popup-corporate__top-bar">
+                    <span class="success-popup-corporate__close">X</span>
+                </div>
+                <img class="success-popup-corporate__logo success-popup-corporate__logo--responsive" src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-logo.png'); ?>">
+                <span class="success-popup-corporate__text">Thank you for choosing Peter Jackson and your interest in our Corporate Styling service.</span>
+                <br>
+                <span class="success-popup-corporate__text">We will be contacting you very soon.</span>
+                <img class="success-popup-corporate__logo" src="<?php echo $this->getViewFileUrl('img/assets/corporate/Corporate-watermark.png'); ?>">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{
+    "name": "PandaGroup/MagentoSlackMonitor",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karol Brzozowski",
+            "email": "kbrzozowski@light4website.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "type": "magento2-panda-module"
+}

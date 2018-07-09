@@ -1,0 +1,13 @@
+{
+    "name": "PandaGroup/AttributeUpdate",
+    "description": "Attribute Update for Peter Jacksons",
+    "authors": [
+        {
+            "name": "Karol Brzozowski",
+            "email": "kbrzozowski@light4website.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "type": "magento2-panda-module"
+}

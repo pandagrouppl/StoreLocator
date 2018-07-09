@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <pandagroup_careers>
+            <career_page_settings>
+                <extensions_text>.doc, .docx, .txt</extensions_text>
+            </career_page_settings>
+            <career_page_advanced_settings>
+                <remove_enable>0</remove_enable>
+                <debug_enable>1</debug_enable>
+            </career_page_advanced_settings>
+        </pandagroup_careers>
+    </default>
+</config>

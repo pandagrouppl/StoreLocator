@@ -1,0 +1,11 @@
+{
+    "name": "PandaGroup/AnzExtender",
+    "description": "Anz Extender module for Magento 2.x",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "magento2-panda-module",
+    "require": {
+        "PandaGroup/Base": "dev-master",
+        "magenest/module-anz": "dev-master"
+    }
+}

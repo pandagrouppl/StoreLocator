@@ -9,55 +9,27 @@
     ],
     "require": {
         "magento/product-community-edition": "2.1.10",
-        "PandaGroup/MigrationTool": "dev-master",
         "composer/composer": "@alpha",
         "strategery/magento2-infinitescroll": "dev-master",
         "oomphinc/composer-installers-extender": "^1.1",
-        "PandaGroup/Base": "dev-master",
-        "PandaGroup/ThemeSettings": "dev-master",
-        "PandaGroup/GuestWishlist": "dev-master",
-        "PandaGroup/Migration": "dev-master",
-        "PandaGroup/StoreLocator": "dev-master",
         "PandaGroup/Frontools": "dev-master",
-        "PandaGroup/Checkout": "dev-master",
-        "PandaGroup/Careers": "dev-master",
-        "PandaGroup/Corporate": "dev-master",
-        "PandaGroup/DiscountInMiniCart": "dev-master",
-        "PandaGroup/Spinner": "dev-master",
-        "PandaGroup/Quickview": "dev-master",
-        "PandaGroup/EmailTester": "dev-master",
-        "PandaGroup/CronSchedulerExtender": "dev-master",
-        "PandaGroup/GiftCardExtender": "dev-master",
-        "PandaGroup/Westfield": "dev-master",
-        "PandaGroup/SlackIntegration": "dev-master",
-        "PandaGroup/MagentoSlackMonitor": "dev-master",
-        "PandaGroup/RegionsPatcher": "dev-master",
-        "PandaGroup/CouponExtender": "dev-master",
-        "PandaGroup/SortByExtender": "dev-master",
-        "PandaGroup/AttributeUpdate": "dev-master",
-        "PandaGroup/AnzExtender": "dev-master",
-        "PandaGroup/Salesforce": "dev-master",
-        "PandaGroup/SpecialPriceFixer": "dev-master",
-        "PandaGroup/ContactExtender": "dev-master",
-        "PandaGroup/CategoryWidget": "dev-master",
-        "PandaGroup/CatalogExtender": "dev-master",
-        "PandaGroup/LoginIcon": "dev-master",
-        "PandaGroup/DiscountExtraCentFixer": "1.0.0",
+        "anowave/sort": "2.0.0",
+        "fishpig/module-wordpress": "1.0.0.55",
+        "magictoolbox/magic360": "1.5.11",
+        "plumrocket/module-popuplogin": "2.0.3",
+        "plumrocket/module-psloginfree": "2.1.1",
         "salesforce-mc/fuel-sdk-php": "^1.1",
-        "PandaGroup/CustomerExtender": "dev-master",
-        "PandaGroup/AdrollExtender": "dev-master",
-        "magenest/module-anz": "dev-master",
+        "magenest/module-anz": "2.0.0",
         "amasty/base": "1.1.2",
-        "amasty/module-special-promo": "2.0.4",
         "amasty/module-special-promo-pro": "2.0.4",
         "amasty/module-gift-card": "1.3.2",
         "amasty/shopby": "2.4.4",
         "amasty/quickview": "1.0.4",
         "adroll123123124/pixel": "dev-master",
-        "wyomind/core": "dev-master",
-        "wyomind/cronscheduler": "dev-master",
+        "wyomind/cronscheduler": "1.0.1.3",
         "magepal/magento2-gmailsmtpapp": "2.5.0",
         "webshopapps/module-matrixrate": "^20.1",
+        "amasty/module-special-promo": "2.0.4",
         "apptrian/facebook-pixel": "2.1.6",
         "neklo/product_position": "1.2.2",
         "symfony/event-dispatcher": "2.8.34",
@@ -240,13 +212,33 @@
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git"
         },
-        "35": {
+        "anowavePackage": {
             "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-discount-extra-cent-fixer.git"
+            "url": "git@bitbucket.org:l4w/magento2-anowave-package.git"
         },
-        "36": {
+        "anowaveSort": {
             "type": "vcs",
-            "url": "git@bitbucket.org:l4w/magento2-adroll-pixel-extender.git"
+            "url": "git@bitbucket.org:l4w/magento2-anowave-sort.git"
+        },
+        "fishpigWordpress": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-fishpig-wordpress.git"
+        },
+        "magictoolboxMagic360": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-magictoolbox-magic360.git"
+        },
+        "plumrocketBase": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-base.git"
+        },
+        "plumrocketPopupLogin": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-popuplogin.git"
+        },
+        "plumrocketPsloginFree": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-plumrocket-psloginfree.git"
         },
         "amastyGiftCard": {
             "type": "vcs",
@@ -294,11 +286,6 @@
         "installer-types": [
             "magento2-panda-module",
             "magento2-panda-tool"
-        ],
-        "installer-paths": {
-            "app/code/{$vendor}/{$name}/": [
-                "type:magento2-panda-module"
-            ]
-        }
+        ]
     }
 }

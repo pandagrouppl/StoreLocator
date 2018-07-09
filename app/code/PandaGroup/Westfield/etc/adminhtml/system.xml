@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="light4website_westfield" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Westfield Integration</label>
+            <tab>panda_group</tab>
+            <resource>Light4web_Westfield::main_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>API Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="campaign_code" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Campaign Code</label>
+                </field>
+                <field id="username" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Username</label>
+                </field>
+                <field id="password" translate="label" type="password" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Password</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="gateway_url_production_full" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gateway URL (Production Full)</label>
+                </field>
+                <field id="gateway_url_production_partial" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gateway URL (Production Partial)</label>
+                </field>
+                <field id="username_test" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Username (Test Mode)</label>
+                </field>
+                <field id="password_test" translate="label" type="password" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Password (Test Mode)</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="gateway_url_test_full" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gateway URL (Test Full)</label>
+                </field>
+                <field id="gateway_url_test_partial" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gateway URL (Test Partial)</label>
+                </field>
+                <field id="test_mode" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Test Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="debug_mode" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Debug Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="color_attribute_code" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Color Attribute Code</label>
+                </field>
+                <!--<field id="export" translate="label comment" type="button" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Export Colors</label>
+                    <frontend_model>PandaGroup\Westfield\Block\System\Config\CsvButton</frontend_model>
+                </field>-->
+                <!--<field id="import" translate="label" type="file" sortOrder="14" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Import (Map Colors)</label>
+                </field>-->
+            </group>
+            <group id="export" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Export</label>
+                <field id="export" translate="label comment" type="button" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Export Full</label>
+                    <frontend_model>PandaGroup\Westfield\Block\System\Config\Export</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

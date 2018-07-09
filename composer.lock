@@ -4,265 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f841ac928b979ca2b23c9545aecbefe1",
-    "content-hash": "5c62b92d813645fe9c0635aa38d94adf",
+    "hash": "65ebf1e798f08de0e5a52ae09087529a",
+    "content-hash": "c6538bb70d418279f02cd274c725b1cd",
     "packages": [
-        {
-            "name": "PandaGroup/AdrollExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-adroll-pixel-extender.git",
-                "reference": "fa00625144b27a48e8d5f7844a2af0feee0be66f"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Adroll Extender module for Magento 2.x",
-            "time": "2018-06-27 10:02:12"
-        },
-        {
-            "name": "PandaGroup/AnzExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-anz-extender.git",
-                "reference": "8de176fa2ff6c2cd5d6d9acfb6c1a69f6f573e3b"
-            },
-            "require": {
-                "magenest/module-anz": "dev-master",
-                "pandagroup/base": "dev-master"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Anz Extender module for Magento 2.x",
-            "time": "2018-06-06 14:13:53"
-        },
-        {
-            "name": "PandaGroup/AttributeUpdate",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/peterjacksons-attribute-update.git",
-                "reference": "68b57e59cc1dd57d978e461599d36fcdbe86a600"
-            },
-            "type": "magento2-panda-module",
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "description": "Attribute Update for Peter Jacksons",
-            "time": "2017-11-20 13:23:29"
-        },
-        {
-            "name": "PandaGroup/Base",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-base-module.git",
-                "reference": "3268dd580d91801c826b10367a59bc0d069b1648"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Base Module",
-            "time": "2018-03-07 14:11:34"
-        },
-        {
-            "name": "PandaGroup/Careers",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-careers.git",
-                "reference": "2892e00963acf18e17a0c488eebd715b18604392"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Caareers module for Magento 2.x",
-            "time": "2018-03-20 18:06:21"
-        },
-        {
-            "name": "PandaGroup/CatalogExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/peterjacksons-catalog-extender.git",
-                "reference": "43f2053c4d89da881e7ad101f4964ea804d074f9"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Catalog Extender module for Magento 2.x",
-            "time": "2018-03-23 14:21:05"
-        },
-        {
-            "name": "PandaGroup/CategoryWidget",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-category-widget.git",
-                "reference": "ec2c66d2a31a82d9da75c6bd64d065ef701e9087"
-            },
-            "type": "magento2-panda-module",
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "description": "Category Widget for Magento 2",
-            "time": "2018-06-20 07:55:32"
-        },
-        {
-            "name": "PandaGroup/Checkout",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-checkout.git",
-                "reference": "068f143453be13253b62adb3ac33b67bdd05d79e"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Checkout update module for Magento 2.x",
-            "time": "2018-05-09 12:25:46"
-        },
-        {
-            "name": "PandaGroup/ContactExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/peterjacksons-contact-extender.git",
-                "reference": "9b276b20b9e94ba3a984440add63a1bff1670535"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Contact Extender module for Magento 2.x",
-            "time": "2018-02-05 15:06:15"
-        },
-        {
-            "name": "PandaGroup/Corporate",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-corporate.git",
-                "reference": "31cee498717e63abf5c65b3eabb772339653f922"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Corporate module for Magento 2.x",
-            "time": "2018-05-16 14:49:32"
-        },
-        {
-            "name": "PandaGroup/CouponExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git",
-                "reference": "210483c1ac9802528b39fac016e64cd8978e4ccb"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Coupon Extender Module",
-            "time": "2017-11-02 13:46:54"
-        },
-        {
-            "name": "PandaGroup/CronSchedulerExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git",
-                "reference": "7ec3e1c7ed46c15b8256b7db0313d5049fcaf282"
-            },
-            "require": {
-                "wyomind/cronscheduler": "dev-master"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "description": "CronScheduler Extender module for Magento 2.x",
-            "time": "2017-09-22 13:12:14"
-        },
-        {
-            "name": "PandaGroup/CustomerExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/peterjacksons-customer-extender.git",
-                "reference": "dd3697b815b12246fcd2030e6327cf0ec62e8a81"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup CustomerExtender Module",
-            "time": "2018-01-02 09:52:14"
-        },
-        {
-            "name": "PandaGroup/DiscountExtraCentFixer",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-discount-extra-cent-fixer.git",
-                "reference": "bb793aa354eeb2d1be1d34f5c1565263be672289"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup DiscountExtraCentFixer Module",
-            "time": "2018-05-30 10:12:57"
-        },
-        {
-            "name": "PandaGroup/DiscountInMinicart",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-discount-in-minicart.git",
-                "reference": "66d020106a00ec0bf3f5b3266edbd716c769b3a8"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Discount In Minicart Module",
-            "time": "2018-03-28 10:00:19"
-        },
-        {
-            "name": "PandaGroup/EmailTester",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-email-tester.git",
-                "reference": "9c06bc84e003928236d5bbbaef4cba70bedbcff1"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "EmailTester module",
-            "time": "2017-09-06 13:58:47"
-        },
         {
             "name": "PandaGroup/Frontools",
             "version": "dev-master",
@@ -277,281 +21,6 @@
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
             "time": "2018-02-08 10:10:23"
-        },
-        {
-            "name": "PandaGroup/GiftCardExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git",
-                "reference": "47ef6caafc32c9bfe2b806b5463cd7e992a25a7c"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup GiftCard Extender Module",
-            "time": "2017-10-31 10:46:29"
-        },
-        {
-            "name": "PandaGroup/GuestWishlist",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git",
-                "reference": "df38ec5dd9db3be60ef6b9298ba6f5a637561edb"
-            },
-            "require": {
-                "pandagroup/base": "dev-master",
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup GuestWishlist Module",
-            "time": "2018-05-14 10:03:24"
-        },
-        {
-            "name": "PandaGroup/LoginIcon",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/peterjacksons-login-icon.git",
-                "reference": "1ae4738b99818691993ea64465a2111c363c50fc"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Login Icon Module",
-            "time": "2018-05-08 15:46:56"
-        },
-        {
-            "name": "PandaGroup/MagentoSlackMonitor",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-magento-slack-monitor.git",
-                "reference": "456e42e277c04e9c2f36d9647b76530290c8d773"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "time": "2017-10-18 07:21:30"
-        },
-        {
-            "name": "PandaGroup/Migration",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-migration",
-                "reference": "ea22ebccda412859a5b049bc44dfb26b2865fd28"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Migration module for Peter Jackson",
-            "time": "2017-08-22 08:30:09"
-        },
-        {
-            "name": "PandaGroup/MigrationTool",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-migration-tool",
-                "reference": "23eaac18078f41bf5236cd807d9e0deb25f13a31"
-            },
-            "require": {
-                "monolog/monolog": ">=1.16.0",
-                "symfony/console": "~2.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Migration\\": [
-                        "src/Migration",
-                        "tests/unit/testsuite/Migration"
-                    ]
-                },
-                "files": [
-                    "src/Migration/cli_commands.php",
-                    "registration.php"
-                ]
-            },
-            "description": "Migration Tool",
-            "time": "2017-10-12 08:41:07"
-        },
-        {
-            "name": "PandaGroup/Quickview",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-quickview.git",
-                "reference": "876775fef3efd739c87f78084a8dc53baa1aa1cf"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Quickview Module",
-            "time": "2018-06-19 09:39:44"
-        },
-        {
-            "name": "PandaGroup/RegionsPatcher",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git",
-                "reference": "56f6b767826ce6096a26a60ca81c2eb4ac9cbc4a"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Regions Patcher Module",
-            "time": "2017-12-21 14:23:50"
-        },
-        {
-            "name": "PandaGroup/Salesforce",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git",
-                "reference": "9b3b3d2ef7bc5e2951159d9623c21844326161d9"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Salesforce Marketing Cloud Integration module for Magento 2",
-            "time": "2017-12-29 12:13:20"
-        },
-        {
-            "name": "PandaGroup/SlackIntegration",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-slack-integration.git",
-                "reference": "e59b36699194cba3d1b67a855053d08bac4b6ce6"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "description": "Slack Integration module for Magento 2.x",
-            "time": "2018-03-21 12:55:36"
-        },
-        {
-            "name": "PandaGroup/SortByExtender",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-sort-by-extender.git",
-                "reference": "b138e698e224a3446bb089168380cf500d8a0a39"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Karol Brzozowski",
-                    "email": "kbrzozowski@light4website.com"
-                }
-            ],
-            "description": "Attribute Update for Peter Jacksons",
-            "time": "2017-11-20 11:49:04"
-        },
-        {
-            "name": "PandaGroup/SpecialPriceFixer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-special-price-fixer.git",
-                "reference": "3c2b438b8ae981a8ae48b9697c1f424c528d320b"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup Special Price Fixer Module",
-            "time": "2018-01-03 14:40:42"
-        },
-        {
-            "name": "PandaGroup/Spinner",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-spinner.git",
-                "reference": "0fca544fd609eaca8078916dba977b685b209e39"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Spinner for Magento 2.x",
-            "time": "2018-05-07 11:55:15"
-        },
-        {
-            "name": "PandaGroup/StoreLocator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pandagrouppl/StoreLocator.git",
-                "reference": "ab039a4d068dc550b08495ed3bf8fb991c8fe3bd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pandagrouppl/StoreLocator/zipball/ab039a4d068dc550b08495ed3bf8fb991c8fe3bd",
-                "reference": "ab039a4d068dc550b08495ed3bf8fb991c8fe3bd",
-                "shasum": ""
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Store Locator module for Magento 2.x",
-            "support": {
-                "source": "https://github.com/pandagrouppl/StoreLocator/tree/master",
-                "issues": "https://github.com/pandagrouppl/StoreLocator/issues"
-            },
-            "time": "2018-03-22 20:57:52"
-        },
-        {
-            "name": "PandaGroup/ThemeSettings",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-peter-theme-settings.git",
-                "reference": "574018ed098338010620f95789b3ce85af997523"
-            },
-            "require": {
-                "php": ">=5.5.22|~5.6.0|~7.0.2|7.0.4|~7.0.6"
-            },
-            "type": "magento2-panda-module",
-            "description": "PandaGroup ThemeSettings Module",
-            "time": "2018-06-18 12:19:18"
-        },
-        {
-            "name": "PandaGroup/Westfield",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-westfield.git",
-                "reference": "84b38b34ba65504f14dc9babba8c9b415e2363d4"
-            },
-            "type": "magento2-panda-module",
-            "license": [
-                "MIT"
-            ],
-            "description": "Westfield module for Magento 2.x",
-            "time": "2018-02-27 12:37:12"
         },
         {
             "name": "adroll123123124/pixel",
@@ -870,6 +339,53 @@
                 "Commercial"
             ],
             "description": "Improved Layered Navigation by Amasty - SEO sub-module"
+        },
+        {
+            "name": "anowave/package",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-anowave-package.git",
+                "reference": "cc3d274ea31d9bb5ddb8fa58aa5c5f00fc9f6108"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Anowave\\Package\\": ""
+                }
+            },
+            "description": "Anowave Package",
+            "time": "2018-05-28 13:12:58"
+        },
+        {
+            "name": "anowave/sort",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-anowave-sort.git",
+                "reference": "da3518c8ce6c36959fadc6203d91a5d7e85c3f31"
+            },
+            "require": {
+                "anowave/package": "0.0.*",
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Anowave\\Sort\\": ""
+                }
+            },
+            "description": "Magento 2 Sort Products by Drag & Drop",
+            "time": "2018-05-28 13:17:16"
         },
         {
             "name": "apptrian/facebook-pixel",
@@ -1458,6 +974,30 @@
             "time": "2017-06-27 22:17:23"
         },
         {
+            "name": "fishpig/module-wordpress",
+            "version": "1.0.0.55",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-fishpig-wordpress.git",
+                "reference": "d1ce99709c9566275c10fbf46b520b02242ba57c"
+            },
+            "require": {
+                "magento/product-community-edition": "^2.0.0",
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "FishPig\\WordPress\\": ""
+                }
+            },
+            "description": "Magento WordPress Integration",
+            "time": "2018-05-28 14:43:49"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "1.6.1",
             "source": {
@@ -1574,7 +1114,7 @@
         },
         {
             "name": "magenest/module-anz",
-            "version": "dev-master",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-magenest-module-anz.git",
@@ -6535,6 +6075,35 @@
             "time": "2018-02-07 00:42:46"
         },
         {
+            "name": "magictoolbox/magic360",
+            "version": "1.5.11",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-magictoolbox-magic360.git",
+                "reference": "710e08efe223f0654b7e1d2085d8a44f717ba94e"
+            },
+            "require": {
+                "magento/module-backend": ">=100.0",
+                "magento/module-catalog": ">=100.0",
+                "php": "~5.5.0|~5.6.0|~7.0.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MagicToolbox\\Magic360\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Magic360 module for Magento 2",
+            "time": "2018-05-28 14:48:42"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.16.0",
             "source": {
@@ -6910,6 +6479,74 @@
                 "x509"
             ],
             "time": "2018-04-15 16:55:05"
+        },
+        {
+            "name": "plumrocket/module-plumbase",
+            "version": "2.0.8",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-base.git",
+                "reference": "6a7a2d37fda7daa5ed47c155ea34ba8e6fb970e5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\Base\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:21:22"
+        },
+        {
+            "name": "plumrocket/module-popuplogin",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-popuplogin.git",
+                "reference": "5f45befb988cced86d19886400ab7bb74108a3da"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~5.6.5|~7.0.0|7.0.2|7.0.4|~7.0.6",
+                "plumrocket/module-plumbase": "2.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\Popuplogin\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:27:34"
+        },
+        {
+            "name": "plumrocket/module-psloginfree",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-plumrocket-psloginfree.git",
+                "reference": "14640af3b6dd4d7ac216b2ab74a173952117309c"
+            },
+            "require": {
+                "php": "~5.5.0|~5.6.0|~5.6.5|~7.0.0|7.0.2|7.0.4|~7.0.6",
+                "plumrocket/module-plumbase": "2.*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Plumrocket\\SocialLoginFree\\": ""
+                }
+            },
+            "description": "N/A",
+            "time": "2018-05-29 09:28:30"
         },
         {
             "name": "psr/log",
@@ -7940,7 +7577,7 @@
         },
         {
             "name": "wyomind/core",
-            "version": "dev-master",
+            "version": "3.1.0.4",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-wyomind-core.git",
@@ -7965,7 +7602,7 @@
         },
         {
             "name": "wyomind/cronscheduler",
-            "version": "dev-master",
+            "version": "1.0.1.3",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git",
@@ -10767,44 +10404,10 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
-        "pandagroup/migrationtool": 20,
         "composer/composer": 15,
         "strategery/magento2-infinitescroll": 20,
-        "pandagroup/base": 20,
-        "pandagroup/themesettings": 20,
-        "pandagroup/guestwishlist": 20,
-        "pandagroup/migration": 20,
-        "pandagroup/storelocator": 20,
         "pandagroup/frontools": 20,
-        "pandagroup/checkout": 20,
-        "pandagroup/careers": 20,
-        "pandagroup/corporate": 20,
-        "pandagroup/discountinminicart": 20,
-        "pandagroup/spinner": 20,
-        "pandagroup/quickview": 20,
-        "pandagroup/emailtester": 20,
-        "pandagroup/cronschedulerextender": 20,
-        "pandagroup/giftcardextender": 20,
-        "pandagroup/westfield": 20,
-        "pandagroup/slackintegration": 20,
-        "pandagroup/magentoslackmonitor": 20,
-        "pandagroup/regionspatcher": 20,
-        "pandagroup/couponextender": 20,
-        "pandagroup/sortbyextender": 20,
-        "pandagroup/attributeupdate": 20,
-        "pandagroup/anzextender": 20,
-        "pandagroup/salesforce": 20,
-        "pandagroup/specialpricefixer": 20,
-        "pandagroup/contactextender": 20,
-        "pandagroup/categorywidget": 20,
-        "pandagroup/catalogextender": 20,
-        "pandagroup/loginicon": 20,
-        "pandagroup/customerextender": 20,
-        "pandagroup/adrollextender": 20,
-        "magenest/module-anz": 20,
         "adroll123123124/pixel": 20,
-        "wyomind/core": 20,
-        "wyomind/cronscheduler": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,

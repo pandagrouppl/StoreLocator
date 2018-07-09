@@ -11,11 +11,6 @@ atlassian*
 
 /dev
 
-/app/code/Magento
-/app/code/Amasty
-/app/code/PandaGroup
-/app/code/PL
-/app/code/Polcode
 
 /app/design/*/Magento
 

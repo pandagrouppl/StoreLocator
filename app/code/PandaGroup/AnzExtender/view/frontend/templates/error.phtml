@@ -1,0 +1,54 @@
+<?php
+/** @var $block \PandaGroup\AnzExtender\Block\Onepage\Error */
+?>
+<div class="checkout-error">
+
+    <div class="checkout-error__inner">
+        <div class="checkout-error__content">
+            <h2 class="checkout-error__title"><?php echo $block->getCustomerName() . $block->escapeHtml(__(', Your order was unsuccessful')) ?></h2>
+
+                <p class="checkout-error__para checkout-error__para--bold">For some reason your transaction did not go through. Please
+                    check that your payment details are correct and try again.
+                </p>
+
+
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <a class="action primary button" href="<?php /* @escapeNotVerified */ echo $block->getUrl() ?>"><span class="checkout-error__continue"><?php /* @escapeNotVerified */ echo __('Return to checkout ') ?></span></a>
+                </div>
+            </div>
+
+            <div class="checkout-error__info">
+                <p>Have questions about your order?  We are here to help.</p>
+
+
+                <p>
+                    <?php if (false === empty($contactEmail = $block->getContactEmail())): ?>
+                        <?php echo 'Email us at ' . "<span>" . $contactEmail . "</span>" . ' '; ?>
+                    <?php endif; ?>
+
+                    <?php if (false === empty($phoneNumber = $block->getPhoneNumber())): ?>
+                        <?php echo 'or call us on ' . "<span>" . $phoneNumber . "</span>" . '.'; ?>
+                    <?php endif; ?>
+                </p>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+    require([
+        'Magento_Customer/js/customer-data'
+    ], function (customerData) {
+        var sections = ['cart'];
+        customerData.invalidate(sections);
+        customerData.reload(sections, true);
+    });
+</script>

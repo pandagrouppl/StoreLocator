@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="slackintegration_config" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Slack Integration</label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_SlackIntegration::slackintegration_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+
+                <label>General Configuration</label>
+
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Url</label>
+                </field>
+
+                <field id="username" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Username</label>
+                </field>
+
+                <field id="channel" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>General Channel</label>
+                </field>
+
+                <field id="button" translate="label comment" type="button" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label></label>
+                    <frontend_model>PandaGroup\SlackIntegration\Block\Adminhtml\System\Config\TestButton</frontend_model>
+                </field>
+
+                <field id="newOrderNotification" translate="label comment" type="checkbox" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send new order notification</label>
+                    <frontend_model>PandaGroup\SlackIntegration\Block\Adminhtml\System\Config\Checkbox</frontend_model>
+                </field>
+
+                <field id="newReviewNotification" translate="label comment" type="checkbox" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send new review notification</label>
+                    <frontend_model>PandaGroup\SlackIntegration\Block\Adminhtml\System\Config\Checkbox</frontend_model>
+                </field>
+
+                <field id="newContactNotification" translate="label comment" type="checkbox" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send new contact notification</label>
+                    <frontend_model>PandaGroup\SlackIntegration\Block\Adminhtml\System\Config\Checkbox</frontend_model>
+                </field>
+
+                <field id="newAccountNotification" translate="label comment" type="checkbox" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Send new account notification</label>
+                    <frontend_model>PandaGroup\SlackIntegration\Block\Adminhtml\System\Config\Checkbox</frontend_model>
+                </field>
+            </group>
+
+            <group id="channel" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Notification Channel</label>
+
+                <field id="newOrderNotificationChannel" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>New Order Notification Channel</label>
+                </field>
+
+                <field id="newReviewNotificationChannel" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>New Review Notification Channel</label>
+                </field>
+
+                <field id="newAccountNotificationChannel" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>New Account Notification Channel</label>
+                </field>
+
+                <field id="newContactNotificationChannel" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>New Contact Notification Channel</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

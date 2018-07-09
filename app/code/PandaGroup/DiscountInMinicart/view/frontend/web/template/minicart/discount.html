@@ -1,0 +1,15 @@
+
+<!-- ko if: displaySubtotal() -->
+<!-- ko if: cart().discount_amount > 0 -->
+<div class="minicart__subtotal">
+    <div class="minicart__subtotal-label">
+        <!-- ko i18n: 'Discount' --><!-- /ko -->
+    </div>
+    <div class="minicart__subtotal-amount">
+        <div class="amount price-container">
+            <span class="price-wrapper" data-bind="html: cart().discount"></span>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+<!-- /ko -->

@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="wishlist__remove-wrapper">
+    <a class="wishlist__remove show-general-popup"><?php /* @escapeNotVerified */ echo __('Remove')?></a>
+    <div class="general-popup">
+        <div class="general-popup__overlay">
+            <div class="general-popup__popup">
+                <h1 class="general-popup__title"><?php /* @escapeNotVerified */ echo __('Are you sure you want to remove this product from your wishlist?');?></h1>
+                <div class="general-popup__buttons">
+                    <a
+                       data-mage-init='{"pandaWishlist": {}}'
+                       data-message="<?php /* @escapeNotVerified */ echo __('Removing...');?>"
+                       data-config='<?php /* @escapeNotVerified */ echo $block->getItemRemoveParams($block->getItem()); ?>'
+                       title="<?php /* @escapeNotVerified */ echo __('Remove Item') ?>"
+                       class="general-popup__a-negative">
+                        <span><?php /* @escapeNotVerified */ echo __('Yes, get rid of it!');?></span>
+                    </a>
+                    <a class="general-popup__a-positive">
+                        <?php /* @escapeNotVerified */ echo __('I want to keep it')?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
