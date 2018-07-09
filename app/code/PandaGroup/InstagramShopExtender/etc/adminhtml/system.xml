@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="pandagroup_instagramshop_extender" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>pandagroup-instagramshop-extender</class>
+            <label><![CDATA[Instagram Shop]]></label>
+            <tab>panda_group</tab>
+            <resource>PandaGroup_InstagramShopExtender::config</resource>
+            <group id="instagramshop_base_settings" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>InstagramShop Base Settings</label>
+                <field id="max_photo_per_page_text" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Max Photo Per Page</label>
+                    <validate>validate-number</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
