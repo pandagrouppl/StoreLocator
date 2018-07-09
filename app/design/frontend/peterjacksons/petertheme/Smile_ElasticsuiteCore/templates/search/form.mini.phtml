@@ -1,0 +1,75 @@
+<?php
+/**
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Smile Elastic Suite to newer
+ * versions in the future.
+ *
+ *
+ * @category  Smile
+ * @package   Smile\ElasticsuiteCore
+ * @author    Romain Ruaud <romain.ruaud@smile.fr>
+ * @copyright 2016 Smile
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+
+/**
+ * Template for quick search mini form.
+ * Overriden to manage template injection for the rendering of autocomplete results.
+ *
+ * @var $block \Smile\ElasticsuiteCore\Block\Search\Form\Autocomplete
+ */
+?>
+
+<?php
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+?>
+<div class="header-right__search">
+    <a href="#search" class><i class="header-right__show-search-overlay filtered-on-header"></i></a>
+</div>
+
+<div class="search-overlay block block-search">
+<!--    <div class="block block-title"><strong>--><?php ///* @escapeNotVerified */ echo __('Search'); ?><!--</strong></div>-->
+    <div class="search-overlay__container block block-content">
+        <i class="search-overlay__close">X</i>
+        <form class="search-overlay__form form minisearch" id="search_mini_form"
+              action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+            <div class="field search">
+                <div class="search-overlay__row control">
+                    <input id="search"
+                           data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_mini_form",
+                                "url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest'); ?>",
+                                "destinationSelector":"#search_autocomplete",
+                                "templates": <?php /* @noEscape */ echo $block->getJsonSuggestRenderers();?>,
+                                "priceFormat" : <?php /* @noEscape */ echo $block->getJsonPriceFormat();?>}
+                            }'
+                           type="text"
+                           name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+                           value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+                           class="input-text search-overlay__input"
+                           maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+                           role="combobox"
+                           aria-haspopup="false"
+                           aria-autocomplete="both"
+                           autocomplete="off"
+                           data-block="autocomplete-form"
+                           autofocus="autofocus"/>
+                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                    <?php echo $block->getChildHtml() ?>
+                </div>
+            </div>
+            <div class="search-overlay__submit actions">
+                <button type="submit"
+                        title="<?php echo $block->escapeHtml(__('Search')) ?>"
+                        class="action search search-overlay__zoom">
+                    <i class="search-overlay__zoom-icon"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "65ebf1e798f08de0e5a52ae09087529a",
-    "content-hash": "c6538bb70d418279f02cd274c725b1cd",
+    "content-hash": "1494492309aa92366a18638ee9211e49",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -20,7 +19,7 @@
                 "MIT"
             ],
             "description": "Set of front-end tools for Magento 2, based on Gulp.js",
-            "time": "2018-02-08 10:10:23"
+            "time": "2018-02-08T10:10:23+00:00"
         },
         {
             "name": "adroll123123124/pixel",
@@ -63,7 +62,7 @@
                 "Magento Adroll",
                 "Retargeting"
             ],
-            "time": "2018-06-01 12:37:46"
+            "time": "2018-06-01T12:37:46+00:00"
         },
         {
             "name": "amasty/base",
@@ -117,33 +116,6 @@
                 "Commercial"
             ],
             "description": "Gift Card by Amasty"
-        },
-        {
-            "name": "amasty/module-improved-layered-navigation-page",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyPage\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Page sub-module"
         },
         {
             "name": "amasty/module-special-promo",
@@ -228,119 +200,6 @@
             "description": "Amasty Quickview by Amasty"
         },
         {
-            "name": "amasty/shopby",
-            "version": "2.4.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-2.4.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/base": ">=1.0.1",
-                "amasty/module-improved-layered-navigation-page": "2.4.3",
-                "amasty/shopby-brand": "2.4.3",
-                "amasty/shopby-root": "2.4.3",
-                "amasty/shopby-seo": "2.4.3",
-                "magento/module-layered-navigation": ">=100.0",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\Shopby\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty"
-        },
-        {
-            "name": "amasty/shopby-brand",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-brand-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyBrand\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Brand sub-module"
-        },
-        {
-            "name": "amasty/shopby-root",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyRoot\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Root sub-module"
-        },
-        {
-            "name": "amasty/shopby-seo",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbySeo\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - SEO sub-module"
-        },
-        {
             "name": "anowave/package",
             "version": "0.0.1",
             "source": {
@@ -361,7 +220,7 @@
                 }
             },
             "description": "Anowave Package",
-            "time": "2018-05-28 13:12:58"
+            "time": "2018-05-28T13:12:58+00:00"
         },
         {
             "name": "anowave/sort",
@@ -385,15 +244,16 @@
                 }
             },
             "description": "Magento 2 Sort Products by Drag & Drop",
-            "time": "2018-05-28 13:17:16"
+            "time": "2018-05-28T13:17:16+00:00"
         },
         {
             "name": "apptrian/facebook-pixel",
             "version": "2.1.6",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-apptrian-facebookpixel.git",
-                "reference": "f1808cec6927146778355c83053811bfdfaa9340"
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/apptrian/facebook-pixel/apptrian-facebook-pixel-2.1.6.0.zip",
+                "reference": null,
+                "shasum": "c88210fca96fe78e9dbbe04bca7314d0c27965ce"
             },
             "require": {
                 "php": "~5.5|~7.0"
@@ -410,8 +270,7 @@
             "license": [
                 "OSL-3.0"
             ],
-            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use.",
-            "time": "2018-05-16 08:30:41"
+            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use."
         },
         {
             "name": "braintree/braintree_php",
@@ -458,7 +317,7 @@
                 }
             ],
             "description": "Braintree PHP Client Library",
-            "time": "2015-11-19 19:14:47"
+            "time": "2015-11-19T19:14:47+00:00"
         },
         {
             "name": "colinmollenhour/cache-backend-file",
@@ -494,7 +353,7 @@
             ],
             "description": "The stock Zend_Cache_Backend_File backend has extremely poor performance for cleaning by tags making it become unusable as the number of cached items increases. This backend makes many changes resulting in a huge performance boost, especially for tag cleaning.",
             "homepage": "https://github.com/colinmollenhour/Cm_Cache_Backend_File",
-            "time": "2016-05-02 16:24:47"
+            "time": "2016-05-02T16:24:47+00:00"
         },
         {
             "name": "colinmollenhour/cache-backend-redis",
@@ -530,7 +389,7 @@
             ],
             "description": "Zend_Cache backend using Redis with full support for tags.",
             "homepage": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis",
-            "time": "2016-05-02 16:23:36"
+            "time": "2016-05-02T16:23:36+00:00"
         },
         {
             "name": "colinmollenhour/credis",
@@ -569,7 +428,7 @@
             ],
             "description": "Credis is a lightweight interface to the Redis key-value store which wraps the phpredis library when available for better performance.",
             "homepage": "https://github.com/colinmollenhour/credis",
-            "time": "2015-11-28 01:20:04"
+            "time": "2015-11-28T01:20:04+00:00"
         },
         {
             "name": "colinmollenhour/php-redis-session-abstract",
@@ -607,7 +466,7 @@
             ],
             "description": "A Redis-based session handler with optimistic locking",
             "homepage": "https://github.com/colinmollenhour/php-redis-session-abstract",
-            "time": "2016-08-04 18:05:51"
+            "time": "2016-08-04T18:05:51+00:00"
         },
         {
             "name": "composer/composer",
@@ -682,7 +541,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2016-03-03 15:15:10"
+            "time": "2016-03-03T15:15:10+00:00"
         },
         {
             "name": "composer/installers",
@@ -802,7 +661,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-12-29 09:13:20"
+            "time": "2017-12-29T09:13:20+00:00"
         },
         {
             "name": "composer/semver",
@@ -864,7 +723,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-08-30 16:08:34"
+            "time": "2016-08-30T16:08:34+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -925,7 +784,61 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-04-30 10:33:04"
+            "time": "2018-04-30T10:33:04+00:00"
+        },
+        {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "c57db9da04f4c54c2ca69a52bc618d9120b96d4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/c57db9da04f4c54c2ca69a52bc618d9120b96d4d",
+                "reference": "c57db9da04f4c54c2ca69a52bc618d9120b96d4d",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": ">=5.4",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "~4.7",
+                "sami/sami": "~3.2",
+                "symfony/yaml": "2.4.3 as 2.4.2",
+                "twig/twig": "1.*"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2017-12-05T14:05:24+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -971,7 +884,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2017-06-27 22:17:23"
+            "time": "2017-06-27T22:17:23+00:00"
         },
         {
             "name": "fishpig/module-wordpress",
@@ -995,7 +908,108 @@
                 }
             },
             "description": "Magento WordPress Integration",
-            "time": "2018-05-28 14:43:49"
+            "time": "2018-05-28T14:43:49+00:00"
+        },
+        {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20T03:37:09+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12T19:18:40+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -1061,7 +1075,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2016-01-25 15:43:01"
+            "time": "2016-01-25T15:43:01+00:00"
         },
         {
             "name": "league/climate",
@@ -1110,7 +1124,7 @@
                 "php",
                 "terminal"
             ],
-            "time": "2015-01-18 14:31:58"
+            "time": "2015-01-18T14:31:58+00:00"
         },
         {
             "name": "magenest/module-anz",
@@ -1137,7 +1151,7 @@
                 "proprietary"
             ],
             "description": "N/A",
-            "time": "2017-11-30 15:05:26"
+            "time": "2017-11-30T15:05:26+00:00"
         },
         {
             "name": "magento/composer",
@@ -1457,7 +1471,7 @@
                 "composer-installer",
                 "magento"
             ],
-            "time": "2017-12-29 16:45:24"
+            "time": "2017-12-29T16:45:24+00:00"
         },
         {
             "name": "magento/magento2-base",
@@ -6018,7 +6032,7 @@
                 "ZF1",
                 "framework"
             ],
-            "time": "2017-02-27 21:19:07"
+            "time": "2017-02-27T21:19:07+00:00"
         },
         {
             "name": "magepal/magento2-gmailsmtpapp",
@@ -6072,7 +6086,7 @@
                 "magento2 smtp",
                 "send email magento2"
             ],
-            "time": "2018-02-07 00:42:46"
+            "time": "2018-02-07T00:42:46+00:00"
         },
         {
             "name": "magictoolbox/magic360",
@@ -6101,7 +6115,7 @@
                 "AFL-3.0"
             ],
             "description": "Magic360 module for Magento 2",
-            "time": "2018-05-28 14:48:42"
+            "time": "2018-05-28T14:48:42+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6177,7 +6191,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-08-09 17:44:44"
+            "time": "2015-08-09T17:44:44+00:00"
         },
         {
             "name": "neklo/core",
@@ -6197,7 +6211,7 @@
                 }
             },
             "description": "N/A",
-            "time": "2018-05-11 10:49:56"
+            "time": "2018-05-11T10:49:56+00:00"
         },
         {
             "name": "neklo/product_position",
@@ -6226,7 +6240,7 @@
                 "AFL-3.0"
             ],
             "description": "Visual Sorting - Product Position",
-            "time": "2018-05-11 10:53:27"
+            "time": "2018-05-11T10:53:27+00:00"
         },
         {
             "name": "oomphinc/composer-installers-extender",
@@ -6268,7 +6282,7 @@
             ],
             "description": "Extend the composer/installers plugin to accept any arbitrary package type.",
             "homepage": "http://www.oomphinc.com/",
-            "time": "2017-03-31 16:57:39"
+            "time": "2017-03-31T16:57:39+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -6330,7 +6344,7 @@
                 "php",
                 "stylesheet"
             ],
-            "time": "2017-03-28 22:19:25"
+            "time": "2017-03-28T22:19:25+00:00"
         },
         {
             "name": "pelago/emogrifier",
@@ -6386,7 +6400,7 @@
             ],
             "description": "Converts CSS styles into inline style attributes in your HTML code",
             "homepage": "http://www.pelagodesign.com/sidecar/emogrifier/",
-            "time": "2015-05-15 11:37:51"
+            "time": "2015-05-15T11:37:51+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -6478,7 +6492,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2018-04-15 16:55:05"
+            "time": "2018-04-15T16:55:05+00:00"
         },
         {
             "name": "plumrocket/module-plumbase",
@@ -6498,7 +6512,7 @@
                 }
             },
             "description": "N/A",
-            "time": "2018-05-29 09:21:22"
+            "time": "2018-05-29T09:21:22+00:00"
         },
         {
             "name": "plumrocket/module-popuplogin",
@@ -6522,7 +6536,7 @@
                 }
             },
             "description": "N/A",
-            "time": "2018-05-29 09:27:34"
+            "time": "2018-05-29T09:27:34+00:00"
         },
         {
             "name": "plumrocket/module-psloginfree",
@@ -6546,7 +6560,7 @@
                 }
             },
             "description": "N/A",
-            "time": "2018-05-29 09:28:30"
+            "time": "2018-05-29T09:28:30+00:00"
         },
         {
             "name": "psr/log",
@@ -6593,7 +6607,53 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/f4edc2581617431aea50430749db55cc3fc031b3",
+                "reference": "f4edc2581617431aea50430749db55cc3fc031b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2018-06-13T15:59:06+00:00"
         },
         {
             "name": "robrichards/wse-php",
@@ -6637,7 +6697,7 @@
                 "soap",
                 "ws-addressing"
             ],
-            "time": "2017-03-09 16:42:34"
+            "time": "2017-03-09T16:42:34+00:00"
         },
         {
             "name": "robrichards/xmlseclibs",
@@ -6678,7 +6738,7 @@
                 "xml",
                 "xmldsig"
             ],
-            "time": "2016-09-08 13:15:00"
+            "time": "2016-09-08T13:15:00+00:00"
         },
         {
             "name": "salesforce-mc/fuel-sdk-php",
@@ -6728,7 +6788,7 @@
                 "salesforce",
                 "sdk"
             ],
-            "time": "2017-10-24 12:10:44"
+            "time": "2017-10-24T12:10:44+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -6776,7 +6836,7 @@
                 "input",
                 "prompt"
             ],
-            "time": "2017-03-18 11:32:45"
+            "time": "2017-03-18T11:32:45+00:00"
         },
         {
             "name": "seld/jsonlint",
@@ -6825,7 +6885,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2018-01-24 12:46:19"
+            "time": "2018-01-24T12:46:19+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -6869,7 +6929,7 @@
             "keywords": [
                 "phra"
             ],
-            "time": "2015-10-13 18:44:15"
+            "time": "2015-10-13T18:44:15+00:00"
         },
         {
             "name": "sjparkinson/static-review",
@@ -6923,7 +6983,103 @@
             ],
             "description": "An extendable framework for version control hooks.",
             "abandoned": "phpro/grumphp",
-            "time": "2014-09-22 08:40:36"
+            "time": "2014-09-22T08:40:36+00:00"
+        },
+        {
+            "name": "smile/elasticsuite",
+            "version": "2.3.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smile-SA/elasticsuite.git",
+                "reference": "17b7da50990f7219dc006b6b341aa632a9a9390a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smile-SA/elasticsuite/zipball/17b7da50990f7219dc006b6b341aa632a9a9390a",
+                "reference": "17b7da50990f7219dc006b6b341aa632a9a9390a",
+                "shasum": ""
+            },
+            "require": {
+                "elasticsearch/elasticsearch": "^2.2.3",
+                "magento/framework": ">=100.1.0",
+                "magento/magento-composer-installer": "*",
+                "magento/module-backend": ">=100.1.0",
+                "magento/module-catalog": ">=100.1.0",
+                "magento/module-catalog-search": ">=100.1.0",
+                "magento/module-store": ">=100.1.0"
+            },
+            "replace": {
+                "smile/module-elasticsuite-catalog": "self.version",
+                "smile/module-elasticsuite-catalog-optimizer": "self.version",
+                "smile/module-elasticsuite-catalog-rule": "self.version",
+                "smile/module-elasticsuite-core": "self.version",
+                "smile/module-elasticsuite-swatches": "self.version",
+                "smile/module-elasticsuite-thesaurus": "self.version",
+                "smile/module-elasticsuite-tracker": "self.version",
+                "smile/module-elasticsuite-virtual-category": "self.version"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "*",
+                "lusitanian/oauth": "*",
+                "pdepend/pdepend": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "*",
+                "sjparkinson/static-review": "*",
+                "squizlabs/php_codesniffer": "^2.6.1"
+            },
+            "type": "magento2-component",
+            "extra": {
+                "map": [
+                    [
+                        "src/lib/web/fonts/elasticsuite",
+                        "lib/web/fonts/elasticsuite"
+                    ]
+                ]
+            },
+            "autoload": {
+                "files": [
+                    "src/module-elasticsuite-core/registration.php",
+                    "src/module-elasticsuite-catalog/registration.php",
+                    "src/module-elasticsuite-catalog-optimizer/registration.php",
+                    "src/module-elasticsuite-catalog-rule/registration.php",
+                    "src/module-elasticsuite-swatches/registration.php",
+                    "src/module-elasticsuite-thesaurus/registration.php",
+                    "src/module-elasticsuite-tracker/registration.php",
+                    "src/module-elasticsuite-virtual-category/registration.php"
+                ],
+                "psr-4": {
+                    "Smile\\ElasticsuiteCore\\": "src/module-elasticsuite-core",
+                    "Smile\\ElasticsuiteCatalog\\": "src/module-elasticsuite-catalog",
+                    "Smile\\ElasticsuiteCatalogOptimizer\\": "src/module-elasticsuite-catalog-optimizer",
+                    "Smile\\ElasticsuiteCatalogRule\\": "src/module-elasticsuite-catalog-rule",
+                    "Smile\\ElasticsuiteSwatches\\": "src/module-elasticsuite-swatches",
+                    "Smile\\ElasticsuiteThesaurus\\": "src/module-elasticsuite-thesaurus",
+                    "Smile\\ElasticsuiteTracker\\": "src/module-elasticsuite-tracker",
+                    "Smile\\ElasticsuiteVirtualCategory\\": "src/module-elasticsuite-virtual-category"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Aurélien FOUCRET",
+                    "email": "aurelien.foucret@smile.fr"
+                }
+            ],
+            "description": "Smile ElasticSuite - Magento2 Merchandising built on ElasticSearch",
+            "homepage": "https://github.com/Smile-SA/elasticsuite",
+            "keywords": [
+                "core",
+                "elasticsearch",
+                "magento",
+                "magento2",
+                "merchandising",
+                "search",
+                "setup"
+            ],
+            "time": "2017-10-26T07:28:02+00:00"
         },
         {
             "name": "strategery/magento2-infinitescroll",
@@ -6960,7 +7116,7 @@
                 "source": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/tree/master",
                 "issues": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll/issues"
             },
-            "time": "2018-06-21 14:37:47"
+            "time": "2018-06-21T14:37:47+00:00"
         },
         {
             "name": "symfony/config",
@@ -7016,7 +7172,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-21 19:03:25"
+            "time": "2018-01-21T19:03:25+00:00"
         },
         {
             "name": "symfony/console",
@@ -7074,7 +7230,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-26 09:08:40"
+            "time": "2015-07-26T09:08:40+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -7137,7 +7293,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29 08:55:23"
+            "time": "2018-01-29T08:55:23+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -7197,7 +7353,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-03T07:36:31+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -7246,7 +7402,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-03T07:36:31+00:00"
         },
         {
             "name": "symfony/finder",
@@ -7295,7 +7451,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:37:34"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/process",
@@ -7344,7 +7500,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29 08:54:45"
+            "time": "2018-01-29T08:54:45+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -7393,7 +7549,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:37:34"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -7442,7 +7598,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-03 07:36:31"
+            "time": "2018-01-03T07:36:31+00:00"
         },
         {
             "name": "tedivm/jshrink",
@@ -7488,7 +7644,7 @@
                 "javascript",
                 "minifier"
             ],
-            "time": "2014-11-11 03:54:14"
+            "time": "2014-11-11T03:54:14+00:00"
         },
         {
             "name": "tubalmartin/cssmin",
@@ -7532,7 +7688,7 @@
                 "minify",
                 "yui"
             ],
-            "time": "2014-09-22 08:08:50"
+            "time": "2014-09-22T08:08:50+00:00"
         },
         {
             "name": "webshopapps/module-matrixrate",
@@ -7573,7 +7729,7 @@
                 }
             ],
             "description": "Magento Shipping Multiple Table Rates - MatrixRate",
-            "time": "2017-12-20 15:57:32"
+            "time": "2017-12-20T15:57:32+00:00"
         },
         {
             "name": "wyomind/core",
@@ -7598,7 +7754,7 @@
             "license": [
                 "Commercial License - Copyright 2017 - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
             ],
-            "time": "2017-10-23 12:15:47"
+            "time": "2017-10-23T12:15:47+00:00"
         },
         {
             "name": "wyomind/cronscheduler",
@@ -7626,7 +7782,7 @@
                 "Commercial License - Copyright 2017 - WYOMIND Sarl - Purchasing any product (Software) from the Wyomind.com web-site means buyer agree to the following statements (see LICENSE.TXT)"
             ],
             "description": "Cron Scheduler is a toolbox that makes visible and comprehensible the cron tasks that run in the background of your Magento 2 website. This extension helps to monitor cron jobs and provides many features that help to prevent errors.",
-            "time": "2017-09-25 07:00:58"
+            "time": "2017-09-25T07:00:58+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -7679,7 +7835,7 @@
                 "code",
                 "zf2"
             ],
-            "time": "2015-05-11 16:17:05"
+            "time": "2015-05-11T16:17:05+00:00"
         },
         {
             "name": "zendframework/zend-config",
@@ -7736,7 +7892,7 @@
                 "config",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-console",
@@ -7786,7 +7942,7 @@
                 "console",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-crypt",
@@ -7838,7 +7994,7 @@
                 "crypt",
                 "zf2"
             ],
-            "time": "2015-11-23 16:33:27"
+            "time": "2015-11-23T16:33:27+00:00"
         },
         {
             "name": "zendframework/zend-di",
@@ -7889,7 +8045,7 @@
                 "di",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -7934,7 +8090,7 @@
                 "escaper",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -7980,7 +8136,7 @@
                 "eventmanager",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-filter",
@@ -8036,7 +8192,7 @@
                 "filter",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-form",
@@ -8107,7 +8263,7 @@
                 "form",
                 "zf2"
             ],
-            "time": "2015-09-09 19:11:05"
+            "time": "2015-09-09T19:11:05+00:00"
         },
         {
             "name": "zendframework/zend-http",
@@ -8158,7 +8314,7 @@
                 "http",
                 "zf2"
             ],
-            "time": "2015-09-14 16:11:20"
+            "time": "2015-09-14T16:11:20+00:00"
         },
         {
             "name": "zendframework/zend-i18n",
@@ -8222,7 +8378,7 @@
                 "i18n",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-inputfilter",
@@ -8273,7 +8429,7 @@
                 "inputfilter",
                 "zf2"
             ],
-            "time": "2015-09-09 15:44:54"
+            "time": "2015-09-09T15:44:54+00:00"
         },
         {
             "name": "zendframework/zend-json",
@@ -8327,7 +8483,7 @@
                 "json",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-loader",
@@ -8372,7 +8528,7 @@
                 "loader",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-log",
@@ -8434,7 +8590,7 @@
                 "logging",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-math",
@@ -8485,7 +8641,7 @@
                 "math",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-modulemanager",
@@ -8543,7 +8699,7 @@
                 "modulemanager",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-mvc",
@@ -8631,7 +8787,7 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2015-09-14 16:32:50"
+            "time": "2015-09-14T16:32:50+00:00"
         },
         {
             "name": "zendframework/zend-serializer",
@@ -8684,7 +8840,7 @@
                 "serializer",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-server",
@@ -8731,7 +8887,7 @@
                 "server",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -8781,7 +8937,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-soap",
@@ -8833,7 +8989,7 @@
                 "soap",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -8888,7 +9044,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-07-21 13:55:46"
+            "time": "2015-07-21T13:55:46+00:00"
         },
         {
             "name": "zendframework/zend-text",
@@ -8935,7 +9091,7 @@
                 "text",
                 "zf2"
             ],
-            "time": "2015-05-07 14:55:31"
+            "time": "2015-05-07T14:55:31+00:00"
         },
         {
             "name": "zendframework/zend-uri",
@@ -8983,7 +9139,7 @@
                 "uri",
                 "zf2"
             ],
-            "time": "2015-09-14 16:17:10"
+            "time": "2015-09-14T16:17:10+00:00"
         },
         {
             "name": "zendframework/zend-validator",
@@ -9048,7 +9204,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2015-09-08 21:04:17"
+            "time": "2015-09-08T21:04:17+00:00"
         },
         {
             "name": "zendframework/zend-view",
@@ -9125,7 +9281,7 @@
                 "view",
                 "zf2"
             ],
-            "time": "2015-06-16 15:22:37"
+            "time": "2015-06-16T15:22:37+00:00"
         }
     ],
     "packages-dev": [
@@ -9181,7 +9337,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14 21:17:01"
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "fabpot/php-cs-fixer",
@@ -9240,7 +9396,7 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "abandoned": "friendsofphp/php-cs-fixer",
-            "time": "2017-09-11 14:11:16"
+            "time": "2017-09-11T14:11:16+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -9290,7 +9446,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2014-01-12 16:20:24"
+            "time": "2014-01-12T16:20:24+00:00"
         },
         {
             "name": "lusitanian/oauth",
@@ -9357,7 +9513,7 @@
                 "oauth",
                 "security"
             ],
-            "time": "2015-10-07 00:20:04"
+            "time": "2015-10-07T00:20:04+00:00"
         },
         {
             "name": "mirasvit/module-profiler",
@@ -9391,7 +9547,7 @@
                 "proprietary"
             ],
             "description": "Magento 2 Profiler",
-            "time": "2017-09-28 09:55:47"
+            "time": "2017-09-28T09:55:47+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -9431,7 +9587,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2015-10-16 08:49:58"
+            "time": "2015-10-16T08:49:58+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -9496,7 +9652,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2016-11-23 20:33:32"
+            "time": "2016-11-23T20:33:32+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9558,7 +9714,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-06 15:47:00"
+            "time": "2015-10-06T15:47:00+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -9603,7 +9759,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2013-10-10 15:34:57"
+            "time": "2013-10-10T15:34:57+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -9644,7 +9800,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21 13:50:34"
+            "time": "2015-06-21T13:50:34+00:00"
         },
         {
             "name": "phpunit/php-timer",
@@ -9693,7 +9849,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-02-26 11:10:40"
+            "time": "2017-02-26T11:10:40+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -9742,7 +9898,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-12-04 08:55:13"
+            "time": "2017-12-04T08:55:13+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -9816,7 +9972,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-05-02 07:13:40"
+            "time": "2014-05-02T07:13:40+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -9872,7 +10028,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-10-02 06:51:40"
+            "time": "2015-10-02T06:51:40+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -9936,7 +10092,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-01-29 09:50:25"
+            "time": "2017-01-29T09:50:25+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -9988,7 +10144,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-05-22 07:24:03"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -10038,7 +10194,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-08-18 05:49:44"
+            "time": "2016-08-18T05:49:44+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -10105,7 +10261,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2016-06-17 09:04:28"
+            "time": "2016-06-17T09:04:28+00:00"
         },
         {
             "name": "sebastian/finder-facade",
@@ -10144,7 +10300,7 @@
             ],
             "description": "FinderFacade is a convenience wrapper for Symfony's Finder component.",
             "homepage": "https://github.com/sebastianbergmann/finder-facade",
-            "time": "2017-11-18 17:31:49"
+            "time": "2017-11-18T17:31:49+00:00"
         },
         {
             "name": "sebastian/phpcpd",
@@ -10195,7 +10351,7 @@
             ],
             "description": "Copy/Paste Detector (CPD) for PHP code.",
             "homepage": "https://github.com/sebastianbergmann/phpcpd",
-            "time": "2013-11-08 09:05:42"
+            "time": "2013-11-08T09:05:42+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -10248,7 +10404,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-10-03 07:41:43"
+            "time": "2016-10-03T07:41:43+00:00"
         },
         {
             "name": "sebastian/version",
@@ -10283,7 +10439,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2015-06-21 13:59:46"
+            "time": "2015-06-21T13:59:46+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -10358,7 +10514,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2014-05-01 03:07:07"
+            "time": "2014-05-01T03:07:07+00:00"
         },
         {
             "name": "theseer/fdomdocument",
@@ -10398,7 +10554,7 @@
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
             "homepage": "https://github.com/theseer/fDOMDocument",
-            "time": "2017-06-30 11:53:12"
+            "time": "2017-06-30T11:53:12+00:00"
         }
     ],
     "aliases": [],

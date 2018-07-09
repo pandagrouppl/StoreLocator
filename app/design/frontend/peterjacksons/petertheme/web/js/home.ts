@@ -79,6 +79,7 @@ const home = () => {
         }, 800);
     });
 
+    $('.search-overlay__row').find('#search').focus();
 };
 
 export = home;

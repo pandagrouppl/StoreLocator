@@ -1,0 +1,42 @@
+.smile-elasticsuite-autocomplete-result {
+    .product-image-box {
+        float: left;
+        padding: 0 5px;
+        width: 55px;
+    }
+
+    .product-shop {
+        float: left;
+        margin: 0 10px 0 0;
+        padding: 0;
+        white-space: normal;
+        width: 60%;
+    }
+
+    .product-item {
+        .price-box {
+            margin: 5px 0;
+        }
+    }
+
+    .category-mini-crumb {
+        font-style: italic;
+        display: block;
+        margin-bottom: 0.2em;
+        font-size: 85%;
+        color: #929292;
+    }
+
+    .product-attribute-label {
+        text-transform: uppercase;
+        vertical-align: super;
+        font-size: 63%;
+        color: #777;
+    }
+
+    .price-box {
+        span.old-price {
+            display:block;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="2columns-left"/>
+        <!--<referenceContainer name="sidebar.main">-->
+        <referenceContainer name="sidebar.main">
+            <!--<referenceContainer name="container.category" htmlTag="div" htmlClass="c-sidebar c-sidebar&#45;&#45;categories">-->
+                <block class="PandaGroup\CategorySidebar\Block\Sidebar" name="category-sidebar" template="PandaGroup_CategorySidebar::sidebar.phtml"/>
+            <!--</referenceContainer>-->
+        </referenceContainer>
+
+
+    <!--ORG-->
+    <!--<referenceContainer name="sidebar.main" htmlTag="div" htmlClass="c-sidebar c-sidebar&#45;&#45;categories">-->
+        <!--<block class="PandaGroup\CategorySidebar\Block\Sidebar" name="category-sidebar" template="PandaGroup_CategorySidebar::sidebar.phtml"/>-->
+    <!--</referenceContainer>-->
+    <!--ORG-->
+
+</layout>

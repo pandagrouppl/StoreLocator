@@ -293,6 +293,11 @@ body[class~='cms-home'] {
         border: #B98459;
         border-radius: 0;
     }
+
+    .search-overlay__zoom {
+        border: none;
+        padding: 4px 6px;
+    }
 }
 
 .main-banner {

@@ -7,12 +7,16 @@
     }
 
     input {
-        display: none;
+        //display: none;
     }
 
     &__filter-header {
         font-size: 17px;
         margin: 10px 0;
+    }
+
+    .filter-options-item {
+        //display: none;
     }
 
     .filter-current {
@@ -63,6 +67,7 @@
         color: #333;
         display: flex;
         justify-content: space-between;
+        font-weight: normal;
     }
 
     &__content {
@@ -72,6 +77,10 @@
             &:hover {
                 border-bottom: 1px solid black;
             }
+        }
+
+        span.count {
+            display: none;
         }
 
         .swatch-attribute-options {
@@ -113,14 +122,24 @@
         .ui-slider-horizontal {
             height: 5px;
             background: #CECCCC;
+            //margin-bottom: 16px;
+            order: 1;
         }
 
+        //.am_shopby_slider {
+        //
+        //}
+
         .am_shopby_slider_display {
+            display: flex !important;
             text-align: left;
             margin-bottom: 16px;
             font-size: 14px;
             color: #333;
             font-weight: 300;
+            order: 3;
+            align-items: center;
+            position: relative;
         }
 
         .amasty-shopby-swatch-attribute-options-images-labels .swatch-option {
@@ -154,10 +173,30 @@
 
         .amasty-shopby-swatch-attribute-options-images-labels .swatch-option-link-layered {
             padding-bottom: 18px !important;
+        }
 
-            span.count {
-                display: none;
-            }
+        .show-more,
+        .show-less {
+            cursor: pointer;
+        }
+    }
+
+    &__slider-labels {
+        margin-right: 6px;
+    }
+
+    &__slider-button {
+        align-self: flex-end;
+        cursor: pointer;
+        padding: 2px;
+        position: absolute;
+        right: 0;
+        margin-right: -9px;
+
+        &:hover {
+            border: 1px solid $grey;
+            background-color: $grey;
+            color: $white;
         }
     }
 
