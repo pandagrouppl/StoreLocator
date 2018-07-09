@@ -1,0 +1,28 @@
+<?php
+/**
+ * @var $block \Magento\Theme\Block\Html\Title
+ */
+$cssClass = $block->getCssClass() ? ' ' . $block->getCssClass() : '';
+$title = '';
+$titleDescription = '';
+if (trim($block->getPageHeading())) {
+    $title = '<span class="base" data-ui-id="page-title-wrapper" ' .  $block->getAddBaseAttribute() . '>'
+        . $block->escapeHtml($block->getPageHeading()) . '</span>';
+
+    /** @var Magedelight\Looknbuy\Helper\Data $customHelper */
+    $customHelper = $this->helper('Magedelight\Looknbuy\Helper\Data');
+    $titleDescription = $customHelper->getConfig('looknbuy/general/heading_title_description');
+
+    $titleDescription = '<span style="font-size: small;">' . $block->escapeHtml($titleDescription) . '</span>';
+}
+?>
+<?php if ($title): ?>
+    <div class="page-main__title<?php /* @escapeNotVerified */ echo $cssClass; ?> page-main__description">
+        <div class="catalog-main__description--right-column">
+            <h1><?php /* @escapeNotVerified */ echo $title ?></h1>
+            <?php if ($titleDescription) : ?>
+                <h2><?php /* @escapeNotVerified */ echo $titleDescription ?></h2>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
