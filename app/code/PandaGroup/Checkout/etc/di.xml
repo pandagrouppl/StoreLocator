@@ -2,5 +2,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 	<!-- Add custom order information to success page after order -->
 	<preference for="Magento\Checkout\Block\Onepage\Success" type="PandaGroup\Checkout\Block\Onepage\Success" />
+
+	<preference for="Magento\Checkout\Block\Checkout\AttributeMerger" type="PandaGroup\Checkout\Block\Checkout\AttributeMerger" />
+
 </config>
 
