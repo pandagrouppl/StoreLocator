@@ -38,3 +38,5 @@ atlassian*
 !build.js
 
 /wp/wp-content/uploads
+
+!maintenance.html
