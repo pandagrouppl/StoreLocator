@@ -6,16 +6,46 @@
 "var expiry_days":"Days of expiry"}
 @-->
 <!--@styles
+.main-content {
+padding: 0 !important;
+}
+.header {
+padding: 20px 0 !important;
+}
+.wrapper-inner {
+padding-bottom: 10px !important;
+}
 @-->
 
 {{template config_path="design/email/header_template"}}
-<table cellspacing="0" cellpadding="0" class="message-container">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="position:relative;">
+    <tr>
+        <td align="center" valign="top">
+            <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:450px; width:100%;background-color:#eeeeee;height: 450px;margin: 0 0 20px 0;">
+                <tr>
+                    <td align="center" valign="top" style="padding: 0;">
+                        <p style="background-color:white;padding:10px;margin: 20px !important;height:175px;box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.05);">
+                            Dear {{var recipient_name}},<br>
+                            <br>
+                            Your gift card {{var gift_code}} expires in {{var expiry_days}} days.<br>
+                            <br>
+                            Please be aware that after the voucher has expired,<br>
+                            it can no longer be redeemed.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
     <tr>
         <td>
-            Dear {{var recipient_name}},<br>
-            <br>
-            Your gift card {{var gift_code}} expires in {{var expiry_days}} days.
-            Please be aware that you will not be able to use the certificate at {{var store.getFrontendName()}} after it expires.
+            <table width="100" cellspacing="0" cellpadding="0" border="0" align="center" style="width:100%;background-color: #cea8a8;position: absolute;top: 60%;">
+                <tr>
+                    <td align="center" valign="top" style="height:100px;background-color: #e1b5b5;width:100%;position:absolute;border-color: #cea8a8;border-style: solid;border-width: 10px 0px 10px 0px;filter: grayscale(100%);">
+                        <img src="http://i65.tinypic.com/14w8tg7.png" style="position:relative;bottom:155%;left:0%;right:0%;width:100%;max-width:350px;">
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 </table>
