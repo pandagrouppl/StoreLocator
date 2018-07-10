@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e548cf2640b813d5671ea7d00387480d",
-    "content-hash": "5ae81b014d0879841385ea5966bad35a",
+    "hash": "6c5bb6ab94eab20b76e253e6c5331775",
+    "content-hash": "0320063aab5f1e3b9b6d4fbdc75d8060",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -119,33 +119,6 @@
             "description": "Gift Card by Amasty"
         },
         {
-            "name": "amasty/module-improved-layered-navigation-page",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/module-improved-layered-navigation-page-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyPage\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Page sub-module"
-        },
-        {
             "name": "amasty/module-special-promo",
             "version": "2.0.4",
             "dist": {
@@ -226,119 +199,6 @@
                 "Commercial"
             ],
             "description": "Amasty Quickview by Amasty"
-        },
-        {
-            "name": "amasty/shopby",
-            "version": "2.4.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-2.4.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/base": ">=1.0.1",
-                "amasty/module-improved-layered-navigation-page": "2.4.3",
-                "amasty/shopby-brand": "2.4.3",
-                "amasty/shopby-root": "2.4.3",
-                "amasty/shopby-seo": "2.4.3",
-                "magento/module-layered-navigation": ">=100.0",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\Shopby\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty"
-        },
-        {
-            "name": "amasty/shopby-brand",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-brand-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyBrand\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Brand sub-module"
-        },
-        {
-            "name": "amasty/shopby-root",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-root-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbyRoot\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - Root sub-module"
-        },
-        {
-            "name": "amasty/shopby-seo",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://composer.amasty.com/community/packages/shopby-seo-2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "amasty/shopby": ">=2.4.3",
-                "php": "~5.6.5|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Amasty\\ShopbySeo\\": ""
-                }
-            },
-            "license": [
-                "Commercial"
-            ],
-            "description": "Improved Layered Navigation by Amasty - SEO sub-module"
         },
         {
             "name": "anowave/package",
