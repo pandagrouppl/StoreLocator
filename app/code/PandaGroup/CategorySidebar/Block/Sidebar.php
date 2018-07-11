@@ -69,9 +69,6 @@ class Sidebar extends \Magento\Framework\View\Element\Template
 
         $storeCategories = $category->getCategories($this->getSelectedRootCategory(), $recursionLevel = 1, $sorted, $asCollection, $toLoad);
         $storeCategories->addFieldToFilter('include_in_menu', 1);
-//        foreach ($storeCategories as $cat) {
-//            var_dump($cat->getData()); exit;
-//        }
 
         return $storeCategories;
     }
