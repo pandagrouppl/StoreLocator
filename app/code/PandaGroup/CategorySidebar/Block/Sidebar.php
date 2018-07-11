@@ -21,11 +21,11 @@ class Sidebar extends \Magento\Framework\View\Element\Template
 
     /** @var \Magento\Catalog\Helper\Output */
     private $helper;
-    
+
 
     /**
      * Sidebar constructor.
-     * 
+     *
      * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \Magento\Catalog\Helper\Category $categoryHelper
      * @param \Magento\Framework\Registry $registry
@@ -68,6 +68,10 @@ class Sidebar extends \Magento\Framework\View\Element\Template
         $category = $this->categoryFactory->create();
 
         $storeCategories = $category->getCategories($this->getSelectedRootCategory(), $recursionLevel = 1, $sorted, $asCollection, $toLoad);
+        $storeCategories->addFieldToFilter('include_in_menu', 1);
+//        foreach ($storeCategories as $cat) {
+//            var_dump($cat->getData()); exit;
+//        }
 
         return $storeCategories;
     }
@@ -105,21 +109,16 @@ class Sidebar extends \Magento\Framework\View\Element\Template
             $html .= '<ul class="o-list o-list--unstyled">';
 
             foreach ($childCategories as $childCategory) {
+
+                $includeInMenu = (bool) $childCategory->load($childCategory->getId())->getIncludeInMenu();
+                if (false === $includeInMenu) {
+                    continue;
+                }
+
                 $html .= '<li class="level' . $level . ($this->isActive($childCategory) ? ' active' : '') . '">';
                 $html .= '<a href="' . $this->getCategoryUrl($childCategory) . '" title="' . $childCategory->getName() . '" class="' . ($this->isActive($childCategory) ? 'is-active' : '') . '">' . $childCategory->getName() . '</a>';
 
-//                Oryginal version
-//                if ($childCategory->getChildrenCount() > 0) {
-//                    if (true === $this->isActive($childCategory)) {
-//                        $html .= '<span class="expanded"><i class="fa fa-minus"></i></span>';
-//                    }
-//                    else {
-//                        $html .= '<span class="expand"><i class="fa fa-plus"></i></span>';
-//                    }
-//                }
-//                End oryginal version
-
-                if ($childCategory->getChildrenCount() > 0) {
+                if ($childCategory->getChildrenCount() > 0 && false === $this->isAllChildrenNotIncludeInMenu($childCategory)) {
                     if (true === $this->isActive($childCategory)) {
                         $html .= '<span class="expand"><figure class="layered-nav__minus">
                             <span class="layered-nav__line layered-nav__line--horizontal"></span>
@@ -144,6 +143,23 @@ class Sidebar extends \Magento\Framework\View\Element\Template
         }
 
         return $html;
+    }
+
+    protected function isAllChildrenNotIncludeInMenu($category)
+    {
+        $childCategories = $category->getChildrenCategories();
+        $childrenCount = (int) count($childCategories);
+
+        $includeQty = 0;
+        foreach ($childCategories as $childCategory) {
+            $includeInMenu = (bool) $childCategory->load($childCategory->getId())->getIncludeInMenu();
+            if (true === $includeInMenu) $includeQty++;
+        }
+
+        if ($includeQty === 0) {
+            return true;
+        }
+        return false;
     }
 
 //    /**
