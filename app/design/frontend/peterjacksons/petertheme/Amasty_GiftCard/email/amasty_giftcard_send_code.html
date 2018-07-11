@@ -11,30 +11,47 @@
 "var image_base64":"Image base64 code"
 } @-->
 <!--@styles
+.main-content {
+padding: 0 !important;
+}
+.header {
+padding: 20px 0 !important;
+}
+.wrapper-inner {
+padding-bottom: 10px !important;
+}
 @-->
 
 {{template config_path="design/email/header_template"}}
-<table cellspacing="0" cellpadding="0" class="message-container">
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="position:relative;">
+    <tr>
+        <td align="center" valign="top">
+            <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:450px; width:100%;background-color:#eeeeee;height: 450px;margin: 0 0 20px 0;">
+                <tr>
+                    <td align="center" valign="top" style="padding: 0;">
+                        <p style="background-color:white;padding:10px;margin: 20px !important;height:175px;box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.05);">
+                            Dear {{var recipient_name}},<br>
+                            <br>
+                            {{var sender_name}} has purchased a {{var initial_value}}{{var currency_code}} gift card for you<br>
+                            at {{var store.getFrontendName()}}.<br>
+                            To redeem your giftcard please use voucher code:<br>
+                            <b>{{var gift_code}}</b><br>
+                            {{var sender_message}}
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
     <tr>
         <td>
-            Dear {{var recipient_name}},<br>
-            <br>
-            {{var sender_name}} purchased a {{var initial_value}}{{var currency_code}} gift card for you at {{var store.getFrontendName()}}.<br>
-
-            {{if sender_message}}
-            Please find below message from {{var sender_name}}:<br>
-            <br>
-            {{var sender_message}}<br>
-            {{/if}}
-            <br>
-            Please use the following gift card code at {{var store.getFrontendName()}}:<br>
-            <br>
-            {{var gift_code}}<br>
-            <br>
-            {{if image_base64}}<img src="{{var image_base64}}"><br>{{/if}}
-
-            <br>
-            Look forward to seeing you at our store.
+            <table width="100" cellspacing="0" cellpadding="0" border="0" align="center" style="width:100%;background-color: #cea8a8;position: absolute;top: 60%;">
+                <tr>
+                    <td align="center" valign="top" style="height:100px;background-color: #e1b5b5;width:100%;position:absolute;border-color: #cea8a8;border-style: solid;border-width: 10px 0px 10px 0px;">
+                        <img src="http://i65.tinypic.com/14w8tg7.png" style="position:relative;bottom:155%;left:0%;right:0%;width:100%;max-width:350px;">
+                    </td>
+                </tr>
+            </table>
         </td>
     </tr>
 </table>
