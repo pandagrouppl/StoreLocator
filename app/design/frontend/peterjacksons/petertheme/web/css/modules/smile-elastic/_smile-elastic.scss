@@ -1,16 +1,19 @@
 .smile-elasticsuite-autocomplete-result {
+
+    .autocomplete-list:nth-of-type(2n) {
+        height: 260px;
+        overflow-y: scroll;
+    }
+
     .product-image-box {
         float: left;
-        padding: 0 5px;
-        width: 55px;
     }
 
     .product-shop {
         float: left;
-        margin: 0 10px 0 0;
+        margin: 10px 10px 0 10px;
         padding: 0;
         white-space: normal;
-        width: 60%;
     }
 
     .product-item {

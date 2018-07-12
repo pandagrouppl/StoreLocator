@@ -16,9 +16,11 @@ export class Popups {
     _showSearch() {
         $('[class*="show-search-overlay"]').on('click', () => {
             $('.search-overlay').show();
+            $('body').addClass('freeze');
         });
         $('.search-overlay').click(() => {
             $('.search-overlay').hide();
+            $('body').removeClass('freeze');
         });
         $('.search-overlay__form').click((event) => {
             event.stopPropagation();

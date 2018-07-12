@@ -7,6 +7,7 @@
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.95);
     display: none;
+    overflow-y: scroll;
 
     &__container {
         display: flex;
@@ -24,6 +25,10 @@
         font-size: 50px;
         font-weight: 300;
         cursor: pointer;
+
+        @media all and (max-width:$xs-breakpoint){
+            font-size: 30px;
+        }
     }
 
     &__form {
@@ -41,6 +46,10 @@
 
         @media all and (max-width: $sm-breakpoint) {
             width: 110%;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 112%;
         }
     }
 
@@ -62,7 +71,7 @@
 
         button {
             border: none;
-            padding: 4px 6px;
+            padding: 4px 1px;
         }
     }
 
@@ -85,4 +94,16 @@
             top: 7px;
         }
     }
+}
+
+body[class~='catalog-product-view'] {
+    .header-right {
+        .search-overlay {
+            padding: 0;
+        }
+    }
+}
+
+.freeze {
+    overflow: hidden;
 }
