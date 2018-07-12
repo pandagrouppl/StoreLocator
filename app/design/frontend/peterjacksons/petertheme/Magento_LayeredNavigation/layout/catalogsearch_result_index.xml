@@ -20,5 +20,8 @@
                 <argument name="css_class" xsi:type="string">layered-nav</argument>
             </arguments>
         </referenceContainer>
+
+        <referenceBlock name="category-sidebar" remove="true"/>
+
     </body>
 </page>
