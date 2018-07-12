@@ -1,85 +1,212 @@
+$big_view: 1060px;
+$medium_view: 850px;
+$small_view: 600px;
+
+
 body[class~='instagram-gallery-index'] {
-  .photo {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
 
-    &__wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1250px;
-      min-width: 0;
-      margin: auto auto 0 auto;
-      padding: 0 20px;
+        &__title {
+            height: 100px;
+            background: #f7f7f7;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__columns {
+            max-width: 1080px;
+            margin: auto auto 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            color: white;
+        }
     }
 
-    &__inner {
-      display: flex;
-      width: 100%;
-      height: 75%;
-      max-height: 75%;
-      margin: 0 0 5px 0;
+    .photo {
 
-      @media all and (max-width: 1060px) {
-        flex-wrap: wrap;
-      }
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1250px;
+            min-width: 0;
+            margin: auto auto 0 auto;
+            padding: 0 20px;
 
-      &:nth-child(2) {
-        flex-direction: row-reverse;
-      }
+            @media all and (max-width: $medium_view) {
+                padding: 0;
+            }
+        }
 
-      &--left {
-        flex: 0 1 50%;
-        min-height: 100%;
-        max-width: 50%;
-        margin: 0 10px 0 0;
-
-        .photo__box {
-          height: 600px;
-
-          img {
+        &__inner {
+            display: flex;
             width: 100%;
-            height: 100%;
-          }
-        }
-      }
+            height: 75%;
+            max-height: 75%;
+            margin: 0 0 5px 0;
 
-      &--right {
-        flex: 0 1 50%;
+            @media all and (max-width: $medium_view) {
+                flex-wrap: wrap;
+            }
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+
+            &--left {
+                flex: 0 1 50%;
+                min-height: 100%;
+                max-width: 50%;
+                border: solid white;
+                border-width: 0 5px 5px 5px;
+
+                @media all and (min-width: 851px) {
+                    flex: 0 1 51%;
+                    max-width: 100%;
+                }
+
+                @media all and (max-width: $medium_view) {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    border: 0;
+                }
+
+                .photo__box {
+                    height: 610px;
+                    width: 490px;
+
+                    @media all and (max-width: $big_view) {
+                        width: 96%;
+                    }
+
+                    @media all and (max-width: $medium_view) {
+                        width: 98.6%;
+                    }
+
+                    @media all and (max-width: $small_view) {
+                        height: 350px;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &--right {
+                flex: 0 1 50%;
+                display: flex;
+                height: 100%;
+                max-width: 50%;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                border: solid white;
+                border-width: 0 15px 5px 5px;
+
+                @media all and (max-width: $medium_view) {
+                    flex: 1 1 100%;
+                    max-width: 100%;
+                    border: 0;
+                }
+
+                .photo__box {
+                    @media all and (max-width: $small_view) {
+                        height: 200px;
+                    }
+                }
+
+                > div {
+                    flex: 0 0 50%;
+                    min-height: 50%;
+                    max-width: 100%;
+                    overflow: hidden;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        &__box {
+            height: 300px;
+            width: 100%;
+            border: 0;
+            box-shadow: none;
+            margin: 0 10px 10px 10px;
+        }
+
+        &__image {
+            width: 300px;
+            max-width: 100%;
+            height: 300px;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+            transform: scale(1) translateZ(0);
+
+            @media all and (max-width: $medium_view) {
+                width: 100%;
+            }
+
+            @media all and (max-width: $small_view) {
+                height: 200px;
+            }
+
+            &:hover {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .widget-detail-content {
+        @media all and (max-width: $medium_view) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    .widget-text-link-container {
+        text-align: center;
         display: flex;
-        height: 100%;
-        max-width: 50%;
-        flex-wrap: wrap;
-        align-items: flex-start;
+        justify-content: center;
+    }
 
-        > div {
-          flex: 0 0 50%;
-          min-height: 50%;
-          max-width: 100%;
-          overflow: hidden;
-          flex-wrap: wrap;
+    .widget-timeline-detail .widget-text-product {
+        width: auto;
+    }
+
+    .widget-desktop .widget-detail-right {
+        @media all and (max-width: $medium_view) {
+            max-width: 640px;
+            width: 100%;
         }
-      }
     }
 
-    &__box {
-      height: 300px;
-      width: 100%;
-      border: 0;
-      box-shadow: none;
-      margin: 0;
+    #widget-prev-post {
+        @media all and (max-width: $medium_view) {
+            margin-left: 0;
+        }
     }
 
-    &__image {
-      width: 300px;
-      max-width: 100%;
-      height: 300px;
-      opacity: 1;
-      transition: 0.3s ease-in-out;
-      transform: scale(1);
-
-      &:hover {
-        opacity: 0.6;
-        transform: scale(1.1);
-      }
+    .widget-detail-title,
+    .widget-post-info {
+        text-align: center;
     }
 
-  }
+    #widget-detail-branding {
+        @media all and (max-width: $medium_view) {
+            bottom: 0;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            bottom: 0 !important;
+            right: 0 !important;
+            transform: translate(0%, 0%) !important;
+        }
+    }
 }
