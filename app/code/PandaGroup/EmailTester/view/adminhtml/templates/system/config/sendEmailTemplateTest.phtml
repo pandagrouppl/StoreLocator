@@ -23,12 +23,12 @@
                     collectSpan.find('.processing').show();
                     jQuery('#send_email_template_test_message_span').text('');
                 },
-                onSuccess: function(response) {
+                onComplete: function(response) {
                     collectSpan.find('.processing').hide();
 
                     var resultText = '';
-                    if (response.status > 200) {
-                        resultText = response.statusText;
+                    if (response.status != 200) {
+                        resultText = 'Error: HTTP '+response.status+' '+response.statusText
                     } else {
                         var json = response.responseJSON;
                         resultStatus = json.done;

@@ -81,9 +81,6 @@ class File extends AbstractModel
 
         try {
             if(false === isset($_FILES[$fileCode]['name'])) {
-//                $this->logger->error('Error while uploading resume (Empty session data): ');
-//                $this->logger->notice('FILES[]: ', $_FILES);
-//                $this->logger->notice('POST[]: ', $_POST);
                 throw new \Exception('No attached file');
             }
 
@@ -114,7 +111,7 @@ class File extends AbstractModel
             return (string) $uploadedFileName;
         } catch (\Exception $e) {
             $this->errorMessage = $e->getMessage();
-            $this->logger->error('Error while saving resume: ' . $e->getMessage());
+            $this->logger->info('Error while saving resume: ' . $e->getMessage());
             return false;
         }
     }
