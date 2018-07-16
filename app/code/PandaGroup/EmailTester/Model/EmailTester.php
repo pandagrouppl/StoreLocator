@@ -22,15 +22,29 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
     /** @var \Magento\Email\Model\Template  */
     protected $template;
 
+    /** @var \Magento\Sales\Model\Order\Address\Renderer  */
+    protected $addressRenderer;
+
+    /** @var \Magento\Payment\Helper\Data  */
+    protected $paymentHelper;
+
+    /** @var \Magento\Sales\Model\Order\Email\Container\OrderIdentity  */
+    protected $identityContainer;
+
 
     /**
      * EmailTester constructor.
-     *
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Framework\Message\ManagerInterface $messageManager
-     * @param \PandaGroup\EmailTester\Model\Config $config
+     * @param Config $config
      * @param \PandaGroup\EmailTester\Logger\Logger $logger
+     * @param \Magento\Framework\Mail\Template\TransportBuilder $transportBuilder
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Email\Model\Template $template
+     * @param \Magento\Sales\Model\Order\Address\Renderer $addressRenderer
+     * @param \Magento\Payment\Helper\Data $paymentHelper
+     * @param \Magento\Sales\Model\Order\Email\Container\OrderIdentity $identityContainer
      */
     public function __construct(
         \Magento\Framework\Model\Context $context,
@@ -40,7 +54,10 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
         \PandaGroup\EmailTester\Logger\Logger $logger,
         \Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\Email\Model\Template $template
+        \Magento\Email\Model\Template $template,
+        \Magento\Sales\Model\Order\Address\Renderer $addressRenderer,
+        \Magento\Payment\Helper\Data $paymentHelper,
+        \Magento\Sales\Model\Order\Email\Container\OrderIdentity $identityContainer
     ) {
         parent::__construct($context,$registry);
         $this->logger = $logger;
@@ -49,6 +66,9 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
         $this->transportBuilder = $transportBuilder;
         $this->storeManager = $storeManager;
         $this->template = $template;
+        $this->addressRenderer = $addressRenderer;
+        $this->paymentHelper = $paymentHelper;
+        $this->identityContainer = $identityContainer;
     }
 
     /**
@@ -61,9 +81,11 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
     public function sendEmailTemplateTest($email, $templateId)
     {
         try {
-            $storeId = $this->storeManager->getStore()->getId();
-
             $templateModel = $this->template->load($templateId);
+
+            $randomOrder = $this->getRandomOrder();
+            /** @var \Magento\Sales\Model\Order\Creditmemo $creditmemo */
+            $creditmemo = $randomOrder->getCreditmemosCollection()->getFirstItem();
 
             $transport = $this->transportBuilder->setTemplateIdentifier($templateId)
                 ->setTemplateOptions([
@@ -72,10 +94,16 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
                 ])
                 ->setTemplateVars(
                     [
-                        'store' => $this->storeManager->getStore(),
-                        'order' => $this->getRandomOrder(),
+                        'order' => $randomOrder,
                         'customer' => $this->getRandomCustomer(),
-                        'invoice' => $this->getRandomInvoice()
+                        'invoice' => $this->getRandomInvoice(),
+                        'creditmemo' => $creditmemo,
+                        'comment' => $creditmemo->getCustomerNoteNotify() ? $creditmemo->getCustomerNote() : '',
+                        'billing' => $randomOrder->getBillingAddress(),
+                        'payment_html' => $this->getPaymentHtml($randomOrder),
+                        'store' => $randomOrder->getStore(),
+                        'formattedShippingAddress' => $this->getFormattedShippingAddress($randomOrder),
+                        'formattedBillingAddress' => $this->getFormattedBillingAddress($randomOrder),
                     ]
                 )
                 ->setFrom('general') // you can config 'general' email address in Store -> Configuration -> General -> Store Email Addresses
@@ -101,6 +129,9 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
         return $result;
     }
 
+    /**
+     * @return \Magento\Sales\Model\Order
+     */
     public function getRandomOrder()
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
@@ -112,6 +143,9 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
         return $orderModel->load($randomNumber);
     }
 
+    /**
+     * @return \Magento\Customer\Model\Customer
+     */
     public function getRandomCustomer()
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
@@ -132,5 +166,41 @@ class EmailTester extends \Magento\Framework\Model\AbstractModel
 //        $randomNumber = mt_rand( 0, $quantity );
 //
 //        return $invoice->load($randomNumber);
+    }
+
+    /**
+     * @param \Magento\Sales\Model\Order $order
+     * @return string|null
+     */
+    protected function getFormattedShippingAddress($order)
+    {
+        return $order->getIsVirtual()
+            ? null
+            : $this->addressRenderer->format($order->getShippingAddress(), 'html');
+    }
+
+    /**
+     * @param \Magento\Sales\Model\Order $order
+     * @return string|null
+     */
+    protected function getFormattedBillingAddress($order)
+    {
+        return $this->addressRenderer->format($order->getBillingAddress(), 'html');
+    }
+
+    /**
+     * @param \Magento\Sales\Model\Order $order
+     * @return string
+     */
+    protected function getPaymentHtml(\Magento\Sales\Model\Order $order)
+    {
+        try {
+            return $this->paymentHelper->getInfoBlockHtml(
+                $order->getPayment(),
+                $this->identityContainer->getStore()->getStoreId()
+            );
+        } catch (\Exception $e) {
+            return '';
+        }
     }
 }
