@@ -92,11 +92,5 @@
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="html/absolute_footer.phtml" />
         </referenceContainer>
         <!-- -->
-
-        <!-- minicart overlay -->
-        <!--<referenceContainer name="before.body.end">-->
-            <!--<block class="Magento\Framework\View\Element\Template" name="testing" template="Magento_Theme::overlay.phtml" />-->
-        <!--</referenceContainer>-->
-        <!-- -->
     </body>
 </page>
