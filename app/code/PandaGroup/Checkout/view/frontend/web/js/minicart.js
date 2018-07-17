@@ -21,6 +21,8 @@ define([
     miniCart = $('[data-block=\'minicart\']');
     miniCart.on('dropdowndialogopen', function () {
         initSidebar();
+        $('.minicart__overlay').addClass('minicart__overlay--shown');
+        $('.headers').addClass('headers--minicart-active');
     });
 
     /**
@@ -80,6 +82,7 @@ define([
         shoppingCartUrl: window.checkout.shoppingCartUrl,
         maxItemsToDisplay: window.checkout.maxItemsToDisplay,
         cart: {},
+
 
         /**
          * @override
@@ -191,4 +194,5 @@ define([
             return parseInt(items.length, 10);
         }
     });
+
 });

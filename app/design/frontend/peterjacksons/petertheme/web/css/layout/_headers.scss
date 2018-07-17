@@ -2,6 +2,12 @@
     width: 100%;
     z-index: 999;
 
+    &--minicart-active {
+        position: fixed;
+        top: 35px;
+        background-color: white;
+    }
+
     &--fixed {
         position: fixed;
         top: 0;
@@ -79,7 +85,7 @@ body[class~='cms-sustainability'] {
             }
 
 
-            &--fixed, &:hover {
+            &--fixed, &:hover, &--minicart-active {
                 background-color: white;
 
                 .headers__bottom {

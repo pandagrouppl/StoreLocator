@@ -11,6 +11,7 @@ export class Popups {
         this._showSearch();
         this._cartAdd();
         this._genericPopup();
+        this._minicartPopup();
     }
 
     _showSearch() {
@@ -91,6 +92,19 @@ export class Popups {
         });
         $('.general-popup__popup').click((e) => {
             e.stopPropagation();
+        });
+    }
+
+    _minicartPopup() {
+
+        $('.minicart__overlay').on('click', () => {
+            $(this).removeClass('minicart__overlay--shown');
+            $('.headers').removeClass('headers--minicart-active');
+        });
+
+        $('.headers').on('click', () => {
+            $(this).removeClass('headers--minicart-active');
+            $('.minicart__overlay').removeClass('minicart__overlay--shown');
         });
     }
 
