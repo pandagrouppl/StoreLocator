@@ -97,14 +97,9 @@ export class Popups {
 
     _minicartPopup() {
 
-        $('.minicart__overlay').on('click', () => {
-            $(this).removeClass('minicart__overlay--shown');
-            $('.headers').removeClass('headers--minicart-active');
-        });
-
-        $('.headers').on('click', () => {
-            $(this).removeClass('headers--minicart-active');
+        $(document).on('click','.minicart__overlay, .minicart__close, .headers', () => {
             $('.minicart__overlay').removeClass('minicart__overlay--shown');
+            $('.headers').removeClass('headers--minicart-active');
         });
     }
 

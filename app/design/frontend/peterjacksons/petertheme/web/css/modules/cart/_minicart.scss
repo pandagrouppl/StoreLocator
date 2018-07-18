@@ -24,7 +24,6 @@
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    //box-shadow: 0 25px 10px -10px;
 
     a {
         color: $light-dark;
@@ -159,6 +158,30 @@
         &--shown {
             visibility: visible;
             opacity: 1;
+        }
+    }
+
+    &__close {
+        background-color: $black;
+        height: 20px;
+        width: calc(100% + 2px);
+        position: relative;
+        left: -1px;
+        top: 1px;
+        cursor: pointer;
+
+        &::after {
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 6px 6px 6px;
+            border-color: transparent transparent #fff transparent;
         }
     }
 
