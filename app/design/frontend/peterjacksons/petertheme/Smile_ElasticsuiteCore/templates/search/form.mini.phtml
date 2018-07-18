@@ -71,5 +71,12 @@ $helper = $this->helper('Magento\Search\Helper\Data');
     </div>
 </div>
 
-
+<script>
+    require(['jquery'],
+        function ($) {
+            $( document ).ready(function() {
+                $('#search').focus();
+            });
+        });
+</script>
 
