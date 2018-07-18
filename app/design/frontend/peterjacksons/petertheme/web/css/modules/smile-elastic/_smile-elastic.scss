@@ -3,6 +3,16 @@
     .autocomplete-list:nth-of-type(2n) {
         height: 260px;
         overflow-y: scroll;
+
+
+
+        @media all and (max-width: $sm-breakpoint) {
+            width: 75vw;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 95vw;
+        }
     }
 
     .product-image-box {
@@ -14,6 +24,10 @@
         margin: 10px 10px 0 10px;
         padding: 0;
         white-space: normal;
+
+        @media all and (max-width: $xs-breakpoint) {
+            max-width: 60%;
+        }
     }
 
     .product-item {
@@ -38,8 +52,16 @@
     }
 
     .price-box {
+
         span.old-price {
-            display:block;
+            display: block;
+        }
+    }
+
+    .product-shop.product-item {
+
+        .price-box {
+            justify-content: flex-start;
         }
     }
 }
