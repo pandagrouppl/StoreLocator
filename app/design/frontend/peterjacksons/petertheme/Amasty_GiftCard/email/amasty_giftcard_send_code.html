@@ -23,36 +23,50 @@ padding-bottom: 10px !important;
 @-->
 
 {{template config_path="design/email/header_template"}}
-<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="position:relative;">
-    <tr>
-        <td align="center" valign="top">
-            <table width="450" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:450px; width:100%;background-color:#eeeeee;height: 450px;margin: 0 0 20px 0;">
-                <tr>
-                    <td align="center" valign="top" style="padding: 0;">
-                        <p style="background-color:white;padding:10px;margin: 20px !important;height:175px;box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.05);">
-                            Dear {{var recipient_name}},<br>
-                            <br>
-                            {{var sender_name}} has purchased a {{var initial_value}}{{var currency_code}} gift card for you<br>
-                            at {{var store.getFrontendName()}}.<br>
-                            To redeem your giftcard please use voucher code:<br>
-                            <b>{{var gift_code}}</b><br>
-                            {{var sender_message}}
-                        </p>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <table width="100" cellspacing="0" cellpadding="0" border="0" align="center" style="width:100%;background-color: #cea8a8;position: absolute;top: 60%;">
-                <tr>
-                    <td align="center" valign="top" style="height:100px;background-color: #e1b5b5;width:100%;position:absolute;border-color: #cea8a8;border-style: solid;border-width: 10px 0px 10px 0px;">
-                        <img src="http://i65.tinypic.com/14w8tg7.png" style="position:relative;bottom:155%;left:0%;right:0%;width:100%;max-width:350px;">
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
+<!-- 1 column layout with 10px spacing -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="100%" height="550px" valign="top" style="background-image:url(http://i64.tinypic.com/2zxp1lz.png);
+            background-repeat:no-repeat;background-size:100% 100%;">
+                <div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="30" align="left" valign="top" style="font-size: 0%;" class="mobile-hidden"></td>
+                                <td align="left" valign="top" class="mobile-padding">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" style="padding: 20px 90px 0 90px;">
+													<span>
+														<p>
+                                                            Dear {{var recipient_name}},
+															<br>
+															<br>
+                                                            {{var sender_name}} has purchased a {{var initial_value}}
+                                                            {{var currency_code}} gift card for you
+															<br>
+                                                            at {{var store.getFrontendName()}}.
+															<br>
+                                                            To redeem your giftcard please use voucher code:
+															<br>
+															<b>{{var gift_code}}</b>
+															<br>
+                                                            {{var sender_message}}
+														</p>
+													</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
 </table>
 {{template config_path="design/email/footer_template"}}
