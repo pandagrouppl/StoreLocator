@@ -26,7 +26,7 @@
         font-weight: 300;
         cursor: pointer;
 
-        @media all and (max-width:$xs-breakpoint){
+        @media all and (max-width: $xs-breakpoint) {
             font-size: 30px;
         }
     }
@@ -35,13 +35,14 @@
         display: flex;
         padding-bottom: 5px;
         max-width: 99%;
-        flex: 0 1 500px;
+        //flex: 0 1 500px;
         margin: 10px;
+        position: relative;
     }
 
     &__row {
         flex: 1 1 100%;
-        border-bottom: 2px solid black;
+        //border-bottom: 2px solid black;
         width: 108%;
 
         @media all and (max-width: $sm-breakpoint) {
@@ -60,6 +61,7 @@
         color: #242424;
         font-weight: 400;
         width: 100%;
+        border-bottom: 2px solid black;
 
         @media all and (max-width: $sm-breakpoint) {
             font-size: 30px;
@@ -107,3 +109,4 @@ body[class~='catalog-product-view'] {
 .freeze {
     overflow: hidden;
 }
+

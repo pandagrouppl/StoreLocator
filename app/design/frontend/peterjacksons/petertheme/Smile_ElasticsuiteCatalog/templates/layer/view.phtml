@@ -73,7 +73,7 @@
                         </figure>
                     </dt>
                     <dd data-role="collapsible" class="filter-options-item">
-                        <div data-role="content" class="layered-nav__content filter-options-content" style="display:none">
+                        <div data-role="content" class="layered-nav__content filter-options-content">
                             <?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?>
                         </div>
                     </dd>
@@ -99,8 +99,6 @@
         function ($) {
             $( document ).ready(function() {
                 $('.layered-nav__content').css( "display", "none" );
-//                $('.layered-nav__title').attr("aria-selected":"true");
-//                $('.layered-nav__title').attr("aria-expanded":"true");
             });
         });
 </script>

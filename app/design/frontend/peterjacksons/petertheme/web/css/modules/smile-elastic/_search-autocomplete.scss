@@ -2,15 +2,11 @@
     position: absolute;
     z-index: 3;
     overflow: hidden;
+    width: 99% !important;
 
     dl {
 
         dt {
-            &:not(:empty) {
-                border-top: 0;
-                border-bottom: 1px solid $grey-dark;
-
-            }
             cursor: default;
             margin: 0;
             padding: 5px 0;
@@ -19,16 +15,17 @@
             white-space: normal;
             text-transform: uppercase;
 
+            &:not(:empty) {
+                border-top: 0;
+                border-bottom: 1px solid $grey-dark;
+            }
+
             &:first-child {
                 border-top: none;
             }
         }
 
         dd {
-            &:not(:empty) {
-                border-top: 0;
-            }
-
             cursor: pointer;
             margin: 0;
             padding: 5px 10px;
@@ -36,6 +33,10 @@
             text-align: left;
             white-space: normal;
             font-size: 12px;
+
+            &:not(:empty) {
+                border-top: 0;
+            }
 
             &:first-child {
                 border-top: none;
@@ -49,9 +50,12 @@
             .amount {
                 display: none;
             }
+
             .clear {
-                clear:both;
+                clear: both;
             }
         }
     }
 }
+
+
