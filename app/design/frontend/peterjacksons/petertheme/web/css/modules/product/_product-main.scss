@@ -21,8 +21,10 @@
     }
 
     &__left {
+
         @media all and (min-width: 820px) {
             flex: 1 1;
+            width: 55%;
         }
 
         button.m360-icon.m360-icon-fullscreen-open {
@@ -48,6 +50,10 @@
         padding: 0;
         margin-left: 20px;
         flex: 0 0 auto;
+
+        @media all and (min-width: 820px) {
+            width: calc(45% - 20px);
+        }
 
         @media all and (max-width: $sm-breakpoint) {
             margin: 0;
