@@ -34,7 +34,9 @@ class AddPhotosToProduct extends \Magenest\InstagramShop\Observer\AddPhotosToPro
             $instagramPhotosBeforeSave = $orygProduct->getCustomAttribute('instagram_photos')->getValue();
             $photoIds = $instagramPhotosBeforeSave == '' ? [] : explode(', ', $instagramPhotosBeforeSave);
             $photosToDelete = array_diff($photoIds, $photos);
-            $this->removeProductFromInstagram($photosToDelete, $product);
+            if (count($photosToDelete) > 0) {
+                $this->removeProductFromInstagram($photosToDelete, $product);
+            }
 
             if (count($photos) > 3) {
                 $content = __('You can only add maximum 3 photos per product');
