@@ -12,6 +12,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1415px !important;
+
+        @media all and (max-width: 1400px) {
+            max-width: 1000px !important;
+        }
 
         @media all and (max-width: 550px) {
             display: none;
@@ -21,8 +26,10 @@
     .sidebar {
         min-width: 211px;
         order: -1;
+        position: absolute;
+        left: -80px;
 
-        @media all and (max-width: 860px) {
+        @media all and (max-width: 1400px) {
             display: none;
         }
     }
@@ -32,6 +39,18 @@
         &__columns {
             display: flex;
             justify-content: center;
+            max-width: 950px;
+            position: relative;
+            padding: 0 150px;
+
+            @media all and (max-width: 1400px) {
+                padding: 0;
+                margin: 0 auto;
+            }
+
+            @media all and (max-width: $bp-header) {
+                max-width: unset;
+            }
         }
 
         .column.main {
@@ -42,9 +61,16 @@
     .amquickview {
 
         &-hover {
-            height: 40px;
+            height: 30px;
             padding: 0;
             z-index: 1;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: $grey-dark;
+
+            .am-quickview-icon {
+                display: none !important;
+            }
         }
 
         &-link {
@@ -77,20 +103,28 @@ body[class~='catalogsearch-result-index'] {
 .catalog-main {
 
     &__description {
-        padding: 10px 20px 10px 20px;
-        text-align: center;
-        background: #f7f7f7;
+        //padding: 10px 20px 10px 20px;
+        text-align: left;
+        background: $lightblue;
         display: flex;
         flex: 1;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
+        max-width: 1000px;
+        margin: 20px auto 0;
+        align-items: center;
+
+        @media all and (max-width: 550px) {
+            padding: 10px 20px 10px 20px;
+        }
 
         h1 {
             color: #232323;
             font-size: 30px;
             font-weight: 500;
-            margin: 30px 14px 0 0;
+            margin: 30px 14px 15px 0;
+            text-transform: uppercase;
 
             @media all and (max-width: 550px) {
                 margin: 0.67em 0;
@@ -143,6 +177,12 @@ body[class~='catalogsearch-result-index'] {
         }
 
         &--right-column {
+            padding: 25px;
+
+            &.text-center {
+                text-align: center;
+            }
+
             @media all and (max-width: 550px) {
                 display: flex;
                 justify-content: center;
@@ -156,6 +196,18 @@ body[class~='catalogsearch-result-index'] {
                 }
             }
 
+        }
+    }
+
+    &__image {
+
+        @media all and (max-width: 550px) {
+            display: none;
+        }
+
+        img {
+            max-width: 250px;
+            height: auto;
         }
     }
 
