@@ -31,11 +31,14 @@ class AddPhotosToProduct extends \Magenest\InstagramShop\Observer\AddPhotosToPro
             $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
             /** @var \Magento\Catalog\Model\Product $orygProduct */
             $orygProduct = $objectManager->create('Magento\Catalog\Model\Product')->load($product->getId());
-            $instagramPhotosBeforeSave = $orygProduct->getCustomAttribute('instagram_photos')->getValue();
-            $photoIds = $instagramPhotosBeforeSave == '' ? [] : explode(', ', $instagramPhotosBeforeSave);
-            $photosToDelete = array_diff($photoIds, $photos);
-            if (count($photosToDelete) > 0) {
-                $this->removeProductFromInstagram($photosToDelete, $product);
+            $instagramPhotosAttr = $orygProduct->getCustomAttribute('instagram_photos');
+            if (null !== $instagramPhotosAttr) {
+                $instagramPhotosBeforeSave = $instagramPhotosAttr->getValue();
+                $photoIds = $instagramPhotosBeforeSave == '' ? [] : explode(', ', $instagramPhotosBeforeSave);
+                $photosToDelete = array_diff($photoIds, $photos);
+                if (count($photosToDelete) > 0) {
+                    $this->removeProductFromInstagram($photosToDelete, $product);
+                }
             }
 
             if (count($photos) > 3) {
