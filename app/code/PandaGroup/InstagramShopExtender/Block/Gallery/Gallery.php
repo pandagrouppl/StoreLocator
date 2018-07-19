@@ -70,4 +70,21 @@ class Gallery extends \Magenest\InstagramShop\Block\Gallery\Gallery
 
         return $this;
     }
+
+    /**
+     * Set photos collection
+     */
+    public function setCollection($tag)
+    {
+        if (empty($tag)) {
+            $this->_collection = $this->_photoFactory->create()
+                ->getCollection()
+                ->setOrder('id', 'ASC');
+        } else {
+            $this->_collection = $this->_taggedPhotoFactory->create()
+                ->getCollection()
+                ->addFieldToFilter('tag_name', $tag)
+                ->setOrder('id', 'DESC');
+        }
+    }
 }
