@@ -48,13 +48,11 @@ body[class~='cms-home'] {
     .slider__item {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .slider__item-box {
         margin: 15px 0 0 0;
         text-align: center;
-        padding: 0 30px;
         display: flex;
         flex-direction: column;
 
@@ -156,7 +154,6 @@ body[class~='cms-home'] {
 
     .price-box {
         display: flex;
-        justify-content: center;
         flex-wrap: nowrap;
         padding-top: 10px;
 
@@ -165,7 +162,7 @@ body[class~='cms-home'] {
         }
 
         .price {
-            font-size: 17px;
+            font-size: 14px;
             font-family: Roboto;
             font-weight: 300;
         }
