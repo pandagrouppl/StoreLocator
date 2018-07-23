@@ -155,6 +155,10 @@ body[class~='cms-index-index'] {
         padding: 0;
     }
 
+    .page-main__message {
+        display: none;
+    }
+
     @media all and (max-width: 560px) {
         .column.main {
             display: flex;
