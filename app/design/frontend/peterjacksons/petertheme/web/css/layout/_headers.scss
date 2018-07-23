@@ -8,9 +8,10 @@
         background-color: white;
     }
 
-    &__top {
+    &__top, &__bottom {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         @media all and (min-width: $bp-header + 1px) {
             padding: 0 30px;
@@ -34,6 +35,21 @@
             color: $white;
             text-transform: uppercase;
             font-weight: 500;
+        }
+    }
+
+    &__top {
+        display: none;
+    }
+
+    @media all and (min-width: $bp-header + 1px) {
+
+        &__top {
+            display: flex;
+        }
+
+        &__middle-mobile {
+            display: none;
         }
     }
 }

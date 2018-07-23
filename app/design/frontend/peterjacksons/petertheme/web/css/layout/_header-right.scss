@@ -1,7 +1,12 @@
 .header-right {
     @include header-side-elems();
+    margin: 0 5px 20px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
+
+    @media all and (max-width: $bp-header) {
+        justify-content: flex-end;
+    }
 
     > div {
         padding: 5px;
@@ -18,7 +23,6 @@
     }
 
     &__search {
-        margin-left: auto;
 
         @media all and (max-width: $bp-header) {
             display: none;

@@ -1,6 +1,10 @@
 .header-left {
-    @include header-side-elems();
     align-items: center;
+    padding: 5px;
+
+    @media all and (max-width: $bp-header) {
+        display: none;
+    }
 
     &__menu {
         display: none;
@@ -10,6 +14,19 @@
 
         @media all and (max-width: $bp-header) {
             display: inline-block;
+        }
+    }
+
+    &__mobile {
+        @include header-side-elems();
+        display: none;
+
+        @media all and (max-width: $bp-header) {
+            display: flex;
+
+            .header-left {
+                display: flex;
+            }
         }
     }
 
