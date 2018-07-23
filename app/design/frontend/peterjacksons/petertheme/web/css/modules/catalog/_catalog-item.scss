@@ -111,7 +111,7 @@
 
         .price {
             font-size: 16px;
-            font-family: Roboto;
+            font-family: 'sofia-pro', sans-serif;
             font-weight: 300;
         }
 
@@ -141,6 +141,7 @@
         color: $black-light;
         font-size: 17px;
         font-weight: 500;
+        font-family: 'sofia-pro', sans-serif;
 
         &:hover {
             color: $grey-dark;
