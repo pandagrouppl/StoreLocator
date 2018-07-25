@@ -54,6 +54,10 @@ if ($photos->getSize() == 0) : ?>
             <a href="<?php echo $photo->getUrl() ?>">
                 <div class="box photo__box">
                     <img src="<?php echo $photo->getSource() ?>" alt="image" class="photo__image"/>
+                    <span class="caption"></span>
+                    <div class="text">
+                        <button><?= __('View More') ?></button>
+                    </div>
                 </div>
             </a>
             <?php
@@ -113,6 +117,11 @@ if ($photos->getSize() == 0) : ?>
                 for ( let i = 0; i < notFirstChild.length; i += 4 ) {
                     notFirstChild.slice(i, i + 4).wrapAll( '<div class="photo__inner--right"/>');
                 }
+            });
+
+            $(function (){
+                if ($("body").hasClass("instagram-gallery-index"))
+                    $('.page-main__title').append( "<p>Click on any photo to buy the latest <b><i>@peterjacksonau</i></b> trends</p> <p>#TailoredByPJ</p>" );
             });
 
 
