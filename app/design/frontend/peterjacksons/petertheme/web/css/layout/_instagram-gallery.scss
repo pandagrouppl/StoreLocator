@@ -16,14 +16,26 @@ body[class~='instagram-gallery-index'] {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+
+            > p {
+                font-size: 10px;
+                color: #363636;
+                margin: 0 0 10px 0;
+                letter-spacing: 0.1px;
+            }
         }
 
         &__columns {
-            max-width: 1080px;
+            max-width: 1280px;
             margin: auto auto 0 auto;
             padding: 20px;
             box-sizing: border-box;
             color: white;
+
+            @media all and (max-width: $medium_view) {
+                padding: 0 50px 0 50px;
+            }
         }
     }
 
@@ -34,8 +46,6 @@ body[class~='instagram-gallery-index'] {
             flex-wrap: wrap;
             max-width: 1250px;
             min-width: 0;
-            margin: auto auto 0 auto;
-            padding: 0 20px;
 
             @media all and (max-width: $medium_view) {
                 padding: 0;
@@ -47,10 +57,10 @@ body[class~='instagram-gallery-index'] {
             width: 100%;
             height: 75%;
             max-height: 75%;
-            margin: 0 0 5px 0;
 
             @media all and (max-width: $medium_view) {
                 flex-wrap: wrap;
+                justify-content: center;
             }
 
             &:nth-child(2n) {
@@ -61,34 +71,27 @@ body[class~='instagram-gallery-index'] {
                 flex: 0 1 50%;
                 min-height: 100%;
                 max-width: 50%;
-                border: solid white;
-                border-width: 0 5px 5px 5px;
-
-                @media all and (min-width: 851px) {
-                    flex: 0 1 51%;
-                    max-width: 100%;
-                }
+                overflow: hidden;
 
                 @media all and (max-width: $medium_view) {
                     flex: 1 1 100%;
-                    max-width: 100%;
-                    border: 0;
+                    max-width: 520px;
+                }
+
+                @media all and (max-width: $small_view) {
+                    max-width: 360px;
                 }
 
                 .photo__box {
                     height: 610px;
-                    width: 490px;
-
-                    @media all and (max-width: $big_view) {
-                        width: 96%;
-                    }
+                    width: 100%;
 
                     @media all and (max-width: $medium_view) {
-                        width: 98.6%;
+                        height: 520px;
                     }
 
                     @media all and (max-width: $small_view) {
-                        height: 350px;
+                        height: auto;
                     }
 
                     img {
@@ -105,18 +108,23 @@ body[class~='instagram-gallery-index'] {
                 max-width: 50%;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                border: solid white;
-                border-width: 0 15px 5px 5px;
 
                 @media all and (max-width: $medium_view) {
                     flex: 1 1 100%;
-                    max-width: 100%;
-                    border: 0;
+                    max-width: 520px;
+                }
+
+                @media all and (max-width: $small_view) {
+                    max-width: 360px;
                 }
 
                 .photo__box {
+                    @media all and (max-width: $medium_view) {
+                        height: 260px;
+                    }
+
                     @media all and (max-width: $small_view) {
-                        height: 200px;
+                        height: auto;
                     }
                 }
 
@@ -143,22 +151,82 @@ body[class~='instagram-gallery-index'] {
             max-width: 100%;
             height: 300px;
             opacity: 1;
-            transition: 0.3s ease-in-out;
+            transition: all 0.5s ease;
             transform: scale(1) translateZ(0);
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
 
             @media all and (max-width: $medium_view) {
                 width: 100%;
             }
 
             @media all and (max-width: $small_view) {
-                height: 200px;
+                height: auto;
             }
 
             &:hover {
-                opacity: 0.6;
                 transform: scale(1.1);
+                background-color: rgba(0, 0, 0, 0.5);
             }
         }
+    }
+
+    .caption {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition: all 0.5s ease !important;
+        width: 100% !important;
+        height: 100% !important;
+        text-align: unset !important;
+        padding: 0 !important;
+        left: 0 !important;
+        overflow: unset !important;
+        transform: translate(0) !important;
+        opacity: 0.5 !important;
+        top: 0 !important;
+        position: absolute !important;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    button {
+        font-family: Roboto, arial, sans-serif;
+        width: 164px;
+        height: 27px;
+        border-radius: 2px;
+        border: 1px solid white;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        display: block;
+        margin: 10px auto 0;
+        box-shadow: none;
+        cursor: pointer;
+
+        @media all and (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    .caption:hover + .text {
+        color: rgba(0, 0, 0, 1) !important;
+        opacity: 1 !important;
     }
 
     .widget-detail-content {

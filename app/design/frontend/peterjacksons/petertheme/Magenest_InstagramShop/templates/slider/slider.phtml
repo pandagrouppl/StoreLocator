@@ -9,8 +9,8 @@ $slickConfig = $block->getData();
         <?php include($block->getTemplateFile('Magenest_InstagramShop::shared/popup.phtml')) ?>
     </div>
     <div class="block block-photo-slider slider-list container">
-        <div class="block-title">
-            <h2 style="text-align: center"><?php echo $block->getTitle() ?></h2>
+        <div class="block-title" style="text-align: center;">
+            <h2 style="text-align: center;color: #3f3e3e;font-size: 26pt;font-weight: 500;"><?php echo $block->getTitle() ?></h2>
         </div>
         <div class="block-content" style="overflow-x: hidden;">
             <?php if ($photos->getSize() > 0) { ?>
@@ -24,7 +24,7 @@ $slickConfig = $block->getData();
                                     <img src="<?= $photo->getSource() ?>"/>
                                     <div class="overlay"></div>
                                     <div class="text">
-                                        <img src="<?= $this->getViewFileUrl('Magenest_InstagramShop::images/instagram.png') ?>"><button><?= __('Shop now') ?></button>
+                                        <button><?= __('View More') ?></button>
                                     </div>
                                 </a>
                                 <?php
@@ -71,6 +71,11 @@ $slickConfig = $block->getData();
 <?php if ($photos->getSize()) : ?>
     <script>
         require(['jquery'], function ($) {
+            $(function (){
+                if ($("body").hasClass("cms-index-index"))
+                    $('.block-title').append( "<p>Follow <b><i>@peterjacksonau</i></b> on Instagram & use #TailoredByPJ</p>" );
+            });
+
             $(function () {
                 require(['flexslider'], function () {
                     $('.flexslider').flexslider({

@@ -41,8 +41,8 @@ class AddPhotosToProduct extends \Magenest\InstagramShop\Observer\AddPhotosToPro
                 }
             }
 
-            if (count($photos) > 3) {
-                $content = __('You can only add maximum 3 photos per product');
+            if (count($photos) > 5) {
+                $content = __('You can only add maximum 5 photos per product');
                 ObjectManager::getInstance()->get(ManagerInterface::class)->addNoticeMessage($content);
                 throw new CouldNotSaveException($content);
             }
