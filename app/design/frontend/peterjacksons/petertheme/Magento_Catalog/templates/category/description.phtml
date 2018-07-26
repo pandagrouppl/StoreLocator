@@ -18,8 +18,17 @@
     <div class="category-description catalog-main__description">
         <div class="catalog-main__description--left-column">
             <a href="/" class="catalog-main__description--back"></a>
+            <?php
+            $categoryImage = $block->getCurrentCategory()->getImageUrl();
+
+            if($categoryImage): ?>
+            <div class="catalog-main__image">
+                <img src="<?php echo $block->getCurrentCategory()->getImageUrl(); ?>" />
+            </div>
+            <?php endif; ?>
+
         </div>
-        <div class="catalog-main__description--right-column">
+        <div class="catalog-main__description--right-column <?php if(!$categoryImage):?>text-center<?php endif;?>">
             <?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_description, 'description') ?>
         </div>
     </div>
