@@ -61,7 +61,6 @@ define([
             }
 
             if (element.hasClass('am-quickview-icon')) {
-                alert('a');
                 element = element.parent();
             }
 
