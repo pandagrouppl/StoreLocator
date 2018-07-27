@@ -31,6 +31,7 @@
         "webshopapps/module-matrixrate": "^20.1",
         "amasty/module-special-promo": "2.0.4",
         "apptrian/facebook-pixel": "2.1.6",
+        "mailchimp/mc-magento2": "1.0.29",
         "neklo/product_position": "1.2.2",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
@@ -279,6 +280,10 @@
         "infiniteScroll": {
             "type": "vcs",
             "url": "https://github.com/Strategery-Inc/Magento2-InfiniteScroll"
+        },
+        "mailchimp": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-mailchimp.git"
         }
     },
     "extra": {
