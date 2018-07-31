@@ -21,6 +21,9 @@
     .sidebar {
         min-width: 211px;
         order: -1;
+        position: sticky;
+        max-height: 1600px;
+        top: 180px;
 
         @media all and (max-width: 860px) {
             display: none;

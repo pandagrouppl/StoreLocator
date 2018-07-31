@@ -20,15 +20,15 @@
  */
 ?>
 
-<?php if ($block->canShowBlock()) : ?>
-    <?php $filters = count($block->getFilters());?>
-    <?php $activeFilters = $block->getActiveFilters(); ?>
-    <?php /*$activeFilters = "[0, 1, 2]" ;*/?>
-        <div class="block filter"
-             id="layered-filter-block"
-             data-mage-init='{"collapsible":{"openedState": "active", "collapsible": true, "active": false, "collateral": { "openedState": "filter-active", "element": "body" } }}'>
-             <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
-        <div class="block-title filter-title" data-count="<?php /* @escapeNotVerified */ echo $filtered; ?>">
+<?php if ($block->canShowBlock()): ?>
+
+    <div class="block filter">
+
+        <?php $filters = count($block->getFilters());?>
+        <?php $activeFilters = $block->getActiveFilters(); ?>
+        <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
+
+        <div class="block-title filter-title layered-nav__refine" data-count="<?php /* @escapeNotVerified */ echo $filtered; ?>">
 
             <div class="block-content filter-content">
                 <?php echo $block->getChildHtml('state') ?>
@@ -46,50 +46,32 @@
             </div>
         </div>
 
+
         <div class="block-content filter-content">
             <?php echo $block->getChildHtml('state') ?>
 
-<!--            --><?php //if ($block->getLayer()->getState()->getFilters()) : ?>
-<!--                <div class="block-actions filter-actions">-->
-<!--                </div>-->
-<!--            --><?php //endif; ?>
+            <?php if ($block->getLayer()->getState()->getFilters()): ?>
+                <div class="block-actions filter-actions">
+                </div>
+            <?php endif; ?>
             <?php $wrapOptions = false; ?>
-            <?php foreach ($block->getFilters() as $filter) : ?>
-                <?php if ($filter instanceof \Smile\ElasticsuiteVirtualCategory\Model\Layer\Filter\Category ) continue; ?>
-                <?php if ($filter->getItemsCount()) : ?>
-                    <?php if (!$wrapOptions) : ?>
-                        <dl class="filter-options"
-                            id="narrow-by-list"
-                            data-role="content"
-                            data-mage-init='{"accordion":{"openedState": "active", "collapsible": true, "active": <?php  /* @noEscape */ echo $activeFilters; ?>, "multipleCollapsible": true}}'>
-                            <?php $wrapOptions = true;?>
-                    <?php endif; ?>
-
-                    <dt data-role="title" class="layered-nav__title filter-options-title">
-                        <?php /* @escapeNotVerified */ echo __($filter->getName()) ?>
-                        <figure class="layered-nav__minus layered-nav__minus--plus">
+            <?php foreach ($block->getFilters() as $filter): ?>
+        <?php if (!$wrapOptions): ?>
+            <dl class="filter-options" id="narrow-by-list">
+                <?php $wrapOptions = true; endif; ?>
+                <?php if ($filter->getItemsCount()): ?>
+                    <dt role="heading" aria-level="3" class="layered-nav__title filter-options-title"><?php echo $block->escapeHtml(__($filter->getName())) ?>
+                        <figure class="layered-nav__minus">
                             <span class="layered-nav__line layered-nav__line--horizontal"></span>
                             <span class="layered-nav__line layered-nav__line--vertical"></span>
                         </figure>
                     </dt>
-                    <dd data-role="collapsible" class="filter-options-item">
-                        <div data-role="content" class="layered-nav__content filter-options-content">
-                            <?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?>
-                        </div>
-                    </dd>
+                    <dd class="layered-nav__content filter-options-content" style="display: none"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></dd>
                 <?php endif; ?>
-            <?php endforeach; ?>
-            <?php if ($wrapOptions) : ?>
-                </dl>
-            <?php else : ?>
-                <script>
-                    require([
-                        'jquery'
-                    ], function ($) {
-                        $('#layered-filter-block').addClass('filter-no-options');
-                    });
-                </script>
-            <?php endif; ?>
+                <?php endforeach; ?>
+                <?php if ($wrapOptions): ?>
+            </dl>
+        <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>

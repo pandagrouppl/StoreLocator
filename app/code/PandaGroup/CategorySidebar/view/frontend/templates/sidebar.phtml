@@ -7,7 +7,6 @@
 $categories = $block->getCategories();
 $brands = $block->getBrands();
 ?>
-<!--<h3 class="layered-nav__title">--><?php //echo __('Category'); ?><!--</h3>-->
 <ul class="o-list">
     <?php
     /** @var \Magento\Catalog\Model\Category $category */
@@ -18,7 +17,7 @@ $brands = $block->getBrands();
                 <span><?php echo __('Category'); ?></span>
             <?php if ( $category->hasChildren() ) : ?>
                 <span class="expand">
-                    <?php echo $block->isActive($category) ? '<figure class="layered-nav__minus">
+                    <?php echo $block->isActive($category) ? '<figure class="layered-nav__minus layered-nav__minus--plus">
                             <span class="layered-nav__line layered-nav__line--horizontal"></span>
                             <span class="layered-nav__line layered-nav__line--vertical"></span>
                         </figure>' : '<figure class="layered-nav__minus">
