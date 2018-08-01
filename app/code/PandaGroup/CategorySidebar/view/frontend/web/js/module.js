@@ -30,5 +30,10 @@ require(['jquery'], function ($) {
                 element.siblings('li').find('ul').slideUp();
             }
         });
+
+        $(document).ready(function () {
+            $('.o-list').find('.layered-nav__title').next('ul').css("display", "block");
+        });
+
     });
 });

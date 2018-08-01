@@ -1,5 +1,10 @@
 .c-sidebar {
     width: 100% !important;
+    order: 1;
+
+    .block.filter {
+        order: 2;
+    }
 
     .expand,
     .expanded {
@@ -13,19 +18,15 @@
         padding-left: 0;
 
         li.level0.active {
-            ul:first-of-type {
 
+            ul:first-of-type {
                 padding-top: 0;
             }
         }
 
         li.level1.active {
-            &:first-child ul {
-                //padding-top: 18px;
-            }
-        }
+            display: block !important;
 
-        li.level1.active {
             :first-child a {
                 padding-top: 18px;
             }
@@ -34,6 +35,7 @@
         li {
             list-style: none;
             padding-bottom: 18px;
+
 
             a {
                 display: inline-block;
@@ -50,14 +52,26 @@
             > ul {
                 padding-top: 18px;
                 margin-top: 0;
+                //display: none;
+
+                .level1 {
+                    //display: none;
+                }
+                .level1.active {
+                    //display: block;
+                }
             }
 
             a.is-active {
                 font-weight: 600;
             }
 
-            .active a.is-active {
-                 //padding-bottom: 18px;
+            //.active a.is-active {
+            //    //padding-bottom: 18px;
+            //}
+
+            &:last-of-type {
+                padding-bottom: 0;
             }
         }
 
@@ -101,6 +115,7 @@
         //}
 
     }
+
     > .o-list {
         display: block;
         //padding-right: 45px;

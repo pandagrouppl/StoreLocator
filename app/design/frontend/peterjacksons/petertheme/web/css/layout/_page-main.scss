@@ -61,6 +61,7 @@
 
 // Category view, Search view
 body[class~='catalog-category-view'], body[class~='catalogsearch-result-index'] {
+
     .page-main__message {
         display: none;
     }
@@ -76,6 +77,9 @@ body[class~='catalog-category-view'], body[class~='catalogsearch-result-index'] 
 
     .layered-nav {
         padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
 
         &__filter-header {
             font-size: 20px;
@@ -83,6 +87,9 @@ body[class~='catalog-category-view'], body[class~='catalogsearch-result-index'] 
         }
     }
 
+    dl.filter-options {
+        margin-top: 0;
+    }
 }
 
 
