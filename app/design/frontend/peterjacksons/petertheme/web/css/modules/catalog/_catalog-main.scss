@@ -12,11 +12,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1415px !important;
-
-        @media all and (max-width: 1400px) {
-            max-width: 1000px !important;
-        }
+        //max-width: 1415px !important;
+        //
+        //@media all and (max-width: 1400px) {
+        //    max-width: 1000px !important;
+        //}
 
         @media all and (max-width: 550px) {
             display: none;
@@ -31,8 +31,9 @@
         position: sticky;
         max-height: 1600px;
         top: 180px;
+        margin-right: 10px;
 
-        @media all and (max-width: 1400px) {
+        @media all and (max-width: 860px) {
             display: none;
         }
     }
@@ -42,9 +43,9 @@
         &__columns {
             display: flex;
             justify-content: center;
-            max-width: 950px;
+            //max-width: 950px;
             position: relative;
-            padding: 0 150px;
+            //padding: 0 150px;
 
             @media all and (max-width: 1400px) {
                 padding: 0;
