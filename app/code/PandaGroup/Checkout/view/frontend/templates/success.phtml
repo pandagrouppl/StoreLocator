@@ -11,29 +11,34 @@
 <div class="checkout-success">
 
     <div class="checkout-success__inner">
-        <div class="checkout-success__content">
-            <h2 class="checkout-success__title"><?php echo $block->getCustomerName() . $block->escapeHtml(__(', thank you for your order!')) ?></h2>
-            <?php if ($block->getOrderId()):?>
-                <?php if ($block->getCanViewOrder()) :?>
-                    <div class="checkout-success__box">
-                        <p class="checkout-success__number"><?php echo __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
-                    </div>
-                <?php  else :?>
-                    <p><?php echo __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
-                <?php endif;?>
-                <p class="checkout-success__para checkout-success__para--bold">Sit tight your order is on it’s way! We have our best guys on it.</p>
-                <p class="checkout-success__para">You can expect an email from us very soon confirming your purchase and shipping details. Thank you
-                    for shopping with Peter Jackson
+        <div class="checkout-success__img">
+            <div class="checkout-success__content">
+                <h2 class="checkout-success__title"><?php echo $block->getCustomerName() ."," ?>
                     <br>
-                    (Your wardrobe will thank you too!)
-                </p>
-            <?php endif;?>
+                    <?php echo $block->escapeHtml(__('Thank you for your order!')) ?>
+                </h2>
+                <?php if ($block->getOrderId()):?>
+                    <?php if ($block->getCanViewOrder()) :?>
+                        <div class="checkout-success__box">
+                            <p class="checkout-success__number"><?php echo __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+                        </div>
+                    <?php  else :?>
+                        <p class="checkout-success__number-box"><?php echo __('Your order number is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+                    <?php endif;?>
+                    <p class="checkout-success__para">Sit tight your order is on it’s way! We have our best guys on it.</p>
+                    <p class="checkout-success__para checkout-success__para--bold">You can expect an email from us very soon confirming your purchase and shipping details. </p>
+                    <p class="checkout-success__para">Thank you for shopping with Peter Jackson
+                        <br>
+                        (Your wardrobe will thank you too!)
+                    </p>
+                <?php endif;?>
 
-            <?php echo $block->getAdditionalInfoHtml() ?>
+                <?php echo $block->getAdditionalInfoHtml() ?>
 
-            <div class="actions-toolbar">
-                <div class="primary">
-                    <a class="action primary continue" href="<?php /* @escapeNotVerified */ echo $block->getUrl() ?>"><span class="checkout-success__continue"><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span></a>
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <a class="action primary continue" href="<?php /* @escapeNotVerified */ echo $block->getUrl() ?>"><span class="checkout-success__continue"><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span></a>
+                    </div>
                 </div>
             </div>
         </div>

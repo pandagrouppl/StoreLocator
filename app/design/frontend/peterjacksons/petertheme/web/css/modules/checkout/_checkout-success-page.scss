@@ -1,5 +1,5 @@
 .checkout-success {
-    background-image: url('../../img/assets/checkout-order-success/jordanhighway.jpg');
+    background-image: url('../../img/assets/checkout-order-success/textile_bg.png');
     background-size: cover;
     height: 100vh;
 
@@ -14,12 +14,21 @@
         }
     }
 
+    &__img {
+        background-image: url('../../img/assets/checkout-order-success/textile_square.png');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__content {
         color: #626161;
         line-height: 1.3em;
-        height: 453px;
+        height: 452px;
         background: #FFF;
-        width: 672px;
+        width: 512px;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -32,9 +41,9 @@
         font-size: 40px;
         font-family: Roboto, sans-serif;
         text-align: center;
-        margin: 0 0 50px 0;
+        margin: 0 0 40px 0;
         font-weight: 500;
-        line-height: 1em;
+        line-height: 1.1em;
 
         @media all and (max-width: 690px) {
             font-size: 27px;
@@ -60,6 +69,13 @@
         }
     }
 
+    &__number-box {
+        background-color: #f3f1f1;
+        padding: 15px 40px;
+        margin-bottom: 40px;
+        font-weight: 500;
+    }
+
     &__para {
         font-size: 15px;
         color: black;
@@ -67,13 +83,16 @@
 
         &--bold {
             font-weight: 500;
-            margin: 50px 0 0 0;
         }
     }
 
     &__continue {
-        color: #636465;
-        font-size: 18px;
+        @include button-black();
+        display: block;
+        margin-top: 30px;
+        height: auto;
+        width: auto;
+        padding: 12px 60px;
     }
 }
 
