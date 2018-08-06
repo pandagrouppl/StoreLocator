@@ -3,24 +3,57 @@
     background-size: cover;
     height: 100vh;
 
+    @media all and (max-width: $xs-breakpoint) {
+        margin-top: 28px;
+    }
+
     &__inner {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: -115px;
 
-        @media all and (max-width: 768px) {
+        @media all and (max-width: $sm-breakpoint) {
             padding: 30px;
         }
     }
 
-    &__img {
+    &__content-bg {
         background-image: url('../../img/assets/checkout-order-success/textile_square.png');
-        background-size: cover;
-        height: 100vh;
+        background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 105px;
+
+        @media all and (max-width: $cart-lg-breakpoint) {
+            background-image: none;
+            margin-top: 0;
+        }
+    }
+
+    &__content-wrapper {
+        width: 75vw;
+        height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media all and (max-width: $cart-lg-breakpoint) {
+            width: 95vw;
+        }
+    }
+
+    &__img1 {
+
+        width: 700px;
+        height: 800px;
+    }
+
+    &__img2 {
+        width: 500px;
+        height: 400px;
     }
 
     &__content {
@@ -29,19 +62,23 @@
         height: 452px;
         background: #FFF;
         width: 512px;
-        padding: 40px;
+        padding: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media all and (max-width: $cart-lg-breakpoint) {
+            margin-top: 10%;
+        }
     }
 
     &__title {
         color: #242424;
-        font-size: 40px;
-        font-family: Roboto, sans-serif;
+        font-size: 28px;
+        font-family: "sofia-pro", sans-serif;
         text-align: center;
-        margin: 0 0 40px 0;
+        margin: 0 0 25px 0;
         font-weight: 500;
         line-height: 1.1em;
 
@@ -72,7 +109,7 @@
     &__number-box {
         background-color: #f3f1f1;
         padding: 15px 40px;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
         font-weight: 500;
     }
 
