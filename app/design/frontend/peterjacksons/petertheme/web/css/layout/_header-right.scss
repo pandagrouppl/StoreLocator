@@ -19,7 +19,7 @@
 
     &__search {
         margin-left: auto;
-        order: 1;
+        order: -1;
 
         @media all and (max-width: $bp-header) {
             display: none;
