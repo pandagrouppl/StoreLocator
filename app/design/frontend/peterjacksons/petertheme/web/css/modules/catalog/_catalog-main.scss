@@ -22,7 +22,7 @@
         min-width: 211px;
         order: -1;
         position: sticky;
-        max-height: 1600px;
+        max-height: 1000px;
         top: 180px;
 
         @media all and (max-width: 860px) {
@@ -73,18 +73,29 @@ body[class~='catalogsearch-result-index'] {
         font-size: 14px;
         font-weight: 300;
         text-align: center;
+        padding-bottom: 60px;
+
+        @media all and (min-width: 861px) {
+            text-align: left;
+            margin-left: 10px;
+        }
 
         @media all and (max-width: 550px) {
             margin-top: 20px;
+            padding-bottom: 0;
         }
     }
 
-    @media all and (min-width: 550px + 1px) {
-        .catalog-main__description {
+    .catalog-main__description {
+
+        h1 {
+            word-break: break-all;
+        }
+
+        @media all and (min-width: 550px + 1px) {
             padding-bottom: 50px;
         }
     }
-
 }
 
 
