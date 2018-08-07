@@ -923,16 +923,16 @@
         },
         {
             "name": "ebizmarts/mailchimp-lib",
-            "version": "3.0.23",
+            "version": "3.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ebizmarts/mailchimp-lib.git",
-                "reference": "7e2f5c5dbbdf4aa6fb9ed40d9fcc6d88431ac118"
+                "reference": "aaff65ee3724b7a6ce01d825eedd0c4a9846ebef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/7e2f5c5dbbdf4aa6fb9ed40d9fcc6d88431ac118",
-                "reference": "7e2f5c5dbbdf4aa6fb9ed40d9fcc6d88431ac118",
+                "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/aaff65ee3724b7a6ce01d825eedd0c4a9846ebef",
+                "reference": "aaff65ee3724b7a6ce01d825eedd0c4a9846ebef",
                 "shasum": ""
             },
             "require": {
@@ -963,7 +963,7 @@
                 "email",
                 "mailchimp"
             ],
-            "time": "2018-07-23T20:11:46+00:00"
+            "time": "2018-08-02T19:22:36+00:00"
         },
         {
             "name": "firebase/php-jwt",
