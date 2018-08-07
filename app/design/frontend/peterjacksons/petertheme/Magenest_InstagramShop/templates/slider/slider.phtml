@@ -76,6 +76,22 @@ $slickConfig = $block->getData();
                     $('.block-title').append( "<p>Follow <b><i>@peterjacksonau</i></b> on Instagram & use #TailoredByPJ</p>" );
             });
 
+            // $(window).resize(function () {
+            //     var windowSize = $(window).width();
+            //     var $slides = $( '.slides > li' );
+            //
+            //     if (windowSize >= 1600) {
+            //         $slides.height($(window).height() - 550);
+            //         console.log("screen width is less than 1600");
+            //     }
+            //     else (windowSize <= 1450) {
+            //         $slides.height($(window).height() - 700);
+            //         console.log("screen width is less than 1450");
+            //     }
+            // });
+            //
+            // $(window).trigger('resize');
+
             $(function () {
                 require(['flexslider'], function () {
                     $('.flexslider').flexslider({
@@ -93,7 +109,7 @@ $slickConfig = $block->getData();
                         maxItems: <?=$block->getConfigSliderValue($block->getMaxItems(), 0)?>,
                         itemWidth: <?=$block->getConfigSliderValue($block->getItemWidth(), 210)?>,
                         move: <?=$block->getConfigSliderValue($block->getMove(), 0)?>,
-
+                        smoothHeight: true,
                     });
 
                     var photos = <?=json_encode($photos->getData())?>;
@@ -120,6 +136,8 @@ $slickConfig = $block->getData();
                         $('.slider .widget-detail-title').text(photo.caption ? photo.caption : '');
                         $('.slider #created_at_instagram').text(photo.created_at);
                         $('.slider #widget-timeline-detail').data('photo-id', photo.photo_id).removeClass('widget-hidden');
+                        $('.slider .likes-number').text(photo.likes);
+                        $('.slider .comments-number').text(photo.comments);
                     });
                     $('.slider #widget-detail-close').on('click', function () {
                         $('.slider #widget-timeline-detail').addClass('widget-hidden');

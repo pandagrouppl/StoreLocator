@@ -149,6 +149,8 @@ if ($photos->getSize() == 0) : ?>
                 $('.gallery .widget-detail-title').text(photo.caption ? photo.caption : '');
                 $('.gallery #created_at_instagram').text(photo.created_at);
                 $('.gallery #widget-timeline-detail').data('photo-id', photo.photo_id).removeClass('widget-hidden');
+                $('.gallery .likes-number').text(photo.likes);
+                $('.gallery .comments-number').text(photo.comments);
 
             });
             $('.gallery #widget-detail-close').on('click', function () {
