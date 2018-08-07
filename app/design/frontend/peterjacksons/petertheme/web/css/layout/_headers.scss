@@ -8,15 +8,16 @@
         background-color: white;
     }
 
-    &__top {
+    &__top, &__bottom {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        @media all and (min-width: $bp-header + 1px) {
+        @media all and (min-width: 1300px + 1px) {
             padding: 0 30px;
         }
 
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: 1300px) {
             padding: 0 5px;
         }
 
@@ -34,6 +35,21 @@
             color: $white;
             text-transform: uppercase;
             font-weight: 500;
+        }
+    }
+
+    &__top {
+        display: none;
+    }
+
+    @media all and (min-width: $bp-header + 1px) {
+
+        &__top {
+            display: flex;
+        }
+
+        &__middle-mobile {
+            display: none;
         }
     }
 }
@@ -69,7 +85,7 @@ body[class~='cms-sustainability'] {
             .ui-menu-item {
                 span, a, i {
                     color: white;
-                    font-weight: 400;
+                    font-weight: 300;
                 }
             }
 

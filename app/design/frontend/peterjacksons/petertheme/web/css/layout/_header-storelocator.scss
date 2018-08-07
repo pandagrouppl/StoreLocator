@@ -1,0 +1,58 @@
+.header-storelocator {
+    @include header-side-elems();
+    margin: 0 5px 20px;
+    align-items: center;
+    justify-content: space-around;
+
+    a {
+        color: $light-dark;
+        font-size: 14px;
+        position: relative;
+
+        &::before {
+            background-image: url('../../img/sprite/store-locate.png');
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 19px;
+            height: 26px;
+        }
+
+        &:hover::before {
+            background-image: url('../../img/sprite/store-locate-hover.png');
+        }
+    }
+
+    @media all and (max-width: $bp-header) {
+        display: none;
+    }
+
+}
+
+body[class~='cms-home'] {
+    @media all and (min-width: $bp-header + 1px) {
+        .header-storelocator {
+            a {
+                color: $white;
+            }
+        }
+
+        .headers:hover {
+            .header-storelocator {
+                a {
+                    color: $light-dark;
+                }
+            }
+        }
+    }
+}
+
+body[class~='cms-home'] .headers--fixed {
+    .header-storelocator {
+        a {
+            color: $light-dark;
+        }
+    }
+}
