@@ -1,3 +1,8 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+?>
+
 <section class="header-left">
     <article class="header-left__menu">
         <span class="header-left__menu-bar header-left__menu-bar--top"></span>
@@ -10,7 +15,7 @@
         </div>
     </article>
     <article class="header-left__account show_popup_login" data-role="customer-section" data-bind="scope: 'customer'">
-        <i class="header-left__account-popup-toggle filtered-on-header"></i>
+        <i class="header-left__account-popup-toggle filtered-on-header <?php if($customerSession->isLoggedIn()) { echo 'logged-in'; }?>"></i>
         <span class="header-left__account-greeting filtered-on-header" data-bind="text: customer().firstname"></span>
         <div class="header-left__account-popup" data-bind="html: customer().login_item_html, afterRender: initToggle" style="display: none"></div>
     </article>

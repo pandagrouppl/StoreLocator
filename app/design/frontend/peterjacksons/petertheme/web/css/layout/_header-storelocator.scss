@@ -7,6 +7,22 @@
     a {
         color: $light-dark;
         font-size: 14px;
+        position: relative;
+
+        &::before {
+            background-image: url('../../img/sprite/store-locate.png');
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 19px;
+            height: 26px;
+        }
+
+        &:hover::before {
+            background-image: url('../../img/sprite/store-locate-hover.png');
+        }
     }
 
     @media all and (max-width: $bp-header) {

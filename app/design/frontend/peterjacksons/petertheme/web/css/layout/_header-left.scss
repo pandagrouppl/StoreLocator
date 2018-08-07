@@ -92,9 +92,12 @@
     }
 
     &__show-search-overlay {
-        @include sprite(header-zoom);
+        //@include sprite(header-zoom);
+        background-image: url('../../img/sprite/search-new.png');
+        width: 28px;
+        height: 28px;
         display: block;
-        margin-left: 4px;
+        margin-bottom: 3px;
 
         @media all and (min-width: $bp-header + 1px) {
             display: none;
@@ -112,10 +115,16 @@
         }
 
         i {
-            @include sprite(header-account);
+            //@include sprite(header-account);
+            background-image: url('../../img/sprite/not-logged-in.png');
+            width: 25px;
+            height: 25px;
             display: block;
             cursor: pointer;
-            transform: scale(0.85);
+
+            &.logged-in {
+                background-image: url('../../img/sprite/logged-in.png');
+            }
         }
     }
 

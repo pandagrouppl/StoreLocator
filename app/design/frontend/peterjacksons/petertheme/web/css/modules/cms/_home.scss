@@ -196,6 +196,7 @@ body[class~='cms-home'] {
         font-size: 18px;
         color: black;
         flex: 0 0 auto;
+        text-align: left;
 
         @media all and (max-width: $xs-breakpoint) {
             font-size: 13px;
