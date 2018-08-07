@@ -7,7 +7,8 @@
     }
 
     input {
-        //display: none;
+        cursor: pointer;
+        margin-right: 10px;
     }
 
     &__filter-header {
@@ -58,6 +59,12 @@
         color: #807E7E;
     }
 
+    &__refine {
+        position: absolute;
+        top: -12px;
+        width: 100%;
+    }
+
     &__title {
         padding: 10px 0;
         margin: 10px 0;
@@ -68,6 +75,7 @@
         display: flex;
         justify-content: space-between;
         font-weight: normal;
+        margin-top: 0;
     }
 
     &__content {
@@ -91,6 +99,12 @@
             font-size: 14px;
             color: #333;
             font-weight: 300;
+
+            span {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
 
         .item {
@@ -195,8 +209,10 @@
 
         &:hover {
             border: 1px solid $grey;
-            background-color: $grey;
-            color: $white;
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 

@@ -11,6 +11,10 @@ body {
 
 .page-wrapper {
     overflow: hidden;
+
+    @media all and (min-width: 860px) {
+        overflow: visible;
+    }
 }
 
 .no-display {
