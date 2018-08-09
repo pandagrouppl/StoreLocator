@@ -1,7 +1,7 @@
 .header-right__minicart {
     > .ui-widget {
         position: absolute;
-        top: 55px;
+        top: 42px;
         right: 10px;
         z-index: 999;
     }
@@ -15,8 +15,9 @@
 }
 
 .minicart {
-    @include info-popup-mirrored();
+    //@include info-popup-mirrored();
     position: inherit;
+    background-color: $white;
     padding: 0;
     width: 368px;
     color: #515151;
@@ -24,6 +25,7 @@
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    font-family: sofia-pro, sans-serif;
 
     a {
         color: $light-dark;
@@ -141,6 +143,12 @@
                 margin-left: 5px;
             }
         }
+    }
+
+    &__remove {
+        text-decoration: underline;
+        text-transform: uppercase;
+        padding-top: 30px;
     }
 
     &__overlay {
