@@ -1,0 +1,170 @@
+<?php
+/**
+ * @var $block \Magenest\InstagramShop\Block\Photo\Slider
+ */
+$photos = $block->getPhotos();
+$slickConfig = $block->getData();
+?>
+    <div class="slider">
+        <?php include($block->getTemplateFile('Magenest_InstagramShop::shared/popup.phtml')) ?>
+    </div>
+    <div class="block block-photo-slider slider-list container">
+        <div class="block-title" style="text-align: center;">
+            <h2 style="text-align: center;color: #3f3e3e;font-size: 26pt;font-weight: 500;"><?php echo $block->getTitle() ?></h2>
+        </div>
+        <div class="block-content" style="overflow-x: hidden;">
+            <?php if ($photos->getSize() > 0) { ?>
+                <div class="flexslider carousel">
+                    <ul class="slides">
+                        <?php
+                        /** @var \Magenest\InstagramShop\Model\Photo $photo */
+                        foreach ($photos as $photo) { ?>
+                            <li id="<?= $photo->getPhotoId() ?>">
+                                <a href="<?= $photo->getUrl() ?>">
+                                    <img src="<?= $photo->getSource() ?>"/>
+                                    <div class="overlay"></div>
+                                    <div class="text">
+                                        <button><?= __('View More') ?></button>
+                                    </div>
+                                </a>
+                                <?php
+                                $count = 0;
+                                if ($photo->getProductIds() != '') {
+                                    echo '<div id="linked-products" style="display: none;">';
+                                    foreach (explode(', ', $photo->getProductIds()) as $id) {
+                                        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+                                        try {
+                                            /** @var \Magento\Catalog\Model\Product $product */
+                                            $product = $objectManager->get(Magento\Catalog\Api\ProductRepositoryInterface::class)->getById($id);
+                                            $productUrl = $product->getUrlModel()->getUrl($product);
+                                            $imagewidth = 150;
+                                            $imageheight = 150;
+                                            $imageHelper = $objectManager->get('\Magento\Catalog\Helper\Image');
+                                            $image_url = $imageHelper->init($product, 'product_page_image_small')->setImageFile($product->getFile())->resize($imagewidth, $imageheight)->getUrl();
+                                            echo '<a class="widget-text-product widget-link-list" data-original-url="' . $productUrl . '" id="product_link_' . $product->getId() . '" target="_blank" data-link-id="' . $product->getId() . '" href="' . $productUrl . '">';
+                                            echo '<img src="' . $image_url . '" width="150px" height="150px" style=""/>';
+                                            echo '<span class="widget-link-text-all">';
+                                            echo '<span class="widget-link-text-number"></span>';
+                                            echo '<span class="widget-link-text">' . $product->getName() . '</span> </span>';
+                                            echo '<div class="widget-text-product-cta"></div>';
+                                            echo '</a>';
+                                        } catch (\Exception $e) {
+                                        }
+                                    }
+                                    echo '</div>';
+                                } else {
+                                    echo '<div id="linked-products" style="display: none;"></div>';
+                                } ?>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div style="text-align:center">
+                    <a href="<?=$block->getBaseUrl()?>instagram/gallery/" class="instagram-button" style="<?=$block->getViewFullGalleryCss()?>">
+                        <?=$block->getViewFullGalleryTitle()?>
+                    </a>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+
+<?php if ($photos->getSize()) : ?>
+    <script>
+        require(['jquery'], function ($) {
+            $(function (){
+                if ($("body").hasClass("cms-index-index"))
+                    $('.block-title').append( "<p>Follow <b><i>@peterjacksonau</i></b> on Instagram & use #TailoredByPJ</p>" );
+            });
+
+            // $(window).resize(function () {
+            //     var windowSize = $(window).width();
+            //     var $slides = $( '.slides > li' );
+            //
+            //     if (windowSize >= 1600) {
+            //         $slides.height($(window).height() - 550);
+            //         console.log("screen width is less than 1600");
+            //     }
+            //     else (windowSize <= 1450) {
+            //         $slides.height($(window).height() - 700);
+            //         console.log("screen width is less than 1450");
+            //     }
+            // });
+            //
+            // $(window).trigger('resize');
+
+            $(function () {
+                require(['flexslider'], function () {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        animationLoop: <?=$block->getConfigSlider($block->getAnimationLoop())?>,
+                        reverse: <?=$block->getConfigSlider($block->getReverse(), 'false')?>,
+                        pauseOnHover: <?=$block->getConfigSlider($block->getPauseOnHover(), 'false')?>,
+                        touch: <?=$block->getConfigSlider($block->getTouch())?>,
+                        mousewheel: <?=$block->getConfigSlider($block->getMousewheel(), 'false')?>,
+                        pauseOnAction: <?=$block->getConfigSlider($block->getPauseOnAction(), 'false')?>,
+                        itemMargin: <?=$block->getConfigSliderValue($block->getItemMargin(), 0)?>,
+                        slideshowSpeed: <?=$block->getConfigSliderValue($block->getSlideShowSpeed(), 7000)?>,
+                        animationSpeed: <?=$block->getConfigSliderValue($block->getAnimationSpeed(), 600)?>,
+                        minItems: <?=$block->getConfigSliderValue($block->getMinItems(), 0)?>,
+                        maxItems: <?=$block->getConfigSliderValue($block->getMaxItems(), 0)?>,
+                        itemWidth: <?=$block->getConfigSliderValue($block->getItemWidth(), 210)?>,
+                        move: <?=$block->getConfigSliderValue($block->getMove(), 0)?>,
+                        smoothHeight: true,
+                    });
+
+                    var photos = <?=json_encode($photos->getData())?>;
+
+                    $('.flex-viewport > ul > li > a').on('click', function (e) {
+                        var self = this;
+                        e.preventDefault();
+                        var photo = $.map(photos, function (item) {
+                            if ($(self).parent().attr('id') === item.photo_id) {
+                                return item;
+                            }
+                        });
+                        photo = photo[0];
+                        $('.slider #widget-instagram-image-url').attr('src', photo.source);
+                        var html = $(self).parent().children('#linked-products').html();
+                        if (html != '') {
+                            $('.slider .featured-products').show();
+                            $('.slider .widget-text-link-container').html(html);
+                        } else {
+                            $('.slider .featured-products').hide();
+                            $('.slider .widget-text-link-container').html('');
+                        }
+                        $('.slider #widget-instagram-url').attr('href', photo.url);
+                        $('.slider .widget-detail-title').text(photo.caption ? photo.caption : '');
+                        $('.slider #created_at_instagram').text(photo.created_at);
+                        $('.slider #widget-timeline-detail').data('photo-id', photo.photo_id).removeClass('widget-hidden');
+                        $('.slider .likes-number').text(photo.likes);
+                        $('.slider .comments-number').text(photo.comments);
+                    });
+                    $('.slider #widget-detail-close').on('click', function () {
+                        $('.slider #widget-timeline-detail').addClass('widget-hidden');
+                    });
+
+                    $('.slider #widget-prev-post').on('click', function () {
+                        var photoId = $('.slider #widget-timeline-detail').data('photo-id');
+                        $.map(photos, function (item, index) {
+                            if (item.photo_id === photoId) {
+                                var id = index === 0 ? photos.length : index;
+                                return $('.flex-viewport > ul > li#' + photos[id - 1].photo_id + ' > a').trigger('click');
+                            }
+                        });
+                    });
+                    $('.slider #widget-next-post').on('click', function () {
+                        var photoId = $('.slider #widget-timeline-detail').data('photo-id');
+                        $.map(photos, function (item, index) {
+                            if (item.photo_id === photoId) {
+                                var id = index === photos.length - 1 ? -1 : index;
+                                return $('.flex-viewport > ul > li#' + photos[id + 1].photo_id + ' > a').trigger('click');
+                            }
+                        });
+                    });
+
+                });
+
+            });
+        });
+    </script>
+<?php endif; ?>
