@@ -36,6 +36,7 @@
         height: 28px;
         display: block;
         margin-bottom: 3px;
+        opacity: 0.5;
     }
 
     &__counter {
@@ -55,7 +56,7 @@
 
     &__wishlist-icon {
         //@include sprite(header-star);
-        background-image: url('../../img/sprite/wishlist-black.png');
+        background-image: url('../../img/sprite/wishlist-outline.png');
         width: 23px;
         height: 21px;
 

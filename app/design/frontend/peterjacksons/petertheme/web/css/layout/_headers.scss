@@ -94,9 +94,17 @@ body[class~='cms-sustainability'] {
                 -moz-animation: scale(1);
             }
 
+            .header-right__show-search-overlay {
+                opacity: 1;
+            }
+
 
             &--fixed, &:hover {
                 background-color: white;
+
+                .header-right__show-search-overlay {
+                    opacity: 0.6;
+                }
 
                 .headers__bottom {
                     border-bottom: 1px solid #d7d7d7;
