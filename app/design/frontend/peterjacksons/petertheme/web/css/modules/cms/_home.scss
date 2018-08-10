@@ -213,7 +213,7 @@ body[class~='cms-home'] {
         font-weight: 500;
         color: white;
         font-size: 9pt;
-        padding: 9px 31px;
+        padding: 11px 40px;
         border: 1px solid white;
         text-decoration: none;
         background: none;
@@ -296,7 +296,7 @@ body[class~='cms-home'] {
 }
 
 .main-banner {
-    background-image: url('../../img/assets/home-11-2017/homepage_june2018.png');
+    background-image: url('../../img/assets/home-11-2017/homepage_august2018.png');
     width: 100%;
     max-width: 100%;
     background-size: cover;
@@ -310,13 +310,13 @@ body[class~='cms-home'] {
 
     &__header {
         font-weight: 300;
-        font-size: 14pt;
+        font-size: 18pt;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         letter-spacing: 0;
         color: white;
         width: 693px;
-        padding: 0 0 0 7em;
+        padding: 0 0 0 130px;
 
         p {
             margin: 8px 0;
@@ -422,11 +422,18 @@ body[class~='cms-home'] {
 
     &__header {
         font-family: Times New Roman;
-        font-size: 26pt;
+        font-size: 32pt;
         color: white;
         text-transform: uppercase;
         margin: 0 0 10px 0;
         font-weight: 600;
+
+        &::before {
+            content: '\2012';
+            position: relative;
+            top: 22px;
+            left: -30px;
+        }
 
         &--black {
             color: black;
@@ -519,7 +526,7 @@ body[class~='cms-home'] {
 
     &__text {
         font-weight: 300;
-        font-size: 12pt;
+        font-size: 16pt;
         font-family: 'Roboto', sans-serif;
         margin: 0 0 8px 0;
         letter-spacing: 0;
@@ -546,7 +553,7 @@ body[class~='cms-home'] {
         }
 
         &--elevate {
-            background-image: url('../../img/assets/home-11-2017/second-banner.png');
+            background-image: url('../../img/assets/home-08-2018/second-banner.png');
         }
 
         &--tactile {
@@ -804,6 +811,10 @@ body[class~='cms-home'] {
             &--measure {
                 height: 518px;
             }
+        }
+
+        &__text {
+            font-size: 14pt;
         }
 
         &__inner {
