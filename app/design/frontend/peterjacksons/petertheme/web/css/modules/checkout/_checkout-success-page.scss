@@ -1,4 +1,5 @@
-.checkout-success {
+.checkout-success,
+.checkout-error {
     background-image: url('../../img/assets/checkout-order-success/textile_bg.png');
     background-size: cover;
     height: 100vh;
@@ -67,6 +68,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        font-family: "sofia-pro", sans-serif;
+
 
         @media all and (max-width: $cart-lg-breakpoint) {
             margin-top: 10%;
@@ -79,7 +82,7 @@
         font-family: "sofia-pro", sans-serif;
         text-align: center;
         margin: 0 0 25px 0;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1.1em;
 
         @media all and (max-width: 690px) {
@@ -110,7 +113,7 @@
         background-color: #f3f1f1;
         padding: 15px 40px;
         margin-bottom: 25px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     &__para {
@@ -119,7 +122,7 @@
         text-align: center;
 
         &--bold {
-            font-weight: 500;
+            font-weight: 600;
         }
     }
 
@@ -130,10 +133,18 @@
         height: auto;
         width: auto;
         padding: 12px 60px;
+        font-family: "sofia-pro", sans-serif;
     }
 }
 
-.checkout-onepage-success {
+.checkout-onepage-success,
+.checkout-onepage-error {
+
+    .checkout-header {
+        font-family: "sofia-pro", sans-serif;
+        justify-content: space-around;
+    }
+
     .page-main__message .success {
         display: none;
     }
