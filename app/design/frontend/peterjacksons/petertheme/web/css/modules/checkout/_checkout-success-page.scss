@@ -1,4 +1,5 @@
-.checkout-success {
+.checkout-success,
+.checkout-error {
     background-image: url('../../img/assets/checkout-order-success/textile_bg.png');
     background-size: cover;
     height: 100vh;
@@ -136,7 +137,9 @@
     }
 }
 
-.checkout-onepage-success {
+.checkout-onepage-success,
+.checkout-onepage-error {
+
     .checkout-header {
         font-family: "sofia-pro", sans-serif;
         justify-content: space-around;

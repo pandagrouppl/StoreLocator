@@ -4,7 +4,9 @@
 <div class="checkout-error">
 
     <div class="checkout-error__inner">
-        <div class="checkout-error__content">
+        <div class="checkout-error__content-bg">
+            <div class="checkout-error__content-wrapper">
+                <div class="checkout-error__content">
             <h2 class="checkout-error__title"><?php echo $block->getCustomerName() . $block->escapeHtml(__(', Your order was unsuccessful')) ?></h2>
 
                 <p class="checkout-error__para checkout-error__para--bold">For some reason your transaction did not go through. Please
@@ -36,6 +38,8 @@
 
 
 
+        </div>
+            </div>
         </div>
     </div>
 
