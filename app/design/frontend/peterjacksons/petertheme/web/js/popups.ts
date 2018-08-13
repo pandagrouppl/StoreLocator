@@ -83,7 +83,7 @@ export class Popups {
     _genericPopup() {
         const $trigger = $('.show-general-popup');
         const $popup = $('.general-popup');
-        console.log($popup);
+        // console.log($popup);
         $trigger.on('click ', (e) => {
             $(e.currentTarget).next('.general-popup').toggle();
         });
@@ -97,9 +97,15 @@ export class Popups {
 
     _minicartPopup() {
 
-        $(document).on('click','.minicart__overlay, .minicart__close, .headers', () => {
+        $(document).on('click','.minicart__overlay, .headers', () => {
             $('.minicart__overlay').removeClass('minicart__overlay--shown');
             $('.headers').removeClass('headers--minicart-active');
+        });
+
+        $(document).on('click',' .minicart__close' , () => {
+            $('.minicart__overlay').removeClass('minicart__overlay--shown');
+            $('.headers').removeClass('headers--minicart-active');
+            $('.header-right__minicart > .ui-widget').slideUp();
         });
     }
 
