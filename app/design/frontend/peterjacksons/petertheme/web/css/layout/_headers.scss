@@ -13,11 +13,11 @@
         justify-content: space-between;
         align-items: center;
 
-        @media all and (min-width: 1300px + 1px) {
-            padding: 0 30px;
+        @media all and (min-width: 1400px + 1px) {
+            padding: 0 90px;
         }
 
-        @media all and (max-width: 1300px) {
+        @media all and (max-width: 1400px) {
             padding: 0 5px;
         }
 
