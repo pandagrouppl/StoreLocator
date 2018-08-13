@@ -2,7 +2,11 @@
     @include header-side-elems();
     margin: 0 5px 20px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+
+    > div {
+        padding-left: 50px;
+    }
 
     a {
         color: $light-dark;
