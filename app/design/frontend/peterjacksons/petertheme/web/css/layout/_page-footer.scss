@@ -108,6 +108,7 @@
             text-transform: uppercase;
             font-size: 10px;
             color: #4c4b4d;
+            font-weight: 700;
         }
     }
 
@@ -141,6 +142,8 @@
 
     &__social-icons-ul {
         display: flex;
+        justify-content: flex-end;
+        padding-top: 15px;
 
         li:first-child a {
             margin-left: 0;
