@@ -106,13 +106,18 @@ $breadcrumbs-color: #928383;
     background-color: $lightgrey;
 
     &__separator {
-        margin: 0 85px;
+        margin: 0 85px -2px 85px;
         letter-spacing: 0;
+        width: 18px;
+        height: 18px;
+        background: url('../../img/assets/arrow-right.png') no-repeat;
+        display: inline-block;
     }
 
     &__item {
         color: $light-dark;
         font-weight: 300;
+        text-transform: uppercase;
 
         a {
             color: inherit;
