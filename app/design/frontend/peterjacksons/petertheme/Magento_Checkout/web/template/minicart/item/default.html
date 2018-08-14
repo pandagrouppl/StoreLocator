@@ -5,61 +5,73 @@
  */
 -->
 <li class="minicart__item" data-role="product-item">
-        <div class="minicart__image">
+    <div class="minicart__image">
+        <!-- ko if: product_has_url -->
+        <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="minicart__image-url">
+            <!-- ko foreach: $parent.getRegion('itemImage') -->
+                <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+            <!-- /ko -->
+        </a>
+        <!-- /ko -->
+        <!-- ko ifnot: product_has_url -->
+
+            <!-- ko foreach: $parent.getRegion('itemImage') -->
+                <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+            <!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+
+    <div class="minicart__item-details">
+        <div class="minicart__item-name">
             <!-- ko if: product_has_url -->
-            <a data-bind="attr: {href: product_url, title: product_name}" tabindex="-1" class="minicart__image-url">
-                <!-- ko foreach: $parent.getRegion('itemImage') -->
-                    <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
-                <!-- /ko -->
-            </a>
+                <a data-bind="attr: {href: product_url}, text: product_name"></a>
             <!-- /ko -->
             <!-- ko ifnot: product_has_url -->
-
-                <!-- ko foreach: $parent.getRegion('itemImage') -->
-                    <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
-                <!-- /ko -->
-
+                <!-- ko text: product_name --><!-- /ko -->
             <!-- /ko -->
         </div>
-        <div class="minicart__item-details">
-            <div class="minicart__item-name">
-                <!-- ko if: product_has_url -->
-                    <a data-bind="attr: {href: product_url}, text: product_name"></a>
+        <!-- ko if: options.length -->
+        <a data-bind="attr: {href: product_url}">
+        <dl class="minicart__item-options">
+            <!-- ko foreach: { data: options, as: 'option' } -->
+            <dt><!-- ko text: option.label --><!-- /ko --></dt>
+            <dd>
+                <!-- ko if: Array.isArray(option.value) -->
+                <span data-bind="html: option.value.join('')"></span>
                 <!-- /ko -->
-                <!-- ko ifnot: product_has_url -->
-                    <!-- ko text: product_name --><!-- /ko -->
+                <!-- ko ifnot: Array.isArray(option.value) -->
+                <span data-bind="html: option.value"></span>
                 <!-- /ko -->
-            </div>
-            <!-- ko if: options.length -->
-            <a data-bind="attr: {href: product_url}">
-            <dl class="minicart__item-options">
-                <!-- ko foreach: { data: options, as: 'option' } -->
-                <dt><!-- ko text: option.label --><!-- /ko --></dt>
-                <dd>
-                    <!-- ko if: Array.isArray(option.value) -->
-                    <span data-bind="html: option.value.join('')"></span>
-                    <!-- /ko -->
-                    <!-- ko ifnot: Array.isArray(option.value) -->
-                    <span data-bind="html: option.value"></span>
-                    <!-- /ko -->
-                </dd><br>
-                <!-- /ko -->
-            </dl>
-            </a>
+            </dd><br>
             <!-- /ko -->
-            <div class="minicart__qty-and-price">
-                <a data-bind="attr: {href: product_url}">
-                <span class="minicart__qty"><span data-bind="text: qty"></span> x</span>
-                <!-- ko if: canApplyMsrp -->
-                <span data-bind="i18n: 'Price'"></span>
-                <span data-bind="i18n: 'See price before order confirmation.'"></span>
-                <!-- /ko -->
-                <!-- ko ifnot: canApplyMsrp -->
-                <!-- ko foreach: $parent.getRegion('priceSidebar') -->
-                    <!-- ko template: {name: getTemplate(), data: item.product_price, as: 'price'} --><!-- /ko -->
-                <!-- /ko -->
-                <!-- /ko -->
+        </dl>
+        </a>
+        <!-- /ko -->
+        <div class="minicart__qty-and-price">
+            <a data-bind="attr: {href: product_url}">
+            <span class="minicart__qty">
+                <span data-bind="text: qty"></span> X AUD
+            </span>
+            <!-- ko if: canApplyMsrp -->
+            <span data-bind="i18n: 'Price'"></span>
+            <span data-bind="i18n: 'See price before order confirmation.'"></span>
+            <!-- /ko -->
+            <!-- ko ifnot: canApplyMsrp -->
+            <!-- ko foreach: $parent.getRegion('priceSidebar') -->
+                <!-- ko template: {name: getTemplate(), data: item.product_price, as: 'price'} --><!-- /ko -->
+            <!-- /ko -->
+            <!-- /ko -->
+            </a>
+        </div>
+
+        <div class="minicart__remove product actions">
+            <div class="secondary">
+                <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
+                   class="action delete">
+                    <span data-bind="i18n: 'Remove'"></span>
                 </a>
             </div>
         </div>
+    </div>
 </li>

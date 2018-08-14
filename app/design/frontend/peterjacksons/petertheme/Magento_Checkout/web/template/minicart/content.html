@@ -5,21 +5,6 @@
  */
 -->
 <div class="minicart">
-<!-- ko if: getCartParam('summary_count') -->
-
-    <!-- ko if: getCartParam('possible_onepage_checkout') -->
-        <!-- ko foreach: getRegion('subtotalContainer') -->
-            <!-- ko template: getTemplate() --><!-- /ko -->
-        <!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko foreach: getRegion('extraInfo') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko if: getCartParam('possible_onepage_checkout') -->
-    <!-- /ko -->
-<!-- /ko -->
 
 <!-- ko if: getCartParam('summary_count') -->
     <div data-action="scroll" class="minicart__items-wrapper">
@@ -34,29 +19,92 @@
     <div class="minicart__no-items" data-bind="visible: closeSidebar()">
         <!-- ko i18n: 'You have no items in your shopping cart.' --><!-- /ko -->
     </div>
+
 <!-- /ko -->
 
-<div class="minicart__buttons">
-    <a class="action viewcart minicart__button--view-cart" data-bind="attr: {href: shoppingCartUrl}">
-        <span><!-- ko i18n: 'View cart' --><!-- /ko --></span>
-    </a>
+    <div class="minicart__summary">
+        <!-- ko if: getCartParam('summary_count') -->
 
-    <button
-            id="top-cart-btn-checkout"
-            type="button"
-            class="action primary checkout minicart__button--checkout"
-            data-bind="attr: {title: $t('Go to Checkout')}">
-        <!-- ko i18n: 'Checkout' --><!-- /ko -->
-    </button>
-
-</div>
-
-<div id="minicart-widgets" class="minicart-widgets">
-    <!-- ko foreach: getRegion('promotion') -->
+        <!-- ko foreach: getRegion('extraInfo') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
-    <!-- /ko -->
-</div>
+        <!-- /ko -->
+
+        <!-- ko if: getCartParam('possible_onepage_checkout') -->
+        <!-- ko foreach: getRegion('subtotalContainer') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko if: getCartParam('possible_onepage_checkout') -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+    <div class="minicart__view-cart">
+        <a class="action viewcart minicart__button--view-cart" data-bind="attr: {href: shoppingCartUrl}">
+            <span><!-- ko i18n: 'View shopping bag' --><!-- /ko --></span>
+        </a>
+    </div>
+
+    <div class="minicart__buttons">
+
+        <div class="minicart__paypal">
+            <span><!-- ko i18n: 'Checkout with' --><!-- /ko --></span>
+            <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+        </div>
+
+        <button
+                id="top-cart-btn-checkout"
+                type="button"
+                class="action primary checkout minicart__button--checkout"
+                data-bind="attr: {title: $t('Go to Checkout')}">
+            <!-- ko i18n: 'Checkout' --><!-- /ko -->
+        </button>
+
+    </div>
+
+    <div id="minicart-widgets" class="minicart-widgets">
+        <!-- ko foreach: getRegion('promotion') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+    <div class="minicart__close">
+    </div>
 <!-- ko foreach: getRegion('sign-in-popup') -->
 <!-- ko template: getTemplate() --><!-- /ko -->
 <!-- /ko -->
 </div>
+
+
+<!--<script>-->
+    <!--/**-->
+     <!--* to close minicart-->
+     <!--*/-->
+    <!--require(['jquery'], function($){-->
+        <!--$('.minicart__close').on("click", function() {-->
+<!--//            $('.header-right__minicart > .ui-widget').slideUp();-->
+            <!--console.log("zwijam");-->
+        <!--})-->
+    <!--});-->
+<!--</script>-->
+
+<!--<div class="block block-minicart empty"-->
+     <!--data-role="dropdownDialog"-->
+     <!--data-mage-init='{"dropdownDialog":{-->
+                <!--"appendTo":"[data-block=minicart]",-->
+                <!--"triggerTarget":".showcart",-->
+                <!--"timeout": "0",-->
+                <!--"closeOnMouseLeave": false,-->
+                <!--"closeOnEscape": true,-->
+                <!--"triggerClass":"active",-->
+                <!--"show":{"effect":"slide", "direction": "up", "duration":900},-->
+                <!--"hide":{"effect":"slide", "direction": "up", "duration":900},-->
+                <!--"parentClass":"active",-->
+                <!--"buttons":[]}}'>-->
+    <!--<div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">-->
+        <!--&lt;!&ndash; ko template: getTemplate() &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;-->
+    <!--</div>-->
+
+    <!--<?php echo $block->getChildHtml('minicart.addons'); ?>-->
+<!--</div>-->
