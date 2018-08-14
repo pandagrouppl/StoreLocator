@@ -50,7 +50,9 @@
         <!-- /ko -->
         <div class="minicart__qty-and-price">
             <a data-bind="attr: {href: product_url}">
-            <span class="minicart__qty"><span data-bind="text: qty"></span> x</span>
+            <span class="minicart__qty">
+                <span data-bind="text: qty"></span> X AUD
+            </span>
             <!-- ko if: canApplyMsrp -->
             <span data-bind="i18n: 'Price'"></span>
             <span data-bind="i18n: 'See price before order confirmation.'"></span>

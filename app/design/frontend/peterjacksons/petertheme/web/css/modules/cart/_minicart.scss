@@ -40,6 +40,8 @@
         background-color: $lightgrey;
         padding: 10px 0;
         margin-top: 5px;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     &__subtotal {
@@ -47,8 +49,17 @@
         justify-content: space-between;
         font-size: 14px;
         text-transform: uppercase;
-        padding: 8px 20px;
+        padding: 10px 25px;
         color: $light-dark;
+    }
+
+    &__subtotal-amount {
+        display: flex;
+        flex-direction: row;
+
+        span {
+            margin-right: 6px;
+        }
     }
 
     &__paypal {
@@ -80,19 +91,19 @@
 
     &__items-wrapper {
         overflow: auto;
-        max-height: 290px;
+        max-height: 320px;
         padding: 20px 10px 0;
 
         ol {
             overflow: hidden;
+            margin-top: 10px;
         }
-
     }
 
     &__item {
         display: flex;
-        margin-bottom: 15px;
-        margin-top: 10px;
+        margin-bottom: 25px;
+        margin-top: 15px;
     }
 
     &__item-details {

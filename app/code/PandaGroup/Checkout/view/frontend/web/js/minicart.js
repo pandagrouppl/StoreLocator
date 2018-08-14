@@ -196,12 +196,3 @@ define([
     });
 
 });
-
-
-// /** to close minicart */
-//
-//     var closeArrow = document.querySelector('.minicart__close');
-//     closeArrow.onclick = function() {
-// //            $('.header-right__minicart > .ui-widget').slideUp();
-//         console.log("zwijam");
-//     };
