@@ -120,6 +120,7 @@ body._has-modal-custom .modal-custom-overlay {
 
     .modal-header {
         justify-content: flex-end;
+        visibility: hidden;
 
         button {
             background: transparent;
