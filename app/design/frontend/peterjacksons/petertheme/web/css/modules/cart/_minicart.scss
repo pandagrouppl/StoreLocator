@@ -1,7 +1,7 @@
 .header-right__minicart {
     > .ui-widget {
         position: absolute;
-        top: 55px;
+        top: 42px;
         right: 10px;
         z-index: 999;
     }
@@ -15,19 +15,21 @@
 }
 
 .minicart {
-    @include info-popup-mirrored();
     position: inherit;
+    background-color: $white;
     padding: 0;
-    width: 268px;
+    width: 368px;
     color: #515151;
     box-sizing: border-box;
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    font-family: sofia-pro, sans-serif;
+    font-weight: 300;
 
     a {
-        color: #242424;
-        font-size: 16px;
+        color: $light-dark;
+        font-size: 13px;
         text-decoration: none;
     }
 
@@ -35,30 +37,88 @@
         display: inline;
     }
 
+    &__summary {
+        background-color: $lightgrey;
+        padding: 10px 0;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     &__subtotal {
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        color: $light-dark;
+    }
+
+    &__subtotal-amount {
+        display: flex;
+        flex-direction: row;
+
+        span {
+            margin-right: 6px;
+        }
+    }
+
+    &__paypal {
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 11px;
+            font-weight: 600;
+            color: $light-dark;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 75px;
+            height: auto;
+            margin-left: 10px;
+        }
+    }
+
+    &__view-cart {
+        text-align: right;
+        padding: 30px 20px 0;
+
+        a {
+            text-decoration: underline;
+        }
     }
 
     &__items-wrapper {
         overflow: auto;
-        max-height: 250px;
-        padding: 0 20px;
+        max-height: 320px;
+        padding: 20px 10px 0;
 
         ol {
             overflow: hidden;
+            margin-top: 10px;
         }
-
     }
 
     &__item {
         display: flex;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #cbcaca;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
+
+    &__item-details {
+        margin-left: 10px;
+    }
+
+    &__item-options {
+        text-transform: uppercase;
+    }
+
+    &__item-name {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        padding-bottom: 6px;
     }
 
     &__image {
@@ -66,22 +126,16 @@
         max-height: 120px;
     }
 
-    &__item-details {
-        margin-left: 10px;
-    }
-
-    &__item-name {
-        margin-bottom: 10px;
-    }
-
     &__qty-and-price {
-        margin-top: 10px;
+        margin-top: 18px;
     }
 
     &__buttons {
         padding: 20px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
         * {
             box-sizing: border-box;
         }
@@ -89,16 +143,63 @@
         .minicart__button {
 
             &--view-cart {
-                @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 13px, $height: inherit, $margin-top: 0);
+                @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 14px, $height: inherit, $margin-top: 0);
                 flex: 0 0 49%;
                 text-align: center;
             }
 
             &--checkout {
-                @include button-black($font-size: 13px, $height: inherit, $margin-top: 0);
-                flex: 0 0 49%;
+                @include button-black($font-size: 14px, $height: inherit, $margin-top: 0);
+                flex: 0 0 39%;
                 margin-left: 5px;
+                text-transform: uppercase;
+                font-size: 13px;
             }
+        }
+    }
+
+    &__remove {
+        text-decoration: underline;
+        text-transform: uppercase;
+        padding-top: 36px;
+    }
+
+    &__overlay {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        background-color: rgba(1, 1, 1, 0.6);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.3s all;
+
+        &--shown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__close {
+        background-color: #363636;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            pointer-events: none;
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 6px 6px 6px;
+            border-color: transparent transparent #fff transparent;
         }
     }
 
