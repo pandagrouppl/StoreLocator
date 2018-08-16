@@ -185,7 +185,21 @@
             <block class="Magento\Framework\View\Element\Template" name="header.right.alt" template="PandaGroup_Checkout::checkout-header/right.phtml"/>
         </referenceContainer>
         <referenceBlock name="catalog.topnav" remove="true"/>
-        <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
+        <referenceContainer name="header.headers" htmlClass="checkout-main-header">
+            <referenceContainer name="headers" htmlClass="headers__top" htmlTag="section">
+                <block class="Magento\Framework\View\Element\Template" name="header.left" template="PandaGroup_Checkout::checkout-header/left.phtml" before="-">
+                    <arguments>
+                        <argument name="jsLayout" xsi:type="array">
+                            <item name="components" xsi:type="array">
+                                <item name="customer" xsi:type="array">
+                                    <item name="component" xsi:type="string">Magento_Theme/js/view/customer</item>
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+            </referenceContainer>
+        </referenceContainer>
         <referenceContainer name="header.shippingbar">
             <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
         </referenceContainer>
