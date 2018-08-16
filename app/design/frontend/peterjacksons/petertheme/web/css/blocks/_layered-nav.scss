@@ -81,6 +81,11 @@
     &__content {
         margin-left: 0;
 
+        &:first-of-type {
+            max-height: 368px;
+            overflow: auto;
+        }
+
         span.label {
             &:hover {
                 border-bottom: 1px solid black;
@@ -192,6 +197,8 @@
         .show-more,
         .show-less {
             cursor: pointer;
+            margin-bottom: 8px;
+            display: block;
         }
     }
 
