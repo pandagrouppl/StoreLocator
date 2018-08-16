@@ -3,6 +3,15 @@
 .checkout-cart-index .page-main {
     max-width: 966px;
     margin: 0 auto;
+<<<<<<< HEAD
+=======
+    font-family: sofia-pro, sans-serif;
+
+    &__title span,
+    .items-table {
+        font-family: sofia-pro, sans-serif;
+    }
+>>>>>>> d1a5c8fc... [PJ-933] Adjust fonts in cart on checkout
 }
 
 .cart-container {
