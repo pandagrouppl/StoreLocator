@@ -37,14 +37,7 @@
         </referenceContainer>
 
         <referenceBlock name="catalog.topnav" remove="true"/>
-        <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
-        <referenceContainer name="header.shippingbar">
-            <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
-        </referenceContainer>
-        <referenceContainer name="header.center" htmlClass="checkout-header__middle" />
-        <referenceContainer name="headers" htmlClass="checkout-header" />
-        <referenceContainer name="header.headers" htmlClass="checkout-main-header" >
-            <!-- desktop -->
+        <referenceContainer name="header.headers" htmlClass="checkout-main-header">
             <referenceContainer name="headers" htmlClass="headers__top" htmlTag="section">
                 <block class="Magento\Framework\View\Element\Template" name="header.left" template="PandaGroup_Checkout::checkout-header/left.phtml" before="-">
                     <arguments>
@@ -59,6 +52,11 @@
                 </block>
             </referenceContainer>
         </referenceContainer>
+        <referenceContainer name="header.shippingbar">
+            <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="header.center" htmlClass="checkout-header__middle" />
+        <referenceContainer name="headers" htmlClass="checkout-header" />
         <referenceBlock name="logo" template="html/header/logo-checkout.phtml"/>
         <container name="order.success.additional.info" label="Order Success Additional Info"/>
 

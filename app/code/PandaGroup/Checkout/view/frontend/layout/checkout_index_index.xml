@@ -226,7 +226,6 @@
         </referenceContainer>
         <referenceBlock name="catalog.topnav" remove="true"/>
         <referenceContainer name="header.headers" htmlClass="checkout-main-header" >
-                <!-- desktop -->
                 <referenceContainer name="headers" htmlClass="headers__top" htmlTag="section">
                     <block class="Magento\Framework\View\Element\Template" name="header.left" template="PandaGroup_Checkout::checkout-header/left.phtml" before="-">
                         <arguments>

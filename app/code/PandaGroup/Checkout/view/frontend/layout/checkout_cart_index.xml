@@ -184,8 +184,8 @@
             <referenceContainer name="header.right" remove="true" />
             <block class="Magento\Framework\View\Element\Template" name="header.right.alt" template="PandaGroup_Checkout::checkout-header/right.phtml"/>
         </referenceContainer>
-        <referenceContainer name="header.headers" htmlClass="checkout-main-header" >
-            <!-- desktop -->
+        <referenceBlock name="catalog.topnav" remove="true"/>
+        <referenceContainer name="header.headers" htmlClass="checkout-main-header">
             <referenceContainer name="headers" htmlClass="headers__top" htmlTag="section">
                 <block class="Magento\Framework\View\Element\Template" name="header.left" template="PandaGroup_Checkout::checkout-header/left.phtml" before="-">
                     <arguments>
@@ -200,8 +200,6 @@
                 </block>
             </referenceContainer>
         </referenceContainer>
-        <referenceBlock name="catalog.topnav" remove="true"/>
-        <referenceContainer name="header.headers" htmlClass="checkout-main-header" />
         <referenceContainer name="header.shippingbar">
             <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar-checkout.phtml"/>
         </referenceContainer>
