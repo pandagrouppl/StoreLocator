@@ -54,6 +54,7 @@ body[class~='cms-home'] {
         font-size: 26pt;
         font-weight: 600;
         font-family: "sofia-pro", sans-serif;
+        margin-bottom: 45px;
 
         @media all and (max-width: 560px) {
             font-size: 25px;
@@ -238,8 +239,8 @@ body[class~='cms-home'] {
         border-radius: 3px;
         font-weight: 500;
         color: white;
-        font-size: 9pt;
-        padding: 11px 40px;
+        font-size: 13px;
+        padding: 11px 5px;
         border: 1px solid white;
         text-decoration: none;
         background: none;
@@ -249,6 +250,7 @@ body[class~='cms-home'] {
         text-transform: uppercase;
         cursor: pointer;
         transform: translateZ(0);
+        width: 170px;
 
         @media all and (max-width: 560px) {
             border-radius: 0;
@@ -284,7 +286,7 @@ body[class~='cms-home'] {
     }
 
     .btn--padding {
-        margin: 7% 0 2em 10.9em;
+        margin: 7% 0 2em 10em;
 
         @media all and (max-width: 1260px) {
             margin: 3% 0 2em 10.6em;
@@ -318,6 +320,8 @@ body[class~='cms-home'] {
         background-color: #B98459;
         border: #B98459;
         border-radius: 0;
+        width: 240px;
+        height: 37px;
     }
 
     .search-overlay__zoom {
@@ -333,15 +337,15 @@ body[class~='cms-home'] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
-    height: 84vh;
+    height: 716px;
 
     &__image {
-        padding: 0 0 7% 7%;
+        padding: 7% 0 7% 7%;
     }
 
     &__header {
         font-weight: 300;
-        font-size: 18pt;
+        font-size: 24px;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         letter-spacing: 0;
@@ -433,7 +437,7 @@ body[class~='cms-home'] {
 
     &__inner {
         display: flex;
-        margin: 2em 0 0 14em;
+        margin: -10em 0 0 14em;
 
         &--end {
             display: flex;
@@ -453,7 +457,7 @@ body[class~='cms-home'] {
 
     &__header {
         font-family: Times New Roman;
-        font-size: 32pt;
+        font-size: 48px;
         color: white;
         text-transform: uppercase;
         margin: 0 0 10px 0;
@@ -462,8 +466,8 @@ body[class~='cms-home'] {
         &::before {
             content: '\2012';
             position: relative;
-            top: 22px;
-            left: -30px;
+            top: 30px;
+            left: -45px;
         }
 
         &--black {
@@ -471,7 +475,7 @@ body[class~='cms-home'] {
         }
 
         &--margin-zero {
-            margin-bottom: 12px;
+            margin-bottom: 24px;
         }
 
         &--mobile {
@@ -516,7 +520,7 @@ body[class~='cms-home'] {
 
         p {
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 5px;
         }
     }
 
@@ -557,12 +561,12 @@ body[class~='cms-home'] {
 
     &__text {
         font-weight: 300;
-        font-size: 16pt;
+        font-size: 24px;
         font-family: 'Roboto', sans-serif;
-        margin: 0 0 8px 0;
+        margin: 0 0 4px 0;
         letter-spacing: 0;
         color: white;
-        max-width: 470px;
+        max-width: 570px;
 
         @media all and (max-width: 560px) {
             display: none;
@@ -573,7 +577,7 @@ body[class~='cms-home'] {
         background-position: center;
         width: 96%;
         height: 803px;
-        margin: 2% 40px 2% 2%;
+        margin: 2% 40px 4% 2%;
         cursor: pointer;
 
         @media all and (max-width: 560px) {
@@ -604,6 +608,12 @@ body[class~='cms-home'] {
             background-image: url('../../img/assets/home-11-2017/third-banner.png');
             width: 100%;
             margin: 2% 0 2% 0;
+
+            .home-banner__content-box {
+                @media (min-width: 1260px) {
+                    margin: 0 7em;
+                }
+            }
         }
     }
 }
@@ -767,35 +777,8 @@ body[class~='cms-home'] {
     @include next;
 }
 
-@media all and (max-width: 1500px) {
-    .btn-measure {
-        margin: 0 0 10em 0;
-    }
-
-    .main-banner {
-        height: 700px;
-        background-size: cover;
-
-        button {
-            font-size: 12px;
-        }
-    }
-
-    .home-banner {
-        &__image {
-            height: 650px;
-
-            &--measure {
-                height: 605px;
-            }
-        }
-
-        button {
-            font-size: 12px;
-            padding: 11px 24px;
-            margin-top: 20px;
-        }
-    }
+.btn-measure {
+    margin: 0 0 10em 0;
 }
 
 @media all and (max-width: 1260px) {
@@ -823,6 +806,7 @@ body[class~='cms-home'] {
 
         &__image {
             padding: 0 0 3% 7%;
+            width: 80%;
         }
 
         //&__content-box {
@@ -845,7 +829,7 @@ body[class~='cms-home'] {
         }
 
         &__text {
-            font-size: 14pt;
+            font-size: 20px;
         }
 
         &__inner {
@@ -859,6 +843,10 @@ body[class~='cms-home'] {
 
         &__text-box {
             margin: 0;
+        }
+
+        button {
+            margin-top: 10px;
         }
     }
 }
