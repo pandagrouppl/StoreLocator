@@ -45,7 +45,15 @@
         }
 
         li.level0 {
-            padding: 0 11px 15px 11px;
+            margin: 0 11px 9px 11px;
+            padding-bottom: 6px;
+            transition: border 300ms ease-in;
+            border-bottom: 3px solid transparent;
+            text-align: center;
+
+            &:hover {
+                border-bottom: 2px solid #999999;
+            }
 
             > a {
                 color: $black;
@@ -53,13 +61,12 @@
                 font-weight: 300;
                 text-transform: uppercase;
                 padding: 6px 0;
-                transition: font-weight, border 300ms ease-in;
-                border-bottom: 3px solid transparent;
+                font-family: 'sofia-pro', sans-serif;
+                transition: font-weight 300ms ease-in;
 
                 &:hover {
                     color: #383a4b;
                     font-weight: 400;
-                    border-bottom: 2px solid #999999;
                 }
             }
 

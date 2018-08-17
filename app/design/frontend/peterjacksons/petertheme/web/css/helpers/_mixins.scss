@@ -264,7 +264,7 @@
 
 @mixin logo() {
     height: 25px;
-    margin: 20px 5px 20px 5px;
+    margin: 32px 5px 20px 5px;
 
     @media all and (max-width: $bp-header) {
         height: 37px;
@@ -277,7 +277,7 @@
     display: flex;
 
     @media all and (min-width: $bp-header + 1px) {
-        flex: 0 0 200px;
+        flex: 0 0 230px;
     }
 
     @media all and (max-width: $bp-header) {
@@ -343,13 +343,13 @@
 
     &::before {
         left: inherit;
-        right: 25px;
+        right: 12px;
         top: -17px;
     }
 
     &::after {
         left: inherit;
-        right: 25px;
+        right: 12px;
         top: -16px;
     }
 }

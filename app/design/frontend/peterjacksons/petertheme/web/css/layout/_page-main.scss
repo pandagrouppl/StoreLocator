@@ -102,6 +102,10 @@ body[class~='catalog-product-view'] {
 
 //Cart & Checkout
 body[class~='checkout-cart-index'] {
+    .headers__bottom {
+        display: none;
+    }
+
     @media all and (max-width: $sm-breakpoint) {
         .page-main {
             padding: 0 10px;
@@ -120,6 +124,10 @@ body[class~='checkout-index-index'] {
     }
 
     .total-rules {
+        display: none;
+    }
+
+    .headers__bottom {
         display: none;
     }
 
@@ -234,9 +242,17 @@ body[class~='checkout-onepage-success'] {
     .page-footer {
         margin: 0;
     }
+
+    .headers__bottom {
+        display: none;
+    }
 }
 
 body[class~='checkout-onepage-error'] {
+    .headers__bottom {
+        display: none;
+    }
+
     .page-main {
         max-width: 100%;
         margin: 0;
