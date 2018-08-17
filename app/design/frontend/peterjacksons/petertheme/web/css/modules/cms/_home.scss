@@ -233,6 +233,10 @@ body[class~='cms-home'] {
         }
     }
 
+    .fancybox-button {
+        width: 44px;
+    }
+
     button::before,
     button::after {
         background: #fff;
