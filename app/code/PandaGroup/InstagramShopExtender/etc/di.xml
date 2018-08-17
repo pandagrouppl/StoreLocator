@@ -3,6 +3,8 @@
 	<!-- Change maximum photos per page quantity | Reverse collection order to ascending -->
 	<preference for="Magenest\InstagramShop\Block\Gallery\Gallery" type="PandaGroup\InstagramShopExtender\Block\Gallery\Gallery" />
 
+	<preference for="Magenest\InstagramShop\Block\Photo\Slider" type="PandaGroup\InstagramShopExtender\Block\Photo\Slider" />
+
 	<!-- Add code to delete tags from the Instagram photo -->
 	<preference for="Magenest\InstagramShop\Observer\AddPhotosToProduct" type="PandaGroup\InstagramShopExtender\Observer\AddPhotosToProduct" />
 </config>
