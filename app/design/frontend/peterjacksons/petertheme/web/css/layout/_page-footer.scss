@@ -27,7 +27,7 @@
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         color: #4c4b4d;
         letter-spacing: 0.6px;
@@ -139,6 +139,10 @@
 
     &__social-icons {
         justify-content: flex-end;
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+        }
     }
 
     &__social-icons-ul {
