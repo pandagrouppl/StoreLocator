@@ -82,6 +82,7 @@ body[class~='cms-home'] {
         text-align: center;
         display: flex;
         flex-direction: column;
+        padding: 0 15px;
 
         @media all and (max-width: $xs-breakpoint) {
             padding: 0 15px;
