@@ -43,10 +43,35 @@ body[class~='cms-home'] {
 
     .block-title > p {
         font-family: Roboto, arial, sans-serif;
-        font-size: 11pt;
+        font-size: 14pt;
         color: #363636;
         margin: 0 0 30px 0;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 12pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 14px;
+        }
     }
+
+    .block-title > h2 {
+        text-align: center;
+        color: #3f3e3e;
+        font-size: 36pt;
+        font-weight: 500;
+        margin: 10px 0 22px 0;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 26pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 25px;
+        }
+    }
+
 
     .widget__slider-title {
         text-align: center;

@@ -1,7 +1,6 @@
-$big_view: 1060px;
-$medium_view: 850px;
+$big_view: 1320px;
+$medium_view: 1155px;
 $small_view: 600px;
-
 
 body[class~='instagram-gallery-index'] {
     .breadcrumbs {
@@ -37,8 +36,12 @@ body[class~='instagram-gallery-index'] {
             box-sizing: border-box;
             color: white;
 
-            @media all and (max-width: $medium_view) {
+            @media all and (max-width: $big_view) {
                 padding: 0 50px 0 50px;
+            }
+
+            @media all and (max-width: $medium_view) {
+                padding: 0 5px 0 5px;
             }
         }
     }
@@ -51,7 +54,7 @@ body[class~='instagram-gallery-index'] {
             max-width: 1250px;
             min-width: 0;
 
-            @media all and (max-width: $medium_view) {
+            @media all and (max-width: $big_view) {
                 padding: 0;
             }
         }
@@ -62,7 +65,7 @@ body[class~='instagram-gallery-index'] {
             height: 75%;
             max-height: 75%;
 
-            @media all and (max-width: $medium_view) {
+            @media all and (max-width: $big_view) {
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -77,21 +80,29 @@ body[class~='instagram-gallery-index'] {
                 max-width: 50%;
                 overflow: hidden;
 
-                @media all and (max-width: $medium_view) {
+                @media all and (max-width: $big_view) {
                     flex: 1 1 100%;
                     max-width: 520px;
                 }
 
+                @media all and (max-width: $medium_view) {
+                    max-width: 580px;
+                }
+
                 @media all and (max-width: $small_view) {
-                    max-width: 360px;
+                    max-width: 100%;
                 }
 
                 .photo__box {
                     height: 610px;
                     width: 100%;
 
+                    @media all and (max-width: $big_view) {
+                        height: 510px;
+                    }
+
                     @media all and (max-width: $medium_view) {
-                        height: 520px;
+                        height: 580px;
                     }
 
                     @media all and (max-width: $small_view) {
@@ -113,18 +124,27 @@ body[class~='instagram-gallery-index'] {
                 flex-wrap: wrap;
                 align-items: flex-start;
 
-                @media all and (max-width: $medium_view) {
+                @media all and (max-width: $big_view) {
                     flex: 1 1 100%;
                     max-width: 520px;
                 }
 
+                @media all and (max-width: $medium_view) {
+                    max-width: 580px;
+                }
+
                 @media all and (max-width: $small_view) {
-                    max-width: 360px;
+                    max-width: 100%;
+                    flex-direction: column;
                 }
 
                 .photo__box {
+                    @media all and (max-width: $big_view) {
+                        height: 250px;
+                    }
+
                     @media all and (max-width: $medium_view) {
-                        height: 260px;
+                        height: 280px;
                     }
 
                     @media all and (max-width: $small_view) {
@@ -148,24 +168,30 @@ body[class~='instagram-gallery-index'] {
             border: 0;
             box-shadow: none;
             margin: 0 10px 10px 10px;
+            -ms-overflow-style: none;
         }
 
         &__image {
             width: 300px;
             max-width: 100%;
-            height: 300px;
+            height: auto;
             opacity: 1;
             transition: all 0.5s ease;
             transform: scale(1) translateZ(0);
             position: relative;
             background-color: rgba(0, 0, 0, 0);
 
+            @media all and (max-width: $big_view) {
+                width: 250px;
+            }
+
             @media all and (max-width: $medium_view) {
-                width: 100%;
+                width: 280px;
             }
 
             @media all and (max-width: $small_view) {
                 height: auto;
+                width: 98%;
             }
 
             &:hover {
@@ -234,7 +260,7 @@ body[class~='instagram-gallery-index'] {
     }
 
     .widget-detail-content {
-        @media all and (max-width: $medium_view) {
+        @media all and (max-width: $big_view) {
             display: flex;
             flex-direction: column-reverse;
             align-items: flex-end;
@@ -252,14 +278,14 @@ body[class~='instagram-gallery-index'] {
     }
 
     .widget-desktop .widget-detail-right {
-        @media all and (max-width: $medium_view) {
+        @media all and (max-width: $big_view) {
             max-width: 640px;
             width: 100%;
         }
     }
 
     #widget-prev-post {
-        @media all and (max-width: $medium_view) {
+        @media all and (max-width: $big_view) {
             margin-left: 0;
         }
     }
@@ -270,7 +296,7 @@ body[class~='instagram-gallery-index'] {
     }
 
     #widget-detail-branding {
-        @media all and (max-width: $medium_view) {
+        @media all and (max-width: $big_view) {
             bottom: 0;
             right: 0;
         }
@@ -284,7 +310,7 @@ body[class~='instagram-gallery-index'] {
 
     .widget-likes-comments {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
     .likes-number, .comments-number {

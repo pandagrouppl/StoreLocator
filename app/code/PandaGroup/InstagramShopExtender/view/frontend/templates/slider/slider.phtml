@@ -10,7 +10,7 @@ $slickConfig = $block->getData();
     </div>
     <div class="block block-photo-slider slider-list container">
         <div class="block-title" style="text-align: center;">
-            <h2 style="text-align: center;color: #3f3e3e;font-size: 26pt;font-weight: 500;"><?php echo $block->getTitle() ?></h2>
+            <h2><?php echo $block->getTitle() ?></h2>
         </div>
         <div class="block-content" style="overflow-x: hidden;">
             <?php if ($photos->getSize() > 0) { ?>
@@ -75,22 +75,6 @@ $slickConfig = $block->getData();
                 if ($("body").hasClass("cms-index-index"))
                     $('.block-title').append( "<p>Follow <b><i>@peterjacksonau</i></b> on Instagram & use #TailoredByPJ</p>" );
             });
-
-            // $(window).resize(function () {
-            //     var windowSize = $(window).width();
-            //     var $slides = $( '.slides > li' );
-            //
-            //     if (windowSize >= 1600) {
-            //         $slides.height($(window).height() - 550);
-            //         console.log("screen width is less than 1600");
-            //     }
-            //     else (windowSize <= 1450) {
-            //         $slides.height($(window).height() - 700);
-            //         console.log("screen width is less than 1450");
-            //     }
-            // });
-            //
-            // $(window).trigger('resize');
 
             $(function () {
                 require(['flexslider'], function () {

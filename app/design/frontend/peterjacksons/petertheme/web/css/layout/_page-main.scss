@@ -152,6 +152,21 @@ body[class~='cms-page-view'] {
 
 //Homepage
 body[class~='cms-index-index'] {
+    .flexslider {
+        @media all and (max-width: $medium_view) {
+            margin: 0 0 20px;
+        }
+    }
+
+    .flexslider .slides > li {
+        @media all and (max-width: 450px) {
+            position: relative;
+            left: 1.2%;
+            top: 50%;
+            transform: translate(-50%, 0%);
+        }
+    }
+
     .flex-control-nav li {
         margin: 0 20px;
     }
@@ -200,20 +215,58 @@ body[class~='cms-index-index'] {
     }
 
     .flex-direction-nav .flex-prev {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 20px 20px 0;
-        border-color: transparent #ffffff transparent transparent;
+        background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0;
+        left: 0;
+        font-size: 0;
+        opacity: 0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        &::before {
+            content: none;
+        }
     }
 
     .flex-direction-nav .flex-next {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 20px 0 20px 20px;
-        border-color: transparent transparent transparent #ffffff;
+        background-image: url('http://i66.tinypic.com/28v66j6.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0;
+        right: 0;
+        font-size: 0;
+        opacity: 0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        &::before {
+            content: none;
+        }
     }
+
+    .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 0;
+    }
+
+    .flexslider:hover .flex-direction-nav .flex-next {
+        right: 0;
+    }
+
+    .flex-direction-nav a {
+        width: 92px;
+        height: 92px;
+        margin: -40px 0 0;
+    }
+
+
 
     .widget-detail-content {
         @media all and (max-width: $medium_view) {
