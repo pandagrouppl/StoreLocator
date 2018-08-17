@@ -31,7 +31,7 @@ define([
 
             hover.css({
                 position : 'absolute',
-                top: 'calc(100% - 40px)'
+                top: 'calc(100% - 30px)'
             });
 
             var link = $('<a />', {

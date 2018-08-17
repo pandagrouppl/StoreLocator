@@ -10,7 +10,8 @@
     <update handle="default_head_blocks"/>
     <head>
         <!--<script src="bundles/default.js" />-->
-        <css src="web/css/styles.css" />
+        <!--<css src="web/css/styles.css" />-->
+        <css src="web/css/styles.css" media="all and (min-width: 1px)"/>
     </head>
     <body>
         <!-- Change to our header -->
