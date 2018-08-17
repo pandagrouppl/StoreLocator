@@ -28,9 +28,10 @@
 
     h3 {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         color: #4c4b4d;
         letter-spacing: 0.6px;
+        font-family: "sofia-pro", sans-serif;
     }
 
     &__lower {
@@ -95,7 +96,7 @@
 
 
     &__lower-wrapper {
-        padding: 40px 2% 30px 2%;
+        padding: 40px 0 30px;
         min-height: 140px;
     }
 
