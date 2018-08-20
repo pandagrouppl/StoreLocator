@@ -26,10 +26,10 @@ body[class~='cms-home'] {
     .widget__slider-title {
         text-align: center;
         color: #3f3e3e;
-        font-size: 26pt;
+        font-size: 34px;
         font-weight: 500;
         margin-bottom: 45px;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
 
         @media all and (max-width: 560px) {
             font-size: 25px;
@@ -313,6 +313,10 @@ body[class~='cms-home'] {
     background-position: 0 0;
     height: 716px;
 
+    @media all and (min-width: 2200px) {
+        height: 71vh;
+    }
+
     &__image {
         padding: 7% 0 7% 7%;
     }
@@ -559,6 +563,10 @@ body[class~='cms-home'] {
                 width: 100%;
                 margin: 0;
             }
+        }
+
+        @media all and (min-width: 2200px) {
+            height: 80vh;
         }
 
         &--elevate {
