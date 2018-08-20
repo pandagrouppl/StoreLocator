@@ -77,9 +77,9 @@ body[class~='cms-home'] {
         text-align: center;
         color: #3f3e3e;
         font-size: 26pt;
-        font-weight: 600;
-        font-family: "sofia-pro", sans-serif;
+        font-weight: 500;
         margin-bottom: 45px;
+        letter-spacing: 1px;
 
         @media all and (max-width: 560px) {
             font-size: 25px;
@@ -281,6 +281,10 @@ body[class~='cms-home'] {
         @media all and (max-width: 560px) {
             border-radius: 0;
         }
+    }
+
+    .fancybox-button {
+        width: 44px;
     }
 
     button::before,
@@ -847,7 +851,7 @@ body[class~='cms-home'] {
 
     .home-banner {
         &__image {
-            height: 500px;
+            height: 550px;
 
             &--measure {
                 height: 518px;
