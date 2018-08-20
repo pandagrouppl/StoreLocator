@@ -27,8 +27,9 @@ body[class~='cms-home'] {
         text-align: center;
         color: #3f3e3e;
         font-size: 26pt;
-        font-weight: 400;
+        font-weight: 500;
         margin-bottom: 45px;
+        letter-spacing: 1px;
 
         @media all and (max-width: 560px) {
             font-size: 25px;
@@ -790,7 +791,7 @@ body[class~='cms-home'] {
 
     .home-banner {
         &__image {
-            height: 500px;
+            height: 550px;
 
             &--measure {
                 height: 518px;
