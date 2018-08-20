@@ -70,6 +70,10 @@
                 }
             }
 
+            &.submenu {
+                text-align: left;
+            }
+
             &.active > a, &.has-active > a {
                 padding: 0 0 6px 0;
                 border-bottom: 2px solid;
