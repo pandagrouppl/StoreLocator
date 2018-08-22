@@ -173,12 +173,12 @@ body[class~='cms-index-index'] {
         }
     }
 
-    .flexslider .slides > li {
+    .flex-viewport {
         @media all and (max-width: 450px) {
-            position: relative;
-            left: 1.2%;
-            top: 50%;
-            transform: translate(-50%, 0%);
+            height: 210px;
+            max-height: 209px;
+            margin: 0 auto;
+            width: 210px;
         }
     }
 
@@ -188,7 +188,7 @@ body[class~='cms-index-index'] {
 
     .widget-likes-comments {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 
     .likes-number, .comments-number {
@@ -246,6 +246,19 @@ body[class~='cms-index-index'] {
         &::before {
             content: none;
         }
+
+        @media all and (max-width: 450px) {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            opacity: 1 !important;
+        }
+    }
+
+    .widget-detail-nav-button:hover .widget-arrow {
+        @media all and (max-width: 450px) {
+            stroke: #222;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+        }
     }
 
     .flex-direction-nav .flex-next {
@@ -265,6 +278,11 @@ body[class~='cms-index-index'] {
         &::before {
             content: none;
         }
+
+        @media all and (max-width: 450px) {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            opacity: 1 !important;
+        }
     }
 
     .flexslider:hover .flex-direction-nav .flex-prev {
@@ -279,6 +297,10 @@ body[class~='cms-index-index'] {
         width: 92px;
         height: 92px;
         margin: -40px 0 0;
+
+        @media all and (max-width: 420px) {
+            width: 50px;
+        }
     }
 
 
@@ -300,12 +322,12 @@ body[class~='cms-index-index'] {
 
     #widget-detail-branding {
         @media all and (max-width: $medium_view) {
-            bottom: 0;
+            bottom: 5px;
             right: 0;
         }
 
         @media only screen and (max-width: 767px) {
-            bottom: 0 !important;
+            bottom: 3px !important;
             right: 0 !important;
             transform: translate(0%, 0%) !important;
         }
