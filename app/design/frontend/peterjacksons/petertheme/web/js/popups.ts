@@ -108,9 +108,15 @@ export class Popups {
             $('.minicart__overlay').removeClass('minicart__overlay--shown');
             $('.headers').removeClass('headers--minicart-active');
             $('.header-right__minicart > .ui-widget').slideUp();
+
+        });
+
+        $(document).on('click',' .minicart__no-items-btn' , () => {
+            $('.minicart__overlay').removeClass('minicart__overlay--shown');
+            $('.headers').removeClass('headers--minicart-active');
+            $('.header-right__minicart > .ui-widget').slideUp();
+
         });
     }
-
-
 
 }

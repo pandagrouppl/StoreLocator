@@ -74,10 +74,12 @@
             text-transform: uppercase;
         }
 
-        img {
-            width: 75px;
-            height: auto;
-            margin-left: 10px;
+        &-img {
+            width: 170px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../../img/assets/product-page/paypalbutt.png');
         }
     }
 
@@ -87,6 +89,7 @@
 
         a {
             text-decoration: underline;
+            font-weight: 300;
         }
     }
 
@@ -204,7 +207,58 @@
     }
 
     &__no-items {
-        padding: 24px 24px 0 24px;
+        text-align: center;
+        font-family: sofia-pro, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding-top: 30px;
+
+        span {
+            display: block;
+            background-color: #f9f9f9;
+            line-height: 20px;
+
+            &:first-of-type {
+                padding-top: 20px;
+                margin-top: 30px;
+            }
+
+            &:last-of-type {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    &__no-items-img {
+        width: 115px;
+        height: 115px;
+        background-image: url('../../img/assets/PJ-sword-logo.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+
+    }
+
+    &__no-items-btn {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 2px !important;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.3s, color 0.3s ease-in-out;
+        cursor: pointer;
+        background: #353535 !important;
+        color: white;
+        border: none;
+        font-family: sofia-pro, sans-serif;
+        width: 155px;
+        border-radius: 0 !important;
+        margin: 20px 0 !important;
+
+        &:hover {
+            color: #fafafa !important;
+            background-color: #666 !important;
+        }
     }
 }
 

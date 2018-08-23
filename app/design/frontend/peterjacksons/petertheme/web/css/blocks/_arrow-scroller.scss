@@ -1,7 +1,7 @@
 .arrow-scroller {
     @include bg('arr-up.png');
     position: fixed;
-    bottom: 145px;
+    bottom: 45px;
     right: 40px;
     display: none;
     cursor: pointer;
