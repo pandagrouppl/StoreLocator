@@ -16,10 +16,6 @@
         margin: 10px 0;
     }
 
-    .filter-options-item {
-        //display: none;
-    }
-
     .filter-current {
         display: none;
     }
@@ -83,6 +79,7 @@
 
         &:first-of-type {
             max-height: 368px;
+            min-height: 40px;
             overflow: auto;
         }
 
@@ -123,7 +120,7 @@
         }
 
         .am_shopby_slider_container {
-            margin-left: 0;
+            margin-left: 5px;
             margin-right: 9px;
             display: flex;
             flex-direction: column-reverse;
@@ -144,10 +141,6 @@
             //margin-bottom: 16px;
             order: 1;
         }
-
-        //.am_shopby_slider {
-        //
-        //}
 
         .am_shopby_slider_display {
             display: flex !important;
@@ -209,13 +202,13 @@
     &__slider-button {
         align-self: flex-end;
         cursor: pointer;
-        padding: 2px;
         position: absolute;
         right: 0;
+        top: 1px;
         margin-right: -9px;
 
         &:hover {
-            border: 1px solid $grey;
+            background-color: #fafafa;
         }
 
         a {
