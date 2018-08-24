@@ -1,0 +1,53 @@
+body[class~='looknbuy-index-looks'] {
+
+    .measure-slider {
+
+        &__wrapper {
+            max-width: 100%;
+
+            @media (min-width: $sm-breakpoint) {
+                max-height: 65vh;
+            }
+        }
+
+        &__slide {
+            min-height: 0;
+        }
+
+        .slick-dots {
+            margin: 40px 0 0 0;
+        }
+    }
+
+    .page-main__description {
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+        background: $lightgrey;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100vw;
+        margin-bottom: 20px;
+
+        h2 span {
+            font-weight: 400;
+
+            @media all and (max-width: 550px) {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 675px) {
+        .measure-slider__wrapper {
+
+        }
+
+        .measure-slider__slide {
+            background: none;
+            padding: 0;
+        }
+    }
+}

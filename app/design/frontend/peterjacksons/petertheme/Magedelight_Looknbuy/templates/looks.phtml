@@ -1,0 +1,127 @@
+<?php
+/**
+ * Magedelight
+ * Copyright (C) 2016 Magedelight <info@magedelight.com>
+ *
+ * NOTICE OF LICENSE
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+ *
+ * @category Magedelight
+ * @package Magedelight_Looknbuy
+ * @copyright Copyright (c) 2016 Mage Delight (http://www.magedelight.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author Magedelight <info@magedelight.com>
+ */
+
+/** @var $this \Magedelight\Looknbuy\Block\Product\Looks */
+?>
+<?php
+
+use Magento\Framework\App\Action\Action;
+
+$_lookCollection = $block->getCollection(); // get collection which we set in block class 
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+$this->_storeManager = $objectManager->create('\Magento\Store\Model\StoreManagerInterface');
+$this->scopeConfig = $objectManager->create('\Magento\Framework\App\Config\ScopeConfigInterface');
+$customHelper = $this->helper('Magedelight\Looknbuy\Helper\Data');
+$looknbuyIsEnabled = $customHelper->getConfig('looknbuy/general/enable');
+if ($looknbuyIsEnabled == 1){
+?>
+<?php if ($_lookCollection && count($_lookCollection)): ?>
+    <?php
+    if ($block->getMode() == 'grid') {
+        $viewMode = 'grid';
+        $image = 'category_page_grid';
+        $showDescription = false;
+        $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    } else {
+        $viewMode = 'list';
+        $image = 'category_page_list';
+        $showDescription = true;
+        $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::FULL_VIEW;
+    }
+
+    $pos = $block->getPositioned();
+    ?>
+
+
+    <div class="products wrapper <?php /* @escapeNotVerified */ echo $viewMode; ?> products-<?php /* @escapeNotVerified */ echo $viewMode; ?>">
+        <?php $iterator = 1; ?>
+        <ol class="measure-slider products list items product-items">
+
+            <?php foreach ($_lookCollection as $_look): ?>
+            
+            <?php 
+            $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+            $urlKey = trim($_look['url_key'],'/');
+            $suffix = trim($this->scopeConfig->getValue('looknbuy/general/url_suffix', $storeScope),'/');
+            $urlKey .= (strlen($suffix) > 0 || $suffix != '') ? '.'.str_replace('.','',$suffix): '/';
+            
+            ?>
+                <?php /* @escapeNotVerified */ echo($iterator++ == 1) ? '<li class="measure-slider__slide item product product-item">' : '</li><li class="measure-slider__slide item product product-item">' ?>
+                <div class="measure-slider__wrapper product-item-info" data-container="product-grid">
+                    <?php
+                    $lookImgUrl = $this->getImage($_look['carousel_image']);
+
+                    if ($pos != null) {
+                        $position = ' style="left:' . $productImage->getWidth() . 'px;'
+                                . 'top:' . $productImage->getHeight() . 'px;"';
+                    }
+                    ?>
+
+
+                    <?php // Look title ?>
+<!--                    <div class="product details product-item-details">-->
+<!--                        --><?php
+//                        $_lookNameStripped = $block->stripTags($_look['look_name'], null, true);
+//                        ?>
+<!--                        <strong class="product name product-item-name">-->
+<!--                            <a class="product-item-link"-->
+<!--                               href="--><?php ///* @escapeNotVerified */ echo $this->_storeManager->getStore()->getBaseUrl() .$urlKey ?><!--">-->
+<!--                                --><?php ///* @escapeNotVerified */ echo $_look['look_name']; ?>
+<!--                            </a>-->
+<!--                        </strong>-->
+<!---->
+<!--                    </div>-->
+
+                    <?php // Carousel Image ?>
+                    <a href="<?php /* @escapeNotVerified */ echo $this->_storeManager->getStore()->getBaseUrl() . $urlKey ?>" class="product photo product-item-photo" tabindex="-1">
+
+                        <span class="product-image-container">
+                            <span class="product-image-wrapper">
+                                <img class="looknbuy__slider-img product-image-photo" src="<?php echo $lookImgUrl ?>" alt="<?php $_look['look_name'] ?>"></span>
+                        </span>
+                    </a>
+
+                </div>
+                <?php echo($iterator == count($_lookCollection) + 1) ? '</li>' : '' ?>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+
+<?php else: ?>
+    <div class="message info empty"><span><?php echo __('No looks found.'); ?></span></div>
+<?php endif; 
+}
+?>
+
+<script>
+    require(["js/MadeToMeasure"], function(mod) {
+        var MadeToMeasureInit = new mod.MadeToMeasure();
+    })
+</script>
