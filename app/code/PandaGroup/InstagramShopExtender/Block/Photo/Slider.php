@@ -36,15 +36,11 @@ class Slider extends \Magenest\InstagramShop\Block\Photo\Slider
      */
     public function getPhotos()
     {
-        $coll =  $this->_photoFactory->create()
+       return $this->_photoFactory->create()
             ->getCollection()
             ->addFieldToFilter('show_in_widget', 1)//only visibility items are selected
             ->setOrder('created_at', 'DESC')
             ->setPageSize(30)
             ->setCurPage(1);
-
-        $items = $coll->getItems();
-
-        return $coll;
     }
 }
