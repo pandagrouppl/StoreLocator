@@ -79,12 +79,12 @@ class Gallery extends \Magenest\InstagramShop\Block\Gallery\Gallery
         if (empty($tag)) {
             $this->_collection = $this->_photoFactory->create()
                 ->getCollection()
-                ->setOrder('id', 'ASC');
+                ->setOrder('created_at', 'DESC');
         } else {
             $this->_collection = $this->_taggedPhotoFactory->create()
                 ->getCollection()
                 ->addFieldToFilter('tag_name', $tag)
-                ->setOrder('id', 'DESC');
+                ->setOrder('created_at', 'DESC');
         }
     }
 }
