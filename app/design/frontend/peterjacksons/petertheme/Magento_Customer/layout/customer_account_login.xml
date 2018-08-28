@@ -19,5 +19,6 @@
             <referenceContainer name="customer.login.container" htmlTag="div" htmlClass="account-login login-container"/>
         </referenceContainer>
         <move element="customer.new" destination="customer.login.container" before="customer_form_login" />
+        <referenceBlock name="category-sidebar" remove="true"/>
     </body>
 </page>

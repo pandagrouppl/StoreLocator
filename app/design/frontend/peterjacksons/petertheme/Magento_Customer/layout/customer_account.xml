@@ -67,5 +67,6 @@
                 </block>
             </block>
         </referenceContainer>
+        <referenceBlock name="category-sidebar" remove="true"/>
     </body>
 </page>

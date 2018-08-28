@@ -11,4 +11,5 @@
             <argument translate="true" name="title" xsi:type="string">Account Information</argument>
         </action>
     </referenceBlock>
+    <referenceBlock name="category-sidebar" remove="true"/>
 </page>

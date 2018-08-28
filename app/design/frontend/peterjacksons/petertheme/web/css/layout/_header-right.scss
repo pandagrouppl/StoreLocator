@@ -23,6 +23,7 @@
     }
 
     &__search {
+        order: -1;
 
         @media all and (max-width: $bp-header) {
             display: none;
@@ -52,6 +53,7 @@
 
     &__wishlist {
         position: relative;
+        order: 2;
 
         .header-right__counter {
             @media all and (min-width: $bp-header) {
@@ -79,6 +81,7 @@
     &__minicart {
         position: relative;
         display: none;
+        order: 3;
 
         &--mobile {
             @media all and (max-width: $sm-breakpoint) {

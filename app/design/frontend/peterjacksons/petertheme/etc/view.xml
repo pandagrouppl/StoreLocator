@@ -189,7 +189,13 @@
                 <width>303</width>
                 <height>405</height>
             </image>
+
+            <image id="smile_elasticsuite_autocomplete_product_image" type="thumbnail">
+                <width>100</width>
+                <height>100</height>
+            </image>
         </images>
+
     </media>
     <vars module="Magento_Catalog">
 
