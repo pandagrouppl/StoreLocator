@@ -491,3 +491,13 @@ body[class~='corporate-index-index'] {
         display: none;
     }
 }
+
+// Looknbuy looks page
+
+body[class~='looknbuy-index-looks'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}

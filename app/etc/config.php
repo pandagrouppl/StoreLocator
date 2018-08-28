@@ -145,6 +145,8 @@ return array (
     'PandaGroup_GuestWishlist' => 1,
     'PandaGroup_InstagramShopExtender' => 1,
     'PandaGroup_LoginIcon' => 1,
+    'PandaGroup_LooknbuyExtender' => 1,
+    'PandaGroup_LooknbuyLicenseBreaker' => 1,
     'PandaGroup_SlackIntegration' => 1,
     'PandaGroup_Menu' => 1,
     'PandaGroup_Migration' => 1,
