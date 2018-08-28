@@ -83,31 +83,6 @@ $opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
         </div>
     </div>
 
-    <script type="text/javascript">
-
-        require([
-            'jquery',
-            'jquery/ui',
-            'Magedelight_Looknbuy/js/easing',
-            'Magedelight_Looknbuy/js/easypin'
-
-        ], function ($) {
-
-            jQuery(document).ready(function () {
-
-                jQuery('.pin').easypinShow({
-                    data: '<?php echo $markers; ?>',
-                    responsive: true,
-                    popover: {
-                        show: false,
-                        animate: true
-                    }
-                });
-            });
-        });
-
-    </script>
-
     <div class="looknbuy__product-list look-data">
 
         <div class="discount-container looknbuy__discount ">
@@ -279,7 +254,7 @@ $opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
                                         <div class="product-info-main__size-chart">
                                             <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
                                         </div>
-                                        <?php echo $block->getLayout()->createBlock('Light4website\CMSUpdate\Block\NonCacheableBlock')->setBlockId('size-chart')->toHtml();?>
+                                        <?php echo $block->getLayout()->createBlock('PandaGroup\CMSUpdate\Block\NonCacheableBlock')->setBlockId('size-chart')->toHtml();?>
 
                                         <script>
                                             require(['jquery'],
