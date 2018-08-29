@@ -95,3 +95,25 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'libre_baskerville';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../../fonts/LibreBaskerville/LibreBaskerville-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'libre_baskerville';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../../fonts/LibreBaskerville/LibreBaskerville-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'libre_baskerville';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../../fonts/LibreBaskerville/LibreBaskerville-Bold.ttf') format('truetype');
+}
+
