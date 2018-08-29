@@ -63,3 +63,11 @@ h1, h2, h3 {
     position: relative;
 }
 
+body[class~='page-product-configurable'],
+body[class~='page-product-amgifcard'],
+body[class~='catalog-product-view']{
+
+    .page-wrapper {
+        overflow: hidden;
+    }
+}

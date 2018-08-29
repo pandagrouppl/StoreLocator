@@ -88,6 +88,10 @@
 
 body[class~='catalogsearch-result-index'] {
 
+    .search.results {
+        max-width: 820px;
+    }
+
     .message.notice {
         font-size: 14px;
         font-weight: 300;

@@ -364,6 +364,17 @@ body[class~='cms-home'] {
         border: none;
         padding: 4px 1px;
     }
+
+    .search-overlay__submit {
+        button {
+            width: auto;
+        }
+    }
+
+    .search-overlay__zoom {
+        border: none;
+        padding: 4px 1px;
+    }
 }
 
 .main-banner {
