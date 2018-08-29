@@ -37,11 +37,6 @@
 
 body[class~='cms-home'] {
     @media all and (min-width: $bp-header + 1px) {
-        .header-storelocator {
-            a {
-                color: $white;
-            }
-        }
 
         .headers:hover {
             .header-storelocator {
