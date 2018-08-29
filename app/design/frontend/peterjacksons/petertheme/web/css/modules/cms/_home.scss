@@ -579,7 +579,8 @@ body[class~='cms-home'] {
         }
 
         &--elevate {
-            background-image: url('../../img/assets/home-08-2018/second-banner.png');
+            //background-image: url('../../img/assets/home-08-2018/second-banner.png');
+            background-color: #494949;
             height: 769px;
 
             @media (min-width: 1260px) {
@@ -615,7 +616,7 @@ body[class~='cms-home'] {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            margin: 0 auto 65px auto;
 
             .home-banner {
 
