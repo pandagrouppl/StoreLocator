@@ -19,9 +19,6 @@
 
         @media all and (max-width: $sm-breakpoint) {
             background-color: $lightgrey;
-            //padding: 10px 0 20px;
-            //margin-bottom: 30px;
-            width: 100%;
 
             .easypin {
                 display: flex;
@@ -176,10 +173,7 @@
         padding: 10px 20px 10px 20px;
         text-align: center;
         background: $lightgrey;
-        //flex: 1;
-        //flex-direction: row;
         flex-wrap: nowrap;
-        width: 100vw;
         margin-bottom: 40px;
 
         @media all and (max-width: $sm-breakpoint) {
@@ -321,4 +315,3 @@
         }
     }
 }
-
