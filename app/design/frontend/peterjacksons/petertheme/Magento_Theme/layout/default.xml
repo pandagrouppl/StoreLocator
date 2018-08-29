@@ -19,6 +19,7 @@
         <referenceBlock name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="minicart__overlay" template="Magento_Theme::overlay.phtml" />
             <container name="header.shippingbar" before="-">
                 <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar.phtml"/>
             </container>

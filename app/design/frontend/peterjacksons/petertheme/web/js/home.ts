@@ -30,7 +30,7 @@ const home = () => {
         arrows: false,
         responsive: [
             {
-                breakpoint: 1260,
+                breakpoint: 1440,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4
@@ -38,7 +38,7 @@ const home = () => {
                 }
             },
             {
-                breakpoint: 1024,
+                breakpoint: 1250,
                 settings: {
                     autoplaySpeed: 4000,
                     speed: 2000,
@@ -47,7 +47,7 @@ const home = () => {
                 }
             },
             {
-                breakpoint: 750,
+                breakpoint: 950,
                 settings: {
                     draggable: true,
                     swipe: true,
@@ -58,7 +58,7 @@ const home = () => {
                 }
             },
             {
-                breakpoint: 376,
+                breakpoint: 550,
                 settings: {
                     draggable: true,
                     swipe: true,
@@ -79,6 +79,7 @@ const home = () => {
         }, 800);
     });
 
+    $('.search-overlay__row').find('#search').focus();
 };
 
 export = home;

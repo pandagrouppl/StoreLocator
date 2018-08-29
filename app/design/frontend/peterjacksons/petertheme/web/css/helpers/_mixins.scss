@@ -201,10 +201,12 @@
 
         &::before {
             animation: changeSign2 0.2s linear 0.2s forwards alternate;
+            opacity: 1;
         }
 
         &::after {
             animation: changeSign 0.4s linear forwards alternate;
+            opacity: 0;
         }
     }
 

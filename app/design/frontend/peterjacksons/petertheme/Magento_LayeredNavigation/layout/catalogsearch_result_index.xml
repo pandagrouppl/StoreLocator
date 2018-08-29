@@ -15,5 +15,13 @@
             </action>
         </referenceBlock>
         <move element="page.main.title" destination="page.wrapper" after="header.container" />
+        <referenceContainer name="sidebar.main" htmlClass="c-sidebar c-sidebar--categories layered-nav" htmlTag="section">
+            <arguments>
+                <argument name="css_class" xsi:type="string">layered-nav</argument>
+            </arguments>
+        </referenceContainer>
+
+        <referenceBlock name="category-sidebar" remove="true"/>
+
     </body>
 </page>

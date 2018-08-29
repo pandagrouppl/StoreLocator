@@ -5,21 +5,6 @@
  */
 -->
 <div class="minicart">
-<!-- ko if: getCartParam('summary_count') -->
-
-    <!-- ko if: getCartParam('possible_onepage_checkout') -->
-        <!-- ko foreach: getRegion('subtotalContainer') -->
-            <!-- ko template: getTemplate() --><!-- /ko -->
-        <!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko foreach: getRegion('extraInfo') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-    <!-- /ko -->
-
-    <!-- ko if: getCartParam('possible_onepage_checkout') -->
-    <!-- /ko -->
-<!-- /ko -->
 
 <!-- ko if: getCartParam('summary_count') -->
     <div data-action="scroll" class="minicart__items-wrapper">
@@ -31,31 +16,64 @@
     </div>
 <!-- /ko -->
 <!-- ko ifnot: getCartParam('summary_count') -->
-    <div class="minicart__no-items" data-bind="visible: closeSidebar()">
-        <!-- ko i18n: 'You have no items in your shopping cart.' --><!-- /ko -->
+    <div id="minicart-no-items" class="minicart__no-items" data-bind="visible: closeSidebar()">
+        <div class="minicart__no-items-img"></div>
+        <!-- ko i18n: "You have '0' items" --><!-- /ko -->
+        <!-- ko i18n: "in your bag" --><!-- /ko -->
+        <button class="minicart__no-items-btn">Continue shopping</button>
+
     </div>
+
 <!-- /ko -->
 
-<div class="minicart__buttons">
-    <a class="action viewcart minicart__button--view-cart" data-bind="attr: {href: shoppingCartUrl}">
-        <span><!-- ko i18n: 'View cart' --><!-- /ko --></span>
-    </a>
+    <div class="minicart__summary">
+        <!-- ko if: getCartParam('summary_count') -->
 
-    <button
-            id="top-cart-btn-checkout"
-            type="button"
-            class="action primary checkout minicart__button--checkout"
-            data-bind="attr: {title: $t('Go to Checkout')}">
-        <!-- ko i18n: 'Checkout' --><!-- /ko -->
-    </button>
-
-</div>
-
-<div id="minicart-widgets" class="minicart-widgets">
-    <!-- ko foreach: getRegion('promotion') -->
+        <!-- ko foreach: getRegion('extraInfo') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
-    <!-- /ko -->
-</div>
+        <!-- /ko -->
+
+        <!-- ko if: getCartParam('possible_onepage_checkout') -->
+        <!-- ko foreach: getRegion('subtotalContainer') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko if: getCartParam('possible_onepage_checkout') -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+    <div class="minicart__view-cart">
+        <a class="action viewcart minicart__button--view-cart" data-bind="attr: {href: shoppingCartUrl}">
+            <span><!-- ko i18n: 'View Shopping Bag' --><!-- /ko --></span>
+        </a>
+    </div>
+
+    <div class="minicart__buttons">
+
+        <div class="minicart__paypal">
+            <div class="minicart__paypal-img"></div>
+        </div>
+
+        <button
+                id="top-cart-btn-checkout"
+                type="button"
+                class="action primary checkout minicart__button--checkout"
+                data-bind="attr: {title: $t('Go to Checkout')}">
+            <!-- ko i18n: 'Checkout' --><!-- /ko -->
+        </button>
+
+    </div>
+
+    <div id="minicart-widgets" class="minicart-widgets">
+        <!-- ko foreach: getRegion('promotion') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+    <div class="minicart__close">
+    </div>
 <!-- ko foreach: getRegion('sign-in-popup') -->
 <!-- ko template: getTemplate() --><!-- /ko -->
 <!-- /ko -->
