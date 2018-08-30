@@ -1,0 +1,102 @@
+<?php
+/**
+ * Magedelight
+ * Copyright (C) 2016 Magedelight <info@magedelight.com>
+ *
+ * NOTICE OF LICENSE
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+ *
+ * @category Magedelight
+ * @package Magedelight_Looknbuy
+ * @copyright Copyright (c) 2016 Mage Delight (http://www.magedelight.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author Magedelight <info@magedelight.com>
+ */
+
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php
+/** @var $block \Magento\ConfigurableProduct\Block\Product\View\Type\Configurable*/
+$_product    = $block->getProduct();
+$_attributes = $block->decorateArray($block->getAllowAttributes());
+$customHelper = $this->helper('Magedelight\Looknbuy\Helper\Data');
+$looknbuyIsEnabled = $customHelper->getConfig('looknbuy/general/enable');
+if ($looknbuyIsEnabled == 1){
+?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+    <?php foreach ($_attributes as $_attribute): ?>
+        <div class="field configurable required configurable-container-<?php echo $_product->getId() ?>">
+<!--            <label class="label" for="attribute--><?php ///* @escapeNotVerified */ echo $_attribute->getAttributeId() ?><!--">-->
+<!--                <span>--><?php //echo $block->escapeHtml($_attribute->getProductAttribute()->getStoreLabel()) ?><!--</span>-->
+<!--            </label>-->
+            <div class="select__wrapper select__wrapper--Size control">
+                <figure class="select__wide-arrow"></figure>
+                <select name="super_attribute[<?php echo $_product->getId() ?>][<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>]"
+                        data-validate="{required:true}"
+                        id="attribute<?php /* @escapeNotVerified */ echo $_attribute->getAttributeId() ?>"
+                        class="select__pdp-select super-attribute-select">
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Select Size') ?></option>
+
+                </select>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        'Magedelight_Looknbuy/js/custompricebox',
+        'Magedelight_Looknbuy/js/configurable'
+
+
+    ], function($){
+        var priceBoxes = $('[data-role=priceBox]');
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+
+        priceBoxes.custompriceBox({'priceConfig': <?php /* @escapeNotVerified */ echo $block->getPriceJsonConfig() ?>});
+    });
+</script>
+<?php
+//$json = array();
+//$json[$_product->getId()] = ;
+?>
+<!--    <script type="text/x-magento-init">
+        {
+            "#bundle_product_addtocart_form": {
+                "MD_Bundlediscount/js/configurable": {
+                    "spConfig": //<?php /* @escapeNotVerified */ //echo json_encode($json) ?>,
+                     "priceHolderSelector": ".selection-product-price-//<?php // echo $_product->getId() ?> .price-box"
+                }
+            }
+        }
+    </script>-->
+
+    <script>
+    require(["jquery", "jquery/ui", "Magedelight_Looknbuy/js/configurable"], function ($) {
+        $('.configurable-container-<?php /* @escapeNotVerified */ echo $_product->getId() ?>').configurable({
+            spConfig: <?php /* @escapeNotVerified */ echo $this->getJsonConfig() ?>,
+            priceHolderSelector: '.selection-product-price-<?php echo $_product->getId() ?> .price-box'
+        });
+    });
+</script>
+<?php endif;
+}
+?>

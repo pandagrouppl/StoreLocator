@@ -1,0 +1,77 @@
+body[class~='looknbuy-index-view'] {
+    .arrows {
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 40px;
+        height: 60px;
+        border-radius: 4px;
+        transform: none;
+    }
+
+    .next {
+        background-image: url('http://i66.tinypic.com/28v66j6.png');
+        background-position: 55%;
+        background-repeat: no-repeat;
+        border: 0;
+        right: 0;
+        background-size: 10px 20px;
+    }
+
+    .prev {
+        background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        background-position: 45%;
+        background-repeat: no-repeat;
+        border: 0;
+        left: 0;
+        background-size: 10px 20px;
+    }
+
+    .page-main {
+        max-width: 100%;
+    }
+
+    .page-main__columns {
+        max-width: $container-width;
+        margin: 0 auto;
+    }
+
+    .page-main__message {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: $sm-breakpoint) {
+
+        .looknbuy__nav-next,
+        .looknbuy__nav-prev {
+            display: none;
+        }
+
+        .product-info-main__price-and-wishlist {
+            .price-box {
+                font-size: 22px;
+            }
+        }
+
+        .look-option-wrapper {
+            display: none;
+        }
+
+        .looknbuy__product-info {
+            opacity: 0.5;
+        }
+
+        .slick-current {
+
+            .look-option-wrapper {
+                display: block;
+            }
+
+            .looknbuy__product-info {
+                opacity: 1;
+            }
+        }
+
+        .page-main {
+            padding: 0;
+        }
+    }
+}
