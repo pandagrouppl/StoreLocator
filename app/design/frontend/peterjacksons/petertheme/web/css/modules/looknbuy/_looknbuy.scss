@@ -11,7 +11,7 @@
         max-height: 80vh;
 
         @media all and (max-width: $sm-breakpoint) {
-            max-height: 50vh;
+            max-height: 100%;
         }
     }
 
@@ -83,10 +83,6 @@
             justify-content: center;
             text-align: center;
             margin-right: 0;
-
-            .info-wrapper {
-
-            }
         }
     }
 
@@ -110,7 +106,6 @@
 
     &__price-and-wishlist {
         margin: 10px 0;
-        //font-size: 22px;
         line-height: 24px;
 
         .wishlist-message__text {
@@ -127,12 +122,15 @@
         @include button-black();
     }
 
-    &__button--main {
-        //@include button-custom();
-    }
-
     .size-chart {
         display: none;
+
+        &__close {
+
+            span {
+                display: none;
+            }
+        }
     }
 
     &__slider-img {
@@ -140,16 +138,6 @@
 
         @media all and (max-width: 550px) {
             width: 90%;
-        }
-    }
-
-    .size-chart {
-
-        &__close {
-
-            span {
-                display: none;
-            }
         }
     }
 
@@ -216,7 +204,7 @@
     &__mobile-nav {
         display: none;
 
-        @media all and (max-width:$sm-breakpoint) {
+        @media all and (max-width: $sm-breakpoint) {
             display: flex;
             justify-content: space-between;
             background-color: $lightgrey;
@@ -258,6 +246,7 @@
         .select__wrapper--qty {
             margin-right: 0;
         }
+
         .size-chart-overlay {
             display: none;
         }
@@ -307,8 +296,6 @@
     &__slide {
         display: flex;
         justify-content: space-between;
-        //margin: 0 0.5%;
-        //padding: 0 15px;
 
         @media all and (max-width: $sm-breakpoint) {
             margin-bottom: 20px;
