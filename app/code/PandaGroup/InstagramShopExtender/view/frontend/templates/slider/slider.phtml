@@ -83,17 +83,36 @@ $slickConfig = $block->getData();
                         animationLoop: <?=$block->getConfigSlider($block->getAnimationLoop())?>,
                         reverse: <?=$block->getConfigSlider($block->getReverse(), 'false')?>,
                         pauseOnHover: <?=$block->getConfigSlider($block->getPauseOnHover(), 'false')?>,
-                        touch: <?=$block->getConfigSlider($block->getTouch())?>,
+                        touch: <?=$block->getConfigSlider($block->getTouch(), 'true')?>,
                         mousewheel: <?=$block->getConfigSlider($block->getMousewheel(), 'false')?>,
                         pauseOnAction: <?=$block->getConfigSlider($block->getPauseOnAction(), 'false')?>,
-                        itemMargin: <?=$block->getConfigSliderValue($block->getItemMargin(), 0)?>,
+                        itemMargin: <?=$block->getConfigSliderValue($block->getItemMargin(), 10)?>,
                         slideshowSpeed: <?=$block->getConfigSliderValue($block->getSlideShowSpeed(), 7000)?>,
                         animationSpeed: <?=$block->getConfigSliderValue($block->getAnimationSpeed(), 600)?>,
-                        minItems: <?=$block->getConfigSliderValue($block->getMinItems(), 0)?>,
-                        maxItems: <?=$block->getConfigSliderValue($block->getMaxItems(), 0)?>,
                         itemWidth: <?=$block->getConfigSliderValue($block->getItemWidth(), 210)?>,
                         move: <?=$block->getConfigSliderValue($block->getMove(), 0)?>,
                         smoothHeight: true,
+                        minItems: getGridSize(),
+                        maxItems: getGridSize(),
+                        start: function(slider){
+                            flexslider = slider;
+                        }
+                    });
+
+                    var $window = $(window),
+                        flexslider = {
+                            vars: {}
+                        };
+
+                    function getGridSize() {
+                        return (window.innerWidth < 600) ? 2 :
+                            (window.innerWidth < 1024) ? 3 : 4;
+                    }
+
+                    $window.resize(function() {
+                        var gridSize = getGridSize();
+                        flexslider.vars.minItems = gridSize;
+                        flexslider.vars.maxItems = gridSize;
                     });
 
                     var photos = <?=json_encode($photos->getData())?>;

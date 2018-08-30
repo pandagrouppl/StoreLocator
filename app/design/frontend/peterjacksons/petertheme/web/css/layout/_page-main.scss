@@ -173,14 +173,14 @@ body[class~='cms-index-index'] {
         }
     }
 
-    .flex-viewport {
-        @media all and (max-width: 450px) {
-            height: 210px;
-            max-height: 209px;
-            margin: 0 auto;
-            width: 210px;
-        }
-    }
+    //.flex-viewport {
+    //    @media all and (max-width: 450px) {
+    //        height: 210px;
+    //        max-height: 209px;
+    //        margin: 0 auto;
+    //        width: 210px;
+    //    }
+    //}
 
     .flex-control-nav li {
         margin: 0 20px;
