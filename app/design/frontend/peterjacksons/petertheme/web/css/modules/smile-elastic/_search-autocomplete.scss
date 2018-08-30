@@ -1,0 +1,62 @@
+.search-autocomplete {
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+    width: 99% !important;
+
+    dl {
+
+        dt {
+            cursor: default;
+            margin: 0;
+            padding: 5px 0;
+            position: relative;
+            text-align: left;
+            white-space: normal;
+            text-transform: uppercase;
+            font-size: 13px;
+
+            &:not(:empty) {
+                border-top: 0;
+                border-bottom: 1px solid $grey-dark;
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+
+        dd {
+            cursor: pointer;
+            margin: 0;
+            padding: 5px 10px;
+            position: relative;
+            text-align: left;
+            white-space: normal;
+            font-size: 13px;
+
+            &:not(:empty) {
+                border-top: 0;
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+
+            &:hover,
+            &.selected {
+                background-color: $grey;
+            }
+
+            .amount {
+                display: none;
+            }
+
+            .clear {
+                clear: both;
+            }
+        }
+    }
+}
+
+
