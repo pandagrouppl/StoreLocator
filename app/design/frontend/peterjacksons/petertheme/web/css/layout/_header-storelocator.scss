@@ -24,9 +24,9 @@
             height: 26px;
         }
 
-        &:hover::before {
-            background-image: url('../../img/sprite/store-locate-hover.png');
-        }
+        //&:hover::before {
+        //    background-image: url('../../img/sprite/store-locate-hover.png');
+        //}
     }
 
     @media all and (max-width: $bp-header) {

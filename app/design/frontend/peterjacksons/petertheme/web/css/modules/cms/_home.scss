@@ -30,6 +30,7 @@ body[class~='cms-home'] {
         font-weight: 500;
         font-family: 'sofia-pro', sans-serif;
         margin-bottom: 25px;
+        letter-spacing: 1px;
         margin-top: 6px;
 
         @media all and (max-width: 560px) {
@@ -226,7 +227,6 @@ body[class~='cms-home'] {
         line-height: 100%;
         text-transform: uppercase;
         cursor: pointer;
-        transform: translateZ(0);
         width: 167px;
 
         @media all and (max-width: 560px) {
@@ -250,12 +250,33 @@ body[class~='cms-home'] {
         }
     }
 
+    button.btn-black::before,
+    button.btn-black::after {
+        background: #000;
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        @media all and (max-width: 560px) {
+            background: transparent;
+        }
+    }
+
     button:hover {
         color: black;
         z-index: 1;
 
         @media all and (max-width: 560px) {
             color: white;
+        }
+    }
+
+    button.btn-black:hover {
+        color: white;
+        z-index: 1;
+
+        @media all and (max-width: 560px) {
+            color: black;
         }
     }
 
@@ -287,7 +308,7 @@ body[class~='cms-home'] {
     }
 
     .btn-black {
-        color: black !important;
+        color: black;
         border: 1px solid black !important;
     }
 
@@ -400,7 +421,7 @@ body[class~='cms-home'] {
     &__text {
         font-weight: 300;
         font-size: 12pt;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'sofia-pro', sans-serif;
         margin: 0 0 8px 0;
         letter-spacing: 0;
         color: white;
@@ -488,6 +509,11 @@ body[class~='cms-home'] {
                 }
             }
 
+            img {
+                width: 100%;
+                height: auto;
+            }
+
             p {
                 margin: 0;
             }
@@ -524,6 +550,7 @@ body[class~='cms-home'] {
             color: white;
             font-weight: 300;
             letter-spacing: 2;
+            font-family: 'sofia-pro', sans-serif;
 
             @media all and (min-width: 560px) {
                 display: none;
@@ -597,6 +624,19 @@ body[class~='cms-home'] {
                             margin-top: 12px;
                         }
                     }
+
+                    &__inner {
+                        margin: -10em 0 0 5em;
+                    }
+                }
+            }
+
+            @media (min-width: 1441px) {
+                .home-banner {
+
+                    &__inner {
+                        margin: -10em 0 0 14em;
+                    }
                 }
             }
 
@@ -663,7 +703,7 @@ body[class~='cms-home'] {
             width: 100%;
             margin: 20px 0 2% 0;
 
-            @media (min-width: 1260px) {
+            @media all and (min-width: 1260px) {
                 .home-banner {
 
                     &__content-box {
@@ -671,7 +711,7 @@ body[class~='cms-home'] {
                     }
 
                     &__inner {
-                        margin: -10em 0 0 7.5em;
+                        margin: -10em 0 0;
                     }
 
                     &__header {
@@ -681,6 +721,12 @@ body[class~='cms-home'] {
 
                 button {
                     margin-top: 5px;
+                }
+            }
+
+            @media all and (min-width: 1441px) {
+                .home-banner__inner {
+                    margin: -10em 0 0 7.5em;
                 }
             }
 
@@ -695,7 +741,7 @@ body[class~='cms-home'] {
             margin: 2% 0 20px 0;
             height: 763px;
 
-            @media (min-width: 1260px) {
+            @media all and (min-width: 1260px) {
                 .home-banner {
 
                     &__wrapper {
@@ -703,7 +749,7 @@ body[class~='cms-home'] {
                     }
 
                     &__inner {
-                        margin: -10em 10em 0 0;
+                        margin: -10em 3em 0 0;
                     }
 
                     &__content-box {
@@ -717,6 +763,12 @@ body[class~='cms-home'] {
                     &__header {
                         margin-top: 52px;
                     }
+                }
+            }
+
+            @media all and (min-width: 1441px) {
+                .home-banner__inner {
+                    margin: -10em 10em 0 0;
                 }
             }
 
