@@ -85,9 +85,117 @@
             "type": "composer",
             "url": "https://repo.magento.com/"
         },
+        "1": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-migration"
+        },
+        "2": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-migration-tool"
+        },
         "3": {
             "type": "vcs",
             "url": "https://github.com/pandagrouppl/storelocator"
+        },
+        "4": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-base-module.git"
+        },
+        "5": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-devtools.git"
+        },
+        "6": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-checkout.git"
+        },
+        "7": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-magenest-module-anz.git"
+        },
+        "8": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-guest-wishlist.git"
+        },
+        "11": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-careers.git"
+        },
+        "12": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-spinner.git"
+        },
+        "13": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-shopbylook.git"
+        },
+        "14": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-email-tester.git"
+        },
+        "15": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler-extender.git"
+        },
+        "16": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-westfield.git"
+        },
+        "17": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-slack-integration.git"
+        },
+        "18": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-magento-slack-monitor.git"
+        },
+        "19": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-regions-patcher.git"
+        },
+        "20": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard-extender.git"
+        },
+        "21": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-coupon-extender.git"
+        },
+        "22": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-sort-by-extender.git"
+        },
+        "23": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-attribute-update.git"
+        },
+        "24": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-salesforce-mc-integration.git"
+        },
+        "25": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-customer-extender.git"
+        },
+        "26": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-special-price-fixer.git"
+        },
+        "27": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-anz-extender.git"
+        },
+        "28": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-corporate.git"
+        },
+        "29": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/peterjacksons-contact-extender.git"
+        },
+        "30": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-category-widget.git"
         },
         "31": {
             "type": "vcs",
@@ -133,6 +241,14 @@
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-plumrocket-psloginfree.git"
         },
+        "amastyGiftCard": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-amasty-giftcard.git"
+        },
+        "amastyQuickView": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-quickview.git"
+        },
         "amasty": {
             "type": "composer",
             "url": "https://composer.amasty.com/community/"
@@ -150,6 +266,14 @@
         "apptrianFacebookPixel": {
             "type": "vcs",
             "url": "git@bitbucket.org:l4w/magento2-apptrian-facebookpixel.git"
+        },
+        "wyomindCore": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-core.git"
+        },
+        "wyomindCronScheduler": {
+            "type": "vcs",
+            "url": "git@bitbucket.org:l4w/magento2-wyomind-cronscheduler.git"
         },
         "nekloCore": {
             "type": "vcs",
