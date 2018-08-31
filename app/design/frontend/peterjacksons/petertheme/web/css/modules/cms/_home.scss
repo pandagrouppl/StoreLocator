@@ -690,8 +690,21 @@ body[class~='cms-home'] {
 
         &--elevate {
             //background-image: url('../../img/assets/home-08-2018/second-banner.png');
-            background-color: #494949;
+            background-color: transparent;
             height: 769px;
+            position: relative;
+            overflow: hidden;
+
+            video {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: -1;
+                width: auto;
+                height: 100%;
+            }
 
             @media (min-width: 1260px) {
                 .home-banner {
