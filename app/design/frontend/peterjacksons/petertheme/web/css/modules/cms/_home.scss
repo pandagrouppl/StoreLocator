@@ -23,6 +23,78 @@
 }
 
 body[class~='cms-home'] {
+    .block-photo-slider .slides li > a .text button {
+        font-family: Roboto, arial, sans-serif;
+        width: 164px;
+        height: 27px;
+        border-radius: 2px;
+        border: 1px solid white;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        display: block;
+        margin: 10px auto 0;
+        box-shadow: none;
+        cursor: pointer;
+        padding: 0 !important;
+
+        @media all and (max-width: 1200px) {
+            width: 100px;
+        }
+
+        @media all and (max-width: 700px) {
+            width: 70px;
+        }
+
+        @media all and (max-width: 600px) {
+            width: 70px;
+        }
+
+        @media all and (max-width: 373px) {
+            display: none;
+        }
+    }
+
+    .block-photo-slider .slides li > a .overlay {
+        @media all and (max-width: 373px) {
+            display: none;
+        }
+    }
+
+    .block-title > p {
+        font-family: Lato, arial, sans-serif;
+        font-size: 17px;
+        color: #363636;
+        margin: 0 0 30px 0;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 12pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 14px;
+        }
+    }
+
+    .block-title > h2 {
+        text-align: center;
+        color: #3f3e3e;
+        font-size: 44px;
+        font-weight: 500;
+        margin: 10px 0 22px 0;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 26pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 25px;
+        }
+    }
+
+
     .widget__slider-title {
         text-align: center;
         color: #3f3e3e;
@@ -37,11 +109,6 @@ body[class~='cms-home'] {
             font-weight: 500;
         }
     }
-
-    //.widget__slider-container {
-    //    display: flex;
-    //    align-items: center;
-    //}
 
     .widget__slider-item {
         display: flex;

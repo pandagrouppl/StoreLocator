@@ -141,6 +141,7 @@ return array (
     'PandaGroup_EmailTester' => 1,
     'PandaGroup_GiftCardExtender' => 1,
     'PandaGroup_GuestWishlist' => 1,
+    'PandaGroup_InstagramShopExtender' => 1,
     'PandaGroup_LoginIcon' => 1,
     'PandaGroup_LooknbuyExtender' => 1,
     'PandaGroup_LooknbuyLicenseBreaker' => 1,
