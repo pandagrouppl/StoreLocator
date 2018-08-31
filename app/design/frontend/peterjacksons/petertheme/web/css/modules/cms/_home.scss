@@ -64,7 +64,7 @@ body[class~='cms-home'] {
     }
 
     .block-title > p {
-        font-family: Lato, arial, sans-serif;
+        font-family: 'sofia-pro', arial, sans-serif;
         font-size: 17px;
         color: #363636;
         margin: 0 0 30px 0;
@@ -81,9 +81,11 @@ body[class~='cms-home'] {
     .block-title > h2 {
         text-align: center;
         color: #3f3e3e;
-        font-size: 44px;
+        font-size: 34px;
         font-weight: 500;
         margin: 10px 0 22px 0;
+        letter-spacing: 1px;
+        font-family: 'sofia-pro', sans-serif;
 
         @media all and (max-width: $medium_view) {
             font-size: 26pt;
