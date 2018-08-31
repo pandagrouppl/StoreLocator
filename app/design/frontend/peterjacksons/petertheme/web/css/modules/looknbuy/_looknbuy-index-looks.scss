@@ -1,5 +1,9 @@
 body[class~='looknbuy-index-looks'] {
 
+    .sidebar, .sidebar-main {
+        display: none;
+    }
+
     .measure-slider {
 
         &__wrapper {
