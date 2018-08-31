@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Enable websites showing on admin configuration -->
+    <preference for="Magedelight\Looknbuy\Model\Config\Source\Website" type="PandaGroup\LooknbuyLicenseBreaker\Model\Config\Source\Website" />
+
+    <!-- Disable license sending -->
+    <preference for="Magedelight\Looknbuy\Observer\Mdfrd" type="PandaGroup\LooknbuyLicenseBreaker\Observer\Mdfrd" />
+
+    <!-- Disable cron checking domain licenses -->
+    <preference for="Magedelight\Looknbuy\Helper\Mddata" type="PandaGroup\LooknbuyLicenseBreaker\Helper\Mddata" />
+
+</config>
