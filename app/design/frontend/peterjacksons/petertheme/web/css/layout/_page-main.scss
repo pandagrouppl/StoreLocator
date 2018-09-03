@@ -198,15 +198,17 @@ body[class~='looknbuy-index-looks'] {
     }
 
     .likes {
-        background: url('http://i66.tinypic.com/35070wl.jpg') no-repeat center;
+        //background: url('http://i66.tinypic.com/35070wl.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/like.jpg') no-repeat center;
         background-size: contain;
         height: 17px;
         width: 17px;
         margin-right: 3px;
     }
-
+    
     .comments {
-        background: url('http://i63.tinypic.com/2rr8ow3.jpg') no-repeat center;
+        //background: url('http://i63.tinypic.com/2rr8ow3.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/comments.jpg') no-repeat center;
         background-size: contain;
         height: 17px;
         width: 17px;
@@ -226,7 +228,8 @@ body[class~='looknbuy-index-looks'] {
     }
 
     .flex-direction-nav .flex-prev {
-        background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        //background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        background-image: url('../../img/assets/instagram/prev.png');
         background-position: center center;
         background-repeat: no-repeat;
         border: 0;
@@ -259,7 +262,8 @@ body[class~='looknbuy-index-looks'] {
     }
 
     .flex-direction-nav .flex-next {
-        background-image: url('http://i66.tinypic.com/28v66j6.png');
+        //background-image: url('http://i66.tinypic.com/28v66j6.png');
+        background-image: url('../../img/assets/instagram/next.png');
         background-position: center center;
         background-repeat: no-repeat;
         border: 0;
@@ -373,7 +377,7 @@ body[class~='looknbuy-index-looks'] {
             order: 2;
         }
 
-        .home-banner__image--shoe {
+        .home-banner__image--support {
             order: 4;
         }
 
@@ -381,11 +385,11 @@ body[class~='looknbuy-index-looks'] {
             order: 3;
         }
 
-        .home-banner__image--measure {
+        .home-banner__image--shoe {
             order: 5;
         }
 
-        .home-banner__image--tactile {
+        .home-banner__image--measure {
             order: 6;
         }
 
