@@ -3,6 +3,14 @@ import "slick";
 
 const home = () => {
 
+    let video = document.getElementById("myVideo");
+
+    if(video.paused) {
+        video.play();
+    }
+
+
+
     const $slider = $( '.slick-init' );
     const $widget = $('.widget__slider-container');
 
