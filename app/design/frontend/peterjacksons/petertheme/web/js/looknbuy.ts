@@ -28,7 +28,6 @@ const shoplook = () => {
             }
         ]
     });
-
 };
 
 export = shoplook;

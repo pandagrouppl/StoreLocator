@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ee000f796fe5e1ed88df5d1c82ef3bf",
+    "content-hash": "2780e71724ec0e2f41d4133ae9dd612a",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -249,6 +249,12 @@
         {
             "name": "apptrian/facebook-pixel",
             "version": "2.1.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/apptrian/facebook-pixel/apptrian-facebook-pixel-2.1.6.0.zip",
+                "reference": null,
+                "shasum": "c88210fca96fe78e9dbbe04bca7314d0c27965ce"
+            },
             "require": {
                 "php": "~5.5|~7.0"
             },
@@ -264,8 +270,7 @@
             "license": [
                 "OSL-3.0"
             ],
-            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use.",
-            "time": "2018-05-16T08:30:41+00:00"
+            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use."
         },
         {
             "name": "braintree/braintree_php",
@@ -352,7 +357,7 @@
         },
         {
             "name": "colinmollenhour/cache-backend-redis",
-            "version": "1.9",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git",
@@ -384,7 +389,7 @@
             ],
             "description": "Zend_Cache backend using Redis with full support for tags.",
             "homepage": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis",
-            "time": "2016-05-02T16:23:36+00:00"
+            "time": "2016-10-03T16:55:11+00:00"
         },
         {
             "name": "colinmollenhour/credis",
@@ -780,50 +785,6 @@
                 "validator"
             ],
             "time": "2018-04-30T10:33:04+00:00"
-        },
-        {
-            "name": "ebizmarts/mailchimp-lib",
-            "version": "3.0.27",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ebizmarts/mailchimp-lib.git",
-                "reference": "eb1f13ffff5d36b0380f445e0f0459e89b363ab5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ebizmarts/mailchimp-lib/zipball/eb1f13ffff5d36b0380f445e0f0459e89b363ab5",
-                "reference": "eb1f13ffff5d36b0380f445e0f0459e89b363ab5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Mailchimp": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ebizmarts Corp.",
-                    "email": "info@ebizmarts.com",
-                    "homepage": "http://ebizmarts.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "API client library for the MailChimp",
-            "homepage": "https://github.com/ebizmarts/mailchimp-lib",
-            "keywords": [
-                "api",
-                "email",
-                "mailchimp"
-            ],
-            "time": "2018-08-08T13:16:54+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",
@@ -1226,32 +1187,6 @@
             ],
             "description": "N/A",
             "time": "2017-11-30T15:05:26+00:00"
-        },
-        {
-            "name": "magenest/module-instagram-shop",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-magenest-instagramshop.git",
-                "reference": "8ed36baaa0cfd95d9bb5f3d03462aa8c7e64f5a2"
-            },
-            "require": {
-                "php": "~5.5.0|~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "files": [
-                    "registration.php"
-                ],
-                "psr-4": {
-                    "Magenest\\InstagramShop\\": ""
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Instagram Shop with Magento 2",
-            "time": "2018-06-15T08:52:34+00:00"
         },
         {
             "name": "magento/composer",
@@ -6216,45 +6151,6 @@
             ],
             "description": "Magic360 module for Magento 2",
             "time": "2018-05-28T14:48:42+00:00"
-        },
-        {
-            "name": "mailchimp/mc-magento2",
-            "version": "1.0.29",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:l4w/magento2-mailchimp.git",
-                "reference": "9bbebc00287a6742a4a4753bb0babf38ff3ce39e"
-            },
-            "require": {
-                "ebizmarts/mailchimp-lib": "3.0.*"
-            },
-            "type": "magento2-module",
-            "autoload": {
-                "psr-4": {
-                    "Ebizmarts\\MailChimp\\": ""
-                },
-                "files": [
-                    "registration.php"
-                ]
-            },
-            "license": [
-                "OSL-3.0",
-                "AFL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Ebizmarts Corp",
-                    "email": "mailchimp@ebizmarts-desk.zendesk.com",
-                    "homepage": "http://ebizmarts.com"
-                }
-            ],
-            "description": "Connect MailChimp with Magento",
-            "support": {
-                "email": "mailchimp@ebizmarts-desk.zendesk.com",
-                "wiki": "https://connect.mailchimp.com/integrations/magento",
-                "forum": "http://ebizmarts.com/forums/view/6"
-            },
-            "time": "2018-07-26T14:04:45+00:00"
         },
         {
             "name": "monolog/monolog",

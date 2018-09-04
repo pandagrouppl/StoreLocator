@@ -7,4 +7,7 @@
 
 	<!-- Add code to delete tags from the Instagram photo -->
 	<preference for="Magenest\InstagramShop\Observer\AddPhotosToProduct" type="PandaGroup\InstagramShopExtender\Observer\AddPhotosToProduct" />
+
+
+	<preference for="Magenest\InstagramShop\Model\Client" type="PandaGroup\InstagramShopExtender\Model\Client" />
 </config>

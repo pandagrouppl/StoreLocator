@@ -708,6 +708,14 @@ body[class~='cms-home'] {
                 height: 100%;
             }
 
+            @media all and (max-width: 1024px) {
+                background-image: url('../../img/assets/home-08-2018/MSFW18.jpg');
+
+                video {
+                    display: none;
+                }
+            }
+
             @media (min-width: 1260px) {
                 .home-banner {
 

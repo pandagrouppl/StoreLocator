@@ -35,6 +35,7 @@
         "neklo/product_position": "1.2.2",
         "magenest/module-instagram-shop": "3.0.0",
         "smile/elasticsuite": "^2.3.0",
+        "magenest/module-instagram-shop": "3.0.0",
         "symfony/event-dispatcher": "2.8.34",
         "symfony/process": "2.8.34",
         "symfony/finder": "3.4.4",

@@ -1,5 +1,3 @@
-$medium_view: 850px;
-
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
@@ -170,21 +168,13 @@ body[class~='cms-page-view'] {
 }
 
 //Homepage
-body[class~='cms-index-index'] {
+body[class~='cms-index-index'],
+body[class~='looknbuy-index-looks'] {
     .flexslider {
         @media all and (max-width: $medium_view) {
             margin: 0 0 20px;
         }
     }
-
-    //.flex-viewport {
-    //    @media all and (max-width: 450px) {
-    //        height: 210px;
-    //        max-height: 209px;
-    //        margin: 0 auto;
-    //        width: 210px;
-    //    }
-    //}
 
     .flex-control-nav li {
         margin: 0 20px;
@@ -206,7 +196,8 @@ body[class~='cms-index-index'] {
     }
 
     .likes {
-        background: url('http://i66.tinypic.com/35070wl.jpg') no-repeat center;
+        //background: url('http://i66.tinypic.com/35070wl.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/like.jpg') no-repeat center;
         background-size: contain;
         height: 17px;
         width: 17px;
@@ -214,7 +205,8 @@ body[class~='cms-index-index'] {
     }
 
     .comments {
-        background: url('http://i63.tinypic.com/2rr8ow3.jpg') no-repeat center;
+        //background: url('http://i63.tinypic.com/2rr8ow3.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/comments.jpg') no-repeat center;
         background-size: contain;
         height: 17px;
         width: 17px;
@@ -234,7 +226,8 @@ body[class~='cms-index-index'] {
     }
 
     .flex-direction-nav .flex-prev {
-        background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        //background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        background-image: url('../../img/assets/instagram/prev.png');
         background-position: center center;
         background-repeat: no-repeat;
         border: 0;
@@ -254,6 +247,7 @@ body[class~='cms-index-index'] {
         @media all and (max-width: 450px) {
             background-color: rgba(0, 0, 0, 0.5) !important;
             opacity: 1 !important;
+            background-size: 10px;
         }
     }
 
@@ -266,7 +260,8 @@ body[class~='cms-index-index'] {
     }
 
     .flex-direction-nav .flex-next {
-        background-image: url('http://i66.tinypic.com/28v66j6.png');
+        //background-image: url('http://i66.tinypic.com/28v66j6.png');
+        background-image: url('../../img/assets/instagram/next.png');
         background-position: center center;
         background-repeat: no-repeat;
         border: 0;
@@ -286,6 +281,7 @@ body[class~='cms-index-index'] {
         @media all and (max-width: 450px) {
             background-color: rgba(0, 0, 0, 0.5) !important;
             opacity: 1 !important;
+            background-size: 10px;
         }
     }
 
@@ -304,6 +300,8 @@ body[class~='cms-index-index'] {
 
         @media all and (max-width: 420px) {
             width: 50px;
+            height: 50px;
+            top: 60%;
         }
     }
 
