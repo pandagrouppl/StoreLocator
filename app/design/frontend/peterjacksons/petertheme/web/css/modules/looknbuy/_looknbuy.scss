@@ -35,7 +35,7 @@
 
         @media all and (max-width: $sm-breakpoint) {
             overflow: hidden;
-            max-height: 100vh;
+            max-height: 120vh;
         }
     }
 
@@ -47,7 +47,7 @@
             justify-content: center;
             align-items: center;
             width: 230px !important;
-            height: 475px;
+            height: 575px;
             margin: 0 20px;
         }
     }
@@ -55,6 +55,9 @@
     &__product-img {
         padding: 0 15px;
 
+        img {
+            max-width: 110px;
+        }
 
         @media (max-width: $sm-breakpoint) {
             display: none;
@@ -69,7 +72,11 @@
                 align-items: center;
                 padding: 10px 0 20px 0;
                 width: 230px;
-                height: 180px;
+                height: 260px;
+            }
+
+            img {
+                max-width: 150px;
             }
         }
     }
@@ -138,6 +145,7 @@
 
         @media all and (max-width: 550px) {
             width: 90%;
+            margin: 0 auto;
         }
     }
 

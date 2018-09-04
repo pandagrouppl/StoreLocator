@@ -102,10 +102,10 @@ if ($looknbuyIsEnabled == 1){
                     <?php // Carousel Image ?>
                     <a href="<?php /* @escapeNotVerified */ echo $this->_storeManager->getStore()->getBaseUrl() . $urlKey ?>" class="product photo product-item-photo" tabindex="-1">
 
-                        <span class="product-image-container">
-                            <span class="product-image-wrapper">
-                                <img class="looknbuy__slider-img product-image-photo" src="<?php echo $lookImgUrl ?>" alt="<?php $_look['look_name'] ?>"></span>
-                        </span>
+                        <div class="product-image-container">
+                            <div class="product-image-wrapper">
+                                <img class="looknbuy__slider-img product-image-photo" src="<?php echo $lookImgUrl ?>" alt="<?php $_look['look_name'] ?>"></div>
+                        </div>
                     </a>
 
                 </div>
