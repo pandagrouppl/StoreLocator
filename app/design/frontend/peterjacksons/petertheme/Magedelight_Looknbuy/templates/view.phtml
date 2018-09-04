@@ -109,7 +109,7 @@ $opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
                             $productType = $product->getTypeId();
                             $image = 'category_page_list';
                             $this->imageBuilder = $objectManager->create('Magento\Catalog\Helper\Image');
-                            $imgUrl = $this->imageBuilder->init($product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(110)->getUrl();
+                            $imgUrl = $this->imageBuilder->init($product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(145)->getUrl();
                             ?>
 
                             <div class="looknbuy__product-info">
