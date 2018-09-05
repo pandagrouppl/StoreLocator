@@ -23,6 +23,10 @@
 }
 
 body[class~='cms-home'] {
+    .main > p {
+        margin: 0;
+    }
+
     .block-photo-slider .slides li > a .text button {
         font-family: Roboto, arial, sans-serif;
         width: 164px;
@@ -178,10 +182,25 @@ body[class~='cms-home'] {
         }
     }
 
-    @media all and (max-width: $sm-breakpoint) {
-        .slick-dots li {
-            display: none;
+    .slick-dots li {
+        display: none;
+    }
+
+    @media all and (min-width: $sm-breakpoint) {
+
+        .slick-dots li:nth-last-child(1),
+        .slick-dots li:nth-last-child(2),
+        .slick-dots li:nth-last-child(3) {
+            display: block;
         }
+
+        .slick-dots li:nth-child(1),
+        .slick-dots li:nth-child(2) {
+            display: block;
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
 
         .slick-dots li.slick-active,
         .slick-dots li.slick-active + li,
@@ -580,6 +599,17 @@ body[class~='cms-home'] {
             color: white;
             font-weight: 600;
             margin: 0 0 20px 0;
+
+            .libre-bold {
+                font-family: 'libre_baskerville', sans-serif;
+                font-weight: 600;
+            }
+
+            .libre-italic {
+                font-family: 'libre_baskerville', sans-serif;
+                font-style: italic;
+                font-weight: 400;
+            }
 
             &-black {
                 font-size: 30px;
