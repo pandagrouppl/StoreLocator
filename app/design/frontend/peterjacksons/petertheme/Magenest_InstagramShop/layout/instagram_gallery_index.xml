@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <title>Share The Style</title>
+        <title>Insta</title>
     </head>
     <body>
         <referenceBlock name="breadcrumbs">
@@ -14,10 +14,10 @@
                 </argument>
             </action>
             <action method="addCrumb">
-                <argument name="crumbName" xsi:type="string">Share The Style</argument>
+                <argument name="crumbName" xsi:type="string">Insta</argument>
                 <argument name="crumbInfo" xsi:type="array">
-                    <item name="title" xsi:type="string">Share The Style</item>
-                    <item name="label" xsi:type="string">Share The Style</item>
+                    <item name="title" xsi:type="string">Insta</item>
+                    <item name="label" xsi:type="string">Insta</item>
                 </argument>
             </action>
             <block class="Magento\Framework\View\Element\Template" name="return.to.previous" template="Magento_Theme::html/returntoprevious.phtml"/>
