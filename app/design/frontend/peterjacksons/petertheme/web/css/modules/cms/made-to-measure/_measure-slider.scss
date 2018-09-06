@@ -129,6 +129,12 @@
 
         button {
             font-size: 0;
+
+            @media all and (max-width: $bp-measure) {
+                height: 7px;
+                width: 5px;
+                padding: 4px;
+            }
         }
     }
 }
