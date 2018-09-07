@@ -28,6 +28,16 @@ const shoplook = () => {
             }
         ]
     });
+
+    $(document).on('click', '.looknbuy__button', () => {
+        $('html, body').animate({
+            scrollTop: $(".page-main__message").offset().top - 150
+        }, 1500);
+    });
+
+    //remove empty ID tags causing console log errors
+    $('.slick-cloned button').removeAttr('id');
+
 };
 
 export = shoplook;
