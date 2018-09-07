@@ -110,7 +110,16 @@ $opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
                             $image = 'category_page_list';
                             $this->imageBuilder = $objectManager->create('Magento\Catalog\Helper\Image');
                             $imgUrl = $this->imageBuilder->init($product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(145)->getUrl();
+
+                            //wishlist
+                            $_in_wishlist = false;
+                            foreach ($this->helper('Magento\Wishlist\Helper\Data')->getWishlistItemCollection() as $_wishlist_item){
+                                if($product->getId() == $_wishlist_item->getProduct()->getId()){
+                                    $_in_wishlist = true;
+                                }
+                            }
                             ?>
+
 
                             <div class="looknbuy__product-info">
                                 <div class="info-wrapper">
@@ -161,7 +170,7 @@ $opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
                                                data-message="<?php /* @escapeNotVerified */ echo __('Adding...');?>"
                                                data-config='<?php /* @escapeNotVerified */ echo $block->getWishlistParams($product); ?>'
                                                data-mage-init='{"pandaWishlist": {}}'>
-                                                <figure class="product-info-main__wishlist-star"></figure>
+                                                <figure class="product-info-main__wishlist-star <?php if($_in_wishlist){echo 'active';} ?>"></figure>
                                             </a>
                                             <div class="wishlist-message wishlist-message--pdp">
                                                 <div class="wishlist-message__inner">

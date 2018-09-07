@@ -48,6 +48,12 @@
                 <block class="Magedelight\Looknbuy\Block\View" name="social.pinit" as="pinit" template="Magedelight_Looknbuy::social/pinit.phtml" cacheable="false" />
                 <block class="PandaGroup\LooknbuyExtender\Block\Title" name="looknbuy.links" template="Magedelight_Looknbuy::title.phtml"/>
             </block>
+
+            <referenceBlock name="looknbuy.product.addto">
+                <block class="Magento\Wishlist\Block\Catalog\Product\ProductList\Item\AddTo\Wishlist"
+                       name="looknbuy.product.addto.wishlist" as="wishlist" before="compare"
+                       template="Magento_Wishlist::catalog/product/list/addto/wishlist.phtml"/>
+            </referenceBlock>
         </referenceContainer>
     </body>
 
