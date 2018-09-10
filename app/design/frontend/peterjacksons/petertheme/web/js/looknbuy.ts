@@ -36,7 +36,8 @@ const shoplook = () => {
     });
 
     //remove empty ID tags causing console log errors
-    $('.slick-cloned button').removeAttr('id');
+    $('.slick-cloned button, .slick-cloned select').removeAttr('id');
+
 
 };
 
