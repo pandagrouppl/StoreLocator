@@ -233,24 +233,39 @@ body[class~='instagram-gallery-index'] {
         }
     }
 
-    button {
-        font-family: Roboto, arial, sans-serif;
-        width: 164px;
-        height: 27px;
-        border-radius: 2px;
-        border: 1px solid white;
-        background-color: transparent;
-        text-transform: uppercase;
-        color: white;
-        font-size: 11px;
-        font-weight: bold;
-        display: block;
-        margin: 10px auto 0;
-        box-shadow: none;
-        cursor: pointer;
+    .page-main {
 
-        @media all and (max-width: 600px) {
-            width: 100%;
+        button {
+            font-family: Roboto, arial, sans-serif;
+            width: 164px;
+            height: 27px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background-color: transparent;
+            text-transform: uppercase;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            display: block;
+            margin: 10px auto 0;
+            box-shadow: none;
+            cursor: pointer;
+
+            @media all and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .prpl-popuplogin {
+
+        .primary {
+            display: flex;
+            justify-content: center;
+        }
+
+        button.action-close {
+            width: 20px;
         }
     }
 
