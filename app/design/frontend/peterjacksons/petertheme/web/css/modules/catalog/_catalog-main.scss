@@ -89,7 +89,8 @@
 body[class~='catalogsearch-result-index'] {
 
     .search.results {
-        max-width: 820px;
+        max-width: 860px;
+        margin-left: 10px;
     }
 
     .message.notice {
@@ -123,7 +124,8 @@ body[class~='catalogsearch-result-index'] {
 
 
 .catalog-main {
-    max-width: 820px;
+    max-width: 860px;
+    margin-left: 10px;
 
     &__description {
         text-align: left;
