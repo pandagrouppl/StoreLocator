@@ -127,6 +127,13 @@
 
     &__button {
         @include button-black();
+
+        @media all and (max-width: $sm-breakpoint) {
+            &:hover {
+                background: #363636;
+                color: #fff;
+            }
+        }
     }
 
     .size-chart {

@@ -22,6 +22,10 @@ body[class~='catalog-product-view'] {
         right: -19px;
     }
 
+    &::before, &::after {
+        right: 20px;
+    }
+
 
     &__inner {
         background: #fff;

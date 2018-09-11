@@ -28,6 +28,18 @@ const shoplook = () => {
             }
         ]
     });
+
+    $(document).on('click', '.looknbuy__button', () => {
+        $('html, body').animate({
+            scrollTop: $(".page-main__message").offset().top - 150
+        }, 1500);
+    });
+
+    //remove empty ID attributes log errors and eliminate  console log error
+    $('.slick-cloned button, .slick-cloned select').removeAttr('id');
+    $('.slick-cloned .looknbuy__select-options, .slick-cloned .product-info-main__wishlist-wrapper').remove();
+
+
 };
 
 export = shoplook;
