@@ -451,6 +451,10 @@ body[class~='cms-home'] {
         }
     }
 
+    .prpl-popuplogin button.action-close {
+        width: 20px;
+    }
+
     .search-overlay__submit {
         button {
             width: auto;
@@ -823,7 +827,11 @@ body[class~='cms-home'] {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 65px auto;
+            margin: 0 auto 65px;
+
+            @media all and (max-width: 560px) {
+                margin: 0 auto 25px;
+            }
 
             .home-banner {
 
