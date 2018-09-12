@@ -14,7 +14,9 @@ define([
                 shippingAddress['extension_attributes'] = {};
             }
 
-            shippingAddress['extension_attributes']['order_comment'] = shippingAddress.customAttributes['order_comment'];
+            //shippingAddress['extension_attributes']['order_comment'] = shippingAddress.customAttributes['order_comment'];
+            console.log(jQuery('[name="order_comment"]').val());
+            shippingAddress['extension_attributes']['order_comment'] = jQuery('[name="order_comment"]').val();
 
             return originalAction();
         });

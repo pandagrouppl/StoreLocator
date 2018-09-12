@@ -28,4 +28,3 @@ class AddOrderCommentToOrder implements \Magento\Framework\Event\ObserverInterfa
         $order->setData('order_comment', $quote->getOrderComment());
     }
 }
-

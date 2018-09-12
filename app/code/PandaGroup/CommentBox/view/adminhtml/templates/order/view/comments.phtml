@@ -1,12 +1,13 @@
-<?php 
+<?php
+/** @var \Magento\Backend\Block\Template $block */
 
-if ($block->getOrderComment()): ?>
+if (null !== $block->getOrderComment()): ?>
     <section class="admin__page-section ordercomment">
         <div class="admin__page-section-title">
             <span class="title"><?php echo __('Order Comment') ?></span>
         </div>
         <div class="admin__page-section-content">
-            <?php echo nl2br($block->escapeHtml($block->getOrderComment()));?>
+            <?php echo $block->escapeHtml($block->getOrderComment())?>
         </div>
     </section>
 <?php endif; ?>

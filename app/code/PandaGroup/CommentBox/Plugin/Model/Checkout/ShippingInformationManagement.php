@@ -47,6 +47,7 @@ class ShippingInformationManagement //implements \Magento\Checkout\Api\ShippingI
          $cartId,
         \Magento\Checkout\Api\Data\ShippingInformationInterface $addressInformation
     ) {
+        //empty...
         $orderComment = $addressInformation->getExtensionAttributes();
         $r = 2;
     }
