@@ -15,6 +15,7 @@ return array (
     'Magento_Cms' => 1,
     'Magento_Customer' => 1,
     'Magento_Config' => 1,
+    'Magenest_InstagramShop' => 1,
     'Magento_AdminNotification' => 1,
     'Magento_AdvancedPricingImportExport' => 1,
     'Magento_Authorization' => 1,
