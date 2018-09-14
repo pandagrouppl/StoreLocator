@@ -3,11 +3,14 @@
 	<!-- Change maximum photos per page quantity | Reverse collection order to ascending -->
 	<preference for="Magenest\InstagramShop\Block\Gallery\Gallery" type="PandaGroup\InstagramShopExtender\Block\Gallery\Gallery" />
 
+	<!-- Revert Photos collection -->
 	<preference for="Magenest\InstagramShop\Block\Photo\Slider" type="PandaGroup\InstagramShopExtender\Block\Photo\Slider" />
+
+	<!-- Rewrite methods to save photo -->
+	<preference for="Magenest\InstagramShop\Model\Cron" type="PandaGroup\InstagramShopExtender\Model\Cron" />
 
 	<!-- Add code to delete tags from the Instagram photo -->
 	<preference for="Magenest\InstagramShop\Observer\AddPhotosToProduct" type="PandaGroup\InstagramShopExtender\Observer\AddPhotosToProduct" />
-
 
 	<preference for="Magenest\InstagramShop\Model\Client" type="PandaGroup\InstagramShopExtender\Model\Client" />
 </config>
