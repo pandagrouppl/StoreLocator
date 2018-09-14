@@ -34,4 +34,8 @@
     <preference for="Magedelight\Looknbuy\Controller\Cart\Add"
                 type="PandaGroup\LooknbuyExtender\Controller\Cart\Add" />
 
+    <!-- Add one product from all look extension -->
+    <preference for="Magedelight\Looknbuy\Model\Quote\Discount"
+                type="PandaGroup\LooknbuyExtender\Model\Quote\Discount" />
+
 </config>
