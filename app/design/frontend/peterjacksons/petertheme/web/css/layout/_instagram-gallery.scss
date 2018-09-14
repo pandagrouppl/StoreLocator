@@ -13,19 +13,28 @@ body[class~='instagram-gallery-index'] {
         margin: 0;
 
         &__title {
-            height: 100px;
-            background: #f7f7f7;
+            margin: 20px auto;
+            padding: 25px 0 35px 0;
+            background: #e0e7f7;;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            max-width: 1250px;
 
             > p {
-                font-size: 10px;
-                color: #363636;
+                font-size: 12px;
+                color: #000;
                 margin: 0 0 10px 0;
                 letter-spacing: 0.1px;
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin: 30px 0 15px 0;
+                text-transform: uppercase;
             }
         }
 
