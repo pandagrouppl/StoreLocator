@@ -27,8 +27,14 @@
     </div>
     <div class="page-footer__upper-lower">
         <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer-links')->toHtml();?>
-        <div class="page-footer__linkbox page-footer__social-icons">
-            <h3>Socialise With Us</h3>
+        <div class="page-footer__linkbox">
+            <h3>More</h3>
+            <ul>
+                <li><a href="<?php echo $this->getUrl('about-us')?>">Brand</a></li>
+                <li><a href="<?php echo $this->getUrl('gift-cards.html')?>">Gift Cards</a></li>
+                <li><a href="<?php echo $this->getUrl('made-to-measure')?>">Made to Measure</a></li>
+                <li><a href="<?php echo $this->getUrl('instagram/gallery/')?>">Instagram</a></li>
+            </ul>
             <ul class="page-footer__social-icons-ul">
                 <li><a href="https://www.facebook.com/peterjacksonmenswear" target="_blank" class="page-footer__icon page-footer__icon--fb"></a></li>
                 <li><a href="https://instagram.com/peterjacksonau/" target="_blank" class="page-footer__icon page-footer__icon--instagram"></a></li>
