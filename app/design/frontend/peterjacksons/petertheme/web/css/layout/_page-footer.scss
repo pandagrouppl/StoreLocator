@@ -96,8 +96,12 @@
 
 
     &__lower-wrapper {
-        padding: 40px 0 30px;
+        padding: 5px 0 30px;
         min-height: 140px;
+
+        @media all and (max-width: 768px) {
+            padding: 40px 0 30px;
+        }
     }
 
     &__lower-linkbox {
@@ -149,7 +153,11 @@
     &__social-icons-ul {
         display: flex;
         justify-content: flex-end;
-        padding-top: 15px;
+        padding-top: 55px;
+
+        @media all and (max-width: 768px){
+            padding-top: 15px;
+        }
 
         li:first-child a {
             margin-left: 0;
