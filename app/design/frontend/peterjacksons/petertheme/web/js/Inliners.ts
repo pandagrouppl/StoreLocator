@@ -201,18 +201,15 @@ export class Inliners {
     private _pinHeader(): void {
         const cssClassName = 'headers';
         const docked = cssClassName+'--fixed';
-        console.log("docked is " + docked);
         const $nav = $('.'+cssClassName);
         const $window = $(window);
         const $body = $('body');
         const $shippingBar = $('.header-shippingbar');
         const $pageWrapper = $('.page-wrapper');
         const offset = $shippingBar.outerHeight();
-        console.log("offset is " + offset);
 
         const pinHead = () => {
             if ($window.scrollTop() > offset) {
-                console.log(offset + " scrolltop > offset");
                 $nav.addClass(docked);
                 if (!($body.hasClass('cms-index-index') || $body.hasClass('cms-discover-more-page'))) {
                     $pageWrapper.css({'margin-top':$nav.height()})
