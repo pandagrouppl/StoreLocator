@@ -420,34 +420,31 @@ body[class~='cms-home'] {
     }
 
     .btn-main-banner {
-        position: absolute;
-        right: 80px;
-        bottom: 30px;
         background: transparent;
-        width: 316px;
-        border: 1px solid #000;
+        width: 246px;
+        border: 1px solid $white;
         font-size: 15px;
         letter-spacing: 1px;
         line-height: 13px;
         font-family: 'sofia-pro', sans-serif;
-        color: #000;
+        color: $white;
         padding: 7px 5px;
         font-weight: 300;
         z-index: 2;
 
         @media all and (max-width: 1260px) {
-            right: 65px;
+            //right: 65px;
         }
 
         @media all and (max-width: 750px) {
-            bottom: 20px;
+            //bottom: 20px;
             width: 286px;
         }
 
         @media all and (max-width: 560px) {
             width: 226px;
-            right: 50px;
-            bottom: 15px;
+            //right: 50px;
+            //bottom: 15px;
         }
     }
 
@@ -468,14 +465,19 @@ body[class~='cms-home'] {
 }
 
 .main-banner {
-    background-image: url('../../img/assets/home-11-2017/homepage_summer2018.png');
+    background-image: url('../../img/assets/home 25-09-18/hero-70th-anniversary.jpg');
     width: 100%;
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 849px;
+    background-position: center top 0;
+    height: 748px;
     position: relative;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 
     @media all and (min-width: 2200px) {
         height: 79vh;
@@ -486,39 +488,42 @@ body[class~='cms-home'] {
     }
 
     &__image {
-        position: absolute;
-        bottom: 20px;
-        right: 12px;
+        height: 260px;
+        margin-bottom: 30px;
 
         @media all and (max-width: 1260px) {
-            bottom: -5px;
+            //bottom: -5px;
         }
 
         @media all and (max-width: 560px) {
-            bottom: 25px;
+            //bottom: 25px;
         }
     }
 
-    &__header {
-        font-weight: 300;
-        font-size: 24px;
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        letter-spacing: 0;
-        color: white;
-        width: 693px;
-        padding: 0 0 0 130px;
-
-        p {
-            margin: 8px 0;
-        }
-    }
+    //&__header {
+    //    font-weight: 300;
+    //    font-size: 24px;
+    //    font-family: 'Roboto', sans-serif;
+    //    margin: 0;
+    //    letter-spacing: 0;
+    //    color: white;
+    //    width: 693px;
+    //    padding: 0 0 0 130px;
+    //
+    //    p {
+    //        margin: 8px 0;
+    //    }
+    //}
 
     &__wrapper {
-        height: 100%;
+        margin-bottom: 50px;
         display: flex;
-        justify-content: left;
+        flex-direction: column;
         align-items: center;
+    }
+
+    &__cta-btn {
+        //width: ;
     }
 
     //&__inner {
@@ -741,7 +746,7 @@ body[class~='cms-home'] {
         background-position: center;
         width: 96%;
         height: 803px;
-        margin: 2% 40px 4% 2%;
+        //margin: 2% 40px 4% 2%;
         cursor: pointer;
 
         @media all and (max-width: 560px) {
@@ -823,9 +828,9 @@ body[class~='cms-home'] {
         }
 
         &--measure {
-            background-image: url('../../img/assets/home-08-2018/banner_made_to_measure.png');
+            background-image: url('../../img/assets/home 25-09-18/made-to-measure-img.png');
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin: 0 auto 65px;
 
@@ -874,46 +879,10 @@ body[class~='cms-home'] {
         }
 
         &--shoe {
-            background-image: url('../../img/assets/home-08-2018/website_homepage_update_forth_banner.png');
+            background-image: url('../../img/assets/home 25-09-18/italian-shoe.png');
             width: 100%;
-            margin: 20px 0 2% 0;
-
-            @media all and (min-width: 1260px) {
-                .home-banner {
-
-                    &__content-box {
-                        margin: 0 7em;
-                    }
-
-                    &__inner {
-                        margin: -10em 0 0;
-                    }
-
-                    &__header {
-                        margin: 50px 0 28px;
-                    }
-                }
-
-                button {
-                    margin-top: 5px;
-                }
-            }
-
-            @media all and (min-width: 1441px) {
-                .home-banner__inner {
-                    margin: -10em 0 0 7.5em;
-                }
-            }
-
-            @media all and (min-width: 2200px) {
-                height: 70vh;
-            }
-        }
-
-        &--support {
-            background-image: url('../../img/assets/home-08-2018/website_homepage_update_third_banner.png');
-            width: 100%;
-            margin: 2% 0 20px 0;
+            //margin: 20px 0 2% 0;
+            //margin: 2% 0 20px 0;
             height: 763px;
 
             @media all and (min-width: 1260px) {
@@ -950,6 +919,79 @@ body[class~='cms-home'] {
             @media all and (min-width: 2200px) {
                 height: 76vh;
             }
+
+            //@media all and (min-width: 1260px) {
+            //    .home-banner {
+            //
+            //        &__content-box {
+            //            margin: 0 7em;
+            //        }
+            //
+            //        &__inner {
+            //            margin: -10em 0 0;
+            //        }
+            //
+            //        &__header {
+            //            margin: 50px 0 28px;
+            //        }
+            //    }
+            //
+            //    button {
+            //        margin-top: 5px;
+            //    }
+            //}
+            //
+            //@media all and (min-width: 1441px) {
+            //    .home-banner__inner {
+            //        margin: -10em 0 0 7.5em;
+            //    }
+            //}
+            //
+            //@media all and (min-width: 2200px) {
+            //    height: 70vh;
+            //}
+        }
+
+        &--waterfront {
+            background-image: url('../../img/assets/home 25-09-18/leo-colors.png');
+            width: 100%;
+            //margin: 2% 0 20px 0;
+            //height: 763px;
+            //
+            //@media all and (min-width: 1260px) {
+            //    .home-banner {
+            //
+            //        &__wrapper {
+            //            justify-content: flex-end;
+            //        }
+            //
+            //        &__inner {
+            //            margin: -10em 3em 0 0;
+            //        }
+            //
+            //        &__content-box {
+            //            margin: 0 28px;
+            //        }
+            //
+            //        &__text-box {
+            //            margin: 24px 0 35px 0;
+            //        }
+            //
+            //        &__header {
+            //            margin-top: 52px;
+            //        }
+            //    }
+            //}
+            //
+            //@media all and (min-width: 1441px) {
+            //    .home-banner__inner {
+            //        margin: -10em 10em 0 0;
+            //    }
+            //}
+            //
+            //@media all and (min-width: 2200px) {
+            //    height: 76vh;
+            //}
         }
     }
 }
@@ -1125,7 +1167,12 @@ body[class~='cms-home'] {
 
     .main-banner {
         height: 615px;
-        background-position: 0 0;
+        background-position: center top 0;
+        //margin-top: 45px;
+
+        &__wrapper {
+            margin-bottom: 30px;
+        }
 
         &__header {
             font-size: 12pt;
@@ -1141,15 +1188,9 @@ body[class~='cms-home'] {
         }
 
         &__image {
-            padding: 0 0 3% 7%;
-            width: 80%;
-            max-width: 500px;
+            margin-bottom: 20px;
+            height: 200px;
         }
-
-        //&__content-box {
-        //    max-width: 560px;
-        //    margin: 0 14.2em;
-        //}
 
         button {
             font-size: 12px;
@@ -1192,6 +1233,13 @@ body[class~='cms-home'] {
     }
 }
 
+@media all and (max-width: 1060px) {
+
+    .main-banner {
+        margin-top: 0;
+    }
+}
+
 @media all and (max-width: 975px) {
     .btn-measure {
         margin: 25px 0 15px !important;
@@ -1201,6 +1249,7 @@ body[class~='cms-home'] {
         height: 500px;
         background-position: center top 0;
         background-size: cover;
+        margin-top: 0;
 
         &__header {
             padding: 0 0 0 7em;
@@ -1210,11 +1259,6 @@ body[class~='cms-home'] {
             justify-content: flex-start;
             padding: 0 2%;
             align-items: center;
-        }
-
-        &__image {
-            width: 75%;
-            padding: 0 0 3% 8%;
         }
 
         &__content-box {
@@ -1263,8 +1307,9 @@ body[class~='cms-home'] {
     }
 
     .main-banner {
-        &__content-box {
-            margin: 0;
+
+        &__image {
+            margin-bottom: 0;
         }
     }
 
@@ -1286,18 +1331,18 @@ body[class~='cms-home'] {
 
 @media all and (max-width: 767px) {
     .main-banner {
-        &__header {
-            padding: 0 0 0 4em;
-        }
-
-        &__inner {
-            max-width: 650px;
-        }
-
-        &__image {
-            width: 70%;
-            padding: 0 0 3% 3%;
-        }
+        //&__header {
+        //    padding: 0 0 0 4em;
+        //}
+        //
+        //&__inner {
+        //    max-width: 650px;
+        //}
+        //
+        //&__image {
+        //    width: 70%;
+        //    padding: 0 0 3% 3%;
+        //}
     }
 }
 
@@ -1305,38 +1350,9 @@ body[class~='cms-home'] {
     .main-banner {
         height: 350px;
 
-        &__header {
-            display: none;
-
-            br {
-                display: none;
-            }
-        }
-
         &__image {
-            width: 100%;
-        }
-
-        &__text-box {
-            display: flex;
-            margin: 0;
-        }
-
-        &__inner {
-            margin: 0 1em;
-            padding: 0;
-            height: 65%;
-        }
-
-        &__content-box {
-            margin: 0;
-            max-width: 300px;
-            display: block;
-        }
-
-        img {
             max-width: 100%;
-            padding: 0;
+            height: 140px;
         }
 
         &__wrapper {
@@ -1436,12 +1452,12 @@ body[class~='cms-home'] {
             }
 
             &--shoe {
-                background-position: -200px 0;
+                //background-position: -200px 0;
                 height: 350px;
             }
 
-            &--support {
-                background-position: -120px;
+            &--waterfront {
+                //background-position: -120px;
                 height: 350px;
             }
 
