@@ -13,6 +13,39 @@ namespace PandaGroup\InstagramShopExtender\Model;
 class Cron extends \Magenest\InstagramShop\Model\Cron
 {
     /**
+     * @var \PandaGroup\InstagramShopExtender\Model\Provider\Photo
+     */
+    protected $_photoProvider;
+
+    /**
+     * @var \PandaGroup\InstagramShopExtender\Model\Service\Photo
+     */
+    protected $_photoService;
+
+    /**
+     * Cron constructor.
+     *
+     * @param \Magenest\InstagramShop\Model\Client $client
+     * @param \Magenest\InstagramShop\Model\PhotoFactory $photoFactory
+     * @param \Magenest\InstagramShop\Model\TaggedPhotoFactory $taggedPhotoFactory
+     * @param \PandaGroup\InstagramShopExtender\Model\Provider\Photo $photoProvider
+     */
+    public function __construct(
+        \Magenest\InstagramShop\Model\Client $client,
+        \Magenest\InstagramShop\Model\PhotoFactory $photoFactory,
+        \Magenest\InstagramShop\Model\TaggedPhotoFactory $taggedPhotoFactory,
+        \PandaGroup\InstagramShopExtender\Model\Provider\Photo $photoProvider,
+        \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService
+    ) {
+        parent::__construct($client, $photoFactory, $taggedPhotoFactory);
+
+        $this->_photoProvider = $photoProvider;
+        $this->_photoService = $photoService;
+    }
+
+    /**
+     * Save/Update photos from Instagram
+     *
      * @throws \Magento\Framework\Exception\LocalizedException
      * @throws \Exception
      */
@@ -22,37 +55,32 @@ class Cron extends \Magenest\InstagramShop\Model\Cron
         $handle = '/users/self/media/recent/';
         $response = $this->_client->api($handle);
 
-        if (isset($response['data']) && count($response['data'])) {
-            $allPhotos = $response['data'];
+        if ((true === isset($response['data'])) && (count($response['data']) > 0)) {
+            $photosFromInsta = $response['data'];
+            $updatedPhotoIds = [];
 
-            foreach ($allPhotos as $photo) {
-                $photoObj = $this->_photoFactory->create()->load($photo['id'], 'photo_id');
+            foreach ($photosFromInsta as $instaPhoto) {
+                /** @var \Magenest\InstagramShop\Model\Photo $savedPhoto */
+                $savedPhoto = $this->_photoProvider->getPhotoByPhotoId($instaPhoto['id']);
 
-                if (true === $photoObj->isObjectNew()) {
-                    $data = [
-                        'photo_id' => $photo['id'],
-                        'url' => $photo['link'],
-                        'source' => $photo['images']['standard_resolution']['url'],
-                        'caption' => $photo['caption']['text'],
-                        'likes' => $photo['likes']['count'],
-                        'comments' => $photo['comments']['count'],
-                        'created_at' => $this->_getCreatedAtDate($photo['created_time']),
-                    ];
+                if (true === $savedPhoto->isObjectNew()) {
+                    $this->_photoService->saveNewPhoto($savedPhoto, $instaPhoto);
                 } else {
-                    $data = [
-                        'likes' => $photo['likes']['count'],
-                        'comments' => $photo['comments']['count'],
-                        'created_at' => $this->_getCreatedAtDate($photo['created_time']),
-                    ];
+                    $this->_photoService->updatePhoto($savedPhoto, $instaPhoto);
                 }
 
-                $photoObj->addData($data)->save();
+                $updatedPhotoIds[] = $instaPhoto['id'];
+            }
+
+            $savedPhotosToRemove = $this->_photoProvider->getPhotosToRemove($updatedPhotoIds);
+            if (false === empty($savedPhotosToRemove)) {
+                $this->_photoService->deletePhotos($savedPhotosToRemove);
             }
         }
     }
 
     /**
-     * Save photo info to database
+     * Save tagged photo info to database
      *
      * @param array $photo
      * @param string $tag
