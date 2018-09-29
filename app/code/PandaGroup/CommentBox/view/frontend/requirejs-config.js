@@ -1,9 +1,7 @@
 var config = {
-    config: {
-        mixins: {
-            'Magento_Checkout/js/action/set-shipping-information': {
-                'PandaGroup_CommentBox/js/action/set-shipping-information-mixin': true
-            }
+    "map": {
+        "*": {
+            'Magento_Checkout/js/model/shipping-save-processor/default': 'PandaGroup_CommentBox/js/model/shipping-save-processor/default'
         }
     }
 };

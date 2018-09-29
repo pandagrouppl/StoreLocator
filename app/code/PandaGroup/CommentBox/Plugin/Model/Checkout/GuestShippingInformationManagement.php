@@ -42,12 +42,19 @@ class GuestShippingInformationManagement //implements \Magento\Checkout\Api\Ship
         $this->_quoteRepository = $quoteRepository;
     }
 
+    /**
+     * @param \Magento\Checkout\Model\GuestShippingInformationManagement $subject
+     * @param int $cartId
+     * @param \Magento\Checkout\Api\Data\ShippingInformationInterface $addressInformation
+     */
     public function beforeSaveAddressInformation(
         \Magento\Checkout\Model\GuestShippingInformationManagement $subject,
         $cartId,
         \Magento\Checkout\Api\Data\ShippingInformationInterface $addressInformation
     ) {
-          $orderComment = $addressInformation->getExtensionAttributes();
-        $r = 2;
+        $extAttributes = $addressInformation->getExtensionAttributes();
+        $orderComment = $extAttributes->getOrderComment();
+        $quote = $this->_quoteRepository->getActive($cartId);
+        $quote->setOrderComment($orderComment);
     }
 }
