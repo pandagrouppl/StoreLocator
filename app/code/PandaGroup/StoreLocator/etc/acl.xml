@@ -4,7 +4,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Backend::stores">
-                    <resource id="PandaGroup_StoreLocator::store_locator">
+                    <resource id="PandaGroup_StoreLocator::store_locator" title="Store Locator" translate="title">
                         <!--<resource id="PandaGroup_StoreLocator::store_locator_list" title="Store Locator List" translate="title" sortOrder="100"/>-->
                         <!--<resource id="PandaGroup_StoreLocator::store_locator_list" title="Configuration" translate="title" sortOrder="200"/>-->
                     </resource>

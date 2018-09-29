@@ -3,6 +3,14 @@ import "slick";
 
 const home = () => {
 
+    // let video = document.getElementById("myVideo");
+    //
+    // if(video.paused) {
+    //     video.play();
+    // }
+
+
+
     const $slider = $( '.slick-init' );
     const $widget = $('.widget__slider-container');
 
@@ -72,12 +80,12 @@ const home = () => {
     });
 
     // Scroll down button
-    $( '.main-banner__scroll-down' ).click(function(evt) {
-        evt.preventDefault();
-        $( 'html, body' ).animate({
-            scrollTop: $( '#top' ).offset().top - 135
-        }, 800);
-    });
+    // $( '.main-banner__scroll-down' ).click(function(evt) {
+    //     evt.preventDefault();
+    //     $( 'html, body' ).animate({
+    //         scrollTop: $( '#top' ).offset().top - 135
+    //     }, 800);
+    // });
 
     $('.search-overlay__row').find('#search').focus();
 };

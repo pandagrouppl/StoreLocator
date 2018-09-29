@@ -40,6 +40,7 @@
 @import "layout/headers";
 @import "layout/page-main";
 @import "layout/shipping-info-bar";
+@import "layout/instagram-gallery";
 
 @import "modules/cart/cart-container";
 @import "modules/cart/items-table";
@@ -120,3 +121,7 @@
 @import "modules/category-sidebar/c-sidebar";
 @import "modules/smile-elastic/search-autocomplete";
 @import "modules/smile-elastic/smile-elastic";
+@import "modules/looknbuy/looknbuy";
+@import "modules/looknbuy/looknbuy-index-looks";
+@import "modules/looknbuy/looknbuy-index-view";
+

@@ -1,3 +1,5 @@
+$medium_view: 850px;
+
 .page-main {
     max-width: 1080px;
     margin: auto auto 0 auto;
@@ -67,11 +69,11 @@ body[class~='catalog-category-view'], body[class~='catalogsearch-result-index'] 
     }
 
     .page-main {
-        max-width: 1250px;
+        max-width: 1300px;
     }
 
     .breadcrumbs {
-        max-width: 1250px;
+        max-width: 1300px;
         padding: 52px 20px 25px 23px;
     }
 
@@ -103,6 +105,10 @@ body[class~='catalog-product-view'] {
         .page-main {
             padding: 0;
         }
+    }
+
+    .looknbuy__slider {
+        display: none;
     }
 }
 
@@ -164,7 +170,190 @@ body[class~='cms-page-view'] {
 }
 
 //Homepage
-body[class~='cms-index-index'] {
+body[class~='cms-index-index'],
+body[class~='looknbuy-index-looks'] {
+    .flexslider {
+        @media all and (max-width: $medium_view) {
+            margin: 0 0 20px;
+        }
+    }
+
+    .flex-control-nav li {
+        margin: 0 20px;
+    }
+
+    .widget-likes-comments {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .likes-number, .comments-number {
+        margin-top: -1px;
+        min-width: 22px;
+        margin-right: 15px;
+        line-height: 22px;
+        font-size: 18px;
+        color: black;
+        margin-left: 25px;
+    }
+
+    .likes {
+        //background: url('http://i66.tinypic.com/35070wl.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/like.jpg') no-repeat center;
+        background-size: contain;
+        height: 17px;
+        width: 17px;
+        margin-right: 3px;
+    }
+    
+    .comments {
+        //background: url('http://i63.tinypic.com/2rr8ow3.jpg') no-repeat center;
+        background: url('../../img/assets/instagram/comments.jpg') no-repeat center;
+        background-size: contain;
+        height: 17px;
+        width: 17px;
+        margin-right: 3px;
+    }
+
+    .widget-detail-title {
+        text-align: center;
+    }
+
+    .flex-control-paging li a {
+        background: #b1b1b1;
+    }
+
+    .flex-control-paging li a.flex-active {
+        background: #7E7E7E;
+    }
+
+    .flex-direction-nav .flex-prev {
+        //background-image: url('http://i68.tinypic.com/30w6s2d.png');
+        background-image: url('../../img/assets/instagram/prev.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0;
+        left: 0;
+        font-size: 0;
+        opacity: 0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        @media all and (max-width: 450px) {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            opacity: 1 !important;
+            background-size: 10px;
+        }
+    }
+
+    .widget-detail-nav-button:hover .widget-arrow {
+        @media all and (max-width: 450px) {
+            stroke: #222;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+        }
+    }
+
+    .flex-direction-nav .flex-next {
+        //background-image: url('http://i66.tinypic.com/28v66j6.png');
+        background-image: url('../../img/assets/instagram/next.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 0;
+        right: 0;
+        font-size: 0;
+        opacity: 0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        @media all and (max-width: 450px) {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            opacity: 1 !important;
+            background-size: 10px;
+        }
+    }
+
+    .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 0;
+    }
+
+    .flexslider:hover .flex-direction-nav .flex-next {
+        right: 0;
+    }
+
+    .flex-direction-nav a {
+        width: 92px;
+        height: 92px;
+        margin: -40px 0 0;
+
+        @media all and (max-width: 420px) {
+            width: 50px;
+            height: 50px;
+            top: 60%;
+        }
+    }
+
+
+
+    .widget-detail-content {
+        @media all and (max-width: $medium_view) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    .widget-desktop .widget-detail-right {
+        @media all and (max-width: $medium_view) {
+            max-width: 640px;
+            width: 100%;
+        }
+    }
+
+    #widget-detail-branding {
+        @media all and (max-width: $medium_view) {
+            bottom: 5px;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            bottom: 3px !important;
+            right: 0 !important;
+            transform: translate(0%, 0%) !important;
+        }
+    }
+
+    .widget-detail-title,
+    .widget-post-info {
+        text-align: center;
+    }
+
+    #widget-prev-post {
+        @media all and (max-width: $medium_view) {
+            margin-left: 0;
+        }
+    }
+
+    .flex-control-nav {
+        @media all and (max-width: $medium_view) {
+            display: none;
+        }
+    }
+
     .page-main {
         max-width: 100%;
         padding: 0;
@@ -180,33 +369,33 @@ body[class~='cms-index-index'] {
             flex-direction: column;
         }
 
-        .main-banner {
-            order: 1;
-        }
-
-        .widget__slider {
-            order: 2;
-        }
-
-        .home-banner__image--shoe {
-            order: 4;
-        }
-
-        .home-banner__image--elevate {
-            order: 3;
-        }
-
-        .home-banner__image--measure {
-            order: 5;
-        }
-
-        .home-banner__image--tactile {
-            order: 6;
-        }
-
-        .men-guide {
-            order: 7;
-        }
+        //.main-banner {
+        //    order: 1;
+        //}
+        //
+        //.widget__slider {
+        //    order: 2;
+        //}
+        //
+        //.home-banner__image--support {
+        //    order: 4;
+        //}
+        //
+        //.home-banner__image--elevate {
+        //    order: 3;
+        //}
+        //
+        //.home-banner__image--shoe {
+        //    order: 5;
+        //}
+        //
+        //.home-banner__image--measure {
+        //    order: 6;
+        //}
+        //
+        //.men-guide {
+        //    order: 7;
+        //}
     }
 }
 
@@ -304,5 +493,15 @@ body[class~='cms-discover-more-page'] {
 body[class~='corporate-index-index'] {
     .page-main__message {
         display: none;
+    }
+}
+
+// Looknbuy looks page
+
+body[class~='looknbuy-index-looks'] {
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
     }
 }

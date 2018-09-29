@@ -1,0 +1,343 @@
+$big_view: 1320px;
+$medium_view: 1155px;
+$small_view: 600px;
+
+body[class~='instagram-gallery-index'] {
+    .breadcrumbs {
+        padding: 10px 20px 0 20px;
+    }
+
+    .page-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+
+        &__title {
+            margin: 20px auto;
+            padding: 25px 0 35px 0;
+            background: #e0e7f7;;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1250px;
+
+            > p {
+                font-size: 12px;
+                color: #000;
+                margin: 0 0 10px 0;
+                letter-spacing: 0.1px;
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin: 30px 0 15px 0;
+                text-transform: uppercase;
+            }
+        }
+
+        &__columns {
+            max-width: 1280px;
+            margin: auto auto 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            color: white;
+
+            @media all and (max-width: $big_view) {
+                padding: 0 50px 0 50px;
+            }
+
+            @media all and (max-width: $medium_view) {
+                padding: 0 5px 0 5px;
+            }
+        }
+    }
+
+    .photo {
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1250px;
+            min-width: 0;
+
+            @media all and (max-width: $big_view) {
+                padding: 0;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            width: 100%;
+            height: 75%;
+            max-height: 75%;
+
+            @media all and (max-width: $big_view) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+
+            &--left {
+                flex: 0 1 50%;
+                min-height: 100%;
+                max-width: 50%;
+                overflow: hidden;
+
+                @media all and (max-width: $big_view) {
+                    flex: 1 1 100%;
+                    max-width: 520px;
+                }
+
+                @media all and (max-width: $medium_view) {
+                    max-width: 580px;
+                }
+
+                @media all and (max-width: $small_view) {
+                    max-width: 100%;
+                }
+
+                .photo__box {
+                    height: 610px;
+                    width: 100%;
+
+                    @media all and (max-width: $big_view) {
+                        height: 510px;
+                    }
+
+                    @media all and (max-width: $medium_view) {
+                        height: 580px;
+                    }
+
+                    @media all and (max-width: $small_view) {
+                        height: auto;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &--right {
+                flex: 0 1 50%;
+                display: flex;
+                height: 100%;
+                max-width: 50%;
+                flex-wrap: wrap;
+                align-items: flex-start;
+
+                @media all and (max-width: $big_view) {
+                    flex: 1 1 100%;
+                    max-width: 520px;
+                }
+
+                @media all and (max-width: $medium_view) {
+                    max-width: 580px;
+                }
+
+                @media all and (max-width: $small_view) {
+                    max-width: 100%;
+                    flex-direction: column;
+                }
+
+                .photo__box {
+                    @media all and (max-width: $big_view) {
+                        height: 250px;
+                    }
+
+                    @media all and (max-width: $medium_view) {
+                        height: 280px;
+                    }
+
+                    @media all and (max-width: $small_view) {
+                        height: auto;
+                    }
+                }
+
+                > div {
+                    flex: 0 0 50%;
+                    min-height: 50%;
+                    max-width: 100%;
+                    overflow: hidden;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        &__box {
+            height: 300px;
+            width: 100%;
+            border: 0;
+            box-shadow: none;
+            margin: 0 10px 10px 10px;
+            -ms-overflow-style: none;
+        }
+
+        &__image {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            opacity: 1;
+            transition: all 0.5s ease;
+            transform: scale(1) translateZ(0);
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+
+            @media all and (max-width: $big_view) {
+                width: 250px;
+            }
+
+            @media all and (max-width: $medium_view) {
+                width: 280px;
+            }
+
+            @media all and (max-width: $small_view) {
+                height: auto;
+                width: 98%;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .caption {
+        background-color: rgba(0, 0, 0, 0) !important;
+        transition: all 0.5s ease !important;
+        width: 100% !important;
+        height: 100% !important;
+        text-align: unset !important;
+        padding: 0 !important;
+        left: 0 !important;
+        overflow: unset !important;
+        transform: translate(0) !important;
+        opacity: 0.5 !important;
+        top: 0 !important;
+        position: absolute !important;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .page-main {
+
+        button {
+            font-family: Roboto, arial, sans-serif;
+            width: 164px;
+            height: 27px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background-color: transparent;
+            text-transform: uppercase;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            display: block;
+            margin: 10px auto 0;
+            box-shadow: none;
+            cursor: pointer;
+
+            @media all and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .prpl-popuplogin {
+
+        .primary {
+            display: flex;
+            justify-content: center;
+        }
+
+        button.action-close {
+            width: 20px;
+        }
+    }
+
+    .caption:hover + .text {
+        color: rgba(0, 0, 0, 1) !important;
+        opacity: 1 !important;
+    }
+
+    .widget-detail-content {
+        @media all and (max-width: $big_view) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    .widget-text-link-container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .widget-timeline-detail .widget-text-product {
+        width: auto;
+    }
+
+    .widget-desktop .widget-detail-right {
+        @media all and (max-width: $big_view) {
+            max-width: 640px;
+            width: 100%;
+        }
+    }
+
+    #widget-prev-post {
+        @media all and (max-width: $big_view) {
+            margin-left: 0;
+        }
+    }
+
+    .widget-detail-title,
+    .widget-post-info {
+        text-align: center;
+    }
+
+    #widget-detail-branding {
+        @media all and (max-width: $big_view) {
+            bottom: 0;
+            right: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            bottom: 0 !important;
+            right: 0 !important;
+            transform: translate(0%, 0%) !important;
+        }
+    }
+
+    .widget-likes-comments {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .likes-number, .comments-number {
+        margin-left: 25px;
+    }
+}

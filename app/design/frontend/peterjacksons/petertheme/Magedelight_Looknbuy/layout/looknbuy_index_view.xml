@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magedelight
+* Copyright (C) 2016 Magedelight <info@magedelight.com>
+*
+* NOTICE OF LICENSE
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+*
+* @category Magedelight
+* @package MD_Bundlediscount
+* @copyright Copyright (c) 2016 Mage Delight (http://www.magedelight.com/)
+* @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+* @author Magedelight <info@magedelight.com>
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        
+        <script src="prototype/prototype.js"/>
+        <script src="jquery.js"/>
+                <link src="Magedelight_Looknbuy::js/looknbuy.js"/>
+                  <link src="Magedelight_Looknbuy::js/jquery.noconflict.js"/>
+        
+    </head>
+
+    <update handle="page_calendar"/>
+    <body>
+        <referenceContainer name="columns.top">
+            <block class="PandaGroup\LooknbuyExtender\Block\Title" name="page.main.title" template="Magedelight_Looknbuy::title.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Magedelight\Looknbuy\Block\View" name="view.container" template="Magedelight_Looknbuy::view.phtml" cacheable="false">
+                <block class="Magedelight\Looknbuy\Block\View" name="social.facebook" as="facebook" template="Magedelight_Looknbuy::social/facebook.phtml" cacheable="false" />
+                <block class="Magedelight\Looknbuy\Block\View" name="social.twitter" as="twitter" template="Magedelight_Looknbuy::social/twitter.phtml" cacheable="false" />
+                <block class="Magedelight\Looknbuy\Block\View" name="social.pinit" as="pinit" template="Magedelight_Looknbuy::social/pinit.phtml" cacheable="false" />
+                <block class="PandaGroup\LooknbuyExtender\Block\Title" name="looknbuy.links" template="Magedelight_Looknbuy::title.phtml"/>
+            </block>
+
+            <referenceBlock name="looknbuy.product.addto">
+                <block class="Magento\Wishlist\Block\Catalog\Product\ProductList\Item\AddTo\Wishlist"
+                       name="looknbuy.product.addto.wishlist" as="wishlist" before="compare"
+                       template="Magento_Wishlist::catalog/product/list/addto/wishlist.phtml"/>
+            </referenceBlock>
+        </referenceContainer>
+    </body>
+
+ 
+</page>

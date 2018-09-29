@@ -1,0 +1,320 @@
+<?php
+/**
+ * Magedelight
+ * Copyright (C) 2016 Magedelight <info@magedelight.com>
+ *
+ * NOTICE OF LICENSE
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see http://opensource.org/licenses/gpl-3.0.html.
+ *
+ * @category Magedelight
+ * @package Magedelight_Looknbuy
+ * @copyright Copyright (c) 2016 Mage Delight (http://www.magedelight.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author Magedelight <info@magedelight.com>
+ */
+?>
+<?php
+$look_id = $this->getRequest()->getParam('look_id');
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$look = $this->getLook();
+$markers = $look['markers'];
+$this->_storeManager = $objectManager->create('\Magento\Store\Model\StoreManagerInterface');
+$this->helper = $objectManager->create('\Magedelight\Looknbuy\Helper\Data');
+
+$this->scopeConfig = $objectManager->create('\Magento\Framework\App\Config\ScopeConfigInterface');
+$layout = $look['layout'];
+$customHelper = $this->helper('Magedelight\Looknbuy\Helper\Data');
+$looknbuyIsEnabled = $customHelper->getConfig('looknbuy/general/enable');
+
+if ($looknbuyIsEnabled == 1){
+
+$lookImgUrl = $this->helper->getImage($look['base_image']);
+?>
+
+<?php
+$storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+$folderName = \Magento\Config\Model\Config\Backend\Image\Favicon::UPLOAD_DIR;
+$uploded_image = $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) .$folderName . '/' . $this->scopeConfig->getValue('looknbuy/styles/marker_icon', $storeScope);
+
+$markerImagePath = $this->scopeConfig->getValue('looknbuy/styles/marker_icon', $storeScope) ? $uploded_image : $block->getViewFileUrl('Magedelight_Looknbuy::images/marker.png') ;
+$markerImageUrl =  $markerImagePath;
+
+$markerWidth = $this->scopeConfig->getValue('looknbuy/styles/marker_width', $storeScope);
+$markerHeight = $this->scopeConfig->getValue('looknbuy/styles/marker_height', $storeScope);
+$fontColor = '#' . $this->scopeConfig->getValue('looknbuy/styles/font_color', $storeScope);
+$backgroundColor = '#' . $this->scopeConfig->getValue('looknbuy/styles/background_color', $storeScope);
+$fontSize = $this->scopeConfig->getValue('looknbuy/styles/font_size', $storeScope);
+$opacity = $this->scopeConfig->getValue('looknbuy/styles/opacity', $storeScope);
+?>
+
+
+<div class="looknbuy looknbuy-2columns">
+    <div class="looknbuy__image-wrapper base_image"  id="wrapper">
+        <img id="image1" src="<?php echo $lookImgUrl; ?>"  class="looknbuy__image pin" easypin-id="example" >
+    </div>
+
+    <?php
+    /** @var \PandaGroup\LooknbuyExtender\Block\Title $footerBlock */
+    $navLinks = $this->getChildBlock('looknbuy.links');
+    ?>
+    <div class="looknbuy__mobile-nav">
+        <div class="looknbuy__mobile-link">
+            <a class="looknbuy__mobile-nav--prev looknbuy__nav-link" href="<?php echo $navLinks->getPreviousLookUrl();?>">
+                <div class="looknbuy__arrow looknbuy__arrow--back"></div> Previous Look
+            </a>
+        </div>
+
+        <div class="looknbuy__mobile-link">
+            <a class="looknbuy__mobile-nav--next looknbuy__nav-link" href="<?php echo $navLinks->getNextLookUrl();?>">Next Look
+                <div class="looknbuy__arrow looknbuy__arrow--next"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="looknbuy__product-list look-data">
+
+        <div class="discount-container looknbuy__discount ">
+            <?php $discount = $block->calculateDiscountAmount($look); ?>
+            <?php if ($discount > 0.00) : ?>
+                <p><?php echo __("Buy this complete look and get ") . $discount . __(" discount."); ?></p>
+            <?php endif; ?>
+        </div>
+
+        <form method="post" action="<?php echo $this->getUrl("looknbuy/cart/add") ?>" data-form="look-view-form" data-role="tocart-form" name="look-option" id="look_items_form" enctype="multipart/form-data" validate="validate">
+             <?php echo $block->getBlockHtml('formkey')?>
+            <div class="add-to-cart-wrapper">
+
+                <div class="looknbuy-slick">
+
+                    <?php $products = json_decode($this->getProducts()); ?>
+
+                    <?php $i = 0; foreach ($products as $_item): ?>
+
+                        <div class="looknbuy__product-wrapper  look-lists <?php echo ($i % 2 == 0) ? 'even' : 'odd'; ?>" >
+                            <div class="looknbuy-slider__slide">
+                                <?php
+                                $product = $objectManager->create('Magento\Catalog\Model\Product')->load($_item->pid);
+                                $productType = $product->getTypeId();
+                                $image = 'category_page_list';
+                                $this->imageBuilder = $objectManager->create('Magento\Catalog\Helper\Image');
+                                $imgUrl = $this->imageBuilder->init($product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(145)->getUrl();
+
+                                //wishlist
+                                $_in_wishlist = false;
+                                foreach ($this->helper('Magento\Wishlist\Helper\Data')->getWishlistItemCollection() as $_wishlist_item){
+                                    if($product->getId() == $_wishlist_item->getProduct()->getId()){
+                                        $_in_wishlist = true;
+                                    }
+                                }
+                                ?>
+
+
+                                <div class="looknbuy__product-info">
+                                    <div class="info-wrapper">
+                                        <span>
+                                            <a class="looknbuy__product-title-link"
+                                               href="<?php echo $product->getProductUrl(); ?>"
+                                               title="<?php echo $product->getName(); ?>">
+                                                <?php echo $product->getName(); ?>
+                                            </a>
+                                        </span>
+                                        <span>
+                                            <p class="looknbuy__product-sku">
+                                                <?php echo __("Product code: "); ?><?php echo $product->getSKU(); ?>
+                                            </p>
+                                        </span>
+
+                                        <div class="looknbuy__product-img--mobile look-image">
+                                            <a href="<?php echo $product->getProductUrl(); ?>" title="<?php echo $product->getName(); ?>"><img src="<?php echo $imgUrl; ?>"></a>
+                                        </div>
+
+                                        <div class="product-info-main__price-and-wishlist looknbuy__price-and-wishlist">
+                                            <div class="price-wrapper">
+                                                <div class="selection-product-price-<?php echo $product->getId() ?>">
+                                                    <?php
+                                                    echo $block->getProductPriceHtml(
+                                                        $product, \Magento\Catalog\Pricing\Price\FinalPrice::PRICE_CODE, \Magento\Framework\Pricing\Render::ZONE_ITEM_VIEW, [
+                                                            'price_id_suffix' => '-look-item'
+                                                        ]
+                                                    )
+                                                    ?>
+
+                                                    <?php
+                                                    echo $block->getProductPriceHtml(
+                                                        $product, 'tier_price', \Magento\Framework\Pricing\Render::ZONE_ITEM_VIEW, [
+                                                            'price_id_suffix' => '-look-item'
+                                                        ]
+                                                    )
+                                                    ?>
+                                                </div>
+                                            </div>
+
+                                            <!-- Wishlist button -->
+                                            <div class="product-info-main__wishlist-wrapper">
+                                                <a class="action towishlist product-info-main__wishlist-a"
+                                                   title="<?php echo $block->escapeHtml(__('Add to Wishlist')); ?>"
+                                                   aria-label="<?php echo $block->escapeHtml(__('Add to Wishlist')); ?>"
+                                                   data-wishlist-product-id="<?php echo $product->getId(); ?>"
+                                                   data-message="<?php /* @escapeNotVerified */ echo __('Adding...');?>"
+                                                   data-config='<?php /* @escapeNotVerified */ echo $block->getWishlistParams($product); ?>'
+                                                   data-mage-init='{"pandaWishlist": {}}'>
+                                                    <figure class="product-info-main__wishlist-star <?php if($_in_wishlist){echo 'active';} ?>"></figure>
+                                                </a>
+                                                <div class="wishlist-message wishlist-message--pdp">
+                                                    <div class="wishlist-message__inner">
+                                                        <span class="wishlist-message__text">
+                                                            Adding to Wishlist...
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Wishlist button -->
+
+                                        </div>
+                                    </div>
+
+                                    <div class="look-option-wrapper">
+                                        <div class="looknbuy__select-options">
+
+                                            <!-- Quantity select -->
+                                            <div class="product-info-main__qty-select control select__wrapper select__wrapper--qty">
+                                                <figure class="select__wide-arrow"></figure>
+                                                <select class="select__pdp-select" type="number" name="qty[<?php echo $product->getId() ?>]"
+                                                        title="<?php /* @escapeNotVerified */ echo __('Qty') ?>" class="input-text qty"
+                                                        data-validate="<?php echo $block->escapeHtml(json_encode($block->getQuantityValidators())) ?>"
+                                                        required>
+                                                    <?php for($i = 1; $i < 11; $i++): ?>
+                                                        <option value="<?php echo $i ?>"><?php echo $i ?></option>
+                                                    <?php endfor; ?>
+                                                </select>
+                                            </div>
+                                            <!-- Quantity select -->
+
+                                            <div class="options-product-list"
+                                                 id="options[<?php echo $product->getId() ?>]"
+                                                 name="options[<?php echo $product->getId() ?>]">
+
+                                                <?php
+                                                if ($productType == 'configurable') {
+                                                    echo $block->getLayout()
+                                                        ->createBlock('Magedelight\Looknbuy\Block\Looks\Type\Configurable')
+                                                        ->setTemplate('Magedelight_Looknbuy::looks/type/configurable.phtml')
+                                                        ->setProduct($product)->toHtml();
+                                                } elseif ($productType == 'downloadable') {
+                                                    echo $block->getLayout()
+                                                        ->createBlock('Magedelight\Looknbuy\Block\Looks\Type\Downloadable')
+                                                        ->setTemplate('Magedelight_Looknbuy::looks/type/downloadable.phtml')
+                                                        ->setProduct($product)->toHtml();
+                                                } elseif ($productType == 'bundle') {
+                                                    $wrapperBlock = $this->getLayout()
+                                                        ->createBlock('Magento\Catalog\Block\Product\View', uniqid(microtime()))
+                                                        ->setTemplate('Magento_Catalog::product/view/options/wrapper.phtml');
+
+                                                    $wrapperBlock->setProductId($product->getId());
+
+                                                    $optionBlock = $block->getLayout()
+                                                        ->createBlock('Magedelight\Looknbuy\Block\Looks\Type\Bundle')
+                                                        ->setTemplate('Magedelight_Looknbuy::product/view/type/bundle/options.phtml')
+                                                        ->setProduct($product);
+
+                                                    $bundleRenderer = $block->getBundleRenderer();
+
+                                                    foreach ($bundleRenderer as $action):
+                                                        $actionBlock = $block->getLayout()->createBlock($action['block'])
+                                                            ->setProduct($product);
+                                                        $optionBlock->setChild($action['type'], $actionBlock);
+                                                    endforeach;
+
+                                                    $summaryblock = $block->getLayout()->createBlock('Magento\Catalog\Block\Product\View')
+                                                        ->setProduct($product)
+                                                        ->setProductId($product->getId())
+                                                        ->setTemplate('Magedelight_Looknbuy::product/view/summary.phtml');
+
+                                                    $priceRender = $this->getLayout()->createBlock('Magento\Catalog\Pricing\Render', 'product.price.render.bundle.customization', ['data' => ['price_render' => 'product.price.render.default', 'price_type_code' => 'configured_price', 'zone' => 'item_view']]);
+
+                                                    $summaryblock->setChild('', $priceRender);
+
+                                                    echo $summaryblock->toHtml();
+
+                                                    $wrapperBlock->setChild('options_configurable', $optionBlock);
+                                                    ?>
+                                                    <div class="bundle-wrapper" data-productid ="<?php echo $product->getId(); ?>">
+                                                        <?php echo $wrapperBlock->toHtml(); ?>
+                                                    </div>
+                                                <?php } ?>
+
+                                                <?php echo $block->getOptionsHtml($product); ?>
+
+                                            </div>
+
+                                            <!-- Size guide chart -->
+                                            <div class="product-info-main__size-chart">
+                                                <?php /* @escapeNotVerified */ echo __('Size Guide'); ?>
+                                            </div>
+                                            <?php echo $block->getLayout()->createBlock('PandaGroup\CMSUpdate\Block\NonCacheableBlock')->setBlockId('size-chart')->toHtml();?>
+
+                                            <script>
+                                                require(['jquery'],
+                                                    function ($) {
+                                                        $('.product-info-main__size-chart').click(function(){
+                                                            $('.size-chart-overlay:first').css('position', 'fixed');
+                                                        });
+
+                                                        $('.size-chart__close').click(function(){
+                                                            $('.size-chart-overlay').css('position', '');
+                                                        });
+                                                    });
+                                            </script>
+                                            <!-- Size guide chart -->
+
+                                        </div>
+
+                                        <button type="button" title="Add to Cart"
+                                                class="looknbuy__button action primary tocart"
+                                                id="look-addtocart-button[<?php echo $product->getId(); ?>]"
+                                                onclick="addToCart('<?php echo $this->helper->getLookProductAddToCartUrl($look_id, $product->getId()) ?>')">
+                                            <span><?php echo __("Add to Cart"); ?></span>
+                                        </button>
+
+                                    </div>
+                                </div>
+                                <div class="looknbuy__product-img look-image">
+                                    <a href="<?php echo $product->getProductUrl(); ?>" title="<?php echo $product->getName(); ?>"><img src="<?php echo $imgUrl; ?>"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <?php $i++; ?>
+                    <?php endforeach; ?>
+                </div>
+                <div class="actions">
+
+                    <button type="button" title="Add to Cart" class="looknbuy__button looknbuy__button--main action primary tocart" id="look-addtocart-button" onclick="addToCart('<?php echo $this->helper->getLookAddToCartUrl($look_id) ?>')">
+                        <span><?php echo __("Add Look to Cart"); ?></span>
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<?php } ?>
+
+
+<script>
+    require(["js/looknbuy"], function (shoplook) {
+        var looknbuyInit = shoplook();
+    });
+</script>

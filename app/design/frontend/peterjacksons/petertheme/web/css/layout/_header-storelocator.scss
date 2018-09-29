@@ -24,9 +24,9 @@
             height: 26px;
         }
 
-        &:hover::before {
-            background-image: url('../../img/sprite/store-locate-hover.png');
-        }
+        //&:hover::before {
+        //    background-image: url('../../img/sprite/store-locate-hover.png');
+        //}
     }
 
     @media all and (max-width: $bp-header) {
@@ -37,11 +37,6 @@
 
 body[class~='cms-home'] {
     @media all and (min-width: $bp-header + 1px) {
-        .header-storelocator {
-            a {
-                color: $white;
-            }
-        }
 
         .headers:hover {
             .header-storelocator {
