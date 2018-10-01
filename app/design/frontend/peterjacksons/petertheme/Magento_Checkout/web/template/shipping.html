@@ -55,11 +55,12 @@
     data-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
-        <div class="checkout__step-separator">
-        </div>
         <!-- ko foreach: getRegion('before-shipping-method-form') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
         <!-- /ko -->
+        <div class="checkout__step-separator">
+        </div>
+
         <div id="checkout-step-shipping_method"
              class="step-content"
              data-role="content"
