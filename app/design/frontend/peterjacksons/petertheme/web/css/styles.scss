@@ -106,12 +106,17 @@
 @import "modules/cms/overlay";
 @import "modules/quickview/amasty-quickview-ajax-view";
 @import "modules/quickview/fancybox-container";
-@import "modules/cms/home";
 @import "modules/cms/sartorial-ninja";
 @import "modules/cms/the-new-wave";
 @import 'modules/cms/returns-and-exhchanges';
 @import 'modules/cms/corporate';
 @import 'modules/cms/discover-more-page';
+@import "modules/cms/homepage/home";
+@import "modules/cms/homepage/buttons";
+@import "modules/cms/homepage/main-banner";
+@import "modules/cms/homepage/home-banner";
+@import "modules/cms/homepage/men-guide";
+@import "modules/cms/homepage/mixins";
 
 @import "modules/blog/blog";
 @import "modules/blog/post-list";

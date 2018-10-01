@@ -1,0 +1,286 @@
+body[class~='cms-home'] {
+
+    .main > p {
+        margin: 0;
+    }
+
+    .block-photo-slider .slides li > a .text button {
+        font-family: Roboto, arial, sans-serif;
+        width: 164px;
+        height: 27px;
+        border-radius: 2px;
+        border: 1px solid white;
+        background-color: transparent;
+        text-transform: uppercase;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+        display: block;
+        margin: 10px auto 0;
+        box-shadow: none;
+        cursor: pointer;
+        padding: 0 !important;
+
+        @media all and (max-width: 1200px) {
+            width: 100px;
+        }
+
+        @media all and (max-width: 700px) {
+            width: 70px;
+        }
+
+        @media all and (max-width: 600px) {
+            width: 70px;
+        }
+
+        @media all and (max-width: 373px) {
+            display: none;
+        }
+    }
+
+    .block-photo-slider .slides li > a .overlay {
+        @media all and (max-width: 373px) {
+            display: none;
+        }
+    }
+
+    .block-title > p {
+        font-family: 'sofia-pro', arial, sans-serif;
+        font-size: 17px;
+        color: #363636;
+        margin: 0 0 30px 0;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 12pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 14px;
+        }
+    }
+
+    .block-title > h2 {
+        text-align: center;
+        color: #3f3e3e;
+        font-size: 34px;
+        font-weight: 500;
+        margin: 10px 0 22px 0;
+        letter-spacing: 1px;
+        font-family: 'sofia-pro', sans-serif;
+
+        @media all and (max-width: $medium_view) {
+            font-size: 26pt;
+        }
+
+        @media all and (max-width: 560px) {
+            font-size: 25px;
+        }
+    }
+
+    .widget__slider-title {
+        text-align: center;
+        color: #3f3e3e;
+        font-size: 34px;
+        font-weight: 500;
+        font-family: 'sofia-pro', sans-serif;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+        margin-top: 6px;
+
+        @media all and (max-width: 560px) {
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    }
+
+    .widget__slider-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider__item-box {
+        margin: 15px 0 0 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding: 0 15px;
+        }
+    }
+
+    .amquickview-hover {
+        height: 40px;
+        padding: 0;
+        z-index: 1;
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 90%;
+        }
+    }
+
+    .amquickview-link {
+        height: 100%;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slick-dots {
+        //display: none !important;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+
+        button {
+            background-color: #acacac;
+            border: none;
+            height: 7px;
+            font-size: 16px;
+            text-indent: -9999px;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            margin-left: 5px;
+            padding: 4px;
+            width: 5px;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            padding-top: 15px;
+        }
+    }
+
+    .slick-dots li {
+        display: none;
+    }
+
+    @media all and (min-width: $sm-breakpoint) {
+
+        .slick-dots li:nth-last-child(1),
+        .slick-dots li:nth-last-child(2),
+        .slick-dots li:nth-last-child(3) {
+            display: block;
+        }
+
+        .slick-dots li:nth-child(1),
+        .slick-dots li:nth-child(2) {
+            display: block;
+        }
+    }
+
+    @media all and (max-width: $sm-breakpoint) {
+
+        .slick-dots li.slick-active,
+        .slick-dots li.slick-active + li,
+        .slick-dots li.slick-active + li + li {
+            display: block;
+        }
+
+        .slick-dots li:nth-last-child(1),
+        .slick-dots li:nth-last-child(2),
+        .slick-dots li:nth-last-child(3) {
+            display: block;
+        }
+
+        .slick-dots li.slick-active ~ li:nth-last-child(1),
+        .slick-dots li.slick-active ~ li:nth-last-child(2),
+        .slick-dots li.slick-active ~ li:nth-last-child(3) {
+            display: none;
+        }
+
+        .slick-dots li.slick-active + li + li:nth-last-child(3),
+        .slick-dots li.slick-active + li + li:nth-last-child(2),
+        .slick-dots li.slick-active + li + li:nth-last-child(1),
+        .slick-dots li.slick-active + li:nth-last-child(3),
+        .slick-dots li.slick-active + li:nth-last-child(2),
+        .slick-dots li.slick-active + li:nth-last-child(1) {
+            display: block;
+        }
+    }
+
+    .slick-slide img {
+
+        @media all and (max-width: $xs-breakpoint) {
+            max-height: 200px;
+            max-width: 160px;
+        }
+    }
+
+    .widget__slider {
+        padding: 2% 9%;
+
+        @media all and (max-width: 560px) {
+            padding: 2%;
+        }
+    }
+
+    .price-box {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 10px;
+
+        .old-price {
+            margin-right: 6px;
+        }
+
+        .price {
+            font-size: 14px;
+            font-family: Roboto;
+            font-weight: 300;
+        }
+
+        .price-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .special-price {
+            border-left: 1px solid black;
+            padding-left: 6px;
+        }
+
+        .old-price,
+        .price,
+        .price-box,
+        .special-price {
+
+            @media all and (max-width: $xs-breakpoint) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .slider__item-name {
+        font-size: 18px;
+        color: black;
+        flex: 0 0 auto;
+        font-family: 'sofia-pro', sans-serif;
+        font-weight: 500;
+        text-align: left;
+
+        @media all and (max-width: $xs-breakpoint) {
+            font-size: 13px;
+        }
+    }
+
+    .search-overlay__submit {
+        button {
+            width: auto;
+        }
+    }
+
+    .search-overlay__zoom {
+        border: none;
+        padding: 4px 1px;
+    }
+}
+
