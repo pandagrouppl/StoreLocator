@@ -3,7 +3,4 @@
     <type name="Magento\Checkout\Model\ShippingInformationManagement">
         <plugin name="save_order_comment_in_quote" type="PandaGroup\CommentBox\Plugin\Model\Checkout\ShippingInformationManagement" sortOrder="20"/>
     </type>
-    <type name="Magento\Checkout\Model\GuestShippingInformationManagement">
-        <plugin name="save_order_comment_in_quote" type="PandaGroup\CommentBox\Plugin\Model\Checkout\GuestShippingInformationManagement" sortOrder="10"/>
-    </type>
 </config>
