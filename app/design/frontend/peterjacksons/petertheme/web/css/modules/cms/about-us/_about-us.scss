@@ -139,6 +139,13 @@
         padding-bottom: 15px;
         overflow: hidden;
 
+        @media all and (min-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         &--left {
             flex: 0 1 52.3%;
 
