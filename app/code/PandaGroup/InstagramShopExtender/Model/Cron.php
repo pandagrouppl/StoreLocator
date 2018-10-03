@@ -23,6 +23,11 @@ class Cron extends \Magenest\InstagramShop\Model\Cron
     protected $_photoService;
 
     /**
+     * @var \PandaGroup\InstagramShopExtender\Model\Provider\Api
+     */
+    protected $_apiProvider;
+
+    /**
      * Cron constructor.
      *
      * @param \Magenest\InstagramShop\Model\Client $client
@@ -35,12 +40,14 @@ class Cron extends \Magenest\InstagramShop\Model\Cron
         \Magenest\InstagramShop\Model\PhotoFactory $photoFactory,
         \Magenest\InstagramShop\Model\TaggedPhotoFactory $taggedPhotoFactory,
         \PandaGroup\InstagramShopExtender\Model\Provider\Photo $photoProvider,
-        \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService
+        \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService,
+        \PandaGroup\InstagramShopExtender\Model\Provider\Api $apiProvider
     ) {
         parent::__construct($client, $photoFactory, $taggedPhotoFactory);
 
         $this->_photoProvider = $photoProvider;
         $this->_photoService = $photoService;
+        $this->_apiProvider = $apiProvider;
     }
 
     /**
@@ -51,9 +58,7 @@ class Cron extends \Magenest\InstagramShop\Model\Cron
      */
     public function getAllPhotos()
     {
-        // api: https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN
-        $handle = '/users/self/media/recent/';
-        $response = $this->_client->api($handle);
+        $response = $this->_apiProvider->getAllPhotos();
 
         if ((true === isset($response['data'])) && (count($response['data']) > 0)) {
             $photosFromInsta = $response['data'];

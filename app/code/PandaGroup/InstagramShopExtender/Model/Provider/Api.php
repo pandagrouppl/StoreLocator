@@ -10,97 +10,38 @@
 
 namespace PandaGroup\InstagramShopExtender\Model\Provider;
 
-class Photo
+class Api
 {
+    const ENDPOINT_MEDIA_RECENT = '/users/self/media/recent/';
+    const DEFAULT_COUNT = 10000;
+
     /**
      * @var \Magenest\InstagramShop\Model\Client
      */
     protected $_client;
 
     /**
-     * @var \Magenest\InstagramShop\Model\PhotoFactory
-     */
-    protected $_photoFactory;
-
-    /**
-     * @var \Magenest\InstagramShop\Model\TaggedPhotoFactory
-     */
-    protected $_taggedPhotoFactory;
-
-    /**
-     * @var null|\Magenest\InstagramShop\Model\Photo[]|[]
-     */
-    protected $_savedPhotos;
-
-    /**
-     * Provider Photo constructor.
+     * Provider Api constructor.
      *
      * @param \Magenest\InstagramShop\Model\Client $client
-     * @param \Magenest\InstagramShop\Model\PhotoFactory $photoFactory
-     * @param \Magenest\InstagramShop\Model\TaggedPhotoFactory $taggedPhotoFactory
      */
     public function __construct(
-        \Magenest\InstagramShop\Model\Client $client,
-        \Magenest\InstagramShop\Model\PhotoFactory $photoFactory,
-        \Magenest\InstagramShop\Model\TaggedPhotoFactory $taggedPhotoFactory
+        \Magenest\InstagramShop\Model\Client $client
     ) {
         $this->_client = $client;
-        $this->_photoFactory = $photoFactory;
-        $this->_taggedPhotoFactory = $taggedPhotoFactory;
     }
 
     /**
-     * @return \Magenest\InstagramShop\Model\Photo[]
-     */
-    public function getAllPhotosAsArray()
-    {
-        if (null === $this->_savedPhotos) {
-            $this->_savedPhotos = $this->_photoFactory->create()
-                ->getCollection()
-                ->getItems();
-        }
-
-        return $this->_savedPhotos;
-    }
-
-    /**
-     * @param $photoId
-     *
-     * @return \Magenest\InstagramShop\Model\Photo
-     */
-    public function getPhotoByPhotoId($photoId)
-    {
-        $savedPhotos = $this->getAllPhotosAsArray();
-
-        if (false === empty($savedPhotos)) {
-            foreach ($savedPhotos as $savedPhoto) {
-                if ($savedPhoto->getData('photo_id') == $photoId) {
-                    return $savedPhoto;
-                }
-            }
-        }
-
-        return $this->_photoFactory->create();
-    }
-
-    /**
-     * @param array $updatedPhotoIds
-     *
      * @return array
      */
-    public function getPhotosToRemove($updatedPhotoIds)
+    public function getAllPhotos()
     {
-        $savedPhotos = $this->getAllPhotosAsArray();
-        $photosToRemove = [];
+        // api: https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN
 
-        foreach ($savedPhotos as $savedPhoto) {
-            $photoId = $savedPhoto->getData('photo_id');
+        $params = [
+            'count' => self::DEFAULT_COUNT,
+        ];
 
-            if (false === in_array($photoId, $updatedPhotoIds)) {
-                $photosToRemove[] = $savedPhoto;
-            }
-        }
-
-        return $photosToRemove;
+        return $this->_client->api(self::ENDPOINT_MEDIA_RECENT, 'GET', $params);
     }
 }

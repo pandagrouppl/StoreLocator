@@ -23,6 +23,11 @@ class GetPhoto extends \Magenest\InstagramShop\Controller\Adminhtml\Instagram\Ge
     protected $_photoService;
 
     /**
+     * @var \PandaGroup\InstagramShopExtender\Model\Provider\Api
+     */
+    protected $_apiProvider;
+
+    /**
      * GetPhoto constructor.
      *
      * @param \Magento\Backend\App\Action\Context $context
@@ -30,18 +35,21 @@ class GetPhoto extends \Magenest\InstagramShop\Controller\Adminhtml\Instagram\Ge
      * @param \Magenest\InstagramShop\Model\Client $client
      * @param \PandaGroup\InstagramShopExtender\Model\Provider\Photo $photoProvider
      * @param \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService
+     * @param \PandaGroup\InstagramShopExtender\Model\Provider\Api $apiProvider
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magenest\InstagramShop\Model\PhotoFactory $photoFactory,
         \Magenest\InstagramShop\Model\Client $client,
         \PandaGroup\InstagramShopExtender\Model\Provider\Photo $photoProvider,
-        \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService
+        \PandaGroup\InstagramShopExtender\Model\Service\Photo $photoService,
+        \PandaGroup\InstagramShopExtender\Model\Provider\Api $apiProvider
     ) {
         parent::__construct($context, $photoFactory, $client);
 
         $this->_photoProvider = $photoProvider;
         $this->_photoService = $photoService;
+        $this->_apiProvider = $apiProvider;
     }
 
     /**
@@ -49,9 +57,7 @@ class GetPhoto extends \Magenest\InstagramShop\Controller\Adminhtml\Instagram\Ge
      */
     protected function getPhotos()
     {
-        $endpoint = '/users/self/media/recent';
-        $param = ['count' => 100000];
-        $response = $this->client->api($endpoint, 'GET', $param);
+        $response = $this->_apiProvider->getAllPhotos();
 
         if ((true === isset($response['data'])) && (count($response['data']) > 0)) {
             $photosFromInsta = $response['data'];
