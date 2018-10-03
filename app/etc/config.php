@@ -133,6 +133,7 @@ return array (
     'PandaGroup_CategorySidebar' => 1,
     'PandaGroup_CategoryWidget' => 1,
     'PandaGroup_Checkout' => 1,
+    'PandaGroup_CommentBox' => 1,
     'PandaGroup_ContactExtender' => 1,
     'PandaGroup_Corporate' => 1,
     'PandaGroup_CouponExtender' => 1,
