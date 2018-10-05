@@ -45,6 +45,10 @@
         <!-- ko if: (isFormInline) -->
         <!-- ko template: 'Magento_Checkout/shipping-address/form' --><!-- /ko -->
         <!-- /ko -->
+
+        <!-- ko foreach: getRegion('before-shipping-method-form') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
     </div>
 </li>
 
@@ -55,9 +59,6 @@
     data-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
-        <!-- ko foreach: getRegion('before-shipping-method-form') -->
-        <!-- ko template: getTemplate() --><!-- /ko -->
-        <!-- /ko -->
         <div class="checkout__step-separator">
         </div>
 
