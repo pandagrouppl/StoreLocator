@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin to add discount to CustomerData object -->
+    <type name="Magento\Checkout\CustomerData\Cart">
+        <plugin disabled="false"
+                name="PandaGroup_SubtotalInMinicart_Plugin_CustomerData_Cart"
+                sortOrder="20"
+                type="PandaGroup\SubtotalInMinicart\Plugin\CustomerData\Cart" />
+    </type>
+</config>

@@ -1,6 +1,6 @@
 <?php
 
-namespace PandaGroup\DiscountInMinicart\Plugin\CustomerData;
+namespace PandaGroup\SubtotalInMinicart\Plugin\CustomerData;
 
 /**
  * Cart source
@@ -12,15 +12,14 @@ class Cart extends \Magento\Checkout\CustomerData\Cart
      *
      * {@inheritdoc}
      */
+
     public function afterGetSectionData(\Magento\Checkout\CustomerData\Cart $subject, $result)
     {
-        $discountAmount = $this->getQuote()->getSubtotal() - $this->getQuote()->getSubtotalWithDiscount();
 
-        $result['discount_amount'] = $discountAmount;
-        $result['discount'] = $this->checkoutHelper->formatPrice(-$discountAmount);
+        $subtotal_mc = $this->getQuote()->getGrandTotal();
+        $result['subtotal_minicart'] = $this->checkoutHelper->formatPrice($subtotal_mc);
 
         return $result;
     }
 }
-
 
