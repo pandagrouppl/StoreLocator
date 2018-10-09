@@ -4,7 +4,7 @@
     <type name="Magento\Checkout\CustomerData\Cart">
         <plugin disabled="false"
                 name="PandaGroup_SubtotalInMinicart_Plugin_CustomerData_Cart"
-                sortOrder="10"
+                sortOrder="20"
                 type="PandaGroup\SubtotalInMinicart\Plugin\CustomerData\Cart" />
     </type>
 </config>

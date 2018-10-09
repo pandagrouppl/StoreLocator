@@ -13,7 +13,10 @@ define([
          */
         initialize: function () {
             this._super();
+            console.log(customerData);
+
             this.cart = customerData.get('cart');
         }
     });
 });
+
