@@ -12,6 +12,8 @@ namespace PandaGroup\CommentBox\Plugin\Model\Checkout;
 
 class ShippingInformationManagement
 {
+    const MAX_COMMENT_LENGTH = 200;
+
     /**
      * @var \Magento\Quote\Model\QuoteRepository
      */
@@ -48,6 +50,12 @@ class ShippingInformationManagement
     ) {
         $extAttributes = $addressInformation->getExtensionAttributes();
         $orderComment = $extAttributes->getOrderComment();
+        $orderComment = trim(strip_tags($orderComment));
+
+        if (strlen($orderComment) > self::MAX_COMMENT_LENGTH) {
+            $orderComment = substr($orderComment, 0, self::MAX_COMMENT_LENGTH) . '...';
+        }
+
         $quote = $this->_quoteRepository->getActive($cartId);
         $quote->setOrderComment($orderComment);
     }
