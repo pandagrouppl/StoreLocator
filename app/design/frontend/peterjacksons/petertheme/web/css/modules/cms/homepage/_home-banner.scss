@@ -1,8 +1,8 @@
 .home-banner {
     width: 100%;
     max-width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
     position: relative;
 
     &--black {
@@ -170,7 +170,7 @@
     }
 
     &__image {
-        background-position: center;
+        background-position: center, center;
         width: 96%;
         height: 803px;
         cursor: pointer;
@@ -187,7 +187,7 @@
         }
 
         &--measure {
-            background-image: url('../../img/assets/home 25-09-18/made-to-measure-img.png');
+            background-image: url('../../img/assets/home 25-09-18/made-to-measure-img.png'), url('../../img/assets/home 25-09-18/made-to-measure-img-low.jpg');
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -244,7 +244,7 @@
         }
 
         &--shoe {
-            background-image: url('../../img/assets/home 25-09-18/italian-shoe.png');
+            background-image: url('../../img/assets/home 25-09-18/italian-shoe.png'), url('../../img/assets/home 25-09-18/italian-shoe-l.jpg');
             width: 100%;
             height: 763px;
             justify-content: flex-end;
@@ -338,7 +338,7 @@
         }
 
         &--waterfront {
-            background-image: url('../../img/assets/home 25-09-18/leo-colors.png');
+            background-image: url('../../img/assets/home 25-09-18/leo-colors.png'), url('../../img/assets/home 25-09-18/leo-colors-loww.jpg');
             width: 100%;
         }
     }

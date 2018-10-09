@@ -1,10 +1,10 @@
 .main-banner {
-    background-image: url('../../img/assets/home 25-09-18/main-banner-ann.png');
+    background-image:  url('../../img/assets/home 25-09-18/main-banner-ann.png'), url('../../img/assets/home 25-09-18/main-banner-ann-low.png');
     width: 100%;
     max-width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top 0;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top 0, center top 0;
     height: 716px;
     position: relative;
     margin-top: 120px;
