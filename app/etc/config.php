@@ -119,7 +119,7 @@ return array (
     'Magento_Weee' => 1,
     'Magento_CatalogWidget' => 1,
     'Magento_Wishlist' => 1,
-    'Mageplaza_Core' => 1,
+    'Mageplaza_Core' => 0,
     'Mageplaza_BetterPopup' => 0,
     'MagicToolbox_Magic360' => 1,
     'Mirasvit_Profiler' => 1,
