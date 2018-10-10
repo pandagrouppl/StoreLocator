@@ -5,6 +5,55 @@
  */
 -->
 <!--@subject {{trans "Your %store_name order confirmation" store_name=$store.getFrontendName()}} @-->
+<!--@styles
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-style:italic;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+font-style:normal;font-weight:200;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-style:normal;font-weight:600;
+}
+@-->
 <!--@vars {
 "var formattedBillingAddress|raw":"Billing Address",
 "var order.getEmailCustomerNote()":"Email Order Note",
@@ -26,92 +75,175 @@
             <td align="center" valign="top" style="padding:0; ">
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
-                    <tr style="display: block; height: 5px;">
-                        <td></td>
-                    </tr>
-                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
-                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6b9dda">
-                            <h1 style="color: #fff">THANK YOU FOR YOUR ORDER</h1>
-                            <p style="font-size: 19px; color: #fff">Hi {{var order.getBillingAddress().getName()}}, we've recieved your order and we have our best guys on it.
-                                You'll receive a shipping confirmation email soon. Thank you for shopping with Peter Jackson
-                                (your wardrobe will thank you too!)</p>
-                        </td>
-                    </tr>
-                    <tr style="display: block; height: 10px;">
-                        <td></td>
-                    </tr>
-                </table>
-
-                <table class="table-width-wrap table-order-gray" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
-                    <tr style="height: 41px; font-size: 18px;">
-                        <td style="text-align: center; width: 50%; background: #3f3e3e; padding: 11px 0px 11px 36px;" valign="top" align="left">
-                            <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;"><span style="font-weight: bold;">ORDER NUMBER: #</span>{{var order.increment_id}}</p>
-                        </td>
-                        <td style="text-align: right; width: 50%; background: #3f3e3e; padding: 11px 35px 11px 0px;" valign="top" align="left">
-                            <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;"><span style="font-weight: bold;">ORDER DATE:</span> <span style="display: block;">{{var order.getCreatedAtFormatted(3)}}</span></span></p>
+                    <tr>
+                        <td>
+                            <p style="font-size:40px; padding:30px 18px 10px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">HI {{var order.getBillingAddress().getName()}}!</p>
+                            <p style="font-size:17px; padding:10px 18px 30px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">THANK YOU FOR YOUR ORDER</p>
                         </td>
                     </tr>
                 </table>
 
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" style="padding: 10px 0 0 0;">
+                            <img
+                                    width="550"
+                                    height="182"
+                                    src="{{view url='images/email/order-conf.jpg'}}"
+                            />
+                        </td>
+                    </tr>
+                </table>
+
+                <br/>
 
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
-                    <tr style="display: block; height: 10px;">
-                        <td></td>
-                    </tr>
                     <tr>
-                        <td class="table-add-pdd" style="width: 100%;  padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="left">
-                            <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000;">ORDER SUMMARY</p>
+                        <td>
+                            <p style="font-size:17px; padding:30px 18px 20px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">We’ve recieved your order and we have our best guys on it.<br/> You'll receive a shipping confirmation email soon.</p>
+                            <p style="font-size:17px; padding:10px 18px 30px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Thank you for shopping with Peter Jackson.<br/> (Your wardrobe will thank you too!)</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <br/>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateColumns" style="background:#7E7E7E;height: 70px;">
+                    <tr>
+                        <td align="center" valign="middle" width="50%" class="templateColumnContainer">
+                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="middle" class="leftColumnContent">
+                                        <p style="font-size: 15px;color: white;padding: 20px 0 0 50px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">ORDER NUMBER: #{{var order.increment_id}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="50%" class="templateColumnContainer">
+                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="top" class="rightColumnContent">
+                                        <p style="font-size: 15px;color: white;padding: 20px 0 0 160px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">ORDER DATE <span style="display: block; font-size: 12px;color: white;">{{var order.getCreatedAtFormatted(3)}}</span></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="500"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr>
+                        <td style="border-bottom: 1px solid #000000;">
+                            <p style="font-size:15px; padding:30px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">ORDER SUMMARY</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602">
-                                <tbody>
-                                <tr>
-                                    <td class="table-width-wrap-half" align="left" valign="top" width="301" style="font-size:18px; padding: 36px 0 10px 36px; width: 50%; ">
-
-                                        <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">BILLING INFORMATION</div>
-                                        <div class="wrap-in">
-                                            {{var formattedBillingAddress|raw}}
-                                        </div>
-                                    </td>
-                                    <th class="hiditres" width="10"></th>
-                                    <td class="table-width-wrap-half" align="left" valign="top" width="301" style="font-size:18px; padding: 36px 36px 10px 0; width: 50%; ">
-
-                                        <div class="wrap-in" style="font-weight: bold; padding-bottom: 20px;">SHIPPING INFORMATION</div>
-                                        <div class="wrap-in">
-                                            {{var order.getShippingDescription()}}
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-
-                    <tr style="display: block; height: 36px;">
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="table-add-pdd" style="width: 100%; padding: 11px 36px 11px 36px; border-bottom: 1px solid #e7e7e7; border-top: 1px solid #e7e7e7;" valign="top" align="center">
-                            <p style="margin: 0 0 0 0; font-size: 20px; font-weight: bold; color: #000000; text-align: center;">ITEM(S) DETAILS</p>
+                            <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">BILLING INFORMATION</p>
                         </td>
                     </tr>
                     <tr>
-                        <td class="table-items-nested" align="center">
-                            {{layout handle="sales_email_order_items" order=$order}}
-                            <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602">
+                        <td style="border-bottom: 1px solid #000000;">
+                            <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;">{{var formattedBillingAddress|raw}}</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table cellpadding="0" cellspacing="0" border="0" width="550" align="center">
+                    <tr>
+                        <td><table cellpadding="0" cellspacing="0" border="0" width="500" align="center" class="fluid-table">
+                            <tr>
+                                <td>
+                                    <table width="33%" align="left" border="0" cellpadding="0" cellspacing="0" class="fluid-table">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Items</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!--[if mso]></td><td valign="top"><![endif]-->
+
+                                    <table width="33%" align="left" border="0" cellpadding="0" cellspacing="0" class="fluid-table">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Qty</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!--[if mso]></td><td valign="top"><![endif]-->
+
+                                    <table width="33%" align="left" border="0" cellpadding="0" cellspacing="0" class="fluid-table">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:right; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Price</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="500" id="templateColumns" style="margin: 30px auto 0 auto;border-bottom: 1px solid #000000;">
+                    <tr>
+                        <td align="center" valign="top" width="50%%" class="templateColumnContainer" style="padding: 0 0 20px 0;">
+                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                 <tr>
-                                    <td class="table-add-pdd table-force-left" style="text-align: center; padding: 3px 0px 3px 0">Payment method</td>
-                                    <td class="table-add-pdd table-width-wrap-paym table-force-left" style="text-align: left; width: 222px; padding: 3px 0px 3px 0px; font-size: 18px;">{{var order.getPayment().getMethodInstance().getTitle()}}</td>
+                                    <td valign="top" class="centerColumnContent" style="text-align:left;font-size:16px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">
+                                        Payment method
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="50%" class="templateColumnContainer">
+                            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="top" class="centerColumnContent" style="text-align:right;font-size:16px;font-family: Roboto, sans-serif;">
+                                        {{var order.getPayment().getMethodInstance().getTitle()}}
+                                    </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+                </table>
 
-                    <tr style="display: block; height: 33px;">
-                        <td></td>
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="500"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr>
+                        <td style="border-bottom: 1px solid #000000;">
+                            <p style="font-size:15px; padding:30px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">ITEM(S) DETAILS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td style="border-bottom: 1px solid #000000;">
+                            <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;">{{layout handle="sales_email_order_items" order=$order}}</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
+                       style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
+                    <tr>
+                        <td>
+                            <p style="font-size:17px; padding:30px 18px 10px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">SHIPPING INFORMATION</p>
+                            <p style="font-size:17px; padding:10px 18px 30px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Standard Shipping - Est. delivery 4-5 business days</p>
+                        </td>
                     </tr>
                 </table>
 

@@ -5,6 +5,55 @@
  */
 -->
 <!--@subject {{trans "Welcome to %store_name" store_name=$store.getFrontendName()}} @-->
+<!--@styles
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-style:italic;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+font-style:normal;font-weight:200;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-style:normal;font-weight:600;
+}
+@-->
 <!--@vars {
 "var this.getUrl($store, 'customer/account/')":"Customer Account URL",
 "var customer.email":"Customer Email",
@@ -17,12 +66,14 @@
 
         <tr>
             <td align="center" valign="top" style="padding:0; ">
+                <br/>
 
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
-                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
-                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7">
-                            <h1 style="color: white; text-transform: uppercase; font-size: 30px; margin-bottom: 0; text-align: center;">Welcome to Peter Jackson!</h1>
+                    <tr>
+                        <td>
+                            <p style="font-size:40px; padding:10px 18px; line-height:30px; text-align:center; color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Dear {{var customer.name}},</p>
+                            <br />
                         </td>
                     </tr>
                 </table>
@@ -31,22 +82,45 @@
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF; color:#5f5f5f;">
                     <tr>
                         <td>
-                            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align: center;">{{trans "Welcome to %store_name." store_name=$store.getFrontendName()}}</p>
-                            <p style="font-size:16px; padding:0 18px; line-height:24px; text-align:center; ">
-                                To log in when visiting our site just click <br /><a href="{{store url="customer/account/"}}" style="color:#6b9dda; text-decoration:none;">Login</a> or <a href="{{store url="customer/account/"}}" style="color:#6b9dda; text-decoration:none;">My Account</a> <br />at the top of every page, and then enter your e-mail address and password.</p>
-                            <p style="margin: 0; text-align:center; font-size:16px; padding:0 10px; line-height:20px; font-family: Arial, sans-serif;">
+                            <p style="font-size:17px; padding:0 18px; line-height:24px; text-align: center; color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">{{trans "Welcome to %store_name." store_name=$store.getFrontendName()}}</p>
+                            <p style="font-size:17px; padding:0 18px; line-height:24px; text-align:center;color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">
+                                To log in when visiting our site just click <a href="{{store url="customer/account/"}}" style="color:#000000; text-decoration:none;">Login</a> or <a href="{{store url="customer/account/"}}" style="color:#000000; text-decoration:none;">My Account</a> <br />at the top of every page, and then enter your e-mail<br/> address and password.</p>
+                            <p style="margin: 0; text-align:center; font-size:17px; padding:0 10px; line-height:20px; color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">
                                 Use the following values when prompted to log in:<br/>
-                                <strong>E-mail</strong>: {{var customer.email}}<br/>
-                                <strong>Password</strong>: The password you have chosen when creating this account</br>
-                            <p style="font-size:16px; text-align: center; line-height:24px; margin:16px 0 16px 0;">When you log in to your account, you will be able to do the following:</p>
-                            <ul style="font-size: 14px; line-height:24px; margin:0; padding:0;">
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Proceed through checkout faster when making a purchase</li>
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Check the status of orders</li>
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">View past orders</li>
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Make changes to your account information</li>
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Change your password</li>
-                                <li style="list-style:none inside; text-align: center; padding:0 0 0 10px;">Store alternative addresses (for shipping to multiple family members and friends!)</li>
-                            </ul>
+                                E-mail: {{var customer.email}}<br/>
+                                Password: The password you have chosen when creating<br/> this account</br>
+                            </p>
+                            <br/>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 550px;margin: 0 auto;">
+                    <tr>
+                        <td align="center" style="padding: 10px 0 0 0;">
+                            <img
+                                    width="100%"
+                                    height="182"
+                                    src="{{view url='images/email/new.jpg'}}"
+                            >
+                        </td>
+                    </tr>
+                </table>
+
+                <br/>
+                <br/>
+
+                <table class="table-width-wrap" cellspacing="0" cellpadding="10" border="0" width="550" style="padding: 15px 0 15px 0; text-align: center;color: #000000; border:0px; background-color: #F3F3F3; vertical-align: middle; margin: 0 auto 20px auto;">
+                    <tr>
+                        <td>
+                            <p style="font-size:17px; padding: 20px 18px 10px 18px; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">When you log in to your account, you will be<br/> able to do the following:</p>
+                            <p style="font-size:17px; padding: 10px 0 0 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Proceed through checkout faster when making<br/> a purchase</p>
+                            <p style="font-size:17px; padding: 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Check the status of orders</p>
+                            <p style="font-size:17px; padding: 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">View past orders</p>
+                            <p style="font-size:17px; padding: 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Make changes to your account information</p>
+                            <p style="font-size:17px; padding: 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Change your password</p>
+                            <p style="font-size:17px; padding: 0 0 20px 0; line-height:30px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">Store alternative addresses (for shipping to<br/> multiple family members and friends!)</p>
                         </td>
                     </tr>
                 </table>
