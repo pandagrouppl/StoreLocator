@@ -43,7 +43,8 @@
         "symfony/yaml": "2.8.34",
         "symfony/config": "2.8.34",
         "symfony/dependency-injection": "2.8.34",
-        "symfony/stopwatch": "3.4.4"
+        "symfony/stopwatch": "3.4.4",
+        "mageplaza/module-better-popup": "^1.0"
     },
     "require-dev": {
         "mirasvit/module-profiler": "^1.0",

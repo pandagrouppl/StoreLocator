@@ -1,0 +1,52 @@
+.popup-exit {
+    border: 10px solid $grey;
+    background-image: url('../../img/assets/elevate-your-style/AW18-Landing-Page-V4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__default {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 40px;
+        //background-color: lightgrey;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: flex-end;
+        height: 30px;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    &__text {
+        font: sofia-pro, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 35px;
+        text-align: center;
+        font-weight: 600;
+        padding: 30px;
+        text-decoration: underline;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+        margin-top: 20px;
+
+        span {
+            font-weight: 600;
+            color: lightslategray;
+        }
+    }
+}
