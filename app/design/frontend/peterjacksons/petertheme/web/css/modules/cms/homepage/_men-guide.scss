@@ -1,0 +1,231 @@
+//.men-guide {
+//    text-align: center;
+//    font-family: 'Lato', sans-serif;
+//    padding: 0 2% 55px 2%;
+//
+//    &__header {
+//        text-align: center;
+//        padding: 20px 2% 55px 2%;
+//
+//        h1 {
+//            font-size: 50px;
+//            font-weight: 600;
+//            margin: 0;
+//        }
+//
+//        p {
+//            font-size: 16px;
+//            font-weight: 400;
+//            margin: 0;
+//            padding: 15px 0 0 0;
+//        }
+//    }
+//
+//    &__boxes {
+//        max-width: 100%;
+//        display: flex;
+//        text-align: center;
+//        justify-content: center;
+//
+//        &--half {
+//            display: flex;
+//            justify-content: center;
+//            width: 50%;
+//            cursor: pointer;
+//
+//            &:hover .men-guide-slider__more {
+//                border-bottom: 1px solid black;
+//            }
+//
+//            &:first-of-type {
+//                padding-right: 20px;
+//            }
+//        }
+//    }
+//}
+//
+//.men-guide-slider {
+//    width: 869px;
+//    max-width: 100%;
+//    position: relative;
+//
+//    &__img {
+//
+//        img {
+//            width: 100%;
+//            height: auto;
+//        }
+//    }
+//
+//    &__title {
+//        font-size: 22px;
+//        font-weight: 700;
+//        padding: 30px 20px 20px 20px;
+//        margin: 0;
+//    }
+//
+//    &__more {
+//        margin-top: 20px;
+//        font-size: 16px;
+//        font-weight: 700;
+//        display: inline-block;
+//        text-transform: none;
+//        padding: 5px 0 5px 0;
+//        border-bottom: 1px solid rgba(0, 0, 0, 0);
+//        color: black;
+//    }
+//
+//    p {
+//        font-size: 16px;
+//        font-weight: 400;
+//        letter-spacing: 0.5px;
+//        padding: 0 40px;
+//        margin: 0;
+//    }
+//
+//    .slick-initialized .slick-slide {
+//        display: block;
+//    }
+//
+//    .slick-arrow {
+//        position: absolute;
+//        top: 39%;
+//        transform: translate(0%, -50%);
+//
+//        @media all and (max-width: 1200px) {
+//            top: 35%;
+//        }
+//
+//        @media all and (max-width: 966px) {
+//            top: 32%;
+//        }
+//
+//        @media all and (max-width: 750px) {
+//            top: 36%;
+//        }
+//
+//        @media all and (max-width: 560px) {
+//            top: 34%;
+//        }
+//
+//        @media all and (max-width: 400px) {
+//            top: 28%;
+//        }
+//    }
+//
+//    .slick-prev {
+//        left: 20px;
+//        z-index: 2;
+//
+//        &::after {
+//            content: '';
+//            display: inline-block;
+//            width: 4em;
+//            height: 4em;
+//            border-top: 0.2em solid #fff;
+//            border-right: 0.2em solid #fff;
+//            transform: rotate(-135deg);
+//        }
+//    }
+//
+//    .slick-next {
+//        width: 29px;
+//        right: 40px;
+//        z-index: 2;
+//
+//        &::after {
+//            content: '';
+//            display: inline-block;
+//            width: 4em;
+//            height: 4em;
+//            border-top: 0.2em solid #fff;
+//            border-right: 0.2em solid #fff;
+//            transform: rotate(45deg);
+//        }
+//    }
+//}
+//
+//@media all and (max-width: 400px) {
+//
+//    .men-guide-slider {
+//        &__title {
+//            font-size: 16px;
+//        }
+//
+//        &__more {
+//            font-size: 13px;
+//        }
+//
+//        p {
+//            font-size: 13px;
+//        }
+//    }
+//}
+//
+//@media all and (max-width: 975px) {
+//
+//    .men-guide {
+//        padding: 0 2% 25px 2%;
+//
+//        &__header {
+//            padding: 20px 2% 40px 2%;
+//
+//            h1 {
+//                font-size: 35px;
+//            }
+//
+//            p {
+//                font-size: 14px;
+//            }
+//        }
+//    }
+//
+//    .men-guide-slider {
+//        &__title {
+//            font-size: 20px;
+//        }
+//
+//        &__more {
+//            font-size: 14px;
+//        }
+//
+//        p {
+//            font-size: 14px;
+//        }
+//    }
+//}
+//
+//@media all and (max-width: 750px) {
+//
+//    .men-guide {
+//
+//        &__boxes {
+//            display: block;
+//
+//            &--half {
+//                display: block;
+//                width: 100%;
+//
+//                &:first-of-type {
+//                    padding: 0 0 35px 0;
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//@media all and (max-width: 480px) {
+//
+//    .men-guide {
+//
+//        &__header {
+//            h1 {
+//                font-size: 25px;
+//            }
+//
+//            p {
+//                font-size: 13px;
+//            }
+//        }
+//    }
+//}

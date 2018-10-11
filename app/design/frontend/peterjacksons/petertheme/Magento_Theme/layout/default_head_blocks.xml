@@ -3,4 +3,7 @@
     <!--<head>-->
         <!--<css src="web/css/styles.css" />-->
     <!--</head>-->
+    <head>
+        <css src="https://use.typekit.net/yil4man.css" src_type="url"/>
+    </head>
 </page>

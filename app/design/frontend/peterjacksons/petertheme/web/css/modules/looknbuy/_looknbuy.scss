@@ -1,0 +1,319 @@
+.looknbuy {
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (max-width: $sm-breakpoint) {
+        flex-direction: column;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 80vh;
+
+        @media all and (max-width: $sm-breakpoint) {
+            max-height: 100%;
+        }
+    }
+
+    &__image-wrapper {
+
+        @media all and (max-width: $sm-breakpoint) {
+            background-color: $lightgrey;
+
+            .easypin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    &__product-list {
+        max-width: 100%;
+        max-height: 80vh;
+        overflow: auto;
+
+        @media all and (max-width: $sm-breakpoint) {
+            overflow: hidden;
+            max-height: unset;
+        }
+    }
+
+    &__product-wrapper {
+        margin-bottom: 40px;
+
+        @media (max-width: $sm-breakpoint) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 230px !important;
+            height: 575px;
+            margin: 0 20px;
+        }
+    }
+
+    &__product-img {
+        padding: 0 15px;
+
+        img {
+            max-width: 110px;
+        }
+
+        @media (max-width: $sm-breakpoint) {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @media (max-width: $sm-breakpoint) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0 20px 0;
+                width: 230px;
+                height: 260px;
+            }
+
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    &__product-info {
+        margin-right: 10px;
+        width: 360px;
+
+        @media (max-width: $sm-breakpoint) {
+            width: 230px;
+            justify-content: center;
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+
+    &__product-title-link {
+        color: $black;
+        font-weight: bold;
+        width: 100%;
+        font-size: 23px;
+        line-height: 25px;
+    }
+
+    &__select-options {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $sm-breakpoint) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__price-and-wishlist {
+        margin: 10px 0;
+        line-height: 24px;
+
+        .wishlist-message__text {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+
+    &__wishlist-icon {
+        align-self: flex-end;
+    }
+
+    &__button {
+        @include button-black();
+
+        @media all and (max-width: $sm-breakpoint) {
+            &:hover {
+                background: #363636;
+                color: #fff;
+            }
+        }
+    }
+
+    .size-chart {
+        display: none;
+
+        &__close {
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__slider-img {
+        width: 100%;
+
+        @media all and (max-width: 550px) {
+            width: 120%;
+            margin-left: -10%;
+        }
+    }
+
+    .product-info-main__size-chart {
+        font-size: 14px;
+    }
+
+    &__discount {
+        padding-bottom: 20px;
+        color: $red;
+        font-size: 14px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            text-align: center;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+        background: $lightgrey;
+        flex-wrap: nowrap;
+        margin-bottom: 40px;
+
+        @media all and (max-width: $sm-breakpoint) {
+            margin-bottom: -30px;
+            width: auto;
+        }
+    }
+
+    &__nav-next,
+    &__nav-prev {
+        align-self: center;
+    }
+
+    &__nav-link {
+        color: $black;
+    }
+
+    &__nav-main {
+        padding: 0 60px;
+        align-self: center;
+    }
+
+    &__arrow {
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+
+        &--next {
+            border-left: 10px solid $grey-dark;
+            margin-left: 10px;
+        }
+
+        &--back {
+            border-right: 10px solid $grey-dark;
+            margin-right: 10px;
+        }
+    }
+
+    &__mobile-nav {
+        display: none;
+
+        @media all and (max-width: $sm-breakpoint) {
+            display: flex;
+            justify-content: space-between;
+            background-color: $lightgrey;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+
+        &--prev,
+        &--next {
+            display: flex;
+            align-items: center;
+
+        }
+    }
+
+    &__mobile-link {
+        padding: 0 10px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+
+        .base_image {
+            align-self: center;
+        }
+
+        .product-info-main__qty-select {
+            display: block;
+        }
+
+        .product-info-main__size-chart {
+            display: none;
+        }
+
+        .select__pdp-select {
+            font-size: 14px;
+        }
+
+        .select__wrapper--qty {
+            margin-right: 0;
+        }
+
+        .size-chart-overlay {
+            display: none;
+        }
+    }
+
+    @media all and (min-width: 769px) {
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 36px none #ffffff;
+            border-radius: 11px;
+        }
+
+        ::-webkit-scrollbar-thumb,
+        ::-webkit-scrollbar-thumb:hover,
+        ::-webkit-scrollbar-thumb:active {
+            background: #b6b6b6;
+        }
+
+        ::-webkit-scrollbar-track {
+            border: 100px none #d22424;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-track,
+        ::-webkit-scrollbar-track:hover,
+        ::-webkit-scrollbar-track:active {
+            background: #ffffff;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    }
+}
+
+.looknbuy-slider {
+
+    &__slide {
+        display: flex;
+        justify-content: space-between;
+
+        @media all and (max-width: $sm-breakpoint) {
+            margin-bottom: 20px;
+        }
+    }
+}

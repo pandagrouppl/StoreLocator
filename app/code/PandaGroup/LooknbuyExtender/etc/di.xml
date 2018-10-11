@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Change Magento_Catalog to Magedelight_Looknbuy source to load quantity select from Looknbuy template instead of project template -->
+    <!-- Add getWishlistParams() method to add wishlist button to the Looknbuy template -->
+    <preference for="Magedelight\Looknbuy\Block\View"
+                type="PandaGroup\LooknbuyExtender\Block\View" />
+
+    <!-- Add Carousel Image to edit look form -->
+    <preference for="Magedelight\Looknbuy\Block\Adminhtml\Look\Edit\Tab\Main"
+                type="PandaGroup\LooknbuyExtender\Block\Adminhtml\Look\Edit\Tab\Main" />
+
+    <!-- Add Carousel Image saving to action -->
+    <preference for="Magedelight\Looknbuy\Controller\Adminhtml\Index\Save"
+                type="PandaGroup\LooknbuyExtender\Controller\Adminhtml\Index\Save" />
+
+    <!-- Change 'Choose an option...' to 'Select size' -->
+    <preference for="Magedelight\Looknbuy\Block\Looks\Type\Configurable"
+                type="PandaGroup\LooknbuyExtender\Block\Looks\Type\Configurable" />
+
+    <!-- Add getImage() method to load image without resizing -->
+    <preference for="Magedelight\Looknbuy\Helper\Data"
+                type="PandaGroup\LooknbuyExtender\Helper\Data" />
+
+    <!-- Add getImage() method to load image without resizing -->
+    <preference for="Magedelight\Looknbuy\Block\Product\Looks"
+                type="PandaGroup\LooknbuyExtender\Block\Product\Looks" />
+
+    <!-- Add getImage() method to load image without resizing -->
+    <preference for="Magedelight\Looknbuy\Block\Looks"
+                type="PandaGroup\LooknbuyExtender\Block\Looks" />
+
+    <!-- Add one product from all look extension -->
+    <preference for="Magedelight\Looknbuy\Controller\Cart\Add"
+                type="PandaGroup\LooknbuyExtender\Controller\Cart\Add" />
+
+    <!-- Add one product from all look extension -->
+    <preference for="Magedelight\Looknbuy\Model\Quote\Discount"
+                type="PandaGroup\LooknbuyExtender\Model\Quote\Discount" />
+
+</config>

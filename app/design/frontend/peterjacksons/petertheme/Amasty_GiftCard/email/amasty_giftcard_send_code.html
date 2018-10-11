@@ -11,31 +11,65 @@
 "var image_base64":"Image base64 code"
 } @-->
 <!--@styles
+.main-content {
+padding: 0 !important;
+}
+.header {
+padding: 20px 0 !important;
+}
+.wrapper-inner {
+padding-bottom: 10px !important;
+}
 @-->
 
 {{template config_path="design/email/header_template"}}
-<table cellspacing="0" cellpadding="0" class="message-container">
-    <tr>
-        <td>
-            Dear {{var recipient_name}},<br>
-            <br>
-            {{var sender_name}} purchased a {{var initial_value}}{{var currency_code}} gift card for you at {{var store.getFrontendName()}}.<br>
-
-            {{if sender_message}}
-            Please find below message from {{var sender_name}}:<br>
-            <br>
-            {{var sender_message}}<br>
-            {{/if}}
-            <br>
-            Please use the following gift card code at {{var store.getFrontendName()}}:<br>
-            <br>
-            {{var gift_code}}<br>
-            <br>
-            {{if image_base64}}<img src="{{var image_base64}}"><br>{{/if}}
-
-            <br>
-            Look forward to seeing you at our store.
-        </td>
-    </tr>
+<!-- 1 column layout with 10px spacing -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="100%" height="550px" valign="top" style="background-image:url(http://i64.tinypic.com/2zxp1lz.png);
+            background-repeat:no-repeat;">
+                <div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                            <tr>
+                                <td width="30" align="left" valign="top" style="font-size: 0%;" class="mobile-hidden"></td>
+                                <td align="left" valign="top" class="mobile-padding">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" valign="top" style="padding: 70px 90px 0 90px;">
+													<span>
+														<p>
+                                                            Dear {{var recipient_name}},
+															<br>
+															<br>
+                                                            {{var sender_name}} has purchased a {{var initial_value}}
+                                                            {{var currency_code}} gift card for you
+															<br>
+                                                            at {{var store.getFrontendName()}}.
+															<br>
+                                                            To redeem your giftcard please use voucher code:
+															<br>
+															<b>{{var gift_code}}</b>
+															<br>
+                                                            {{if sender_message}}<br>
+                                                            <br>
+                                                            {{var sender_message}}<br>
+                                                            {{/if}}
+														</p>
+													</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
 </table>
 {{template config_path="design/email/footer_template"}}

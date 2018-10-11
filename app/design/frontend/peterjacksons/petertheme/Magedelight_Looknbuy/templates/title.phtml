@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \PandaGroup\LooknbuyExtender\Block\Title
+ */
+$cssClass = $block->getCssClass() ? ' ' . $block->getCssClass() : '';
+$title = '';
+if (trim($block->getPageHeading())) {
+    $title = '<span class="base" data-ui-id="page-title-wrapper" ' .  $block->getAddBaseAttribute() . '>'
+        . $block->escapeHtml($block->getPageHeading()) . '</span>';
+}
+
+$previousLookUrl = $block->getPreviousLookUrl();
+$nextLookUrl = $block->getNextLookUrl();
+
+?>
+
+<div class="looknbuy__nav">
+    <div class="looknbuy__nav-prev">
+        <?php if (null !== $previousLookUrl) : ?>
+            <a class="looknbuy__nav-link" href="<?php /* @escapeNotVerified */ echo $previousLookUrl ?>"><?php echo __('<  Previous') ?></a>
+        <?php endif; ?>
+    </div>
+
+    <?php if ($title): ?>
+        <div class="page-main__title<?php /* @escapeNotVerified */ echo $cssClass; ?> page-main__description">
+            <div class="page-main__description--left-column">
+                <a href="javascript:history.go(-1)" class="page-main__description--back"></a>
+            </div>
+            <h1 class="looknbuy__nav-main page-main__description--right-column"
+                <?php if ($block->getId()): ?> id="<?php /* @escapeNotVerified */ echo $block->getId();?>" <?php endif; ?>
+                <?php if ($block->getAddBaseAttributeAria()): ?>
+                    aria-labelledby="<?php /* @escapeNotVerified */ echo $block->getAddBaseAttributeAria(); ?>"
+                <?php endif; ?>>
+                <?php /* @escapeNotVerified */ echo $title ?>
+            </h1>
+            <?php echo $block->getChildHtml(); ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="looknbuy__nav-next">
+        <?php if (null !== $nextLookUrl) : ?>
+            <a class="looknbuy__nav-link" href="<?php /* @escapeNotVerified */ echo $nextLookUrl ?>"><?php echo __('Next  >') ?></a>
+        <?php endif; ?>
+    </div>
+</div>

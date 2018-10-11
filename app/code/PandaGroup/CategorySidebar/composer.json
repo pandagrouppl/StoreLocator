@@ -1,0 +1,10 @@
+{
+    "name": "PandaGroup/CategorySidebar",
+    "description": "Category Widget for Magento 2",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0",
+        "magento/magento-composer-installer": "*"
+    },
+    "type": "magento2-panda-module",
+    "version": "1.0.0"
+}

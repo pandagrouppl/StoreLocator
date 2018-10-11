@@ -8,12 +8,20 @@
     background-color: rgba(255, 255, 255, 0.95);
     display: none;
 
+    @media all and (max-width: $xs-breakpoint){
+        overflow-y: scroll;
+    }
+
     &__container {
         display: flex;
         justify-content: center;
         height: 100%;
-        align-items: center;
         position: relative;
+        padding-top: 20vh;
+
+        @media all and (max-width: $xs-breakpoint){
+            padding-top: 10vh;
+        }
     }
 
     &__close {
@@ -24,19 +32,36 @@
         font-size: 50px;
         font-weight: 300;
         cursor: pointer;
+
+        @media all and (max-width: $xs-breakpoint) {
+            font-size: 30px;
+            top: 20px;
+            right: 20px;
+        }
     }
 
     &__form {
         display: flex;
-        border-bottom: 2px solid black;
         padding-bottom: 5px;
         max-width: 99%;
-        flex: 0 1 500px;
+        //flex: 0 1 500px;
         margin: 10px;
+        position: relative;
+        font-size: 13px;
     }
 
     &__row {
         flex: 1 1 100%;
+        //border-bottom: 2px solid black;
+        width: 108%;
+
+        @media all and (max-width: $sm-breakpoint) {
+            width: 110%;
+        }
+
+        @media all and (max-width: $xs-breakpoint) {
+            width: 112%;
+        }
     }
 
     &__input {
@@ -46,6 +71,7 @@
         color: #242424;
         font-weight: 400;
         width: 100%;
+        border-bottom: 2px solid black;
 
         @media all and (max-width: $sm-breakpoint) {
             font-size: 30px;
@@ -54,6 +80,11 @@
 
     &__submit {
         flex: 0 0 32px;
+
+        button {
+            border: none;
+            padding: 4px 1px;
+        }
     }
 
     &__zoom {
@@ -68,9 +99,24 @@
         //transform: scale(1.25);
         position: relative;
         top: 12px;
+        width: 40px;
+        height: 40px;
 
         @media all and (max-width: $sm-breakpoint) {
             top: 7px;
         }
     }
 }
+
+body[class~='catalog-product-view'] {
+    .header-right {
+        .search-overlay {
+            padding: 0;
+        }
+    }
+}
+
+.freeze {
+    overflow: hidden;
+}
+

@@ -4,6 +4,7 @@
     color: #242424;
     background: $lightgrey;
     margin-top: 25px;
+    font-family: "sofia-pro", sans-serif;
 
     a {
         font-size: 14px;
@@ -26,10 +27,11 @@
     }
 
     h3 {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: 700;
         color: #4c4b4d;
         letter-spacing: 0.6px;
+        font-family: "sofia-pro", sans-serif;
     }
 
     &__lower {
@@ -94,8 +96,12 @@
 
 
     &__lower-wrapper {
-        padding: 40px 2% 30px 2%;
+        padding: 5px 0 30px;
         min-height: 140px;
+
+        @media all and (max-width: 768px) {
+            padding: 40px 0 30px;
+        }
     }
 
     &__lower-linkbox {
@@ -107,6 +113,7 @@
             text-transform: uppercase;
             font-size: 10px;
             color: #4c4b4d;
+            font-weight: 700;
         }
     }
 
@@ -136,10 +143,21 @@
 
     &__social-icons {
         justify-content: flex-end;
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
     }
 
     &__social-icons-ul {
         display: flex;
+        justify-content: flex-end;
+        padding-top: 55px;
+
+        @media all and (max-width: 768px){
+            padding-top: 15px;
+        }
 
         li:first-child a {
             margin-left: 0;

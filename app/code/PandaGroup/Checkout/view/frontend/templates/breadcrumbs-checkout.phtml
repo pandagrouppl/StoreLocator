@@ -21,6 +21,7 @@ try {
 <?php if ($crumbs && is_array($crumbs)) : ?>
 <div class="breadcrumbs">
     <ul class="breadcrumbs__items">
+        <?php $stepCounter = 1; ?>
         <?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
 
             <?php if ($virtualCheckout === true AND $crumbName === 'delivery') continue; ?>
@@ -28,16 +29,17 @@ try {
             <li class="breadcrumbs__item breadcrumbs__item--<?php /* @escapeNotVerified */ echo $crumbName ?>">
             <?php if ($crumbInfo['link']) : ?>
                 <a href="<?php /* @escapeNotVerified */ echo $crumbInfo['link'] ?>" title="<?php echo $block->escapeHtml($crumbInfo['title']) ?>">
-                    <?php echo $block->escapeHtml($crumbInfo['label']) ?>
+                    <?php echo $stepCounter.'. '.$block->escapeHtml($crumbInfo['label']) ?>
                 </a>
-                <span class="breadcrumbs__separator">----------------</span>
+                <span class="breadcrumbs__separator"></span>
             <?php elseif ($crumbInfo['last']) : ?>
-                <strong class="breadcrumbs__item breadcrumbs__item--last"><?php echo $block->escapeHtml($crumbInfo['label']) ?></strong>
+                <strong class="breadcrumbs__item breadcrumbs__item--last"><?php echo $stepCounter.'. '.$block->escapeHtml($crumbInfo['label']) ?></strong>
             <?php else: ?>
-                <?php echo $block->escapeHtml($crumbInfo['label']) ?>
-                <span class="breadcrumbs__separator">----------------</span>
+                <?php echo $stepCounter.'. '.$block->escapeHtml($crumbInfo['label']) ?>
+                <span class="breadcrumbs__separator"></span>
             <?php endif; ?>
             </li>
+        <?php $stepCounter++; ?>
         <?php endforeach; ?>
         <?php echo $block->getChildHtml('return.to.previous'); ?>
     </ul>

@@ -10,7 +10,8 @@
     <update handle="default_head_blocks"/>
     <head>
         <!--<script src="bundles/default.js" />-->
-        <css src="web/css/styles.css" />
+        <!--<css src="web/css/styles.css" />-->
+        <css src="web/css/styles.css" media="all and (min-width: 1px)"/>
     </head>
     <body>
         <!-- Change to our header -->
@@ -18,6 +19,7 @@
         <referenceBlock name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="navigation.sections" remove="true"/>
         <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="minicart__overlay" template="Magento_Theme::overlay.phtml" />
             <container name="header.shippingbar" before="-">
                 <block class="PandaGroup\ThemeSettings\Block\View\Element\Template" name="header.shipbar" template="Magento_Theme::html/header/shippingbar.phtml"/>
             </container>
@@ -31,30 +33,58 @@
             <container name="header.headers" htmlTag="div" htmlClass="headers">
                 <!-- desktop -->
                 <container name="headers" htmlClass="headers__top" htmlTag="section">
-                    <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" before="-">
-                        <arguments>
-                            <argument name="jsLayout" xsi:type="array">
-                                <item name="components" xsi:type="array">
-                                    <item name="customer" xsi:type="array">
-                                        <item name="component" xsi:type="string">Magento_Theme/js/view/customer</item>
-                                    </item>
-                                </item>
-                            </argument>
-                        </arguments>
-                    </block>
-                    <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle" after="header.left">
+                    <container name="header.center" label="Header Middle" htmlTag="section" htmlClass="header-middle">
                         <block class="Magento\Theme\Block\Html\Header\Logo" name="logo" template="html/header/logo.phtml" />
                     </container>
-                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right" after="header.center">
-                        <container name="search-container" label="Search" before="-"/>
-                        <block class="Magento\Wishlist\Block\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml" after="search-container"/>
-                        <container name="header-wrapper" as="minicart-container" label="Minicart" after="wishlist-count"/>
-                    </container>
                 </container>
-                <container name="header-menu" htmlTag="section" htmlClass="headers__bottom">
+                <container name="header-menu" htmlTag="section" htmlClass="headers__bottom" after="headers">
+
+                    <container name="header.left2" label="Header Left" htmlTag="section" htmlClass="header-storelocator" before="catalog.topnav">
+                        <block class="Magento\Framework\View\Element\Template" name="header-locator" template="Magento_Theme::html/header/store-locator.phtml"/>
+                    </container>
+
+                    <container name="header.left.mobile" label="Header Left Mobile" htmlTag="section" htmlClass="header-left__mobile" before="-">
+                        <block class="Magento\Framework\View\Element\Template" name="header.left.mobile.only" template="Magento_Theme::html/header/left.phtml" before="-">
+                            <arguments>
+                                <argument name="jsLayout" xsi:type="array">
+                                    <item name="components" xsi:type="array">
+                                        <item name="customer" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Theme/js/view/customer</item>
+                                        </item>
+                                    </item>
+                                </argument>
+                            </arguments>
+                        </block>
+                    </container>
+
+
                     <block class="PandaGroup\Menu\Block\Html\Topmenu" name="catalog.topnav" template="html/topmenu.phtml" ttl="3600">
                         <block class="Magento\Framework\View\Element\Template" name="catalog.topnav.other" template="Magento_Theme::html/header/other.phtml"/>
                     </block>
+
+                    <container name="header.center.mobile" label="Header Middle Mobile only" htmlTag="section" htmlClass="headers__middle-mobile" after="catalog.topnav">
+                        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo.mobile" template="html/header/logo.phtml" />
+                    </container>
+
+                    <container name="header.right" label="Header Right" htmlTag="section" htmlClass="header-right" after="catalog.topnav">
+                        <container name="search-container" label="Search" before="-"/>
+
+                        <block class="Magento\Framework\View\Element\Template" name="header.left" template="Magento_Theme::html/header/left.phtml" after="search-container">
+                            <arguments>
+                                <argument name="jsLayout" xsi:type="array">
+                                    <item name="components" xsi:type="array">
+                                        <item name="customer" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Theme/js/view/customer</item>
+                                        </item>
+                                    </item>
+                                </argument>
+                            </arguments>
+                        </block>
+
+                        <block class="Magento\Wishlist\Block\Link" name="wishlist-count" template="Magento_Wishlist::link.phtml"/>
+                        <container name="header-wrapper" as="minicart-container" label="Minicart" after="wishlist-count"/>
+                    </container>
+
                 </container>
                 <!-- mobile -->
                 <container name="header.responsive" label="Header Responsive" htmlTag="section" htmlClass="header-responsive">

@@ -1,6 +1,13 @@
 .headers {
     width: 100%;
     z-index: 999;
+    background-color: white;
+
+    &--minicart-active {
+        position: fixed;
+        top: 35px;
+        background-color: white;
+    }
 
     &--fixed {
         position: fixed;
@@ -8,15 +15,16 @@
         background-color: white;
     }
 
-    &__top {
+    &__top, &__bottom {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
-        @media all and (min-width: $bp-header + 1px) {
-            padding: 0 30px;
+        @media all and (min-width: 1400px + 1px) {
+            padding: 0 90px;
         }
 
-        @media all and (max-width: $bp-header) {
+        @media all and (max-width: 1400px) {
             padding: 0 5px;
         }
 
@@ -34,6 +42,21 @@
             color: $white;
             text-transform: uppercase;
             font-weight: 500;
+        }
+    }
+
+    &__top {
+        display: none;
+    }
+
+    @media all and (min-width: $bp-header + 1px) {
+
+        &__top {
+            display: flex;
+        }
+
+        &__middle-mobile {
+            display: none;
         }
     }
 }
@@ -63,23 +86,28 @@ body[class~='cms-sustainability'] {
             }
 
             .header-middle__logo > img {
-                filter: brightness(0) invert(1);
+                filter: brightness(0);
             }
 
             .ui-menu-item {
                 span, a, i {
-                    color: white;
-                    font-weight: 400;
+                    color: black;
+                    font-weight: 300;
                 }
             }
 
             .filtered-on-header {
-                filter: brightness(0) invert(1);
+                filter: brightness(0);
+                opacity: 0.4;
                 -moz-animation: scale(1);
             }
 
+            .header-right__show-search-overlay {
+                opacity: 0.4;
+            }
 
-            &--fixed, &:hover {
+
+            &--fixed, &:hover, &--minicart-active {
                 background-color: white;
 
                 .headers__bottom {
@@ -98,6 +126,11 @@ body[class~='cms-sustainability'] {
 
                 .filtered-on-header {
                     filter: none;
+                    opacity: 1;
+                }
+
+                .header-right__show-search-overlay {
+                    opacity: 0.6;
                 }
 
             }

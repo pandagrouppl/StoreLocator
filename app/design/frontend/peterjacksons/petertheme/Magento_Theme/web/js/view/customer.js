@@ -10,7 +10,7 @@ define([
 
         initToggle: function(elements) {
             const $popup = $('.header-left__account-popup');
-            $('.header-left__account-popup-toggle').click(() => {
+            $('.header-left__account-popup-toggle.logged-in').click(() => {
                 $popup.toggle();
             });
         },

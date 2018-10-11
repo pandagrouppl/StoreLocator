@@ -1,0 +1,170 @@
+body[class~='cms-home'] {
+
+    button,
+    button::after {
+        transition: all 0.3s;
+    }
+
+    button {
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        color: white;
+        font-size: 13px;
+        padding: 11px 5px;
+        border: 1px solid white;
+        text-decoration: none;
+        background: none;
+        position: relative;
+        z-index: 0;
+        line-height: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 167px;
+
+        @media all and (max-width: 560px) {
+            border-radius: 0;
+        }
+    }
+
+    .fancybox-button {
+        width: 44px;
+    }
+
+    button::before,
+    button::after {
+        background: #fff;
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        @media all and (max-width: 560px) {
+            background: transparent;
+        }
+    }
+
+    button.btn-black::before,
+    button.btn-black::after {
+        background: #000;
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        @media all and (max-width: 560px) {
+            background: transparent;
+        }
+    }
+
+    button:hover {
+        color: black;
+        z-index: 1;
+
+        @media all and (max-width: 560px) {
+            color: white;
+        }
+    }
+
+    button.btn-black:hover {
+        color: white;
+        z-index: 1;
+
+        @media all and (max-width: 560px) {
+            color: black;
+        }
+    }
+
+    .btn::after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+    }
+
+    .btn--padding {
+        margin: 7% 0 2em 10em;
+
+        @media all and (max-width: 1260px) {
+            margin: 3% 0 2em 10.6em;
+        }
+
+        @media all and (max-width: 975px) {
+            margin: 3% 0 2em 9.4em;
+        }
+
+        @media all and (max-width: 767px) {
+            margin: 3% 0 2em 5.3em;
+        }
+
+        @media all and (max-width: 560px) {
+            margin: 2em 0 2em 3.5em;
+        }
+    }
+
+    .btn-black {
+        color: black;
+        border: 1px solid black !important;
+    }
+
+    .btn:hover::after {
+        width: 100%;
+        color: black;
+    }
+
+    .btn-measure {
+        margin: 40px 0 35px;
+        background-color: #B98459;
+        border: #B98459;
+        border-radius: 0;
+        width: 230px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: white;
+        font-family: 'sofia-pro', sans-serif;
+        text-align: center;
+        padding: 7px 0;
+    }
+
+    .btn-main-banner {
+        background: transparent;
+        width: 246px;
+        border: 1px solid $white;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 13px;
+        font-family: 'sofia-pro', sans-serif;
+        color: $white;
+        padding: 7px 5px;
+        font-weight: 300;
+        z-index: 2;
+
+        @media all and (max-width: 750px) {
+            width: 286px;
+        }
+
+        @media all and (max-width: 560px) {
+            width: 226px;
+        }
+    }
+
+    .prpl-popuplogin button.action-close {
+        width: 20px;
+    }
+
+    .btn-measure {
+        margin: 0 0 15px;
+    }
+}
+
+@media all and (max-width: 975px) {
+
+    .btn-measure {
+        margin: 25px 0 15px !important;
+    }
+}
+
+@media all and (max-width: 1260px) {
+
+    .btn-measure {
+        padding: 11px 10px !important;
+        margin: 25px 0 15px !important;
+    }
+}

@@ -1,0 +1,35 @@
+@mixin arrows {
+    width: 20px;
+    height: 20px;
+    border-color: #363738;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+}
+
+@mixin prev {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 10px;
+}
+
+@mixin next {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-135deg);
+    right: 10px;
+}
+
+.arrows {
+    @include arrows;
+}
+
+.prev {
+    @include prev;
+}
+
+.next {
+    @include next;
+}

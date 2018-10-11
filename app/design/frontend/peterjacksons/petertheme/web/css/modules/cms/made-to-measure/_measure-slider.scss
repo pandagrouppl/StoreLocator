@@ -29,6 +29,10 @@
             min-height: 750px;
         }
 
+        @media all and (max-width: 550px) {
+            overflow-x: hidden;
+        }
+
 
 
     }
@@ -37,7 +41,7 @@
         max-width: 750px;
         margin: auto;
 
-        @media all and (max-width: $bp-measure) {
+        @media all and (max-width: $bp-measure) and (min-width: 551px) {
             padding: 0 20px;
         }
     }
@@ -122,6 +126,16 @@
     .slick-dots {
         @include slick-buttons();
         margin: 40px 0 60px 0;
+
+        button {
+            font-size: 0;
+
+            @media all and (max-width: $bp-measure) {
+                height: 7px;
+                width: 5px;
+                padding: 4px;
+            }
+        }
     }
 }
 

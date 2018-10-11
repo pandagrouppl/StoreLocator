@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="looknbuy">
+            <group id="general">
+                <field id="heading_title_description" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Header Title Description</label>
+                    <comment>This is the description of the header of look n buy sections.</comment>
+                </field>
+            </group>
+            <group id="social" showInDefault="0" showInWebsite="0" showInStore="0" />
+            <group id="facebook" showInDefault="0" showInWebsite="0" showInStore="0" />
+            <group id="twitter" showInDefault="0" showInWebsite="0" showInStore="0" />
+            <group id="pinit" showInDefault="0" showInWebsite="0" showInStore="0" />
+        </section>
+    </system>
+</config>

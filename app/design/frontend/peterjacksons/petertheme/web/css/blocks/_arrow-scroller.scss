@@ -1,7 +1,7 @@
 .arrow-scroller {
     @include bg('arr-up.png');
     position: fixed;
-    bottom: 145px;
+    bottom: 45px;
     right: 40px;
     display: none;
     cursor: pointer;
@@ -11,7 +11,7 @@
     font-size: 15px;
     font-family: Roboto, sans-serif;
     font-weight: 400;
-    z-index: 9999;
+    z-index: 99;
 
     em {
         font-style: normal;

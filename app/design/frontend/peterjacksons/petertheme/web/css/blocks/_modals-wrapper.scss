@@ -36,6 +36,7 @@ body._has-modal-custom .modal-custom-overlay {
 
     &._show {
         visibility: visible;
+        z-index: 999 !important;
     }
 }
 
@@ -57,6 +58,8 @@ body._has-modal-custom .modal-custom-overlay {
     width: 20vw;
     background-color: white;
     padding: 20px;
+    border: 1px solid #353535;
+    z-index: 999999;
 
     .modal-header, .block-title {
         display: flex;
@@ -93,7 +96,7 @@ body._has-modal-custom .modal-custom-overlay {
         }
 
         .action-hide-popup {
-            @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 13px,$padding: 10px, $height: inherit, $margin-top: 0);
+            @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 13px, $padding: 10px, $height: inherit, $margin-top: 0);
             flex: 0 0 49%;
         }
 
@@ -107,12 +110,56 @@ body._has-modal-custom .modal-custom-overlay {
             }
         }
     }
-
 }
 
 .modals-overlay {
-    z-index: 899;
-    background-color: rgba(255, 255, 255, 0.95);
+    //z-index: 899;
+    //background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-popup.confirm {
+    text-align: center;
+    //z-index: 1000 !important;
+    background-color: rgba(0, 0, 0, 0.7);
 
+
+    .modal-header {
+        justify-content: flex-end;
+        visibility: hidden;
+
+        button {
+            background: transparent;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: 'X';
+                color: #363636;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .modal-content {
+        font-size: 13px;
+        font-family: sofia-pro, sans-serif;
+    }
+
+    .modal-footer button {
+        @include button-black($bg: white, $color: #333, $border: 1px solid $grey-dark, $font-size: 14px, $height: inherit, $margin-top: 0);
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        text-align: center;
+        display: block;
+    }
+}

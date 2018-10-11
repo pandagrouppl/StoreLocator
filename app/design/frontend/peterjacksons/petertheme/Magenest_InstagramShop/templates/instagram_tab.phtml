@@ -1,0 +1,123 @@
+<?php
+/**
+ * @var $block \Magenest\InstagramShop\Block\Product\Photo
+ */
+if ($block->isAddInstagramToProduct()):
+    ?>
+    <?php
+    $photos = $block->getPhotosByProduct();
+    $photosData = [];
+    foreach ($photos as $photo) {
+        $photosData[] = $photo->getData();
+    }
+    ?>
+
+    <div class="instagram-tab">
+        <?php include($block->getTemplateFile('Magenest_InstagramShop::shared/popup.phtml')) ?>
+    </div>
+    <div class="instagram-details" style="display: inline-block;border:1px solid #e2e2e2;width: 100%;padding-top: 25px;">
+        <ul style="display: inline-block;">
+            <?php
+            foreach ($photos as $photo) {
+                echo '<li id="' . $photo->getPhotoId() . '">';
+                echo '<a href="' . $photo->getUrl() . '" title="' . $photo->getUrl() . '" id="' . $photo->getPhotoId() . '">';
+                echo '<img src="' . $photo->getSource() . '" alt="' . $photo->getCaption() . '" />';
+                echo '</a>';
+                echo '<div id="linked-products" style="display: none;">';
+                $count = 0;
+                if ($photo->getProductIds() != '')
+                    foreach (explode(', ', $photo->getProductIds()) as $id) {
+                        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+                        try{
+                            /** @var \Magento\Catalog\Model\Product $product */
+                            $product = $objectManager->get(Magento\Catalog\Api\ProductRepositoryInterface::class)->getById($id);
+                            $productUrl = $product->getUrlModel()->getUrl($product);
+                            $imagewidth = 150;
+                            $imageheight = 150;
+                            $imageHelper = $objectManager->get('\Magento\Catalog\Helper\Image');
+                            $image_url = $imageHelper->init($product, 'product_page_image_small')->setImageFile($product->getFile())->resize($imagewidth, $imageheight)->getUrl();
+                            echo '<a class="widget-text-product widget-link-list" data-original-url="' . $productUrl . '" id="product_link_' . $product->getId() . '" target="_blank" data-link-id="' . $product->getId() . '" href="' . $productUrl . '">';
+                            echo '<img src="' . $image_url . '" width="150px" height="150px" style=""/>';
+                            echo '<span class="widget-link-text-all">';
+                            echo '<span class="widget-link-text-number"></span>';
+                            echo '<span class="widget-link-text">' . $product->getName() . '</span> </span>';
+                            echo '<div class="widget-text-product-cta"></div>';
+                            echo '</a>';
+                        } catch (\Exception $e){
+                        }
+                    }
+                echo '</div></li>';
+            }
+            ?>
+        </ul>
+        <div style="float: right; margin-right: 20px;">
+            <div class="heading-title center" style="text-align: center;">
+                <h4 style="font-size: 20px;">
+                    <strong style="font-weight: bolder!important;text-transform: initial;font-family: Brandon Regular;"><a
+                                href="https://www.instagram.com/explore/tags/<?=$block->getHashTag()?>/" target="_blank">#<?=$block->getHashTag()?></a>: </strong>
+                    <?=$block->getBlockTitle()?></h4>
+                <span class="center"><?=$block->getBlockContent()?></span>
+                <br>
+                <a href="<?=$block->getBaseUrl()?>instagram/gallery/" class="instagram-button" style="<?=$block->getViewFullGalleryCss()?>">
+                    <?=$block->getViewFullGalleryTitle()?>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        require(['jquery'], function ($) {
+            var photos = <?=json_encode($photosData)?>;
+            $('.instagram-details > ul > li > a').on('click', function (e) {
+                var self = this;
+                e.preventDefault();
+                var photo = $.map(photos, function (item) {
+                    if ($(self).parent().attr('id') === item.photo_id) {
+                        return item;
+                    }
+                });
+                photo = photo[0];
+                $('.instagram-tab #widget-instagram-image-url').attr('src', photo.source);
+                $('.instagram-tab #widget-instagram-url').attr('href', photo.url);
+                $('.instagram-tab .widget-detail-title').text(photo.caption ? photo.caption : '');
+                // $('.instagram-tab .widget-text-link-container').html($(self).parent().children('#linked-products').html());
+                $('.instagram-tab #created_at_instagram').text(photo.created_at);
+                $('.instagram-tab #widget-timeline-detail').data('photo-id', photo.photo_id).removeClass('widget-hidden');
+
+                $('.widget-detail-shares').show();
+                // share buttons
+                var facebookUrl = 'http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?=$productUrl?>&p[image]=' + photo.source;
+                $('.widget-facebook-share').attr('href',facebookUrl);
+                var mailUrl = 'mailto:?subject=Checkout our product on Instagram!&body=<?=$productUrl?>';
+                $('.widget-mail-share').attr('href', mailUrl);
+                var twitterUrl = 'http://www.twitter.com/share?url=<?=$productUrl?>&related=magenest&text=Checkout our product on Instagram';
+                $('.widget-twitter-share').attr('href', twitterUrl);
+                var pinterestUrl = 'http://www.pinterest.com/pin/create/button/?url=<?=$productUrl?>&media='+photo.source+'&description=Checkout our product on Instagram';
+                $('.widget-pinterest-share').attr('href', pinterestUrl);
+
+            });
+            $('.instagram-tab #widget-detail-close').on('click', function () {
+                $('.instagram-tab #widget-timeline-detail').addClass('widget-hidden');
+            });
+
+            $('.instagram-tab #widget-prev-post').on('click', function () {
+                var photoId = $('.instagram-tab #widget-timeline-detail').data('photo-id');
+                $.map(photos, function (item, index) {
+                    if (item.photo_id === photoId) {
+                        var id = index === 0 ? photos.length : index;
+                        return $('.instagram-details > ul > li#' + photos[id - 1].photo_id + ' > a').trigger('click');
+                    }
+                });
+            });
+            $('.instagram-tab #widget-next-post').on('click', function () {
+                var photoId = $('.instagram-tab #widget-timeline-detail').data('photo-id');
+                $.map(photos, function (item, index) {
+                    if (item.photo_id === photoId) {
+                        var id = index === photos.length - 1 ? -1 : index;
+                        return $('.instagram-details > ul > li#' + photos[id + 1].photo_id + ' > a').trigger('click');
+                    }
+                });
+            });
+
+        })
+    </script>
+<?php endif; ?>

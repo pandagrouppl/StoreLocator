@@ -5,12 +5,20 @@ body {
     font-size: 12px;
 }
 
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
 * {
     outline: none;
 }
 
 .page-wrapper {
     overflow: hidden;
+
+    @media all and (min-width: 860px) {
+        overflow: visible;
+    }
 }
 
 .no-display {
@@ -55,3 +63,11 @@ body {
     position: relative;
 }
 
+body[class~='page-product-configurable'],
+body[class~='page-product-amgifcard'],
+body[class~='catalog-product-view']{
+
+    .page-wrapper {
+        overflow: hidden;
+    }
+}

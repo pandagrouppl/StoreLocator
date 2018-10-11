@@ -110,14 +110,13 @@
         }
 
         .price {
-            font-size: 17px;
-            font-family: Roboto;
+            font-size: 14px;
+            font-family: 'sofia-pro', sans-serif;
             font-weight: 300;
         }
 
         .price-box {
             display: flex;
-            justify-content: center;
             flex-wrap: nowrap;
         }
 
@@ -130,12 +129,19 @@
     &__product-name {
         flex: 1;
         min-height: 30px;
+        margin-bottom: 0;
+
+        a {
+            text-align: left;
+            margin-bottom: 0;
+        }
     }
 
     &__title {
         color: $black-light;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 500;
+        font-family: 'sofia-pro', sans-serif;
 
         &:hover {
             color: $grey-dark;
