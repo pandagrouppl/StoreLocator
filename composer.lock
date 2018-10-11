@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf47710a6328f32cac3bd3d913d485a1",
+    "content-hash": "64ac720b7653a453c24bee2ff5779a9f",
     "packages": [
         {
             "name": "PandaGroup/Frontools",
@@ -249,11 +249,10 @@
         {
             "name": "apptrian/facebook-pixel",
             "version": "2.1.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/apptrian/facebook-pixel/apptrian-facebook-pixel-2.1.6.0.zip",
-                "reference": null,
-                "shasum": "c88210fca96fe78e9dbbe04bca7314d0c27965ce"
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:l4w/magento2-apptrian-facebookpixel.git",
+                "reference": "f1808cec6927146778355c83053811bfdfaa9340"
             },
             "require": {
                 "php": "~5.5|~7.0"
@@ -270,7 +269,8 @@
             "license": [
                 "OSL-3.0"
             ],
-            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use."
+            "description": "Adds Facebook Pixel with Dynamic Ads code on appropriate pages. Passes W3C validation. Easy to install and use.",
+            "time": "2018-05-16T08:30:41+00:00"
         },
         {
             "name": "braintree/braintree_php",
@@ -357,7 +357,7 @@
         },
         {
             "name": "colinmollenhour/cache-backend-redis",
-            "version": "1.9.0",
+            "version": "1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git",
@@ -389,7 +389,7 @@
             ],
             "description": "Zend_Cache backend using Redis with full support for tags.",
             "homepage": "https://github.com/colinmollenhour/Cm_Cache_Backend_Redis",
-            "time": "2016-10-03T16:55:11+00:00"
+            "time": "2016-05-02T16:23:36+00:00"
         },
         {
             "name": "colinmollenhour/credis",
@@ -5829,12 +5829,6 @@
         {
             "name": "magento/product-community-edition",
             "version": "2.1.10",
-            "dist": {
-                "type": "zip",
-                "url": "https://repo.magento.com/archives/magento/product-community-edition/magento-product-community-edition-2.1.10.0.zip",
-                "reference": null,
-                "shasum": "59e7544bb51abcfdc9d62c7870957662b6cd2563"
-            },
             "require": {
                 "braintree/braintree_php": "3.7.0",
                 "colinmollenhour/cache-backend-file": "1.4",
@@ -6224,14 +6218,14 @@
         },
         {
             "name": "mailchimp/mc-magento2",
-            "version": "1.0.29",
+            "version": "1.0.30",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:l4w/magento2-mailchimp.git",
-                "reference": "9bbebc00287a6742a4a4753bb0babf38ff3ce39e"
+                "reference": "d8a6b883dd85406e63f8d5a945bee5a989fad9e1"
             },
             "require": {
-                "ebizmarts/mailchimp-lib": "3.0.*"
+                "ebizmarts/mailchimp-lib": ">=3.0.27"
             },
             "type": "magento2-module",
             "autoload": {
@@ -6259,7 +6253,7 @@
                 "wiki": "https://connect.mailchimp.com/integrations/magento",
                 "forum": "http://ebizmarts.com/forums/view/6"
             },
-            "time": "2018-07-26T14:04:45+00:00"
+            "time": "2018-10-05T11:54:57+00:00"
         },
         {
             "name": "monolog/monolog",
