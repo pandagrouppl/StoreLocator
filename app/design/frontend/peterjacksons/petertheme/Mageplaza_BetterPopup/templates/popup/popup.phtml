@@ -22,11 +22,11 @@
 /** @var \Mageplaza\BetterPopup\Block\Popup $block */
 if ($block->checkPagesToShow()):
     $floatLocation = ($block->getLocationFloatButton() == 1) ? 'left: 70px' : 'right:70px'; ?>
-    <canvas id="screen"></canvas>
+<!--    <canvas id="screen"></canvas>-->
     <div id="mageplaza-betterpopup-block" class="mageplaza-betterpopup-block"
          data-mage-init='{"mpPopup": { "dataPopup": <?php echo $block->getAjaxData(); ?>}}'>
         <div id="bio_ep" style="background-color: <?php echo $block->getBackGroundColor(); ?>; display:none">
-            <div class="mageplaza-betterpopup-content">
+            <div class="popup-exit__content mageplaza-betterpopup-content">
                 <div id="bio_ep_close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </div>
