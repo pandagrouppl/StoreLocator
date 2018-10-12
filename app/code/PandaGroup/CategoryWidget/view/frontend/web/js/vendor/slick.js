@@ -2855,7 +2855,6 @@
 
             if($(nextActiveDot).prevAll().eq(1).length == 0) {
                 $(nextActiveDot).nextAll().eq(2).addClass('show');
-                console.log('xa');
             }
             else {
                 $(nextActiveDot).prevAll().eq(1).addClass('show');
