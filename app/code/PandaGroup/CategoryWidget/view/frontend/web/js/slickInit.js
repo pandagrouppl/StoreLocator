@@ -1,34 +1,58 @@
-define(['jquery','PandaGroup_CategoryWidget/js/vendor/slick.min'], function($) {
+define(['jquery','PandaGroup_CategoryWidget/js/vendor/slick'], function($) {
 
     /**
-    * Inits slick slider on the element. Accepts alternative rules, included in js init data-mage-init='{"slickInit": {"slidesToScroll":"4"}}'
-    */
+     * Inits slick slider on the element. Accepts alternative rules, included in js init data-mage-init='{"slickInit": {"slidesToScroll":"4"}}'
+     */
 
     return function (config, element) {
 
-        $(element).slick(Object.assign({}, {
+        $(element).slick_dotsCentered(Object.assign({}, {
             infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 2000,
+            useTransform: true,
+            cssEase: 'ease-in-out',
             dots: true,
-            prevArrow: '<div class="slick-prev"></div>',
-            nextArrow: '<div class="slick-next"></div>',
+            arrows: false,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 6000,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: true
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+
                     }
                 },
                 {
-                    breakpoint: 533,
+                    breakpoint: 1250,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        dots: false
+                        autoplaySpeed: 4000,
+                        speed: 2000,
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 950,
+                    settings: {
+                        draggable: true,
+                        swipe: true,
+                        autoplaySpeed: 3000,
+                        speed: 500,
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        draggable: true,
+                        swipe: true,
+                        autoplay: false,
+                        speed: 200,
+                        slidesToShow: 2,
+                        slidesToScroll: 2
                     }
                 }
             ]
