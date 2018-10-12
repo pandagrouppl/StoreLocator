@@ -151,6 +151,7 @@ body[class~='cms-home'] {
             margin-left: 5px;
             padding: 4px;
             width: 5px;
+            transition: none;
         }
 
         @media all and (max-width: $xs-breakpoint) {
@@ -160,49 +161,16 @@ body[class~='cms-home'] {
 
     .slick-dots li {
         display: none;
-    }
 
-    @media all and (min-width: $sm-breakpoint) {
-
-        .slick-dots li:nth-last-child(1),
-        .slick-dots li:nth-last-child(2),
-        .slick-dots li:nth-last-child(3) {
+        &.show {
             display: block;
         }
 
-        .slick-dots li:nth-child(1),
-        .slick-dots li:nth-child(2) {
-            display: block;
-        }
-    }
+        &.darkgrey {
 
-    @media all and (max-width: $sm-breakpoint) {
-
-        .slick-dots li.slick-active,
-        .slick-dots li.slick-active + li,
-        .slick-dots li.slick-active + li + li {
-            display: block;
-        }
-
-        .slick-dots li:nth-last-child(1),
-        .slick-dots li:nth-last-child(2),
-        .slick-dots li:nth-last-child(3) {
-            display: block;
-        }
-
-        .slick-dots li.slick-active ~ li:nth-last-child(1),
-        .slick-dots li.slick-active ~ li:nth-last-child(2),
-        .slick-dots li.slick-active ~ li:nth-last-child(3) {
-            display: none;
-        }
-
-        .slick-dots li.slick-active + li + li:nth-last-child(3),
-        .slick-dots li.slick-active + li + li:nth-last-child(2),
-        .slick-dots li.slick-active + li + li:nth-last-child(1),
-        .slick-dots li.slick-active + li:nth-last-child(3),
-        .slick-dots li.slick-active + li:nth-last-child(2),
-        .slick-dots li.slick-active + li:nth-last-child(1) {
-            display: block;
+            button {
+                background-color: $light-dark;
+            }
         }
     }
 
