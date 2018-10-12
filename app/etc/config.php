@@ -119,6 +119,8 @@ return array (
     'Magento_Weee' => 1,
     'Magento_CatalogWidget' => 1,
     'Magento_Wishlist' => 1,
+    'Mageplaza_Core' => 1,
+    'Mageplaza_BetterPopup' => 1,
     'MagicToolbox_Magic360' => 1,
     'Mirasvit_Profiler' => 1,
     'Neklo_Core' => 1,
@@ -133,6 +135,7 @@ return array (
     'PandaGroup_CategorySidebar' => 1,
     'PandaGroup_CategoryWidget' => 1,
     'PandaGroup_Checkout' => 1,
+    'PandaGroup_CommentBox' => 1,
     'PandaGroup_ContactExtender' => 1,
     'PandaGroup_Corporate' => 1,
     'PandaGroup_CouponExtender' => 1,
@@ -158,6 +161,7 @@ return array (
     'PandaGroup_SpecialPriceFixer' => 1,
     'PandaGroup_Spinner' => 1,
     'PandaGroup_StoreLocator' => 1,
+    'PandaGroup_SubtotalInMinicart' => 1,
     'PandaGroup_ThemeSettings' => 1,
     'PandaGroup_Westfield' => 1,
     'Plumrocket_Base' => 1,
@@ -175,11 +179,5 @@ return array (
     'WebShopApps_MatrixRate' => 1,
     'Wyomind_Core' => 1,
     'Wyomind_CronScheduler' => 1,
-     'Ebizmarts_MailChimp' => 1,
-     'PandaGroup_SubtotalInMinicart' => 1,
-     'PandaGroup_CommentBox' => 1,
-      'Mageplaza_Core' => 1,
-      'Mageplaza_BetterPopup' => 1
-
   ),
 );
