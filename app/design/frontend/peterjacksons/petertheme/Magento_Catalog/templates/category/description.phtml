@@ -14,8 +14,12 @@
  * @var $block \Magento\Catalog\Block\Category\View
  */
 ?>
+<?php
+$categoryImage = $block->getCurrentCategory()->getImageUrl();
+?>
+
 <?php if ($_description = $block->getCurrentCategory()->getDescription()): ?>
-    <div class="category-description catalog-main__description">
+    <div class="category-description catalog-main__description <?php if($categoryImage):?>has-image<?php endif;?>">
         <div class="catalog-main__description--left-column">
             <a href="/" class="catalog-main__description--back"></a>
             <?php
@@ -28,7 +32,7 @@
             <?php endif; ?>
 
         </div>
-        <div class="catalog-main__description--right-column <?php if(!$categoryImage):?>text-center<?php endif;?>">
+        <div class="catalog-main__description--right-column <?php if(!$categoryImage):?>text-center<?php else: ?>image-on-left<?php endif;?>">
             <?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Output')->categoryAttribute($block->getCurrentCategory(), $_description, 'description') ?>
         </div>
     </div>
