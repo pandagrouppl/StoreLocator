@@ -180,7 +180,8 @@ body[class~='catalogsearch-result-index'] {
         }
 
         > div {
-            color: #333;
+            color: $black;
+            font-size: 11px;
         }
 
         p {
