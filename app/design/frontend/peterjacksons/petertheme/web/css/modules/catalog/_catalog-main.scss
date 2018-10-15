@@ -129,24 +129,30 @@ body[class~='catalogsearch-result-index'] {
 
     &__description {
         text-align: left;
-        background: $lightblue;
+        background: $lightgrey;
         display: flex;
         flex: 1;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        max-width: 720px;
+        max-width: 870px;
         margin: 20px auto;
         align-items: center;
-        padding: 0 75px;
+
+        &.has-image {
+
+            @media all and (min-width: 550px) {
+                align-items: flex-start;
+            }
+        }
 
         @media all and (max-width: 550px) {
             padding: 10px 20px 10px 20px;
         }
 
         h1 {
-            color: #232323;
-            font-size: 24px;
+            color: $black;
+            font-size: 22px;
             font-weight: 500;
             margin: 30px 14px 15px 0;
             text-transform: uppercase;
@@ -158,8 +164,8 @@ body[class~='catalogsearch-result-index'] {
 
         h2 {
             font-weight: normal;
-            color: #333;
-            font-size: 12px;
+            color: $black;
+            font-size: 11px;
 
             @media all and (max-width: 550px) {
                 display: none;
@@ -179,7 +185,7 @@ body[class~='catalogsearch-result-index'] {
         }
 
         span {
-            font-size: 12px !important;
+            font-size: 11px !important;
             color: black;
         }
 
@@ -208,6 +214,19 @@ body[class~='catalogsearch-result-index'] {
                 text-align: center;
             }
 
+            &.image-on-left {
+                padding: 0 25px 0 0;
+                width: 565px;
+
+                h1 {
+
+                    @media all and (min-width: 550px) {
+                        margin-top: 50px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
             @media all and (max-width: 550px) {
                 display: flex;
                 justify-content: center;
@@ -229,13 +248,14 @@ body[class~='catalogsearch-result-index'] {
     }
 
     &__image {
+        width: 280px;
 
         @media all and (max-width: 550px) {
             display: none;
         }
 
         img {
-            max-width: 270px;
+            max-width: 280px;
             height: auto;
         }
     }
