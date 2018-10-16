@@ -1,7 +1,9 @@
 <section class="main-banner">
+    <img class="main-banner__loader" id="home-loader" src="{{view url='img/assets/pj-loader.gif"}} alt="" />
+    <img class="main-banner__img" id="main-banner" src="{{view url='img/assets/home 25-09-18/main-banner-ann.png"}} alt="" style="display: none" />
     <div class="main-banner__wrapper">
         <a href="/mens-suits-1.html">
-            <img class="main-banner__image" src="{{view url='img/assets/home 25-09-18/70th anniversary 50off.png'}}"/>
+            <img class="main-banner__sign" src="{{view url='img/assets/home 25-09-18/70th anniversary 50off.png'}}" style="display: none"/>
         </a>
     </div>
 </section>
@@ -83,5 +85,9 @@
 <script>
     require(["js/home"], function (home) {
         var homeInit = home();
+    });
+
+    $('#main-banner').load(function() {
+        $('#home-loader').fadeOut();
     });
 </script>
