@@ -9,8 +9,6 @@ const home = () => {
     //     video.play();
     // }
 
-
-
     const $slider = $( '.slick-init' );
     //const $widget = $('.widget__slider-container');
 
@@ -90,6 +88,15 @@ const home = () => {
     // });
 
     $('.search-overlay__row').find('#search').focus();
+
+
+    $(".main-banner").ready(function() {
+        $(".main-banner__img").load(function () {
+            $(".main-banner__img").fadeIn(1000);
+            $('#home-loader').css("display", "none");
+            $(".main-banner__sign").fadeIn(1000);
+        });
+    });
 };
 
 export = home;
