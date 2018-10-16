@@ -179,5 +179,6 @@ return array (
     'WebShopApps_MatrixRate' => 1,
     'Wyomind_Core' => 1,
     'Wyomind_CronScheduler' => 1,
+    'Ebizmarts_MailChimp' => 1
   ),
 );
