@@ -175,11 +175,10 @@ return array (
     'WebShopApps_MatrixRate' => 1,
     'Wyomind_Core' => 1,
     'Wyomind_CronScheduler' => 1,
-     'Ebizmarts_MailChimp' => 1,
-     'PandaGroup_SubtotalInMinicart' => 1,
-     'PandaGroup_CommentBox' => 1,
-      'Mageplaza_Core' => 1,
-      'Mageplaza_BetterPopup' => 1
-
+    'Ebizmarts_MailChimp' => 1,
+    'PandaGroup_SubtotalInMinicart' => 1,
+    'PandaGroup_CommentBox' => 1,
+    'Mageplaza_Core' => 1,
+    'Mageplaza_BetterPopup' => 1
   ),
 );
