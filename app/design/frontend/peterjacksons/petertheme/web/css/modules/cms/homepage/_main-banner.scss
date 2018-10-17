@@ -8,7 +8,7 @@
     &__loader {
         position: absolute;
         display: block;
-        top: 200px;
+        top: 100px;
         background-color: white;
     }
 
@@ -42,7 +42,7 @@
         margin-top: 0;
 
         &__loader {
-            top: 100px;
+            top: 80px;
         }
 
         &__img {
@@ -58,7 +58,9 @@
         min-height: 200px;
 
         &__loader {
-            top: 50px;
+            top: 0;
+            height: 200px;
+
         }
 
         &__content-box {
@@ -85,7 +87,8 @@
         height: 350px;
 
         &__loader {
-            top: 100px;
+            top: 20px;
+            height: 296px;
         }
     }
 }
