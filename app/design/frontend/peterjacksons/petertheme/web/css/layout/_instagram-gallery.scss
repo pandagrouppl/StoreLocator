@@ -15,13 +15,13 @@ body[class~='instagram-gallery-index'] {
         &__title {
             margin: 20px auto;
             padding: 25px 0 35px 0;
-            background: #e0e7f7;;
+            background: $lightgrey;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            max-width: 1250px;
+            max-width: 870px;
 
             > p {
                 font-size: 12px;
