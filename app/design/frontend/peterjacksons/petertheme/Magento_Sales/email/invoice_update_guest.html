@@ -21,34 +21,27 @@
             <td align="center" valign="top" style="padding:0; ">
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
-                    <tr style="display: block; height: 5px;">
-                        <td></td>
-                    </tr>
-
-                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
-                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7;">
-                            <h1 style="color: white; font-size: 20pt; margin-bottom: 0;">Dear {{var billing.getName()}},</h1>
+                    <tr>
+                        <td>
+                            <p style="font-size:42px; padding:30px 18px 50px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;letter-spacing: -1px;">Dear {{var billing.getName()}},</p>
                         </td>
                     </tr>
-
-                    <tr style="display: block; height: 10px;">
-                        <td></td>
-                    </tr>
                 </table>
+
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
                     <tbody>
                     <!-- <tr style="width: 100%; display: inline-block; height: 41px; font-size: 18px; text-align: center;"> -->
-                    <td class="table-width-wrap-half" style="text-align: center; max-width: 602px; background: #3f3e3e; padding: 11px 0px 11px 36px;" valign="top" align="left">
-                        <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;">Your order # {{var order.increment_id}} status is: <strong>{{var order.getStatusLabel()}}</strong>.</p>
+                    <td class="table-width-wrap-half" style="text-align: center; max-width: 602px; background: #EBEBEB; padding: 15px 10px 5px 10px;" valign="top" align="left">
+                        <p style="text-align:center;font-size: 17px;padding: 0 0 0 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;color: #000000;">YOUR ORDER # {{var order.increment_id}} STATUS IS: <strong>{{var order.getStatusLabel()}}</strong>.</p>
                     </td>
                     <!-- </tr> -->
                     </tbody>
                 </table>
 
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
-                       style="border-collapse: collapse; border:0px; margin: 0px; margin-top: 10px; padding: 0px; background-color: #FFF;">
+                       style="border-collapse: collapse; border:0px; margin: 0px; margin-top: 20px;margin-bottom: 40px; padding: 0px; background-color: #FFF;">
                     <tr>
-                        <td style="font-size:16px; padding:0 5px 0 0; line-height:20px; text-align:center; margin:0; color:#5f5f5f;">
+                        <td style="font-size: 17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;text-align: center;">
                             <br/>
                             You can check the status of your order by<br> <a href="{{store url="customer/account/"}}" style="color:#6797d7; text-decoration: none;">logging into your account</a>.<br />
                             <p >Your Invoice #{{var invoice.increment_id}}<br> for Order #{{var order.increment_id}} has been updated.</p>

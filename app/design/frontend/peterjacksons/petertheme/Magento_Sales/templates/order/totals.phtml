@@ -11,25 +11,52 @@
  * @see \Magento\Sales\Block\Order\Totals
  */
 ?>
-<?php foreach ($block->getTotals() as $_code => $_total): ?>
-    <?php if ($_total->getBlockName()): ?>
-        <?php echo $block->getChildHtml($_total->getBlockName(), false); ?>
-    <?php else:?>
-    <div class="<?php /* @escapeNotVerified */ echo $_code?>">
-        <div <?php /* @escapeNotVerified */ echo $block->getLabelProperties()?> scope="row">
-            <?php if ($_total->getStrong()):?>
-            <strong><?php echo $block->escapeHtml($_total->getLabel());?></strong>
-            <?php else:?>
-            <?php echo $block->escapeHtml($_total->getLabel());?>
-            <?php endif?>
-        </div>
-        <div <?php /* @escapeNotVerified */ echo $block->getValueProperties()?> data-th="<?php echo $block->escapeHtml($_total->getLabel());?>">
-            <?php if ($_total->getStrong()):?>
-            <strong><?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?></strong>
-            <?php else:?>
-            <?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?>
-            <?php endif?>
-        </div>
-    </div>
-    <?php endif?>
-<?php endforeach?>
+<table border="0" cellpadding="0" cellspacing="0" width="520" id="templateColumns">
+    <tr>
+        <td align="center" valign="top" width="100%" class="templateColumnContainer">
+            <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                <tr>
+                    <td valign="top" class="leftColumnContent" style="font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;color: #000000;padding: 20px 10px 20px 10px">
+                        ITEM(S) DETAILS
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="520" id="templateColumns" style="margin: 0 auto;border-bottom: 1px solid #000000">
+    <?php foreach ($block->getTotals() as $_code => $_total): ?>
+        <?php if ($_total->getBlockName()): ?>
+            <?php echo $block->getChildHtml($_total->getBlockName(), false); ?>
+        <?php else:?>
+            <tr class="<?php /* @escapeNotVerified */ echo $_code?>">
+                <td align="center" valign="top" width="50%" class="templateColumnContainer">
+                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                        <tr>
+                            <td valign="top" class="leftColumnContent" style="font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;padding: 0 10px;">
+                                <?php if ($_total->getStrong()):?>
+                                    <p style="padding: 20px 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;color: #000000;"><?php echo $block->escapeHtml($_total->getLabel());?></p>
+                                <?php else:?>
+                                    <?php echo $block->escapeHtml($_total->getLabel());?>
+                                <?php endif?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="center" valign="top" width="50%" class="templateColumnContainer">
+                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
+                        <tr>
+                            <td valign="top" class="rightColumnContent" style="text-align: right;font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;padding: 0 10px;">
+                                <?php if ($_total->getStrong()):?>
+                                    <p style="padding: 20px 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;color: #000000;"><?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?></p>
+                                <?php else:?>
+                                    <?php /* @escapeNotVerified */ echo $block->formatValue($_total) ?>
+                                <?php endif?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        <?php endif?>
+    <?php endforeach?>
+</table>
