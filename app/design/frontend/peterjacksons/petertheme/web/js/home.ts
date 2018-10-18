@@ -89,7 +89,8 @@ const home = () => {
 
 
     $(".main-banner").ready(function() {
-        $(".main-banner__img").load(function () {
+
+        $(".main-banner__img").ready(function () {
             $(".main-banner__img").fadeIn(1000);
             $('#home-loader').css("display", "none");
             $(".main-banner__sign").fadeIn(1000);
