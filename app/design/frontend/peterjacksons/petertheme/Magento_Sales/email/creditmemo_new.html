@@ -101,7 +101,7 @@ font-style:normal;font-weight:600;
                     <table border="0" cellpadding="10" cellspacing="0" width="100%">
                         <tr>
                             <td valign="middle" class="leftColumnContent">
-                                <p style="text-align:center;font-size: 15px;color: white;padding: 20px 0 0 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Your Credit Memo #{{var creditmemo.increment_id}} for Order #{{var order.increment_id}}</p>
+                                <p style="text-align:center;font-size: 15px;color: white;padding: 15px 0 0 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Your Credit Memo #{{var creditmemo.increment_id}} for Order #{{var order.increment_id}}</p>
                             </td>
                         </tr>
                     </table>
@@ -128,41 +128,11 @@ font-style:normal;font-weight:600;
             </tr>
         </table>
 
-        <table border="0" cellpadding="0" cellspacing="0" width="500" id="templateColumns" style="margin: 30px auto 0 auto;border-bottom: 1px solid #000000;">
-            <tr>
-                <td align="center" valign="top" width="50%%" class="templateColumnContainer" style="padding: 0 0 20px 0;">
-                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                        <tr>
-                            <td valign="top" class="centerColumnContent" style="text-align:left;font-size:16px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;">
-                                Payment method
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td align="center" valign="top" width="50%" class="templateColumnContainer">
-                    <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                        <tr>
-                            <td valign="top" class="centerColumnContent" style="text-align:right;font-size:16px;font-family: Roboto, sans-serif;">
-                                {{var payment_html|raw}}
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-
         <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="500"
-               style="border-collapse: collapse; border:0px; margin: 30px auto 30px auto; padding: 0px; background-color: #FFF;">
+               style="border-collapse: collapse; border:0px; padding: 0px; background-color: #FFF;margin: 0 auto 20px auto;">
             <tr>
-                <td style="border-bottom: 1px solid #000000;">
-                    <p style="font-size:15px; padding:0 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">ITEM(S) DETAILS</p>
-                </td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-                <td style="border-bottom: 1px solid #000000;">
-                    <p style="font-size:15px; padding:20px 0 10px 0px; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;">{{layout handle="sales_email_order_creditmemo_items" creditmemo=$creditmemo order=$order}}</p>
+                <td>
+                    <p style="font-size:15px; padding:0 0 10px 0; line-height:20px; text-align:left; color:#000000;margin-bottom: 0;">{{layout handle="sales_email_order_items" order=$order}}</p>
                 </td>
             </tr>
         </table>

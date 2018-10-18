@@ -5,6 +5,55 @@
  */
 -->
 <!--@subject {{trans "Update to your %store_name invoice" store_name=$store.getFrontendName()}} @-->
+<!--@styles
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/8948c6/00000000000000003b9b1a9d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-style:italic;font-weight:700;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/1ca530/00000000000000003b9b1a94/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+font-style:normal;font-weight:200;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/572508/00000000000000003b9b1a96/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/98f96f/00000000000000003b9b1a97/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"sofia-pro";
+src:url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/7158ff/00000000000000003b9b1a9c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+font-style:normal;font-weight:600;
+}
+@-->
 <!--@vars {
 "var this.getUrl($store, 'customer/account/')":"Customer Account URL",
 "var order.getCustomerName()":"Customer Name",
@@ -22,34 +71,27 @@
             <td align="center" valign="top" style="padding:0; ">
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
-                    <tr style="display: block; height: 5px;">
-                        <td></td>
-                    </tr>
-
-                    <tr class="background-image-row" style="display: block; background-image: none; background-color: #6797d7;" >
-                        <td align="left" valign="top" style="padding: 36px 36px 36px 36px; background: #6797d7;">
-                            <h1 style="color: white; font-size: 20pt; margin-bottom: 0;">Dear {{var order.getCustomerName()}},</h1>
+                    <tr>
+                        <td>
+                            <p style="font-size:42px; padding:30px 18px 50px 18px; line-height:20px; text-align:center; color:#000000;margin-bottom: 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;letter-spacing: -1px;">Dear {{var order.getCustomerName()}},</p>
                         </td>
                     </tr>
-
-                    <tr style="display: block; height: 10px;">
-                        <td></td>
-                    </tr>
                 </table>
+
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602" height="41">
                     <tbody>
                     <!-- <tr style="width: 100%; display: inline-block; height: 41px; font-size: 18px; text-align: center;"> -->
-                    <td class="table-width-wrap-half" style="text-align: center; max-width: 602px; background: #3f3e3e; padding: 11px 0px 11px 36px;" valign="top" align="left">
-                        <p style="color: #FFFFFF; font-size: 18px; margin: 0 0 0 0;">Your order # {{var order.increment_id}} status is: <strong>{{var order.getStatusLabel()}}</strong>.</p>
+                    <td class="table-width-wrap-half" style="text-align: center; max-width: 602px; background: #EBEBEB; padding: 15px 10px 5px 10px;" valign="top" align="left">
+                        <p style="text-align:center;font-size: 17px;padding: 0 0 0 0;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;color: #000000;">YOUR ORDER # {{var order.increment_id}} STATUS IS: <strong>{{var order.getStatusLabel()}}</strong>.</p>
                     </td>
                     <!-- </tr> -->
                     </tbody>
                 </table>
 
                 <table class="table-width-wrap" cellspacing="0" cellpadding="0" border="0" width="602"
-                       style="border-collapse: collapse; border:0px; margin: 0px; margin-top: 10px; padding: 0px; background-color: #FFF;">
+                       style="border-collapse: collapse; border:0px; margin: 0px; margin-top: 20px;margin-bottom: 40px; padding: 0px; background-color: #FFF;">
                     <tr>
-                        <td style="font-size:16px; padding:0 5px 0 0; line-height:20px; text-align:center; margin:0; color:#5f5f5f;">
+                        <td style="font-size: 17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;text-align: center;">
                             <br/>
                             You can check the status of your order by<br> <a href="{{store url="customer/account/"}}" style="color:#6797d7; text-decoration: none;">logging into your account</a>.<br />
                             <p >Your Invoice #{{var invoice.increment_id}}<br> for Order #{{var order.increment_id}} has been updated.</p>
