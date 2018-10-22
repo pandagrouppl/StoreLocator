@@ -338,7 +338,7 @@
         }
 
         &--tailored-tropics {
-            background-image: url('../../img/assets/home-21-10-18/banner_tailored_tropics.png');
+            background-image: url('../../img/assets/home-22-10-18/banner-tailored-tropics.png');
             width: 100%;
             height: 892px;
 
@@ -373,7 +373,8 @@
                     background-color: $white;
 
                     @media all and (min-width: 1921px) {
-                        width: 625px;
+                        //width: 625px;
+                        display: none;
                     }
 
                     @media all and (max-width: 1260px) {
@@ -391,7 +392,8 @@
                     background-color: $white;
 
                     @media all and (min-width: 1921px) {
-                        right: 1147px;
+                        //right: 1147px;
+                        display: none;
                     }
 
                     @media all and (max-width: 1260px) {
