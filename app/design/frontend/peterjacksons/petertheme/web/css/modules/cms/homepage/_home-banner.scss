@@ -337,9 +337,104 @@
             }
         }
 
-        &--waterfront {
-            background-image: url('../../img/assets/home 25-09-18/leo-colors.png'), url('../../img/assets/home 25-09-18/leo-colors-loww.jpg');
+        &--tailored-tropics {
+            background-image: url('../../img/assets/home-22-10-18/banner-tailored-tropics.png');
             width: 100%;
+            height: 892px;
+
+            @media all and (min-width: 1921px) {
+                height: 89vh;
+            }
+
+            .home-banner__content-box {
+                text-align: right;
+
+                @media all and (max-width: 1260px) {
+                    align-items: flex-end;
+                    margin: 0;
+                }
+
+                @media all and (max-width: 560px) {
+                    padding: 5px 25%;
+                }
+            }
+
+            .home-banner__header {
+                margin-bottom: 60px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: -25px;
+                    right: 8px;
+                    width: 492px;
+                    height: 3px;
+                    background-color: $white;
+
+                    @media all and (min-width: 1921px) {
+                        //width: 625px;
+                        display: none;
+                    }
+
+                    @media all and (max-width: 1260px) {
+                        display: none;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    bottom: -25px;
+                    right: 868px;
+                    width: 9999px;
+                    height: 3px;
+                    background-color: $white;
+
+                    @media all and (min-width: 1921px) {
+                        //right: 1147px;
+                        display: none;
+                    }
+
+                    @media all and (max-width: 1260px) {
+                        display: none;
+                    }
+                }
+            }
+
+            .home-banner__inner {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                margin: 0;
+                top: 45%;
+
+                @media all and (max-width: 1260px) {
+                    top: 50%;
+                    left: 47%;
+                }
+
+                @media all and (max-width: 560px) {
+                    left: 42%;
+                }
+            }
+
+            .home-banner__text-box {
+                margin: 0 5px 60px 0;
+
+                @media all and (max-width: 1260px) {
+                    margin: 0 5px 15px 0;
+                    justify-content: flex-end;
+                }
+
+                @media all and (max-width: 560px) {
+                    margin: 0 5px 0 0;
+                }
+            }
+
+            button {
+                margin-right: 7px;
+            }
         }
     }
 }
@@ -467,7 +562,7 @@
                 height: 350px;
             }
 
-            &--waterfront {
+            &--tailored-tropics {
                 height: 350px;
             }
 
