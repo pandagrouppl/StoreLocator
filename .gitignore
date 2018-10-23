@@ -8,6 +8,8 @@ atlassian*
 /sitemap
 /.idea
 /.gitattributes
+/app/etc/config.php
+
 
 /dev
 
@@ -19,7 +21,6 @@ atlassian*
 
 /app/i18n/magento
 
-/app/etc/config.php
 
 /var
 
