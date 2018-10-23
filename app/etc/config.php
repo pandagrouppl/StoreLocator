@@ -178,6 +178,8 @@ return array (
     'Smile_ElasticsuiteVirtualCategory' => 1,
     'Strategery_Infinitescroll' => 1,
     'WebShopApps_MatrixRate' => 1,
+    'WeltPixel_Backend' => 1,
+    'WeltPixel_LazyLoading' => 1,
     'Wyomind_Core' => 1,
     'Wyomind_CronScheduler' => 1,
   ),
