@@ -1,0 +1,54 @@
+<?php
+/** @var \WeltPixel\Backend\Helper\Developer  $developerHelper */
+$developerHelper = $this->helper('WeltPixel\Backend\Helper\Developer');
+$cronjoblimit = 10;
+$scheduleCollection =  $developerHelper->getLatestCronJobs($cronjoblimit);
+
+?>
+<div class="col-xs-12 system-infromation-container">
+    <div class="col-xs-6 information-label">Magento Mode</div>
+    <div class="col-xs-6"><?php echo ucfirst($this->getMagentoMode()); ?></div>
+    <div class="col-xs-6 information-label">Magento Installation Path</div>
+    <div class="col-xs-6"><?php echo $this->getMagentoPath(); ?></div>
+    <div class="col-xs-6 information-label">Magento Edition</div>
+    <div class="col-xs-6"><?php echo $developerHelper->getMagentoEdition(); ?></div>
+    <div class="col-xs-6 information-label">Server User</div>
+    <div class="col-xs-6"><?php echo $developerHelper->getCurrentServerUser(); ?></div>
+    <div class="col-xs-6 information-label">Current Time</div>
+    <div class="col-xs-6"><?php echo $developerHelper->getServerTime(); ?></div>
+    <div class="col-xs-6 information-label">Latest Cron Jobs (<?php echo $cronjoblimit ?>)</div>
+    <div class="col-xs-6"></div>
+
+    <div class="col-xs-12 cronjob-details">
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Code</th>
+                    <th>Status</th>
+                    <th>Created At</th>
+                    <th>Scheduled At</th>
+                    <th>Executed At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  foreach ($scheduleCollection->getItems() as $item ) : ?>
+            <tr>
+                <td><?php echo $item->getJobCode(); ?> </td>
+                <td><?php echo $item->getStatus(); ?> </td>
+                <td><?php echo $item->getCreatedAt(); ?> </td>
+                <td><?php echo $item->getScheduledAt(); ?> </td>
+                <td><?php echo ($item->getExecutedAt()) ? $item->getExecutedAt() : '-' ?> </td>
+            </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    requirejs(['jquery'],function($) {
+        $(document).ready(function() {
+            $('#row_weltpixel_backend_developer_system_information_infromation_details .label').hide();
+            $('#row_weltpixel_backend_developer_system_information_infromation_details .value').css('width', '100%');
+        });
+    });
+</script>

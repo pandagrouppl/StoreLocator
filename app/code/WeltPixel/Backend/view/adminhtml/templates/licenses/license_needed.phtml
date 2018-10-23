@@ -1,0 +1,19 @@
+<?php
+// @codingStandardsIgnoreFile
+?>
+<?php
+/**
+ * @see \WeltPixel\Backend\Block\Adminhtml\Licenses
+ */
+?>
+<hr class="access-denied-hr"/>
+<div class="access-denied-page">
+<h2 class="page-heading"><?= $block->escapeHtml(__('Sorry, you need a valid license key to view this content.')) ?></h2>
+<strong><?= $block->escapeHtml(__('Next steps')) ?></strong>
+<ul>
+    <li><span><?= $block->escapeHtml(__('If you think this is an error, make sure you added the correct license.')) ?>
+            <a href="<?= $block->getLicensesUrl() ?>"><?= $block->escapeHtml(__('Check Here'));?></a>
+        </span></li>
+    <li><span><?= $block->escapeHtml(__('Contact us if the problem still persists.')) ?></span></li>
+</ul>
+</div>

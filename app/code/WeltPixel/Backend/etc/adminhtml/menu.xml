@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WeltPixel_Backend::WeltPixel" title="WeltPixel" module="WeltPixel_Backend" sortOrder="200" resource="WeltPixel_Backend::WeltPixel"/>
+        <add
+                id="WeltPixel_Backend::WeltPixel_Documentation"
+                title="WeltPixel Documentation"
+                module="WeltPixel_Backend"
+                action="adminhtml/system_config/edit/section/weltpixel_backend_config/"
+                sortOrder="0"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_Backend::WeltPixel_Documentation"
+        />
+        <add
+                id="WeltPixel_Backend::WeltPixel_HelpCenter"
+                title="WeltPixel Help Center"
+                module="WeltPixel_Backend"
+                action="adminhtml/system_config/edit/section/weltpixel_backend_config/"
+                sortOrder="1"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_Backend::WeltPixel_HelpCenter"
+        />
+        <add
+                id="WeltPixel_Backend::WeltPixel_Licenses"
+                title="WeltPixel Licenses"
+                module="WeltPixel_Backend"
+                sortOrder="2"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_Backend::WeltPixel_Licenses"
+        />
+        <add
+                id="WeltPixel_Backend::Modules_License"
+                title="Modules Licenses"
+                module="WeltPixel_Backend"
+                action="weltpixel_backend/licenses/index"
+                sortOrder="2"
+                parent="WeltPixel_Backend::WeltPixel_Licenses"
+                resource="WeltPixel_Backend::Modules_License"
+        />
+        <add
+                id="WeltPixel_Backend::WeltPixel_Debugger"
+                title="WeltPixel Debugger"
+                module="WeltPixel_Backend"
+                sortOrder="3"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_Backend::WeltPixel_Debugger"
+        />
+        <add
+                id="WeltPixel_Backend::WeltPixel_Debugger_Rewrites"
+                title="Rewrites"
+                module="WeltPixel_Backend"
+                action="weltpixel_backend/debugger/rewrites"
+                sortOrder="2"
+                parent="WeltPixel_Backend::WeltPixel_Debugger"
+                resource="WeltPixel_Backend::WeltPixel_Debugger_Rewrites"
+        />
+        <add
+                id="WeltPixel_Backend::WeltPixel_Debugger_Modules"
+                title="Extensions Version"
+                module="WeltPixel_Backend"
+                action="weltpixel_backend/debugger/modules"
+                sortOrder="5"
+                parent="WeltPixel_Backend::WeltPixel_Debugger"
+                resource="WeltPixel_Backend::WeltPixel_Debugger_Modules"
+        />z
+        <add
+                id="WeltPixel_Backend::WeltPixel_Debugger_Developer"
+                title="Developer"
+                module="WeltPixel_Backend"
+                action="adminhtml/system_config/edit/section/weltpixel_backend_developer/"
+                sortOrder="25"
+                parent="WeltPixel_Backend::WeltPixel_Debugger"
+                resource="WeltPixel_Backend::WeltPixel_Debugger_Developer"
+        />
+        <add
+                id="WeltPixel_Backend::Pearl_Theme_Options"
+                title="Pearl Theme Options"
+                module="WeltPixel_Backend"
+                sortOrder="3"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_Backend::Pearl_Theme_Options"
+        />
+    </menu>
+</config>

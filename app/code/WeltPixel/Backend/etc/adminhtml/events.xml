@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch">
+        <observer name="weltpixel_backend" instance="WeltPixel\Backend\Observer\PredispatchAdminActionControllerObserver" />
+    </event>
+    <event name="backend_auth_user_login_success">
+        <observer name="weltpixel_backend_admin_login_successs" instance="WeltPixel\Backend\Observer\AdminLoginSuccessObserver" />
+    </event>
+</config>

@@ -1,0 +1,50 @@
+"Only Custom Modules","Only Custom Modules"
+"All Magento Modules","All Magento Modules"
+OK,OK
+"CHECK REWRITE","CHECK REWRITE"
+N/A,N/A
+"Up to Date","Up to Date"
+"Update needed","Update needed"
+Modules,Modules
+"Check Rewrites / Preferences","Check Rewrites / Preferences"
+Valid,Valid
+Invalid,Invalid
+"The license key was successfully updated.","The license key was successfully updated."
+"The license key introduced is valid","The license key introduced is valid"
+"The license key you entered is invalid.","The license key you entered is invalid."
+"Common reasons:","Common reasons:"
+"- Wrong domain name - check active license domain under My Downloadable Products section of your weltpixel.com account. License allows using the product on one Magento installation with any number of store views / URLs. Product can be installed on up to 5 sub-domains of the licensed domain for testing purpose, including domains .local | .dev | .development | .staging | .stage  Ex: staging.domain.com, development.domain.com, domain.local, domain.dev etc..","- Wrong domain name - check active license domain under My Downloadable Products section of your weltpixel.com account. License allows using the product on one Magento installation with any number of store views / URLs. Product can be installed on up to 5 sub-domains of the licensed domain for testing purpose, including domains .local | .dev | .development | .staging | .stage  Ex: staging.domain.com, development.domain.com, domain.local, domain.dev etc.."
+"- Wrong Magento edition - using a Magento Open Source license key for a Magento Commerce installation.","- Wrong Magento edition - using a Magento Open Source license key for a Magento Commerce installation."
+"- Wrong module - using a license key from a different product or product pack.","- Wrong module - using a license key from a different product or product pack."
+"There was a problem with the license key saving.","There was a problem with the license key saving."
+"License missing or invalid for the following WeltPixel module(s):","License missing or invalid for the following WeltPixel module(s):"
+"You can enter the license key(s)","You can enter the license key(s)"
+here.,here.
+"License key can be found under My Downloadable Products section of your weltpixel.com account.","License key can be found under My Downloadable Products section of your weltpixel.com account."
+"Sorry, you need a valid license key to view this content.","Sorry, you need a valid license key to view this content."
+"Next steps","Next steps"
+"If you think this is an error, make sure you added the correct license.","If you think this is an error, make sure you added the correct license."
+"Check Here","Check Here"
+"Contact us if the problem still persists.","Contact us if the problem still persists."
+Name,Name
+"License Key","License Key"
+Submit,Submit
+"No licenses needed for current Weltpixel installed extensions.","No licenses needed for current Weltpixel installed extensions."
+Enabled,Enabled
+"Current Version","Current Version"
+"Latest Version","Latest Version"
+"Theme module","Theme module"
+Themes,Themes
+WeltPixel,WeltPixel
+"WeltPixel Documentation","WeltPixel Documentation"
+"Recommended Solutions:","Recommended Solutions:"
+Developer,Developer
+"System Information","System Information"
+Logs,Logs
+"Enable broken reference logs","Enable broken reference logs"
+Notifications,Notifications
+"Enable WeltPixel Admin Notifications","Enable WeltPixel Admin Notifications"
+Area,Area
+"Original Class","Original Class"
+"Rewrite Class","Rewrite Class"
+Status,Status

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="WeltPixel_LazyLoading::LazyLoading_Label"
+                title="Lazy Loading"
+                module="WeltPixel_LazyLoading"
+                sortOrder="82"
+                parent="WeltPixel_Backend::WeltPixel"
+                resource="WeltPixel_LazyLoading::LazyLoading_Label"
+        />
+        <add
+                id="WeltPixel_LazyLoading::LazyLoading"
+                title="Lazy Loading Settings"
+                module="WeltPixel_LazyLoading"
+                action="adminhtml/system_config/edit/section/weltpixel_lazy_loading/"
+                sortOrder="12"
+                parent="WeltPixel_LazyLoading::LazyLoading_Label"
+                resource="WeltPixel_LazyLoading::LazyLoading"
+        />
+    </menu>
+</config>

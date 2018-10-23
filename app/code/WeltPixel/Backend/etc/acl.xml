@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin" >
+                <resource id="WeltPixel_Backend::WeltPixel" title="WeltPixel" sortOrder="200" >
+                    <resource id="WeltPixel_Backend::WeltPixel_Documentation" title="WeltPixel Documentation" sortOrder="0" />
+                    <resource id="WeltPixel_Backend::WeltPixel_HelpCenter" title="WeltPixel HelpCenter" sortOrder="2" />
+                    <resource id="WeltPixel_Backend::WeltPixel_Licenses" title="WeltPixel Licenses" sortOrder="3" >
+                        <resource id="WeltPixel_Backend::Modules_License" title="Licenses" sortOrder="10" />
+                    </resource>
+                    <resource id="WeltPixel_Backend::WeltPixel_Debugger" title="WeltPixel Debugger" sortOrder="5" >
+                        <resource id="WeltPixel_Backend::WeltPixel_Debugger_Rewrites" title="Rewrites" sortOrder="1" />
+                        <resource id="WeltPixel_Backend::WeltPixel_Debugger_Modules" title="Extensions Version" sortOrder="5" />
+                        <resource id="WeltPixel_Backend::WeltPixel_Debugger_Developer" title="Developer" sortOrder="25" />
+                    </resource>
+                    <resource id="WeltPixel_Backend::Pearl_Theme_Options" title="Pearl Theme Options" sortOrder="5" />
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="WeltPixel_Backend::DocumentationSettings" title="WeltPixel DocumentationSettings" sortOrder="0" />
+                            <resource id="WeltPixel_Backend::DeveloperSettings" title="WeltPixel Developer" sortOrder="1000" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

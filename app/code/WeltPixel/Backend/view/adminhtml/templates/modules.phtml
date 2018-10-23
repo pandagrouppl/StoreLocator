@@ -1,0 +1,66 @@
+<?php
+$modules = $this->getModuleVersions();
+$themes = $this->getThemeVersions();
+?>
+<div class="admin__page-section-item">
+    <div class="admin__page-section-item-content">
+        <table class="admin__table-secondary">
+            <thead>
+                <tr>
+                    <th><?php echo __('Name'); ?></th>
+                    <th><?php echo __('Enabled'); ?></th>
+                    <th><?php echo __('Current Version'); ?></th>
+                    <th><?php echo __('Latest Version'); ?></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($modules as $moduleName => $options) : ?>
+                <tr>
+                    <td>
+                        <span class="module-title"><?php echo $moduleName ?></span>
+                        <?php if ($options['theme_module']) : ?>
+                            <span class="module-theme-info">(<?php echo __('Theme module'); ?>)</span>
+                        <?php endif; ?>
+                    </td>
+                    <td><?php echo ($options['enabled']) ? 'Yes' : 'No' ?></td>
+                    <td><?php echo $options['version'] ?></td>
+                    <td><?php echo $options['latest_version'] ?></td>
+                    <td><span class="rewrite-status rewrite-status-<?php echo ($options['status']) ? 'ok' : 'nok'; ?>"><?php echo $options['status_message'] ?></span></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php if (count($themes)) :  ?>
+<hr/><br/>
+<div class="admin__page-section-item">
+    <div class="admin__page-section-item-title">
+        <h1 class="page-title"><?php echo __('Themes'); ?></h1>
+    </div>
+    <div class="admin__page-section-item-content">
+        <table class="admin__table-secondary">
+            <thead>
+            <tr>
+                <th><?php echo __('Name'); ?></th>
+                <th><?php echo __('Current Version'); ?></th>
+                <th><?php echo __('Latest Version'); ?></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($themes as $themeName => $options) : ?>
+                <tr>
+                    <td><span class="module-title"><?php echo $themeName ?></span></td>
+                    <td><?php echo $options['version'] ?></td>
+                    <td><?php echo $options['latest_version'] ?></td>
+                    <td><span class="rewrite-status rewrite-status-<?php echo ($options['status']) ? 'ok' : 'nok'; ?>"><?php echo $options['status_message'] ?></span></td>
+
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php endif; ?>
