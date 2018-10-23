@@ -21,11 +21,41 @@
 
     &__image {
         height: 631px;
-        padding-left: 9.5%;
+        width: 455px;
+        margin-left: 9.5%;
+        background-image: url('../../img/assets/home-22-10-18/home-hero-image-gq.png');
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top 0;
+        z-index: 1;
 
         @media all and (max-width: 1440px) {
             height: 500px;
-            padding-left: 5%;
+            margin-left: 5%;
+            width: 360px
+        }
+    }
+
+    &__inner-box {
+        padding-left: 87px;
+        padding-bottom: 35px;
+
+        @media all and (max-width: 1440px) {
+            padding-left: 70px;
+            padding-bottom: 27px;
+        }
+    }
+
+    &__inner-image {
+        margin: 10px 0;
+        width: 286px;
+        height: auto;
+
+        @media all and (max-width: 1440px) {
+            width: 220px;
         }
     }
 
@@ -44,6 +74,12 @@
                 margin-bottom: 320px;
             }
         }
+    }
+
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 
     &__content-box {
@@ -69,11 +105,16 @@
 
     &__text {
         font-weight: 300;
-        font-size: 12pt;
-        font-family: 'sofia-pro', sans-serif;
+        font-size: 24px;
+        font-family: 'roboto', sans-serif;
         margin: 0 0 8px 0;
-        letter-spacing: 0;
+        letter-spacing: 1px;
         color: white;
+
+        @media all and (max-width: 1440px) {
+            font-size: 20px;
+            margin: 0 0 5px 0;
+        }
     }
 }
 
@@ -101,8 +142,25 @@
             padding: 0;
         }
 
+        &__inner-box {
+            padding-left: 50px;
+            padding-bottom: 20px;
+        }
+
+        &__inner-image {
+            width: 172px;
+            margin: 4px 0;
+        }
+
         &__image {
             height: 380px;
+            width: 273px;
+        }
+
+        &__text {
+            font-size: 15px;
+            margin: 0 0 5px 0;
+            letter-spacing: 0;
         }
 
         button {
@@ -141,6 +199,21 @@
 
         &__image {
             height: 300px;
+            width: 216px;
+        }
+
+        &__inner-box {
+            padding-left: 41px;
+            padding-bottom: 18px;
+        }
+
+        &__inner-image {
+            width: 135px;
+        }
+
+        &__text {
+            font-size: 12px;
+            margin: 0 0 3px;
         }
     }
 }
@@ -163,6 +236,7 @@
         &__image {
             max-width: 100%;
             height: 250px;
+            width: 180px;
             padding-left: 0;
         }
 
@@ -173,8 +247,18 @@
             margin-bottom: 60px;
         }
 
+        &__inner-box {
+            padding-left: 36px;
+            padding-bottom: 15px;
+        }
+
+        &__inner-image {
+            width: 110px;
+        }
+
         &__text {
-            font-size: 14px;
+            font-size: 10px;
+            margin: 0 0 2px;
 
             br {
                 display: none;
