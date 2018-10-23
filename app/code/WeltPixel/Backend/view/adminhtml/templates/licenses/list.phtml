@@ -1,0 +1,86 @@
+<?php
+$_helper = $this->helper('WeltPixel\Backend\Helper\License');
+$licenseNeeded  = $_helper->getModulesListForDisplay();
+$odd = false;
+?>
+
+<?php if (count($licenseNeeded)) : ?>
+<div class="license-container">
+    <table class="admin__table-secondary">
+        <thead>
+        <tr>
+            <th class="license-name"><?php echo __('Name'); ?></th>
+            <th class="license-key"><?php echo __('License Key'); ?></th>
+            <th class="license-validity"></th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <?php foreach ($licenseNeeded as $key => $options) : ?>
+        <?php $odd = !$odd; ?>
+        <form action="<?php echo $this->getLicensePostUrl()?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' >
+        <table class="admin__table-secondary <?php if ($odd) echo 'admin_table_filled' ?>">
+            <tbody>
+            <?php $licenseValidity = $_helper->isLcVd($options['license'], $options['module_name']); ?>
+            <tr>
+                <td class="license-name"><?php echo $options['visible_name'] ?></td>
+                <td class="license-key"><?php echo $options['license'] ?></td>
+                <td class="license-validity"><span class="license-status license-status-<?php echo ($licenseValidity) ? 'ok' : 'nok'; ?>"><?php echo ($licenseValidity) ? __('Valid') : __('Invalid') ?></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="hidden" value="<?php echo $block->getFormKey(); ?>" name="form_key" />
+                    <input type="hidden" name="module_name" value="<?php echo $options['module_name'] ?>" />
+                    <input type="text" class="license-input" name="license" value=""  data-validate="{required:true}" />
+                    <button title="Submit" type="submit" class="primary submit-license-btn" role="button" disabled="disabled">
+                        <span class="ui-button-text">
+                            <span><?php echo __('Submit'); ?></span>
+                        </span>
+                    </button>
+                </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        </form>
+    <?php endforeach; ?>
+</div>
+<script>
+    requirejs(['jquery', 'Magento_Ui/js/modal/alert', 'domReady!'],
+        function   ($, alert) {
+            setTimeout(function(){ $('.submit-license-btn').prop('disabled', false); }, 1000);
+            $('.submit-license-btn').click(function () {
+                var formToSubmit = $(this).closest("form");
+                if (formToSubmit.valid()) {
+                    var that = this;
+                    $(that).prop('disabled', true);
+                    $.ajax({
+                        type: formToSubmit.attr('method'),
+                        url: formToSubmit.attr('action'),
+                        data: formToSubmit.serialize(),
+                        success: function (data) {
+                            $(that).prop('disabled', false);
+                            if (!data.error) {
+                                formToSubmit.find('.license-key').html(data.license);
+                                formToSubmit.find('.license-validity .license-status').removeClass('license-status-ok license-status-nok').addClass(data.is_valid);
+                                formToSubmit.find('.license-validity .license-status').html(data.is_valid_msg);
+                                formToSubmit.find('.license-input').val('');
+                            }
+                            alert({
+                                title: '',
+                                content: data.message
+                            });
+                        }
+                    });
+                }
+                return false;
+            });
+        });
+</script>
+<?php else : ?>
+    <div>
+        <p><?php echo __('No licenses needed for current Weltpixel installed extensions.'); ?></p>
+    </div>
+<?php endif; ?>

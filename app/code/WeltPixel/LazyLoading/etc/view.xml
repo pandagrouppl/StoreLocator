@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+	<exclude>
+		<item type="file">WeltPixel_LazyLoading::js/jquery_lazyload.js</item>
+		<item type="file">WeltPixel_LazyLoading::js/jquery_lazyload.min.js</item>
+	</exclude>
+</view>

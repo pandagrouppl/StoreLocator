@@ -1,0 +1,25 @@
+<?php if(!$this->isCompatible()):?>
+    <div>
+        <h1>NOTICE:</h1>
+
+        <ul style="list-style-type: none">
+            <li>1. Depending on the OWL Carousel and Slider extension installed (Free vs PRO) choose one of the two patches available.</li>
+            <li style="padding-left: 15px">Using the wrong patch will result in Lazy Load extension not working:</li>
+            <li >
+                <ul style="list-style-type: disc; padding-left: 40px">
+                    <li>Patch for Owl Carousel & Slider Free version <a href="<?= $this->getDownloadLink()?>" target="_blank">HERE</a> or</li>
+                    <li>Patch for Owl Carousel & Slider PRO version from <a href="<?= $this->getProDownloadLink()?>" target="_blank">HERE</a></li>
+                </ul>
+            </li>
+            <li>2. Unzip and copy the module files in app/code/WelPixel/LazyLoadingOwlCarouselSlider</li>
+            <li>3. Access the root of your magento 2 project and run the following commands</li>
+            <li style="padding-left: 15px"><code>php bin/magento module:enable WeltPixel_LazyLoadingOwlCarouselSlider --clear-static-content</code></li>
+            <li style="padding-left: 15px"><code>php bin/magento setup:upgrade</code></li>
+            <li>4. Flush any cache that you might still have enabled on your server or in Magento.</li>
+        </ul>
+
+        <p>
+            <strong>Note: </strong> If you upgrade OWL Carousel and Slider to PRO version, make sure to re-download and apply the appropriate compatibility patch with Lazy Loading as described in the steps above.
+        </p>
+    </div>
+<?php endif;?>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <weltpixel_backend_developer>
+            <logging>
+                <disable_broken_reference>0</disable_broken_reference>
+            </logging>
+            <notifications>
+                <enable_admin_notification>1</enable_admin_notification>
+            </notifications>
+        </weltpixel_backend_developer>
+    </default>
+</config>

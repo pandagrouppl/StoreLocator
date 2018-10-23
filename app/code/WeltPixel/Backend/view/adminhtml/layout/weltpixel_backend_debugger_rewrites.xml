@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="WeltPixel\Backend\Block\Adminhtml\Debugger" name="weltpixel_rewrites_grid">
+                <block class="Magento\Backend\Block\Widget\Grid" name="weltpixel_rewrites_grid.grid" as="grid">
+                    <arguments>
+                        <argument name="dataSource" xsi:type="object">WeltPixel\Backend\Model\ResourceModel\Debugger\Grid\Collection</argument>
+                        <argument name="pager_visibility" xsi:type="string">0</argument>
+                    </arguments>
+                    <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="weltpixel_rewrites_grid.grid.columnSet" as="grid.columnSet">
+                        <arguments>
+                            <argument name="filter_visibility" xsi:type="string">1</argument>
+                        </arguments>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="area">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Area</argument>
+                                <argument name="index" xsi:type="string">area</argument>
+                                <argument name="sortable" xsi:type="string">0</argument>
+                                <argument name="filter" xsi:type="string">0</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="original_class">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Original Class</argument>
+                                <argument name="index" xsi:type="string">original_class</argument>
+                                <argument name="sortable" xsi:type="string">0</argument>
+                                <!--<argument name="filter" xsi:type="string">0</argument>-->
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="rewrite_class">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Rewrite Class</argument>
+                                <argument name="index" xsi:type="string">rewrite_class</argument>
+                                <argument name="sortable" xsi:type="string">0</argument>
+                                <argument name="filter" xsi:type="string">0</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Backend\Block\Widget\Grid\Column" as="status">
+                            <arguments>
+                                <argument name="header" xsi:type="string" translate="true">Status</argument>
+                                <argument name="filter" xsi:type="string">0</argument>
+                                <argument name="sortable" xsi:type="string">0</argument>
+                                <argument name="renderer" xsi:type="string">WeltPixel\Backend\Block\Adminhtml\Grid\Renderer\RewriteStatus</argument>
+                                <argument name="header_css_class" xsi:type="string">col-rewrite-status</argument>
+                            </arguments>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
