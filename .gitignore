@@ -19,7 +19,7 @@ atlassian*
 
 /app/i18n/magento
 
-
+/app/etc/config.php
 
 /var
 
