@@ -187,7 +187,7 @@
         }
 
         &--measure {
-            background-image: url('../../img/assets/home 25-09-18/made-to-measure-img.png'), url('../../img/assets/home 25-09-18/made-to-measure-img-low.jpg');
+            background-image: url('../../img/assets/home 25-09-18/made-to-measure-img-125.jpg'), url('../../img/assets/home 25-09-18/made-to-measure-img-low.jpg');
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -335,6 +335,11 @@
                     }
                 }
             }
+        }
+
+        &--waterfront {
+            background-image: url('../../img/assets/home 25-09-18/leo-colors-411.jpg'), url('../../img/assets/home 25-09-18/leo-colors-loww.jpg');
+            width: 100%;
         }
 
         &--tailored-tropics {
@@ -536,12 +541,16 @@
                 height: 350px;
             }
 
-            &--tailored-tropics {
+            &--waterfront {
                 height: 350px;
             }
 
             &--measure {
                 height: 600px;
+            }
+
+            &--tailored-tropics {
+                height: 350px;
             }
         }
 

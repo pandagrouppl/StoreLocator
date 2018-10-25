@@ -1,15 +1,12 @@
 <section class="main-banner">
-    <a href="/mens-suits-1.html" class="main-banner__link"> </a>
+    <img class="main-banner__loader" id="home-loader" src="{{view url='img/assets/PJ_loader.gif"}} alt="" />
+<!--    <img class="main-banner__img" id="main-banner" src="{{view url='img/assets/home 25-09-18/main-banner-ann.png"}} alt="" style="display: none" />-->
+    <img class="main-banner__img" id="main-banner" data-src="{{view url='img/assets/home 25-09-18/main-banner-ann-575.jpg"}} style="display: none"
+          src="{{view url='img/assets/home 25-09-18/main-banner-ann-low.png?w=20&blur=200&px=16&auto=format"}} alt="" />
     <div class="main-banner__wrapper">
-        <div class="main-banner__image">
-            <div class="main-banner__inner-box">
-                <p class="main-banner__text main-banner__text--additional">An Additional</p>
-                <img class="main-banner__inner-image" src="{{view url='img/assets/home-22-10-18/home-hero-banner-off-sitewide.png'}}" />
-                <p class="main-banner__text">No exceptions.</p>
-                <p class="main-banner__text">Simply use voucher code:</p>
-                <p class="main-banner__text"><b>GQ10</b> at the checkout</p>
-            </div>
-        </div>
+        <a href="/mens-suits-1.html">
+            <img class="main-banner__sign" src="{{view url='img/assets/home 25-09-18/70th anniversary 50off.png'}}" style="display: none"/>
+        </a>
     </div>
 </section>
 
@@ -92,4 +89,15 @@
     require(["js/home"], function (home) {
         var homeInit = home();
     });
+
+    function init() {
+        var imgDefer = document.getElementsByTagName('img');
+        for (var i=0; i<imgDefer.length; i++) {
+            if(imgDefer[i].getAttribute('data-src')) {
+                imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+            }
+        }
+    }
+    window.onload = init;
+
 </script>
