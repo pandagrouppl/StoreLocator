@@ -1,0 +1,14 @@
+
+<!-- ko if: cart().discount_amount > 0 -->
+<div class="minicart__subtotal">
+    <div class="minicart__subtotal-label">
+        <!-- ko i18n: 'Total' --><!-- /ko -->
+    </div>
+    <div class="minicart__subtotal-amount">
+        <span>AUD </span>
+        <div class="amount price-container">
+            <span class="price-wrapper" data-bind="html: cart().subtotal_minicart"></span>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
