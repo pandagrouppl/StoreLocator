@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php $_item = $block->getItem() ?>
+<?php $_order = $block->getItem()->getOrder(); ?>
+<tr>
+    <td class="item-info<?php if ($block->getItemOptions()): ?> has-extra<?php endif; ?>" style="border-top: 0;width: 45%">
+        <p class="product-name" style="font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;"><?= $block->escapeHtml($_item->getName()) ?></p>
+        <p class="sku" style="font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;margin-bottom: 0;"><?= /* @escapeNotVerified */  __('SKU'); ?>: <?= $block->escapeHtml($block->getSku($_item)) ?></p>
+        <?php $addInfoBlock = $block->getProductAdditionalInformationBlock(); ?>
+        <?php if ($addInfoBlock) :?>
+            <?= $addInfoBlock->setItem($_item->getOrderItem())->toHtml() ?>
+        <?php endif; ?>
+        <?= $block->escapeHtml($_item->getDescription()) ?>
+    </td>
+    <td class="item-qty" style="border-top: 0;font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;"><?= /* @escapeNotVerified */  $_item->getQty() * 1 ?></td>
+    <td class="item-price" style="border-top: 0;font-size: 15px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;color: #000000;">
+        <?= /* @escapeNotVerified */  $block->getItemPrice($_item); ?>
+    </td>
+</tr>
