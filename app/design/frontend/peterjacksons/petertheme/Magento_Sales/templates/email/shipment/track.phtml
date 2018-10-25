@@ -12,19 +12,21 @@
 <?php if ($_shipment && $_order && $_shipment->getAllTracks()): ?>
 <br />
 <table class="shipment-track" style="margin: 30px auto;width: 60%;">
+    <?php foreach ($_shipment->getAllTracks() as $_item): ?>
     <thead>
         <tr>
-            <th style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;padding: 10px 10px 5px 10px;"><?= /* @escapeNotVerified */  __('Shipped By:') ?></th>
-            <th style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;text-align: right;padding: 10px 10px 5px 10px;"><?= /* @escapeNotVerified */  __('Tracking Number:') ?></th>
+            <th style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;padding:10px 10px 5px 20px;"><?= /* @escapeNotVerified */  __('Shipped By:') ?></th>
+            <td style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;text-align: right;padding:10px 20px 5px 10px;"><?= $block->escapeHtml($_item->getTitle()) ?></td>
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($_shipment->getAllTracks() as $_item): ?>
+
         <tr>
-            <td style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;padding: 5px 10px 10px 10px;"><?= $block->escapeHtml($_item->getTitle()) ?></td>
-            <td style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;text-align: right;padding: 5px 10px 10px 10px;"><?= $block->escapeHtml($_item->getNumber()) ?></td>
+            <th style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;padding:10px 10px 5px 20px;"><?= /* @escapeNotVerified */  __('Tracking Number:') ?></th>
+            <td style="width: 33%;background-color: #EBEBEB;font-size:17px;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:200;text-align: right;padding:10px 20px 5px 10px;"><?= $block->escapeHtml($_item->getNumber()) ?></td>
         </tr>
-    <?php endforeach ?>
+
     </tbody>
+    <?php endforeach ?>
 </table>
 <?php endif; ?>

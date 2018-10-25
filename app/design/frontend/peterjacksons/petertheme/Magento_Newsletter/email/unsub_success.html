@@ -55,6 +55,7 @@ font-style:normal;font-weight:600;
 }
 @-->
 <!--@vars {
+"var customer.name":"Customer Name",
 "template config_path=\"design\/email\/footer_template\"":"Email Footer Template",
 "template config_path=\"design\/email\/header_template\"":"Email Header Template"
 } @-->
@@ -69,7 +70,7 @@ font-style:normal;font-weight:600;
                        style="border-collapse: collapse; border:0px; margin: 0px; padding: 0px; background-color: #FFF;">
                     <tr>
                         <td>
-                            <p style="font-size:40px; padding:10px 18px; line-height:30px; text-align:center; color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Dear {{var customer.email}},</p>
+                            <p style="font-size:40px; padding:10px 18px; line-height:30px; text-align:center; color:#000000;font-family: sofia-pro,sans-serif;font-style:normal;font-weight:400;">Dear {{var customer.name}},</p>
                         </td>
                     </tr>
                 </table>
