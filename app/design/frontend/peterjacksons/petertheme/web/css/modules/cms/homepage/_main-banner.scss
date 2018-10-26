@@ -1,49 +1,39 @@
 .main-banner {
-    background-image: url('../../img/assets/home-22-10-18/hero-banner-BQ.png');
+    background-image: url('../../img/assets/home 25-09-18/main-banner-ann.png');
     width: 100%;
     max-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top 0;
-    height: 854px;
+    height: 716px;
     position: relative;
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
 
     @media all and (min-width: 2200px) {
-        height: 85vh;
+        height: 79vh;
 
         @media all and (min-height: 1500px) {
-            height: 76vh;
+            height: 73vh;
         }
     }
 
     &__image {
-        height: 631px;
-        padding-left: 9.5%;
+        height: 260px;
 
-        @media all and (max-width: 1440px) {
-            height: 500px;
-            padding-left: 5%;
+        @media all and (min-width: 2200px) {
+            height: 420px;
         }
     }
 
     &__wrapper {
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         display: flex;
         flex-direction: column;
-
-        @media all and (max-width: 1440px) {
-            margin-bottom: 160px;
-        }
-
-        @media all and (min-width: 2200px) {
-
-            @media all and (min-height: 1400px) {
-                margin-bottom: 320px;
-            }
-        }
+        align-items: center;
     }
 
     &__content-box {
@@ -85,7 +75,7 @@
         //margin-top: 45px;
 
         &__wrapper {
-            margin-bottom: 100px;
+            margin-bottom: 30px;
         }
 
         &__header {
@@ -102,7 +92,7 @@
         }
 
         &__image {
-            height: 380px;
+            height: 260px;
         }
 
         button {
@@ -132,15 +122,12 @@
 
         &__wrapper {
             justify-content: flex-start;
-            margin-bottom: 90px;
+            padding: 0 2%;
+            align-items: center;
         }
 
         &__content-box {
             margin: 0;
-        }
-
-        &__image {
-            height: 300px;
         }
     }
 }
@@ -162,15 +149,14 @@
 
         &__image {
             max-width: 100%;
-            height: 250px;
-            padding-left: 0;
+            height: 140px;
         }
 
         &__wrapper {
             display: flex;
-            justify-content: flex-start;
             align-items: center;
-            margin-bottom: 60px;
+            padding: 0;
+            justify-content: flex-start;
         }
 
         &__text {
