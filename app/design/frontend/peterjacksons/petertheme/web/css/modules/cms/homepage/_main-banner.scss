@@ -111,10 +111,6 @@
         letter-spacing: 1px;
         color: white;
 
-        &--additional {
-            margin-bottom: 0;
-        }
-
         @media all and (max-width: 1440px) {
             font-size: 20px;
             margin: 0 0 5px 0;
@@ -165,10 +161,6 @@
             font-size: 15px;
             margin: 0 0 5px 0;
             letter-spacing: 0;
-
-            &--additional {
-                margin-bottom: 0;
-            }
         }
 
         button {
@@ -222,10 +214,6 @@
         &__text {
             font-size: 12px;
             margin: 0 0 3px;
-
-            &--additional {
-                margin-bottom: 0;
-            }
         }
     }
 }
@@ -271,10 +259,6 @@
         &__text {
             font-size: 10px;
             margin: 0 0 2px;
-
-            &--additional {
-                margin-bottom: 0;
-            }
 
             br {
                 display: none;
