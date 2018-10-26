@@ -200,6 +200,7 @@
             }
 
             @media all and (max-width: 560px) {
+                background-image: url('../../img/assets/home 25-09-18/made-to-measure-img-1450px.jpg');
                 margin: 0 auto 25px;
             }
 
@@ -267,6 +268,7 @@
 
             @media all and (max-width: 560px) {
                 background-position: -270px 0;
+                background-image: url('../../img/assets/home 25-09-18/italian-shoe-850px.jpg');
 
                 .home-banner__content-box {
                     align-items: flex-end;
@@ -335,11 +337,6 @@
                     }
                 }
             }
-        }
-
-        &--waterfront {
-            background-image: url('../../img/assets/home 25-09-18/leo-colors-411.jpg'), url('../../img/assets/home 25-09-18/leo-colors-loww.jpg');
-            width: 100%;
         }
 
         &--tailored-tropics {
