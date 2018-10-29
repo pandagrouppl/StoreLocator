@@ -1,6 +1,5 @@
 <?php
 namespace PandaGroup\StoreLocator\Controller;
-
 /**
  * Inchoo Custom router Controller Router
  *
@@ -36,7 +35,6 @@ class Router implements \Magento\Framework\App\RouterInterface
      */
     public function match(\Magento\Framework\App\RequestInterface $request)
     {
-
         $identifier = trim($request->getPathInfo(), '/');
 
         if(strpos($identifier, 'storelocator') !== false) {

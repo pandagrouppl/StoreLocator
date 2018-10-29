@@ -41,7 +41,7 @@ class App extends Component {
                     <div>
                         <StoreHeader google={this.props.google} regions={json.regions}/>
                         <Route exact path="/" component={() => (<StoresList stores={json.stores}/>)} />
-                        <Route path="/:id" component={() => (<StoreView stores={json.stores}/>)}/>
+                        <Route path="/:addr_cty/:name" component={() => (<StoreView stores={json.stores}/>)}/>
                     </div>
                 </BrowserRouter>
             </Provider>
