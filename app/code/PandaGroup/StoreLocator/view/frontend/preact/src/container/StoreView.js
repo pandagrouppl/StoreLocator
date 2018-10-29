@@ -11,12 +11,12 @@ export default class StoreView extends Component {
         this.state = {
             tab: 'directions'
         };
-        this.routeId = router.route.match.params.id;
+        this.routeId = router.route.match.params.name;
         this.store = props.stores.find(this.findStore, this.routeId);
     }
 
     componentDidUpdate() {
-        const currentRoute = this.context.router.route.match.params.id;
+        const currentRoute = this.context.router.route.match.params.name;
         if (this.routeId !== currentRoute) {
             this.routeId = currentRoute;
             this.store = this.props.stores.find(this.findStore, this.routeId);
@@ -25,7 +25,7 @@ export default class StoreView extends Component {
     }
 
     findStore(q) {
-        return q.id == this;
+        return (q.name.split(' ').join('-').toLowerCase()) == this;
     }
 
     showTab(active, set) {
