@@ -25,7 +25,7 @@ class StateStore {
             this.addFilters(hash);
         } else if (pathname !== '/') {
             pathname = pathname.replace('/', '');
-            const store = this.json.stores.filter((store) => store.id == pathname)[0];
+            const store = this.json.stores.filter((store) => ((store.addr_cty + '/' + store.name).split(' ').join('-').toLowerCase()) == pathname)[0];
             this.changeMap(store.geo, store.zoom);
             this.changeView();
         }
