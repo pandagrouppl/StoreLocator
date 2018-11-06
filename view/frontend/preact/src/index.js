@@ -23,7 +23,7 @@ export function init() {
     const loader = document.getElementById('preact-loader');
     const intrv = dots(loader);
     fetch('/storelocator/index/json')
-        .then(data => data.json())
+        .then(data => data.text())
         .then(json => {
             clearInterval(intrv);
             loader.remove();
