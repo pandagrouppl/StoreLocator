@@ -18,7 +18,7 @@ const SingleStore = (props) => {
     return (
         <li className="stores-li__store">
             <div className="stores-li__info-container">
-                <Link to={`/${((props.addr_cty + '/' + props.name).split(' ').join('-').toLowerCase())}`} onClick={zoomToStoreLink}><h1 className="stores-li__name">{props.name}</h1></Link>
+                <Link to={`/${((props.addr_cty + '/' + props.name).split(' ').join('-').toLowerCase())}`} onClick={zoomToStoreLink}><h3 className="stores-li__name">{props.name}</h3></Link>
                 <ul className="stores-li__credentials">
                     <li>{props.addr_strt} {props.addr_cty} {props.zipcode}</li>
                     <li><a href={'tel:'+props.phone}>{props.phone}</a></li>

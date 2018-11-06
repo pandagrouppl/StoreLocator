@@ -15,7 +15,7 @@ export default class HeaderMap extends Component {
 
     markerClick(props) {
         this.props.stateStore.changeView('single');
-        this.context.router.history.push(`/${props.id}`);
+        this.context.router.history.push(`/${((props.addr_cty + '/' + props.name).split(' ').join('-').toLowerCase())}`);
     }
 
     render() {
@@ -32,6 +32,8 @@ export default class HeaderMap extends Component {
                     {this.props.stateStore.stores.map((store) => (
                         <Marker key={store.id}
                                 id={store.id}
+                                name={store.name}
+                                addr_cty={store.addr_cty}
                                 position={{lat: store.geo.lat, lng: store.geo.lng}}
                                 icon={this.context.constants.pin}
                                 onClick={this.markerClick}/>

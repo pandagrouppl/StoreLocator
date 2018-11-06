@@ -13,6 +13,10 @@ export default class StoresList extends Component {
         this.changeView = this.changeView.bind(this);
     }
 
+    componentDidMount() {
+        document.title = "Store Locator";
+    }
+
     applyZoom(gps, zoom) {
         this.props.stateStore.changeMap(gps, zoom);
     }

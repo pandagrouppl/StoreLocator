@@ -24,6 +24,11 @@ export default class StoreView extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = "Peter Jackson's " + this.store.name + ' ' + this.store.addr_cty;
+        document.getElementsByClassName('storelocator-header__title')[0].innerHTML = "Peter Jackson's " + this.store.name + ' ' + this.store.addr_cty;
+    }
+
     findStore(q) {
         return (q.name.split(' ').join('-').toLowerCase()) == this;
     }
@@ -47,7 +52,7 @@ export default class StoreView extends Component {
         return (
             <div className="store-view">
                 <div className="store-view__store-card">
-                    <h1 className="store-view__name">{this.store.name}</h1>
+                    <h2 className="store-view__name">{this.store.name}</h2>
                     <ul className="store-view__credentials">
                         <li><span class="store-view__label">Address:</span>{this.store.addr_strt} {this.store.addr_cty} {this.store.zipcode}</li>
                         <li><span class="store-view__label">Phone:</span><a href={'tel:'+this.store.phone}>{this.store.phone}</a></li>
