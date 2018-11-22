@@ -1855,6 +1855,7 @@ hoek@2.x.x:
 hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+  integrity sha1-qkSM8JhtVcxAdzsXF0t90GbLfPs=
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -2331,6 +2332,7 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
 mobx-preact@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/mobx-preact/-/mobx-preact-0.3.1.tgz#99eb9371bceb06d2c7c8f5a1b1abfb65f7da80a4"
+  integrity sha1-meuTcbzrBtLHyPWhsav7ZffagKQ=
   dependencies:
     hoist-non-react-statics "^1.2.0"
     invariant "^2.2.2"
@@ -2612,10 +2614,11 @@ pluralize@^1.2.1:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
 preact-classless-component@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/preact-classless-component/-/preact-classless-component-1.0.6.tgz#4defcb177d62cdb2fbaa2935bcfeac661f8466e6"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/preact-classless-component/-/preact-classless-component-1.1.1.tgz#40b5709c4e79c2e5697c013b630af3e04b0bc561"
+  integrity sha512-One9aei0H3DhiD8QiqWQW3ZpW7/iXmtNEQq+dXMp1gffMX/xI+hH4Uv2vsXZiKQvrzvzweThb5Tr2oalSnmMPQ==
   dependencies:
-    preact "^6.4.0"
+    preact "^8.2.1"
 
 preact-compat@^3.14.3:
   version "3.14.3"
@@ -2636,13 +2639,15 @@ preact-transition-group@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/preact-transition-group/-/preact-transition-group-1.1.0.tgz#97d0beff0790d721faecd2560c02cd30d5426f23"
 
-preact@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/preact/-/preact-6.4.0.tgz#1b8c99754b002639a1c33e68175eefa98a01cc14"
-
 preact@^7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/preact/-/preact-7.2.1.tgz#159e1892f614985e49eb0a96fd6e6d8bdf8bbcc5"
+  integrity sha1-FZ4YkvYUmF5J6wqW/W5ti9+LvMU=
+
+preact@^8.2.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-8.3.1.tgz#ed34f79d09edc5efd32a378a3416ef5dc531e3ac"
+  integrity sha512-s8H1Y8O9e+mOBo3UP1jvWqArPmjCba2lrrGLlq/0kN1XuIINUbYtf97iiXKxCuG3eYwmppPKnyW2DBrNj/TuTg==
 
 prelude-ls@~1.1.2:
   version "1.1.2"

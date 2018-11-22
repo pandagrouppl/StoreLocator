@@ -15,7 +15,7 @@
     "es6-promise-promise": "^1.0.0",
     "history": "^4.6.1",
     "mobx": "^3.1.9",
-    "mobx-preact": "^0.3.1",
+    "mobx-preact": "^1.1.0",
     "preact": "^7.2.1",
     "preact-compat": "^3.14.3",
     "react-router-dom": "^4.0.0",
