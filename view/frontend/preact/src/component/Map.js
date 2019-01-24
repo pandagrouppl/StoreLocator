@@ -158,20 +158,22 @@ export default class Map extends Component {
 	}
 
 	recenterMap() {
-		const map = this.map;
+		if (this.props && this.props.google) {
+			const map = this.map;
 
-		const { google } = this.props;
-		const maps = google.maps;
+			const { google } = this.props;
+			const maps = google.maps;
 
-		if (!google) return;
+			if (!google) return;
 
-		if (map) {
-			let center = this.state.currentLocation;
-			if (!(center instanceof google.maps.LatLng)) {
-				center = new google.maps.LatLng(center.lat, center.lng);
+			if (map) {
+				let center = this.state.currentLocation;
+				if (!(center instanceof google.maps.LatLng)) {
+					center = new google.maps.LatLng(center.lat, center.lng);
+				}
+				map.setCenter(center);
+				maps.event.trigger(map, 'recenter');
 			}
-			map.setCenter(center);
-			maps.event.trigger(map, 'recenter');
 		}
 	}
 
@@ -211,7 +213,6 @@ export default class Map extends Component {
 					}}
 					style={style}
 				>
-					Loading map...
 				</div>
 				{this.renderChildren()}
 			</div>
